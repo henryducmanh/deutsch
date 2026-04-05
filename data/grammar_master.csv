@@ -1,0 +1,4 @@
+id,topic,pattern,usage,level,example,compare_with,status,memory_level,first_seen,last_seen,learned_at,next_review,source,tags,notes
+GR0001,weil-Satz,weil + Nebensatz,Dùng để nêu lý do,B1,Ich bleibe zu Hause, weil ich krank bin.,denn,learning,2,2026-04-05,2026-04-05,,2026-04-07,manual_entry,DTZ|Nebensatz,
+GR0002,Zustandspassiv,sein + Partizip II,Diễn tả trạng thái là kết quả của một hành động,B1,Die Tür ist geschlossen.,Vorgangspassiv,new,0,2026-04-05,,,,manual_entry,DTZ|Passiv,
+GR0003,Relativsatz,Relativpronomen + Nebensatz,Dùng để bổ nghĩa cho danh từ,B1,Das ist der Mann, der mir geholfen hat.,Adjektivsatz,learning,2,2026-04-05,2026-04-05,,2026-04-08,manual_entry,DTZ|Satzbau,

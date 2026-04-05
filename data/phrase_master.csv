@@ -1,0 +1,4 @@
+id,phrase_type,pattern,meaning_vi,use_case,example,status,memory_level,first_seen,last_seen,learned_at,next_review,source,tags,notes
+PH0001,redemittel,Ich möchte mich beschweren, weil ...,Tôi muốn phàn nàn vì ...,Schreiben/Sprechen im Alltag,Ich möchte mich beschweren, weil die Heizung nicht funktioniert.,learning,2,2026-04-05,2026-04-05,,2026-04-07,manual_entry,DTZ|Schreiben,
+PH0002,polite_expression,Könnten Sie mir bitte sagen, ...?,Ông/bà có thể vui lòng cho tôi biết ... không?,Fragen / höfliche Kommunikation,Könnten Sie mir bitte sagen, wann das Amt öffnet?,learned,4,2026-04-05,2026-04-05,2026-04-05,2026-04-12,manual_entry,DTZ|Sprechen,
+PH0003,fixed_phrase,Es kommt darauf an, dass ...,Điều quan trọng là ...,Argumentation / Meinung,Es kommt darauf an, dass man pünktlich ist.,new,0,2026-04-05,,,,manual_entry,DTZ|B1,

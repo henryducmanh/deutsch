@@ -1,0 +1,5 @@
+id,term_type,lemma,normalized,article,pos,meaning_vi,meaning_de,example,status,memory_level,first_seen,last_seen,learned_at,next_review,source,tags,notes
+VOC0001,word,übersehen,übersehen,,Verb,bỏ sót; không nhận ra,etwas nicht bemerken,Ich habe den Fehler übersehen.,new,0,2026-04-05,,,,manual_entry,DTZ|B1,
+VOC0002,word,vermieten,vermieten,,Verb,cho thuê,Wohnraum an andere geben,Die Familie möchte die Wohnung vermieten.,learning,2,2026-04-05,2026-04-05,,2026-04-07,manual_entry,DTZ|Wohnen,
+VOC0003,word,Trubel,trubel,der,Nomen,sự nhộn nhịp; sự tất bật,hektisches Treiben,Im Trubel des Alltags vergisst man oft kleine Dinge.,new,0,2026-04-05,,,,manual_entry,DTZ|Alltag,
+VOC0004,word,jedoch,jedoch,,Konjunktion/từ nối,tuy nhiên,aber / dennoch,Ich wollte kommen, jedoch war ich krank.,learned,4,2026-04-05,2026-04-05,2026-04-05,2026-04-12,manual_entry,DTZ|B1,
