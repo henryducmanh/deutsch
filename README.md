@@ -4,8 +4,10 @@ Kho tri thức học tiếng Đức cá nhân, lưu trên GitHub để dùng cù
 
 ## Mục tiêu
 - Lưu từ vựng, ngữ pháp, mẫu câu, cụm từ, thành ngữ và lỗi thường gặp
-- Theo dõi trạng thái học: mới gặp, đang học, đã học, cần ôn, hay quên, đã chắc
-- Dùng ChatGPT để trích xuất từ HTML / transcript, đối chiếu với dữ liệu có sẵn, rồi đề xuất cập nhật
+- Với từ vựng, master chỉ giữ **2 cột**:
+  - `Từ tiếng Đức`
+  - `Nghĩa tiếng Việt`
+- Dùng ChatGPT để trích xuất từ HTML / transcript / PDF / hình ảnh / đoạn text, rồi đối chiếu với dữ liệu có sẵn
 - Dùng GitHub làm nguồn dữ liệu chuẩn để tích lũy lâu dài
 
 ## Cấu trúc chính
@@ -16,25 +18,42 @@ Kho tri thức học tiếng Đức cá nhân, lưu trên GitHub để dùng cù
 - `templates/` : file mẫu để thêm dòng mới hoặc ghi log học
 
 ## File dữ liệu quan trọng
-- `data/vocab_master.csv` : kho từ vựng trung tâm
+- `data/vocab_master.csv` : kho từ vựng trung tâm, chỉ gồm 2 cột
 - `data/grammar_master.csv` : kho ngữ pháp trung tâm
 - `data/phrase_master.csv` : kho mẫu câu / cụm cố định / Redemittel
 - `data/mistake_master.csv` : các lỗi hay sai
 - `data/review_queue.csv` : hàng đợi ôn tập
 - `data/learning_log.csv` : nhật ký học
 
+## Quy tắc cốt lõi cho từ vựng
+- Mỗi dòng trong `vocab_master.csv` là **một cặp nghĩa theo ngữ cảnh**
+- Khóa kiểm tra trùng là cặp:
+  - `Từ tiếng Đức`
+  - `Nghĩa tiếng Việt`
+- Nếu **1 từ có 2 nghĩa khác nhau**, lưu thành **2 dòng**
+- Nghĩa tiếng Việt phải **bám sát ngữ cảnh của nguồn**:
+  - file HTML
+  - đoạn text
+  - transcript
+  - PDF
+  - hình ảnh
+- Không gộp nhiều nghĩa vào một ô nếu các nghĩa đó thuộc các ngữ cảnh khác nhau
+
 ## Workflow đề xuất
 
-### 1. Thêm kiến thức từ HTML / transcript
+### 1. Thêm kiến thức từ HTML / transcript / PDF / hình ảnh / text
 1. Bỏ file nguồn vào `inbox/html_raw/` hoặc `inbox/transcript_raw/`
 2. Dùng ChatGPT trích xuất:
    - từ vựng
    - ngữ pháp
    - mẫu câu / cụm từ
    - lỗi / điểm đáng lưu ý
-3. ChatGPT đối chiếu với các file trong `data/`
-4. ChatGPT xuất ra block CSV để thêm mới hoặc chỉnh sửa
-5. Dùng Cursor hoặc GitHub web để cập nhật rồi commit
+3. Với từ vựng, ChatGPT đối chiếu `data/vocab_master.csv` theo **cặp** `Từ tiếng Đức : Nghĩa tiếng Việt`
+4. ChatGPT xuất ra:
+   - mục đã có
+   - mục mới cần thêm
+   - mục nên sửa vì nghĩa chưa đúng ngữ cảnh
+   - block CSV sẵn để cập nhật
 
 ### 2. Khi đã học một mục
 - cập nhật `status`
@@ -50,15 +69,22 @@ Kho tri thức học tiếng Đức cá nhân, lưu trên GitHub để dùng cù
 
 ## Gợi ý prompt dùng với ChatGPT
 
-### Trích xuất từ HTML
+### Trích xuất từ HTML / PDF / ảnh / text
 ```text
-Đọc file HTML tôi gửi.
+Đọc nguồn tôi gửi.
 Chuẩn hóa theo docs/rules_extract.md.
 Đối chiếu với data/vocab_master.csv, data/grammar_master.csv, data/phrase_master.csv.
+
+Riêng vocab:
+- chỉ dùng 2 cột: Từ tiếng Đức, Nghĩa tiếng Việt
+- kiểm tra trùng theo cặp "Từ tiếng Đức":"Nghĩa tiếng Việt"
+- nếu 1 từ có 2 nghĩa theo 2 ngữ cảnh khác nhau thì tính là 2 dòng
+- nghĩa phải bám sát ngữ cảnh của nguồn
+
 Kết quả chia 4 phần:
 1. Mục đã có
 2. Mục mới cần thêm
-3. Mục đã có nhưng nên bổ sung nghĩa / ví dụ / ghi chú
+3. Mục đã có nhưng nên sửa nghĩa
 4. Block CSV sẵn để tôi cập nhật vào repo
 ```
 
@@ -73,8 +99,8 @@ Hãy trả ra:
 ```
 
 ## Nguyên tắc
-- Mỗi kiến thức chỉ nên có một dòng master chính
-- Ưu tiên lưu dạng chuẩn hóa để tránh trùng
-- Không thêm mục mới nếu chỉ khác chữ hoa/thường
-- Nếu cùng một lemma nhưng khác từ loại, có thể lưu riêng
-- Khi chưa chắc cách phân loại, ghi tạm vào `notes/` rồi xử lý sau
+- Với vocab, chỉ lưu dữ liệu tối giản để tra cứu nhanh
+- Trùng chỉ tính khi **cả từ Đức và nghĩa Việt đều trùng**
+- Cùng một từ Đức nhưng khác nghĩa Việt thì vẫn giữ riêng
+- Không thêm mục mới nếu chỉ khác chữ hoa/thường hoặc khoảng trắng thừa
+- Khi chưa chắc nghĩa theo ngữ cảnh, ghi vào `notes/` hoặc `inbox/extracted/` để xử lý sau

@@ -1,2 +1,2 @@
-id,term_type,lemma,normalized,article,pos,meaning_vi,meaning_de,example,status,memory_level,first_seen,last_seen,learned_at,next_review,source,tags,notes
-VOC9999,word,beispiel,beispiel,,Nomen,dữ liệu mẫu,,Das ist nur ein Beispiel.,new,0,YYYY-MM-DD,,,,manual_entry,DTZ|,
+Từ tiếng Đức,Nghĩa tiếng Việt
+beispiel,dữ liệu mẫu

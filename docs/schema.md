@@ -3,39 +3,43 @@
 Tài liệu này mô tả các file CSV chính trong thư mục `data/`.
 
 ## 1. vocab_master.csv
-Lưu từ vựng trung tâm: từ đơn, từ ghép, động từ, cụm từ ngắn, collocation, thành ngữ ngắn.
+Lưu từ vựng trung tâm theo dạng tối giản.
 
 ### Cột
-- `id`: mã duy nhất, ví dụ `VOC0001`
-- `term_type`: `word`, `compound`, `phrasal`, `idiom`, `collocation`
-- `lemma`: dạng gốc
-- `normalized`: dạng chuẩn hóa để dò trùng
-- `article`: `der`, `die`, `das` nếu là danh từ
-- `pos`: từ loại
-- `meaning_vi`: nghĩa tiếng Việt
-- `meaning_de`: giải thích tiếng Đức ngắn nếu cần
-- `example`: ví dụ
-- `status`: xem `docs/status_system.md`
-- `memory_level`: mức độ nhớ từ `0` đến `5`
-- `first_seen`: ngày gặp đầu tiên
-- `last_seen`: ngày ôn hoặc nhìn thấy gần nhất
-- `learned_at`: ngày đánh dấu đã học
-- `next_review`: ngày cần ôn tiếp
-- `source`: nguồn, ví dụ `dtz_html_2026_04_05`
-- `tags`: nhãn, phân tách bằng `|`
-- `notes`: ghi chú
+- `Từ tiếng Đức`
+- `Nghĩa tiếng Việt`
+
+### Quy tắc
+- Mỗi dòng là **một cặp nghĩa theo ngữ cảnh**
+- Khóa dò trùng là cặp:
+  - `Từ tiếng Đức`
+  - `Nghĩa tiếng Việt`
+- Nếu cùng một từ tiếng Đức nhưng có 2 nghĩa Việt khác nhau theo 2 ngữ cảnh, lưu thành 2 dòng
+- Nghĩa tiếng Việt phải bám theo nguồn gốc ngữ cảnh, không gộp bừa nhiều nghĩa rộng vào một ô
+- Khi so sánh trùng:
+  - bỏ khác biệt chữ hoa / chữ thường
+  - bỏ khoảng trắng thừa ở đầu/cuối
+  - chuẩn hóa nhiều khoảng trắng liên tiếp thành một khoảng trắng
+
+### Ví dụ
+```csv
+Từ tiếng Đức,Nghĩa tiếng Việt
+übersehen,bỏ sót
+übersehen,không nhận ra
+vermieten,cho thuê
+```
 
 ## 2. grammar_master.csv
 Lưu điểm ngữ pháp, cấu trúc, mẫu biến đổi.
 
 ### Cột
 - `id`
-- `topic`: tên chủ điểm
-- `pattern`: cấu trúc chính
-- `usage`: cách dùng
-- `level`: ví dụ `A2`, `B1`, `B2`
-- `example`: ví dụ
-- `compare_with`: cấu trúc dễ nhầm
+- `topic`
+- `pattern`
+- `usage`
+- `level`
+- `example`
+- `compare_with`
 - `status`
 - `memory_level`
 - `first_seen`
@@ -51,11 +55,11 @@ Lưu Redemittel, mẫu câu, cụm cố định, câu khung dùng trong DTZ.
 
 ### Cột
 - `id`
-- `phrase_type`: `redemittel`, `sentence_pattern`, `fixed_phrase`, `exam_phrase`, `polite_expression`
-- `pattern`: cụm hoặc mẫu câu
-- `meaning_vi`: nghĩa tiếng Việt
-- `use_case`: ngữ cảnh dùng
-- `example`: ví dụ
+- `phrase_type`
+- `pattern`
+- `meaning_vi`
+- `use_case`
+- `example`
 - `status`
 - `memory_level`
 - `first_seen`
@@ -71,10 +75,10 @@ Lưu lỗi bạn thường sai hoặc các cặp dễ nhầm.
 
 ### Cột
 - `id`
-- `error_type`: loại lỗi
-- `wrong_form`: dạng sai
-- `correct_form`: dạng đúng
-- `explanation`: giải thích ngắn
+- `error_type`
+- `wrong_form`
+- `correct_form`
+- `explanation`
 - `status`
 - `memory_level`
 - `first_seen`
@@ -89,22 +93,22 @@ Hàng đợi ôn tập.
 
 ### Cột
 - `date`
-- `item_type`: `vocab`, `grammar`, `phrase`, `mistake`
+- `item_type`
 - `item_id`
-- `reason`: ví dụ `due_today`, `forgotten`, `weak_item`
-- `priority`: `low`, `medium`, `high`
-- `status`: `open`, `done`, `skip`
+- `reason`
+- `priority`
+- `status`
 
 ## 6. learning_log.csv
 Nhật ký học tập.
 
 ### Cột
 - `date`
-- `action`: `add`, `learn`, `review`, `forget`, `edit`, `promote`, `demote`
+- `action`
 - `item_type`
 - `item_id`
-- `content`: nội dung chính
-- `result`: kết quả, ví dụ `status=new->learning`
+- `content`
+- `result`
 - `source`
 - `notes`
 

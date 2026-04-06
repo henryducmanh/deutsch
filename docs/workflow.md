@@ -3,11 +3,12 @@
 ## Mục tiêu
 Repo này dùng để tích lũy kiến thức tiếng Đức theo thời gian và phản ánh trạng thái trí nhớ của người học.
 
-## Luồng 1: thêm kiến thức từ HTML / transcript
+## Luồng 1: thêm kiến thức từ HTML / transcript / PDF / hình ảnh / text
 1. Đặt file nguồn vào:
    - `inbox/html_raw/`
    - hoặc `inbox/transcript_raw/`
-2. Gửi file cho ChatGPT
+   - hoặc lưu kết quả OCR / text trích ra vào `inbox/extracted/`
+2. Gửi file hoặc nội dung cho ChatGPT
 3. Yêu cầu ChatGPT:
    - trích từ vựng
    - trích ngữ pháp
@@ -18,12 +19,16 @@ Repo này dùng để tích lũy kiến thức tiếng Đức theo thời gian v
    - `data/grammar_master.csv`
    - `data/phrase_master.csv`
    - `data/mistake_master.csv`
-5. ChatGPT xuất:
+5. Riêng với `data/vocab_master.csv`:
+   - chỉ dùng 2 cột: `Từ tiếng Đức`, `Nghĩa tiếng Việt`
+   - kiểm tra trùng theo cặp `Từ tiếng Đức : Nghĩa tiếng Việt`
+   - nếu 1 từ có 2 nghĩa khác nhau theo ngữ cảnh, lưu thành 2 dòng
+6. ChatGPT xuất:
    - mục đã có
    - mục mới
-   - mục nên bổ sung
+   - mục nên sửa nghĩa
    - block CSV để cập nhật
-6. Cập nhật file trong repo, rồi commit lên GitHub
+7. Cập nhật file trong repo, rồi commit lên GitHub
 
 ## Luồng 2: ghi nhận đã học
 Khi bạn nhắn:
@@ -65,16 +70,14 @@ Mỗi ngày hoặc mỗi tuần:
 
 ## Luồng 5: bổ sung dần chất lượng dữ liệu
 Sau mỗi lần dùng:
-- thêm nghĩa rõ hơn
-- thêm ví dụ tốt hơn
-- thêm tag chủ đề
-- thêm ghi chú phân biệt
+- sửa nghĩa cho sát ngữ cảnh hơn
+- tách một dòng thành nhiều dòng nếu phát hiện một từ có nhiều nghĩa khác nhau
+- thêm nghĩa mới chỉ khi có nguồn ngữ cảnh rõ ràng
+- thêm tag hoặc ghi chú nếu cần ở các file không phải vocab
 
 ## Thực hành tối giản
 Nếu bận:
-- chỉ cần thêm mục mới
-- đánh dấu đã học
-- cập nhật `next_review`
-- ghi log ngắn
-
-Về sau có thể làm sạch dữ liệu từng bước.
+- chỉ cần thêm cặp `Từ tiếng Đức : Nghĩa tiếng Việt`
+- giữ nghĩa đúng với ngữ cảnh nguồn
+- không gộp nhiều nghĩa rời nhau vào cùng một ô
+- cập nhật log khi cần
