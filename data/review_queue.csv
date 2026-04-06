@@ -1,4 +1,0 @@
-date,item_type,item_id,reason,priority,status
-2026-04-06,vocab,VOC0002,due_today,medium,open
-2026-04-06,mistake,MS0001,forgotten,high,open
-2026-04-07,grammar,GR0001,new_after_2_days,medium,open

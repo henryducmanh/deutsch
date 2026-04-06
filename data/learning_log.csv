@@ -1,4 +1,0 @@
-date,action,item_type,item_id,content,result,source,notes
-2026-04-05,add,vocab,VOC0001,übersehen,created status=new,manual_entry,
-2026-04-05,add,grammar,GR0001,weil-Satz,created status=learning,manual_entry,
-2026-04-05,learn,phrase,PH0002,Könnten Sie mir bitte sagen, ...?,status=learned memory_level=4,manual_entry,
