@@ -1,0 +1,7 @@
+# schema_version: 2026-05-18_v1
+# columns: wort, wortart, artikel, mistake_count, last_mistake_date, related_rule, related_mistakes_log_entries, status
+# wortart enum: Substantiv | Verb | Adjektiv | Adverb | Pronomen | Präposition | Konjunktion | Numerale | Interjektion
+# artikel enum: der | die | das | (rỗng nếu không phải Substantiv)
+# status enum: active | mastered | dropped
+# Append-only. Update mistake_count + last_mistake_date + status.
+wort,wortart,artikel,mistake_count,last_mistake_date,related_rule,related_mistakes_log_entries,status

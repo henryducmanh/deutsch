@@ -1,0 +1,9 @@
+# schema_version: 2026-05-18_v1
+# columns: id, name, type, url, level, language_pair, first_used, last_used, total_sessions, status, note
+# id format: SRC-<NNN>
+# type enum: tutor | podcast | youtube | book | app | website | netflix | newspaper | textbook | other
+# level enum: A1 | A2 | B1 | B2 | C1 | C2 | mixed
+# language_pair enum: de | de-en | de-vi
+# status enum: active | paused | finished | dropped
+# Append-only. Update last_used + total_sessions + status.
+id,name,type,url,level,language_pair,first_used,last_used,total_sessions,status,note

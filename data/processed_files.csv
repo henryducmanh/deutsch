@@ -1,0 +1,6 @@
+# schema_version: 2026-05-18_v1
+# columns: filepath, processed_at, agent, output_rows, output_files, status, note
+# agent enum: vocab-extractor | mistake-auditor | listening-coach | speaking-coach | other
+# status enum: ok | partial | failed
+# Append-only.
+filepath,processed_at,agent,output_rows,output_files,status,note

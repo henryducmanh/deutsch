@@ -1,0 +1,8 @@
+# schema_version: 2026-05-18_v1
+# columns: id, chunk_de, chunk_vn, type, topic, level, source, first_seen, last_practiced, frequency, note
+# id format: CH-<YYYYMMDD>-<NNN>
+# type enum: redemittel | collocation | idiom | phrasal | formula
+# topic enum: Arbeit | Wohnen | Gesundheit | Behörde | Familie | Freizeit | Bildung | Einkauf | Verkehr | Wetter | general
+# level enum: A1 | A2 | B1 | B2 | C1 | C2
+# Append-only. Update only frequency + last_practiced.
+id,chunk_de,chunk_vn,type,topic,level,source,first_seen,last_practiced,frequency,note
