@@ -1,1 +1,58 @@
 ﻿lingq_id,term,fragment,hint,status,extended_status,tags,importance,last_studied_correct,first_seen,last_synced
+659048133,einsetzen,"Künstliche Intelligenz wird in der Industrie eingesetzt.","lắp vào",0,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-031,1,,2026-05-18,2026-05-18
+659761355,verbinden,"Mein Handy ist mit dem WLAN verbunden.","kết nối",0,0,wortart:verb;level:b1;thema:technologie;voc:voc-20260518-024,1,,2026-05-18,2026-05-18
+661345614,gesellschaft,"Die Digitalisierung verändert unsere Gesellschaft grundlegend.","xã hội",0,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-003,3,,2026-05-18,2026-05-18
+661363249,umwelt,"Wir müssen die Umwelt schützen.","môi trường",0,0,level:b1;wortart:substantiv;thema:umwelt;voc:voc-20260518-036,1,,2026-05-18,2026-05-18
+663714925,eröffnen,"Das Studium eröffnet mir neue Möglichkeiten.",mở,0,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-025,0,,2026-05-18,2026-05-18
+667023636,entwicklung,"Technologische Entwicklungen verändern die Welt.","phát triển",0,0,level:b1;wortart:substantiv;thema:technologie;voc:voc-20260518-001,3,,2026-05-18,2026-05-18
+667452237,vermitteln,"Der Lehrer vermittelt uns wichtiges Wissen.","truyền đạt",0,0,wortart:verb;level:b1;thema:bildung;voc:voc-20260518-028,1,,2026-05-18,2026-05-18
+667463799,entscheidend,"Es ist entscheidend, dass wir pünktlich kommen.","quyết định",0,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-026,1,,2026-05-18,2026-05-18
+667464377,fördern,"Der Staat fördert junge Unternehmer mit Krediten.","khuyến khích",0,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-022,1,,2026-05-18,2026-05-18
+667467757,gesundheit,"Rauchen schadet der Gesundheit.","sức khỏe",0,0,level:b1;wortart:substantiv;thema:gesundheit;voc:voc-20260518-035,2,,2026-05-18,2026-05-18
+670251200,schaden,"Diäten können mehr Schaden als Nutzen bringen.","gây hại",0,0,level:b1;wortart:substantiv;thema:gesundheit;voc:voc-20260518-052,2,,2026-05-18,2026-05-18
+684708798,verstärken,"Stress verstärkt Kopfschmerzen.","tăng cường",0,0,wortart:verb;level:b1;thema:gesundheit;voc:voc-20260518-014,1,,2026-05-18,2026-05-18
+689716998,einstellen,"Du musst dich auf neue Aufgaben einstellen.","ngừng lại",0,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-019,1,,2026-05-18,2026-05-18
+815679120,anpassen,"Ich muss mich an das neue Klima anpassen.",,1,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-010,0,,2026-05-18,2026-05-18
+815706338,Aspekt,"Wir müssen alle Aspekte des Plans berücksichtigen.",,1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-008,1,,2026-05-18,2026-05-18
+815706344,aufwachsen,"Ich bin auf dem Land aufgewachsen.",,1,0,wortart:verb;level:b1;thema:familie;voc:voc-20260518-023,0,,2026-05-18,2026-05-18
+815706348,ausgewogen,"Eine ausgewogene Mahlzeit enthält Proteine und Vitamine.",,1,0,level:b1;wortart:adjektiv;thema:ernährung;voc:voc-20260518-048,0,,2026-05-18,2026-05-18
+815706357,Automatisierung,"Die Automatisierung schafft neue Berufe und vernichtet alte.",,1,0,level:b1;thema:arbeit;wortart:substantiv;voc:voc-20260518-012,0,,2026-05-18,2026-05-18
+815706362,Bedürfnis,"Jeder Mensch hat unterschiedliche Bedürfnisse.",,1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-049,1,,2026-05-18,2026-05-18
+815706371,Bewusstsein,"Die Kampagne will Bewusstsein für Umweltschutz schaffen.",,1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-054,1,,2026-05-18,2026-05-18
+815706379,Chance,"Du hast eine gute Chance",,1,0,"wortart:substantiv;thema:bạn có cơ hội tốt để có được công việc.;voc:voc-20260518-015",2,,2026-05-18,2026-05-18
+815706386,Diät,"Sie macht seit einem Monat eine Diät.",,1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-037,0,,2026-05-18,2026-05-18
+815706391,Einfluss,"Diese Erfindung hat großen Einfluss auf die Gesellschaft.",,1,0,level:b1;wortart:substantiv;thema:technologie;voc:voc-20260518-002,2,,2026-05-18,2026-05-18
+815706396,erfolgreich,"Sie ist eine erfolgreiche Unternehmerin.",,1,0,level:b1;thema:arbeit;wortart:adjektiv;voc:voc-20260518-029,2,,2026-05-18,2026-05-18
+815706403,erkennen,"Ich habe das Problem sofort erkannt.",,1,0,wortart:verb;level:b1;thema:general;voc:voc-20260518-009,3,,2026-05-18,2026-05-18
+815706409,Ernährung,"Eine gesunde Ernährung ist wichtig für den Körper.",,1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-034,1,,2026-05-18,2026-05-18
+815706416,Ernährungsregel,"Strenge Ernährungsregeln sind oft kontraproduktiv.",,1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-039,0,,2026-05-18,2026-05-18
+815706424,Essgewohnheit,"Schlechte Essgewohnheiten können krank machen.",,1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-043,0,,2026-05-18,2026-05-18
+815706432,ethisch,"Künstliche Intelligenz sollte ethisch gestaltet werden.",,1,0,level:b1;wortart:adjektiv;thema:ethik;voc:voc-20260518-005,0,,2026-05-18,2026-05-18
+815706440,Fertigprodukt,"Fertigprodukte enthalten oft viel Salz und Zucker.",,1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-050,0,,2026-05-18,2026-05-18
+815706446,Fortschritt,"Die Medizin macht große Fortschritte.",,1,0,level:b1;wortart:substantiv;thema:technologie;voc:voc-20260518-004,1,,2026-05-18,2026-05-18
+815706453,Frust,"Nach der Prüfung hatte er großen Frust.",,1,0,level:b1;wortart:substantiv;thema:gefuehle;voc:voc-20260518-046,0,,2026-05-18,2026-05-18
+815706466,Fähigkeit,"Sie hat die Fähigkeit, schnell zu lernen.",,1,0,level:b1;thema:arbeit;wortart:substantiv;voc:voc-20260518-027,2,,2026-05-18,2026-05-18
+815706475,Gemeinwohl,"Künstliche Intelligenz sollte das Gemeinwohl fördern.",,1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-021,0,,2026-05-18,2026-05-18
+815706479,Generation,"Jede Generation hat ihre eigenen Herausforderungen.",,1,0,level:b1;wortart:substantiv;thema:familie;voc:voc-20260518-007,2,,2026-05-18,2026-05-18
+815706489,gestalten,"Wir müssen die Zukunft aktiv gestalten.",,1,0,wortart:verb;level:b1;thema:technologie;voc:voc-20260518-006,2,,2026-05-18,2026-05-18
+815706500,immens,"Das Projekt bietet immense Möglichkeiten.",,1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-016,0,,2026-05-18,2026-05-18
+815706506,klug,"Wenn die Mittel klug eingesetzt werden, sehen wir Erfolg.",,1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-032,1,,2026-05-18,2026-05-18
+815706514,kontraproduktiv,"Zu viel Druck ist beim Lernen kontraproduktiv.",,1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-040,0,,2026-05-18,2026-05-18
+815706521,"Künstliche Intelligenz","Künstliche Intelligenz verändert den Arbeitsmarkt.",,1,0,level:b1;wortart:substantiv;thema:technologie;voc:voc-20260518-011,0,,2026-05-18,2026-05-18
+815706532,langfristig,"Wir brauchen eine langfristige Lösung.",,1,0,level:b1;thema:arbeit;wortart:adjektiv;voc:voc-20260518-053,1,,2026-05-18,2026-05-18
+815706545,schaffen,"Bewusstsein für eine ausgewogene Ernährung schaffen.",,1,0,wortart:verb;level:b1;thema:general;voc:voc-20260518-055,3,,2026-05-18,2026-05-18
+815706555,Scheitern,"Das Scheitern des Projekts war eine Lehre.",,1,0,level:b1;thema:arbeit;wortart:substantiv;voc:voc-20260518-047,1,,2026-05-18,2026-05-18
+815706569,Schnelllebigkeit,"Die Schnelllebigkeit des modernen Lebens stresst viele Menschen.",,1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-041,0,,2026-05-18,2026-05-18
+815706573,streng,"Mein Vater ist sehr streng mit den Hausaufgaben.",,1,0,level:b1;thema:familie;wortart:adjektiv;voc:voc-20260518-038,2,,2026-05-18,2026-05-18
+815706583,unaufhaltsam,"Der Klimawandel scheint unaufhaltsam zu sein.",,1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-018,0,,2026-05-18,2026-05-18
+815706594,Ungerechtigkeit,"Soziale Ungerechtigkeiten müssen bekämpft werden.",,1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-013,0,,2026-05-18,2026-05-18
+815706600,ungesund,"Zu viel Zucker ist ungesund.",,1,0,level:b1;wortart:adjektiv;thema:gesundheit;voc:voc-20260518-042,0,,2026-05-18,2026-05-18
+815706608,untrennbar,"Beruf und Privatleben sind oft untrennbar verbunden.",,1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-057,0,,2026-05-18,2026-05-18
+815706612,vegan,"Mein Bruder lebt seit zwei Jahren vegan.",,1,0,level:b1;wortart:adjektiv;thema:ernährung;voc:voc-20260518-033,0,,2026-05-18,2026-05-18
+815706621,Verbot,"Das Rauchverbot gilt in allen Restaurants.",,1,0,level:b1;wortart:substantiv;thema:behörde;voc:voc-20260518-044,2,,2026-05-18,2026-05-18
+815706632,Verbundenheit,"Die Verbundenheit zur Familie ist mir wichtig.",,1,0,level:b1;wortart:substantiv;thema:familie;voc:voc-20260518-017,0,,2026-05-18,2026-05-18
+815706639,vernachlässigen,"Wir dürfen die ethischen Aspekte nicht vernachlässigen.",,1,0,wortart:verb;level:b1;thema:ethik;voc:voc-20260518-020,0,,2026-05-18,2026-05-18
+815706647,verzichten,"Ich verzichte auf Zucker",,1,0,"wortart:verb;thema:tôi kiêng đường, vì muốn giảm cân.;voc:voc-20260518-056",2,,2026-05-18,2026-05-18
+815706655,voranbringen,"Diese Idee wird das Projekt voranbringen.",,1,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-030,0,,2026-05-18,2026-05-18
+815706661,Wahl,"Manchmal ist die einfache Wahl nicht die beste.",,1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-051,3,,2026-05-18,2026-05-18
+815706671,Zwang,"Ich studiere ohne Zwang, weil es mir Spaß macht.",,1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-045,1,,2026-05-18,2026-05-18
