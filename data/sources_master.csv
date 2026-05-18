@@ -7,3 +7,5 @@
 # status enum: active | paused | finished | dropped
 # Append-only. Update last_used + total_sessions + status.
 id,name,type,url,level,language_pair,first_used,last_used,total_sessions,status,note
+SRC-001,DTZ B1 Tutor Slide - Technologie & Gesellschaft,tutor,,B1,de-vi,2026-05-18,2026-05-18,2,active,3 slide từ Tutor session 2026-05-18 (title + 6 Aussagen MC + 3 Aussagen Fließtext)
+SRC-002,DTZ B1 Tutor Slide - Ernährung,tutor,,B1,de-vi,2026-05-18,2026-05-18,1,active,1 slide 6 Aussagen MC về Ernährung & Gesellschaft (cùng buổi tutor SRC-001)

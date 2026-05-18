@@ -1,0 +1,5 @@
+task: write docs/ai/tasks/LINGQ_SYNC_PROMPT.md
+agent: claude-cowork
+started: 2026-05-18
+status: RELEASED 2026-05-18 (Cowork sandbox không xoá được; user xoá tay hoặc để TTL 60min)
+ttl: 60min
