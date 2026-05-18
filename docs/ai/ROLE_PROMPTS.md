@@ -148,6 +148,65 @@ Ghi tutor/homework/<topic>_<YYYY-MM-DD>.md + key file riêng nếu yes.
 
 ---
 
+## Module Engineer (v1.1)
+
+### Build module mới — opener đầy đủ (5 câu chốt design)
+
+```
+đóng vai Module Engineer cho <service>
+
+Mục tiêu: <1 câu — vd "Sync vocab_master.csv sang Anki dưới dạng deck DTZ B1, mỗi từ 1 note 4-field Front=wort/Back=bedeutung+beispiel/Tags=wortart+level+thema/Audio=optional">
+
+5 câu chốt design:
+1. Direction of truth: <local primary / external primary / bidirectional>
+   → Recommend local primary nếu external tạo data nhiễu (case LingQ).
+2. Sync frequency: <daily / hourly / on-demand>
+   → Recommend daily (cron 10:00 cùng task scheduler) trừ khi data realtime.
+3. Auth method: <API token / OAuth / file path>
+   → Lấy ở đâu (URL paste sẵn)?
+4. Schema mapping: <field local → field external>
+   → vd: wort→Front, bedeutung→Back, wortart→Tag, beispiel→...
+5. Idempotency key: <field nào để dedupe>
+   → vd: lingq_id, deck_note_guid, hash(wort+wortart)
+
+Constraints:
+- Stack PHP 7.4 local, no MySQL, cron Windows
+- KHÔNG tự git commit/push
+- Reference playbook: knowledge-os/playbooks/how-i-integrate-external-api.md
+
+Output mong muốn từ Cowork (vai này):
+1. Probe API (1-2 curl call sandbox) confirm endpoint + response shape
+2. Spec file docs/ai/tasks/<SERVICE>_PHASE_C_PROMPT.md (pull) + _PHASE_D_PROMPT.md (push) theo format 7-phần
+3. Câu paste handoff Claude Code
+
+Code thực thi do Claude Code làm sau. Live --apply do user.
+```
+
+### Debug / extend module hiện có — opener ngắn
+
+```
+đóng vai Module Engineer: <issue ngắn>
+
+Module: <service>
+Log gần nhất: module/<service>_sync/logs/<file>
+Symptom: <quote 3-5 dòng log có error hoặc behaviour bất thường>
+Đã thử: <list những cách user đã chạy nếu có>
+```
+
+→ Vai sẽ đọc log + DECISIONS.md + INTEGRATION.md, propose fix (config tune trực tiếp hoặc spec file mới cho Claude Code).
+
+### Phase tiếp theo của module có sẵn (đã có spec)
+
+```
+đóng vai Module Engineer cho <PHASE_X>
+
+Spec: docs/ai/tasks/<SERVICE>_PHASE_<X>_PROMPT.md
+```
+
+→ Vai sẽ đọc spec, đưa câu paste handoff Claude Code (không cần hỏi gì thêm).
+
+---
+
 ## Quy tắc chung (mọi vai)
 
 - KHÔNG commit / push tự động
@@ -156,6 +215,11 @@ Ghi tutor/homework/<topic>_<YYYY-MM-DD>.md + key file riêng nếu yes.
 - Quote source (file path / row id) cho mọi claim
 - Append-only với master CSV
 
+**Riêng vai Module Engineer:**
+- Cowork edit `config.php` + `docs/*.md` OK; KHÔNG tự edit `.php` lớn (handoff Claude Code)
+- Mass operation (`--apply` POST/PATCH/DELETE) chỉ dry-run; live do user
+- Backup `<service>_*_backup_*.csv` trước destructive op — không xoá
+
 ---
 
-**Last updated:** 2026-05-18 (initial scaffold).
+**Last updated:** 2026-05-18 (v1.1 — thêm opener Module Engineer).

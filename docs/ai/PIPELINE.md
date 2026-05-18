@@ -1,6 +1,6 @@
 # PIPELINE — deutsch
 
-Router 7 vai cho repo học tiếng Đức. Đầu chat user gõ 1 trong các trigger, AI tự pick vai và **chỉ ghi vào file của vai đó**.
+Router 8 vai cho repo học tiếng Đức. Đầu chat user gõ 1 trong các trigger, AI tự pick vai và **chỉ ghi vào file của vai đó**.
 
 ---
 
@@ -15,6 +15,7 @@ Router 7 vai cho repo học tiếng Đức. Đầu chat user gõ 1 trong các tr
 | `đóng vai Listening Coach` | Listening Coach | input audio + transcript | `output/drills/<YYYY-MM-DD>_listening.md` |
 | `đóng vai Lesson Planner` | Lesson Planner | `LESSONS` + `MISTAKES_LOG` + goal DTZ | `tutor/lesson_plans/<YYYY-WXX>.md` |
 | `đóng vai Homework Generator` | Homework Generator | `chunks_master` + topic user pick | `tutor/homework/<topic>_<YYYY-MM-DD>.md` |
+| `đóng vai Module Engineer cho <service>` | Module Engineer (v1.1) | playbook `knowledge-os/playbooks/how-i-integrate-external-api.md` + module hiện có (nếu có) | `module/<service>_sync/` (code) + `docs/ai/tasks/<SERVICE>_<PHASE>_PROMPT.md` (spec handoff) + `docs/<SERVICE>_INTEGRATION.md` (deep-dive) |
 
 Default (không trigger): hỏi user vai nào, **không guess**.
 
@@ -208,12 +209,99 @@ Vocab Extractor xong: <source>
 
 ---
 
+## Vai 8: Module Engineer (v1.1)
+
+**Trigger:**
+- `đóng vai Module Engineer cho <service>` — build module mới
+- `đóng vai Module Engineer: <issue>` — debug/extend module hiện có
+
+**Boot:**
+- `CLAUDE.md`, `PIPELINE.md` (file này)
+- `knowledge-os/playbooks/how-i-integrate-external-api.md` (playbook generic, BẮT BUỘC đọc)
+- Nếu module đã tồn tại: `module/<service>_sync/README.md` + `docs/<SERVICE>_INTEGRATION.md`
+- Nếu có spec sẵn: `docs/ai/tasks/<SERVICE>_<PHASE>_PROMPT.md`
+
+**Mode delegation (vai này KHÔNG edit code lớn trong Cowork):**
+
+Cowork = brain (plan + write spec). Code thực thi handoff Claude Code qua prompt 7-phần.
+
+Cowork ĐƯỢC edit:
+- `config.php` (tune sleep/retry/threshold)
+- `docs/*.md` (update INTEGRATION + DECISIONS + LESSONS)
+- `docs/ai/tasks/*_PROMPT.md` (write spec mới)
+- Bash/Python script trong sandbox cho data analysis 1 lần
+
+Cowork KHÔNG edit:
+- `.php` files trong `module/*/` (gốc của module — to/phức tạp, có test)
+- Mass operation API (POST/PATCH/DELETE) — chỉ dry-run; live apply do user
+
+**Quy trình build module mới:**
+
+1. **Hỏi 5 câu chốt design** (nếu chưa có trong prompt user):
+   - Direction of truth: local primary / external primary / bidirectional?
+   - Sync frequency: daily / hourly / on-demand?
+   - Auth method: API token / OAuth / file path?
+   - Schema mapping: field nào của local → field nào external?
+   - Idempotency key: field nào dùng để dedupe (term, id, hash)?
+
+2. **Probe API trước khi spec** (nếu chưa quen service):
+   - Web search "<service> API <endpoint>" — đọc community wrapper trên GitHub
+   - Bash 1-2 curl call để xem response shape thật (không trust doc)
+   - Note quirks: plural vs singular field, status mapping, rate limit hint
+
+3. **Write spec file** `docs/ai/tasks/<SERVICE>_<PHASE>_PROMPT.md` theo format 7-phần:
+   - End-user
+   - Màn cuối cùng (definition of done)
+   - Ví dụ dữ liệu thật (request/response sample)
+   - Acceptance tests (≥ 5 steps, có test `--limit=1` UI verify trước mass)
+   - Cấm đụng
+   - Performance / scale (rate limit + retry + backoff)
+   - Format report Claude Code in cuối
+
+4. **Đưa câu paste 1 dòng** cho user copy vào Claude Code CLI:
+   ```
+   Đọc docs/ai/tasks/<SERVICE>_<PHASE>_PROMPT.md và làm. Tạo lock .ai-locks/<service>_<phase>_impl.lock. KHÔNG tự chạy live --apply. Báo "edit xong, chờ review Cursor".
+   ```
+
+5. **Đợi user xác nhận Claude Code đã làm xong + chạy test** (single PATCH manual UI verify), rồi guide live apply.
+
+6. **Sau khi module ổn định:**
+   - Append `docs/ai/DECISIONS.md` (deutsch) — decision lớn về service đó
+   - Append `knowledge-os/data/knowledge_index.csv` — KI quirks discover
+   - Update `knowledge-os/playbooks/how-i-integrate-external-api.md` nếu có pattern mới
+
+**Quy trình debug module hiện có:**
+
+1. Đọc log gần nhất: `module/<service>_sync/logs/<latest>.log`
+2. Identify pattern: HTTP code distribution, exit code, có throw không
+3. Map sang troubleshoot table trong `docs/<SERVICE>_INTEGRATION.md`
+4. Đề xuất fix:
+   - Config tune (sleep/retry/threshold) → edit `config.php` trực tiếp
+   - Code fix → write task prompt `docs/ai/tasks/<SERVICE>_FIX_<NN>_PROMPT.md`, handoff Claude Code
+5. Báo user 1 dòng + chờ review Cursor
+
+**Cấm khi vai Module Engineer:**
+
+- Tự edit code `.php` lớn trong Cowork (bottleneck, dễ break test có sẵn)
+- Tự chạy `--apply` mass operation — chỉ dry-run, live apply do user
+- Bịa endpoint API chưa verify — probe trước
+- Skip "test --limit=1 + UI verify" trong acceptance tests
+- Mở rộng scope: 1 service = 1 chuỗi phase (C/D/E/F), KHÔNG bundle nhiều service trong 1 task
+
+**Reference:**
+- Playbook bắt buộc: `knowledge-os/playbooks/how-i-integrate-external-api.md`
+- Case study LingQ: `docs/LINGQ_INTEGRATION.md` + 4 prompt phase `docs/ai/tasks/LINGQ_*_PROMPT.md`
+- Cross-domain KI: `knowledge-os/data/knowledge_index.csv` (KI-20260518-001..005)
+
+---
+
 ## Cross-reference
 
 - Pipeline cross-domain: `knowledge-os/docs/ai/PIPELINE.md`
 - Playbook học bất kỳ thứ gì: `knowledge-os/playbooks/how-i-learn.md`
+- Playbook tích hợp API: `knowledge-os/playbooks/how-i-integrate-external-api.md`
 - Pilot Deutsch spec: `docs/ai/AI_KS_PILOT_DEUTSCH.md`
 
 ---
 
-**Last updated:** 2026-05-18 (initial scaffold).
+**Last updated:** 2026-05-18 (v1.1 — thêm vai 8 Module Engineer sau session LingQ integration).

@@ -24,7 +24,7 @@ Boot ≤ 4 phút.
 
 ---
 
-## Vai trò (7 vai — theo tpl-hoc-deutsch@v1.0)
+## Vai trò (8 vai — theo tpl-hoc-deutsch@v1.1)
 
 | Trigger user | Vai | Output chính |
 |---|---|---|
@@ -35,8 +35,11 @@ Boot ≤ 4 phút.
 | `đóng vai Listening Coach` | Listening Coach | listening exercise + transcript verify → `output/drills/<date>_listening.md` |
 | `đóng vai Lesson Planner` | Lesson Planner | kế hoạch học tuần/tháng → `tutor/lesson_plans/<YYYY-WXX>.md` |
 | `đóng vai Homework Generator` | Homework Generator | bài tập per chủ đề → `tutor/homework/<topic>_<date>.md` |
+| `đóng vai Module Engineer cho <service>` | **Module Engineer** (v1.1) | build/debug/extend integration module `module/<service>_sync/` (PHP local + cron Windows). Output: code module + `docs/ai/tasks/<SERVICE>_<PHASE>_PROMPT.md` (handoff Claude Code) + `docs/<SERVICE>_INTEGRATION.md` |
 
 Default (không command): hỏi user vai nào.
+
+**Note vai 8 Module Engineer:** vai này hoạt động ở **mode delegation** — KHÔNG edit code trong Cowork (chỉ debug nhỏ + edit config/docs). Code thực thi handoff sang Claude Code qua prompt 7-phần. Tham chiếu playbook `knowledge-os/playbooks/how-i-integrate-external-api.md` cho mọi tích hợp API external mới (Anki, Spotify lyrics, Notion ingest, podcast transcript, ...).
 
 ---
 
@@ -68,27 +71,34 @@ Default (không command): hỏi user vai nào.
 ## Cấu trúc folder
 
 ```
-deutsch/                                     [template: tpl-hoc-deutsch@v1.0]
+deutsch/                                     [template: tpl-hoc-deutsch@v1.1]
 │
 │  ── BỘ DOCS VAI TRÒ (template-required) ──
 ├── CLAUDE.md                                file này
 ├── README.md                                nav cho human (user-existing — giữ nguyên)
-├── VAITRO.md                                cheat sheet 7 vai (paste-ready)
+├── VAITRO.md                                cheat sheet 8 vai (paste-ready)
 ├── docs/ai/
-│   ├── PIPELINE.md                          router 7 vai
+│   ├── PIPELINE.md                          router 8 vai
 │   ├── ROLE_PROMPTS.md                      opener paste-ready/vai
 │   ├── GLOSSARY.md                          term DTZ, B1, Redemittel, A1-C2, Konjunktiv II, …
 │   ├── DECISIONS.md                         quyết định học tập / công cụ
 │   ├── LESSONS.md
 │   ├── FAILURES.md
 │   ├── MISTAKES_LOG.md                      log lỗi grammar/vocab (vai Mistake Auditor)
-│   └── SESSION_<YYYY-MM-DD>.md              tạo per buổi tutor (vai Tutor)
+│   ├── SESSION_<YYYY-MM-DD>.md              tạo per buổi tutor (vai Tutor)
+│   └── tasks/                               (vai Module Engineer) prompt 7-phần handoff Claude Code
+│       └── <SERVICE>_<PHASE>_PROMPT.md      vd LINGQ_SYNC_PROMPT.md, LINGQ_PUSH_PROMPT.md, ...
 ├── data/
 │   ├── 03_unified/vocab_master.csv          [user-existing] schema 16 cột — source of truth cho từ vựng
 │   ├── chunks_master.csv                    Redemittel + cụm idiom
 │   ├── weak_words.csv                       từ hay quên (cross-link MISTAKES_LOG)
 │   ├── sources_master.csv                   index input
 │   └── processed_files.csv                  log file đã ingest
+├── module/                                  (vai Module Engineer) integration module PHP local
+│   └── <service>_sync/                      vd lingq_sync/, anki_sync/, ...
+│       ├── config.example.php  config.php  <service>_client.php
+│       ├── sync.php  update_local.php  push.php
+│       ├── cron.bat  README.md  logs/
 ├── input/
 │   ├── images/    audio/    text/    pdf/    transcript/    log/
 ├── queue/                                   file đang xử lý (Vocab Extractor pick từ đây)
@@ -123,9 +133,11 @@ deutsch/                                     [template: tpl-hoc-deutsch@v1.0]
 - Kiến trúc tổng: `docs/ai/AI_KS_HUB.md` + `AI_KS_ARCHITECTURE.md` (user-existing, copy gốc)
 - Pilot Deutsch chi tiết: `docs/ai/AI_KS_PILOT_DEUTSCH.md`
 - Domain instance spec: `docs/ai/AI_KS_DOMAINS.md`
-- Playbook: `knowledge-os/playbooks/how-i-learn.md`
+- Playbook học: `knowledge-os/playbooks/how-i-learn.md`
+- **Playbook tích hợp API external** (vai Module Engineer): `knowledge-os/playbooks/how-i-integrate-external-api.md`
+- LingQ integration deep-dive: `docs/LINGQ_INTEGRATION.md` + `module/lingq_sync/`
 - User docs cũ: `docs/AI_MEMORY.md`, `docs/CLAUDE_CURSOR_PIPELINE.md`, `docs/DATA_CONTRACT.md`, `docs/GERMAN_AI_LEARNING_OS.md`, `docs/NEXT_ACTION.md`, `docs/WORKFLOW.md` — giữ nguyên user content, có thể migrate dần vào docs/ai/ khi cần.
 
 ---
 
-**Last updated:** 2026-05-18 (initial scaffold — Provisioner tpl-hoc-deutsch@v1.0).
+**Last updated:** 2026-05-18 (v1.1 — thêm vai 8 Module Engineer sau LingQ integration session).
