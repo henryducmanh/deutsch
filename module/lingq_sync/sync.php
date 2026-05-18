@@ -102,8 +102,10 @@ $skipped = 0;
 $apiIds = [];
 $outRows = $existing;  // start from existing rows; we'll modify in place.
 
+$hintLocale = isset($cfg['hint_locale']) ? (string)$cfg['hint_locale'] : 'vi';
+
 foreach ($cards as $card) {
-    $row = normalize_card($card, $logger);
+    $row = normalize_card($card, $logger, $hintLocale);
     if ($row === null) { $skipped++; continue; }
 
     $id = $row['lingq_id'];
@@ -198,8 +200,13 @@ function csv_columns()
 /**
  * Normalize one API card → CSV row associative array.
  * Returns null + logs WARN if required fields missing.
+ *
+ * Phase F: parse hints array (LingQ API v2 plural format).
+ *   - API: hints = [{id, text, locale, popularity, ...}]
+ *   - CSV: hint = plain string (text của hint khớp locale, lấy first).
+ *   - hints null / missing / [] → CSV hint = ''.
  */
-function normalize_card($card, callable $logger)
+function normalize_card($card, callable $logger, $hintLocale = 'vi')
 {
     if (!is_array($card)) {
         $logger('WARN', 'skip non-array card');
@@ -216,11 +223,18 @@ function normalize_card($card, callable $logger)
         $tags = implode(';', array_map('strval', $card['tags']));
     }
 
+    $hintText = LingqClient::pickHintText(
+        isset($card['hints']) ? $card['hints'] : null,
+        $hintLocale,
+        $logger,
+        (string)$card['pk']
+    );
+
     return [
         'lingq_id'             => (string)$card['pk'],
         'term'                 => (string)$card['term'],
         'fragment'             => isset($card['fragment']) ? (string)$card['fragment'] : '',
-        'hint'                 => isset($card['hint']) ? (string)$card['hint'] : '',
+        'hint'                 => $hintText,
         'status'               => isset($card['status']) ? (string)(int)$card['status'] : '',
         'extended_status'      => isset($card['extended_status']) ? (string)(int)$card['extended_status'] : '0',
         'tags'                 => $tags,

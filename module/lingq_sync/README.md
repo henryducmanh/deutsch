@@ -1,9 +1,14 @@
-# LingQ Sync — Phase C v1
+# LingQ Sync — Phase C + Phase D v1
 
-Daily pull của LingQ status về repo qua PHP CLI, không MySQL, không web UI.
-Output: `data/lingq_cards.csv` (shadow store) — vai **Vocab Extractor** merge sang `vocab_master.csv` sau (KHÔNG tự động merge).
+**Phase C (sync):** daily pull của LingQ status về repo qua PHP CLI.
+Output: `data/lingq_cards.csv` (shadow store).
 
-Spec gốc: `docs/ai/tasks/LINGQ_SYNC_PROMPT.md`.
+**Phase D (push):** 2-way sync với `data/03_unified/vocab_master.csv` làm source of truth.
+- `update_local.php` regenerate `data/lingq_target.csv` từ vocab_master (no API).
+- `push.php` diff target vs snapshot → POST/PATCH/DELETE lên LingQ.
+- `cron.bat` orchestrate 4 step: sync → update_local → push → sync.
+
+Spec gốc: `docs/ai/tasks/LINGQ_SYNC_PROMPT.md` (Phase C), `docs/ai/tasks/LINGQ_PUSH_PROMPT.md` (Phase D).
 
 ---
 
@@ -21,14 +26,18 @@ schtasks /create /tn "LingQ Sync Daily" /tr "C:\twv_share\app\deutsch\module\lin
 
 ## Files
 
-| File | Mô tả |
-|---|---|
-| `config.example.php` | Template config. Copy thành `config.php` (gitignored). |
-| `lingq_client.php` | cURL client + paginate + retry (5xx backoff 1s/3s/9s, 4xx fail nhanh). |
-| `sync.php` | Entry point CLI. Hỗ trợ `--dry-run`. Diff vs CSV hiện tại theo `lingq_id`. Atomic write. |
-| `cron.bat` | Wrapper cho Windows Task Scheduler, gọi `php74\php.exe` với absolute path. |
-| `logs/` | Append log `YYYY-MM-DD.log` mỗi run; cron log `cron_YYYY-MM-DD.log`. |
-| `../../data/lingq_cards.csv` | Shadow CSV — UTF-8 BOM, 11 cột. |
+| File | Phase | Mô tả |
+|---|---|---|
+| `config.example.php` | C+D | Template config. Copy thành `config.php` (gitignored). Phase D thêm `push_thresholds`. |
+| `lingq_client.php` | C+D | cURL client. Phase C: `fetchAllCards()`. Phase D: `createCard()`, `updateCard()`, `deleteCard()`. Retry 5xx backoff 1s/3s/9s; 4xx fast-fail (delete 404 = treat as already-gone). |
+| `sync.php` | C | Pull LingQ → `data/lingq_cards.csv` (atomic write, idempotent). |
+| `update_local.php` | D | Đọc `vocab_master.csv` → render `data/lingq_target.csv`. Không gọi API. |
+| `push.php` | D | Diff target vs snapshot → POST/PATCH/DELETE. Default = dry-run; cần `--apply`. |
+| `cron.bat` | D | Orchestrator 4 step daily 10:00 (sync → update_local → push --auto-confirm → sync). |
+| `logs/` | C+D | `YYYY-MM-DD.log` per-run; `cron_YYYY-MM-DD.log` orchestrator. |
+| `../../data/lingq_cards.csv` | C | Shadow snapshot — UTF-8 BOM, 11 cột. |
+| `../../data/lingq_target.csv` | D | Desired state — UTF-8 BOM, 11 cột match snapshot schema. |
+| `../../data/lingq_cards_backup_*.csv` | D | Snapshot backup trước mỗi DELETE phase. KHÔNG xoá manual. |
 
 ---
 
@@ -109,8 +118,143 @@ Theo CLAUDE.md user, KHÔNG dùng `php -l` để verify syntax — chạy thật
 
 ---
 
+---
+
+## Phase D — push (2-way sync)
+
+### Concept
+
+```
+vocab_master.csv  ──► update_local.php  ──► lingq_target.csv
+                                              │
+                                              ▼
+                                          push.php  ◄──── lingq_cards.csv (snapshot)
+                                              │
+                                              ▼
+                                          LingQ API (POST/PATCH/DELETE)
+                                              │
+                                              ▼
+                                          sync.php  ──► lingq_cards.csv (refresh)
+```
+
+- `vocab_master.csv` = source of truth (curate manual, B1 DTZ).
+- `lingq_target.csv` = desired state (derived, 11 cột match snapshot).
+- `lingq_cards.csv` = mirror server (read-only outside `sync.php`).
+
+### Diff rules
+
+Match key: `term_lower = strtolower(trim(term))`.
+
+| Target | Snapshot | Action | API |
+|---|---|---|---|
+| ✓ | ✗ | CREATE | `POST /de/cards/` với status=1 từ target |
+| ✓ | ✓ (field khác) | UPDATE | `PATCH /de/cards/{pk}/` chỉ field thay đổi, **không đụng status** |
+| ✗ | ✓ | DELETE | `DELETE /de/cards/{pk}/` |
+
+UPDATE chỉ trigger khi `fragment`, `hint`, hoặc `tags` (set equality) khác. `status` luôn lấy từ server (user review trên LingQ mobile/web).
+
+### Quick start Phase D
+
+```
+# 1. Regenerate target từ vocab_master (no API):
+C:\php\php74\php.exe module\lingq_sync\update_local.php
+
+# 2. Dry-run xem plan:
+C:\php\php74\php.exe module\lingq_sync\push.php
+
+# 3. Test single POST (verify LingQ API format trước khi mass push):
+C:\php\php74\php.exe module\lingq_sync\push.php --apply --limit=1 --skip-delete --skip-update
+
+# 4. First wipe + push full (1 lần duy nhất):
+C:\php\php74\php.exe module\lingq_sync\push.php --apply --confirm-delete=2728 --force-delete-all --refresh
+
+# 5. Cron daily (đã đăng ký "LingQ Sync Daily" 10:00, cron.bat đã update):
+schtasks /run /tn "LingQ Sync Daily"
+```
+
+### push.php flags
+
+| Flag | Mô tả |
+|---|---|
+| (default) | Dry-run — in plan, không gọi API. |
+| `--apply` | Thật sự gọi API. |
+| `--limit=N` | Cap mỗi phase tối đa N hành động. Test 1 card: `--limit=1`. |
+| `--skip-create` / `--skip-update` / `--skip-delete` | Bỏ phase tương ứng. |
+| `--confirm-delete=N` | Manual mode bắt buộc; phải match exact số planned. |
+| `--force-delete-all` | Manual mode override `manual_max_delete_pct` (default 80%). |
+| `--auto-confirm` | Cron mode — dùng threshold thấp hơn (20% pct / 50 abs). |
+| `--refresh` | Sau apply, exec `sync.php` để snapshot khớp server. |
+| `--no-lock` | Bỏ qua `.ai-locks/lingq_push_running.lock` (advanced). |
+
+### Safety thresholds
+
+`config.php` → `push_thresholds`:
+
+| Key | Default | Mục đích |
+|---|---|---|
+| `manual_max_delete_pct` | 80 | Manual mode: DELETE > 80% → cần `--force-delete-all`. |
+| `auto_max_delete_pct` | 20 | Cron mode: DELETE > 20% → abort hẳn. |
+| `auto_max_delete_abs` | 50 | Cron mode: DELETE > 50 absolute → abort hẳn (whichever first). |
+
+Threshold check chạy TRƯỚC bất kỳ API call nào.
+
+### Status preservation
+
+`PATCH` payload KHÔNG bao giờ chứa `status` hoặc `extended_status`. Lý do:
+- Status = ground truth từ server (user review trên LingQ).
+- Target luôn có `status=1` (default) — nhưng đó chỉ dùng cho POST mới.
+- Nếu PATCH gửi status → đè progress user đã build → mất history.
+
+Code enforcement: `diff_for_patch()` trong `push.php` chỉ emit `fragment`, `hint`, `tags`.
+
+### Backup before destructive
+
+Trước phase DELETE đầu tiên trong mỗi run, copy `data/lingq_cards.csv` → `data/lingq_cards_backup_<YYYY-MM-DD>_<HHMMSS>.csv`. KHÔNG xoá manual — retention không thuộc scope hiện tại.
+
+### Lock file
+
+`.ai-locks/lingq_push_running.lock` được tạo khi `push.php` start, xoá khi exit. Nếu file tồn tại và age < 30 phút → exit với "Another push in progress". Stale lock (> 30 phút) tự overwrite.
+
+### Acceptance tests Phase D
+
+1. `update_local.php` → `data/lingq_target.csv` có 57 rows, 11 cột, tags format `wortart:X;level:B1;thema:Y;voc:VOC-...`.
+2. `push.php` (dry-run) → in plan CREATE/UPDATE/DELETE + warnings nếu hit threshold.
+3. `push.php --apply --limit=1 --skip-delete --skip-update` → POST 1 card, verify trên LingQ UI.
+4. `push.php --apply --confirm-delete=N --force-delete-all` → wipe + push full.
+5. Run lại sau full push → CREATE=0, UPDATE=0, DELETE=0 (idempotent).
+6. Add 1 row vào vocab_master → `update_local.php` → `push.php` plan CREATE=1.
+7. Bump status từ 1→3 trên LingQ UI, chạy cron orchestrator → status server giữ 3 sau push.
+8. Vocab_master còn 5 rows + `push.php --apply --auto-confirm` → abort vì threshold cron mode.
+
+---
+
+## Phase F — hints format (plural array)
+
+LingQ API v2 dùng **plural** `hints` field, không phải `hint` singular:
+
+```json
+{
+  "term": "anpassen",
+  "hints": [
+    {"text": "thích nghi (reflexiv)", "locale": "vi"}
+  ],
+  "fragment": "..."
+}
+```
+
+- POST/PATCH payload: gửi `hints = [{text, locale}, ...]`. Empty hint → `hints = []` (cho phép clear).
+- Sync GET response: parse `card.hints[]`, filter `locale = cfg['hint_locale']`, lấy `text` đầu tiên.
+- **CSV `hint` giữ plain string** (1 cột, mono-locale). Khi nhiều hint cùng locale → log WARN, dùng cái đầu tiên.
+- Locale lấy từ `config.php` key `hint_locale` (default `vi`).
+
+Trước Phase F dùng `hint` singular string trong cả POST và PATCH → API ignore → 53/57 entries trên LingQ UI không hiển thị nghĩa VI dù snapshot CSV có chữ. Phase F sửa cả 4 chỗ: `sync.php` parse + `push.php` POST/PATCH builders + `lingq_client.php` 2 static helpers (`buildHintsArray`, `pickHintText`).
+
+---
+
 ## Tham chiếu
 
-- Spec đầy đủ: `docs/ai/tasks/LINGQ_SYNC_PROMPT.md`
+- Spec đầy đủ Phase C: `docs/ai/tasks/LINGQ_SYNC_PROMPT.md`
+- Spec đầy đủ Phase D: `docs/ai/tasks/LINGQ_PUSH_PROMPT.md`
+- Spec đầy đủ Phase F: `docs/ai/tasks/LINGQ_PHASE_F_PROMPT.md`
 - Pipeline router: `docs/ai/PIPELINE.md`
-- Data contract: `data/DATA_CONTRACT.md`
+- Data contract: `data/README.md`
