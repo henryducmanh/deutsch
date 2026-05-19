@@ -1,5 +1,0 @@
-task: write docs/ai/tasks/LINGQ_PUSH_PROMPT.md (Phase D)
-agent: claude-cowork
-started: 2026-05-18
-status: RELEASED 2026-05-18 (sandbox không xoá được; user xoá tay hoặc TTL 60min)
-ttl: 60min
