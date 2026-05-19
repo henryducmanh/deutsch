@@ -43,6 +43,7 @@
 declare(strict_types=0);
 
 require_once __DIR__ . '/lingq_client.php';
+require_once __DIR__ . '/notes_builder.php';
 
 // -----------------------------------------------------------------------------
 // Args.
@@ -68,6 +69,7 @@ $forceDeleteAll = false;
 $autoConfirm = false;
 $refresh = false;
 $useLock = true;
+$forceOverwriteNotes = false;   // Phase J — override user_text trong notes (bypass merge).
 
 foreach (array_slice($argv, 1) as $arg) {
     if ($arg === '--apply') { $apply = true; continue; }
@@ -79,6 +81,7 @@ foreach (array_slice($argv, 1) as $arg) {
     if ($arg === '--auto-confirm') { $autoConfirm = true; continue; }
     if ($arg === '--refresh') { $refresh = true; continue; }
     if ($arg === '--no-lock') { $useLock = false; continue; }
+    if ($arg === '--force-overwrite-notes') { $forceOverwriteNotes = true; continue; }
     if (preg_match('/^--limit=(\d+)$/', $arg, $m)) { $limit = (int)$m[1]; continue; }
     if (preg_match('/^--confirm-delete=(\d+)$/', $arg, $m)) { $confirmDelete = (int)$m[1]; continue; }
     if ($arg === '-h' || $arg === '--help') {
@@ -197,7 +200,7 @@ foreach ($targetByKey as $k => $trow) {
         continue;
     }
     $srow = $snapshotByKey[$k];
-    $patch = diff_for_patch($trow, $srow, $hintLocale);
+    $patch = diff_for_patch($trow, $srow, $hintLocale, $forceOverwriteNotes);
     if (!empty($patch)) {
         $updates[] = ['target' => $trow, 'snapshot' => $srow, 'patch' => $patch];
     }
@@ -214,17 +217,34 @@ $nD = count($deletes);
 $snapCount = count($snapshot);
 $delPct = $snapCount > 0 ? round($nD * 100.0 / $snapCount, 1) : 0.0;
 
+// Phase J — break down UPDATE diff theo field.
+$nFragChanged = 0;
+$nHintChanged = 0;
+$nTagsChanged = 0;
+$nNotesChanged = 0;
+foreach ($updates as $u) {
+    if (isset($u['patch']['fragment'])) $nFragChanged++;
+    if (isset($u['patch']['hints']))    $nHintChanged++;
+    if (isset($u['patch']['tags']))     $nTagsChanged++;
+    if (isset($u['patch']['notes']))    $nNotesChanged++;
+}
+
 echo PHP_EOL . "Plan:" . PHP_EOL;
 printf("  CREATE: %4d   (target only — sẽ POST)\n", $nC);
 printf("  UPDATE: %4d   (cả 2 có, field khác → PATCH giữ status)\n", $nU);
+if ($nU > 0) {
+    printf("    Of which notes-changed=%d, fragment-changed=%d, hint-changed=%d, tags-changed=%d\n",
+        $nNotesChanged, $nFragChanged, $nHintChanged, $nTagsChanged);
+}
 printf("  DELETE: %4d   %s%% snapshot → sẽ XOÁ\n", $nD, number_format($delPct, 1));
 
 if ($skipCreate) echo "  (--skip-create)" . PHP_EOL;
 if ($skipUpdate) echo "  (--skip-update)" . PHP_EOL;
 if ($skipDelete) echo "  (--skip-delete)" . PHP_EOL;
 if ($limit !== null) echo "  (--limit={$limit} per phase)" . PHP_EOL;
+if ($forceOverwriteNotes) echo "  (--force-overwrite-notes — bypass merge)" . PHP_EOL;
 
-$logger('INFO', "plan create={$nC} update={$nU} delete={$nD} delete_pct={$delPct}%");
+$logger('INFO', "plan create={$nC} update={$nU} (notes={$nNotesChanged} frag={$nFragChanged} hint={$nHintChanged} tags={$nTagsChanged}) delete={$nD} delete_pct={$delPct}%");
 
 // -----------------------------------------------------------------------------
 // Safety checks (chỉ enforce khi --apply).
@@ -259,6 +279,25 @@ if (!$apply) {
 }
 
 // --- apply mode below ---
+
+// Phase J — --force-overwrite-notes cần explicit confirm (sẽ override user_text).
+if ($forceOverwriteNotes && $nNotesChanged > 0) {
+    if ($autoConfirm) {
+        $msg = "--force-overwrite-notes KHÔNG tương thích với --auto-confirm (cron mode). Abort.";
+        fwrite(STDERR, "ABORT: {$msg}\n");
+        $logger('ERROR', $msg);
+        exit(1);
+    }
+    echo PHP_EOL . "⚠️  --force-overwrite-notes sẽ ĐÈ {$nNotesChanged} card notes (bao gồm user_text)." . PHP_EOL;
+    echo "Gõ chính xác OVERWRITE-NOTES rồi Enter để xác nhận: ";
+    $line = trim((string)fgets(STDIN));
+    if ($line !== 'OVERWRITE-NOTES') {
+        fwrite(STDERR, "ABORT: confirm string mismatch (got '{$line}', need 'OVERWRITE-NOTES').\n");
+        $logger('ERROR', "force-overwrite-notes confirm mismatch");
+        exit(1);
+    }
+    $logger('INFO', "force-overwrite-notes confirmed for {$nNotesChanged} cards");
+}
 
 if ($plannedDelete > 0) {
     if ($autoConfirm) {
@@ -489,7 +528,11 @@ function get_help()
 {
     return "Usage: php push.php [--apply] [--limit=N] [--skip-create|--skip-update|--skip-delete]\n"
          . "                    [--confirm-delete=N] [--force-delete-all] [--auto-confirm]\n"
-         . "                    [--refresh] [--no-lock]\n";
+         . "                    [--force-overwrite-notes] [--refresh] [--no-lock]\n"
+         . "\n"
+         . "Phase J flag:\n"
+         . "  --force-overwrite-notes  Bypass merge (đè user_text trong notes).\n"
+         . "                           Bắt buộc STDIN confirm 'OVERWRITE-NOTES'.\n";
 }
 
 function key_of($term)
@@ -498,7 +541,19 @@ function key_of($term)
 }
 
 /**
- * 11 cột match lingq_cards.csv schema.
+ * 12 cột v2 (Phase J) — lingq_cards.csv + lingq_target.csv schema mới.
+ */
+function csv_columns_12()
+{
+    return [
+        'lingq_id','term','fragment','hint','status','extended_status',
+        'tags','importance','last_studied_correct','first_seen','last_synced','notes',
+    ];
+}
+
+/**
+ * 11 cột v1 — pre-Phase-J. Dùng để backward-compat khi snapshot chưa được
+ * sync.php upgrade (vd manual chạy push trước sync).
  */
 function csv_columns_11()
 {
@@ -509,8 +564,8 @@ function csv_columns_11()
 }
 
 /**
- * Read 11-col CSV (lingq_cards.csv hoặc lingq_target.csv). UTF-8 BOM aware.
- * Un-escape \n trong fragment back về newline thật để compare đúng.
+ * Read target/snapshot CSV. UTF-8 BOM aware. Phase J: chấp nhận v1 (11 cột)
+ * hoặc v2 (12 cột); v1 bootstrap notes=''. Un-escape '\n' trong fragment + notes.
  */
 function read_csv_11col($path, callable $logger)
 {
@@ -518,23 +573,35 @@ function read_csv_11col($path, callable $logger)
     $fh = fopen($path, 'r');
     if (!$fh) return [];
 
-    $cols = csv_columns_11();
+    $colsV2 = csv_columns_12();
+    $colsV1 = csv_columns_11();
     $header = fgetcsv($fh);
     if ($header === false) { fclose($fh); return []; }
     if (isset($header[0])) {
         $header[0] = preg_replace('/^\xEF\xBB\xBF/', '', $header[0]);
     }
-    if ($header !== $cols) {
+    $isV2 = ($header === $colsV2);
+    $isV1 = ($header === $colsV1);
+    if (!$isV1 && !$isV2) {
         $logger('WARN', "header mismatch trong {$path} — got=" . implode(',', $header));
         fclose($fh);
         return [];
     }
+    if ($isV1) {
+        $logger('WARN', "Reading v1(11) CSV {$path} — notes col bootstrap empty (run sync.php to upgrade).");
+    }
 
+    $cols = $isV2 ? $colsV2 : $colsV1;
     $out = [];
     while (($r = fgetcsv($fh)) !== false) {
         if (count($r) !== count($cols)) continue;
         $row = array_combine($cols, $r);
         $row['fragment'] = str_replace('\\n', "\n", $row['fragment']);
+        if ($isV1) {
+            $row['notes'] = '';
+        } else {
+            $row['notes'] = str_replace('\\n', "\n", isset($row['notes']) ? $row['notes'] : '');
+        }
         $out[] = $row;
     }
     fclose($fh);
@@ -552,8 +619,13 @@ function read_csv_11col($path, callable $logger)
  *
  * Phase F: khi hint differ, payload emit `hints` array of {text, locale}
  *          (KHÔNG còn `hint` singular). target.hint trim='' → hints=[] (clear).
+ *
+ * Phase J: notes diff. target.notes là enriched block (marker + sections).
+ *          merge_notes_for_patch ghép user_text (nếu có) + target → final value.
+ *          So sánh final value vs snapshot.notes — khác → patch['notes'] = final.
+ *          $forceOverwrite=true bỏ qua merge, dùng target trực tiếp (CLI flag).
  */
-function diff_for_patch(array $target, array $snapshot, $hintLocale = 'vi')
+function diff_for_patch(array $target, array $snapshot, $hintLocale = 'vi', $forceOverwriteNotes = false)
 {
     $patch = [];
 
@@ -574,6 +646,14 @@ function diff_for_patch(array $target, array $snapshot, $hintLocale = 'vi')
     if ($tTags !== $sTags) {
         // LingQ API muốn array of strings — re-parse target raw để giữ order/case nguyên gốc.
         $patch['tags'] = parse_tags_to_array($target['tags']);
+    }
+
+    // Phase J — notes diff (idempotent merge).
+    $tNotes = (string)(isset($target['notes']) ? $target['notes'] : '');
+    $sNotes = (string)(isset($snapshot['notes']) ? $snapshot['notes'] : '');
+    $finalNotes = $forceOverwriteNotes ? $tNotes : merge_notes_for_patch($tNotes, $sNotes);
+    if ($finalNotes !== $sNotes) {
+        $patch['notes'] = $finalNotes;
     }
 
     return $patch;
@@ -624,7 +704,7 @@ function parse_tags_to_array($s)
  */
 function build_post_payload(array $row, $hintLocale = 'vi')
 {
-    return [
+    $payload = [
         'term'            => (string)$row['term'],
         'fragment'        => (string)$row['fragment'],
         'hints'           => LingqClient::buildHintsArray($row['hint'], $hintLocale),
@@ -632,6 +712,12 @@ function build_post_payload(array $row, $hintLocale = 'vi')
         'extended_status' => isset($row['extended_status']) ? (int)$row['extended_status'] : 0,
         'tags'            => parse_tags_to_array($row['tags']),
     ];
+    // Phase J — include notes nếu target có (CREATE card mới với marker block ngay).
+    $notes = (string)(isset($row['notes']) ? $row['notes'] : '');
+    if ($notes !== '') {
+        $payload['notes'] = $notes;
+    }
+    return $payload;
 }
 
 function relative_path($abs, $base)

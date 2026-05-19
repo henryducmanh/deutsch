@@ -194,6 +194,19 @@ function csv_columns()
         'last_studied_correct',
         'first_seen',
         'last_synced',
+        'notes',           // Phase J — server-side card.notes (markdown, có thể empty)
+    ];
+}
+
+/**
+ * Schema v1 (11 cột) — pre-Phase-J. Dùng để detect header mismatch trên CSV cũ
+ * và partial-load preserving first_seen.
+ */
+function csv_columns_v1()
+{
+    return [
+        'lingq_id','term','fragment','hint','status','extended_status',
+        'tags','importance','last_studied_correct','first_seen','last_synced',
     ];
 }
 
@@ -243,12 +256,18 @@ function normalize_card($card, callable $logger, $hintLocale = 'vi')
         // first_seen + last_synced filled by caller.
         'first_seen'           => '',
         'last_synced'          => '',
+        // Phase J — card.notes (string, có thể empty).
+        'notes'                => isset($card['notes']) ? (string)$card['notes'] : '',
     ];
 }
 
 /**
  * Read existing csv (with BOM) → map[lingq_id] => row.
  * Returns empty array if file missing or header-only.
+ *
+ * Phase J: nếu detect schema v1 (11 cột, không có 'notes') → partial-load
+ * preserving first_seen. New 'notes' col bootstrap empty; API data sẽ fill.
+ * Log WARN để user thấy rebuild.
  */
 function load_existing_csv($path, callable $logger)
 {
@@ -256,28 +275,43 @@ function load_existing_csv($path, callable $logger)
     $fh = fopen($path, 'r');
     if (!$fh) return [];
 
-    $cols = csv_columns();
+    $cols   = csv_columns();       // v2 — 12 cột
+    $colsV1 = csv_columns_v1();    // v1 — 11 cột
+
     $header = fgetcsv($fh);
     if ($header === false) { fclose($fh); return []; }
 
-    // Strip BOM from first cell if present.
     if (isset($header[0])) {
         $header[0] = preg_replace('/^\xEF\xBB\xBF/', '', $header[0]);
     }
 
-    if ($header !== $cols) {
-        $logger('WARN', 'existing csv header mismatch — treating as empty. expected=' . implode(',', $cols) . ' got=' . implode(',', $header));
+    $isV2 = ($header === $cols);
+    $isV1 = ($header === $colsV1);
+
+    if (!$isV1 && !$isV2) {
+        $logger('WARN', 'existing csv header mismatch — treating as empty. expected v2=' . implode(',', $cols) . ' got=' . implode(',', $header));
         fclose($fh);
         return [];
     }
 
+    if ($isV1) {
+        $logger('WARN', 'Header mismatch v1(11) → v2(12), rebuilding from server (preserve first_seen)');
+    }
+
+    $useCols = $isV1 ? $colsV1 : $cols;
     $out = [];
     while (($r = fgetcsv($fh)) !== false) {
-        if (count($r) !== count($cols)) continue;
-        $row = array_combine($cols, $r);
+        if (count($r) !== count($useCols)) continue;
+        $row = array_combine($useCols, $r);
         if (!isset($row['lingq_id']) || $row['lingq_id'] === '') continue;
         // Un-escape \n inside fragment.
         $row['fragment'] = str_replace('\\n', "\n", $row['fragment']);
+        if ($isV1) {
+            // Bootstrap missing notes col — API fetch sẽ fill thật.
+            $row['notes'] = '';
+        } else {
+            $row['notes'] = str_replace('\\n', "\n", isset($row['notes']) ? $row['notes'] : '');
+        }
         $out[$row['lingq_id']] = $row;
     }
     fclose($fh);
@@ -329,8 +363,8 @@ function write_csv_atomic($path, array $rowsById)
         $line = [];
         foreach ($cols as $c) {
             $v = isset($row[$c]) ? (string)$row[$c] : '';
-            if ($c === 'fragment') {
-                // Escape newlines inside fragment → "\n" literal (so each csv row stays single-line).
+            if ($c === 'fragment' || $c === 'notes') {
+                // Escape newlines → '\n' literal (mỗi CSV row stays single-line).
                 $v = str_replace(["\r\n", "\r", "\n"], '\\n', $v);
             }
             $line[] = $v;

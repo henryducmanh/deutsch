@@ -1,4 +1,4 @@
-# LingQ Sync — Phase C + Phase D v1
+# LingQ Sync — Phase C + Phase D v1 + Phase F + Phase J
 
 **Phase C (sync):** daily pull của LingQ status về repo qua PHP CLI.
 Output: `data/lingq_cards.csv` (shadow store).
@@ -31,12 +31,13 @@ schtasks /create /tn "LingQ Sync Daily" /tr "C:\twv_share\app\deutsch\module\lin
 | `config.example.php` | C+D | Template config. Copy thành `config.php` (gitignored). Phase D thêm `push_thresholds`. |
 | `lingq_client.php` | C+D | cURL client. Phase C: `fetchAllCards()`. Phase D: `createCard()`, `updateCard()`, `deleteCard()`. Retry 5xx backoff 1s/3s/9s; 4xx fast-fail (delete 404 = treat as already-gone). |
 | `sync.php` | C | Pull LingQ → `data/lingq_cards.csv` (atomic write, idempotent). |
-| `update_local.php` | D | Đọc `vocab_master.csv` → render `data/lingq_target.csv`. Không gọi API. |
-| `push.php` | D | Diff target vs snapshot → POST/PATCH/DELETE. Default = dry-run; cần `--apply`. |
+| `update_local.php` | D+J | Đọc `vocab_master.csv` (+ chunks_master, weak_words, MISTAKES_LOG khi Phase J) → render `data/lingq_target.csv`. Không gọi API. |
+| `push.php` | D+J | Diff target vs snapshot → POST/PATCH/DELETE. Phase J: notes diff với merge logic. Default = dry-run; cần `--apply`. |
+| `notes_builder.php` | J | Utility: `build_enriched_notes()`, `merge_notes_for_patch()`, `parse_mistakes_log()`, `truncate_to_max()`, loader 3 nguồn. |
 | `cron.bat` | D | Orchestrator 4 step daily 10:00 (sync → update_local → push --auto-confirm → sync). |
 | `logs/` | C+D | `YYYY-MM-DD.log` per-run; `cron_YYYY-MM-DD.log` orchestrator. |
-| `../../data/lingq_cards.csv` | C | Shadow snapshot — UTF-8 BOM, 11 cột. |
-| `../../data/lingq_target.csv` | D | Desired state — UTF-8 BOM, 11 cột match snapshot schema. |
+| `../../data/lingq_cards.csv` | C+J | Shadow snapshot — UTF-8 BOM, 12 cột (v2 Phase J). v1 11-col tự upgrade lần sync đầu. |
+| `../../data/lingq_target.csv` | D+J | Desired state — UTF-8 BOM, 12 cột match snapshot schema. |
 | `../../data/lingq_cards_backup_*.csv` | D | Snapshot backup trước mỗi DELETE phase. KHÔNG xoá manual. |
 
 ---
@@ -44,13 +45,18 @@ schtasks /create /tn "LingQ Sync Daily" /tr "C:\twv_share\app\deutsch\module\lin
 ## CSV schema
 
 ```
+v2 (Phase J, 12 cột):
+lingq_id,term,fragment,hint,status,extended_status,tags,importance,last_studied_correct,first_seen,last_synced,notes
+
+v1 (pre-Phase-J, 11 cột — auto upgrade lần sync đầu sau khi cài Phase J):
 lingq_id,term,fragment,hint,status,extended_status,tags,importance,last_studied_correct,first_seen,last_synced
 ```
 
 - `tags` join bằng `;` (không phải `,`) để không vỡ CSV.
-- `fragment` escape `\n` thành literal `\n` (mỗi row 1 dòng).
-- `first_seen` set lần đầu — KHÔNG đổi khi update.
+- `fragment` + `notes` escape `\n` thành literal `\n` (mỗi row 1 dòng).
+- `first_seen` set lần đầu — KHÔNG đổi khi update (kể cả lúc rebuild v1→v2).
 - `last_synced` cập nhật mỗi sync run.
+- `notes` (Phase J) = markdown enriched với marker prefix `[AI-sync YYYY-MM-DD | VOC-...]`.
 - Sort theo `lingq_id` (asc) cho stable diff.
 
 Status mapping (LingQ → German Brain):
@@ -251,10 +257,91 @@ Trước Phase F dùng `hint` singular string trong cả POST và PATCH → API 
 
 ---
 
+## Phase J — enriched notes sync
+
+Phase J extend Phase D bằng cách render **enriched notes** join từ 4 nguồn deutsch:
+`vocab_master.notes` (Grammar) + `chunks_master.csv` (Collocations) + `weak_words.csv` (Weak word) +
+`docs/ai/MISTAKES_LOG.md` (Past mistakes). Output đẩy lên LingQ `card.notes` field.
+
+### Schema bump
+
+CSV `lingq_cards.csv` + `lingq_target.csv` bump 11 → 12 cột (thêm `notes` cuối).
+`sync.php` tự detect v1 lần đầu, log WARN `Header mismatch v1(11) → v2(12), rebuilding from server`,
+preserve `first_seen` qua partial-load.
+
+### Source join
+
+- **Grammar / Notes** ← `vocab_master.notes` (cột 14) cho từ đang xét.
+- **Collocations** ← chunks_master rows có `chunk_de` hoặc `note` chứa wort (stripos lemma).
+  Top `notes_max_collocations` (default 5).
+- **Weak word** ← weak_words.csv row có `wort` khớp exact. Render `mistake_count: N — last: YYYY-MM-DD — rule: ...`.
+- **Past mistakes** ← MISTAKES_LOG.md entries có text chứa wort hoặc vocab_id. Top `notes_max_mistakes` (default 5).
+- **Cross-ref** ← regex `VOC-\d{8}-\d{3}` trong grammar + collocations content; self-id excluded.
+
+### Idempotency marker
+
+Render mở đầu bằng marker `[AI-sync YYYY-MM-DD | VOC-...]`.
+Regex idempotency: `/\[AI-sync \d{4}-\d{2}-\d{2} \| VOC-[\w-]+\]/`.
+
+### Merge cases khi PATCH
+
+| Server notes | Action |
+|---|---|
+| Empty | PUT target as-is. |
+| Có marker AI cũ | Tách user_part (mọi text trước marker — preserve nguyên trạng kể cả `\n---\n`), ghép `user_part + new_target_block`. |
+| Có user text không marker | Append `serverNotes + "\n---\n" + target`. |
+| Target = '' (zero source) + server có marker | Strip marker block + trailing `\n---\n` separator → giữ user text. |
+
+Sau merge, nếu `final == serverNotes` → no PATCH (idempotent). Mặc định round-trip 2 lần → 0 changes.
+
+### Limit verify (2026-05-19)
+
+Curl probe pk=659048133: PATCH lên 250/1000/5000/20000/**100000** chars — server lưu **EXACT, no truncation observed**.
+→ `notes_max_chars` default = 50000 (rộng rãi, không bao giờ hit trong thực tế).
+
+### Phase J flag mới
+
+| Flag | Mô tả |
+|---|---|
+| `--force-overwrite-notes` | Bypass merge — đè user_text trong notes (nguy hiểm). Bắt buộc STDIN confirm gõ `OVERWRITE-NOTES`. Không tương thích `--auto-confirm`. |
+
+### Phase J config keys (`config.example.php`)
+
+| Key | Default | Mục đích |
+|---|---|---|
+| `notes_prefix` | `[AI-sync %DATE% | %ID%]` | Marker template. `%DATE%` `%ID%` được thay runtime. |
+| `notes_max_chars` | 50000 | Cắt cuối + `(truncated at N chars)` marker. |
+| `notes_max_collocations` | 5 | Top N chunks per row. |
+| `notes_max_mistakes` | 5 | Top N MISTAKES_LOG entries per row. |
+| `notes_enrichment` | `true` | `false` → fallback: chỉ `[AI-sync ...] + vocab_master.notes plain` (no joins). |
+| `notes_strict_chunk_match` | `false` | `true` → word-boundary regex (tránh `Mut`→`Mutter`). Default stripos cho linh hoạt flexion (`Schüler`→`Schülern`). |
+
+### Acceptance tests Phase J
+
+Đã verify programmatic (42/42 unit pass):
+
+1. ✅ Schüler render đầy đủ 5 section với fixtures (chunks + weak + mistakes + cross-ref).
+2. ✅ Server có user text không marker → Case D append `\n---\n` + target.
+3. ✅ Server có marker cũ → Case C replace; user text trước marker preserved.
+4. ✅ Idempotent: server = canonical merged output → re-merge return server (no PATCH).
+5. ✅ Target empty (zero source) + server có marker → strip block, giữ user text.
+6. ✅ Partial source: chỉ Grammar section → KHÔNG render heading rỗng cho 4 section còn lại.
+7-8. ✅ Add mistake/chunk → next render include (verified qua T1 fixture).
+9. ✅ Truncate tại `notes_max_chars` với marker `(truncated at N chars)`.
+10. ✅ Schema bump 11→12 lần đầu: `sync.php` WARN + rebuild preserve `first_seen` (qua partial-load v1).
+11. ✅ Phase D regression x8: `fragment-changed=0, hint-changed=0, tags-changed=0` trong plan dry-run sau khi target chỉ thay đổi notes.
+12. ⏳ POST CREATE với notes: dry-run plan CREATE=3 với target.notes; verify live qua user manual `--apply --limit=1`.
+13. ✅ `notes_enrichment=false` fallback: marker + plain `vocab_master.notes`.
+14. ✅ `--force-overwrite-notes` + STDIN: nếu confirm string ≠ `OVERWRITE-NOTES` → abort exit 1.
+15. ✅ Round-trip lossy: `update_local.php` chạy 2 lần liên tiếp → `lingq_target.csv` identical (diff empty).
+
+---
+
 ## Tham chiếu
 
 - Spec đầy đủ Phase C: `docs/ai/tasks/LINGQ_SYNC_PROMPT.md`
 - Spec đầy đủ Phase D: `docs/ai/tasks/LINGQ_PUSH_PROMPT.md`
 - Spec đầy đủ Phase F: `docs/ai/tasks/LINGQ_PHASE_F_PROMPT.md`
+- Spec đầy đủ Phase J: `docs/ai/tasks/LINGQ_NOTES_SYNC_PROMPT.md`
 - Pipeline router: `docs/ai/PIPELINE.md`
 - Data contract: `data/README.md`

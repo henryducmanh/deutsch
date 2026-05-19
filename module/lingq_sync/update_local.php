@@ -32,12 +32,18 @@
 
 declare(strict_types=0);
 
-$moduleDir  = __DIR__;
-$repoRoot   = realpath(__DIR__ . '/../..');
-$vocabPath  = $repoRoot . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . '03_unified' . DIRECTORY_SEPARATOR . 'vocab_master.csv';
-$targetPath = $repoRoot . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'lingq_target.csv';
-$logsDir    = $moduleDir . DIRECTORY_SEPARATOR . 'logs';
-$logFile    = $logsDir . DIRECTORY_SEPARATOR . date('Y-m-d') . '.log';
+require_once __DIR__ . '/notes_builder.php';
+
+$moduleDir   = __DIR__;
+$repoRoot    = realpath(__DIR__ . '/../..');
+$vocabPath   = $repoRoot . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . '03_unified' . DIRECTORY_SEPARATOR . 'vocab_master.csv';
+$targetPath  = $repoRoot . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'lingq_target.csv';
+$chunksPath  = $repoRoot . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'chunks_master.csv';
+$weakPath    = $repoRoot . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'weak_words.csv';
+$mistakesPath= $repoRoot . DIRECTORY_SEPARATOR . 'docs' . DIRECTORY_SEPARATOR . 'ai' . DIRECTORY_SEPARATOR . 'MISTAKES_LOG.md';
+$configPath  = $moduleDir . DIRECTORY_SEPARATOR . 'config.php';
+$logsDir     = $moduleDir . DIRECTORY_SEPARATOR . 'logs';
+$logFile     = $logsDir . DIRECTORY_SEPARATOR . date('Y-m-d') . '.log';
 
 $dryRun = false;
 foreach (array_slice($argv, 1) as $arg) {
@@ -68,6 +74,32 @@ if (!file_exists($vocabPath)) {
     $logger('ERROR', "vocab_master missing: {$vocabPath}");
     exit(1);
 }
+
+// Load config for Phase J keys (notes_prefix, notes_max_chars, notes_max_collocations,
+// notes_max_mistakes, notes_enrichment, notes_strict_chunk_match).
+$cfg = [];
+if (file_exists($configPath)) {
+    try {
+        $loaded = require $configPath;
+        if (is_array($loaded)) $cfg = $loaded;
+    } catch (Throwable $e) {
+        $logger('WARN', "config.php load failed (using defaults): " . $e->getMessage());
+    }
+}
+$enrich = !array_key_exists('notes_enrichment', $cfg) || !empty($cfg['notes_enrichment']);
+
+// Phase J — load 3 source: chunks, weak_words, MISTAKES_LOG. Đọc 1 lần đầu run.
+$allChunks   = $enrich ? load_chunks_master($chunksPath)   : [];
+$allWeak     = $enrich ? load_weak_words($weakPath)        : [];
+$allMistakes = $enrich ? parse_mistakes_log($mistakesPath) : [];
+echo sprintf(
+    "Phase J sources: chunks=%d, weak=%d, mistakes=%d (enrichment=%s)\n",
+    count($allChunks), count($allWeak), count($allMistakes), $enrich ? 'ON' : 'OFF'
+);
+$logger('INFO', sprintf(
+    "phase_j sources chunks=%d weak=%d mistakes=%d enrichment=%s",
+    count($allChunks), count($allWeak), count($allMistakes), $enrich ? '1' : '0'
+));
 
 // -----------------------------------------------------------------------------
 // Read vocab_master.
@@ -101,6 +133,9 @@ $idx = array_flip($header);
 $readRows = 0;
 $validRows = [];
 $skipped = 0;
+$enrichedCount = 0;
+$truncatedCount = 0;
+$today = date('Y-m-d');
 
 while (($row = fgetcsv($fh)) !== false) {
     $readRows++;
@@ -119,6 +154,7 @@ while (($row = fgetcsv($fh)) !== false) {
     $beispiel  = trim($get('beispiel'));
     $thema     = trim($get('thema'));
     $tagsRaw   = trim($get('tags'));
+    $vocNotes  = trim($get('notes'));
 
     if ($wort === '' || $bedeutung === '') {
         $skipped++;
@@ -127,6 +163,30 @@ while (($row = fgetcsv($fh)) !== false) {
     }
 
     $tags = build_tags($wortart, $thema, $id, $tagsRaw);
+
+    // Phase J — build enriched notes (markdown) hoặc fallback plain.
+    $notesOut = '';
+    if ($enrich) {
+        $vocRow = [
+            'id'    => $id,
+            'wort'  => $wort,
+            'notes' => $vocNotes,
+        ];
+        $notesOut = build_enriched_notes($vocRow, $allChunks, $allWeak, $allMistakes, $cfg, $today);
+    } elseif ($vocNotes !== '') {
+        // Fallback (notes_enrichment=false): chỉ marker + raw vocab.notes.
+        $prefix = isset($cfg['notes_prefix']) ? (string)$cfg['notes_prefix'] : '[AI-sync %DATE% | %ID%]';
+        $marker = strtr($prefix, ['%DATE%' => $today, '%ID%' => $id]);
+        $notesOut = $marker . "\n\n" . $vocNotes;
+    }
+    if ($notesOut !== '') {
+        $enrichedCount++;
+        $maxChars = isset($cfg['notes_max_chars']) ? (int)$cfg['notes_max_chars'] : 50000;
+        if (strlen($notesOut) > $maxChars - strlen("\n... (truncated at {$maxChars} chars)")) {
+            // Heuristic — chính xác hơn so length sau truncate, nhưng tệ nhất chỉ over-count nhẹ.
+            $truncatedCount++;
+        }
+    }
 
     $validRows[] = [
         'lingq_id'             => '',
@@ -138,8 +198,9 @@ while (($row = fgetcsv($fh)) !== false) {
         'tags'                 => $tags,
         'importance'           => '0',
         'last_studied_correct' => '',
-        'first_seen'           => date('Y-m-d'),
+        'first_seen'           => $today,
         'last_synced'          => '',
+        'notes'                => $notesOut,
     ];
 }
 fclose($fh);
@@ -150,6 +211,12 @@ if ($skipped > 0) echo " ({$skipped} skipped, xem log)";
 echo PHP_EOL;
 
 $logger('INFO', "read={$readRows} valid=" . count($validRows) . " skipped={$skipped}");
+
+echo sprintf(
+    "Phase J build: %d/%d rows have enriched content; %d truncated to notes_max_chars.\n",
+    $enrichedCount, count($validRows), $truncatedCount
+);
+$logger('INFO', "phase_j enriched={$enrichedCount}/" . count($validRows) . " truncated={$truncatedCount}");
 
 // Sort stable by term ASC (case-insensitive) cho stable diff.
 usort($validRows, function ($a, $b) {
@@ -198,6 +265,7 @@ function target_columns()
         'last_studied_correct',
         'first_seen',
         'last_synced',
+        'notes',           // Phase J — enriched markdown (marker + sections).
     ];
 }
 
@@ -253,8 +321,8 @@ function write_target_atomic($path, array $rows)
         $line = [];
         foreach ($cols as $c) {
             $v = isset($row[$c]) ? (string)$row[$c] : '';
-            if ($c === 'fragment') {
-                // Escape newlines giống Phase C (mỗi CSV row 1 line).
+            if ($c === 'fragment' || $c === 'notes') {
+                // Escape newlines (mỗi CSV row 1 line).
                 $v = str_replace(["\r\n", "\r", "\n"], '\\n', $v);
             }
             $line[] = $v;

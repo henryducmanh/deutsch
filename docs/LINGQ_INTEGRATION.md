@@ -25,18 +25,30 @@ lingq_cards.csv (server snapshot, with status updated)
 | File | Vai trò | Schema |
 |---|---|---|
 | `data/03_unified/vocab_master.csv` | Source of truth (user curate per tutor session) | 14 cột (xem `data/README.md`) |
-| `data/lingq_target.csv` | Desired state (sinh tự động) | 11 cột match `lingq_cards.csv` |
-| `data/lingq_cards.csv` | Server snapshot (pull-only) | 11 cột |
+| `data/lingq_target.csv` | Desired state (sinh tự động) | **12 cột** match `lingq_cards.csv` (Phase J thêm `notes`) |
+| `data/lingq_cards.csv` | Server snapshot (pull-only) | **12 cột** (v2 — auto upgrade từ v1 lần sync đầu) |
 
 ## 2. Diff logic (push.php)
 
 | Tình huống | Action |
 |---|---|
-| `term` trong target, không trong snapshot | POST (status=1 fresh) |
-| `term` cả 2, field khác (fragment/hint/tags) khác | PATCH (đè field từ target, **giữ status từ snapshot**) |
+| `term` trong target, không trong snapshot | POST (status=1 fresh, kèm `notes` nếu target có) |
+| `term` cả 2, field khác (fragment/hint/tags/**notes**) khác | PATCH (đè field từ target, **giữ status từ snapshot**) |
 | `term` trong snapshot, không trong target | DELETE |
 
 → Quy tắc vàng: **status luôn từ snapshot, field khác luôn từ target**.
+
+**Phase J — notes merge (idempotent):** `diff_for_patch()` gọi `merge_notes_for_patch(target, server_notes)`
+trước khi compare. Cases:
+
+| Server `notes` | Output |
+|---|---|
+| Empty | target as-is |
+| Có marker `[AI-sync ... \| VOC-...]` | user_part trước marker (verbatim) + new_target_block |
+| Có user text không marker | `server + "\n---\n" + target` (Case D append) |
+| Target = '' + server có marker | strip marker block + trailing separator → giữ user text |
+
+Sau merge: nếu `final == server_notes` → no PATCH (idempotent). `--force-overwrite-notes` bypass merge.
 
 ## 3. Workflow daily (tự động)
 
@@ -153,18 +165,61 @@ forfiles /P data /M lingq_cards_backup_*.csv /D -30 /C "cmd /c del @path"
 | G | Backup retention auto (giữ 30 ngày) | TBD |
 | H | Health check cuối cron.bat (1-line summary) | TBD |
 | I | Stale lock guard đầu cron.bat (age > 60min → log WARN) | TBD |
+| J | ✅ **DONE 2026-05-19** — Push enriched notes 4 nguồn (vocab.notes + chunks + weak_words + MISTAKES_LOG) → LingQ card.notes. Schema 11→12 cột, marker `[AI-sync ... \| VOC-...]`, idempotent merge, cron unchanged. | `docs/ai/tasks/LINGQ_NOTES_SYNC_PROMPT.md` |
+
+## 13. Phase J — notes endpoint + limit verify (2026-05-19)
+
+Verify thực hiện qua probe PHP one-shot trên pk=659048133 (`einsetzen`), restore notes='' sau.
+
+### Endpoint shape
+
+```
+GET /api/v2/de/cards/{pk}/         → HTTP 200, JSON có key `notes` (type string).
+GET /api/v2/de/cards/?page=N       → HTTP 200, results[].notes present (KHÔNG bị omit khỏi list view).
+PATCH /api/v2/de/cards/{pk}/ + {notes: "..."} → HTTP 200, GET back lưu chính xác.
+```
+
+→ Không cần fan-out single GET sau list — Phase J sync.php parse `card.notes` ngay từ list response.
+
+### Limit test (5 mức)
+
+| Requested chars | PATCH HTTP | GET back len | Verdict |
+|---|---|---|---|
+| 250 | 200 | 250 | EXACT |
+| 1,000 | 200 | 1,000 | EXACT |
+| 5,000 | 200 | 5,000 | EXACT |
+| 20,000 | 200 | 20,000 | EXACT |
+| 100,000 | 200 | 100,000 | EXACT |
+
+→ **Server lưu chính xác ít nhất 100,000 chars; không quan sát thấy truncation hoặc HTTP 4xx.**
+→ Config `notes_max_chars = 50000` (conservative, sẽ không bao giờ hit trong thực tế).
+→ Truncate policy (`truncate_to_max()`) vẫn implement đầy đủ — bị trigger khi user set config thấp.
+
+### Phase J config keys (`config.php`)
+
+| Key | Default | Note |
+|---|---|---|
+| `notes_prefix` | `[AI-sync %DATE% \| %ID%]` | `%DATE%` `%ID%` replaced runtime. |
+| `notes_max_chars` | 50000 | Truncate cuối với marker `(truncated at N chars)`. |
+| `notes_max_collocations` | 5 | Top N chunks per row. |
+| `notes_max_mistakes` | 5 | Top N MISTAKES_LOG entries per row. |
+| `notes_enrichment` | `true` | `false` → fallback marker + raw `vocab_master.notes`. |
+| `notes_strict_chunk_match` | `false` | `true` → word-boundary regex (tránh `Mut`→`Mutter` false positive). |
+
+---
 
 ## 12. Files
 
 ```
 module/lingq_sync/
 ├── config.php             gitignored, chứa api_key
-├── config.example.php     template
+├── config.example.php     template (Phase J keys: notes_prefix, notes_max_chars, ...)
 ├── lingq_client.php       cURL wrapper (GET/POST/PATCH/DELETE + retry + 429)
-├── sync.php               pull from LingQ → lingq_cards.csv
-├── update_local.php       vocab_master → lingq_target.csv (no API)
-├── push.php               diff → POST/PATCH/DELETE
-├── cron.bat               4-step orchestrator (Task Scheduler entry)
+├── sync.php               pull from LingQ → lingq_cards.csv (Phase J: 12 cột, parse card.notes)
+├── update_local.php       vocab_master + 3 nguồn → lingq_target.csv (Phase J join)
+├── push.php               diff → POST/PATCH/DELETE (Phase J: notes diff + merge + --force-overwrite-notes)
+├── notes_builder.php      Phase J utility (build/merge/parse/truncate)
+├── cron.bat               4-step orchestrator (Task Scheduler entry, unchanged)
 ├── README.md              module-level doc
 └── logs/                  daily log files
 
@@ -176,9 +231,10 @@ docs/ai/tasks/
 ├── LINGQ_SYNC_PROMPT.md   Phase C spec (pull)
 ├── LINGQ_PUSH_PROMPT.md   Phase D spec (push 2-way)
 ├── LINGQ_PHASE_E_PROMPT.md  Phase E spec (zombie cleanup)
-└── LINGQ_PHASE_F_PROMPT.md  Phase F spec (hints array format)
+├── LINGQ_PHASE_F_PROMPT.md  Phase F spec (hints array format)
+└── LINGQ_NOTES_SYNC_PROMPT.md  Phase J spec (enriched notes sync)
 ```
 
 ---
 
-**Last updated:** 2026-05-18 (Phase C + D + F done, E + G + H + I backlog).
+**Last updated:** 2026-05-19 (Phase C + D + F + **J** done; E + G + H + I backlog).

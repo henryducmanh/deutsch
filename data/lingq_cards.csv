@@ -1,58 +1,155 @@
 ﻿lingq_id,term,fragment,hint,status,extended_status,tags,importance,last_studied_correct,first_seen,last_synced
-659048133,einsetzen,"Künstliche Intelligenz wird in der Industrie eingesetzt.","lắp vào",0,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-031,1,,2026-05-18,2026-05-18
-659761355,verbinden,"Mein Handy ist mit dem WLAN verbunden.","kết nối",0,0,wortart:verb;level:b1;thema:technologie;voc:voc-20260518-024,1,,2026-05-18,2026-05-18
-661345614,gesellschaft,"Die Digitalisierung verändert unsere Gesellschaft grundlegend.","xã hội",0,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-003,3,,2026-05-18,2026-05-18
-661363249,umwelt,"Wir müssen die Umwelt schützen.","môi trường",0,0,level:b1;wortart:substantiv;thema:umwelt;voc:voc-20260518-036,1,,2026-05-18,2026-05-18
-663714925,eröffnen,"Das Studium eröffnet mir neue Möglichkeiten.",mở,0,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-025,0,,2026-05-18,2026-05-18
-667023636,entwicklung,"Technologische Entwicklungen verändern die Welt.","phát triển",0,0,level:b1;wortart:substantiv;thema:technologie;voc:voc-20260518-001,3,,2026-05-18,2026-05-18
-667452237,vermitteln,"Der Lehrer vermittelt uns wichtiges Wissen.","truyền đạt",0,0,wortart:verb;level:b1;thema:bildung;voc:voc-20260518-028,1,,2026-05-18,2026-05-18
-667463799,entscheidend,"Es ist entscheidend, dass wir pünktlich kommen.","quyết định",0,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-026,1,,2026-05-18,2026-05-18
-667464377,fördern,"Der Staat fördert junge Unternehmer mit Krediten.","khuyến khích",0,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-022,1,,2026-05-18,2026-05-18
-667467757,gesundheit,"Rauchen schadet der Gesundheit.","sức khỏe",0,0,level:b1;wortart:substantiv;thema:gesundheit;voc:voc-20260518-035,2,,2026-05-18,2026-05-18
-670251200,schaden,"Diäten können mehr Schaden als Nutzen bringen.","gây hại",0,0,level:b1;wortart:substantiv;thema:gesundheit;voc:voc-20260518-052,2,,2026-05-18,2026-05-18
-684708798,verstärken,"Stress verstärkt Kopfschmerzen.","tăng cường",0,0,wortart:verb;level:b1;thema:gesundheit;voc:voc-20260518-014,1,,2026-05-18,2026-05-18
-689716998,einstellen,"Du musst dich auf neue Aufgaben einstellen.","ngừng lại",0,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-019,1,,2026-05-18,2026-05-18
-815679120,anpassen,"Ich muss mich an das neue Klima anpassen.",,1,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-010,0,,2026-05-18,2026-05-18
-815706338,Aspekt,"Wir müssen alle Aspekte des Plans berücksichtigen.",,1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-008,1,,2026-05-18,2026-05-18
-815706344,aufwachsen,"Ich bin auf dem Land aufgewachsen.",,1,0,wortart:verb;level:b1;thema:familie;voc:voc-20260518-023,0,,2026-05-18,2026-05-18
-815706348,ausgewogen,"Eine ausgewogene Mahlzeit enthält Proteine und Vitamine.",,1,0,level:b1;wortart:adjektiv;thema:ernährung;voc:voc-20260518-048,0,,2026-05-18,2026-05-18
-815706357,Automatisierung,"Die Automatisierung schafft neue Berufe und vernichtet alte.",,1,0,level:b1;thema:arbeit;wortart:substantiv;voc:voc-20260518-012,0,,2026-05-18,2026-05-18
-815706362,Bedürfnis,"Jeder Mensch hat unterschiedliche Bedürfnisse.",,1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-049,1,,2026-05-18,2026-05-18
-815706371,Bewusstsein,"Die Kampagne will Bewusstsein für Umweltschutz schaffen.",,1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-054,1,,2026-05-18,2026-05-18
-815706379,Chance,"Du hast eine gute Chance",,1,0,"wortart:substantiv;thema:bạn có cơ hội tốt để có được công việc.;voc:voc-20260518-015",2,,2026-05-18,2026-05-18
-815706386,Diät,"Sie macht seit einem Monat eine Diät.",,1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-037,0,,2026-05-18,2026-05-18
-815706391,Einfluss,"Diese Erfindung hat großen Einfluss auf die Gesellschaft.",,1,0,level:b1;wortart:substantiv;thema:technologie;voc:voc-20260518-002,2,,2026-05-18,2026-05-18
-815706396,erfolgreich,"Sie ist eine erfolgreiche Unternehmerin.",,1,0,level:b1;thema:arbeit;wortart:adjektiv;voc:voc-20260518-029,2,,2026-05-18,2026-05-18
-815706403,erkennen,"Ich habe das Problem sofort erkannt.",,1,0,wortart:verb;level:b1;thema:general;voc:voc-20260518-009,3,,2026-05-18,2026-05-18
-815706409,Ernährung,"Eine gesunde Ernährung ist wichtig für den Körper.",,1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-034,1,,2026-05-18,2026-05-18
-815706416,Ernährungsregel,"Strenge Ernährungsregeln sind oft kontraproduktiv.",,1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-039,0,,2026-05-18,2026-05-18
-815706424,Essgewohnheit,"Schlechte Essgewohnheiten können krank machen.",,1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-043,0,,2026-05-18,2026-05-18
-815706432,ethisch,"Künstliche Intelligenz sollte ethisch gestaltet werden.",,1,0,level:b1;wortart:adjektiv;thema:ethik;voc:voc-20260518-005,0,,2026-05-18,2026-05-18
-815706440,Fertigprodukt,"Fertigprodukte enthalten oft viel Salz und Zucker.",,1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-050,0,,2026-05-18,2026-05-18
-815706446,Fortschritt,"Die Medizin macht große Fortschritte.",,1,0,level:b1;wortart:substantiv;thema:technologie;voc:voc-20260518-004,1,,2026-05-18,2026-05-18
-815706453,Frust,"Nach der Prüfung hatte er großen Frust.",,1,0,level:b1;wortart:substantiv;thema:gefuehle;voc:voc-20260518-046,0,,2026-05-18,2026-05-18
-815706466,Fähigkeit,"Sie hat die Fähigkeit, schnell zu lernen.",,1,0,level:b1;thema:arbeit;wortart:substantiv;voc:voc-20260518-027,2,,2026-05-18,2026-05-18
-815706475,Gemeinwohl,"Künstliche Intelligenz sollte das Gemeinwohl fördern.",,1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-021,0,,2026-05-18,2026-05-18
-815706479,Generation,"Jede Generation hat ihre eigenen Herausforderungen.",,1,0,level:b1;wortart:substantiv;thema:familie;voc:voc-20260518-007,2,,2026-05-18,2026-05-18
-815706489,gestalten,"Wir müssen die Zukunft aktiv gestalten.",,1,0,wortart:verb;level:b1;thema:technologie;voc:voc-20260518-006,2,,2026-05-18,2026-05-18
-815706500,immens,"Das Projekt bietet immense Möglichkeiten.",,1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-016,0,,2026-05-18,2026-05-18
-815706506,klug,"Wenn die Mittel klug eingesetzt werden, sehen wir Erfolg.",,1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-032,1,,2026-05-18,2026-05-18
-815706514,kontraproduktiv,"Zu viel Druck ist beim Lernen kontraproduktiv.",,1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-040,0,,2026-05-18,2026-05-18
-815706521,"Künstliche Intelligenz","Künstliche Intelligenz verändert den Arbeitsmarkt.",,1,0,level:b1;wortart:substantiv;thema:technologie;voc:voc-20260518-011,0,,2026-05-18,2026-05-18
-815706532,langfristig,"Wir brauchen eine langfristige Lösung.",,1,0,level:b1;thema:arbeit;wortart:adjektiv;voc:voc-20260518-053,1,,2026-05-18,2026-05-18
-815706545,schaffen,"Bewusstsein für eine ausgewogene Ernährung schaffen.",,1,0,wortart:verb;level:b1;thema:general;voc:voc-20260518-055,3,,2026-05-18,2026-05-18
-815706555,Scheitern,"Das Scheitern des Projekts war eine Lehre.",,1,0,level:b1;thema:arbeit;wortart:substantiv;voc:voc-20260518-047,1,,2026-05-18,2026-05-18
-815706569,Schnelllebigkeit,"Die Schnelllebigkeit des modernen Lebens stresst viele Menschen.",,1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-041,0,,2026-05-18,2026-05-18
-815706573,streng,"Mein Vater ist sehr streng mit den Hausaufgaben.",,1,0,level:b1;thema:familie;wortart:adjektiv;voc:voc-20260518-038,2,,2026-05-18,2026-05-18
-815706583,unaufhaltsam,"Der Klimawandel scheint unaufhaltsam zu sein.",,1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-018,0,,2026-05-18,2026-05-18
-815706594,Ungerechtigkeit,"Soziale Ungerechtigkeiten müssen bekämpft werden.",,1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-013,0,,2026-05-18,2026-05-18
-815706600,ungesund,"Zu viel Zucker ist ungesund.",,1,0,level:b1;wortart:adjektiv;thema:gesundheit;voc:voc-20260518-042,0,,2026-05-18,2026-05-18
-815706608,untrennbar,"Beruf und Privatleben sind oft untrennbar verbunden.",,1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-057,0,,2026-05-18,2026-05-18
-815706612,vegan,"Mein Bruder lebt seit zwei Jahren vegan.",,1,0,level:b1;wortart:adjektiv;thema:ernährung;voc:voc-20260518-033,0,,2026-05-18,2026-05-18
-815706621,Verbot,"Das Rauchverbot gilt in allen Restaurants.",,1,0,level:b1;wortart:substantiv;thema:behörde;voc:voc-20260518-044,2,,2026-05-18,2026-05-18
-815706632,Verbundenheit,"Die Verbundenheit zur Familie ist mir wichtig.",,1,0,level:b1;wortart:substantiv;thema:familie;voc:voc-20260518-017,0,,2026-05-18,2026-05-18
-815706639,vernachlässigen,"Wir dürfen die ethischen Aspekte nicht vernachlässigen.",,1,0,wortart:verb;level:b1;thema:ethik;voc:voc-20260518-020,0,,2026-05-18,2026-05-18
-815706647,verzichten,"Ich verzichte auf Zucker",,1,0,"wortart:verb;thema:tôi kiêng đường, vì muốn giảm cân.;voc:voc-20260518-056",2,,2026-05-18,2026-05-18
-815706655,voranbringen,"Diese Idee wird das Projekt voranbringen.",,1,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-030,0,,2026-05-18,2026-05-18
-815706661,Wahl,"Manchmal ist die einfache Wahl nicht die beste.",,1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-051,3,,2026-05-18,2026-05-18
-815706671,Zwang,"Ich studiere ohne Zwang, weil es mir Spaß macht.",,1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-045,1,,2026-05-18,2026-05-18
+659048133,einsetzen,"Künstliche Intelligenz wird in der Industrie eingesetzt.","sử dụng, triển khai; tuyển vào vị trí",0,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-031,1,,2026-05-18,2026-05-19
+659761355,verbinden,"Mein Handy ist mit dem WLAN verbunden.","kết nối, liên kết",0,0,wortart:verb;level:b1;thema:technologie;voc:voc-20260518-024,1,,2026-05-18,2026-05-19
+661345614,gesellschaft,"Die Digitalisierung verändert unsere Gesellschaft grundlegend.","xã hội",0,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-003,3,,2026-05-18,2026-05-19
+661363249,umwelt,"Wir müssen die Umwelt schützen.","môi trường",0,0,level:b1;wortart:substantiv;thema:umwelt;voc:voc-20260518-036,1,,2026-05-18,2026-05-19
+663714925,eröffnen,"Das Studium eröffnet mir neue Möglichkeiten.","mở ra (cơ hội); khai trương",0,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-025,0,,2026-05-18,2026-05-19
+667023636,entwicklung,"Technologische Entwicklungen verändern die Welt.","sự phát triển",0,0,level:b1;wortart:substantiv;thema:technologie;voc:voc-20260518-001,3,,2026-05-18,2026-05-19
+667452237,vermitteln,"Der Lehrer vermittelt uns wichtiges Wissen.","truyền đạt; làm trung gian/hoà giải",0,0,wortart:verb;level:b1;thema:bildung;voc:voc-20260518-028,1,,2026-05-18,2026-05-19
+667463799,entscheidend,"Es ist entscheidend, dass wir pünktlich kommen.","quyết định, then chốt",0,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-026,1,,2026-05-18,2026-05-19
+667464377,fördern,"Der Staat fördert junge Unternehmer mit Krediten.","thúc đẩy, nâng đỡ, hỗ trợ tài chính",0,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-022,1,,2026-05-18,2026-05-19
+667467757,gesundheit,"Rauchen schadet der Gesundheit.","sức khoẻ",0,0,level:b1;wortart:substantiv;thema:gesundheit;voc:voc-20260518-035,2,,2026-05-18,2026-05-19
+670251200,schaden,"Diäten können mehr Schaden als Nutzen bringen.","sự thiệt hại, tổn hại",0,0,level:b1;wortart:substantiv;thema:gesundheit;voc:voc-20260518-052,2,,2026-05-18,2026-05-19
+684708798,verstärken,"Stress verstärkt Kopfschmerzen.","làm mạnh hơn, gia tăng",0,0,wortart:verb;level:b1;thema:gesundheit;voc:voc-20260518-014,1,,2026-05-18,2026-05-19
+689716998,einstellen,"Du musst dich auf neue Aufgaben einstellen.","thích ứng (refl.); cài đặt; tuyển dụng",0,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-019,1,,2026-05-18,2026-05-19
+815679120,anpassen,"Ich muss mich an das neue Klima anpassen.","thích nghi (reflexiv)",1,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-010,0,,2026-05-18,2026-05-19
+815706338,Aspekt,"Wir müssen alle Aspekte des Plans berücksichtigen.","khía cạnh",1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-008,1,,2026-05-18,2026-05-19
+815706344,aufwachsen,"Ich bin auf dem Land aufgewachsen.","lớn lên",1,0,wortart:verb;level:b1;thema:familie;voc:voc-20260518-023,0,,2026-05-18,2026-05-19
+815706348,ausgewogen,"Eine ausgewogene Mahlzeit enthält Proteine und Vitamine.","cân bằng",1,0,level:b1;wortart:adjektiv;thema:ernährung;voc:voc-20260518-048,0,,2026-05-18,2026-05-19
+815706357,Automatisierung,"Die Automatisierung schafft neue Berufe und vernichtet alte.","tự động hóa",1,0,level:b1;thema:arbeit;wortart:substantiv;voc:voc-20260518-012,0,,2026-05-18,2026-05-19
+815706362,Bedürfnis,"Jeder Mensch hat unterschiedliche Bedürfnisse.","nhu cầu",1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-049,1,,2026-05-18,2026-05-19
+815706371,Bewusstsein,"Die Kampagne will Bewusstsein für Umweltschutz schaffen.","sự nhận thức, ý thức",1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-054,1,,2026-05-18,2026-05-19
+815706379,Chance,"Du hast eine gute Chance, den Job zu bekommen.","cơ hội",1,0,level:b1;thema:arbeit;wortart:substantiv;voc:voc-20260518-015,2,,2026-05-18,2026-05-19
+815706386,Diät,"Sie macht seit einem Monat eine Diät.","chế độ ăn kiêng",1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-037,0,,2026-05-18,2026-05-19
+815706391,Einfluss,"Diese Erfindung hat großen Einfluss auf die Gesellschaft.","sự ảnh hưởng",1,0,level:b1;wortart:substantiv;thema:technologie;voc:voc-20260518-002,2,,2026-05-18,2026-05-19
+815706396,erfolgreich,"Sie ist eine erfolgreiche Unternehmerin.","thành công",1,0,level:b1;thema:arbeit;wortart:adjektiv;voc:voc-20260518-029,2,,2026-05-18,2026-05-19
+815706403,erkennen,"Ich habe das Problem sofort erkannt.","nhận ra",1,0,wortart:verb;level:b1;thema:general;voc:voc-20260518-009,3,,2026-05-18,2026-05-19
+815706409,Ernährung,"Eine gesunde Ernährung ist wichtig für den Körper.","sự ăn uống, dinh dưỡng",1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-034,1,,2026-05-18,2026-05-19
+815706416,Ernährungsregel,"Strenge Ernährungsregeln sind oft kontraproduktiv.","quy tắc dinh dưỡng",1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-039,0,,2026-05-18,2026-05-19
+815706424,Essgewohnheit,"Schlechte Essgewohnheiten können krank machen.","thói quen ăn uống",1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-043,0,,2026-05-18,2026-05-19
+815706432,ethisch,"Künstliche Intelligenz sollte ethisch gestaltet werden.","có đạo đức",1,0,level:b1;wortart:adjektiv;thema:ethik;voc:voc-20260518-005,0,,2026-05-18,2026-05-19
+815706440,Fertigprodukt,"Fertigprodukte enthalten oft viel Salz und Zucker.","thực phẩm chế biến sẵn",1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-050,0,,2026-05-18,2026-05-19
+815706446,Fortschritt,"Die Medizin macht große Fortschritte.","sự tiến bộ",1,0,level:b1;wortart:substantiv;thema:technologie;voc:voc-20260518-004,1,,2026-05-18,2026-05-19
+815706453,Frust,"Nach der Prüfung hatte er großen Frust.","sự bực bội",1,0,level:b1;wortart:substantiv;thema:gefuehle;voc:voc-20260518-046,0,,2026-05-18,2026-05-19
+815706466,Fähigkeit,"Sie hat die Fähigkeit, schnell zu lernen.","khả năng, năng lực",1,0,level:b1;thema:arbeit;wortart:substantiv;voc:voc-20260518-027,2,,2026-05-18,2026-05-19
+815706475,Gemeinwohl,"Künstliche Intelligenz sollte das Gemeinwohl fördern.","phúc lợi chung, lợi ích cộng đồng",1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-021,0,,2026-05-18,2026-05-19
+815706479,Generation,"Jede Generation hat ihre eigenen Herausforderungen.","thế hệ",1,0,level:b1;wortart:substantiv;thema:familie;voc:voc-20260518-007,2,,2026-05-18,2026-05-19
+815706489,gestalten,"Wir müssen die Zukunft aktiv gestalten.","định hình, thiết kế",1,0,wortart:verb;level:b1;thema:technologie;voc:voc-20260518-006,2,,2026-05-18,2026-05-19
+815706500,immens,"Das Projekt bietet immense Möglichkeiten.","to lớn, khổng lồ",1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-016,0,,2026-05-18,2026-05-19
+815706506,klug,"Wenn die Mittel klug eingesetzt werden, sehen wir Erfolg.","khôn ngoan, thông minh",1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-032,1,,2026-05-18,2026-05-19
+815706514,kontraproduktiv,"Zu viel Druck ist beim Lernen kontraproduktiv.","phản tác dụng",1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-040,0,,2026-05-18,2026-05-19
+815706521,"Künstliche Intelligenz","Künstliche Intelligenz verändert den Arbeitsmarkt.","trí tuệ nhân tạo (AI)",1,0,level:b1;wortart:substantiv;thema:technologie;voc:voc-20260518-011,0,,2026-05-18,2026-05-19
+815706532,langfristig,"Wir brauchen eine langfristige Lösung.","lâu dài, dài hạn",1,0,level:b1;thema:arbeit;wortart:adjektiv;voc:voc-20260518-053,1,,2026-05-18,2026-05-19
+815706545,schaffen,"Bewusstsein für eine ausgewogene Ernährung schaffen.","tạo ra (irreg.); làm được/hoàn thành (reg.)",1,0,wortart:verb;level:b1;thema:general;voc:voc-20260518-055,3,,2026-05-18,2026-05-19
+815706555,Scheitern,"Das Scheitern des Projekts war eine Lehre.","sự thất bại",1,0,level:b1;thema:arbeit;wortart:substantiv;voc:voc-20260518-047,1,,2026-05-18,2026-05-19
+815706569,Schnelllebigkeit,"Die Schnelllebigkeit des modernen Lebens stresst viele Menschen.","sự sống vội, nhịp sống nhanh",1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-041,0,,2026-05-18,2026-05-19
+815706573,streng,"Mein Vater ist sehr streng mit den Hausaufgaben.","nghiêm ngặt, khắt khe",1,0,level:b1;thema:familie;wortart:adjektiv;voc:voc-20260518-038,2,,2026-05-18,2026-05-19
+815706583,unaufhaltsam,"Der Klimawandel scheint unaufhaltsam zu sein.","không thể ngăn cản",1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-018,0,,2026-05-18,2026-05-19
+815706594,Ungerechtigkeit,"Soziale Ungerechtigkeiten müssen bekämpft werden.","sự bất công",1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-013,0,,2026-05-18,2026-05-19
+815706600,ungesund,"Zu viel Zucker ist ungesund.","không lành mạnh",1,0,level:b1;wortart:adjektiv;thema:gesundheit;voc:voc-20260518-042,0,,2026-05-18,2026-05-19
+815706608,untrennbar,"Beruf und Privatleben sind oft untrennbar verbunden.","không thể tách rời",1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-057,0,,2026-05-18,2026-05-19
+815706612,vegan,"Mein Bruder lebt seit zwei Jahren vegan.","thuần chay",1,0,level:b1;wortart:adjektiv;thema:ernährung;voc:voc-20260518-033,0,,2026-05-18,2026-05-19
+815706621,Verbot,"Das Rauchverbot gilt in allen Restaurants.","sự cấm, lệnh cấm",1,0,level:b1;wortart:substantiv;thema:behörde;voc:voc-20260518-044,2,,2026-05-18,2026-05-19
+815706632,Verbundenheit,"Die Verbundenheit zur Familie ist mir wichtig.","sự gắn bó, sự kết nối",1,0,level:b1;wortart:substantiv;thema:familie;voc:voc-20260518-017,0,,2026-05-18,2026-05-19
+815706639,vernachlässigen,"Wir dürfen die ethischen Aspekte nicht vernachlässigen.","lơ là, bỏ bê, xao lãng",1,0,wortart:verb;level:b1;thema:ethik;voc:voc-20260518-020,0,,2026-05-18,2026-05-19
+815706647,verzichten,"Ich verzichte auf Zucker, weil ich abnehmen will.","từ bỏ, không dùng đến, kiêng",1,0,wortart:verb;level:b1;thema:ernährung;voc:voc-20260518-056,2,,2026-05-18,2026-05-19
+815706655,voranbringen,"Diese Idee wird das Projekt voranbringen.","đẩy tiến lên, thúc đẩy phát triển",1,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-030,0,,2026-05-18,2026-05-19
+815706661,Wahl,"Manchmal ist die einfache Wahl nicht die beste.","sự lựa chọn; cuộc bầu cử",1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-051,3,,2026-05-18,2026-05-19
+815706671,Zwang,"Ich studiere ohne Zwang, weil es mir Spaß macht.","sự ép buộc, sự cưỡng bức",1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-045,1,,2026-05-18,2026-05-19
+815862248,abbauen,"Sport hilft, Stress abzubauen.","giải toả; tháo dỡ",1,0,wortart:verb;level:b1;thema:gesundheit;voc:voc-20260518-126,0,,2026-05-19,2026-05-19
+815862251,abstimmen,"Die Methoden sollten auf die Kinder abgestimmt sein.","điều chỉnh cho phù hợp; biểu quyết",1,0,wortart:verb;level:b1;thema:general;voc:voc-20260518-076,0,,2026-05-19,2026-05-19
+815862260,anbieten,"Der Markt bietet sonntags frische Produkte an.","cung cấp, mời chào",1,0,wortart:verb;level:b1;thema:einkauf;voc:voc-20260518-120,1,,2026-05-19,2026-05-19
+815862265,Anerkennung,"Die Anerkennung alternativer Heilmethoden wächst.","sự công nhận",1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-064,1,,2026-05-19,2026-05-19
+815862271,angemessen,"Sie haben keinen angemessenen Zugang zur Versorgung.","thoả đáng, phù hợp",1,0,level:b1;wortart:adjektiv;thema:gesundheit;voc:voc-20260518-059,1,,2026-05-19,2026-05-19
+815862275,Ansatz,"Wir brauchen alternative Ansätze in der Bildung.","cách tiếp cận",1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-081,1,,2026-05-19,2026-05-19
+815862283,aufklären,"Schulen sollten Kinder über Risiken aufklären.","giải thích, làm sáng tỏ",1,0,wortart:verb;level:b1;thema:bildung;voc:voc-20260518-108,0,,2026-05-19,2026-05-19
+815862287,Austausch,"Der multikulturelle Austausch ist bereichernd.","sự trao đổi",1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-132,1,,2026-05-19,2026-05-19
+815862293,Begegnung,"Sonntage bieten Möglichkeiten zur Begegnung.","cuộc gặp gỡ",1,0,level:b1;wortart:substantiv;thema:freizeit;voc:voc-20260518-133,1,,2026-05-19,2026-05-19
+815862313,Begeisterung,"Seine Begeisterung für moderne Medizin ist groß.","sự hăng say, nhiệt tình",1,0,level:b1;wortart:substantiv;thema:gesundheit;voc:voc-20260518-061,1,,2026-05-19,2026-05-19
+815862321,Behandlung,"Die Behandlung dauert mehrere Wochen.","sự điều trị",1,0,level:b1;wortart:substantiv;thema:gesundheit;voc:voc-20260518-067,2,,2026-05-19,2026-05-19
+815862330,bereichern,"Vielfalt bereichert die Gesellschaft.","làm phong phú",1,0,wortart:verb;level:b1;thema:gesellschaft;voc:voc-20260518-134,0,,2026-05-19,2026-05-19
+815862343,beruflich,"Berufliches Wachstum ist mir wichtig.","thuộc nghề nghiệp",1,0,level:b1;thema:arbeit;wortart:adjektiv;voc:voc-20260518-147,0,,2026-05-19,2026-05-19
+815862350,Beschäftigung,"Kinder haben interessante Beschäftigungen am Nachmittag.","việc làm, hoạt động",1,0,level:b1;thema:arbeit;wortart:substantiv;voc:voc-20260518-090,1,,2026-05-19,2026-05-19
+815862367,betonen,"Sie betont den Verlust an Freizeit.","nhấn mạnh",1,0,wortart:verb;level:b1;thema:general;voc:voc-20260518-084,0,,2026-05-19,2026-05-19
+815862375,bewahren,"Wir müssen die Natur bewahren.","giữ gìn, bảo tồn",1,0,wortart:verb;level:b1;thema:umwelt;voc:voc-20260518-096,1,,2026-05-19,2026-05-19
+815862384,bewusst,"Eine bewusste Ernährung tut gut.","có ý thức, tỉnh táo",1,0,level:b1;wortart:adjektiv;thema:gesundheit;voc:voc-20260518-129,2,,2026-05-19,2026-05-19
+815862388,Bildung,"Bildung ist der Schlüssel zum Erfolg.","giáo dục, sự đào tạo",1,0,level:b1;wortart:substantiv;thema:bildung;voc:voc-20260518-111,2,,2026-05-19,2026-05-19
+815862399,Bildungssystem,"Das Bildungssystem muss sich anpassen.","hệ thống giáo dục",1,0,level:b1;wortart:substantiv;thema:bildung;voc:voc-20260518-153,0,,2026-05-19,2026-05-19
+815862404,Demonstration,"Am Sonntag gibt es eine Demonstration für den Umweltschutz.","cuộc biểu tình",1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-105,1,,2026-05-19,2026-05-19
+815862414,digitalisiert,"Wir leben in einer digitalisierten Welt.","được số hoá",1,0,level:b1;wortart:adjektiv;thema:technologie;voc:voc-20260518-154,0,,2026-05-19,2026-05-19
+815862423,einschränken,"Wir sollten die Nutzung von Handys einschränken.","hạn chế",1,0,wortart:verb;level:b1;thema:general;voc:voc-20260518-113,0,,2026-05-19,2026-05-19
+815862426,Einzigartigkeit,"Jedes Kind hat seine Einzigartigkeit.","tính độc đáo, duy nhất",1,0,level:b1;wortart:substantiv;thema:familie;voc:voc-20260518-075,0,,2026-05-19,2026-05-19
+815862437,Entdeckung,"Sonntage sind Tage der Entdeckung neuer Gerichte.","sự khám phá",1,0,level:b1;wortart:substantiv;thema:freizeit;voc:voc-20260518-121,1,,2026-05-19,2026-05-19
+815862445,entspannen,"Am Wochenende möchte ich mich entspannen.","thư giãn",1,0,wortart:verb;level:b1;thema:freizeit;voc:voc-20260518-115,0,,2026-05-19,2026-05-19
+815862453,Entspannung,"Sport bringt Entspannung nach der Arbeit.","sự thư giãn",1,0,level:b1;wortart:substantiv;thema:freizeit;voc:voc-20260518-144,0,,2026-05-19,2026-05-19
+815862462,erfordern,"Diese Aufgabe erfordert viel Zeit.","đòi hỏi, yêu cầu",1,0,wortart:verb;level:b1;thema:general;voc:voc-20260518-098,0,,2026-05-19,2026-05-19
+815862467,ermutigen,"Wir ermutigen die Menschen zum Entspannen.","động viên, khích lệ",1,0,wortart:verb;level:b1;thema:general;voc:voc-20260518-114,0,,2026-05-19,2026-05-19
+815862474,essentiell,"Gesunde Ernährung ist essentiell für ein gutes Leben.","thiết yếu",1,0,level:b1;wortart:adjektiv;thema:gesundheit;voc:voc-20260518-124,0,,2026-05-19,2026-05-19
+815862478,Forschung,"Die medizinische Forschung macht große Fortschritte.","nghiên cứu (khoa học)",1,0,level:b1;wortart:substantiv;thema:bildung;voc:voc-20260518-063,2,,2026-05-19,2026-05-19
+815862483,Freizeitaktivität,"Kinder brauchen Freizeitaktivitäten.","hoạt động lúc rảnh",1,0,level:b1;wortart:substantiv;thema:freizeit;voc:voc-20260518-086,0,,2026-05-19,2026-05-19
+815862491,frisch,"Wir kaufen jeden Tag frisches Gemüse.",tươi,1,0,level:b1;wortart:adjektiv;thema:ernährung;voc:voc-20260518-118,2,,2026-05-19,2026-05-19
+815862497,Ganztagsschule,"Viele Kinder besuchen heute eine Ganztagsschule.","trường học cả ngày",1,0,level:b1;wortart:substantiv;thema:bildung;voc:voc-20260518-082,0,,2026-05-19,2026-05-19
+815862505,ganztägig,"Die ganztägige Schule beginnt um 8 Uhr.","cả ngày",1,0,level:b1;wortart:adjektiv;thema:bildung;voc:voc-20260518-089,0,,2026-05-19,2026-05-19
+815862509,Gemeinschaft,"Die Verbundenheit mit der Gemeinschaft ist wichtig.","cộng đồng",1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-072,2,,2026-05-19,2026-05-19
+815862515,Gemüseanbau,"Der eigene Gemüseanbau bringt Freude und gute Qualität.","việc trồng rau",1,0,level:b1;wortart:substantiv;thema:freizeit;voc:voc-20260518-070,0,,2026-05-19,2026-05-19
+815862522,Gericht,"Wir probieren neue Gerichte aus.","món ăn; toà án",1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-122,2,,2026-05-19,2026-05-19
+815862524,Gewohnheit,"Wir sollten unsere täglichen Gewohnheiten ändern.","thói quen",1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-099,1,,2026-05-19,2026-05-19
+815862533,grundlegend,"Der Zugang zur Versorgung ist ein grundlegendes Recht.","cơ bản, nền tảng",1,0,level:b1;wortart:adjektiv;thema:gesellschaft;voc:voc-20260518-069,0,,2026-05-19,2026-05-19
+815862536,Grundschule,"Die ganztägige Grundschule ist neu in dieser Stadt.","trường tiểu học",1,0,level:b1;wortart:substantiv;thema:bildung;voc:voc-20260518-088,1,,2026-05-19,2026-05-19
+815862541,Hausaufgaben,"Die Kinder machen ihre Hausaufgaben in der Schule.","bài tập về nhà",1,0,level:b1;wortart:substantiv;thema:bildung;voc:voc-20260518-087,0,,2026-05-19,2026-05-19
+815862546,Heilmethode,"Alternative Heilmethoden werden immer beliebter.","phương pháp chữa bệnh",1,0,level:b1;wortart:substantiv;thema:gesundheit;voc:voc-20260518-065,0,,2026-05-19,2026-05-19
+815862551,hervorheben,"Sie hebt die Geschmacksqualität hervor.","làm nổi bật, nhấn mạnh",1,0,wortart:verb;level:b1;thema:general;voc:voc-20260518-071,0,,2026-05-19,2026-05-19
+815862558,Idee,"Sonntage sind gut, um kreative Ideen zu entwickeln.","ý tưởng",1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-149,3,,2026-05-19,2026-05-19
+815862565,informieren,"Die Stadt informiert über Umweltthemen.","thông tin, báo tin",1,0,wortart:verb;level:b1;thema:general;voc:voc-20260518-095,1,,2026-05-19,2026-05-19
+815862571,Innovation,"Technologie und Innovation eröffnen neue Möglichkeiten.","sự đổi mới",1,0,level:b1;wortart:substantiv;thema:technologie;voc:voc-20260518-141,0,,2026-05-19,2026-05-19
+815862576,Integration,"Die Integration neuer Technologien dauert Zeit.","sự hội nhập",1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-146,1,,2026-05-19,2026-05-19
+815862584,Interaktion,"Soziale Interaktionen sind wichtig für Kinder.","sự tương tác",1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-112,0,,2026-05-19,2026-05-19
+815862594,interkulturell,"Interkulturelles Lernen fördert Verständnis.","liên văn hoá",1,0,level:b1;wortart:adjektiv;thema:bildung;voc:voc-20260518-135,0,,2026-05-19,2026-05-19
+815862599,Investition,"Investitionen in die Forschung sind wichtig.","sự đầu tư",1,0,level:b1;wortart:substantiv;thema:wirtschaft;voc:voc-20260518-062,0,,2026-05-19,2026-05-19
+815862604,Kinderbetreuung,"Die Kinderbetreuung in Deutschland ist gut organisiert.","sự chăm sóc trẻ em",1,0,level:b1;wortart:substantiv;thema:familie;voc:voc-20260518-080,0,,2026-05-19,2026-05-19
+815862616,kostenlos,"Der Bus ist sonntags kostenlos.","miễn phí",1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-101,1,,2026-05-19,2026-05-19
+815862628,kritisieren,"Die Sprecherin kritisiert die neue Schulform.","phê bình, chỉ trích",1,0,wortart:verb;level:b1;thema:general;voc:voc-20260518-083,1,,2026-05-19,2026-05-19
+815862635,kulturell,"Kulturelle Vielfalt bereichert die Gesellschaft.","thuộc văn hoá",1,0,level:b1;wortart:adjektiv;thema:gesellschaft;voc:voc-20260518-130,0,,2026-05-19,2026-05-19
+815862642,Künstler,"Lokale Künstler verdienen mehr Unterstützung.","nghệ sĩ (nam)",1,0,level:b1;thema:arbeit;wortart:substantiv;voc:voc-20260518-139,2,,2026-05-19,2026-05-19
+815862648,Lebensmittel,"Frische Lebensmittel sind gesünder als Fertigprodukte.","thực phẩm",1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-119,1,,2026-05-19,2026-05-19
+815862652,Lehrmethode,"Die Vielfalt der Lehrmethoden ist wichtig.","phương pháp giảng dạy",1,0,level:b1;wortart:substantiv;thema:bildung;voc:voc-20260518-074,0,,2026-05-19,2026-05-19
+815862659,lokal,"Wir kaufen lokale Produkte.","địa phương",1,0,level:b1;wortart:adjektiv;thema:einkauf;voc:voc-20260518-140,1,,2026-05-19,2026-05-19
+815862663,Mahlzeit,"Drei gesunde Mahlzeiten pro Tag sind ideal.","bữa ăn",1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-127,1,,2026-05-19,2026-05-19
+815862670,Messe,"Auf der Innovationsmesse stellen Firmen neue Produkte vor.","hội chợ, triển lãm",1,0,level:b1;thema:arbeit;wortart:substantiv;voc:voc-20260518-142,1,,2026-05-19,2026-05-19
+815862674,multikulturell,"Berlin ist eine multikulturelle Stadt.","đa văn hoá",1,0,level:b1;wortart:adjektiv;thema:gesellschaft;voc:voc-20260518-131,0,,2026-05-19,2026-05-19
+815862679,Nutzung,"Die Nutzung von Autos sollte reduziert werden.","sự sử dụng",1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-102,1,,2026-05-19,2026-05-19
+815862681,Pflege,"Die Pflege des Gartens kostet Zeit.","sự chăm sóc",1,0,level:b1;wortart:substantiv;thema:gesundheit;voc:voc-20260518-078,1,,2026-05-19,2026-05-19
+815862689,Potenzial,"Digitale Medien haben das Potenzial, Bildung zu verbessern.","tiềm năng",1,0,level:b1;wortart:substantiv;thema:technologie;voc:voc-20260518-109,0,,2026-05-19,2026-05-19
+815862692,Rabatt,"Am Sonntag gibt es 20% Rabatt auf alle Produkte.","sự giảm giá",1,0,level:b1;wortart:substantiv;thema:einkauf;voc:voc-20260518-152,0,,2026-05-19,2026-05-19
+815862696,reduzieren,"Wir müssen den CO2-Ausstoß reduzieren.","giảm bớt",1,0,wortart:verb;level:b1;thema:umwelt;voc:voc-20260518-103,1,,2026-05-19,2026-05-19
+815862704,reflektieren,"Wir reflektieren über den Fortschritt.","suy ngẫm, phản chiếu",1,0,wortart:verb;level:b1;thema:general;voc:voc-20260518-145,0,,2026-05-19,2026-05-19
+815862706,Rezept,"Ich suche neue Rezepte für gesunde Mahlzeiten.","công thức nấu ăn; đơn thuốc",1,0,level:b1;wortart:substantiv;thema:ernährung;voc:voc-20260518-123,1,,2026-05-19,2026-05-19
+815862712,schonen,"Wir müssen Energie und Ressourcen schonen.","tiết kiệm, không lạm dụng",1,0,wortart:verb;level:b1;thema:umwelt;voc:voc-20260518-104,0,,2026-05-19,2026-05-19
+815862716,schützen,"Wir müssen die Umwelt schützen.","bảo vệ",1,0,wortart:verb;level:b1;thema:umwelt;voc:voc-20260518-097,2,,2026-05-19,2026-05-19
+815862721,sinnvoll,"Die Kinder haben dort sinnvolle Aktivitäten.","có ý nghĩa, hợp lý",1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-091,1,,2026-05-19,2026-05-19
+815862726,Stress,"Am Wochenende baue ich Stress ab.","áp lực, stress",1,0,level:b1;wortart:substantiv;thema:gesundheit;voc:voc-20260518-125,1,,2026-05-19,2026-05-19
+815862731,Tradition,"Wir feiern verschiedene kulturelle Traditionen.","truyền thống",1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-136,2,,2026-05-19,2026-05-19
+815862735,Umgang,"Der Umgang mit digitalen Medien muss gelernt werden.","cách ứng xử, sử dụng",1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-107,2,,2026-05-19,2026-05-19
+815862740,Umgebung,"Eine schöne Umgebung macht glücklich.","môi trường xung quanh",1,0,level:b1;wortart:substantiv;thema:wohnen;voc:voc-20260518-079,2,,2026-05-19,2026-05-19
+815862746,Umweltschutz,"Umweltschutz erfordert eine Änderung der Gewohnheiten.","bảo vệ môi trường",1,0,level:b1;wortart:substantiv;thema:umwelt;voc:voc-20260518-094,0,,2026-05-19,2026-05-19
+815862751,unterstützen,"Wir unterstützen lokale Künstler.","ủng hộ, hỗ trợ",1,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-138,2,,2026-05-19,2026-05-19
+815862755,veranstalten,"Die Stadt veranstaltet jedes Jahr ein Fest.","tổ chức",1,0,wortart:verb;level:b1;thema:freizeit;voc:voc-20260518-143,0,,2026-05-19,2026-05-19
+815862759,Verantwortung,"Die persönliche Verantwortung ist wichtig.","trách nhiệm",1,0,level:b1;thema:arbeit;wortart:substantiv;voc:voc-20260518-077,2,,2026-05-19,2026-05-19
+815862766,verantwortungsvoll,"Wir brauchen einen verantwortungsvollen Umgang mit Medien.","có trách nhiệm",1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-106,0,,2026-05-19,2026-05-19
+815862770,verbessern,"Neue Technologien verbessern unser Leben.","cải thiện",1,0,wortart:verb;level:b1;thema:general;voc:voc-20260518-110,2,,2026-05-19,2026-05-19
+815862778,verhindern,"Eine Ganztagsschule kann Einsamkeit verhindern.","ngăn chặn, tránh",1,0,wortart:verb;level:b1;thema:general;voc:voc-20260518-093,2,,2026-05-19,2026-05-19
+815862786,Verkehrsmittel,"Öffentliche Verkehrsmittel schützen die Umwelt.","phương tiện giao thông",1,0,level:b1;wortart:substantiv;thema:verkehr;voc:voc-20260518-100,0,,2026-05-19,2026-05-19
+815862796,Verlust,"Sie spricht über den Verlust der Freizeit.","sự mất mát, tổn thất",1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-085,1,,2026-05-19,2026-05-19
+815862799,Vermarktung,"Soziale Medien bieten neue Möglichkeiten der Vermarktung.","sự tiếp thị",1,0,level:b1;thema:arbeit;wortart:substantiv;voc:voc-20260518-117,0,,2026-05-19,2026-05-19
+815862804,Versorgung,"Die medizinische Versorgung muss für alle zugänglich sein.","sự cung cấp, chăm sóc",1,0,level:b1;wortart:substantiv;thema:gesundheit;voc:voc-20260518-060,1,,2026-05-19,2026-05-19
+815862808,Verständnis,"Wir brauchen mehr Verständnis für neue Technologien.","sự hiểu biết, sự thông cảm",1,0,level:b1;wortart:substantiv;thema:general;voc:voc-20260518-151,2,,2026-05-19,2026-05-19
+815862814,Vielfalt,"Die Vielfalt der Lehrmethoden hilft jedem Kind.","sự đa dạng",1,0,level:b1;wortart:substantiv;thema:bildung;voc:voc-20260518-073,1,,2026-05-19,2026-05-19
+815862821,vielfältig,"Das Nachmittagsangebot ist vielfältig und interessant.","đa dạng",1,0,level:b1;thema:general;wortart:adjektiv;voc:voc-20260518-092,0,,2026-05-19,2026-05-19
+815862825,vorantreiben,"Wir wollen innovative Projekte vorantreiben.","thúc đẩy",1,0,wortart:verb;level:b1;thema:arbeit;voc:voc-20260518-150,0,,2026-05-19,2026-05-19
+815862829,vorbereiten,"Am Sonntag bereite ich die Mahlzeiten der Woche vor.","chuẩn bị",1,0,wortart:verb;level:b1;thema:general;voc:voc-20260518-128,1,,2026-05-19,2026-05-19
+815862840,Wachstum,"Persönliches und berufliches Wachstum ist wichtig.","sự tăng trưởng",1,0,level:b1;thema:arbeit;wortart:substantiv;voc:voc-20260518-148,1,,2026-05-19,2026-05-19
+815862846,Werbeindustrie,"Digitale Medien beeinflussen die Werbeindustrie stark.","ngành quảng cáo",1,0,level:b1;thema:arbeit;wortart:substantiv;voc:voc-20260518-116,0,,2026-05-19,2026-05-19
+815862850,Wirksamkeit,"Die Wirksamkeit dieser Methode ist umstritten.","tính hiệu quả",1,0,level:b1;wortart:substantiv;thema:gesundheit;voc:voc-20260518-066,0,,2026-05-19,2026-05-19
+815862854,zelebrieren,"Wir zelebrieren kulturelle Vielfalt.","cử hành, ăn mừng",1,0,wortart:verb;level:b1;thema:gesellschaft;voc:voc-20260518-137,0,,2026-05-19,2026-05-19
+815862863,Zugang,"Viele Menschen haben keinen angemessenen Zugang zur medizinischen Versorgung.","sự tiếp cận, lối vào",1,0,level:b1;wortart:substantiv;thema:gesundheit;voc:voc-20260518-058,2,,2026-05-19,2026-05-19
+815862868,Überzeugung,"Es ist meine Überzeugung, dass moderne Technik hilft.","niềm tin, quan điểm",1,0,level:b1;wortart:substantiv;thema:gesellschaft;voc:voc-20260518-068,1,,2026-05-19,2026-05-19
