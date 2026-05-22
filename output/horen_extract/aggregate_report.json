@@ -1,0 +1,58 @@
+{
+  "total_rows_from_batches": 1711,
+  "folders_touched": 345,
+  "all_input_folders": 345,
+  "folders_with_no_vocab_after_dedupe": 0,
+  "new_vocab_appended": 190,
+  "skipped_dup_existing": 1521,
+  "skipped_dup_intra_batch": 0,
+  "by_wortart": {
+    "Substantiv": 124,
+    "Verb": 33,
+    "Adverb": 4,
+    "Redemittel": 9,
+    "Adjektiv": 20
+  },
+  "batch_stats": {
+    "batch_01_vocab.csv": 185,
+    "batch_02_vocab.csv": 230,
+    "batch_03_vocab.csv": 260,
+    "batch_04_vocab.csv": 249,
+    "batch_05_vocab.csv": 264,
+    "batch_06_vocab.csv": 213,
+    "batch_07_vocab.csv": 310
+  },
+  "processed_files_marked": 106,
+  "top_picks": [
+    {
+      "wort": "ausprobieren",
+      "wortart": "Verb",
+      "bedeutung": "thử, dùng thử",
+      "folder": "3.10"
+    },
+    {
+      "wort": "erfahren",
+      "wortart": "Verb",
+      "bedeutung": "biết được, nghe được",
+      "folder": "3.11"
+    },
+    {
+      "wort": "ausleihen",
+      "wortart": "Verb",
+      "bedeutung": "mượn",
+      "folder": "3.12"
+    },
+    {
+      "wort": "variieren",
+      "wortart": "Verb",
+      "bedeutung": "thay đổi, khác nhau",
+      "folder": "3.13"
+    },
+    {
+      "wort": "mitnehmen",
+      "wortart": "Verb",
+      "bedeutung": "mang theo",
+      "folder": "3.14"
+    }
+  ]
+}

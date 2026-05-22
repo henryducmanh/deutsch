@@ -1,2 +1,15 @@
 # AI task locks (local only, TTL 60min — không đẩy lên remote)
 .ai-locks/
+
+# Editor / agent local
+.obsidian/
+.claude/
+
+# Scrape temp + backup
+.tmp_*
+*.bak
+*backup*.csv
+
+# Python cache
+__pycache__/
+*.pyc

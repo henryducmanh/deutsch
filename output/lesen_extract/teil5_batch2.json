@@ -1,0 +1,152 @@
+{
+  "5.6": {
+    "vocab": [
+      {"wort": "Wohnungsanzeige", "wortart": "Substantiv", "formen": "die Wohnungsanzeige, -n", "bedeutung": "mẩu quảng cáo cho thuê căn hộ", "beispiel": "Mit großem Interesse habe ich Ihre Wohnungsanzeige in der Süddeutschen Zeitung vom letzten Samstag gelesen.", "uebersetzung": "Tôi đã đọc mẩu rao cho thuê căn hộ của quý vị trên báo SZ thứ bảy tuần trước với sự quan tâm rất lớn.", "thema": "Wohnen", "notes": ""},
+      {"wort": "verheiratet", "wortart": "Adjektiv", "formen": "verheiratet", "bedeutung": "đã kết hôn", "beispiel": "Mein Name ist Kartas, ich bin verheiratet und habe zwei Kinder.", "uebersetzung": "Tôi tên là Kartas, tôi đã kết hôn và có hai con.", "thema": "Familie", "notes": ""},
+      {"wort": "besichtigen", "wortart": "Verb", "formen": "besichtigte - hat besichtigt", "bedeutung": "đi xem (nhà, công trình)", "beispiel": "Ich würde mich sehr freuen, wenn meine Familie und ich die Wohnung besichtigen könnten.", "uebersetzung": "Tôi sẽ rất vui nếu gia đình tôi và tôi có thể đi xem căn hộ.", "thema": "Wohnen", "notes": ""},
+      {"wort": "Bezug", "wortart": "Substantiv", "formen": "der Bezug, Bezüge", "bedeutung": "sự liên quan, sự dẫn chiếu", "beispiel": "Bezug auf Ihre Anzeige in der SZ am 10.11.09.", "uebersetzung": "Liên quan đến mẩu rao của quý vị trên báo SZ ngày 10.11.09.", "thema": "Behörde", "notes": "Bezug nehmen auf + Akk"}
+    ],
+    "chunks": [
+      {"chunk_de": "Sehr geehrter Herr ...", "chunk_vn": "Kính thưa Ông ... (mở đầu thư trang trọng cho nam)", "type": "Redemittel", "topic": "Behörde", "note": "Adjektivendung -er vì gửi tới Mann"},
+      {"chunk_de": "mit großem Interesse", "chunk_vn": "với sự quan tâm rất lớn", "type": "Redemittel", "topic": "Behörde", "note": "Präposition mit + Dativ"},
+      {"chunk_de": "sich interessieren für + Akk", "chunk_vn": "quan tâm đến (cái gì)", "type": "Kollokation", "topic": "general", "note": "reflexiv, fest mit Präposition für"},
+      {"chunk_de": "Ich würde mich sehr freuen, wenn ... könnte/könnten", "chunk_vn": "Tôi sẽ rất vui nếu ... có thể (lời mong nhã nhặn)", "type": "Redemittel", "topic": "Behörde", "note": "Konjunktiv II — würde + wenn-Satz mit könnten"},
+      {"chunk_de": "Sie erreichen mich (telefonisch) unter ...", "chunk_vn": "Quý vị có thể liên hệ với tôi (qua điện thoại) số ...", "type": "Redemittel", "topic": "Behörde", "note": "erreichen + Akk + unter + Nummer"}
+    ]
+  },
+  "5.7": {
+    "vocab": [
+      {"wort": "Kündigungsfrist", "wortart": "Substantiv", "formen": "die Kündigungsfrist, -en", "bedeutung": "thời hạn báo chấm dứt hợp đồng", "beispiel": "Wir möchten Sie daran erinnern, dass die Kündigungsfrist für Ihren bestehenden Telefonvertrag zum 1. April endet.", "uebersetzung": "Chúng tôi muốn nhắc quý vị rằng thời hạn báo chấm dứt hợp đồng điện thoại hiện hành kết thúc vào ngày 1 tháng 4.", "thema": "Konsum", "notes": ""},
+      {"wort": "Vertragsverlängerung", "wortart": "Substantiv", "formen": "die Vertragsverlängerung, -en", "bedeutung": "việc gia hạn hợp đồng", "beispiel": "Falls Sie an einer Vertragsverlängerung nicht interessiert sein sollten, möchten wir Sie bitten ...", "uebersetzung": "Trong trường hợp quý vị không quan tâm đến việc gia hạn hợp đồng, chúng tôi xin đề nghị ...", "thema": "Konsum", "notes": ""},
+      {"wort": "fristgerecht", "wortart": "Adjektiv", "formen": "fristgerecht", "bedeutung": "đúng thời hạn", "beispiel": "Ohne eine fristgerechte Kündigung wird der Vertrag automatisch um 24 Monate verlängert.", "uebersetzung": "Nếu không có đơn chấm dứt đúng thời hạn, hợp đồng tự động gia hạn thêm 24 tháng.", "thema": "Behörde", "notes": ""},
+      {"wort": "Gebühr", "wortart": "Substantiv", "formen": "die Gebühr, -en", "bedeutung": "phí (dịch vụ)", "beispiel": "Wir werden die aktuellen Gebühren im Laufe dieses Jahres nicht anpassen.", "uebersetzung": "Chúng tôi sẽ không điều chỉnh các mức phí hiện hành trong năm nay.", "thema": "Konsum", "notes": ""},
+      {"wort": "anpassen", "wortart": "Verb", "formen": "passte an - hat angepasst", "bedeutung": "điều chỉnh", "beispiel": "Wir werden die aktuellen Gebühren nicht anpassen.", "uebersetzung": "Chúng tôi sẽ không điều chỉnh các mức phí hiện hành.", "thema": "Konsum", "notes": "trennbar"},
+      {"wort": "mitteilen", "wortart": "Verb", "formen": "teilte mit - hat mitgeteilt", "bedeutung": "thông báo, cho biết", "beispiel": "Es freut uns, Ihnen heute mitteilen zu dürfen, dass ...", "uebersetzung": "Chúng tôi rất vui được thông báo cho quý vị hôm nay rằng ...", "thema": "Behörde", "notes": "trennbar"}
+    ],
+    "chunks": [
+      {"chunk_de": "Wir möchten Sie daran erinnern, dass ...", "chunk_vn": "Chúng tôi xin nhắc quý vị rằng ...", "type": "Redemittel", "topic": "Behörde", "note": ""},
+      {"chunk_de": "jemandem etwas zukommen lassen", "chunk_vn": "gửi cho ai cái gì (trang trọng)", "type": "Redemittel", "topic": "Behörde", "note": "Dativ + Akk + zukommen lassen"},
+      {"chunk_de": "Es freut uns, Ihnen mitteilen zu dürfen, dass ...", "chunk_vn": "Chúng tôi rất vui được thông báo cho quý vị rằng ...", "type": "Redemittel", "topic": "Behörde", "note": "Infinitivsatz mit zu"},
+      {"chunk_de": "vorausgesetzt, (dass) ...", "chunk_vn": "với điều kiện là ...", "type": "Redemittel", "topic": "Behörde", "note": "Konditional-Konjunktion"}
+    ]
+  },
+  "5.8": {
+    "vocab": [
+      {"wort": "Deutschkenntnisse", "wortart": "Substantiv", "formen": "die Deutschkenntnisse (Pl.)", "bedeutung": "kiến thức tiếng Đức", "beispiel": "Aus diesem Grund möchte ich meine Deutschkenntnisse gern weiter verbessern.", "uebersetzung": "Vì lý do đó, tôi muốn cải thiện thêm kiến thức tiếng Đức của mình.", "thema": "Bildung", "notes": "luôn Plural"},
+      {"wort": "verbessern", "wortart": "Verb", "formen": "verbesserte - hat verbessert", "bedeutung": "cải thiện", "beispiel": "Ich möchte meine Deutschkenntnisse gern weiter verbessern.", "uebersetzung": "Tôi muốn cải thiện thêm kiến thức tiếng Đức của mình.", "thema": "Bildung", "notes": ""},
+      {"wort": "Bezahlung", "wortart": "Substantiv", "formen": "die Bezahlung, -en", "bedeutung": "việc trả công, thù lao", "beispiel": "Die Treffen kann ich entweder mit einer kleinen Bezahlung ausgleichen.", "uebersetzung": "Các buổi gặp tôi có thể bù lại bằng một khoản thù lao nhỏ.", "thema": "Arbeit", "notes": ""},
+      {"wort": "ausgleichen", "wortart": "Verb", "formen": "glich aus - hat ausgeglichen", "bedeutung": "bù đắp, bù trừ", "beispiel": "Die Treffen kann ich mit einer kleinen Bezahlung ausgleichen.", "uebersetzung": "Các buổi gặp tôi có thể bù lại bằng một khoản thù lao nhỏ.", "thema": "Arbeit", "notes": "trennbar"},
+      {"wort": "zur Hand gehen", "wortart": "Verb", "formen": "ging zur Hand - ist zur Hand gegangen", "bedeutung": "giúp việc cho ai (việc tay chân)", "beispiel": "Ich kann Ihnen im Haushalt bzw. Garten zur Hand gehen.", "uebersetzung": "Tôi có thể giúp việc cho quý vị trong gia đình hoặc ngoài vườn.", "thema": "Familie", "notes": "feste Wendung"}
+    ],
+    "chunks": [
+      {"chunk_de": "Aus diesem Grund + Verb", "chunk_vn": "Vì lý do đó ...", "type": "Redemittel", "topic": "general", "note": "Position 1, Inversion"},
+      {"chunk_de": "Wenn ..., wäre das eine große Hilfe für mich", "chunk_vn": "Nếu ... thì đó sẽ là một sự giúp đỡ lớn cho tôi", "type": "Redemittel", "topic": "Behörde", "note": "Konjunktiv II wäre"},
+      {"chunk_de": "entweder ... oder ...", "chunk_vn": "hoặc là ... hoặc là ...", "type": "Redemittel", "topic": "general", "note": "Doppelkonjunktion"}
+    ]
+  },
+  "5.9": {
+    "vocab": [
+      {"wort": "Materialfehler", "wortart": "Substantiv", "formen": "der Materialfehler, -", "bedeutung": "lỗi vật liệu", "beispiel": "Reklamation wegen Materialfehlern.", "uebersetzung": "Đơn khiếu nại do lỗi vật liệu.", "thema": "Konsum", "notes": ""},
+      {"wort": "Schaden", "wortart": "Substantiv", "formen": "der Schaden, Schäden", "bedeutung": "thiệt hại, hư hỏng", "beispiel": "Auf der Rückseite des Sofas befinden sich erhebliche Schäden am Stoff.", "uebersetzung": "Mặt sau của chiếc sofa có những hư hỏng nghiêm trọng ở phần vải.", "thema": "Konsum", "notes": "Plural mit Umlaut"},
+      {"wort": "durchlöchert", "wortart": "Adjektiv", "formen": "durchlöchert", "bedeutung": "bị thủng lỗ", "beispiel": "Dieser ist an mehreren Stellen durchlöchert.", "uebersetzung": "Chiếc sofa bị thủng lỗ ở nhiều chỗ.", "thema": "Konsum", "notes": ""},
+      {"wort": "Ersatz", "wortart": "Substantiv", "formen": "der Ersatz (kein Pl.)", "bedeutung": "vật thay thế", "beispiel": "Ich bitte Sie daher, mir zeitnah ein neues Sofa als Ersatz zu liefern.", "uebersetzung": "Vì vậy tôi xin quý vị sớm giao cho tôi một chiếc sofa mới để thay thế.", "thema": "Konsum", "notes": ""},
+      {"wort": "zeitnah", "wortart": "Adverb", "formen": "zeitnah", "bedeutung": "sớm, kịp thời", "beispiel": "Ich bitte Sie, mir zeitnah ein neues Sofa als Ersatz zu liefern.", "uebersetzung": "Tôi xin quý vị sớm giao cho tôi một chiếc sofa mới để thay thế.", "thema": "Allgemein", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "wegen + Genitiv", "chunk_vn": "do, vì (lý do) — sau là Genitiv", "type": "Redemittel", "topic": "general", "note": "Präposition wegen + Gen"},
+      {"chunk_de": "Leider habe ich (erst) ... entdeckt, dass ...", "chunk_vn": "Rất tiếc tôi (mới) phát hiện rằng ...", "type": "Redemittel", "topic": "Einkauf", "note": "mở đầu khiếu nại lịch sự"},
+      {"chunk_de": "Ich bitte Sie daher, ... zu + Infinitiv", "chunk_vn": "Vì vậy tôi xin quý vị ...", "type": "Redemittel", "topic": "Behörde", "note": "đề nghị lịch sự"},
+      {"chunk_de": "Selbstverständlich gehe ich davon aus, dass ...", "chunk_vn": "Tất nhiên tôi cho rằng ...", "type": "Redemittel", "topic": "Behörde", "note": "davon ausgehen + dass-Satz"}
+    ]
+  },
+  "5.10": {
+    "vocab": [
+      {"wort": "verdächtig", "wortart": "Adjektiv", "formen": "verdächtig", "bedeutung": "khả nghi, đáng ngờ", "beispiel": "Mehrere Schülerinnen und Schüler unserer Schule haben eine verdächtige SMS erhalten.", "uebersetzung": "Nhiều học sinh nam và nữ của trường chúng ta đã nhận được một tin nhắn SMS đáng ngờ.", "thema": "Behörde", "notes": ""},
+      {"wort": "Betrugsversuch", "wortart": "Substantiv", "formen": "der Betrugsversuch, -e", "bedeutung": "hành vi lừa đảo (mưu toan)", "beispiel": "Es handelt sich eindeutig um einen Betrugsversuch.", "uebersetzung": "Đây rõ ràng là một hành vi lừa đảo.", "thema": "Behörde", "notes": ""},
+      {"wort": "betrügerisch", "wortart": "Adjektiv", "formen": "betrügerisch", "bedeutung": "có tính chất lừa đảo", "beispiel": "Vorsicht vor betrügerischen SMS-Nachrichten.", "uebersetzung": "Cẩn thận với những tin nhắn SMS có tính chất lừa đảo.", "thema": "Behörde", "notes": ""},
+      {"wort": "Rechnung", "wortart": "Substantiv", "formen": "die Rechnung, -en", "bedeutung": "hóa đơn", "beispiel": "Nur eine Woche später erhielten sie eine Rechnung über 79 Euro!", "uebersetzung": "Chỉ một tuần sau, các em đã nhận được hóa đơn 79 Euro!", "thema": "Konsum", "notes": ""},
+      {"wort": "zuschicken", "wortart": "Verb", "formen": "schickte zu - hat zugeschickt", "bedeutung": "gửi (cái gì) đến cho ai", "beispiel": "Falls Ihnen eine Rechnung zugeschickt wird, zahlen Sie diese auf keinen Fall.", "uebersetzung": "Nếu có một hóa đơn được gửi đến cho quý vị, tuyệt đối đừng thanh toán.", "thema": "Konsum", "notes": "trennbar"}
+    ],
+    "chunks": [
+      {"chunk_de": "Es handelt sich (eindeutig) um + Akk", "chunk_vn": "Đây (rõ ràng) là về ...", "type": "Redemittel", "topic": "general", "note": "unpersönliches es"},
+      {"chunk_de": "auf keinen Fall", "chunk_vn": "tuyệt đối không", "type": "Wendung", "topic": "general", "note": "Verneinung mạnh"},
+      {"chunk_de": "Machen Sie eine Anzeige bei der Polizei", "chunk_vn": "Hãy làm đơn trình báo cảnh sát", "type": "Redemittel", "topic": "Behörde", "note": "Anzeige machen feste Kollokation"}
+    ]
+  },
+  "5.11": {
+    "vocab": [
+      {"wort": "instand setzen", "wortart": "Verb", "formen": "setzte instand - hat instand gesetzt", "bedeutung": "sửa chữa, tu sửa", "beispiel": "Die Heizung muss dringend instand gesetzt werden.", "uebersetzung": "Hệ thống sưởi cần được sửa chữa gấp.", "thema": "Wohnen", "notes": "feste Wendung"},
+      {"wort": "Hausbewohner", "wortart": "Substantiv", "formen": "der Hausbewohner, -", "bedeutung": "cư dân tòa nhà", "beispiel": "Liebe Hausbewohner, ...", "uebersetzung": "Kính thưa quý cư dân tòa nhà, ...", "thema": "Wohnen", "notes": ""},
+      {"wort": "Hausmeister", "wortart": "Substantiv", "formen": "der Hausmeister, -", "bedeutung": "người quản lý/bảo trì tòa nhà", "beispiel": "Wir möchten Sie bitten, Ihren Wohnungsschlüssel bei unserem Hausmeister zu hinterlegen.", "uebersetzung": "Chúng tôi xin đề nghị quý vị gửi chìa khóa căn hộ tại chỗ người quản lý tòa nhà.", "thema": "Wohnen", "notes": ""},
+      {"wort": "Fachkraft", "wortart": "Substantiv", "formen": "die Fachkraft, -kräfte", "bedeutung": "chuyên gia, thợ chuyên môn", "beispiel": "Wir versichern Ihnen, dass die Fachkräfte sorgfältig arbeiten.", "uebersetzung": "Chúng tôi cam đoan với quý vị rằng các thợ chuyên môn làm việc cẩn thận.", "thema": "Arbeit", "notes": "Plural mit Umlaut"},
+      {"wort": "beschädigen", "wortart": "Verb", "formen": "beschädigte - hat beschädigt", "bedeutung": "làm hư hỏng", "beispiel": "Die Fachkräfte werden nichts beschädigen.", "uebersetzung": "Các thợ chuyên môn sẽ không làm hư hỏng gì cả.", "thema": "Wohnen", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "Wie Ihnen sicherlich bekannt ist, ...", "chunk_vn": "Như quý vị chắc chắn đã biết, ...", "type": "Redemittel", "topic": "Behörde", "note": "Einleitung formell"},
+      {"chunk_de": "Für diese Arbeiten ist es erforderlich, dass ...", "chunk_vn": "Đối với các công việc này, cần thiết phải ...", "type": "Redemittel", "topic": "Behörde", "note": "unpersönliches es ist + Adj + dass-Satz"},
+      {"chunk_de": "bei + Dat + hinterlegen", "chunk_vn": "gửi lại tại chỗ (ai)", "type": "Kollokation", "topic": "Wohnen", "note": "Präposition bei + Dat"},
+      {"chunk_de": "Wir versichern Ihnen, dass ...", "chunk_vn": "Chúng tôi cam đoan với quý vị rằng ...", "type": "Redemittel", "topic": "Behörde", "note": "versichern + Dat + dass-Satz"}
+    ]
+  },
+  "5.12": {
+    "vocab": [
+      {"wort": "Zahlungserinnerung", "wortart": "Substantiv", "formen": "die Zahlungserinnerung, -en", "bedeutung": "thư nhắc thanh toán", "beispiel": "Zahlungserinnerung zu unserer Rechnung vom 10. September 2024.", "uebersetzung": "Thư nhắc thanh toán liên quan đến hóa đơn của chúng tôi ngày 10/9/2024.", "thema": "Konsum", "notes": ""},
+      {"wort": "Rechnungsbetrag", "wortart": "Substantiv", "formen": "der Rechnungsbetrag, -beträge", "bedeutung": "số tiền hóa đơn", "beispiel": "Der offene Rechnungsbetrag aus unserer Lieferung vom 10. September ist inzwischen fällig.", "uebersetzung": "Số tiền hóa đơn còn chưa thanh toán từ lô hàng giao ngày 10/9 nay đã đến hạn.", "thema": "Konsum", "notes": ""},
+      {"wort": "Zahlungseingang", "wortart": "Substantiv", "formen": "der Zahlungseingang, -gänge", "bedeutung": "việc nhận được tiền thanh toán", "beispiel": "Leider konnten wir bis jetzt keinen Zahlungseingang feststellen.", "uebersetzung": "Rất tiếc, đến nay chúng tôi vẫn chưa ghi nhận được khoản thanh toán nào.", "thema": "Konsum", "notes": ""},
+      {"wort": "ausstehend", "wortart": "Adjektiv", "formen": "ausstehend", "bedeutung": "còn chưa thanh toán, còn nợ", "beispiel": "Bitte überweisen Sie den ausstehenden Betrag.", "uebersetzung": "Xin chuyển khoản số tiền còn chưa thanh toán.", "thema": "Konsum", "notes": ""},
+      {"wort": "gegenstandslos", "wortart": "Adjektiv", "formen": "gegenstandslos", "bedeutung": "không còn giá trị, vô hiệu", "beispiel": "Falls Sie inzwischen gezahlt haben, betrachten Sie dieses Schreiben bitte als gegenstandslos.", "uebersetzung": "Nếu quý vị đã thanh toán trong thời gian qua, xin coi thư này là không còn giá trị.", "thema": "Behörde", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "Wir müssen Sie heute daran erinnern, dass ...", "chunk_vn": "Hôm nay chúng tôi buộc phải nhắc quý vị rằng ...", "type": "Redemittel", "topic": "Behörde", "note": ""},
+      {"chunk_de": "Bitte überweisen Sie ... auf unser Konto bei ...", "chunk_vn": "Xin chuyển khoản ... vào tài khoản của chúng tôi tại ...", "type": "Redemittel", "topic": "Behörde", "note": ""},
+      {"chunk_de": "Bei Fragen hilft Ihnen ... gerne weiter", "chunk_vn": "Nếu có thắc mắc, ... sẽ vui lòng hỗ trợ thêm cho quý vị", "type": "Redemittel", "topic": "Behörde", "note": "weiterhelfen + Dat"}
+    ]
+  },
+  "5.13": {
+    "vocab": [
+      {"wort": "Beanstandung", "wortart": "Substantiv", "formen": "die Beanstandung, -en", "bedeutung": "sự khiếu nại, phàn nàn", "beispiel": "Beanstandung einer Lieferung.", "uebersetzung": "Khiếu nại về một lô hàng giao.", "thema": "Konsum", "notes": ""},
+      {"wort": "eintreffen", "wortart": "Verb", "formen": "traf ein - ist eingetroffen", "bedeutung": "đến nơi, đến tay", "beispiel": "Die Lieferung ist am 27. November bei mir eingetroffen.", "uebersetzung": "Lô hàng đã đến tay tôi vào ngày 27 tháng 11.", "thema": "Konsum", "notes": "trennbar, sein"},
+      {"wort": "feststellen", "wortart": "Verb", "formen": "stellte fest - hat festgestellt", "bedeutung": "phát hiện, xác nhận", "beispiel": "Beim Auspacken musste ich feststellen, dass die Hose leider zu klein ist.", "uebersetzung": "Khi mở hàng, tôi phải phát hiện ra rằng cái quần đáng tiếc là quá nhỏ.", "thema": "Allgemein", "notes": "trennbar"},
+      {"wort": "zurückschicken", "wortart": "Verb", "formen": "schickte zurück - hat zurückgeschickt", "bedeutung": "gửi trả lại", "beispiel": "Die falsch gelieferte Jeans werde ich umgehend zurückschicken.", "uebersetzung": "Tôi sẽ lập tức gửi trả lại chiếc quần jean bị giao nhầm.", "thema": "Konsum", "notes": "trennbar"},
+      {"wort": "umgehend", "wortart": "Adverb", "formen": "umgehend", "bedeutung": "lập tức, ngay", "beispiel": "Die falsch gelieferte Jeans werde ich umgehend zurückschicken.", "uebersetzung": "Tôi sẽ lập tức gửi trả lại chiếc quần jean bị giao nhầm.", "thema": "Allgemein", "notes": ""},
+      {"wort": "Rückporto", "wortart": "Substantiv", "formen": "das Rückporto (kein Pl.)", "bedeutung": "phí gửi trả", "beispiel": "Ich bitte Sie zudem, die Kosten für das Rückporto zu übernehmen.", "uebersetzung": "Tôi cũng xin quý vị chịu phí gửi trả.", "thema": "Konsum", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "Beim Auspacken musste ich feststellen, dass ...", "chunk_vn": "Khi mở hàng, tôi phải phát hiện ra rằng ...", "type": "Redemittel", "topic": "Einkauf", "note": ""},
+      {"chunk_de": "die Kosten für ... übernehmen", "chunk_vn": "chịu/gánh chi phí cho ...", "type": "Kollokation", "topic": "Einkauf", "note": ""},
+      {"chunk_de": "Vielen Dank für Ihre Mühe", "chunk_vn": "Cảm ơn quý vị về công sức", "type": "Redemittel", "topic": "Behörde", "note": "feste Schlussformel"}
+    ]
+  },
+  "5.14": {
+    "vocab": [
+      {"wort": "Mobilfunkvertrag", "wortart": "Substantiv", "formen": "der Mobilfunkvertrag, -verträge", "bedeutung": "hợp đồng điện thoại di động", "beispiel": "Hiermit erkläre ich die Kündigung meines Mobilfunkvertrags.", "uebersetzung": "Bằng văn bản này tôi tuyên bố chấm dứt hợp đồng điện thoại di động.", "thema": "Konsum", "notes": ""},
+      {"wort": "Bestätigung", "wortart": "Substantiv", "formen": "die Bestätigung, -en", "bedeutung": "giấy xác nhận", "beispiel": "Bitte senden Sie mir außerdem eine schriftliche Bestätigung über den Erhalt dieser Kündigung.", "uebersetzung": "Ngoài ra, xin gửi cho tôi một giấy xác nhận bằng văn bản về việc đã nhận được đơn chấm dứt hợp đồng này.", "thema": "Behörde", "notes": ""},
+      {"wort": "Erhalt", "wortart": "Substantiv", "formen": "der Erhalt (kein Pl.)", "bedeutung": "việc nhận được", "beispiel": "Bitte senden Sie mir eine schriftliche Bestätigung über den Erhalt dieser Kündigung.", "uebersetzung": "Xin gửi cho tôi một giấy xác nhận bằng văn bản về việc đã nhận được đơn chấm dứt hợp đồng này.", "thema": "Behörde", "notes": ""},
+      {"wort": "Werbepost", "wortart": "Substantiv", "formen": "die Werbepost (kein Pl.)", "bedeutung": "thư quảng cáo", "beispiel": "Mir künftig keine Werbepost mehr zu schicken.", "uebersetzung": "Tương lai không gửi thư quảng cáo cho tôi nữa.", "thema": "Konsum", "notes": ""},
+      {"wort": "wirksam", "wortart": "Adjektiv", "formen": "wirksam", "bedeutung": "có hiệu lực", "beispiel": "Zu welchem Termin die Vertragsbeendigung wirksam wird.", "uebersetzung": "Việc chấm dứt hợp đồng sẽ có hiệu lực vào thời điểm nào.", "thema": "Behörde", "notes": ""},
+      {"wort": "künftig", "wortart": "Adverb", "formen": "künftig", "bedeutung": "trong tương lai", "beispiel": "Mir künftig keine Werbepost mehr zu schicken.", "uebersetzung": "Tương lai không gửi thư quảng cáo cho tôi nữa.", "thema": "Allgemein", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "Hiermit erkläre ich die Kündigung ... zum nächstmöglichen Datum", "chunk_vn": "Bằng văn bản này tôi tuyên bố chấm dứt ... vào ngày sớm nhất có thể", "type": "Redemittel", "topic": "Behörde", "note": ""},
+      {"chunk_de": "Ich wäre Ihnen dankbar, wenn Sie ... mitteilen könnten", "chunk_vn": "Tôi sẽ rất biết ơn nếu quý vị có thể cho tôi biết ...", "type": "Redemittel", "topic": "Behörde", "note": "Konjunktiv II"},
+      {"chunk_de": "Des Weiteren bitte ich darum, ... zu + Inf", "chunk_vn": "Ngoài ra tôi xin được ...", "type": "Redemittel", "topic": "Behörde", "note": "Infinitivsatz mit zu"}
+    ]
+  },
+  "5.15": {
+    "vocab": [
+      {"wort": "Antrag", "wortart": "Substantiv", "formen": "der Antrag, Anträge", "bedeutung": "đơn xin (chính thức)", "beispiel": "Wir bestätigen den Eingang Ihres Antrags auf Kindergeld.", "uebersetzung": "Chúng tôi xác nhận đã nhận được đơn xin trợ cấp con của quý vị.", "thema": "Behörde", "notes": "Antrag auf + Akk"},
+      {"wort": "Kindergeld", "wortart": "Substantiv", "formen": "das Kindergeld (kein Pl.)", "bedeutung": "tiền trợ cấp con", "beispiel": "Ihr Antrag auf Kindergeld.", "uebersetzung": "Đơn xin trợ cấp con của quý vị.", "thema": "Behörde", "notes": ""},
+      {"wort": "Angabe", "wortart": "Substantiv", "formen": "die Angabe, -n", "bedeutung": "thông tin khai báo (trong biểu mẫu)", "beispiel": "Allerdings fehlen noch einige notwendige Angaben im Formular.", "uebersetzung": "Tuy nhiên trong biểu mẫu còn thiếu một số thông tin khai báo cần thiết.", "thema": "Behörde", "notes": ""},
+      {"wort": "Formular", "wortart": "Substantiv", "formen": "das Formular, -e", "bedeutung": "biểu mẫu", "beispiel": "Außerdem wurde das Dokument bislang nicht unterschrieben.", "uebersetzung": "Ngoài ra, đến nay tài liệu này vẫn chưa được ký.", "thema": "Behörde", "notes": ""},
+      {"wort": "unterschreiben", "wortart": "Verb", "formen": "unterschrieb - hat unterschrieben", "bedeutung": "ký tên", "beispiel": "Außerdem wurde das Dokument bislang nicht unterschrieben.", "uebersetzung": "Ngoài ra, đến nay tài liệu này vẫn chưa được ký.", "thema": "Behörde", "notes": ""},
+      {"wort": "Eingang", "wortart": "Substantiv", "formen": "der Eingang, Eingänge", "bedeutung": "việc nhận được (giấy tờ)", "beispiel": "Wir bestätigen den Eingang Ihres Antrags auf Kindergeld.", "uebersetzung": "Chúng tôi xác nhận đã nhận được đơn xin trợ cấp con của quý vị.", "thema": "Behörde", "notes": ""},
+      {"wort": "Familienkasse", "wortart": "Substantiv", "formen": "die Familienkasse, -n", "bedeutung": "sở trợ cấp gia đình", "beispiel": "Persönlich in unserer Familienkasse (Zimmer 311) vorbeizukommen.", "uebersetzung": "Đến trực tiếp tại sở trợ cấp gia đình của chúng tôi (phòng 311).", "thema": "Behörde", "notes": ""},
+      {"wort": "vorbeikommen", "wortart": "Verb", "formen": "kam vorbei - ist vorbeigekommen", "bedeutung": "ghé qua", "beispiel": "In den kommenden Tagen zwischen 8:00 und 12:00 Uhr persönlich in unserer Familienkasse vorbeizukommen.", "uebersetzung": "Ghé qua trực tiếp sở trợ cấp gia đình vào các ngày tới từ 8 đến 12 giờ.", "thema": "Behörde", "notes": "trennbar"}
+    ],
+    "chunks": [
+      {"chunk_de": "Wir bestätigen den Eingang Ihres Antrags auf + Akk", "chunk_vn": "Chúng tôi xác nhận đã nhận được đơn xin ... của quý vị", "type": "Redemittel", "topic": "Behörde", "note": "Antrag auf + Akk"},
+      {"chunk_de": "Wir möchten Sie daher bitten, ... zu + Inf", "chunk_vn": "Vì vậy chúng tôi xin đề nghị quý vị ...", "type": "Redemittel", "topic": "Behörde", "note": ""},
+      {"chunk_de": "Sollten ... unverständlich sein, unterstützen wir Sie selbstverständlich gern", "chunk_vn": "Nếu ... khó hiểu, dĩ nhiên chúng tôi sẵn lòng hỗ trợ quý vị", "type": "Redemittel", "topic": "Behörde", "note": "Konjunktiv II ohne wenn"}
+    ]
+  }
+}

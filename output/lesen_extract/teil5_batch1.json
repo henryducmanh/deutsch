@@ -1,0 +1,102 @@
+{
+  "5.1": {
+    "vocab": [
+      {"wort": "Anmeldung", "wortart": "Substantiv", "formen": "die Anmeldung, -en", "bedeutung": "việc đăng ký, đơn đăng ký", "beispiel": "Vielen Dank für Ihre Anmeldung.", "uebersetzung": "Cảm ơn quý vị đã đăng ký.", "thema": "Behörde", "notes": "Anmeldung für + Akk."},
+      {"wort": "Aktivierung", "wortart": "Substantiv", "formen": "die Aktivierung, -en", "bedeutung": "việc kích hoạt", "beispiel": "Für die Aktivierung benötigen wir noch unsere Zahlungsdaten.", "uebersetzung": "Để kích hoạt, chúng tôi cần thông tin thanh toán của quý vị.", "thema": "Konsum", "notes": "danh từ hóa từ aktivieren"},
+      {"wort": "Zahlungsdaten", "wortart": "Substantiv", "formen": "die Zahlungsdaten (nur Pl.)", "bedeutung": "thông tin thanh toán", "beispiel": "Für die Aktivierung benötigen wir noch unsere Zahlungsdaten.", "uebersetzung": "Để kích hoạt, chúng tôi cần thông tin thanh toán của quý vị.", "thema": "Konsum", "notes": "chỉ dùng số nhiều"},
+      {"wort": "pünktlich", "wortart": "Adjektiv", "formen": "pünktlich", "bedeutung": "đúng giờ", "beispiel": "Sie erhalten Ihr Ticket pünktlich zum Monatsbeginn.", "uebersetzung": "Quý vị sẽ nhận được vé đúng vào đầu tháng.", "thema": "Verkehr", "notes": "thường đi với zum + Zeitpunkt"},
+      {"wort": "ausstellen", "wortart": "Verb", "formen": "stellte aus - hat ausgestellt", "bedeutung": "cấp, phát hành (giấy tờ/vé)", "beispiel": "Wir können Ihr Ticket nur dann ausstellen, wenn Ihre Daten vollständig vorliegen.", "uebersetzung": "Chúng tôi chỉ có thể phát hành vé khi dữ liệu của quý vị đã đầy đủ.", "thema": "Behörde", "notes": "trennbar"},
+      {"wort": "vorliegen", "wortart": "Verb", "formen": "lag vor - hat vorgelegen", "bedeutung": "có sẵn, đã được nộp đầy đủ", "beispiel": "...wenn Ihre Daten vollständig vorliegen.", "uebersetzung": "...khi dữ liệu của quý vị đã được nộp đầy đủ.", "thema": "Behörde", "notes": "trennbar, formell"},
+      {"wort": "Monatsbeginn", "wortart": "Substantiv", "formen": "der Monatsbeginn (kein Pl.)", "bedeutung": "đầu tháng", "beispiel": "Sie erhalten Ihr Ticket pünktlich zum Monatsbeginn.", "uebersetzung": "Quý vị nhận được vé đúng vào đầu tháng.", "thema": "Behörde", "notes": "thường đi với zum"},
+      {"wort": "Monatskarte", "wortart": "Substantiv", "formen": "die Monatskarte, -n", "bedeutung": "vé tháng", "beispiel": "Wir wünschen Ihnen eine gute Fahrt mit unserer Monatskarte.", "uebersetzung": "Chúng tôi chúc quý vị một chuyến đi tốt với vé tháng của chúng tôi.", "thema": "Verkehr", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "Sehr geehrter Herr [Name]", "chunk_vn": "Kính gửi ông [tên]", "type": "Redemittel", "topic": "Brief-Anrede", "note": "Adjektiv geehrter schwach dekliniert"},
+      {"chunk_de": "Vielen Dank für Ihre Anmeldung", "chunk_vn": "Cảm ơn quý vị đã đăng ký", "type": "Redemittel", "topic": "Brief-Höflichkeit", "note": "vielen Dank für + Akk"},
+      {"chunk_de": "im kommenden Monat", "chunk_vn": "trong tháng tới", "type": "Wendung", "topic": "Zeitangabe", "note": "im = in dem, Dativ Maskulin"},
+      {"chunk_de": "Bitte beachten Sie, dass ...", "chunk_vn": "Vui lòng lưu ý rằng ...", "type": "Redemittel", "topic": "Brief-Hinweis", "note": "dass-Nebensatz, Verb am Ende"},
+      {"chunk_de": "nur dann ..., wenn ...", "chunk_vn": "chỉ khi ...", "type": "Redemittel", "topic": "Konditionalsatz", "note": "wenn-Konditionalsatz"}
+    ]
+  },
+  "5.2": {
+    "vocab": [
+      {"wort": "Nachreichung", "wortart": "Substantiv", "formen": "die Nachreichung, -en", "bedeutung": "việc nộp bổ sung", "beispiel": "Betreff: Nachreichung der unterzeichneten Unterlagen", "uebersetzung": "Chủ đề: Nộp bổ sung hồ sơ đã ký", "thema": "Behörde", "notes": ""},
+      {"wort": "unterzeichnen", "wortart": "Verb", "formen": "unterzeichnete - hat unterzeichnet", "bedeutung": "ký tên (chính thức)", "beispiel": "Betreff: Nachreichung der unterzeichneten Unterlagen", "uebersetzung": "Chủ đề: Nộp bổ sung hồ sơ đã ký", "thema": "Behörde", "notes": "formeller als unterschreiben"},
+      {"wort": "Vertrag", "wortart": "Substantiv", "formen": "der Vertrag, Verträge", "bedeutung": "hợp đồng", "beispiel": "Ich hatte vergessen, Ihnen den unterschriebenen Vertrag zu schicken.", "uebersetzung": "Tôi đã quên gửi cho bà bản hợp đồng đã ký.", "thema": "Arbeit", "notes": "Plural mit Umlaut"},
+      {"wort": "Versand", "wortart": "Substantiv", "formen": "der Versand (kein Pl.)", "bedeutung": "việc gửi hàng, sự chuyển phát", "beispiel": "Ich war krank, deshalb hat sich der Versand leider verzögert.", "uebersetzung": "Tôi bị ốm, vì vậy việc gửi hàng đã bị chậm trễ.", "thema": "Konsum", "notes": ""},
+      {"wort": "sich verzögern", "wortart": "Verb", "formen": "verzögerte sich - hat sich verzögert", "bedeutung": "bị chậm trễ, kéo dài hơn dự kiến", "beispiel": "...deshalb hat sich der Versand leider verzögert.", "uebersetzung": "...vì vậy việc gửi hàng đã bị chậm trễ.", "thema": "Arbeit", "notes": "reflexiv"},
+      {"wort": "einscannen", "wortart": "Verb", "formen": "scannte ein - hat eingescannt", "bedeutung": "quét (scan) tài liệu", "beispiel": "Ich habe alle Dokumente eingescannt und sende sie Ihnen nun gesammelt per E-Mail.", "uebersetzung": "Tôi đã scan tất cả tài liệu và gửi cho bà gộp lại qua email.", "thema": "Arbeit", "notes": "trennbar"},
+      {"wort": "Bescheid sagen", "wortart": "Verb", "formen": "sagte Bescheid - hat Bescheid gesagt", "bedeutung": "báo cho biết, thông báo", "beispiel": "Falls ja, sagen Sie mir bitte Bescheid.", "uebersetzung": "Nếu có, vui lòng cho tôi biết.", "thema": "Behörde", "notes": "feste Wendung"},
+      {"wort": "erreichbar", "wortart": "Adjektiv", "formen": "erreichbar", "bedeutung": "có thể liên hệ được", "beispiel": "Ab morgen bin ich wieder erreichbar unter der Nummer 0151 / 99887744.", "uebersetzung": "Từ mai tôi có thể liên hệ được trở lại qua số 0151 / 99887744.", "thema": "Arbeit", "notes": "erreichbar unter + Nummer"}
+    ],
+    "chunks": [
+      {"chunk_de": "vergessen + zu + Inf", "chunk_vn": "quên làm gì đó", "type": "Redemittel", "topic": "Grammatik", "note": "vergessen + Infinitiv mit zu"},
+      {"chunk_de": "Hauptsatz, deshalb + Verb + Subjekt", "chunk_vn": "Mệnh đề chính, vì vậy + động từ + chủ ngữ", "type": "Redemittel", "topic": "Konjunktionaladverb", "note": "deshalb Position 1 → đảo Verb-Subjekt"},
+      {"chunk_de": "Da + Nebensatz (Grund)", "chunk_vn": "Vì + mệnh đề phụ", "type": "Redemittel", "topic": "Kausalsatz", "note": "tương đương weil"},
+      {"chunk_de": "Obwohl + Nebensatz", "chunk_vn": "Mặc dù + mệnh đề phụ", "type": "Redemittel", "topic": "Konzessivsatz", "note": "Konjunktion thể hiện trái mong đợi"},
+      {"chunk_de": "Falls Sie Fragen haben, schreiben Sie mir gern.", "chunk_vn": "Nếu quý vị có câu hỏi, xin cứ viết cho tôi.", "type": "Redemittel", "topic": "Brief-Höflichkeit", "note": "falls = konditionale Konjunktion"},
+      {"chunk_de": "aufgrund + Genitiv", "chunk_vn": "do, vì lý do + Genitiv", "type": "Redemittel", "topic": "Präposition", "note": "đòi hỏi Genitiv"},
+      {"chunk_de": "sich telefonisch melden", "chunk_vn": "liên lạc qua điện thoại", "type": "Redemittel", "topic": "Kommunikation", "note": "reflexiv, formell"}
+    ]
+  },
+  "5.3": {
+    "vocab": [
+      {"wort": "Antrag", "wortart": "Substantiv", "formen": "der Antrag, Anträge", "bedeutung": "đơn đề nghị, hồ sơ xin", "beispiel": "Betreff: Antrag auf Aufnahme meines Kindes in Ihre Kindertagesstätte", "uebersetzung": "Chủ đề: Đơn xin nhận con tôi vào nhà trẻ của quý vị", "thema": "Behörde", "notes": "Antrag auf + Akk."},
+      {"wort": "Aufnahme", "wortart": "Substantiv", "formen": "die Aufnahme, -n", "bedeutung": "việc tiếp nhận (vào trường/cơ sở)", "beispiel": "Hiermit beantrage ich die Aufnahme meines Sohnes in Ihre Kindertagesstätte.", "uebersetzung": "Bằng văn bản này, tôi đề nghị nhận con trai tôi vào nhà trẻ của quý vị.", "thema": "Behörde", "notes": "Aufnahme in + Akk."},
+      {"wort": "beantragen", "wortart": "Verb", "formen": "beantragte - hat beantragt", "bedeutung": "đề nghị, xin (chính thức)", "beispiel": "Hiermit beantrage ich die Aufnahme meines Sohnes.", "uebersetzung": "Bằng văn bản này, tôi xin nhận con trai tôi.", "thema": "Behörde", "notes": "transitive"},
+      {"wort": "Kindertagesstätte", "wortart": "Substantiv", "formen": "die Kindertagesstätte, -n", "bedeutung": "nhà trẻ, trường mầm non", "beispiel": "Hiermit beantrage ich die Aufnahme meines Sohnes in Ihre Kindertagesstätte.", "uebersetzung": "Bằng văn bản này, tôi xin nhận con trai vào nhà trẻ của quý vị.", "thema": "Familie", "notes": "viết tắt Kita"},
+      {"wort": "Rückmeldung", "wortart": "Substantiv", "formen": "die Rückmeldung, -en", "bedeutung": "phản hồi, ý kiến phản hồi", "beispiel": "Wir haben von anderen Eltern viele positive Rückmeldungen über Ihr Konzept erhalten.", "uebersetzung": "Chúng tôi đã nhận nhiều phản hồi tích cực từ các phụ huynh khác về chương trình của quý vị.", "thema": "Familie", "notes": "Rückmeldung über + Akk."},
+      {"wort": "Betreuung", "wortart": "Substantiv", "formen": "die Betreuung, -en", "bedeutung": "việc chăm sóc, trông coi", "beispiel": "Die Betreuung meines Sohnes in einer vertrauensvollen Umgebung ist besonders wichtig für uns.", "uebersetzung": "Việc chăm sóc con trai tôi trong môi trường tin cậy là đặc biệt quan trọng đối với chúng tôi.", "thema": "Familie", "notes": ""},
+      {"wort": "aufgeweckt", "wortart": "Adjektiv", "formen": "aufgeweckt", "bedeutung": "lanh lợi, nhanh trí (trẻ con)", "beispiel": "Lukas ist ein aufgewecktes, neugieriges Kind.", "uebersetzung": "Lukas là một đứa trẻ lanh lợi, tò mò.", "thema": "Familie", "notes": "thường dùng cho Kind"},
+      {"wort": "bestätigen", "wortart": "Verb", "formen": "bestätigte - hat bestätigt", "bedeutung": "xác nhận", "beispiel": "Bitte bestätigen Sie den Eingang dieses Antrags schriftlich.", "uebersetzung": "Vui lòng xác nhận việc nhận được đơn này bằng văn bản.", "thema": "Behörde", "notes": "den Eingang bestätigen"}
+    ],
+    "chunks": [
+      {"chunk_de": "Hiermit beantrage ich ...", "chunk_vn": "Bằng văn bản này, tôi xin/đề nghị ...", "type": "Redemittel", "topic": "Antrag-Einleitung", "note": "Standard-Einleitung formeller Anträge"},
+      {"chunk_de": "Antrag auf Aufnahme", "chunk_vn": "Đơn xin nhập (học/nhận)", "type": "Redemittel", "topic": "Behörde", "note": "Antrag auf + Akk."},
+      {"chunk_de": "Sehr geehrte Damen und Herren", "chunk_vn": "Kính gửi quý ông, quý bà", "type": "Redemittel", "topic": "Brief-Anrede", "note": "Standardanrede không biết tên"},
+      {"chunk_de": "Für Rückfragen stehe ich Ihnen jederzeit zur Verfügung", "chunk_vn": "Tôi luôn sẵn sàng nếu quý vị có thắc mắc", "type": "Redemittel", "topic": "Brief-Höflichkeit", "note": "feste Höflichkeitsformel am Briefende"},
+      {"chunk_de": "Bitte bestätigen Sie den Eingang dieses Antrags", "chunk_vn": "Vui lòng xác nhận việc nhận được đơn này", "type": "Redemittel", "topic": "Antrag-Abschluss", "note": "typisch formal"},
+      {"chunk_de": "Über eine Einladung würden wir uns sehr freuen", "chunk_vn": "Chúng tôi sẽ rất vui nếu được mời", "type": "Redemittel", "topic": "Brief-Höflichkeit", "note": "Konjunktiv II würden ... freuen"}
+    ]
+  },
+  "5.4": {
+    "vocab": [
+      {"wort": "Reklamation", "wortart": "Substantiv", "formen": "die Reklamation, -en", "bedeutung": "việc khiếu nại, phàn nàn (về sản phẩm)", "beispiel": "Betreff: Reklamation – Kauf eines MP3-Players", "uebersetzung": "Chủ đề: Khiếu nại - Mua MP3-Player", "thema": "Konsum", "notes": ""},
+      {"wort": "Rechnungsnummer", "wortart": "Substantiv", "formen": "die Rechnungsnummer, -n", "bedeutung": "số hóa đơn", "beispiel": "Rechnungsnummer: 0089/545", "uebersetzung": "Số hóa đơn: 0089/545", "thema": "Konsum", "notes": ""},
+      {"wort": "erwerben", "wortart": "Verb", "formen": "erwarb - hat erworben", "bedeutung": "mua, thu được (chính thức)", "beispiel": "Am 22. April habe ich in Ihrer Wiesbadener Filiale einen MP3-Player der Marke Ronys erworben.", "uebersetzung": "Vào ngày 22 tháng 4, tôi đã mua một MP3-Player tại chi nhánh Wiesbaden của quý vị.", "thema": "Konsum", "notes": "formeller als kaufen"},
+      {"wort": "Filiale", "wortart": "Substantiv", "formen": "die Filiale, -n", "bedeutung": "chi nhánh (cửa hàng/ngân hàng)", "beispiel": "Am 22. April habe ich in Ihrer Wiesbadener Filiale einen MP3-Player erworben.", "uebersetzung": "Ngày 22 tháng 4, tôi đã mua một MP3-Player tại chi nhánh Wiesbaden của quý vị.", "thema": "Konsum", "notes": ""},
+      {"wort": "Defekt", "wortart": "Substantiv", "formen": "der Defekt, -e", "bedeutung": "lỗi kỹ thuật, hỏng hóc", "beispiel": "...dass der Player einen Defekt aufweist.", "uebersetzung": "...rằng máy phát có một lỗi hỏng hóc.", "thema": "Konsum", "notes": ""},
+      {"wort": "aufweisen", "wortart": "Verb", "formen": "wies auf - hat aufgewiesen", "bedeutung": "có (đặc điểm/lỗi), thể hiện ra", "beispiel": "...dass der Player einen Defekt aufweist.", "uebersetzung": "...rằng máy phát có một lỗi.", "thema": "Konsum", "notes": "trennbar, formell"},
+      {"wort": "Kaufbeleg", "wortart": "Substantiv", "formen": "der Kaufbeleg, -e", "bedeutung": "biên lai mua hàng, hóa đơn", "beispiel": "Noch am selben Tag habe ich es mit dem Kaufbeleg zurückgebracht.", "uebersetzung": "Ngay trong ngày hôm đó tôi đã mang nó trả lại kèm biên lai.", "thema": "Konsum", "notes": ""},
+      {"wort": "zurücknehmen", "wortart": "Verb", "formen": "nahm zurück - hat zurückgenommen", "bedeutung": "nhận lại (hàng), thu hồi", "beispiel": "...deshalb wolle man ihn nicht zurücknehmen.", "uebersetzung": "...vì vậy họ không muốn nhận lại nó.", "thema": "Konsum", "notes": "trennbar"},
+      {"wort": "verpflichtet sein", "wortart": "Verb", "formen": "war verpflichtet - ist verpflichtet gewesen", "bedeutung": "có nghĩa vụ, bắt buộc phải", "beispiel": "Ich bin der Meinung, dass Sie verpflichtet sind, das defekte Produkt zurückzunehmen.", "uebersetzung": "Tôi cho rằng quý vị có nghĩa vụ nhận lại sản phẩm bị lỗi.", "thema": "Konsum", "notes": "verpflichtet sein + zu + Inf"}
+    ],
+    "chunks": [
+      {"chunk_de": "Sehr geehrte Damen und Herren", "chunk_vn": "Kính gửi quý ông, quý bà", "type": "Redemittel", "topic": "Brief-Anrede", "note": "Plural-Anrede formal"},
+      {"chunk_de": "Ich bin der Meinung, dass ...", "chunk_vn": "Tôi cho rằng / Theo ý tôi ...", "type": "Redemittel", "topic": "Meinung", "note": "dass-Objektsatz"},
+      {"chunk_de": "einen Defekt aufweisen", "chunk_vn": "có lỗi/hỏng hóc", "type": "Kollokation", "topic": "Reklamation", "note": ""},
+      {"chunk_de": "Mit freundlichen Grüßen", "chunk_vn": "Trân trọng (kính thư)", "type": "Redemittel", "topic": "Brief-Schluss", "note": "mit + Dat. Pl. → Grüßen"},
+      {"chunk_de": "Ich bitte Sie, dies entsprechend zu veranlassen", "chunk_vn": "Tôi đề nghị quý vị xử lý việc này tương ứng", "type": "Redemittel", "topic": "Reklamation-Schluss", "note": "Infinitiv mit zu, formell"},
+      {"chunk_de": "es kann nicht ausgeschlossen werden, dass ...", "chunk_vn": "không thể loại trừ khả năng rằng ...", "type": "Redemittel", "topic": "Argumentation", "note": "Passiv mit Modalverb"}
+    ]
+  },
+  "5.5": {
+    "vocab": [
+      {"wort": "Nachhilfeunterricht", "wortart": "Substantiv", "formen": "der Nachhilfeunterricht (kein Pl.)", "bedeutung": "lớp học thêm, dạy kèm", "beispiel": "Deshalb suche ich für ihn Nachhilfeunterricht in Mathematik.", "uebersetzung": "Vì vậy tôi tìm lớp học thêm môn Toán cho cháu.", "thema": "Bildung", "notes": "Nachhilfe in + Dat."},
+      {"wort": "Anzeige", "wortart": "Substantiv", "formen": "die Anzeige, -n", "bedeutung": "mẩu quảng cáo, thông báo (trên báo)", "beispiel": "Ich habe Ihre Anzeige in der Zeitung gelesen und finde sie sehr interessant.", "uebersetzung": "Tôi đã đọc mẩu quảng cáo của quý vị trên báo và thấy rất thú vị.", "thema": "Konsum", "notes": ""},
+      {"wort": "Gruppenunterricht", "wortart": "Substantiv", "formen": "der Gruppenunterricht (kein Pl.)", "bedeutung": "lớp học nhóm, dạy theo nhóm", "beispiel": "Bieten Sie nur Gruppenunterricht an oder könnte mein Sohn auch Einzelstunden nehmen?", "uebersetzung": "Quý vị chỉ cung cấp lớp học nhóm hay con trai tôi cũng có thể học giờ riêng?", "thema": "Bildung", "notes": ""},
+      {"wort": "Einzelstunde", "wortart": "Substantiv", "formen": "die Einzelstunde, -n", "bedeutung": "giờ học riêng (1-1)", "beispiel": "Könnte mein Sohn auch Einzelstunden nehmen?", "uebersetzung": "Con trai tôi cũng có thể học giờ riêng được không?", "thema": "Bildung", "notes": "Stunden nehmen"},
+      {"wort": "anbieten", "wortart": "Verb", "formen": "bot an - hat angeboten", "bedeutung": "cung cấp, mời chào (dịch vụ/hàng)", "beispiel": "Bieten Sie nur Gruppenunterricht an?", "uebersetzung": "Quý vị chỉ cung cấp lớp học nhóm thôi sao?", "thema": "Konsum", "notes": "trennbar"},
+      {"wort": "Informationsmaterial", "wortart": "Substantiv", "formen": "das Informationsmaterial, -ien", "bedeutung": "tài liệu thông tin", "beispiel": "Bitte um Informationsmaterial", "uebersetzung": "Đề nghị gửi tài liệu thông tin", "thema": "Bildung", "notes": "Singular phổ biến"}
+    ],
+    "chunks": [
+      {"chunk_de": "in der Schule", "chunk_vn": "ở trường", "type": "Wendung", "topic": "Bildung", "note": "in + Dat. (Ort)"},
+      {"chunk_de": "Probleme in + Dat haben", "chunk_vn": "gặp vấn đề với (môn gì)", "type": "Kollokation", "topic": "Bildung", "note": ""},
+      {"chunk_de": "Deshalb + Verb + Subjekt", "chunk_vn": "Vì vậy + động từ + chủ ngữ", "type": "Redemittel", "topic": "Konjunktionaladverb", "note": "deshalb Pos.1 → đảo Verb-Subj"},
+      {"chunk_de": "Könnte mein Sohn auch ... ?", "chunk_vn": "Con trai tôi cũng có thể ... được không?", "type": "Redemittel", "topic": "Höfliche Frage", "note": "könnte = Konjunktiv II höflich"},
+      {"chunk_de": "am Samstag", "chunk_vn": "vào thứ Bảy", "type": "Wendung", "topic": "Zeitangabe", "note": "am + Wochentag"},
+      {"chunk_de": "Mit freundlichen Grüßen", "chunk_vn": "Trân trọng (kính thư)", "type": "Redemittel", "topic": "Brief-Schluss", "note": "feste Schlussformel"},
+      {"chunk_de": "Ich hätte gern ... Informationen", "chunk_vn": "Tôi muốn xin ... thông tin", "type": "Redemittel", "topic": "Höfliche Bitte", "note": "hätte gern = Konjunktiv II"}
+    ]
+  }
+}

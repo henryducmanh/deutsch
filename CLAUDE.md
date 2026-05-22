@@ -124,6 +124,7 @@ deutsch/                                     [template: tpl-hoc-deutsch@v1.1]
 - **AI Lock:** trước Edit `ls .ai-locks/*.lock` check overlap, tạo lock 1-per-task TTL 60min, cuối task xóa.
 - **Verify Edit > 300 dòng:** `wc -l` + `tail -5` (Windows mount hay cụt).
 - **Quote evidence:** mọi insight grammar / vocab pattern phải link file gốc (image/text/audio path) hoặc row id trong vocab_master.
+- **KHÔNG chèn tiếng Anh khi giải thích cho user.** Chỉ thuần Việt + tiếng Đức (trích nguyên văn được). Cấm các từ kiểu "thesis / paraphrase / distractor / trap / main message / detail / support / match / mapping"… → dùng "luận điểm chính / diễn đạt lại / câu bẫy / bẫy / ý chính / ý phụ / luận cứ hỗ trợ / khớp với / ghép". Lý do: user học DTZ B1, không học tiếng Anh → mỗi từ Anh = tầng nghĩa thừa phải tra. Tiếng Đức trong nháy "..." là evidence, KHÔNG dịch trừ khi user hỏi. Ref: `docs/ai/DECISIONS.md` DD-20260522-001.
 
 ---
 
@@ -140,4 +141,4 @@ deutsch/                                     [template: tpl-hoc-deutsch@v1.1]
 
 ---
 
-**Last updated:** 2026-05-18 (v1.1 — thêm vai 8 Module Engineer sau LingQ integration session).
+**Last updated:** 2026-05-22 (v1.2 — thêm rule "không tiếng Anh khi giải thích", ref DD-20260522-001).

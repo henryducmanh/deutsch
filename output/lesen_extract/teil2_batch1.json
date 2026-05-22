@@ -1,0 +1,168 @@
+{
+  "2.1": {
+    "vocab": [
+      {"wort": "Auffrischungskurs", "wortart": "Substantiv", "formen": "der Auffrischungskurs, -e", "bedeutung": "khóa học ôn lại kiến thức", "beispiel": "Unsere Sprachschule in Florenz bietet spezielle Auffrischungskurse für ältere Lernende an.", "uebersetzung": "Trường ngôn ngữ của chúng tôi ở Florenz cung cấp các khóa ôn tập dành riêng cho người học lớn tuổi.", "thema": "Bildung", "notes": ""},
+      {"wort": "Vorkenntnisse", "wortart": "Substantiv", "formen": "die Vorkenntnisse (Pl.)", "bedeutung": "kiến thức nền có sẵn", "beispiel": "Vorkenntnisse sind nicht nötig.", "uebersetzung": "Không cần có kiến thức nền trước.", "thema": "Bildung", "notes": "thường dùng số nhiều"},
+      {"wort": "sich richten an", "wortart": "Verb", "formen": "richtete sich - hat sich gerichtet", "bedeutung": "hướng đến (đối tượng)", "beispiel": "Unser Kurs richtet sich an alle Menschen ab 60 Jahren.", "uebersetzung": "Khóa học của chúng tôi hướng đến mọi người từ 60 tuổi trở lên.", "thema": "Bildung", "notes": "reflexiv + Akk."},
+      {"wort": "Betrug", "wortart": "Substantiv", "formen": "der Betrug (kein Pl.)", "bedeutung": "sự lừa đảo", "beispiel": "Wie Sie sich vor Betrug im Internet schützen", "uebersetzung": "Cách bạn tự bảo vệ trước lừa đảo trên Internet.", "thema": "Konsum", "notes": ""},
+      {"wort": "Einsteiger", "wortart": "Substantiv", "formen": "der Einsteiger, -", "bedeutung": "người mới bắt đầu", "beispiel": "Digitale Fotografie für Einsteiger", "uebersetzung": "Nhiếp ảnh kỹ thuật số cho người mới bắt đầu.", "thema": "Bildung", "notes": ""},
+      {"wort": "Schwerpunkt", "wortart": "Substantiv", "formen": "der Schwerpunkt, -e", "bedeutung": "trọng tâm, điểm chính", "beispiel": "Der Schwerpunkt liegt auf Kommunikation mit Familie und Freunden.", "uebersetzung": "Trọng tâm nằm ở việc giao tiếp với gia đình và bạn bè.", "thema": "Bildung", "notes": ""},
+      {"wort": "bewusst", "wortart": "Adjektiv", "formen": "bewusst", "bedeutung": "có ý thức, có chủ đích", "beispiel": "Sie möchten sich bewusster ernähren, ohne teure Diäten oder komplizierte Rezepte?", "uebersetzung": "Bạn muốn ăn uống có ý thức hơn, không cần ăn kiêng đắt tiền?", "thema": "Gesundheit", "notes": ""},
+      {"wort": "flexibel", "wortart": "Adjektiv", "formen": "flexibel", "bedeutung": "linh hoạt", "beispiel": "Der Kurs ist flexibel aufgebaut.", "uebersetzung": "Khóa học được xây dựng linh hoạt.", "thema": "Bildung", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "sich vor Betrug im Internet schützen", "chunk_vn": "tự bảo vệ mình khỏi lừa đảo trên Internet", "type": "Kollokation", "topic": "Konsum", "note": "sich + vor + Dat. + schützen"},
+      {"chunk_de": "fit und mobil bleiben", "chunk_vn": "giữ cho khỏe mạnh và năng động", "type": "Wendung", "topic": "Gesundheit", "note": ""}
+    ]
+  },
+  "2.2": {
+    "vocab": [
+      {"wort": "Sparangebot", "wortart": "Substantiv", "formen": "das Sparangebot, -e", "bedeutung": "ưu đãi tiết kiệm", "beispiel": "Fahren Sie flexibel von Stadt zu Stadt mit unseren Sparangeboten.", "uebersetzung": "Đi linh hoạt từ thành phố này đến thành phố khác với các ưu đãi tiết kiệm.", "thema": "Konsum", "notes": ""},
+      {"wort": "Leihfahrzeug", "wortart": "Substantiv", "formen": "das Leihfahrzeug, -e", "bedeutung": "xe cho thuê", "beispiel": "Bei uns finden Sie die besten Preise für Leihfahrzeuge.", "uebersetzung": "Tại chúng tôi bạn tìm thấy giá tốt nhất cho xe cho thuê.", "thema": "Konsum", "notes": ""},
+      {"wort": "Praktikumsplatz", "wortart": "Substantiv", "formen": "der Praktikumsplatz, -plätze", "bedeutung": "vị trí thực tập", "beispiel": "Wir vermitteln Praktikumsplätze in über 20 Ländern.", "uebersetzung": "Chúng tôi giới thiệu vị trí thực tập tại hơn 20 quốc gia.", "thema": "Arbeit", "notes": ""},
+      {"wort": "vermitteln", "wortart": "Verb", "formen": "vermittelte - hat vermittelt", "bedeutung": "môi giới, giới thiệu", "beispiel": "Wir vermitteln Praktikumsplätze in über 20 Ländern.", "uebersetzung": "Chúng tôi giới thiệu vị trí thực tập tại hơn 20 quốc gia.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Berufserfahrung", "wortart": "Substantiv", "formen": "die Berufserfahrung, -en", "bedeutung": "kinh nghiệm làm việc", "beispiel": "Mindestens 1 Jahr Berufserfahrung in der Gastronomie erforderlich!", "uebersetzung": "Yêu cầu tối thiểu 1 năm kinh nghiệm trong ngành nhà hàng-khách sạn!", "thema": "Arbeit", "notes": ""},
+      {"wort": "erforderlich", "wortart": "Adjektiv", "formen": "erforderlich", "bedeutung": "cần thiết, bắt buộc", "beispiel": "Mindestens 1 Jahr Berufserfahrung erforderlich!", "uebersetzung": "Yêu cầu tối thiểu 1 năm kinh nghiệm!", "thema": "Arbeit", "notes": ""},
+      {"wort": "Krankenversicherung", "wortart": "Substantiv", "formen": "die Krankenversicherung, -en", "bedeutung": "bảo hiểm y tế", "beispiel": "Wir helfen Ihnen bei allen Fragen: Studium, Jobs, Wohnen, Krankenversicherung, Freizeit.", "uebersetzung": "Chúng tôi giúp bạn mọi vấn đề: học, việc làm, nhà ở, bảo hiểm y tế, giải trí.", "thema": "Gesundheit", "notes": ""},
+      {"wort": "Beratung", "wortart": "Substantiv", "formen": "die Beratung, -en", "bedeutung": "việc tư vấn", "beispiel": "Online-Beratung kostenlos.", "uebersetzung": "Tư vấn online miễn phí.", "thema": "Bildung", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "von Stadt zu Stadt fahren", "chunk_vn": "đi từ thành phố này đến thành phố khác", "type": "Kollokation", "topic": "Verkehr", "note": ""},
+      {"chunk_de": "Erfahrung in der Gastronomie", "chunk_vn": "kinh nghiệm trong ngành nhà hàng-khách sạn", "type": "Kollokation", "topic": "Arbeit", "note": ""}
+    ]
+  },
+  "2.3": {
+    "vocab": [
+      {"wort": "Heimgebrauch", "wortart": "Substantiv", "formen": "der Heimgebrauch (kein Pl.)", "bedeutung": "việc sử dụng tại nhà", "beispiel": "Wir verkaufen unser fast neues Laufband für den Heimgebrauch.", "uebersetzung": "Chúng tôi bán máy chạy bộ gần như mới dùng tại nhà.", "thema": "Konsum", "notes": ""},
+      {"wort": "Vereinbarung", "wortart": "Substantiv", "formen": "die Vereinbarung, -en", "bedeutung": "sự thỏa thuận, hẹn", "beispiel": "Abholung in Köln nach Vereinbarung.", "uebersetzung": "Đến lấy ở Köln theo thỏa thuận hẹn.", "thema": "Konsum", "notes": "nach Vereinbarung"},
+      {"wort": "Eigenheim", "wortart": "Substantiv", "formen": "das Eigenheim, -e", "bedeutung": "nhà riêng (sở hữu)", "beispiel": "Sauna & Wellness für Ihr Eigenheim.", "uebersetzung": "Sauna và Wellness cho căn nhà riêng của bạn.", "thema": "Wohnen", "notes": ""},
+      {"wort": "Bestandteil", "wortart": "Substantiv", "formen": "der Bestandteil, -e", "bedeutung": "thành phần, phần cấu thành", "beispiel": "Wellness ist nicht Bestandteil des Programms!", "uebersetzung": "Wellness không phải là phần cấu thành của chương trình!", "thema": "Konsum", "notes": ""},
+      {"wort": "buchbar", "wortart": "Adjektiv", "formen": "buchbar", "bedeutung": "có thể đặt chỗ", "beispiel": "Nur buchbar: Montag–Freitag.", "uebersetzung": "Chỉ đặt chỗ được: thứ Hai đến thứ Sáu.", "thema": "Konsum", "notes": ""},
+      {"wort": "Ausbildung", "wortart": "Substantiv", "formen": "die Ausbildung, -en", "bedeutung": "khóa đào tạo nghề", "beispiel": "Ausbildung in Theorie und Praxis.", "uebersetzung": "Đào tạo cả lý thuyết và thực hành.", "thema": "Bildung", "notes": ""},
+      {"wort": "verbinden", "wortart": "Verb", "formen": "verband - hat verbunden", "bedeutung": "kết hợp", "beispiel": "Verbinden Sie Urlaub und Weiterbildung!", "uebersetzung": "Hãy kết hợp kỳ nghỉ và việc học nâng cao!", "thema": "Bildung", "notes": ""},
+      {"wort": "Einbau", "wortart": "Substantiv", "formen": "der Einbau (kein Pl.)", "bedeutung": "việc lắp đặt", "beispiel": "Einbau in Keller oder Garten.", "uebersetzung": "Lắp đặt ở tầng hầm hoặc vườn.", "thema": "Wohnen", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "in entspannter Atmosphäre", "chunk_vn": "trong không khí thư giãn", "type": "Kollokation", "topic": "Freizeit", "note": ""},
+      {"chunk_de": "in gutem Zustand", "chunk_vn": "trong tình trạng tốt", "type": "Wendung", "topic": "Konsum", "note": ""}
+    ]
+  },
+  "2.4": {
+    "vocab": [
+      {"wort": "Maßanfertigung", "wortart": "Substantiv", "formen": "die Maßanfertigung, -en", "bedeutung": "việc đóng theo kích thước riêng", "beispiel": "Wir bauen Ihre Sauna individuell – Maßanfertigung.", "uebersetzung": "Chúng tôi xây phòng xông hơi riêng cho bạn — đóng theo kích thước riêng.", "thema": "Wohnen", "notes": ""},
+      {"wort": "Selbstabholung", "wortart": "Substantiv", "formen": "die Selbstabholung, -en", "bedeutung": "tự đến lấy", "beispiel": "Nur Selbstabholung in Düsseldorf.", "uebersetzung": "Chỉ tự đến lấy ở Düsseldorf.", "thema": "Konsum", "notes": ""},
+      {"wort": "Gelegenheit", "wortart": "Substantiv", "formen": "die Gelegenheit, -en", "bedeutung": "cơ hội", "beispiel": "Dann ist dies die perfekte Gelegenheit, auf Reisen jemanden kennenzulernen.", "uebersetzung": "Vậy thì đây là cơ hội hoàn hảo để làm quen ai đó trong chuyến đi.", "thema": "Freizeit", "notes": ""},
+      {"wort": "berufsbegleitend", "wortart": "Adjektiv", "formen": "berufsbegleitend", "bedeutung": "song song với công việc", "beispiel": "Beginn: jederzeit, auch berufsbegleitend.", "uebersetzung": "Bắt đầu: bất cứ lúc nào, cũng có thể vừa học vừa làm.", "thema": "Bildung", "notes": ""},
+      {"wort": "platzsparend", "wortart": "Adjektiv", "formen": "platzsparend", "bedeutung": "tiết kiệm chỗ", "beispiel": "Leicht zu bedienen, platzsparend, gleichmäßige Bräune.", "uebersetzung": "Dễ dùng, tiết kiệm chỗ, làm rám nắng đều.", "thema": "Konsum", "notes": ""},
+      {"wort": "renommiert", "wortart": "Adjektiv", "formen": "renommiert", "bedeutung": "có tiếng tăm, danh tiếng", "beispiel": "Wir bieten Ihnen 3-monatige Kurse in renommierten Tempeln in Thailand an.", "uebersetzung": "Chúng tôi cung cấp các khóa học 3 tháng tại các ngôi đền danh tiếng ở Thái Lan.", "thema": "Bildung", "notes": ""},
+      {"wort": "begrenzt", "wortart": "Adjektiv", "formen": "begrenzt", "bedeutung": "có giới hạn", "beispiel": "Start: Oktober, nur begrenzte Plätze!", "uebersetzung": "Bắt đầu: tháng Mười, chỉ còn số chỗ giới hạn!", "thema": "Bildung", "notes": ""},
+      {"wort": "Bundesland", "wortart": "Substantiv", "formen": "das Bundesland, -länder", "bedeutung": "bang (Đức)", "beispiel": "Staatlich anerkannte Massage-Ausbildung in allen Bundesländern möglich.", "uebersetzung": "Đào tạo massage được nhà nước công nhận có sẵn ở mọi bang.", "thema": "Bildung", "notes": ""},
+      {"wort": "überraschen", "wortart": "Verb", "formen": "überraschte - hat überrascht", "bedeutung": "làm bất ngờ", "beispiel": "Überraschen Sie Ihre/n Partner/in mit einem besonderen Tag.", "uebersetzung": "Hãy làm bất ngờ bạn đời của bạn với một ngày đặc biệt.", "thema": "Freizeit", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "Beratung vor Ort", "chunk_vn": "tư vấn tại chỗ (tại nhà)", "type": "Redemittel", "topic": "Konsum", "note": "redemittel dịch vụ"},
+      {"chunk_de": "alles inklusive", "chunk_vn": "tất cả đã bao gồm", "type": "Wendung", "topic": "Konsum", "note": ""}
+    ]
+  },
+  "2.5": {
+    "vocab": [
+      {"wort": "Ferienjob", "wortart": "Substantiv", "formen": "der Ferienjob, -s", "bedeutung": "công việc kỳ nghỉ", "beispiel": "Ferienjob bei Frucht & Fit GmbH.", "uebersetzung": "Việc làm kỳ nghỉ tại công ty Frucht & Fit.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Stundenlohn", "wortart": "Substantiv", "formen": "der Stundenlohn, -löhne", "bedeutung": "tiền công theo giờ", "beispiel": "Stundenlohn: 10–15 € je nach Schicht.", "uebersetzung": "Lương theo giờ: 10–15 € tùy theo ca.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Schicht", "wortart": "Substantiv", "formen": "die Schicht, -en", "bedeutung": "ca làm việc", "beispiel": "Stundenlohn: 10–15 € je nach Schicht.", "uebersetzung": "Lương theo giờ: 10–15 € tùy theo ca.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Aushilfe", "wortart": "Substantiv", "formen": "die Aushilfe, -n", "bedeutung": "nhân viên hỗ trợ thời vụ", "beispiel": "Aushilfe in der Bank gesucht.", "uebersetzung": "Cần nhân viên hỗ trợ thời vụ tại ngân hàng.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Voraussetzung", "wortart": "Substantiv", "formen": "die Voraussetzung, -en", "bedeutung": "điều kiện tiên quyết", "beispiel": "Voraussetzungen: mindestens 18 Jahre alt, freundlich und zuverlässig.", "uebersetzung": "Điều kiện: tối thiểu 18 tuổi, thân thiện và đáng tin cậy.", "thema": "Arbeit", "notes": ""},
+      {"wort": "zuverlässig", "wortart": "Adjektiv", "formen": "zuverlässig", "bedeutung": "đáng tin cậy", "beispiel": "Er fährt zuverlässig, hat neue Reifen und eine frische Inspektion.", "uebersetzung": "Nó chạy bền bỉ, có lốp mới và vừa được kiểm tra.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Kundenbetreuung", "wortart": "Substantiv", "formen": "die Kundenbetreuung, -en", "bedeutung": "việc chăm sóc khách hàng", "beispiel": "Ferienjob in der Kundenbetreuung.", "uebersetzung": "Việc làm kỳ nghỉ trong mảng chăm sóc khách hàng.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Bedingung", "wortart": "Substantiv", "formen": "die Bedingung, -en", "bedeutung": "điều kiện (bắt buộc)", "beispiel": "Erfahrungen in der Gastronomie sind wünschenswert, aber keine Bedingung.", "uebersetzung": "Kinh nghiệm trong ngành nhà hàng là điều mong muốn, nhưng không phải điều kiện bắt buộc.", "thema": "Arbeit", "notes": ""},
+      {"wort": "wünschenswert", "wortart": "Adjektiv", "formen": "wünschenswert", "bedeutung": "đáng mong muốn", "beispiel": "Erfahrungen in der Gastronomie sind wünschenswert.", "uebersetzung": "Kinh nghiệm trong ngành nhà hàng là điều mong muốn.", "thema": "Arbeit", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "Erfahrung sammeln", "chunk_vn": "tích lũy kinh nghiệm", "type": "Kollokation", "topic": "Arbeit", "note": ""},
+      {"chunk_de": "freundlich und zuverlässig", "chunk_vn": "thân thiện và đáng tin cậy", "type": "Kollokation", "topic": "Arbeit", "note": "cặp tính từ điển hình mô tả ứng viên"}
+    ]
+  },
+  "2.6": {
+    "vocab": [
+      {"wort": "Ernährungsberaterin", "wortart": "Substantiv", "formen": "die Ernährungsberaterin, -nen", "bedeutung": "nữ chuyên viên tư vấn dinh dưỡng", "beispiel": "Unsere Ernährungsberaterin zeigt Ihnen, wie Sie Pizza, Pasta & Co in gesunder Variante selbst zubereiten können.", "uebersetzung": "Chuyên viên dinh dưỡng chỉ bạn cách tự nấu pizza, pasta theo phiên bản lành mạnh.", "thema": "Gesundheit", "notes": ""},
+      {"wort": "verzichten", "wortart": "Verb", "formen": "verzichtete - hat verzichtet", "bedeutung": "từ bỏ, không dùng đến", "beispiel": "So genießen Sie weiterhin Ihre Lieblingsgerichte, ohne auf Gesundheit zu verzichten.", "uebersetzung": "Như vậy bạn tiếp tục thưởng thức món yêu thích mà không cần từ bỏ sức khỏe.", "thema": "Gesundheit", "notes": "verzichten auf + Akk."},
+      {"wort": "zunehmen", "wortart": "Verb", "formen": "nahm zu - hat zugenommen", "bedeutung": "tăng cân", "beispiel": "Sie möchten auf gesunde Weise an Gewicht zulegen?", "uebersetzung": "Bạn muốn tăng cân theo cách lành mạnh?", "thema": "Gesundheit", "notes": "trennbar"},
+      {"wort": "hochwertig", "wortart": "Adjektiv", "formen": "hochwertig", "bedeutung": "chất lượng cao", "beispiel": "Sie lernen, wie Sie mit hochwertigen Lebensmitteln gesund zunehmen.", "uebersetzung": "Bạn học cách tăng cân lành mạnh với thực phẩm chất lượng cao.", "thema": "Gesundheit", "notes": ""},
+      {"wort": "eiweißreich", "wortart": "Adjektiv", "formen": "eiweißreich", "bedeutung": "giàu đạm", "beispiel": "Sie lernen, wie Sie mit eiweißreichen Snacks gesund zunehmen.", "uebersetzung": "Bạn học cách tăng cân lành mạnh với đồ ăn nhẹ giàu đạm.", "thema": "Gesundheit", "notes": ""},
+      {"wort": "Berufstätige", "wortart": "Substantiv", "formen": "der/die Berufstätige, -n", "bedeutung": "người đang đi làm", "beispiel": "Für Berufstätige am Abend ist dieses Angebot nicht geeignet.", "uebersetzung": "Đối với người đi làm vào buổi tối thì chương trình này không phù hợp.", "thema": "Arbeit", "notes": "Adjektiv-deklination"},
+      {"wort": "vertragen", "wortart": "Verb", "formen": "vertrug - hat vertragen", "bedeutung": "chịu đựng được (thức ăn)", "beispiel": "Wir helfen Ihnen, wenn Sie bestimmte Lebensmittel nicht vertragen.", "uebersetzung": "Chúng tôi giúp bạn nếu bạn không dung nạp được một số thực phẩm.", "thema": "Gesundheit", "notes": ""},
+      {"wort": "individuell", "wortart": "Adjektiv", "formen": "individuell", "bedeutung": "riêng biệt, cá nhân hóa", "beispiel": "Glutenfrei, laktosefrei, ohne Nüsse – wir beraten individuell.", "uebersetzung": "Không gluten, không lactose, không hạt — chúng tôi tư vấn riêng cho từng người.", "thema": "Gesundheit", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "auf gesunde Weise zunehmen", "chunk_vn": "tăng cân theo cách lành mạnh", "type": "Kollokation", "topic": "Gesundheit", "note": ""},
+      {"chunk_de": "Termine nach Vereinbarung", "chunk_vn": "hẹn theo thỏa thuận", "type": "Redemittel", "topic": "Konsum", "note": ""}
+    ]
+  },
+  "2.7": {
+    "vocab": [
+      {"wort": "Nachtwächter", "wortart": "Substantiv", "formen": "der Nachtwächter, -", "bedeutung": "bảo vệ ban đêm", "beispiel": "Nachtwächter und Fahrer gesucht.", "uebersetzung": "Cần tuyển bảo vệ ban đêm và tài xế.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Teilzeit", "wortart": "Substantiv", "formen": "die Teilzeit (kein Pl.)", "bedeutung": "bán thời gian", "beispiel": "Nachtwächter (m/w/d) in Teilzeit.", "uebersetzung": "Bảo vệ ban đêm làm bán thời gian.", "thema": "Arbeit", "notes": "Gegensatz: Vollzeit"},
+      {"wort": "Vollzeit", "wortart": "Substantiv", "formen": "die Vollzeit (kein Pl.)", "bedeutung": "toàn thời gian", "beispiel": "Fahrer (m/w/d) in Vollzeit – Führerscheinklasse CE erforderlich.", "uebersetzung": "Tài xế toàn thời gian — yêu cầu bằng lái loại CE.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Provision", "wortart": "Substantiv", "formen": "die Provision, -en", "bedeutung": "phí môi giới, hoa hồng", "beispiel": "Schöne Wohnung ohne Provision.", "uebersetzung": "Căn hộ đẹp không tốn phí môi giới.", "thema": "Wohnen", "notes": ""},
+      {"wort": "Nachmieter", "wortart": "Substantiv", "formen": "der Nachmieter, -", "bedeutung": "người thuê kế tiếp", "beispiel": "Wir suchen einen Nachmieter für unsere moderne 3-Zimmer-Wohnung.", "uebersetzung": "Chúng tôi tìm người thuê kế tiếp cho căn hộ 3 phòng hiện đại.", "thema": "Wohnen", "notes": ""},
+      {"wort": "Kaltmiete", "wortart": "Substantiv", "formen": "die Kaltmiete, -n", "bedeutung": "tiền thuê chưa kèm phụ phí", "beispiel": "Die Kaltmiete beträgt 650 € + Nebenkosten.", "uebersetzung": "Tiền thuê chưa phụ phí là 650 € + chi phí phụ.", "thema": "Wohnen", "notes": ""},
+      {"wort": "Nebenkosten", "wortart": "Substantiv", "formen": "die Nebenkosten (Pl.)", "bedeutung": "chi phí phụ (điện, nước, sưởi)", "beispiel": "Die Kaltmiete beträgt 650 € + Nebenkosten.", "uebersetzung": "Tiền thuê chưa phụ phí là 650 € + chi phí phụ.", "thema": "Wohnen", "notes": "luôn dùng số nhiều"},
+      {"wort": "Bereitschaft", "wortart": "Substantiv", "formen": "die Bereitschaft (kein Pl.)", "bedeutung": "sự sẵn sàng", "beispiel": "Voraussetzung: Bereitschaft zur Wochenendarbeit und Erfahrung im Notdienst.", "uebersetzung": "Điều kiện: sẵn sàng làm cuối tuần và có kinh nghiệm trực cấp cứu.", "thema": "Arbeit", "notes": "Bereitschaft zu + Dat."},
+      {"wort": "Tagesmutter", "wortart": "Substantiv", "formen": "die Tagesmutter, -mütter", "bedeutung": "người trông trẻ ban ngày", "beispiel": "Unser Verein vermittelt erfahrene Babysitter und Tagesmütter.", "uebersetzung": "Hội của chúng tôi giới thiệu các bảo mẫu và người trông trẻ ban ngày.", "thema": "Familie", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "ohne Maklergebühren", "chunk_vn": "không tốn phí môi giới bất động sản", "type": "Redemittel", "topic": "Wohnen", "note": "redemittel quảng cáo nhà"},
+      {"chunk_de": "Bereitschaft zur Wochenendarbeit", "chunk_vn": "sẵn sàng làm cuối tuần", "type": "Kollokation", "topic": "Arbeit", "note": "redemittel tuyển dụng"}
+    ]
+  },
+  "2.8": {
+    "vocab": [
+      {"wort": "Nachhilfe", "wortart": "Substantiv", "formen": "die Nachhilfe (kein Pl.)", "bedeutung": "việc dạy thêm, gia sư", "beispiel": "Lernkreis Süd e.V. – Nachhilfe mit Erfolg!", "uebersetzung": "Hội Lernkreis Süd — Gia sư hiệu quả!", "thema": "Bildung", "notes": ""},
+      {"wort": "Förderung", "wortart": "Substantiv", "formen": "die Förderung, -en", "bedeutung": "sự hỗ trợ, bồi dưỡng", "beispiel": "Kleine Gruppen mit maximal 5 Schülern garantieren individuelle Förderung.", "uebersetzung": "Nhóm nhỏ tối đa 5 học sinh đảm bảo bồi dưỡng từng em.", "thema": "Bildung", "notes": ""},
+      {"wort": "Probestunde", "wortart": "Substantiv", "formen": "die Probestunde, -n", "bedeutung": "tiết học thử", "beispiel": "Erstberatung und Probestunde sind kostenlos.", "uebersetzung": "Tư vấn lần đầu và tiết học thử miễn phí.", "thema": "Bildung", "notes": ""},
+      {"wort": "Entrümpelung", "wortart": "Substantiv", "formen": "die Entrümpelung, -en", "bedeutung": "việc dọn dẹp đồ cũ", "beispiel": "Entrümpelung von Kellern, Dachböden, Garagen.", "uebersetzung": "Dọn dẹp tầng hầm, gác mái, garage.", "thema": "Wohnen", "notes": ""},
+      {"wort": "Entsorgung", "wortart": "Substantiv", "formen": "die Entsorgung, -en", "bedeutung": "việc xử lý/vứt bỏ rác", "beispiel": "Fachgerechte Entsorgung der Sachen.", "uebersetzung": "Xử lý đồ đạc đúng cách chuyên nghiệp.", "thema": "Wohnen", "notes": ""},
+      {"wort": "Wartung", "wortart": "Substantiv", "formen": "die Wartung, -en", "bedeutung": "bảo trì", "beispiel": "Wartung und Reparatur.", "uebersetzung": "Bảo trì và sửa chữa.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Reinigungskraft", "wortart": "Substantiv", "formen": "die Reinigungskraft, -kräfte", "bedeutung": "nhân viên vệ sinh", "beispiel": "Wir suchen motivierte Reinigungskräfte für Büros und Privathaushalte.", "uebersetzung": "Chúng tôi tìm nhân viên vệ sinh năng động cho văn phòng và hộ gia đình tư nhân.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Wiedereinsteiger", "wortart": "Substantiv", "formen": "der Wiedereinsteiger, -", "bedeutung": "người quay lại công việc sau gián đoạn", "beispiel": "Ideal für Wiedereinsteiger oder Rentner.", "uebersetzung": "Lý tưởng cho người quay lại làm việc hoặc người đã nghỉ hưu.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Pünktlichkeit", "wortart": "Substantiv", "formen": "die Pünktlichkeit (kein Pl.)", "bedeutung": "tính đúng giờ", "beispiel": "Zuverlässigkeit und Pünktlichkeit.", "uebersetzung": "Đáng tin cậy và đúng giờ.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Kommunikationsfähigkeit", "wortart": "Substantiv", "formen": "die Kommunikationsfähigkeit, -en", "bedeutung": "khả năng giao tiếp", "beispiel": "Voraussetzung: Gute Kommunikationsfähigkeiten, Freude am Gespräch.", "uebersetzung": "Điều kiện: kỹ năng giao tiếp tốt, thích trò chuyện.", "thema": "Arbeit", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "auf Klassenarbeiten vorbereiten", "chunk_vn": "chuẩn bị cho bài kiểm tra ở lớp", "type": "Kollokation", "topic": "Bildung", "note": "vorbereiten auf + Akk."},
+      {"chunk_de": "auf Minijob-Basis", "chunk_vn": "theo dạng việc làm thu nhập thấp", "type": "Redemittel", "topic": "Arbeit", "note": "redemittel tuyển dụng"}
+    ]
+  },
+  "2.9": {
+    "vocab": [
+      {"wort": "Lagerfeuer", "wortart": "Substantiv", "formen": "das Lagerfeuer, -", "bedeutung": "lửa trại", "beispiel": "Erlebe eine spannende Woche mit Klettern, Kanufahren, Lagerfeuer und viel Bewegung an der frischen Luft.", "uebersetzung": "Trải nghiệm một tuần thú vị với leo núi, chèo thuyền, lửa trại và nhiều vận động ngoài trời.", "thema": "Freizeit", "notes": ""},
+      {"wort": "Anfänger", "wortart": "Substantiv", "formen": "der Anfänger, -", "bedeutung": "người mới bắt đầu", "beispiel": "Auch Anfänger sind herzlich willkommen.", "uebersetzung": "Người mới bắt đầu cũng được chào đón.", "thema": "Bildung", "notes": ""},
+      {"wort": "Sprachkurs", "wortart": "Substantiv", "formen": "der Sprachkurs, -e", "bedeutung": "khóa học ngôn ngữ", "beispiel": "Unser Sprachkurs ist speziell für Jugendliche mit geringen Vorkenntnissen.", "uebersetzung": "Khóa học ngôn ngữ của chúng tôi dành riêng cho thanh thiếu niên có ít kiến thức nền.", "thema": "Bildung", "notes": ""},
+      {"wort": "gering", "wortart": "Adjektiv", "formen": "gering", "bedeutung": "ít, thấp", "beispiel": "Unser Sprachkurs ist speziell für Jugendliche mit geringen Vorkenntnissen.", "uebersetzung": "Khóa học ngôn ngữ dành riêng cho thanh thiếu niên có ít kiến thức nền.", "thema": "Bildung", "notes": ""},
+      {"wort": "veranstalten", "wortart": "Verb", "formen": "veranstaltete - hat veranstaltet", "bedeutung": "tổ chức (sự kiện)", "beispiel": "Vom 1. bis 5. August veranstalten wir ein Feriencamp für Schüler ab 15 Jahren.", "uebersetzung": "Từ ngày 1 đến 5 tháng 8 chúng tôi tổ chức trại hè.", "thema": "Freizeit", "notes": ""},
+      {"wort": "Feriencamp", "wortart": "Substantiv", "formen": "das Feriencamp, -s", "bedeutung": "trại hè", "beispiel": "Wir veranstalten ein Feriencamp für Schüler ab 15 Jahren.", "uebersetzung": "Chúng tôi tổ chức trại hè cho học sinh từ 15 tuổi.", "thema": "Freizeit", "notes": ""},
+      {"wort": "präsentieren", "wortart": "Verb", "formen": "präsentierte - hat präsentiert", "bedeutung": "trình bày, thuyết trình", "beispiel": "Reden, zuhören, präsentieren – das lernst du in unserem Kurs.", "uebersetzung": "Nói, lắng nghe, thuyết trình — bạn học được điều này trong khóa của chúng tôi.", "thema": "Bildung", "notes": ""},
+      {"wort": "selbstbewusst", "wortart": "Adjektiv", "formen": "selbstbewusst", "bedeutung": "tự tin", "beispiel": "Für alle, die in der Schule oder später im Beruf selbstbewusster auftreten wollen.", "uebersetzung": "Dành cho ai muốn xuất hiện tự tin hơn ở trường hoặc sau này trong nghề.", "thema": "Bildung", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "an der frischen Luft", "chunk_vn": "ở ngoài trời (không khí trong lành)", "type": "Wendung", "topic": "Freizeit", "note": ""},
+      {"chunk_de": "selbstbewusster auftreten", "chunk_vn": "thể hiện một cách tự tin hơn", "type": "Kollokation", "topic": "Bildung", "note": ""}
+    ]
+  },
+  "2.10": {
+    "vocab": [
+      {"wort": "Haushaltsauflösung", "wortart": "Substantiv", "formen": "die Haushaltsauflösung, -en", "bedeutung": "việc thanh lý đồ đạc gia đình", "beispiel": "Haushaltsauflösung – alles gratis!", "uebersetzung": "Thanh lý đồ đạc gia đình — tất cả miễn phí!", "thema": "Wohnen", "notes": ""},
+      {"wort": "verschenken", "wortart": "Verb", "formen": "verschenkte - hat verschenkt", "bedeutung": "tặng đi (không lấy tiền)", "beispiel": "Wir ziehen ins Ausland und verschenken unser komplettes Haushaltsinventar.", "uebersetzung": "Chúng tôi chuyển ra nước ngoài và tặng toàn bộ đồ đạc gia đình.", "thema": "Konsum", "notes": ""},
+      {"wort": "fachgerecht", "wortart": "Adjektiv", "formen": "fachgerecht", "bedeutung": "đúng chuyên môn, đúng quy cách", "beispiel": "Wir reparieren Schränke, Tische, Stühle und Regale – fachgerecht und günstig.", "uebersetzung": "Chúng tôi sửa tủ, bàn, ghế và kệ — đúng chuyên môn và giá rẻ.", "thema": "Wohnen", "notes": ""},
+      {"wort": "Ratenzahlung", "wortart": "Substantiv", "formen": "die Ratenzahlung, -en", "bedeutung": "trả góp", "beispiel": "Wir bieten Ihnen Küchenmöbel auf Ratenzahlung – ohne Zinsen, ohne Anzahlung.", "uebersetzung": "Chúng tôi cung cấp đồ bếp trả góp — không lãi suất, không tiền cọc.", "thema": "Konsum", "notes": ""},
+      {"wort": "Anzahlung", "wortart": "Substantiv", "formen": "die Anzahlung, -en", "bedeutung": "tiền đặt cọc", "beispiel": "Wir bieten Ihnen Küchenmöbel auf Ratenzahlung – ohne Zinsen, ohne Anzahlung.", "uebersetzung": "Chúng tôi cung cấp đồ bếp trả góp — không lãi suất, không tiền cọc.", "thema": "Konsum", "notes": ""},
+      {"wort": "Zins", "wortart": "Substantiv", "formen": "der Zins, -en", "bedeutung": "lãi suất", "beispiel": "Wir bieten Ihnen Küchenmöbel auf Ratenzahlung – ohne Zinsen, ohne Anzahlung.", "uebersetzung": "Chúng tôi cung cấp đồ bếp trả góp — không lãi suất, không tiền cọc.", "thema": "Konsum", "notes": "thường dùng số nhiều"},
+      {"wort": "Warenwert", "wortart": "Substantiv", "formen": "der Warenwert, -e", "bedeutung": "giá trị hàng hóa", "beispiel": "Ab einem Warenwert von 1.000 €.", "uebersetzung": "Từ giá trị hàng hóa 1.000 € trở lên.", "thema": "Konsum", "notes": ""},
+      {"wort": "Wohngemeinschaft", "wortart": "Substantiv", "formen": "die Wohngemeinschaft, -en", "bedeutung": "nhóm người chung sống (WG)", "beispiel": "Wir sind eine große Wohngemeinschaft und suchen dringend Küchenmöbel.", "uebersetzung": "Chúng tôi là một nhóm ở chung lớn và đang cần đồ bếp gấp.", "thema": "Wohnen", "notes": "viết tắt: WG"},
+      {"wort": "Reservierung", "wortart": "Substantiv", "formen": "die Reservierung, -en", "bedeutung": "việc đặt giữ chỗ trước", "beispiel": "Alles in gutem Zustand – einfach vorbeikommen und mitnehmen. Keine Reservierung möglich!", "uebersetzung": "Tất cả trong tình trạng tốt — chỉ cần ghé qua và mang về. Không thể đặt giữ trước!", "thema": "Konsum", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "auf Ratenzahlung", "chunk_vn": "trả góp theo từng đợt", "type": "Redemittel", "topic": "Konsum", "note": "redemittel mua hàng"},
+      {"chunk_de": "Selbstabholung möglich", "chunk_vn": "có thể tự đến lấy", "type": "Redemittel", "topic": "Konsum", "note": "redemittel quảng cáo rao bán/cho"}
+    ]
+  }
+}

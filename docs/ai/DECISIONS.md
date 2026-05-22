@@ -58,4 +58,26 @@ ID convention: `DD-<YYYYMMDD>-<NNN>` (DD = Deutsch Decision).
 
 ---
 
-**Last updated:** 2026-05-18 (3 entries — LingQ integration session).
+## DD-20260522-001 — Giải thích KHÔNG dùng tiếng Anh, chỉ thuần Việt + tiếng Đức
+
+- **Date:** 2026-05-22
+- **Topic:** style giải thích bài học (mọi vai tutor: Tutor, Vocab Extractor, Mistake Auditor, Speaking/Listening Coach, Lesson Planner, Homework Generator, vai "kiểm tra/phản biện")
+- **Decision:** Khi giải thích cho user, **CẤM** chèn thuật ngữ tiếng Anh (vd "thesis", "main message", "paraphrase", "distractor", "trap", "detail", "Hauptaussage" thì OK vì là tiếng Đức). Chỉ dùng **thuần Việt** hoặc **nguyên gốc tiếng Đức**. Trích nguyên văn tiếng Đức trong dấu nháy được.
+- **Alternatives considered:**
+  - (a) Mix Anh-Việt-Đức như thường lệ → loại: user phải tra thêm 1 tầng nghĩa khi đọc, mất thời gian học.
+  - (b) Chỉ tiếng Việt thuần, dịch luôn cả thuật ngữ tiếng Đức → loại: mất evidence gốc, không học được vocab/grammar Đức.
+- **Why:** user đang học tiếng Đức (DTZ B1), KHÔNG học tiếng Anh. Mỗi từ Anh xen vào = noise + cognitive load thừa. Tiếng Việt giải thích + tiếng Đức làm evidence → tối ưu cho việc học.
+- **Mapping ví dụ:**
+  - "thesis / main message" → "luận điểm chính" / "ý chính" / "Hauptaussage" (Đức)
+  - "paraphrase" → "diễn đạt lại" / "viết lại bằng từ khác"
+  - "distractor" → "đáp án nhiễu" / "câu bẫy"
+  - "trap" → "bẫy"
+  - "detail" → "ý phụ" / "chi tiết hỗ trợ" / "Begründung" (Đức)
+  - "match" → "khớp với" / "ứng với"
+  - "support / supporting argument" → "luận cứ hỗ trợ"
+- **Linked files:** `CLAUDE.md` (Style section), `docs/ai/ROLE_PROMPTS.md` (mọi vai tutor)
+- **Status:** active
+
+---
+
+**Last updated:** 2026-05-22 (4 entries — thêm rule style giải thích thuần Việt + Đức).

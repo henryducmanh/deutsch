@@ -1,0 +1,53 @@
+# schema_version: 2026-05-18_v1
+# columns: id, chunk_de, chunk_vn, type, topic, level, source, first_seen, last_practiced, frequency, note
+# id format: CH-<YYYYMMDD>-<NNN>
+# type enum: redemittel | collocation | idiom | phrasal | formula
+# topic enum: Arbeit | Wohnen | Gesundheit | Behörde | Familie | Freizeit | Bildung | Einkauf | Verkehr | Wetter | general
+# level enum: A1 | A2 | B1 | B2 | C1 | C2
+# Append-only. Update only frequency + last_practiced.
+id,chunk_de,chunk_vn,type,topic,level,source,first_seen,last_practiced,frequency,note
+CH-20260518-001,Einfluss auf + Akk. haben,có ảnh hưởng đến...,collocation,general,B1,SRC-001,2026-05-18,2026-05-18,1,Akk. cố định sau 'auf'
+CH-20260518-002,sich an + Akk. anpassen,thích nghi với...,phrasal,general,B1,SRC-001,2026-05-18,2026-05-18,1,Trennbar + reflexiv; Akk. sau 'an'
+CH-20260518-003,sich auf + Akk. einstellen,thích ứng với...,phrasal,general,B1,SRC-001,2026-05-18,2026-05-18,1,Trennbar + reflexiv; pronominaladverb 'darauf' khi N được thay thế
+CH-20260518-004,sollte + Partizip II + werden,nên được + V (Passiv + Modalverb),formula,general,B1,SRC-001,2026-05-18,2026-05-18,1,Pattern B1 quan trọng - DTZ hay test
+CH-20260518-005,"dürfen kein(e) + N + Verb",không được phép làm... (cấm),formula,general,B1,SRC-001,2026-05-18,2026-05-18,1,"Modal + Negation = cấm; vd: dürfen keine Gewalt anwenden"
+CH-20260518-006,positive Aspekte erkennen,nhận ra các mặt tích cực,collocation,general,B1,SRC-001,2026-05-18,2026-05-18,1,Synonym: positive Seiten sehen
+CH-20260518-007,immense Chancen haben durch + Akk.,có cơ hội to lớn nhờ...,collocation,general,B1,SRC-001,2026-05-18,2026-05-18,1,
+CH-20260518-008,die ältere/jüngere Generation,thế hệ lớn/trẻ hơn,collocation,Familie,B1,SRC-001,2026-05-18,2026-05-18,1,Komparativ Adj + Substantiv
+CH-20260518-009,"deren + N (Genitiv-Relativ, f.Sg./Pl.)",của họ/của chúng (đại từ quan hệ sở hữu),formula,general,B1,SRC-001,2026-05-18,2026-05-18,1,"Phân biệt dessen (m./n.Sg.) vs deren (f.Sg./Pl.); B1-B2 grammar"
+CH-20260518-010,"nicht nur ..., sondern auch ...","không chỉ ..., mà còn ...",formula,general,B1,SRC-002,2026-05-18,2026-05-18,1,"Konjunktion 2-vế, ko đảo ngữ vế 2; B1 cực phổ biến"
+CH-20260518-011,führen zu + Dat.,dẫn đến...,phrasal,general,B1,SRC-002,2026-05-18,2026-05-18,1,"Akk → Dat. sau 'zu'; vd: Stress führt zu Krankheit"
+CH-20260518-012,basierend auf + Dat.,dựa trên...,formula,general,B1,SRC-002,2026-05-18,2026-05-18,1,"Partizip I của basieren auf; văn phong formal"
+CH-20260518-013,"so + P.II + werden, dass + Nebensatz","được ... theo cách sao cho...",formula,general,B1,SRC-001,2026-05-18,2026-05-18,1,"Variant của CH-004 (Passiv+Modal) thêm Konsekutivsatz 'so...,dass...'"
+CH-20260518-014,mit + Dat. verbunden sein,được kết nối với...,formula,Technologie,B1,SRC-001,2026-05-18,2026-05-18,1,"Zustandspassiv của 'verbinden'; phân biệt với 'verbunden werden' (Vorgangspassiv)"
+CH-20260518-015,jdm. Chancen/Möglichkeiten eröffnen,mở ra cơ hội/khả năng cho ai,collocation,Arbeit,B1,SRC-001,2026-05-18,2026-05-18,1,"Dat. người + Akk. cơ hội"
+CH-20260518-016,"Es ist + Adj + , dass + Nebensatz","Điều ... là rằng ...",formula,general,B1,SRC-001,2026-05-18,2026-05-18,1,"Adj thường gặp: wichtig, entscheidend, klar, möglich, schwierig"
+CH-20260518-017,Wissen/Fähigkeiten vermitteln,truyền đạt kiến thức/kỹ năng,collocation,Bildung,B1,SRC-001,2026-05-18,2026-05-18,1,Collocation học thuật B1
+CH-20260518-018,"um ... zu + Infinitiv",để...,formula,general,B1,SRC-001,2026-05-18,2026-05-18,1,"Finalsatz; subject 2 vế phải trùng; nếu khác → dùng 'damit + Nebensatz'"
+CH-20260518-019,auf + Akk. verzichten,"từ bỏ/kiêng/không dùng...",phrasal,Ernährung,B1,SRC-002,2026-05-18,2026-05-18,1,"Akk. cố định sau 'auf'; vd: auf tierische Produkte/Zucker/Alkohol verzichten"
+CH-20260518-020,untrennbar (miteinander) verbunden sein,gắn bó không tách rời,collocation,general,B1,SRC-002,2026-05-18,2026-05-18,1,"Zustandspassiv; 'miteinander' optional khi context rõ"
+CH-20260518-021,mehr Schaden als Nutzen bringen,gây hại nhiều hơn lợi,collocation,Gesundheit,B1,SRC-002,2026-05-18,2026-05-18,1,Cấu trúc so sánh 'mehr X als Y' B1
+CH-20260518-022,Bewusstsein für + Akk. schaffen,tạo nhận thức về...,collocation,Gesellschaft,B1,SRC-002,2026-05-18,2026-05-18,1,"Variant: 'Bewusstsein wecken/schärfen für + Akk.'"
+CH-20260518-023,"jdm. helfen, ... zu + Infinitiv","giúp ai đó làm gì",formula,general,B1,SRC-002,2026-05-18,2026-05-18,1,"helfen + Dat. + Infinitivsatz; 'dabei' optional để nhấn mạnh"
+CH-20260518-024,Zugang zu + Dat. haben,có sự tiếp cận đến...,collocation,Gesundheit,B1,SRC-003,2026-05-18,2026-05-18,1,Cấu trúc B1 phổ biến; vd: Zugang zur Versorgung/zum Internet/zum Job
+CH-20260518-025,Bedeutung von + Dat. betonen,nhấn mạnh tầm quan trọng của...,collocation,general,B1,SRC-003,2026-05-18,2026-05-18,1,Synonym: die Wichtigkeit hervorheben
+CH-20260518-026,ein grundlegendes Recht (auf + Akk.) sein,là một quyền cơ bản (về...),formula,Gesellschaft,B1,SRC-003,2026-05-18,2026-05-18,1,DTZ topic — Sozialstaat/Behörde context
+CH-20260518-027,Verantwortung für + Akk. übernehmen,đảm nhận trách nhiệm về...,collocation,Arbeit,B1,SRC-003,2026-05-18,2026-05-18,1,Variant: Verantwortung tragen/haben
+CH-20260518-028,auf + Akk. abgestimmt sein,được điều chỉnh phù hợp với...,formula,general,B1,SRC-003,2026-05-18,2026-05-18,1,Zustandspassiv của 'abstimmen'
+CH-20260518-029,"keine Zeit haben, um + zu + Infinitiv",không có thời gian để làm gì,formula,general,B1,SRC-003,2026-05-18,2026-05-18,1,Negation của Finalsatz; B1 phổ biến
+CH-20260518-030,über + Akk. informieren / aufklären,thông tin / giải thích về...,collocation,general,B1,SRC-003,2026-05-18,2026-05-18,1,2 verb gần nghĩa: informieren (neutral) / aufklären (đào sâu giải thích)
+CH-20260518-031,Energie sparen,tiết kiệm năng lượng,collocation,Umwelt,B1,SRC-003,2026-05-18,2026-05-18,1,Variant: Strom/Wasser/Ressourcen sparen
+CH-20260518-032,jdn. zu + Inf. ermutigen,khích lệ ai làm gì,phrasal,general,B1,SRC-003,2026-05-18,2026-05-18,1,Akk. + zu-Infinitiv
+CH-20260518-033,Stress abbauen,giải toả căng thẳng,collocation,Gesundheit,B1,SRC-003,2026-05-18,2026-05-18,1,gegenteil: Stress aufbauen/verursachen
+CH-20260518-034,Verständnis für + Akk. fördern,thúc đẩy sự hiểu biết về...,collocation,Bildung,B1,SRC-003,2026-05-18,2026-05-18,1,Variant: Verständnis wecken/zeigen für
+CH-20260518-035,verkaufsoffener Sonntag,ngày chủ nhật cửa hàng được phép mở (luật Đức),collocation,Einkauf,B1,SRC-003,2026-05-18,2026-05-18,1,Pl: verkaufsoffene Sonntage; thường vài lần/năm theo Land
+CH-20260522-001,auf dem Land,ở nông thôn,redemittel,Wohnen,1,B1-DTZ-H-4.1,2026-05-22,,1,Gegensatz zu 'in der Stadt'
+CH-20260522-002,in ländlicher Umgebung,ở vùng nông thôn,collocation,Wohnen,1,B1-DTZ-H-4.1,2026-05-22,,1,
+CH-20260522-003,im Mittelpunkt stehen,là trọng tâm,formula,Allgemein,1,B1-DTZ-H-4.1,2026-05-22,,1,Beschreibung von Themen
+CH-20260522-004,etwas als störend empfinden,cảm thấy ... gây phiền,collocation,Allgemein,1,B1-DTZ-H-4.1,2026-05-22,,1,empfinden + Akk + ALS + Adj
+CH-20260522-005,im Vergleich zu,so với,redemittel,Allgemein,1,B1-DTZ-H-4.1,2026-05-22,,1,Vergleich ausdrücken
+CH-20260522-006,in der Nähe liegen,nằm gần,collocation,Wohnen,1,B1-DTZ-H-4.1,2026-05-22,,1,
+CH-20260522-007,schnell erreichbar sein,dễ tới nhanh,collocation,Allgemein,1,B1-DTZ-H-4.1,2026-05-22,,1,
+CH-20260522-008,praktische Vorteile bieten,mang lại lợi ích thực tế,collocation,Allgemein,1,B1-DTZ-H-4.1,2026-05-22,,1,
+CH-20260522-009,im Vordergrund stehen,là điểm chính,formula,Allgemein,1,B1-DTZ-H-4.1,2026-05-22,,1,Synonym mit 'im Mittelpunkt stehen'
+CH-20260522-010,etwas spontan erledigen,làm việc gì đó tự phát,collocation,Alltag,1,B1-DTZ-H-4.1,2026-05-22,,1,

@@ -1,0 +1,170 @@
+{
+  "3.6": {
+    "vocab": [
+      {"wort": "Vortrag", "wortart": "Substantiv", "formen": "der Vortrag, -träge", "bedeutung": "bài thuyết trình, bài diễn thuyết", "beispiel": "vielen Dank für die Einladung zu Ihrem Vortrag über das deutsche Steuersystem.", "uebersetzung": "cảm ơn ngài đã mời tôi đến buổi thuyết trình về hệ thống thuế Đức.", "thema": "Bildung", "notes": "Plural mit Umlaut"},
+      {"wort": "Einladung", "wortart": "Substantiv", "formen": "die Einladung, -en", "bedeutung": "lời mời", "beispiel": "vielen Dank für die Einladung zu Ihrem Vortrag", "uebersetzung": "cảm ơn ngài về lời mời đến buổi thuyết trình", "thema": "Allgemein", "notes": ""},
+      {"wort": "Steuersystem", "wortart": "Substantiv", "formen": "das Steuersystem, -e", "bedeutung": "hệ thống thuế", "beispiel": "Ihrem Vortrag über das deutsche Steuersystem", "uebersetzung": "buổi thuyết trình về hệ thống thuế Đức", "thema": "Behörde", "notes": ""},
+      {"wort": "Dienstreise", "wortart": "Substantiv", "formen": "die Dienstreise, -n", "bedeutung": "chuyến công tác", "beispiel": "Leider bin ich jedoch vom 20.4. bis 25.4. auf einer Dienstreise in Spanien", "uebersetzung": "Tiếc là từ 20.4 đến 25.4 tôi đang đi công tác ở Tây Ban Nha", "thema": "Arbeit", "notes": ""},
+      {"wort": "verschieben", "wortart": "Verb", "formen": "verschob - hat verschoben", "bedeutung": "dời lại, hoãn", "beispiel": "eine Dienstreise in Spanien, die nicht verschoben werden kann.", "uebersetzung": "một chuyến công tác ở Tây Ban Nha không thể dời lại được.", "thema": "Arbeit", "notes": "Passiv: verschoben werden"},
+      {"wort": "Teilnahme", "wortart": "Substantiv", "formen": "die Teilnahme (kein Pl.)", "bedeutung": "sự tham dự", "beispiel": "Deshalb ist meine Teilnahme diesmal leider nicht möglich.", "uebersetzung": "Vì vậy lần này tôi không thể tham dự được.", "thema": "Allgemein", "notes": ""},
+      {"wort": "informativ", "wortart": "Adjektiv", "formen": "informativ", "bedeutung": "có nhiều thông tin, bổ ích", "beispiel": "Ihre letzten beiden Vorträge fand ich äußerst informativ", "uebersetzung": "Hai bài thuyết trình gần đây của ngài tôi thấy rất bổ ích", "thema": "Allgemein", "notes": ""},
+      {"wort": "Veranstaltung", "wortart": "Substantiv", "formen": "die Veranstaltung, -en", "bedeutung": "sự kiện, buổi tổ chức", "beispiel": "Ich wünsche Ihnen eine erfolgreiche Veranstaltung!", "uebersetzung": "Tôi chúc ngài có một buổi tổ chức thành công!", "thema": "Allgemein", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "vielen Dank für die Einladung zu + Dat", "chunk_vn": "cảm ơn nhiều vì lời mời đến", "type": "Redemittel", "topic": "Behörde", "note": "câu mở đầu email formal"},
+      {"chunk_de": "Ich hätte Ihnen gern zugehört", "chunk_vn": "Tôi rất muốn được lắng nghe ngài", "type": "Redemittel", "topic": "Behörde", "note": "Konjunktiv II lịch sự"},
+      {"chunk_de": "auf einer Dienstreise sein", "chunk_vn": "đang đi công tác", "type": "Kollokation", "topic": "Arbeit", "note": ""},
+      {"chunk_de": "Ich wünsche Ihnen eine erfolgreiche Veranstaltung", "chunk_vn": "Tôi chúc ngài một sự kiện thành công", "type": "Redemittel", "topic": "Behörde", "note": "lời chúc formal"}
+    ]
+  },
+  "3.7": {
+    "vocab": [
+      {"wort": "Stadtverwaltung", "wortart": "Substantiv", "formen": "die Stadtverwaltung, -en", "bedeutung": "chính quyền thành phố", "beispiel": "Information der Stadtverwaltung – Mehr Betreuungsplätze in Sicht", "uebersetzung": "Thông tin từ chính quyền thành phố – Sắp có thêm chỗ trông trẻ", "thema": "Behörde", "notes": ""},
+      {"wort": "Betreuungsplatz", "wortart": "Substantiv", "formen": "der Betreuungsplatz, -plätze", "bedeutung": "suất/chỗ trông trẻ", "beispiel": "Mehr Betreuungsplätze in Sicht", "uebersetzung": "Sắp có thêm chỗ trông trẻ", "thema": "Familie", "notes": "Plural mit Umlaut"},
+      {"wort": "bereitstellen", "wortart": "Verb", "formen": "stellte bereit - hat bereitgestellt", "bedeutung": "cung cấp, cấp phát", "beispiel": "mehr finanzielle Mittel für die frühkindliche Betreuung bereitzustellen.", "uebersetzung": "cung cấp thêm ngân sách cho việc chăm sóc trẻ nhỏ.", "thema": "Behörde", "notes": "trennbar"},
+      {"wort": "frühkindlich", "wortart": "Adjektiv", "formen": "frühkindlich", "bedeutung": "thuộc giai đoạn trẻ nhỏ", "beispiel": "mehr finanzielle Mittel für die frühkindliche Betreuung", "uebersetzung": "thêm ngân sách cho việc chăm sóc trẻ nhỏ", "thema": "Familie", "notes": ""},
+      {"wort": "Vormerkliste", "wortart": "Substantiv", "formen": "die Vormerkliste, -n", "bedeutung": "danh sách đăng ký trước, danh sách chờ", "beispiel": "Eltern, die einen Platz benötigen, können sich in eine Vormerkliste der Stadt eintragen lassen.", "uebersetzung": "Phụ huynh cần chỗ có thể đăng ký vào danh sách chờ của thành phố.", "thema": "Behörde", "notes": ""},
+      {"wort": "frühzeitig", "wortart": "Adjektiv", "formen": "frühzeitig", "bedeutung": "sớm, kịp thời", "beispiel": "Melden Sie Ihr Kind möglichst frühzeitig an", "uebersetzung": "Hãy đăng ký cho con quý vị càng sớm càng tốt", "thema": "Allgemein", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "in Sicht sein", "chunk_vn": "sắp có, đang trong tầm nhìn", "type": "Wendung", "topic": "Allgemein", "note": ""},
+      {"chunk_de": "finanzielle Mittel bereitstellen", "chunk_vn": "cung cấp nguồn tài chính", "type": "Kollokation", "topic": "Behörde", "note": ""},
+      {"chunk_de": "sich in eine Liste eintragen lassen", "chunk_vn": "đăng ký vào danh sách", "type": "Kollokation", "topic": "Behörde", "note": "lassen + Infinitiv"},
+      {"chunk_de": "möglichst frühzeitig anmelden", "chunk_vn": "đăng ký càng sớm càng tốt", "type": "Kollokation", "topic": "Behörde", "note": ""}
+    ]
+  },
+  "3.8": {
+    "vocab": [
+      {"wort": "Frühlingsbasar", "wortart": "Substantiv", "formen": "der Frühlingsbasar, -e", "bedeutung": "hội chợ mùa xuân", "beispiel": "am Samstag, den 6. April, findet an unserer Schule der jährliche Frühlingsbasar statt.", "uebersetzung": "vào thứ bảy ngày 6.4, trường chúng ta sẽ tổ chức hội chợ mùa xuân thường niên.", "thema": "Bildung", "notes": ""},
+      {"wort": "jährlich", "wortart": "Adjektiv", "formen": "jährlich", "bedeutung": "hàng năm", "beispiel": "der jährliche Frühlingsbasar", "uebersetzung": "hội chợ mùa xuân hàng năm", "thema": "Allgemein", "notes": ""},
+      {"wort": "stattfinden", "wortart": "Verb", "formen": "fand statt - hat stattgefunden", "bedeutung": "diễn ra, được tổ chức", "beispiel": "findet an unserer Schule der jährliche Frühlingsbasar statt.", "uebersetzung": "hội chợ mùa xuân thường niên sẽ diễn ra tại trường chúng ta.", "thema": "Allgemein", "notes": "trennbar"},
+      {"wort": "Flohmarkt", "wortart": "Substantiv", "formen": "der Flohmarkt, -märkte", "bedeutung": "chợ đồ cũ", "beispiel": "Es erwarten Sie ein bunter Flohmarkt, ein Kuchenbuffet sowie musikalische Beiträge", "uebersetzung": "Quý vị sẽ được đón chào với chợ đồ cũ sặc sỡ, quầy bánh ngọt cùng các tiết mục âm nhạc", "thema": "Freizeit", "notes": "Plural mit Umlaut"},
+      {"wort": "Einnahme", "wortart": "Substantiv", "formen": "die Einnahme, -n", "bedeutung": "khoản thu, tiền thu được", "beispiel": "Die Einnahmen aus dem Basar sollen verschiedenen Schulprojekten zugutekommen", "uebersetzung": "Số tiền thu được từ hội chợ sẽ phục vụ cho nhiều dự án của trường", "thema": "Arbeit", "notes": "thường dùng Plural"},
+      {"wort": "zugutekommen", "wortart": "Verb", "formen": "kam zugute - ist zugutegekommen", "bedeutung": "có lợi cho, dùng để phục vụ", "beispiel": "Die Einnahmen sollen verschiedenen Schulprojekten zugutekommen", "uebersetzung": "Số tiền thu được sẽ phục vụ cho nhiều dự án của trường", "thema": "Allgemein", "notes": "+ Dat"},
+      {"wort": "Neugestaltung", "wortart": "Substantiv", "formen": "die Neugestaltung, -en", "bedeutung": "việc thiết kế/làm mới", "beispiel": "insbesondere der Neugestaltung des Pausenhofs", "uebersetzung": "đặc biệt cho việc thiết kế lại sân chơi giờ ra chơi", "thema": "Bildung", "notes": ""},
+      {"wort": "Unterstützung", "wortart": "Substantiv", "formen": "die Unterstützung (kein Pl.)", "bedeutung": "sự ủng hộ, hỗ trợ", "beispiel": "Vielen Dank für Ihre Unterstützung!", "uebersetzung": "Cảm ơn vì sự ủng hộ của quý vị!", "thema": "Allgemein", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "Es findet etwas statt", "chunk_vn": "Sự kiện diễn ra", "type": "Kollokation", "topic": "Allgemein", "note": "trennbares Verb"},
+      {"chunk_de": "Wir laden Sie ganz herzlich ein", "chunk_vn": "Chúng tôi trân trọng kính mời quý vị", "type": "Redemittel", "topic": "Behörde", "note": "lời mời formal"},
+      {"chunk_de": "den Tag gemeinsam verbringen", "chunk_vn": "cùng nhau trải qua một ngày", "type": "Kollokation", "topic": "Freizeit", "note": ""}
+    ]
+  },
+  "3.9": {
+    "vocab": [
+      {"wort": "Wartung", "wortart": "Substantiv", "formen": "die Wartung, -en", "bedeutung": "việc bảo trì, bảo dưỡng", "beispiel": "Wartung der Wasserleitungen – Mitteilung der Hausverwaltung", "uebersetzung": "Bảo trì đường ống nước – Thông báo từ ban quản lý nhà", "thema": "Wohnen", "notes": ""},
+      {"wort": "Wasserleitung", "wortart": "Substantiv", "formen": "die Wasserleitung, -en", "bedeutung": "đường ống nước", "beispiel": "wichtige Wartungsarbeiten an den Wasserleitungen durch.", "uebersetzung": "thực hiện các công việc bảo trì quan trọng đối với đường ống nước.", "thema": "Wohnen", "notes": ""},
+      {"wort": "Hausverwaltung", "wortart": "Substantiv", "formen": "die Hausverwaltung, -en", "bedeutung": "ban quản lý nhà", "beispiel": "Mitteilung der Hausverwaltung", "uebersetzung": "Thông báo của ban quản lý nhà", "thema": "Wohnen", "notes": ""},
+      {"wort": "durchführen", "wortart": "Verb", "formen": "führte durch - hat durchgeführt", "bedeutung": "thực hiện, tiến hành", "beispiel": "führen wir wichtige Wartungsarbeiten durch.", "uebersetzung": "chúng tôi tiến hành các công việc bảo trì quan trọng.", "thema": "Arbeit", "notes": "trennbar"},
+      {"wort": "sämtlich", "wortart": "Adjektiv", "formen": "sämtlich", "bedeutung": "tất cả, toàn bộ", "beispiel": "bitten wir Sie, sämtliche Wasserhähne geschlossen zu halten", "uebersetzung": "chúng tôi đề nghị quý vị giữ tất cả vòi nước đóng lại", "thema": "Allgemein", "notes": "formal hơn alle"},
+      {"wort": "Bescheid geben", "wortart": "Verb", "formen": "gab Bescheid - hat Bescheid gegeben", "bedeutung": "báo lại, thông báo", "beispiel": "Sobald die Arbeiten abgeschlossen sind, geben unsere Techniker Bescheid", "uebersetzung": "Ngay khi công việc hoàn thành, kỹ thuật viên của chúng tôi sẽ thông báo", "thema": "Arbeit", "notes": "Wendung formal"},
+      {"wort": "hinterlegen", "wortart": "Verb", "formen": "hinterlegte - hat hinterlegt", "bedeutung": "gửi lại, ký gửi", "beispiel": "bitten wir Sie, den Wohnungsschlüssel vorher bei einer Nachbarin oder einem Nachbarn zu hinterlegen.", "uebersetzung": "chúng tôi đề nghị quý vị gửi chìa khóa căn hộ trước cho hàng xóm.", "thema": "Wohnen", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "Wartungsarbeiten durchführen", "chunk_vn": "thực hiện công việc bảo trì", "type": "Kollokation", "topic": "Wohnen", "note": ""},
+      {"chunk_de": "wir bitten Sie, ... zu + Infinitiv", "chunk_vn": "chúng tôi đề nghị quý vị ...", "type": "Redemittel", "topic": "Behörde", "note": "câu yêu cầu formal"},
+      {"chunk_de": "Zugang zu + Dativ benötigen", "chunk_vn": "cần lối vào, cần tiếp cận", "type": "Kollokation", "topic": "Wohnen", "note": ""}
+    ]
+  },
+  "3.10": {
+    "vocab": [
+      {"wort": "Entsorgungskalender", "wortart": "Substantiv", "formen": "der Entsorgungskalender, -", "bedeutung": "lịch đổ rác, lịch thu gom rác", "beispiel": "Neuer Entsorgungskalender – Abfallwirtschaft der Stadt Nordfurt", "uebersetzung": "Lịch thu gom rác mới – Cơ quan xử lý rác thành phố Nordfurt", "thema": "Wohnen", "notes": ""},
+      {"wort": "Abfallwirtschaft", "wortart": "Substantiv", "formen": "die Abfallwirtschaft (kein Pl.)", "bedeutung": "ngành quản lý rác thải", "beispiel": "Abfallwirtschaft der Stadt Nordfurt", "uebersetzung": "Cơ quan quản lý rác thải của thành phố Nordfurt", "thema": "Behörde", "notes": ""},
+      {"wort": "beifügen", "wortart": "Verb", "formen": "fügte bei - hat beigefügt", "bedeutung": "đính kèm, gửi kèm", "beispiel": "beigefügt finden Sie den Abfallkalender 2025", "uebersetzung": "đính kèm theo đây quý vị sẽ thấy lịch đổ rác năm 2025", "thema": "Behörde", "notes": "trennbar, formal"},
+      {"wort": "Biotonne", "wortart": "Substantiv", "formen": "die Biotonne, -n", "bedeutung": "thùng rác hữu cơ", "beispiel": "Biotonnen werden im Januar – März an jedem zweiten Freitag geleert", "uebersetzung": "Thùng rác hữu cơ được đổ vào thứ sáu cách tuần trong tháng 1-3", "thema": "Wohnen", "notes": ""},
+      {"wort": "leeren", "wortart": "Verb", "formen": "leerte - hat geleert", "bedeutung": "đổ, làm rỗng", "beispiel": "Biotonnen werden ... an jedem zweiten Freitag geleert", "uebersetzung": "Thùng rác hữu cơ được đổ vào thứ sáu cách tuần", "thema": "Wohnen", "notes": "Passiv: geleert werden"},
+      {"wort": "Sperrgut", "wortart": "Substantiv", "formen": "das Sperrgut (kein Pl.)", "bedeutung": "rác cồng kềnh", "beispiel": "Für die Abholung von Sperrgut und Elektroschrott", "uebersetzung": "Để thu gom rác cồng kềnh và rác điện tử", "thema": "Wohnen", "notes": ""},
+      {"wort": "Elektroschrott", "wortart": "Substantiv", "formen": "der Elektroschrott (kein Pl.)", "bedeutung": "rác điện tử", "beispiel": "Für die Abholung von Sperrgut und Elektroschrott", "uebersetzung": "Để thu gom rác cồng kềnh và rác điện tử", "thema": "Wohnen", "notes": ""},
+      {"wort": "Wertstoffhof", "wortart": "Substantiv", "formen": "der Wertstoffhof, -höfe", "bedeutung": "trạm thu gom vật liệu tái chế", "beispiel": "Kleinmengen Bauabfall müssen Sie selbst zu den Wertstoffhöfen bringen.", "uebersetzung": "Lượng nhỏ rác xây dựng quý vị phải tự mang đến trạm tái chế.", "thema": "Wohnen", "notes": "Plural mit Umlaut"}
+    ],
+    "chunks": [
+      {"chunk_de": "beigefügt finden Sie + Akk", "chunk_vn": "đính kèm theo đây quý vị tìm thấy", "type": "Redemittel", "topic": "Behörde", "note": "câu mở thư formal có file đính kèm"},
+      {"chunk_de": "zur Verfügung stehen", "chunk_vn": "sẵn sàng phục vụ, có thể sử dụng", "type": "Wendung", "topic": "Behörde", "note": "+ Dat"},
+      {"chunk_de": "Vielen Dank für Ihre Mithilfe", "chunk_vn": "Cảm ơn vì sự hợp tác của quý vị", "type": "Redemittel", "topic": "Behörde", "note": "câu kết formal"}
+    ]
+  },
+  "3.11": {
+    "vocab": [
+      {"wort": "gebührenfrei", "wortart": "Adjektiv", "formen": "gebührenfrei", "bedeutung": "miễn phí (không thu phí)", "beispiel": "wir präsentieren euch heute unser gebührenfreies Girokonto", "uebersetzung": "hôm nay chúng tôi giới thiệu tài khoản thanh toán miễn phí", "thema": "Konsum", "notes": ""},
+      {"wort": "Girokonto", "wortart": "Substantiv", "formen": "das Girokonto, -konten", "bedeutung": "tài khoản thanh toán", "beispiel": "unser gebührenfreies Girokonto", "uebersetzung": "tài khoản thanh toán miễn phí của chúng tôi", "thema": "Konsum", "notes": ""},
+      {"wort": "Sparkonto", "wortart": "Substantiv", "formen": "das Sparkonto, -konten", "bedeutung": "tài khoản tiết kiệm", "beispiel": "Zinsen wie auf einem Sparkonto.", "uebersetzung": "Lãi suất như trên tài khoản tiết kiệm.", "thema": "Konsum", "notes": ""},
+      {"wort": "Kontoauszug", "wortart": "Substantiv", "formen": "der Kontoauszug, -züge", "bedeutung": "sao kê tài khoản", "beispiel": "mit der ihr Kontoauszüge drucken und an allen Geldautomaten Bargeld abheben könnt.", "uebersetzung": "các em có thể in sao kê tài khoản và rút tiền mặt tại cây ATM.", "thema": "Konsum", "notes": "Plural mit Umlaut"},
+      {"wort": "abheben", "wortart": "Verb", "formen": "hob ab - hat abgehoben", "bedeutung": "rút tiền mặt", "beispiel": "an allen Geldautomaten Bargeld abheben", "uebersetzung": "rút tiền mặt tại tất cả cây ATM", "thema": "Konsum", "notes": "trennbar; Bargeld abheben"},
+      {"wort": "überweisen", "wortart": "Verb", "formen": "überwies - hat überwiesen", "bedeutung": "chuyển khoản", "beispiel": "Taschengeld von den Eltern oder das erste Gehalt überweisen lassen", "uebersetzung": "nhận tiền tiêu vặt từ bố mẹ hoặc tháng lương đầu tiên chuyển vào", "thema": "Konsum", "notes": "untrennbar"},
+      {"wort": "abbuchen", "wortart": "Verb", "formen": "buchte ab - hat abgebucht", "bedeutung": "trừ tiền tự động (ghi nợ)", "beispiel": "Handyverträge bequem abbuchen.", "uebersetzung": "trừ tiền hợp đồng điện thoại di động một cách tiện lợi.", "thema": "Konsum", "notes": "trennbar"},
+      {"wort": "Gehalt", "wortart": "Substantiv", "formen": "das Gehalt, -hälter", "bedeutung": "tiền lương", "beispiel": "Taschengeld von den Eltern oder das erste Gehalt überweisen lassen", "uebersetzung": "tiền tiêu vặt từ bố mẹ hoặc tháng lương đầu tiên chuyển vào", "thema": "Arbeit", "notes": "Plural mit Umlaut"}
+    ],
+    "chunks": [
+      {"chunk_de": "ein Konto eröffnen", "chunk_vn": "mở một tài khoản", "type": "Kollokation", "topic": "Einkauf", "note": ""},
+      {"chunk_de": "Bargeld am Geldautomaten abheben", "chunk_vn": "rút tiền mặt tại cây ATM", "type": "Kollokation", "topic": "Einkauf", "note": ""},
+      {"chunk_de": "Rechnungen selbst bezahlen", "chunk_vn": "tự thanh toán hóa đơn", "type": "Kollokation", "topic": "Einkauf", "note": ""}
+    ]
+  },
+  "3.12": {
+    "vocab": [
+      {"wort": "Konzept", "wortart": "Substantiv", "formen": "das Konzept, -e", "bedeutung": "quy định, khái niệm, kế hoạch", "beispiel": "ab Montag, 4. März gilt an unserer Schule ein neues Konzept für die Nutzung von Mobiltelefonen", "uebersetzung": "từ thứ hai ngày 4.3 tại trường ta áp dụng một quy định mới về việc sử dụng điện thoại di động", "thema": "Bildung", "notes": ""},
+      {"wort": "gelten", "wortart": "Verb", "formen": "galt - hat gegolten", "bedeutung": "có hiệu lực, áp dụng", "beispiel": "ab Montag gilt an unserer Schule ein neues Konzept", "uebersetzung": "từ thứ hai quy định mới có hiệu lực tại trường ta", "thema": "Behörde", "notes": "unregelmäßig"},
+      {"wort": "ausschalten", "wortart": "Verb", "formen": "schaltete aus - hat ausgeschaltet", "bedeutung": "tắt (thiết bị)", "beispiel": "Während des Unterrichts müssen alle Handys komplett ausgeschaltet sein.", "uebersetzung": "Trong giờ học tất cả điện thoại phải được tắt hoàn toàn.", "thema": "Bildung", "notes": "trennbar"},
+      {"wort": "ausschließlich", "wortart": "Adverb", "formen": "ausschließlich", "bedeutung": "duy nhất, chỉ", "beispiel": "In der großen Mittagspause dürfen die Geräte ausschließlich in der Mediathek genutzt werden.", "uebersetzung": "Trong giờ giải lao trưa, các thiết bị chỉ được dùng trong thư viện đa phương tiện.", "thema": "Allgemein", "notes": "formal"},
+      {"wort": "verstoßen", "wortart": "Verb", "formen": "verstieß - hat verstoßen", "bedeutung": "vi phạm", "beispiel": "Wer gegen diese Regeln verstößt, muss sein Handy im Sekretariat abgeben", "uebersetzung": "Ai vi phạm các quy định này phải nộp điện thoại tại văn phòng", "thema": "Behörde", "notes": "verstoßen gegen + Akk"},
+      {"wort": "Sekretariat", "wortart": "Substantiv", "formen": "das Sekretariat, -e", "bedeutung": "văn phòng (nhà trường)", "beispiel": "muss sein Handy im Sekretariat abgeben", "uebersetzung": "phải nộp điện thoại của mình tại văn phòng", "thema": "Bildung", "notes": ""},
+      {"wort": "Geldstrafe", "wortart": "Substantiv", "formen": "die Geldstrafe, -n", "bedeutung": "tiền phạt", "beispiel": "Eine Geldstrafe wird erst ab dem zweiten Verstoß fällig.", "uebersetzung": "Tiền phạt chỉ được áp dụng từ lần vi phạm thứ hai.", "thema": "Behörde", "notes": ""},
+      {"wort": "fällig", "wortart": "Adjektiv", "formen": "fällig", "bedeutung": "đến hạn (phải trả)", "beispiel": "Eine Geldstrafe wird erst ab dem zweiten Verstoß fällig.", "uebersetzung": "Tiền phạt chỉ đến hạn từ lần vi phạm thứ hai.", "thema": "Behörde", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "ein neues Konzept gilt ab + Datum", "chunk_vn": "quy định mới có hiệu lực từ ngày...", "type": "Redemittel", "topic": "Behörde", "note": "câu thông báo formal"},
+      {"chunk_de": "gegen die Regeln verstoßen", "chunk_vn": "vi phạm quy định", "type": "Kollokation", "topic": "Behörde", "note": ""},
+      {"chunk_de": "eine Gebühr wird fällig", "chunk_vn": "phí đến hạn phải trả", "type": "Kollokation", "topic": "Behörde", "note": ""}
+    ]
+  },
+  "3.13": {
+    "vocab": [
+      {"wort": "Nachhaltigkeit", "wortart": "Substantiv", "formen": "die Nachhaltigkeit (kein Pl.)", "bedeutung": "sự bền vững", "beispiel": "die Stadtverwaltung lädt Sie herzlich zur Woche der Nachhaltigkeit ein.", "uebersetzung": "chính quyền thành phố trân trọng kính mời quý vị đến tuần lễ bền vững.", "thema": "Umwelt", "notes": ""},
+      {"wort": "Anwohner", "wortart": "Substantiv", "formen": "der Anwohner, -", "bedeutung": "cư dân sống xung quanh", "beispiel": "Liebe Anwohnerinnen und Anwohner", "uebersetzung": "Kính gửi các cư dân quanh khu vực", "thema": "Wohnen", "notes": ""},
+      {"wort": "umweltfreundlich", "wortart": "Adjektiv", "formen": "umweltfreundlich", "bedeutung": "thân thiện với môi trường", "beispiel": "viele Aktionen rund um umweltfreundliches Leben", "uebersetzung": "nhiều hoạt động xoay quanh việc sống thân thiện với môi trường", "thema": "Umwelt", "notes": ""},
+      {"wort": "sparsam", "wortart": "Adjektiv", "formen": "sparsam", "bedeutung": "tiết kiệm", "beispiel": "sparsamen Umgang mit Ressourcen", "uebersetzung": "việc sử dụng tài nguyên một cách tiết kiệm", "thema": "Umwelt", "notes": ""},
+      {"wort": "Umgang", "wortart": "Substantiv", "formen": "der Umgang (kein Pl.)", "bedeutung": "cách sử dụng/đối xử", "beispiel": "sparsamen Umgang mit Ressourcen", "uebersetzung": "cách sử dụng tài nguyên tiết kiệm", "thema": "Allgemein", "notes": "Umgang mit + Dat"},
+      {"wort": "Ressource", "wortart": "Substantiv", "formen": "die Ressource, -n", "bedeutung": "tài nguyên", "beispiel": "sparsamen Umgang mit Ressourcen", "uebersetzung": "sử dụng tài nguyên tiết kiệm", "thema": "Umwelt", "notes": ""},
+      {"wort": "Gewinnspiel", "wortart": "Substantiv", "formen": "das Gewinnspiel, -e", "bedeutung": "trò chơi trúng thưởng", "beispiel": "können alle Bürgerinnen und Bürger an einem Gewinnspiel teilnehmen", "uebersetzung": "tất cả công dân có thể tham gia một cuộc thi trúng thưởng", "thema": "Freizeit", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "die Stadtverwaltung lädt Sie herzlich ein", "chunk_vn": "chính quyền thành phố trân trọng kính mời quý vị", "type": "Redemittel", "topic": "Behörde", "note": "câu mời formal"},
+      {"chunk_de": "sparsamer Umgang mit Ressourcen", "chunk_vn": "sử dụng tài nguyên tiết kiệm", "type": "Kollokation", "topic": "general", "note": ""},
+      {"chunk_de": "Wir freuen uns auf Ihre Teilnahme", "chunk_vn": "Chúng tôi rất mong sự tham gia của quý vị", "type": "Redemittel", "topic": "Behörde", "note": "câu kết formal"}
+    ]
+  },
+  "3.14": {
+    "vocab": [
+      {"wort": "Fahranfänger", "wortart": "Substantiv", "formen": "der Fahranfänger, -", "bedeutung": "người mới lái xe", "beispiel": "Informationen für Fahranfänger", "uebersetzung": "Thông tin dành cho người mới lái xe", "thema": "Verkehr", "notes": ""},
+      {"wort": "Bundesland", "wortart": "Substantiv", "formen": "das Bundesland, -länder", "bedeutung": "tiểu bang", "beispiel": "ist das begleitete Fahren mit 17 Jahren in mehreren Bundesländern erlaubt.", "uebersetzung": "việc lái xe có người kèm khi 17 tuổi được cho phép ở nhiều tiểu bang.", "thema": "Behörde", "notes": "Plural mit Umlaut"},
+      {"wort": "Fahrschule", "wortart": "Substantiv", "formen": "die Fahrschule, -n", "bedeutung": "trường dạy lái xe", "beispiel": "dürfen sich bei einer Fahrschule anmelden", "uebersetzung": "được phép đăng ký tại một trường dạy lái xe", "thema": "Verkehr", "notes": ""},
+      {"wort": "Fahrausbildung", "wortart": "Substantiv", "formen": "die Fahrausbildung, -en", "bedeutung": "khóa đào tạo lái xe", "beispiel": "eine reguläre Fahrausbildung beginnen", "uebersetzung": "bắt đầu khóa đào tạo lái xe thông thường", "thema": "Verkehr", "notes": ""},
+      {"wort": "vorläufig", "wortart": "Adjektiv", "formen": "vorläufig", "bedeutung": "tạm thời", "beispiel": "eine vorläufige Fahrberechtigung", "uebersetzung": "giấy phép lái xe tạm thời", "thema": "Behörde", "notes": ""},
+      {"wort": "Fahrberechtigung", "wortart": "Substantiv", "formen": "die Fahrberechtigung, -en", "bedeutung": "quyền/giấy phép lái xe", "beispiel": "erhalten sie eine vorläufige Fahrberechtigung.", "uebersetzung": "họ nhận được giấy phép lái xe tạm thời.", "thema": "Behörde", "notes": ""},
+      {"wort": "Begleitperson", "wortart": "Substantiv", "formen": "die Begleitperson, -en", "bedeutung": "người đi kèm", "beispiel": "Diese Begleitperson muss stets im Auto sitzen.", "uebersetzung": "Người đi kèm này luôn phải ngồi trong xe.", "thema": "Verkehr", "notes": ""},
+      {"wort": "verursachen", "wortart": "Verb", "formen": "verursachte - hat verursacht", "bedeutung": "gây ra", "beispiel": "Laut Studien verursachen Fahranfänger mit Begleitung deutlich weniger Unfälle.", "uebersetzung": "Theo các nghiên cứu, người mới lái có người kèm gây ra ít tai nạn hơn rõ rệt.", "thema": "Verkehr", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "sich bei einer Fahrschule anmelden", "chunk_vn": "đăng ký tại một trường dạy lái xe", "type": "Kollokation", "topic": "Verkehr", "note": ""},
+      {"chunk_de": "nach bestandener Prüfung", "chunk_vn": "sau khi đỗ kỳ thi", "type": "Wendung", "topic": "Bildung", "note": "Partizip II als Adj."},
+      {"chunk_de": "die Sicherheit im Straßenverkehr erhöhen", "chunk_vn": "tăng cường an toàn giao thông", "type": "Kollokation", "topic": "Verkehr", "note": ""}
+    ]
+  },
+  "3.15": {
+    "vocab": [
+      {"wort": "Sprachförderung", "wortart": "Substantiv", "formen": "die Sprachförderung, -en", "bedeutung": "việc thúc đẩy/hỗ trợ ngôn ngữ", "beispiel": "Sprachförderung mit Theater – Projekt an einer Realschule", "uebersetzung": "Hỗ trợ ngôn ngữ qua sân khấu kịch", "thema": "Bildung", "notes": ""},
+      {"wort": "Theaterensemble", "wortart": "Substantiv", "formen": "das Theaterensemble, -s", "bedeutung": "đoàn kịch", "beispiel": "Das englische Theaterensemble war letzte Woche zu Gast", "uebersetzung": "Đoàn kịch tiếng Anh tuần trước đã đến làm khách", "thema": "Freizeit", "notes": ""},
+      {"wort": "Jahrgang", "wortart": "Substantiv", "formen": "der Jahrgang, -gänge", "bedeutung": "khối lớp, niên khóa", "beispiel": "den Schülerinnen und Schülern der Jahrgänge 7 bis 9", "uebersetzung": "các học sinh khối 7 đến 9", "thema": "Bildung", "notes": "Plural mit Umlaut"},
+      {"wort": "spielerisch", "wortart": "Adjektiv", "formen": "spielerisch", "bedeutung": "một cách vui chơi, dễ dàng", "beispiel": "die englische Sprache spielerisch näherzubringen.", "uebersetzung": "giúp các em tiếp cận tiếng Anh một cách vui chơi.", "thema": "Bildung", "notes": ""},
+      {"wort": "näherbringen", "wortart": "Verb", "formen": "brachte näher - hat nähergebracht", "bedeutung": "giới thiệu, làm quen gần hơn", "beispiel": "die englische Sprache spielerisch näherzubringen.", "uebersetzung": "giúp các em tiếp cận tiếng Anh một cách vui chơi.", "thema": "Bildung", "notes": "trennbar"},
+      {"wort": "aufführen", "wortart": "Verb", "formen": "führte auf - hat aufgeführt", "bedeutung": "trình diễn, biểu diễn", "beispiel": "Am Vormittag wurden zwei verschiedene Theaterstücke aufgeführt", "uebersetzung": "Buổi sáng có hai vở kịch khác nhau được trình diễn", "thema": "Freizeit", "notes": "trennbar"},
+      {"wort": "Theaterstück", "wortart": "Substantiv", "formen": "das Theaterstück, -e", "bedeutung": "vở kịch", "beispiel": "Am Vormittag wurden zwei verschiedene Theaterstücke aufgeführt", "uebersetzung": "Buổi sáng có hai vở kịch khác nhau được trình diễn", "thema": "Freizeit", "notes": ""},
+      {"wort": "bevorzugen", "wortart": "Verb", "formen": "bevorzugte - hat bevorzugt", "bedeutung": "ưu tiên, ưa thích hơn", "beispiel": "dass diese Form des Englischlernens von vielen Schülern bevorzugt wird", "uebersetzung": "rằng hình thức học tiếng Anh này được nhiều học sinh ưa thích hơn", "thema": "Allgemein", "notes": "Passiv: bevorzugt werden"}
+    ],
+    "chunks": [
+      {"chunk_de": "zu Gast sein an + Dat", "chunk_vn": "làm khách tại", "type": "Wendung", "topic": "Behörde", "note": ""},
+      {"chunk_de": "jemandem etwas näherbringen", "chunk_vn": "giới thiệu/làm quen điều gì cho ai", "type": "Kollokation", "topic": "Bildung", "note": "+ Dat + Akk"},
+      {"chunk_de": "positive Rückmeldungen zeigen, dass ...", "chunk_vn": "những phản hồi tích cực cho thấy rằng ...", "type": "Redemittel", "topic": "Behörde", "note": "dass-Satz"}
+    ]
+  }
+}

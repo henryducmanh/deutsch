@@ -1,0 +1,105 @@
+{
+  "3.1": {
+    "vocab": [
+      {"wort": "Nahverkehr", "wortart": "Substantiv", "formen": "der Nahverkehr (kein Pl.)", "bedeutung": "giao thông công cộng nội đô", "beispiel": "Die BVG prüft aktuell verschiedene Möglichkeiten, den Nahverkehr der Zukunft sicher und zuverlässig zu gestalten.", "uebersetzung": "BVG hiện đang xem xét nhiều khả năng để thiết kế giao thông nội đô tương lai an toàn và đáng tin cậy.", "thema": "Verkehr", "notes": ""},
+      {"wort": "fahrerlos", "wortart": "Adjektiv", "formen": "fahrerlos, -e, -er, -es", "bedeutung": "không người lái", "beispiel": "In zwei Berliner Stadtteilen sind bereits fahrerlose Busse im Einsatz.", "uebersetzung": "Tại hai khu của Berlin đã có xe buýt không người lái được đưa vào sử dụng.", "thema": "Verkehr", "notes": ""},
+      {"wort": "Aufsichtspersonal", "wortart": "Substantiv", "formen": "das Aufsichtspersonal (kein Pl.)", "bedeutung": "nhân viên giám sát", "beispiel": "Fahrerlose Busse sind im Einsatz – zunächst mit Aufsichtspersonal an Bord.", "uebersetzung": "Xe buýt không người lái đang được sử dụng – ban đầu có nhân viên giám sát trên xe.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Gewerkschaft", "wortart": "Substantiv", "formen": "die Gewerkschaft, -en", "bedeutung": "công đoàn", "beispiel": "Die Gewerkschaft sieht die Entwicklung kritisch.", "uebersetzung": "Công đoàn nhìn nhận sự phát triển này một cách phê phán.", "thema": "Arbeit", "notes": ""},
+      {"wort": "befürchten", "wortart": "Verb", "formen": "befürchtete - hat befürchtet", "bedeutung": "lo ngại, e ngại", "beispiel": "Sie befürchtet den Verlust vieler Arbeitsplätze.", "uebersetzung": "Công đoàn lo ngại việc mất nhiều việc làm.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Ansprechpartner", "wortart": "Substantiv", "formen": "der Ansprechpartner, -", "bedeutung": "người liên hệ, đầu mối", "beispiel": "Fahrerinnen und Fahrer sind wichtige Ansprechpartner für Fahrgäste.", "uebersetzung": "Tài xế là đầu mối liên hệ quan trọng cho hành khách.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Streik", "wortart": "Substantiv", "formen": "der Streik, -s", "bedeutung": "cuộc đình công", "beispiel": "Streiks führen regelmäßig zu Ausfällen im Nahverkehr.", "uebersetzung": "Các cuộc đình công thường xuyên dẫn đến gián đoạn giao thông công cộng.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Ausfall", "wortart": "Substantiv", "formen": "der Ausfall, -fälle", "bedeutung": "sự gián đoạn, hủy chuyến", "beispiel": "Streiks führen regelmäßig zu Ausfällen im Nahverkehr.", "uebersetzung": "Các cuộc đình công thường xuyên dẫn đến gián đoạn giao thông công cộng.", "thema": "Verkehr", "notes": ""},
+      {"wort": "Befürworter", "wortart": "Substantiv", "formen": "der Befürworter, -", "bedeutung": "người ủng hộ", "beispiel": "Befürworter autonomer Systeme argumentieren, dass fahrerlose Busse eine verlässliche Lösung wären.", "uebersetzung": "Những người ủng hộ hệ thống tự lái lập luận rằng xe buýt không người lái sẽ là giải pháp đáng tin cậy.", "thema": "Verkehr", "notes": ""},
+      {"wort": "Infoveranstaltung", "wortart": "Substantiv", "formen": "die Infoveranstaltung, -en", "bedeutung": "buổi thông tin, sự kiện thông tin", "beispiel": "Die BVG wird eine Infoveranstaltung am 3. Juli um 18:00 Uhr im Bürgerhaus Mitte durchführen.", "uebersetzung": "BVG sẽ tổ chức một buổi thông tin vào ngày 3 tháng 7 lúc 18:00 tại Nhà cộng đồng Mitte.", "thema": "Behörde", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "Sehr geehrter Herr [Name]", "chunk_vn": "Kính gửi ông [tên]", "type": "Redemittel", "topic": "Behörde", "note": "mở đầu thư formal"},
+      {"chunk_de": "vielen Dank für Ihre Nachricht zu + Dat", "chunk_vn": "cảm ơn vì tin nhắn của bạn về...", "type": "Redemittel", "topic": "Behörde", "note": ""},
+      {"chunk_de": "Mit freundlichen Grüßen", "chunk_vn": "Trân trọng (kết thư formal)", "type": "Redemittel", "topic": "Behörde", "note": "kết thư chuẩn"},
+      {"chunk_de": "im Einsatz sein", "chunk_vn": "đang được sử dụng/triển khai", "type": "Wendung", "topic": "Verkehr", "note": ""},
+      {"chunk_de": "eine Infoveranstaltung durchführen", "chunk_vn": "tổ chức một buổi thông tin", "type": "Kollokation", "topic": "Behörde", "note": ""}
+    ]
+  },
+  "3.2": {
+    "vocab": [
+      {"wort": "Fahrplan", "wortart": "Substantiv", "formen": "der Fahrplan, -pläne", "bedeutung": "lịch trình chạy xe/tàu", "beispiel": "Zum 1. November ändern sich die Fahrpläne im städtischen Busnetz.", "uebersetzung": "Từ ngày 1 tháng 11, lịch trình trong mạng lưới xe buýt thành phố sẽ thay đổi.", "thema": "Verkehr", "notes": ""},
+      {"wort": "Busnetz", "wortart": "Substantiv", "formen": "das Busnetz, -e", "bedeutung": "mạng lưới xe buýt", "beispiel": "Die Fahrpläne im städtischen Busnetz ändern sich.", "uebersetzung": "Lịch trình trong mạng lưới xe buýt thành phố thay đổi.", "thema": "Verkehr", "notes": ""},
+      {"wort": "unverändert", "wortart": "Adjektiv", "formen": "unverändert", "bedeutung": "không thay đổi", "beispiel": "Die Verbindungen von U-Bahnen und Straßenbahnen bleiben jedoch unverändert.", "uebersetzung": "Tuy nhiên, các tuyến tàu điện ngầm và xe điện vẫn không thay đổi.", "thema": "Verkehr", "notes": ""},
+      {"wort": "Neuerung", "wortart": "Substantiv", "formen": "die Neuerung, -en", "bedeutung": "sự đổi mới, điểm mới", "beispiel": "Die wichtigsten Neuerungen betreffen die Linien 35 und 84.", "uebersetzung": "Những điểm mới quan trọng nhất liên quan đến các tuyến 35 và 84.", "thema": "Verkehr", "notes": ""},
+      {"wort": "betreffen", "wortart": "Verb", "formen": "betraf - hat betroffen", "bedeutung": "liên quan đến, ảnh hưởng đến", "beispiel": "Die wichtigsten Neuerungen betreffen die Linien 35 und 84.", "uebersetzung": "Những điểm mới quan trọng nhất liên quan đến tuyến 35 và 84.", "thema": "Behörde", "notes": ""},
+      {"wort": "Messegelände", "wortart": "Substantiv", "formen": "das Messegelände, -", "bedeutung": "khu hội chợ triển lãm", "beispiel": "Die Linie 35 fährt künftig nicht mehr bis zum Messegelände.", "uebersetzung": "Tuyến 35 từ nay không còn chạy đến khu hội chợ nữa.", "thema": "Verkehr", "notes": ""},
+      {"wort": "Taktung", "wortart": "Substantiv", "formen": "die Taktung, -en", "bedeutung": "tần suất chạy (xe/tàu)", "beispiel": "Gleichzeitig wird die Taktung erhöht – ab sofort fährt die Linie 35 viermal pro Stunde.", "uebersetzung": "Đồng thời tần suất được tăng lên – từ nay tuyến 35 chạy bốn lần mỗi giờ.", "thema": "Verkehr", "notes": ""},
+      {"wort": "Haltestelle", "wortart": "Substantiv", "formen": "die Haltestelle, -n", "bedeutung": "trạm dừng (xe buýt/tàu)", "beispiel": "Weitere Informationen finden Sie an allen Haltestellen sowie in unseren Servicezentren.", "uebersetzung": "Thông tin thêm bạn có thể tìm tại tất cả các trạm dừng cũng như tại các trung tâm dịch vụ.", "thema": "Verkehr", "notes": ""},
+      {"wort": "Verkehrsverwaltung", "wortart": "Substantiv", "formen": "die Verkehrsverwaltung, -en", "bedeutung": "cơ quan quản lý giao thông", "beispiel": "Ihre Verkehrsverwaltung Stuttgart", "uebersetzung": "Cơ quan quản lý giao thông Stuttgart của quý vị.", "thema": "Behörde", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "Sehr geehrte Fahrgäste", "chunk_vn": "Kính thưa quý hành khách", "type": "Redemittel", "topic": "Verkehr", "note": "thông báo công cộng"},
+      {"chunk_de": "zum 1. November", "chunk_vn": "kể từ ngày 1 tháng 11", "type": "Wendung", "topic": "Behörde", "note": "chỉ thời điểm bắt đầu hiệu lực"},
+      {"chunk_de": "die Taktung erhöhen", "chunk_vn": "tăng tần suất chạy", "type": "Kollokation", "topic": "Verkehr", "note": ""},
+      {"chunk_de": "alle 30 Minuten verkehren", "chunk_vn": "chạy mỗi 30 phút", "type": "Kollokation", "topic": "Verkehr", "note": ""},
+      {"chunk_de": "Weitere Informationen finden Sie an + Dat", "chunk_vn": "Quý vị tìm thấy thông tin thêm tại...", "type": "Redemittel", "topic": "Behörde", "note": ""}
+    ]
+  },
+  "3.3": {
+    "vocab": [
+      {"wort": "Krankenkasse", "wortart": "Substantiv", "formen": "die Krankenkasse, -n", "bedeutung": "quỹ bảo hiểm y tế", "beispiel": "Neues Angebot Ihrer Krankenkasse", "uebersetzung": "Đề nghị mới từ quỹ bảo hiểm y tế của quý vị.", "thema": "Gesundheit", "notes": ""},
+      {"wort": "Mitglied", "wortart": "Substantiv", "formen": "das Mitglied, -er", "bedeutung": "thành viên", "beispiel": "Sie sind nun schon seit 10 Jahren Mitglied unserer Gesundheitskasse.", "uebersetzung": "Quý vị đã là thành viên quỹ bảo hiểm của chúng tôi được 10 năm.", "thema": "Gesundheit", "notes": ""},
+      {"wort": "treu", "wortart": "Adjektiv", "formen": "treu, -e, -er, -es", "bedeutung": "trung thành", "beispiel": "Als treue Kundin erhalten Sie ein exklusives Angebot.", "uebersetzung": "Là khách hàng trung thành, quý vị nhận được đề nghị đặc biệt.", "thema": "Konsum", "notes": ""},
+      {"wort": "Tarif", "wortart": "Substantiv", "formen": "der Tarif, -e", "bedeutung": "gói cước, biểu giá", "beispiel": "Wechseln Sie in unseren neuen Tarif AktivPlus.", "uebersetzung": "Hãy chuyển sang gói cước mới AktivPlus của chúng tôi.", "thema": "Konsum", "notes": ""},
+      {"wort": "erstatten", "wortart": "Verb", "formen": "erstattete - hat erstattet", "bedeutung": "hoàn lại, bồi hoàn", "beispiel": "In diesem Tarif erstatten wir Ihnen Geld zurück.", "uebersetzung": "Trong gói này, chúng tôi hoàn lại tiền cho quý vị.", "thema": "Gesundheit", "notes": ""},
+      {"wort": "Beitrag", "wortart": "Substantiv", "formen": "der Beitrag, -träge", "bedeutung": "phí đóng góp, hội phí", "beispiel": "Wir übernehmen einmal im Jahr bis zu 50 % Ihrer Beiträge.", "uebersetzung": "Chúng tôi chi trả mỗi năm một lần lên đến 50% phí đóng góp của quý vị.", "thema": "Gesundheit", "notes": ""},
+      {"wort": "zertifiziert", "wortart": "Adjektiv", "formen": "zertifiziert, -e, -er, -es", "bedeutung": "được chứng nhận", "beispiel": "Oder Sie buchen einen zertifizierten Kurs im Bereich Bewegung oder Ernährung.", "uebersetzung": "Hoặc quý vị đặt một khóa học được chứng nhận trong lĩnh vực vận động hoặc dinh dưỡng.", "thema": "Gesundheit", "notes": ""},
+      {"wort": "Gewinnspiel", "wortart": "Substantiv", "formen": "das Gewinnspiel, -e", "bedeutung": "cuộc xổ số trúng thưởng", "beispiel": "Alle neuen AktivPlus-Mitglieder nehmen automatisch an unserem Gewinnspiel teil.", "uebersetzung": "Tất cả thành viên AktivPlus mới tự động tham gia xổ số trúng thưởng của chúng tôi.", "thema": "Konsum", "notes": ""},
+      {"wort": "Sportverein", "wortart": "Substantiv", "formen": "der Sportverein, -e", "bedeutung": "câu lạc bộ thể thao", "beispiel": "Wenn Sie Mitglied in einem Sportverein sind, übernehmen wir bis zu 50 % Ihrer Beiträge.", "uebersetzung": "Nếu quý vị là thành viên câu lạc bộ thể thao, chúng tôi chi trả tới 50% phí.", "thema": "Freizeit", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "Sehr geehrte Frau [Name]", "chunk_vn": "Kính gửi bà [tên]", "type": "Redemittel", "topic": "Behörde", "note": "thư formal cá nhân"},
+      {"chunk_de": "sich herzlich bedanken", "chunk_vn": "chân thành cảm ơn", "type": "Wendung", "topic": "Konsum", "note": ""},
+      {"chunk_de": "sich um seine Gesundheit kümmern", "chunk_vn": "chăm sóc sức khỏe của mình", "type": "Kollokation", "topic": "Gesundheit", "note": "reflexiv um + Akk"},
+      {"chunk_de": "an einem Gewinnspiel teilnehmen", "chunk_vn": "tham gia cuộc xổ số trúng thưởng", "type": "Kollokation", "topic": "Konsum", "note": "teilnehmen an + Dat"},
+      {"chunk_de": "Wir freuen uns auf Ihre Entscheidung", "chunk_vn": "Chúng tôi mong chờ quyết định của quý vị", "type": "Redemittel", "topic": "Behörde", "note": "kết thư"}
+    ]
+  },
+  "3.4": {
+    "vocab": [
+      {"wort": "Berufsabschluss", "wortart": "Substantiv", "formen": "der Berufsabschluss, -abschlüsse", "bedeutung": "bằng cấp/chứng chỉ nghề nghiệp", "beispiel": "Ein neuer Weg zum Berufsabschluss", "uebersetzung": "Một con đường mới để có bằng nghề.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Berufsausbildung", "wortart": "Substantiv", "formen": "die Berufsausbildung, -en", "bedeutung": "đào tạo nghề", "beispiel": "In Deutschland gibt es viele Menschen, die keine abgeschlossene Berufsausbildung haben.", "uebersetzung": "Ở Đức có nhiều người không có khóa đào tạo nghề đã hoàn thành.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Fachkraft", "wortart": "Substantiv", "formen": "die Fachkraft, -kräfte", "bedeutung": "lao động có chuyên môn", "beispiel": "In vielen Branchen werden gut qualifizierte Fachkräfte gesucht.", "uebersetzung": "Trong nhiều ngành, lao động có chuyên môn tốt đang được tìm kiếm.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Arbeitsmarkt", "wortart": "Substantiv", "formen": "der Arbeitsmarkt, -märkte", "bedeutung": "thị trường lao động", "beispiel": "Diese Personen haben auf dem Arbeitsmarkt schlechtere Chancen.", "uebersetzung": "Những người này có cơ hội kém hơn trên thị trường lao động.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Teilnehmer", "wortart": "Substantiv", "formen": "der Teilnehmer, -", "bedeutung": "người tham gia", "beispiel": "Die Teilnehmerinnen und Teilnehmer besuchen keinen regulären Berufsschulunterricht.", "uebersetzung": "Người tham gia không học theo trường nghề thông thường.", "thema": "Bildung", "notes": ""},
+      {"wort": "Berufsschulunterricht", "wortart": "Substantiv", "formen": "der Berufsschulunterricht (kein Pl.)", "bedeutung": "giờ học trường nghề", "beispiel": "Die Teilnehmer besuchen keinen regulären Berufsschulunterricht.", "uebersetzung": "Người tham gia không học giờ học trường nghề thông thường.", "thema": "Bildung", "notes": ""},
+      {"wort": "Arbeitsagentur", "wortart": "Substantiv", "formen": "die Arbeitsagentur, -en", "bedeutung": "cơ quan lao động (sở việc làm)", "beispiel": "Die Kosten für die Ausbildung übernimmt die Arbeitsagentur.", "uebersetzung": "Chi phí đào tạo do cơ quan lao động chi trả.", "thema": "Behörde", "notes": ""},
+      {"wort": "Betrieb", "wortart": "Substantiv", "formen": "der Betrieb, -e", "bedeutung": "doanh nghiệp, cơ sở", "beispiel": "Vor allem kleinere Betriebe profitieren von diesem Modell.", "uebersetzung": "Nhất là các doanh nghiệp nhỏ hơn được hưởng lợi từ mô hình này.", "thema": "Arbeit", "notes": ""},
+      {"wort": "profitieren", "wortart": "Verb", "formen": "profitierte - hat profitiert", "bedeutung": "được hưởng lợi", "beispiel": "Vor allem kleinere Betriebe profitieren von diesem Modell.", "uebersetzung": "Nhất là các doanh nghiệp nhỏ hơn được hưởng lợi từ mô hình này.", "thema": "Arbeit", "notes": "profitieren von + Dat"},
+      {"wort": "Perspektive", "wortart": "Substantiv", "formen": "die Perspektive, -n", "bedeutung": "triển vọng, viễn cảnh", "beispiel": "Insgesamt sollen durch das Programm 70.000 Personen eine neue Perspektive erhalten.", "uebersetzung": "Tổng cộng nhờ chương trình này, 70.000 người sẽ có được một triển vọng mới.", "thema": "Arbeit", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "eine abgeschlossene Berufsausbildung haben", "chunk_vn": "có một bằng đào tạo nghề đã hoàn thành", "type": "Kollokation", "topic": "Arbeit", "note": ""},
+      {"chunk_de": "schlechtere Chancen auf dem Arbeitsmarkt haben", "chunk_vn": "có cơ hội kém hơn trên thị trường lao động", "type": "Kollokation", "topic": "Arbeit", "note": ""},
+      {"chunk_de": "ein Programm ins Leben rufen", "chunk_vn": "khởi xướng một chương trình", "type": "Wendung", "topic": "Behörde", "note": "thành ngữ formal"},
+      {"chunk_de": "im Unterschied zu + Dat", "chunk_vn": "khác với, trái với...", "type": "Redemittel", "topic": "Behörde", "note": "so sánh formal"},
+      {"chunk_de": "von einem Modell profitieren", "chunk_vn": "hưởng lợi từ một mô hình", "type": "Kollokation", "topic": "Arbeit", "note": ""}
+    ]
+  },
+  "3.5": {
+    "vocab": [
+      {"wort": "Austauschprogramm", "wortart": "Substantiv", "formen": "das Austauschprogramm, -e", "bedeutung": "chương trình trao đổi (học sinh)", "beispiel": "Ihre Tochter Mara wurde für das Austauschprogramm mit Kanada ausgewählt.", "uebersetzung": "Con gái quý vị, Mara, đã được chọn cho chương trình trao đổi với Canada.", "thema": "Bildung", "notes": ""},
+      {"wort": "auswählen", "wortart": "Verb", "formen": "wählte aus - hat ausgewählt", "bedeutung": "lựa chọn, tuyển chọn", "beispiel": "Ihre Tochter Mara wurde für das Austauschprogramm ausgewählt.", "uebersetzung": "Con gái quý vị, Mara, đã được chọn cho chương trình trao đổi.", "thema": "Bildung", "notes": "trennbar"},
+      {"wort": "Partnerschule", "wortart": "Substantiv", "formen": "die Partnerschule, -n", "bedeutung": "trường đối tác", "beispiel": "Mara wird ein komplettes Schuljahr an unserer Partnerschule verbringen.", "uebersetzung": "Mara sẽ trải qua nguyên một năm học tại trường đối tác của chúng tôi.", "thema": "Bildung", "notes": ""},
+      {"wort": "Rückkehr", "wortart": "Substantiv", "formen": "die Rückkehr (kein Pl.)", "bedeutung": "sự trở về", "beispiel": "Nach ihrer Rückkehr legt sie hier eine Vergleichsprüfung ab.", "uebersetzung": "Sau khi trở về, em sẽ làm một bài thi kiểm tra đối chiếu ở đây.", "thema": "Bildung", "notes": ""},
+      {"wort": "Vergleichsprüfung", "wortart": "Substantiv", "formen": "die Vergleichsprüfung, -en", "bedeutung": "bài thi đối chiếu, kiểm tra so sánh trình độ", "beispiel": "Nach ihrer Rückkehr legt sie hier eine Vergleichsprüfung ab.", "uebersetzung": "Sau khi trở về, em sẽ làm một bài thi đối chiếu ở đây.", "thema": "Bildung", "notes": ""},
+      {"wort": "Jahrgangsstufe", "wortart": "Substantiv", "formen": "die Jahrgangsstufe, -n", "bedeutung": "khối lớp, cấp lớp", "beispiel": "Wir entscheiden, ob sie ohne Wiederholung in die nächste Jahrgangsstufe wechseln kann.", "uebersetzung": "Chúng tôi quyết định xem em có thể chuyển lên khối lớp tiếp theo mà không cần học lại không.", "thema": "Bildung", "notes": ""},
+      {"wort": "Gastfamilie", "wortart": "Substantiv", "formen": "die Gastfamilie, -n", "bedeutung": "gia đình bản xứ tiếp nhận (homestay)", "beispiel": "Mara wird bei einer engagierten Gastfamilie wohnen.", "uebersetzung": "Mara sẽ ở với một gia đình bản xứ tận tâm.", "thema": "Familie", "notes": ""},
+      {"wort": "engagiert", "wortart": "Adjektiv", "formen": "engagiert, -e, -er, -es", "bedeutung": "tận tâm, dấn thân", "beispiel": "Mara wird bei einer engagierten Gastfamilie wohnen.", "uebersetzung": "Mara sẽ sống cùng một gia đình bản xứ tận tâm.", "thema": "Familie", "notes": ""},
+      {"wort": "Zustimmung", "wortart": "Substantiv", "formen": "die Zustimmung, -en", "bedeutung": "sự đồng ý, sự cho phép", "beispiel": "Wir benötigen Ihre schriftliche Zustimmung zum Austausch.", "uebersetzung": "Chúng tôi cần sự đồng ý bằng văn bản của quý vị cho việc trao đổi.", "thema": "Behörde", "notes": ""},
+      {"wort": "Schulleiter", "wortart": "Substantiv", "formen": "der Schulleiter, -", "bedeutung": "hiệu trưởng", "beispiel": "Dr. Martin Seidel (Schulleiter)", "uebersetzung": "TS Martin Seidel (Hiệu trưởng).", "thema": "Bildung", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "Ich freue mich, Ihnen mitteilen zu können, dass ...", "chunk_vn": "Tôi rất vui được thông báo với quý vị rằng...", "type": "Redemittel", "topic": "Behörde", "note": "mở đầu tin tốt formal"},
+      {"chunk_de": "eine Prüfung ablegen", "chunk_vn": "làm/dự một kỳ thi", "type": "Kollokation", "topic": "Bildung", "note": ""},
+      {"chunk_de": "bei einer Gastfamilie wohnen", "chunk_vn": "ở với một gia đình bản xứ", "type": "Kollokation", "topic": "Familie", "note": ""},
+      {"chunk_de": "Bitte unterschreiben Sie das beiliegende Formular", "chunk_vn": "Xin quý vị ký vào mẫu đính kèm", "type": "Redemittel", "topic": "Behörde", "note": "yêu cầu formal"},
+      {"chunk_de": "Mit herzlichem Dank und freundlichen Grüßen", "chunk_vn": "Với lòng cảm ơn chân thành và lời chào trân trọng", "type": "Redemittel", "topic": "Behörde", "note": "kết thư ấm áp formal"}
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "1.1": {
+    "vocab": [
+      {"wort": "Etage", "wortart": "Substantiv", "formen": "die Etage, -n", "bedeutung": "tầng (nhà)", "beispiel": "4. Etage – Technik & Freizeit", "uebersetzung": "Tầng 4 – Công nghệ & Giải trí", "thema": "Konsum", "notes": "đồng nghĩa với Stock"},
+      {"wort": "Erdgeschoss", "wortart": "Substantiv", "formen": "das Erdgeschoss, -e", "bedeutung": "tầng trệt", "beispiel": "Erdgeschoss – Kosmetik & Accessoires", "uebersetzung": "Tầng trệt – Mỹ phẩm & Phụ kiện", "thema": "Konsum", "notes": ""},
+      {"wort": "Untergeschoss", "wortart": "Substantiv", "formen": "das Untergeschoss, -e", "bedeutung": "tầng hầm", "beispiel": "Untergeschoss – Schnäppchen & Feiern", "uebersetzung": "Tầng hầm – Hàng giảm giá & Tiệc tùng", "thema": "Konsum", "notes": ""},
+      {"wort": "Kundenservice", "wortart": "Substantiv", "formen": "der Kundenservice, -s", "bedeutung": "dịch vụ khách hàng", "beispiel": "Kundenservice: Reparaturannahme & Fragen zu technischen Geräten", "uebersetzung": "Dịch vụ khách hàng: Nhận sửa chữa & câu hỏi về thiết bị kỹ thuật", "thema": "Konsum", "notes": ""},
+      {"wort": "Haushaltswaren", "wortart": "Substantiv", "formen": "die Haushaltswaren (Pl.)", "bedeutung": "đồ gia dụng", "beispiel": "Haushaltswaren: Kochtöpfe, Pfannen, Küchenhelfer", "uebersetzung": "Đồ gia dụng: Nồi, chảo, dụng cụ nhà bếp", "thema": "Wohnen", "notes": "thường dùng số nhiều"},
+      {"wort": "Heimwerkerbedarf", "wortart": "Substantiv", "formen": "der Heimwerkerbedarf (Sg.)", "bedeutung": "đồ dùng cho thợ sửa chữa tại nhà", "beispiel": "Heimwerkerbedarf: Werkzeug, Schrauben, Dübel, kleine Reparatursets", "uebersetzung": "Đồ dùng tự sửa chữa: Dụng cụ, ốc vít, nở nhựa, bộ sửa chữa nhỏ", "thema": "Wohnen", "notes": ""},
+      {"wort": "Bettwäsche", "wortart": "Substantiv", "formen": "die Bettwäsche (Sg.)", "bedeutung": "đồ trải giường", "beispiel": "Bettwäsche & Heimtextilien: Bettbezüge, Tagesdecken, Kissenhüllen", "uebersetzung": "Đồ trải giường & vải dệt gia đình: Vỏ chăn, khăn phủ giường, vỏ gối", "thema": "Wohnen", "notes": ""},
+      {"wort": "Sonderangebot", "wortart": "Substantiv", "formen": "das Sonderangebot, -e", "bedeutung": "mặt hàng giảm giá đặc biệt", "beispiel": "Sonderangebote: Restposten, reduzierte Waren", "uebersetzung": "Hàng giảm giá đặc biệt: Hàng tồn kho, hàng giảm giá", "thema": "Konsum", "notes": ""},
+      {"wort": "Hautpflege", "wortart": "Substantiv", "formen": "die Hautpflege (Sg.)", "bedeutung": "chăm sóc da", "beispiel": "Kosmetik & Hautpflege: Cremes, Make-up, Sonnenschutz", "uebersetzung": "Mỹ phẩm & chăm sóc da: Kem, đồ trang điểm, kem chống nắng", "thema": "Gesundheit", "notes": ""},
+      {"wort": "Schmuck", "wortart": "Substantiv", "formen": "der Schmuck (Sg.)", "bedeutung": "đồ trang sức", "beispiel": "Uhren & Schmuck: Armbanduhren, Ketten, Ohrringe", "uebersetzung": "Đồng hồ & trang sức: Đồng hồ đeo tay, dây chuyền, hoa tai", "thema": "Konsum", "notes": "không có số nhiều"}
+    ],
+    "chunks": [
+      {"chunk_de": "mit Blick auf + Akk", "chunk_vn": "với tầm nhìn ra", "type": "Wendung", "topic": "Konsum", "note": "mit Blick auf + Akk."},
+      {"chunk_de": "reduzierte Waren", "chunk_vn": "hàng đã giảm giá", "type": "Kollokation", "topic": "Konsum", "note": ""}
+    ]
+  },
+  "1.2": {
+    "vocab": [
+      {"wort": "Volkshochschule", "wortart": "Substantiv", "formen": "die Volkshochschule, -n", "bedeutung": "trường giáo dục thường xuyên cho người lớn", "beispiel": "Wegweiser: Volkshochschule Glückstadt", "uebersetzung": "Bảng chỉ dẫn: Trường giáo dục thường xuyên Glückstadt", "thema": "Bildung", "notes": "viết tắt VHS"},
+      {"wort": "Abteilung", "wortart": "Substantiv", "formen": "die Abteilung, -en", "bedeutung": "phân khoa, bộ phận", "beispiel": "Abteilung 1 – Politik, Kultur", "uebersetzung": "Phân khoa 1 – Chính trị, Văn hóa", "thema": "Bildung", "notes": ""},
+      {"wort": "Weltanschauung", "wortart": "Substantiv", "formen": "die Weltanschauung, -en", "bedeutung": "thế giới quan", "beispiel": "Ethik und Weltanschauung", "uebersetzung": "Đạo đức và thế giới quan", "thema": "Bildung", "notes": ""},
+      {"wort": "Stressbewältigung", "wortart": "Substantiv", "formen": "die Stressbewältigung (Sg.)", "bedeutung": "việc đối phó với căng thẳng", "beispiel": "Stressbewältigung, Entspannung, Yoga", "uebersetzung": "Đối phó căng thẳng, thư giãn, yoga", "thema": "Gesundheit", "notes": "Stress + Bewältigung"},
+      {"wort": "Ernährung", "wortart": "Substantiv", "formen": "die Ernährung (Sg.)", "bedeutung": "chế độ dinh dưỡng", "beispiel": "Einführung in gesunde Ernährung", "uebersetzung": "Giới thiệu về chế độ dinh dưỡng lành mạnh", "thema": "Gesundheit", "notes": ""},
+      {"wort": "Handarbeit", "wortart": "Substantiv", "formen": "die Handarbeit, -en", "bedeutung": "công việc thủ công", "beispiel": "Handarbeiten: Nähen, Stricken", "uebersetzung": "Công việc thủ công: May vá, đan len", "thema": "Freizeit", "notes": ""},
+      {"wort": "Bewerbungstraining", "wortart": "Substantiv", "formen": "das Bewerbungstraining, -s", "bedeutung": "khóa huấn luyện xin việc", "beispiel": "Bewerbungstraining", "uebersetzung": "Huấn luyện viết hồ sơ xin việc", "thema": "Arbeit", "notes": "Bewerbung + Training"},
+      {"wort": "Büromanagement", "wortart": "Substantiv", "formen": "das Büromanagement (Sg.)", "bedeutung": "quản lý văn phòng", "beispiel": "Büromanagement", "uebersetzung": "Quản lý văn phòng", "thema": "Arbeit", "notes": ""},
+      {"wort": "Freizeitgestaltung", "wortart": "Substantiv", "formen": "die Freizeitgestaltung (Sg.)", "bedeutung": "việc tổ chức thời gian rảnh", "beispiel": "Abteilung 5 – Freizeitgestaltung", "uebersetzung": "Phân khoa 5 – Tổ chức thời gian rảnh", "thema": "Freizeit", "notes": ""},
+      {"wort": "Gesang", "wortart": "Substantiv", "formen": "der Gesang, Gesänge", "bedeutung": "việc ca hát", "beispiel": "Gesang", "uebersetzung": "Ca hát", "thema": "Freizeit", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "Zeit effizient planen", "chunk_vn": "lập kế hoạch thời gian hiệu quả", "type": "Kollokation", "topic": "Arbeit", "note": ""},
+      {"chunk_de": "Einführung in + Akk", "chunk_vn": "giới thiệu về (lĩnh vực gì)", "type": "Wendung", "topic": "Bildung", "note": "Einführung in + Akk."}
+    ]
+  },
+  "1.3": {
+    "vocab": [
+      {"wort": "Fahrzeug", "wortart": "Substantiv", "formen": "das Fahrzeug, -e", "bedeutung": "phương tiện giao thông", "beispiel": "Fahrzeuge & Zubehör", "uebersetzung": "Phương tiện & phụ kiện", "thema": "Verkehr", "notes": ""},
+      {"wort": "Zubehör", "wortart": "Substantiv", "formen": "das Zubehör, -e", "bedeutung": "phụ kiện đi kèm", "beispiel": "Fahrzeuge & Zubehör", "uebersetzung": "Phương tiện & phụ kiện", "thema": "Konsum", "notes": "thường dùng số ít"},
+      {"wort": "Ersatzteil", "wortart": "Substantiv", "formen": "das Ersatzteil, -e", "bedeutung": "phụ tùng thay thế", "beispiel": "Reifen, Felgen & Ersatzteile", "uebersetzung": "Lốp xe, vành xe & phụ tùng thay thế", "thema": "Verkehr", "notes": ""},
+      {"wort": "Bürobedarf", "wortart": "Substantiv", "formen": "der Bürobedarf (Sg.)", "bedeutung": "đồ dùng văn phòng", "beispiel": "Sie benötigen Druckerpapier für Ihr Homeoffice.", "uebersetzung": "Bạn cần giấy in cho văn phòng tại nhà.", "thema": "Arbeit", "notes": ""},
+      {"wort": "Briefumschlag", "wortart": "Substantiv", "formen": "der Briefumschlag, -umschläge", "bedeutung": "phong bì thư", "beispiel": "Ordner, Hefte, Briefumschläge", "uebersetzung": "Kẹp tài liệu, vở, phong bì thư", "thema": "Arbeit", "notes": "Plural mit Umlaut"},
+      {"wort": "Festplatte", "wortart": "Substantiv", "formen": "die Festplatte, -n", "bedeutung": "ổ cứng", "beispiel": "USB-Sticks & externe Festplatten", "uebersetzung": "USB & ổ cứng ngoài", "thema": "Technologie", "notes": ""},
+      {"wort": "Überwachungskamera", "wortart": "Substantiv", "formen": "die Überwachungskamera, -s", "bedeutung": "máy quay giám sát", "beispiel": "Smart Home Geräte & Überwachungskameras", "uebersetzung": "Thiết bị nhà thông minh & máy quay giám sát", "thema": "Technologie", "notes": ""},
+      {"wort": "Blutdruckmessgerät", "wortart": "Substantiv", "formen": "das Blutdruckmessgerät, -e", "bedeutung": "máy đo huyết áp", "beispiel": "Blutdruckmessgeräte & Fieberthermometer", "uebersetzung": "Máy đo huyết áp & nhiệt kế", "thema": "Gesundheit", "notes": "Blut + Druck + Messgerät"},
+      {"wort": "Hygieneartikel", "wortart": "Substantiv", "formen": "der Hygieneartikel, -", "bedeutung": "sản phẩm vệ sinh", "beispiel": "Hygieneartikel & Desinfektionsmittel", "uebersetzung": "Sản phẩm vệ sinh & chất khử trùng", "thema": "Gesundheit", "notes": ""},
+      {"wort": "Einrichtung", "wortart": "Substantiv", "formen": "die Einrichtung, -en", "bedeutung": "đồ nội thất, trang trí nhà", "beispiel": "Haushalt & Einrichtung", "uebersetzung": "Gia dụng & nội thất", "thema": "Wohnen", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "Werkzeuge für kleine Reparaturen", "chunk_vn": "dụng cụ cho việc sửa chữa nhỏ", "type": "Kollokation", "topic": "Wohnen", "note": "für + Akk."}
+    ]
+  },
+  "1.4": {
+    "vocab": [
+      {"wort": "Mediathek", "wortart": "Substantiv", "formen": "die Mediathek, -en", "bedeutung": "thư viện truyền thông (online)", "beispiel": "Online-Mediathek VideoGalaxy", "uebersetzung": "Thư viện truyền thông trực tuyến", "thema": "Medien", "notes": ""},
+      {"wort": "Wirtschaft", "wortart": "Substantiv", "formen": "die Wirtschaft (Sg.)", "bedeutung": "kinh tế", "beispiel": "Tägliche News: Politik, Wirtschaft, Wetter", "uebersetzung": "Tin tức hàng ngày: Chính trị, Kinh tế, Thời tiết", "thema": "Politik", "notes": ""},
+      {"wort": "Dokumentation", "wortart": "Substantiv", "formen": "die Dokumentation, -en", "bedeutung": "phim tài liệu", "beispiel": "Wissen & Dokumentation", "uebersetzung": "Kiến thức & phim tài liệu", "thema": "Medien", "notes": "viết tắt Doku"},
+      {"wort": "Handelsroute", "wortart": "Substantiv", "formen": "die Handelsroute, -n", "bedeutung": "tuyến đường thương mại", "beispiel": "Die großen Handelsrouten – Von der Salzstraße bis heute", "uebersetzung": "Các tuyến đường thương mại lớn – Từ con đường muối đến hôm nay", "thema": "Geschichte", "notes": ""},
+      {"wort": "Rückenschmerzen", "wortart": "Substantiv", "formen": "die Rückenschmerzen (Pl.)", "bedeutung": "đau lưng", "beispiel": "Rückenschmerzen: Was tun?", "uebersetzung": "Đau lưng: Phải làm gì?", "thema": "Gesundheit", "notes": "thường dùng số nhiều"},
+      {"wort": "Buchmesse", "wortart": "Substantiv", "formen": "die Buchmesse, -n", "bedeutung": "hội chợ sách", "beispiel": "Neuheiten von der Buchmesse – Bestseller im Überblick", "uebersetzung": "Sản phẩm mới từ hội chợ sách", "thema": "Medien", "notes": ""},
+      {"wort": "Krimi", "wortart": "Substantiv", "formen": "der Krimi, -s", "bedeutung": "phim/truyện trinh thám", "beispiel": "Krimiabend: Schatten der Erinnerung", "uebersetzung": "Đêm phim trinh thám", "thema": "Medien", "notes": "rút gọn từ Kriminalfilm/-roman"},
+      {"wort": "Künstler", "wortart": "Substantiv", "formen": "der Künstler, -", "bedeutung": "nghệ sĩ", "beispiel": "Musikgala mit internationalen Künstlern", "uebersetzung": "Đêm nhạc gala với các nghệ sĩ quốc tế", "thema": "Kultur", "notes": "weiblich: die Künstlerin"},
+      {"wort": "Kindersendung", "wortart": "Substantiv", "formen": "die Kindersendung, -en", "bedeutung": "chương trình truyền hình cho trẻ em", "beispiel": "Tim und das Feuerwehrabenteuer – Kindersendung", "uebersetzung": "Tim và cuộc phiêu lưu cứu hỏa – Chương trình cho trẻ em", "thema": "Medien", "notes": ""},
+      {"wort": "erfahren", "wortart": "Verb", "formen": "erfuhr - hat erfahren", "bedeutung": "biết được, tìm hiểu được", "beispiel": "Sie möchten mehr über bedeutende Ereignisse der Vergangenheit erfahren.", "uebersetzung": "Bạn muốn biết thêm về những sự kiện quan trọng trong quá khứ.", "thema": "Bildung", "notes": "erfahren + über + Akk."}
+    ],
+    "chunks": [
+      {"chunk_de": "im Überblick", "chunk_vn": "tổng quan, nhìn tổng thể", "type": "Wendung", "topic": "Medien", "note": ""},
+      {"chunk_de": "sich interessieren für + Akk", "chunk_vn": "quan tâm đến", "type": "Kollokation", "topic": "Freizeit", "note": "reflexiv, immer mit für + Akk."}
+    ]
+  },
+  "1.5": {
+    "vocab": [
+      {"wort": "Sporthalle", "wortart": "Substantiv", "formen": "die Sporthalle, -n", "bedeutung": "nhà thi đấu thể thao", "beispiel": "Sporthalle 15:00 Uhr – Einführung ins Hockey", "uebersetzung": "Nhà thi đấu 15:00 – Giới thiệu về hockey", "thema": "Freizeit", "notes": ""},
+      {"wort": "Aula", "wortart": "Substantiv", "formen": "die Aula, Aulen", "bedeutung": "hội trường (trường học)", "beispiel": "Aula 15:00 Uhr – Theatervorführung", "uebersetzung": "Hội trường 15:00 – Buổi diễn kịch", "thema": "Bildung", "notes": ""},
+      {"wort": "Theatervorführung", "wortart": "Substantiv", "formen": "die Theatervorführung, -en", "bedeutung": "buổi diễn kịch", "beispiel": "Theatervorführung Die Antike lebt", "uebersetzung": "Buổi diễn kịch", "thema": "Kultur", "notes": "Theater + Vorführung"},
+      {"wort": "Modenschau", "wortart": "Substantiv", "formen": "die Modenschau, -en", "bedeutung": "buổi trình diễn thời trang", "beispiel": "17:30 Uhr – Modenschau: Kreative Designs", "uebersetzung": "17:30 – Trình diễn thời trang: Thiết kế sáng tạo", "thema": "Kultur", "notes": ""},
+      {"wort": "Fotoausstellung", "wortart": "Substantiv", "formen": "die Fotoausstellung, -en", "bedeutung": "triển lãm ảnh", "beispiel": "Begleitend: Fotoausstellung zur Italien-Exkursion", "uebersetzung": "Đi kèm: Triển lãm ảnh về chuyến đi Ý", "thema": "Kultur", "notes": ""},
+      {"wort": "Infoveranstaltung", "wortart": "Substantiv", "formen": "die Infoveranstaltung, -en", "bedeutung": "buổi thông tin", "beispiel": "15:30 Uhr – Infoveranstaltung: Französisch lernen leicht gemacht", "uebersetzung": "15:30 – Buổi thông tin: Học tiếng Pháp dễ dàng", "thema": "Bildung", "notes": "Info + Veranstaltung"},
+      {"wort": "Pausenbereich", "wortart": "Substantiv", "formen": "der Pausenbereich, -e", "bedeutung": "khu vực giải lao", "beispiel": "Pausenbereich (15:00–22:00 Uhr)", "uebersetzung": "Khu vực giải lao (15:00–22:00)", "thema": "Freizeit", "notes": ""},
+      {"wort": "Innenhof", "wortart": "Substantiv", "formen": "der Innenhof, -höfe", "bedeutung": "sân trong", "beispiel": "Innenhof (15:00–18:00 Uhr)", "uebersetzung": "Sân trong (15:00–18:00)", "thema": "Wohnen", "notes": "Plural mit Umlaut"},
+      {"wort": "Infostand", "wortart": "Substantiv", "formen": "der Infostand, -stände", "bedeutung": "quầy thông tin", "beispiel": "Infostand: Von der Gründung bis heute – die Geschichte unseres Zentrums", "uebersetzung": "Quầy thông tin: Từ ngày thành lập đến nay", "thema": "Freizeit", "notes": "Plural mit Umlaut"},
+      {"wort": "Gründung", "wortart": "Substantiv", "formen": "die Gründung, -en", "bedeutung": "việc thành lập", "beispiel": "Von der Gründung bis heute – die Geschichte unseres Zentrums", "uebersetzung": "Từ ngày thành lập đến nay – Lịch sử trung tâm", "thema": "Geschichte", "notes": "von gründen abgeleitet"},
+      {"wort": "sich anmelden", "wortart": "Verb", "formen": "meldete sich an - hat sich angemeldet", "bedeutung": "đăng ký tham gia", "beispiel": "Volleyball-Match (bitte vorher anmelden)", "uebersetzung": "Trận bóng chuyền (vui lòng đăng ký trước)", "thema": "Freizeit", "notes": "trennbar reflexiv"}
+    ],
+    "chunks": [
+      {"chunk_de": "für alle Altersgruppen", "chunk_vn": "dành cho mọi lứa tuổi", "type": "Wendung", "topic": "Freizeit", "note": ""},
+      {"chunk_de": "von ... bis heute", "chunk_vn": "từ ... cho đến nay", "type": "Wendung", "topic": "Geschichte", "note": "von + Dat. ... bis heute"},
+      {"chunk_de": "Lust haben + zu + Inf", "chunk_vn": "có hứng thú làm gì", "type": "Kollokation", "topic": "Freizeit", "note": "Lust haben + zu + Inf."}
+    ]
+  }
+}

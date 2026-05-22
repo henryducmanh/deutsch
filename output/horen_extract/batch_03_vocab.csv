@@ -1,0 +1,260 @@
+1.99,Mitglied,Substantiv,"das Mitglied, -er",thành viên,"Was sollen Mitglieder tun, wenn der Zugang zum Fitnessraum eingeschränkt ist?",Các thành viên cần làm gì khi việc vào phòng tập bị hạn chế?,Freizeit,B1;DTZ;Freizeit,
+1.99,Zugang,Substantiv,"der Zugang, Zugänge","lối vào, sự tiếp cận","Mitglieder, wenn der Zugang zum Fitnessraum eingeschränkt ist.","Thành viên, khi lối vào phòng tập bị hạn chế.",Freizeit,B1;DTZ;Freizeit,
+1.99,einschränken,Verb,schränkte ein - hat eingeschränkt,hạn chế,Der Zugang zum Fitnessraum ist eingeschränkt.,Lối vào phòng tập bị hạn chế.,Freizeit,B1;DTZ;Freizeit,trennbar
+1.99,teilnehmen,Verb,nahm teil - hat teilgenommen,tham gia,An den Gruppenkursen im Park teilnehmen.,Tham gia các khóa học nhóm ở công viên.,Freizeit,B1;DTZ;Freizeit,trennbar; an + Dat
+1.99,sich wenden,Verb,wandte sich - hat sich gewandt,"tìm đến, liên hệ",Sich an die Mitarbeiter im Café wenden.,Liên hệ với nhân viên trong quán cà phê.,Alltag,B1;DTZ;Alltag,reflexiv; an + Akk
+1.99,Alternative,Substantiv,"die Alternative, -n",lựa chọn thay thế,Eine Alternative im Park wird angeboten.,Một lựa chọn thay thế ở công viên được đưa ra.,Alltag,B1;DTZ;Alltag,
+1.99,abwarten,Verb,wartete ab - hat abgewartet,chờ đợi,Den Zugang zum Fitnessraum abwarten.,Chờ đợi lối vào phòng tập.,Alltag,B1;DTZ;Alltag,trennbar
+1.100,Reisende,Substantiv,"der/die Reisende, -n","hành khách, người du lịch",Was sollen Reisende nach Frankfurt machen?,Các hành khách đi Frankfurt cần làm gì?,Verkehr,B1;DTZ;Verkehr,
+1.100,Gleis,Substantiv,"das Gleis, -e","đường ray, sân ga",Den Zug von Gleis 3 nehmen.,Đi tàu từ sân ga số 3.,Verkehr,B1;DTZ;Verkehr,
+1.100,umsteigen,Verb,stieg um - ist umgestiegen,chuyển tàu/xe,Am Flughafen umsteigen.,Chuyển tàu ở sân bay.,Verkehr,B1;DTZ;Verkehr,trennbar; sein
+1.100,ausfallen,Verb,fiel aus - ist ausgefallen,bị hủy bỏ,Der Zug S232 nach Frankfurt fällt aus.,Tàu S232 đi Frankfurt bị hủy.,Verkehr,B1;DTZ;Verkehr,trennbar; sein
+1.100,Fahrgast,Substantiv,"der Fahrgast, Fahrgäste",hành khách,Die Fahrgäste sollen den Zug S567 nehmen.,Hành khách nên đi tàu S567.,Verkehr,B1;DTZ;Verkehr,
+1.100,stattdessen,Adverb,,thay vào đó,Die Fahrgäste sollen stattdessen den Zug S567 nehmen.,Hành khách nên đi tàu S567 thay vào đó.,Allgemein,B1;DTZ;Allgemein,
+1.100,Richtung,Substantiv,"die Richtung, -en",hướng,Den Zug S567 Richtung Stuttgart nehmen.,Đi tàu S567 hướng Stuttgart.,Verkehr,B1;DTZ;Verkehr,
+1.101,Zugverbindung,Substantiv,"die Zugverbindung, -en","tuyến tàu, lịch trình tàu",Die Zugverbindung wird unterbrochen.,Tuyến tàu bị gián đoạn.,Verkehr,B1;DTZ;Verkehr,
+1.101,Ersatzverkehr,Substantiv,"der Ersatzverkehr, -e",giao thông thay thế,Busse als Ersatzverkehr werden eingesetzt.,Xe buýt được sử dụng làm giao thông thay thế.,Verkehr,B1;DTZ;Verkehr,
+1.101,Unterbrechung,Substantiv,"die Unterbrechung, -en",sự gián đoạn,Für die Dauer der Unterbrechung werden Busse eingesetzt.,"Trong thời gian gián đoạn, xe buýt được sử dụng.",Verkehr,B1;DTZ;Verkehr,
+1.101,einsetzen,Verb,setzte ein - hat eingesetzt,"triển khai, sử dụng",Busse werden als Ersatzverkehr eingesetzt.,Xe buýt được triển khai làm giao thông thay thế.,Verkehr,B1;DTZ;Verkehr,trennbar
+1.101,anbieten,Verb,bot an - hat angeboten,"đề nghị, cung cấp",Was wird als Alternative angeboten?,Cái gì được đưa ra làm lựa chọn thay thế?,Allgemein,B1;DTZ;Allgemein,trennbar
+1.101,Dauer,Substantiv,die Dauer,"thời gian, độ dài",Für die Dauer der Unterbrechung.,Trong thời gian gián đoạn.,Allgemein,B1;DTZ;Allgemein,thường số ít
+1.102,Fahrzeug,Substantiv,"das Fahrzeug, -e",phương tiện,Fahrzeuge mit spezieller Genehmigung.,Phương tiện có giấy phép đặc biệt.,Verkehr,B1;DTZ;Verkehr,
+1.102,Genehmigung,Substantiv,"die Genehmigung, -en","giấy phép, sự cho phép",Fahrzeuge mit spezieller Genehmigung dürfen parken.,Phương tiện có giấy phép đặc biệt được phép đỗ.,Behörde,B1;DTZ;Behörde,
+1.102,gestatten,Verb,gestattete - hat gestattet,cho phép,Das Parken ist nur für Fahrzeuge mit Genehmigung gestattet.,Việc đỗ xe chỉ được phép đối với phương tiện có giấy phép.,Behörde,B1;DTZ;Behörde,
+1.102,Gebäude,Substantiv,"das Gebäude, -",tòa nhà,Das Parken vor dem Gebäude.,Việc đỗ xe trước tòa nhà.,Wohnen,B1;DTZ;Wohnen,
+1.102,speziell,Adjektiv,,"đặc biệt, riêng biệt",Fahrzeuge mit spezieller Genehmigung.,Phương tiện có giấy phép đặc biệt.,Allgemein,B1;DTZ;Allgemein,
+1.102,parken,Verb,parkte - hat geparkt,đỗ xe,Wer darf jetzt vor dem Gebäude parken?,Ai được phép đỗ xe trước tòa nhà bây giờ?,Verkehr,B1;DTZ;Verkehr,
+1.103,Fahrplanfrequenz,Substantiv,"die Fahrplanfrequenz, -en",tần suất chạy theo lịch,Was ändert sich in Bezug auf die Fahrplanfrequenz?,Có gì thay đổi về tần suất chạy?,Verkehr,B1;DTZ;Verkehr,
+1.103,verkehren,Verb,verkehrte - hat verkehrt,chạy (xe/tàu),Die Busse werden nun alle 30 Minuten verkehren.,Xe buýt sẽ chạy 30 phút một chuyến.,Verkehr,B1;DTZ;Verkehr,
+1.103,stündlich,Adverb,,mỗi giờ một lần,Die Busse fahren jetzt stündlich.,Xe buýt giờ chạy mỗi giờ một chuyến.,Verkehr,B1;DTZ;Verkehr,
+1.103,ändern,Verb,änderte - hat geändert,thay đổi,Was ändert sich in Bezug auf die Fahrplanfrequenz?,Có gì thay đổi về tần suất chạy?,Allgemein,B1;DTZ;Allgemein,thường reflexiv: sich ändern
+1.103,Buslinie,Substantiv,"die Buslinie, -n",tuyến xe buýt,Die Buslinie 62 hat einen neuen Fahrplan.,Tuyến xe buýt 62 có lịch trình mới.,Verkehr,B1;DTZ;Verkehr,
+1.104,Reparaturarbeiten,Substantiv,die Reparaturarbeiten (Pl),công việc sửa chữa,Reparaturarbeiten am Aufzug.,Công việc sửa chữa thang máy.,Wohnen,B1;DTZ;Wohnen,thường số nhiều
+1.104,Aufzug,Substantiv,"der Aufzug, Aufzüge",thang máy,Das Warten auf die Reparatur des Aufzugs.,Chờ đợi việc sửa chữa thang máy.,Wohnen,B1;DTZ;Wohnen,
+1.104,Treppe,Substantiv,"die Treppe, -n",cầu thang,Bitte nutzen Sie vorübergehend die Treppen.,Xin tạm thời sử dụng cầu thang.,Wohnen,B1;DTZ;Wohnen,
+1.104,Nebeneingang,Substantiv,"der Nebeneingang, -eingänge",cửa phụ,Bitte nutzen Sie den Nebeneingang.,Xin sử dụng cửa phụ.,Wohnen,B1;DTZ;Wohnen,
+1.104,vorübergehend,Adjektiv,,tạm thời,Bitte nutzen Sie vorübergehend die Treppen.,Xin tạm thời sử dụng cầu thang.,Allgemein,B1;DTZ;Allgemein,
+1.104,Nutzung,Substantiv,"die Nutzung, -en",việc sử dụng,Die Nutzung der Treppen oder des Nebeneingangs.,Việc sử dụng cầu thang hoặc cửa phụ.,Allgemein,B1;DTZ;Allgemein,
+1.104,empfehlen,Verb,empfahl - hat empfohlen,"khuyên, đề xuất",Was wird als vorübergehende Alternative empfohlen?,Cái gì được đề xuất làm lựa chọn thay thế tạm thời?,Allgemein,B1;DTZ;Allgemein,
+1.105,Betriebsfest,Substantiv,"das Betriebsfest, -e",tiệc của công ty,Wann findet das Betriebsfest statt?,Khi nào tiệc công ty diễn ra?,Arbeit,B1;DTZ;Arbeit,
+1.105,stattfinden,Verb,fand statt - hat stattgefunden,diễn ra,Das Betriebsfest findet am Samstag statt.,Tiệc công ty diễn ra vào thứ Bảy.,Allgemein,B1;DTZ;Allgemein,trennbar
+1.105,endgültig,Adjektiv,,"cuối cùng, dứt khoát",Der 15. Juli ist das endgültige Datum.,Ngày 15 tháng 7 là ngày cuối cùng.,Allgemein,B1;DTZ;Allgemein,
+1.105,feiern,Verb,feierte - hat gefeiert,"ăn mừng, tổ chức tiệc",Das Betriebsfest wird im letzten Jahr gefeiert.,Tiệc công ty được tổ chức năm ngoái.,Freizeit,B1;DTZ;Freizeit,
+1.105,ursprünglich,Adjektiv,,"ban đầu, gốc",Der Sonntag war ursprünglich geplant.,Chủ Nhật vốn được lên kế hoạch ban đầu.,Allgemein,B1;DTZ;Allgemein,
+1.105,aktuell,Adjektiv,,"hiện tại, mới nhất",Diese Daten sind nicht mehr aktuell.,Những ngày này không còn hợp thời nữa.,Allgemein,B1;DTZ;Allgemein,
+1.106,Abteilung,Substantiv,"die Abteilung, -en","phòng ban, khu vực",Die Abteilung für zeitgenössische Kunst.,Khu nghệ thuật đương đại.,Freizeit,B1;DTZ;Freizeit,
+1.106,Eingang,Substantiv,"der Eingang, Eingänge",lối vào,Über einen separaten Eingang im Erdgeschoss.,Qua một lối vào riêng ở tầng trệt.,Wohnen,B1;DTZ;Wohnen,
+1.106,Erdgeschoss,Substantiv,"das Erdgeschoss, -e",tầng trệt,Ein separater Eingang im Erdgeschoss.,Một lối vào riêng ở tầng trệt.,Wohnen,B1;DTZ;Wohnen,
+1.106,zeitgenössisch,Adjektiv,,đương đại,Die Abteilung für zeitgenössische Kunst.,Khu nghệ thuật đương đại.,Freizeit,B1;DTZ;Freizeit,
+1.106,Eintritt,Substantiv,"der Eintritt, -e","việc vào, vé vào",Der Eintritt zur Abteilung erfolgt über einen separaten Eingang.,Việc vào khu này qua một lối vào riêng.,Freizeit,B1;DTZ;Freizeit,
+1.106,erfolgen,Verb,erfolgte - ist erfolgt,"diễn ra, được tiến hành",Der Eintritt erfolgt über einen separaten Eingang.,Việc vào diễn ra qua một lối vào riêng.,Allgemein,B1;DTZ;Allgemein,sein
+1.106,gelangen,Verb,gelangte - ist gelangt,"đến được, tới",Wie gelangen Sie dorthin?,Bạn đến đó bằng cách nào?,Allgemein,B1;DTZ;Allgemein,sein
+1.107,Geschäft,Substantiv,"das Geschäft, -e",cửa hàng,Das Geschäft ist ab nächster Woche montags geschlossen.,Cửa hàng đóng cửa vào thứ Hai từ tuần sau.,Einkauf,B1;DTZ;Einkauf,
+1.107,geschlossen,Adjektiv,,đóng cửa,Das Geschäft ist montags geschlossen.,Cửa hàng đóng cửa vào thứ Hai.,Einkauf,B1;DTZ;Einkauf,Part.II của schließen
+1.107,geöffnet,Adjektiv,,mở cửa,Das Geschäft ist dienstags bis samstags geöffnet.,Cửa hàng mở cửa từ thứ Ba đến thứ Bảy.,Einkauf,B1;DTZ;Einkauf,
+1.107,Sonntagsöffnung,Substantiv,"die Sonntagsöffnung, -en",việc mở cửa Chủ Nhật,Die Sonntagsöffnung ändert sich nicht.,Việc mở cửa Chủ Nhật không thay đổi.,Einkauf,B1;DTZ;Einkauf,
+1.108,Ersatzhaltestelle,Substantiv,"die Ersatzhaltestelle, -n",trạm dừng thay thế,Welche beiden Ersatzhaltestellen werden empfohlen?,Hai trạm dừng thay thế nào được đề xuất?,Verkehr,B1;DTZ;Verkehr,
+1.108,Haltestelle,Substantiv,"die Haltestelle, -n",trạm dừng,Die Haltestelle am Rathaus entfällt.,Trạm dừng ở tòa thị chính bị bỏ.,Verkehr,B1;DTZ;Verkehr,
+1.108,Hauptbahnhof,Substantiv,"der Hauptbahnhof, -höfe",nhà ga chính,Eine Ersatzhaltestelle liegt am Hauptbahnhof.,Một trạm dừng thay thế nằm ở nhà ga chính.,Verkehr,B1;DTZ;Verkehr,
+1.108,entfallen,Verb,entfiel - ist entfallen,"bị bỏ, bị hủy",Die Haltestelle am Rathaus entfällt.,Trạm dừng ở tòa thị chính bị bỏ.,Allgemein,B1;DTZ;Allgemein,sein
+1.108,Rathaus,Substantiv,"das Rathaus, -häuser",tòa thị chính,Die Haltestelle am Rathaus entfällt.,Trạm dừng ở tòa thị chính bị bỏ.,Behörde,B1;DTZ;Behörde,
+1.109,Vorstellung,Substantiv,"die Vorstellung, -en","buổi chiếu, buổi biểu diễn",Die Vorstellung um 22:30 Uhr.,Buổi chiếu lúc 22:30.,Freizeit,B1;DTZ;Freizeit,
+1.109,verfügbar,Adjektiv,,có sẵn,Es sind noch Tickets für die Vorstellung verfügbar.,Vẫn còn vé cho buổi chiếu.,Allgemein,B1;DTZ;Allgemein,
+1.109,anschauen,Verb,schaute an - hat angeschaut,xem,Den Film zu Hause anschauen.,Xem phim ở nhà.,Freizeit,B1;DTZ;Freizeit,trennbar
+1.109,Empfehlung,Substantiv,"die Empfehlung, -en","lời khuyên, gợi ý",Es wird keine Empfehlung gegeben.,Không có lời khuyên nào được đưa ra.,Allgemein,B1;DTZ;Allgemein,
+1.109,vorschlagen,Verb,schlug vor - hat vorgeschlagen,đề nghị,Was wird als Alternative vorgeschlagen?,Cái gì được đề nghị làm lựa chọn thay thế?,Allgemein,B1;DTZ;Allgemein,trennbar
+1.110,derzeit,Adverb,,hiện tại,Die Züge verkehren derzeit alle 20 Minuten.,Tàu hiện tại chạy 20 phút một chuyến.,Allgemein,B1;DTZ;Allgemein,
+1.110,Abfahrtszeit,Substantiv,"die Abfahrtszeit, -en",giờ khởi hành,Es werden keine Abfahrtszeiten von 3 Minuten genannt.,Không có giờ khởi hành 3 phút nào được nêu.,Verkehr,B1;DTZ;Verkehr,
+1.110,momentan,Adverb,,ngay lúc này,Wie oft verkehren die Züge momentan?,Tàu chạy bao lâu một chuyến lúc này?,Allgemein,B1;DTZ;Allgemein,
+1.110,nennen,Verb,nannte - hat genannt,"nêu, gọi tên",Es werden keine Zeiten genannt.,Không có giờ nào được nêu.,Allgemein,B1;DTZ;Allgemein,
+1.111,Speisemöglichkeit,Substantiv,"die Speisemöglichkeit, -en",nơi ăn uống,Das Restaurant wird als alternative Speisemöglichkeit empfohlen.,Nhà hàng được đề xuất làm nơi ăn uống thay thế.,Einkauf,B1;DTZ;Einkauf,
+1.111,Stadtpark,Substantiv,"der Stadtpark, -s",công viên thành phố,Ein Café im Stadtpark.,Một quán cà phê trong công viên thành phố.,Freizeit,B1;DTZ;Freizeit,
+1.111,erwähnen,Verb,erwähnte - hat erwähnt,"đề cập, nhắc đến",Kein Café im Stadtpark wird erwähnt.,Không có quán cà phê trong công viên thành phố nào được nhắc đến.,Allgemein,B1;DTZ;Allgemein,
+1.112,Anrufer,Substantiv,"der Anrufer, -",người gọi,Was sollen die Anrufer tun?,Người gọi cần làm gì?,Alltag,B1;DTZ;Alltag,
+1.112,Taste,Substantiv,"die Taste, -n","phím, nút bấm",Die Taste 4 für dringende Notfälle drücken.,Bấm phím 4 cho trường hợp khẩn cấp.,Technologie,B1;DTZ;Technologie,
+1.112,drücken,Verb,drückte - hat gedrückt,"bấm, nhấn",Die Taste 1 drücken.,Bấm phím 1.,Technologie,B1;DTZ;Technologie,
+1.112,Notfall,Substantiv,"der Notfall, -fälle",trường hợp khẩn cấp,Die 4 für dringende Notfälle drücken.,Bấm 4 cho trường hợp khẩn cấp.,Gesundheit,B1;DTZ;Gesundheit,
+1.112,dringend,Adjektiv,,khẩn cấp,Die 4 für dringende Notfälle drücken.,Bấm 4 cho trường hợp khẩn cấp.,Allgemein,B1;DTZ;Allgemein,
+1.112,Anliegen,Substantiv,"das Anliegen, -","việc cần làm, yêu cầu",Für technische Anliegen die Taste 3 drücken.,Bấm phím 3 cho các vấn đề kỹ thuật.,Allgemein,B1;DTZ;Allgemein,
+1.113,Warteschleife,Substantiv,"die Warteschleife, -n",vòng chờ (điện thoại),In der Warteschleife bleiben.,Ở lại trong vòng chờ.,Technologie,B1;DTZ;Technologie,
+1.113,Kundenberater,Substantiv,"der Kundenberater, -",tư vấn viên khách hàng,Alle Kundenberater sind im Gespräch.,Tất cả tư vấn viên đang trong cuộc gọi.,Arbeit,B1;DTZ;Arbeit,
+1.113,Nachricht,Substantiv,"die Nachricht, -en","tin nhắn, thông báo",Eine Nachricht hinterlassen.,Để lại một tin nhắn.,Alltag,B1;DTZ;Alltag,
+1.113,hinterlassen,Verb,hinterließ - hat hinterlassen,để lại,Eine Nachricht hinterlassen.,Để lại một tin nhắn.,Alltag,B1;DTZ;Alltag,
+1.113,auflegen,Verb,legte auf - hat aufgelegt,cúp máy,"Den Anrufern wird empfohlen, nicht aufzulegen.",Người gọi được khuyên không cúp máy.,Technologie,B1;DTZ;Technologie,trennbar
+1.114,Nachrichtensendung,Substantiv,"die Nachrichtensendung, -en",chương trình tin tức,Was wird in der Nachrichtensendung erwähnt?,Cái gì được đề cập trong chương trình tin tức?,Allgemein,B1;DTZ;Allgemein,
+1.114,Regenfall,Substantiv,"der Regenfall, -fälle","mưa, lượng mưa",Heftige Regenfälle und Überschwemmungen.,Mưa lớn và lũ lụt.,Wetter,B1;DTZ;Wetter,
+1.114,Überschwemmung,Substantiv,"die Überschwemmung, -en",lũ lụt,Heftige Regenfälle und Überschwemmungen.,Mưa lớn và lũ lụt.,Wetter,B1;DTZ;Wetter,
+1.114,heftig,Adjektiv,,"dữ dội, mạnh",Heftige Regenfälle und Überschwemmungen.,Mưa lớn dữ dội và lũ lụt.,Wetter,B1;DTZ;Wetter,
+1.114,berichten,Verb,berichtete - hat berichtet,"tường thuật, báo cáo",In der Ansage wird von Regenfällen berichtet.,Trong thông báo có tường thuật về mưa lớn.,Allgemein,B1;DTZ;Allgemein,über + Akk
+1.114,Ereignis,Substantiv,"das Ereignis, -se",sự kiện,Politische Ereignisse werden nicht angesprochen.,Các sự kiện chính trị không được đề cập.,Gesellschaft,B1;DTZ;Gesellschaft,
+1.114,ansprechen,Verb,sprach an - hat angesprochen,"đề cập, nói đến",Politische Ereignisse werden nicht angesprochen.,Các sự kiện chính trị không được đề cập.,Allgemein,B1;DTZ;Allgemein,trennbar
+1.115,Verspätung,Substantiv,"die Verspätung, -en",sự chậm trễ,Der Zug hat 60 Minuten Verspätung.,Tàu chậm 60 phút.,Verkehr,B1;DTZ;Verkehr,
+1.115,Ansage,Substantiv,"die Ansage, -n",thông báo,"In der Ansage wird erwähnt, dass der Zug Verspätung hat.",Trong thông báo có nói tàu bị chậm.,Verkehr,B1;DTZ;Verkehr,
+1.115,ankommen,Verb,kam an - ist angekommen,đến nơi,Der Zug wird auf Gleis 11 ankommen.,Tàu sẽ đến ở sân ga 11.,Verkehr,B1;DTZ;Verkehr,trennbar; sein
+1.116,Werbematerial,Substantiv,"das Werbematerial, -ien",tài liệu quảng cáo,Aktuelle Informationen zum Werbematerial einholen.,Lấy thông tin mới nhất về tài liệu quảng cáo.,Arbeit,B1;DTZ;Arbeit,
+1.116,einholen,Verb,holte ein - hat eingeholt,"thu thập, lấy được",Aktuelle Informationen einholen.,Thu thập thông tin mới nhất.,Arbeit,B1;DTZ;Arbeit,trennbar
+1.116,Werbeagentur,Substantiv,"die Werbeagentur, -en",công ty quảng cáo,Die Werbeagentur kontaktieren.,Liên hệ công ty quảng cáo.,Arbeit,B1;DTZ;Arbeit,
+1.116,Broschüre,Substantiv,"die Broschüre, -n","tờ rơi, sách giới thiệu",Den Status der neuen Broschüren erfahren.,Tìm hiểu tình trạng các sách giới thiệu mới.,Arbeit,B1;DTZ;Arbeit,
+1.116,Protokoll,Substantiv,"das Protokoll, -e",biên bản,Herr Wrobel übernimmt das Protokoll alleine.,Ông Wrobel tự nhận viết biên bản.,Arbeit,B1;DTZ;Arbeit,
+1.116,Dienstleister,Substantiv,"der Dienstleister, -",nhà cung cấp dịch vụ,Die Kontakte externer Dienstleister neu organisieren.,Tổ chức lại danh bạ các nhà cung cấp dịch vụ bên ngoài.,Arbeit,B1;DTZ;Arbeit,
+1.116,extern,Adjektiv,,"bên ngoài, ngoài công ty",Externe Dienstleister neu organisieren.,Tổ chức lại các nhà cung cấp dịch vụ bên ngoài.,Arbeit,B1;DTZ;Arbeit,
+1.117,Malerbetrieb,Substantiv,"der Malerbetrieb, -e",xưởng sơn,Rückruf vom Malerbetrieb.,Cuộc gọi lại từ xưởng sơn.,Wohnen,B1;DTZ;Wohnen,
+1.117,Malerarbeit,Substantiv,"die Malerarbeit, -en",công việc sơn nhà,Sich über die Malerarbeiten austauschen.,Trao đổi về việc sơn nhà.,Wohnen,B1;DTZ;Wohnen,
+1.117,sich austauschen,Verb,tauschte sich aus - hat sich ausgetauscht,"trao đổi, bàn bạc",Sie möchte sich mit Frau Schmidt austauschen.,Cô ấy muốn trao đổi với bà Schmidt.,Allgemein,B1;DTZ;Allgemein,reflexiv; trennbar
+1.117,Termin,Substantiv,"der Termin, -e",lịch hẹn,Im September sind alle Termine vergeben.,Tháng 9 đã hết lịch hẹn.,Alltag,B1;DTZ;Alltag,
+1.117,vergeben,Verb,vergab - hat vergeben,"đã được đặt, đã trao",Alle Termine sind vergeben.,Tất cả lịch hẹn đã được đặt.,Allgemein,B1;DTZ;Allgemein,
+1.117,Sortiment,Substantiv,"das Sortiment, -e","danh mục, chủng loại",Sie haben keine Spezial-Farbe im Sortiment.,Họ không có sơn đặc biệt trong danh mục.,Einkauf,B1;DTZ;Einkauf,
+1.117,vorrätig,Adjektiv,,có sẵn trong kho,Die Feuchtraumfarbe ist vorrätig.,Sơn chống ẩm có sẵn.,Einkauf,B1;DTZ;Einkauf,
+1.118,Bauarbeit,Substantiv,"die Bauarbeit, -en",công việc xây dựng,Die A6 ist wegen Bauarbeiten gesperrt.,Đường A6 bị đóng vì công trình xây dựng.,Verkehr,B1;DTZ;Verkehr,thường số nhiều
+1.118,Stau,Substantiv,"der Stau, -s","kẹt xe, ùn tắc",Lange Staus auf der A5.,Tắc nghẽn dài trên đường A5.,Verkehr,B1;DTZ;Verkehr,
+1.118,Unfall,Substantiv,"der Unfall, Unfälle",tai nạn,Der Unfall auf der A5.,Vụ tai nạn trên đường A5.,Verkehr,B1;DTZ;Verkehr,
+1.118,sperren,Verb,sperrte - hat gesperrt,"đóng, chặn",Die A6 ist wegen Bauarbeiten gesperrt.,Đường A6 bị đóng vì công trình.,Verkehr,B1;DTZ;Verkehr,
+1.118,Rückstau,Substantiv,"der Rückstau, -s","ùn tắc, xếp hàng dài",Der lange Rückstau von 10 Kilometern.,Đoạn ùn tắc dài 10 km.,Verkehr,B1;DTZ;Verkehr,
+1.118,errichten,Verb,errichtete - hat errichtet,"xây dựng, dựng lên",Bauarbeiten zur Errichtung einer neuen Eisenbahnbrücke.,Công việc xây dựng cầu đường sắt mới.,Wohnen,B1;DTZ;Wohnen,
+1.119,Krimi,Substantiv,"der Krimi, -s",phim/truyện trinh thám,Heute Abend wird ein Krimi gesendet.,Tối nay phát phim trinh thám.,Freizeit,B1;DTZ;Freizeit,
+1.119,Sendung,Substantiv,"die Sendung, -en",chương trình (phát thanh/truyền hình),Eine Sendung aus Wirtschaft und Politik.,Một chương trình về kinh tế và chính trị.,Freizeit,B1;DTZ;Freizeit,
+1.119,Sondersendung,Substantiv,"die Sondersendung, -en",chương trình đặc biệt,Eine Sondersendung zur Bankenkrise.,Một chương trình đặc biệt về khủng hoảng ngân hàng.,Gesellschaft,B1;DTZ;Gesellschaft,
+1.119,ersetzen,Verb,ersetzte - hat ersetzt,thay thế,Der Krimi wurde durch eine Sondersendung ersetzt.,Phim trinh thám được thay bằng chương trình đặc biệt.,Allgemein,B1;DTZ;Allgemein,
+1.119,Wirtschaft,Substantiv,"die Wirtschaft, -en",kinh tế,Eine Sendung aus Wirtschaft und Politik.,Một chương trình về kinh tế và chính trị.,Gesellschaft,B1;DTZ;Gesellschaft,
+1.119,ankündigen,Verb,kündigte an - hat angekündigt,"thông báo, công bố","In der Ansage wird angekündigt, dass eine Sondersendung läuft.",Trong thông báo công bố sẽ có chương trình đặc biệt.,Allgemein,B1;DTZ;Allgemein,trennbar
+1.120,Hausarzt,Substantiv,"der Hausarzt, -ärzte",bác sĩ gia đình,Zum Hausarzt gehen.,Đi đến bác sĩ gia đình.,Gesundheit,B1;DTZ;Gesundheit,
+1.120,Überweisung,Substantiv,"die Überweisung, -en",giấy chuyển viện,Eine Überweisung vorbeibringen.,Mang giấy chuyển viện đến.,Gesundheit,B1;DTZ;Gesundheit,
+1.120,Blutwert,Substantiv,"der Blutwert, -e",kết quả xét nghiệm máu,Die aktuellen Blutwerte für die Anästhesie-Untersuchung.,Kết quả xét nghiệm máu mới cho khám gây mê.,Gesundheit,B1;DTZ;Gesundheit,
+1.120,Untersuchung,Substantiv,"die Untersuchung, -en",việc khám bệnh,Die Untersuchung beim Hausarzt durchführen lassen.,Cho khám tại bác sĩ gia đình.,Gesundheit,B1;DTZ;Gesundheit,
+1.120,aufsuchen,Verb,suchte auf - hat aufgesucht,"tới khám, tìm đến",Herr Ellen soll seinen Hausarzt aufsuchen.,Ông Ellen nên đến gặp bác sĩ gia đình.,Gesundheit,B1;DTZ;Gesundheit,trennbar
+1.120,ausmachen,Verb,machte aus - hat ausgemacht,"hẹn, đặt lịch",Einen Termin ausmachen.,Đặt một lịch hẹn.,Alltag,B1;DTZ;Alltag,trennbar
+1.121,Flughafen,Substantiv,"der Flughafen, -häfen",sân bay,Sie wollen zum Flughafen.,Bạn muốn đi sân bay.,Verkehr,B1;DTZ;Verkehr,
+1.121,Abfahrtsort,Substantiv,"der Abfahrtsort, -e",nơi xuất phát,Gleis 10 ist nicht mehr der Abfahrtsort.,Sân ga 10 không còn là nơi xuất phát.,Verkehr,B1;DTZ;Verkehr,
+1.121,abfahren,Verb,fuhr ab - ist abgefahren,khởi hành,Die Linie S8 fährt heute von Gleis 12 ab.,Tuyến S8 hôm nay khởi hành từ sân ga 12.,Verkehr,B1;DTZ;Verkehr,trennbar; sein
+1.122,Internet-Anschluss,Substantiv,"der Internet-Anschluss, -anschlüsse",kết nối internet,Ihr Internet-Anschluss funktioniert nicht.,Kết nối internet của bạn không hoạt động.,Technologie,B1;DTZ;Technologie,
+1.122,Einrichtung,Substantiv,"die Einrichtung, -en","việc cài đặt, thiết bị",Informationen zur Einrichtung des Internetzugangs.,Thông tin về việc cài đặt internet.,Technologie,B1;DTZ;Technologie,
+1.122,Tarif,Substantiv,"der Tarif, -e","giá cước, gói cước",Die Taste 1 ist für Tarife gedacht.,Phím 1 dùng cho gói cước.,Technologie,B1;DTZ;Technologie,
+1.122,Rechnung,Substantiv,"die Rechnung, -en",hóa đơn,Die 2 ist für Fragen zur Rechnung vorgesehen.,Phím 2 dành cho thắc mắc về hóa đơn.,Alltag,B1;DTZ;Alltag,
+1.122,vorsehen,Verb,sah vor - hat vorgesehen,"dự định, dùng cho",Die 2 ist für Fragen zur Rechnung vorgesehen.,Phím 2 được dành cho thắc mắc về hóa đơn.,Allgemein,B1;DTZ;Allgemein,trennbar
+1.123,Versicherung,Substantiv,"die Versicherung, -en",bảo hiểm,Sie brauchen einen Termin bei Ihrer Versicherung.,Bạn cần lịch hẹn với công ty bảo hiểm.,Behörde,B1;DTZ;Behörde,
+1.123,Anrufbeantworter,Substantiv,"der Anrufbeantworter, -",hộp thư thoại,Eine Nachricht auf den Anrufbeantworter sprechen.,Để lại tin nhắn trên hộp thư thoại.,Technologie,B1;DTZ;Technologie,
+1.123,Geschäftszeit,Substantiv,"die Geschäftszeit, -en",giờ làm việc,Außerhalb der Geschäftszeiten anrufen.,Gọi ngoài giờ làm việc.,Arbeit,B1;DTZ;Arbeit,thường số nhiều
+1.123,vorbeikommen,Verb,kam vorbei - ist vorbeigekommen,ghé qua,Persönlich vorbeikommen.,Đích thân ghé qua.,Alltag,B1;DTZ;Alltag,trennbar; sein
+1.123,persönlich,Adjektiv,,"đích thân, trực tiếp",Persönlich vorbeikommen.,Đích thân ghé qua.,Allgemein,B1;DTZ;Allgemein,
+1.124,Lieferung,Substantiv,"die Lieferung, -en",việc giao hàng,Sie soll die Lieferung annehmen.,Cô ấy nên nhận hàng giao.,Arbeit,B1;DTZ;Arbeit,
+1.124,annehmen,Verb,nahm an - hat angenommen,"nhận, chấp nhận",Sie soll die Lieferung annehmen.,Cô ấy nên nhận hàng giao.,Arbeit,B1;DTZ;Arbeit,trennbar
+1.124,einspringen,Verb,sprang ein - ist eingesprungen,"thay ca, hỗ trợ thay",Falls sie morgen einspringen kann.,Nếu cô ấy có thể thay ca vào ngày mai.,Arbeit,B1;DTZ;Arbeit,trennbar; sein
+1.124,bestellen,Verb,bestellte - hat bestellt,"đặt hàng, gọi món",Die Getränke am Morgen bestellen.,Đặt đồ uống vào buổi sáng.,Einkauf,B1;DTZ;Einkauf,
+1.124,frei nehmen,Redemittel,,nghỉ phép,"Lutz bietet Lena an, am Sonntag frei zu nehmen.",Lutz đề nghị Lena nghỉ vào Chủ Nhật.,Arbeit,B1;DTZ;Arbeit,
+1.125,Bonusheft,Substantiv,"das Bonusheft, -e",sổ ghi điểm thưởng (nha khoa),Informationen zum Bonusheft.,Thông tin về sổ điểm thưởng.,Gesundheit,B1;DTZ;Gesundheit,
+1.125,Kassenbeitrag,Substantiv,"der Kassenbeitrag, -beiträge",phí đóng bảo hiểm y tế,Es geht um günstige Kassenbeiträge.,Nói về phí bảo hiểm y tế ưu đãi.,Gesundheit,B1;DTZ;Gesundheit,
+1.125,Zahnbehandlung,Substantiv,"die Zahnbehandlung, -en",điều trị răng,Neue Zahnbehandlungen werden vorgestellt.,Các phương pháp điều trị răng mới được giới thiệu.,Gesundheit,B1;DTZ;Gesundheit,
+1.125,vorstellen,Verb,stellte vor - hat vorgestellt,"giới thiệu, trình bày",Neue Behandlungen werden vorgestellt.,Các phương pháp điều trị mới được giới thiệu.,Allgemein,B1;DTZ;Allgemein,trennbar
+1.125,Funktionsweise,Substantiv,"die Funktionsweise, -n",cách hoạt động,Die Funktionsweise des Bonushefts.,Cách hoạt động của sổ điểm thưởng.,Allgemein,B1;DTZ;Allgemein,
+1.125,günstig,Adjektiv,,"rẻ, có lợi",Es geht um günstige Kassenbeiträge.,Nói về phí bảo hiểm y tế rẻ.,Einkauf,B1;DTZ;Einkauf,
+1.126,Gewitter,Substantiv,"das Gewitter, -","giông bão, sấm sét",Es wird starke Gewitter geben.,Sẽ có giông bão mạnh.,Wetter,B1;DTZ;Wetter,
+1.126,Abkühlung,Substantiv,"die Abkühlung, -en","sự lạnh đi, làm mát",Eine deutliche Abkühlung wird erwartet.,Dự báo trời sẽ lạnh đi rõ rệt.,Wetter,B1;DTZ;Wetter,
+1.126,bewölkt,Adjektiv,,"có mây, nhiều mây",Der Himmel wird bewölkt sein.,Trời sẽ có nhiều mây.,Wetter,B1;DTZ;Wetter,
+1.126,deutlich,Adjektiv,,"rõ ràng, rõ rệt",Eine deutliche Abkühlung wird erwartet.,Dự báo trời sẽ lạnh đi rõ rệt.,Allgemein,B1;DTZ;Allgemein,
+1.126,vorhersagen,Verb,sagte vorher - hat vorhergesagt,dự báo,Gewitter sind für das Wochenende vorhergesagt.,Giông bão được dự báo vào cuối tuần.,Wetter,B1;DTZ;Wetter,trennbar
+1.126,auftreten,Verb,trat auf - ist aufgetreten,"xảy ra, xuất hiện",Heiße Tage sollen nur am Freitag auftreten.,Ngày nóng chỉ xuất hiện vào thứ Sáu.,Allgemein,B1;DTZ;Allgemein,trennbar; sein
+1.127,U-Bahn,Substantiv,"die U-Bahn, -en",tàu điện ngầm,Mit der U-Bahn fahren.,Đi bằng tàu điện ngầm.,Verkehr,B1;DTZ;Verkehr,
+1.127,Straßenbahn,Substantiv,"die Straßenbahn, -en",xe điện,Mit der Straßenbahn oder dem Bus.,Bằng xe điện hoặc xe buýt.,Verkehr,B1;DTZ;Verkehr,
+1.127,Autoverkehr,Substantiv,der Autoverkehr,giao thông ô tô,Der Bereich ist für den Autoverkehr gesperrt.,Khu vực bị chặn đối với ô tô.,Verkehr,B1;DTZ;Verkehr,thường số ít
+1.127,Bereich,Substantiv,"der Bereich, -e","khu vực, phạm vi",Der Bereich ist gesperrt.,Khu vực bị chặn.,Allgemein,B1;DTZ;Allgemein,
+1.127,ausweichen,Verb,wich aus - ist ausgewichen,"tránh, chuyển sang",Auf die U-Bahn ausweichen.,Chuyển sang đi tàu điện ngầm.,Verkehr,B1;DTZ;Verkehr,trennbar; sein; auf + Akk
+1.128,kündigen,Verb,kündigte - hat gekündigt,"hủy hợp đồng, thôi việc",Bis wann müssen Sie Ihre Versicherung kündigen?,Bạn phải hủy bảo hiểm chậm nhất khi nào?,Behörde,B1;DTZ;Behörde,
+1.128,Frist,Substantiv,"die Frist, -en",thời hạn,Der 30. November ist die Frist zur Kündigung.,Ngày 30 tháng 11 là hạn để hủy.,Behörde,B1;DTZ;Behörde,
+1.128,Jahresende,Substantiv,"das Jahresende, -n",cuối năm,Die Frist liegt einen Monat vor Jahresende.,Thời hạn là một tháng trước cuối năm.,Allgemein,B1;DTZ;Allgemein,
+1.128,Kündigung,Substantiv,"die Kündigung, -en","việc hủy hợp đồng, đơn xin nghỉ",Die Frist zur Kündigung der Kfz-Versicherung.,Thời hạn hủy bảo hiểm ô tô.,Behörde,B1;DTZ;Behörde,
+1.128,Kfz-Versicherung,Substantiv,"die Kfz-Versicherung, -en",bảo hiểm ô tô,Die Kfz-Versicherung kündigen.,Hủy bảo hiểm ô tô.,Behörde,B1;DTZ;Behörde,
+1.129,Silvesterparty,Substantiv,"die Silvesterparty, -s",tiệc đêm Giao thừa,Auf der Silvesterparty kann man Preise gewinnen.,Tại tiệc Giao thừa bạn có thể trúng giải.,Freizeit,B1;DTZ;Freizeit,
+1.129,verlosen,Verb,verloste - hat verlost,rút thăm trúng thưởng,Radio WAG-FM verlost Tickets.,Đài WAG-FM rút thăm vé.,Freizeit,B1;DTZ;Freizeit,
+1.129,Preis,Substantiv,"der Preis, -e","giải thưởng, giá",Man kann Preise gewinnen.,Bạn có thể trúng giải.,Freizeit,B1;DTZ;Freizeit,
+1.129,gewinnen,Verb,gewann - hat gewonnen,"thắng, giành được",Man kann Preise gewinnen.,Bạn có thể trúng giải.,Freizeit,B1;DTZ;Freizeit,
+1.129,Künstler,Substantiv,"der Künstler, -",nghệ sĩ,Internationale Künstler treten auf.,Các nghệ sĩ quốc tế biểu diễn.,Freizeit,B1;DTZ;Freizeit,
+1.130,anschließen,Verb,schloss an - hat angeschlossen,"lắp đặt, kết nối",Den Gasherd anschließen.,Lắp đặt bếp gas.,Wohnen,B1;DTZ;Wohnen,trennbar
+1.130,Gasherd,Substantiv,"der Gasherd, -e",bếp gas,Den Gasherd anschließen.,Lắp đặt bếp gas.,Wohnen,B1;DTZ;Wohnen,
+1.130,Zeitraum,Substantiv,"der Zeitraum, -räume",khoảng thời gian,Der Zeitraum von 17 bis 19 Uhr.,Khoảng thời gian từ 17 đến 19 giờ.,Allgemein,B1;DTZ;Allgemein,
+1.130,bestätigen,Verb,bestätigte - hat bestätigt,xác nhận,Den Zeitraum bestätigen.,Xác nhận khoảng thời gian.,Alltag,B1;DTZ;Alltag,
+1.130,passen,Verb,passte - hat gepasst,"phù hợp, hợp",Ob ihm der Zeitraum passt.,Liệu khoảng thời gian có phù hợp với anh ấy không.,Allgemein,B1;DTZ;Allgemein,Dativ
+1.130,Firma,Substantiv,"die Firma, Firmen",công ty,Die Firma Emma-Elektrik anrufen.,Gọi điện cho công ty Emma-Elektrik.,Arbeit,B1;DTZ;Arbeit,
+1.131,Wohnung,Substantiv,"die Wohnung, -en",căn hộ,Eine 3-Zimmer-Wohnung.,Một căn hộ 3 phòng.,Wohnen,B1;DTZ;Wohnen,
+1.131,Balkon,Substantiv,"der Balkon, -e/-s",ban công,Eine Wohnung mit Balkon.,Một căn hộ có ban công.,Wohnen,B1;DTZ;Wohnen,
+1.131,Zimmer,Substantiv,"das Zimmer, -",phòng,Eine 3-Zimmer-Wohnung.,Một căn hộ 3 phòng.,Wohnen,B1;DTZ;Wohnen,
+1.132,Deutschkurs,Substantiv,"der Deutschkurs, -e",khóa học tiếng Đức,Sich für einen Deutschkurs anmelden.,Đăng ký một khóa tiếng Đức.,Bildung,B1;DTZ;Bildung,
+1.132,sich anmelden,Verb,meldete sich an - hat sich angemeldet,đăng ký,Sich für einen Deutschkurs anmelden.,Đăng ký một khóa tiếng Đức.,Bildung,B1;DTZ;Bildung,reflexiv; trennbar
+1.132,Beratung,Substantiv,"die Beratung, -en",việc tư vấn,Interessenten müssen zur Beratung kommen.,Người quan tâm phải đến tư vấn.,Bildung,B1;DTZ;Bildung,
+1.132,Interessent,Substantiv,"der Interessent, -en",người quan tâm,Interessenten für einen Sprachkurs.,Người quan tâm khóa ngoại ngữ.,Bildung,B1;DTZ;Bildung,n-Deklination
+1.132,Sprachkurs,Substantiv,"der Sprachkurs, -e",khóa học ngoại ngữ,Interessenten für einen Sprachkurs.,Người quan tâm khóa ngoại ngữ.,Bildung,B1;DTZ;Bildung,
+1.132,Sprachenberatung,Substantiv,"die Sprachenberatung, -en",tư vấn ngoại ngữ,Die Nummer ist nicht für die Sprachenberatung.,Số điện thoại này không dành cho tư vấn ngoại ngữ.,Bildung,B1;DTZ;Bildung,
+1.133,Notdienst,Substantiv,"der Notdienst, -e","dịch vụ khẩn cấp, trực cấp cứu",Der ärztliche Notdienst.,Dịch vụ trực cấp cứu y tế.,Gesundheit,B1;DTZ;Gesundheit,
+1.133,ärztlich,Adjektiv,,thuộc về y khoa,Der ärztliche Notdienst.,Dịch vụ trực cấp cứu y tế.,Gesundheit,B1;DTZ;Gesundheit,
+1.133,Praxisnummer,Substantiv,"die Praxisnummer, -n",số điện thoại phòng khám,Die Praxisnummer ist erst ab dem 26. Juli wieder erreichbar.,Số phòng khám sẽ liên lạc lại được từ ngày 26 tháng 7.,Gesundheit,B1;DTZ;Gesundheit,
+1.133,erreichbar,Adjektiv,,có thể liên lạc được,Die Nummer ist ab dem 26. Juli wieder erreichbar.,Số này có thể liên lạc lại từ ngày 26 tháng 7.,Allgemein,B1;DTZ;Allgemein,
+1.133,Physiotherapie,Substantiv,"die Physiotherapie, -n",vật lý trị liệu,Die Nummer gilt für Termine zur Physiotherapie.,Số này dùng cho lịch hẹn vật lý trị liệu.,Gesundheit,B1;DTZ;Gesundheit,
+1.133,gelten,Verb,galt - hat gegolten,"có hiệu lực, áp dụng",Die Nummer gilt nur für Physiotherapie.,Số này chỉ dùng cho vật lý trị liệu.,Allgemein,B1;DTZ;Allgemein,
+1.134,Abonnement,Substantiv,"das Abonnement, -s","thuê bao, đăng ký dài hạn",Sie hat ein Abonnement bestellt.,Cô ấy đã đặt một gói thuê bao.,Einkauf,B1;DTZ;Einkauf,
+1.134,Probeabo,Substantiv,"das Probeabo, -s",gói thuê bao dùng thử,Sie hat ein Probeabo abgeschlossen.,Cô ấy đã đăng ký gói dùng thử.,Einkauf,B1;DTZ;Einkauf,
+1.134,abschließen,Verb,schloss ab - hat abgeschlossen,"ký kết, hoàn tất",Sie hat ein Probeabo abgeschlossen.,Cô ấy đã đăng ký gói dùng thử.,Behörde,B1;DTZ;Behörde,trennbar
+1.134,erhalten,Verb,erhielt - hat erhalten,nhận được,Sie hat die Rechnung per E-Mail erhalten.,Cô ấy đã nhận hóa đơn qua email.,Allgemein,B1;DTZ;Allgemein,
+1.135,Auszubildender,Substantiv,"der Auszubildende, -n",người học việc,Er ist kein Auszubildender.,Anh ấy không phải người học việc.,Arbeit,B1;DTZ;Arbeit,
+1.135,Malermeister,Substantiv,"der Malermeister, -",thợ cả nghề sơn,Alex Schmidt ist Malermeister.,Alex Schmidt là thợ cả nghề sơn.,Arbeit,B1;DTZ;Arbeit,
+1.135,Betrieb,Substantiv,"der Betrieb, -e","doanh nghiệp, xưởng",Er führt einen Betrieb mit 15 Mitarbeitern.,Anh ấy điều hành một doanh nghiệp với 15 nhân viên.,Arbeit,B1;DTZ;Arbeit,
+1.135,führen,Verb,führte - hat geführt,"điều hành, dẫn dắt",Er führt einen Betrieb.,Anh ấy điều hành một doanh nghiệp.,Arbeit,B1;DTZ;Arbeit,
+1.135,Mitarbeiter,Substantiv,"der Mitarbeiter, -",nhân viên,Ein Betrieb mit 15 Mitarbeitern.,Một doanh nghiệp với 15 nhân viên.,Arbeit,B1;DTZ;Arbeit,
+1.135,Tätigkeit,Substantiv,"die Tätigkeit, -en","công việc, hoạt động",Nichts wird über eine Tätigkeit als Fußballspieler gesagt.,Không gì được nói về công việc cầu thủ bóng đá.,Arbeit,B1;DTZ;Arbeit,
+1.136,Konzert,Substantiv,"das Konzert, -e",buổi hòa nhạc,Das Konzert findet nicht statt.,Buổi hòa nhạc không diễn ra.,Freizeit,B1;DTZ;Freizeit,
+1.136,Bürgerhaus,Substantiv,"das Bürgerhaus, -häuser",nhà văn hóa cộng đồng,Das Konzert findet im Bürgerhaus statt.,Buổi hòa nhạc diễn ra ở nhà văn hóa.,Freizeit,B1;DTZ;Freizeit,
+1.136,absagen,Verb,sagte ab - hat abgesagt,hủy bỏ,Das Konzert wurde abgesagt.,Buổi hòa nhạc đã bị hủy.,Allgemein,B1;DTZ;Allgemein,trennbar
+1.136,Ersatztermin,Substantiv,"der Ersatztermin, -e",lịch thay thế,Es wird keinen Ersatztermin geben.,Sẽ không có lịch thay thế.,Allgemein,B1;DTZ;Allgemein,
+1.136,Zeitpunkt,Substantiv,"der Zeitpunkt, -e",thời điểm,Zu einem späteren Zeitpunkt stattfinden.,Diễn ra vào một thời điểm muộn hơn.,Allgemein,B1;DTZ;Allgemein,
+1.137,Einkaufszentrum,Substantiv,"das Einkaufszentrum, -zentren",trung tâm mua sắm,Das Einkaufszentrum ist am Freitag bis 23 Uhr geöffnet.,Trung tâm mua sắm mở đến 23 giờ vào thứ Sáu.,Einkauf,B1;DTZ;Einkauf,
+1.137,Öffnungszeit,Substantiv,"die Öffnungszeit, -en",giờ mở cửa,Die Öffnungszeiten am Samstag.,Giờ mở cửa thứ Bảy.,Einkauf,B1;DTZ;Einkauf,thường số nhiều
+1.137,einkaufen,Verb,kaufte ein - hat eingekauft,đi mua sắm,An welchem Tag kann man am längsten einkaufen?,Bạn có thể mua sắm lâu nhất vào ngày nào?,Einkauf,B1;DTZ;Einkauf,trennbar
+1.137,kürzer,Adjektiv,,ngắn hơn,An diesen Tagen gelten kürzere Öffnungszeiten.,Vào những ngày này giờ mở cửa ngắn hơn.,Allgemein,B1;DTZ;Allgemein,Komparativ
+1.138,Sporttasche,Substantiv,"die Sporttasche, -n",túi đồ thể thao,Eine gefundene Sporttasche.,Một túi đồ thể thao được tìm thấy.,Freizeit,B1;DTZ;Freizeit,
+1.138,abholen,Verb,holte ab - hat abgeholt,đến lấy,Er möchte die Tasche abholen.,Anh ấy muốn đến lấy túi.,Alltag,B1;DTZ;Alltag,trennbar
+1.138,finden,Verb,fand - hat gefunden,tìm thấy,Er hat die Tasche gefunden.,Anh ấy đã tìm thấy túi.,Allgemein,B1;DTZ;Allgemein,
+1.138,auffordern,Verb,forderte auf - hat aufgefordert,"yêu cầu, mời","Er fordert Ferdi auf, die Tasche abzuholen.",Anh ấy yêu cầu Ferdi đến lấy túi.,Allgemein,B1;DTZ;Allgemein,trennbar
+1.139,Musikfestival,Substantiv,"das Musikfestival, -s",lễ hội âm nhạc,Die Busse zum Musikfestival fahren alle 15 Minuten.,Xe buýt đến lễ hội âm nhạc chạy 15 phút một chuyến.,Freizeit,B1;DTZ;Freizeit,
+1.139,kostenlos,Adjektiv,,miễn phí,Die Busse sind für alle Besucher kostenlos.,Xe buýt miễn phí cho tất cả khách.,Allgemein,B1;DTZ;Allgemein,
+1.139,Besucher,Substantiv,"der Besucher, -",khách thăm quan,Die Busse sind für alle Besucher kostenlos.,Xe buýt miễn phí cho tất cả khách.,Freizeit,B1;DTZ;Freizeit,
+1.139,starten,Verb,startete - ist gestartet,"khởi hành, bắt đầu",Die Busse starten am Hauptbahnhof.,Xe buýt khởi hành từ nhà ga chính.,Verkehr,B1;DTZ;Verkehr,sein
+1.140,Schloss,Substantiv,"das Schloss, Schlösser","lâu đài, ổ khóa",Wie kann man zum Schloss kommen?,Đến lâu đài bằng cách nào?,Reisen,B1;DTZ;Reisen,
+1.140,Ausgang,Substantiv,"der Ausgang, Ausgänge",lối ra,Der Bus fährt am oberen Ausgang des Stadtzentrums.,Xe buýt chạy ở lối ra phía trên của trung tâm thành phố.,Verkehr,B1;DTZ;Verkehr,
+1.140,Stadtzentrum,Substantiv,"das Stadtzentrum, -zentren",trung tâm thành phố,Am oberen Ausgang des Stadtzentrums.,Ở lối ra phía trên của trung tâm thành phố.,Wohnen,B1;DTZ;Wohnen,
+1.140,Weiterfahrt,Substantiv,"die Weiterfahrt, -en",việc đi tiếp,Informationen zur Weiterfahrt aufgrund technischer Probleme.,Thông tin về việc đi tiếp do trục trặc kỹ thuật.,Verkehr,B1;DTZ;Verkehr,
+1.140,aufgrund,Präposition,,"do, vì (lý do)",Aufgrund technischer Probleme.,Do trục trặc kỹ thuật.,Allgemein,B1;DTZ;Allgemein,+ Genitiv
+1.140,Hinweis,Substantiv,"der Hinweis, -e","chỉ dẫn, gợi ý",Es gibt keinen Hinweis darauf.,Không có chỉ dẫn nào về điều đó.,Allgemein,B1;DTZ;Allgemein,
+1.141,Sommerferien,Substantiv,die Sommerferien (Pl),kỳ nghỉ hè,Während der Sommerferien.,Trong kỳ nghỉ hè.,Bildung,B1;DTZ;Bildung,Pluraletantum
+1.141,in Betrieb,Redemittel,,đang hoạt động,Welche Straßenbahnen sind in Betrieb?,Tuyến xe điện nào đang hoạt động?,Verkehr,B1;DTZ;Verkehr,
+1.141,Linie,Substantiv,"die Linie, -n",tuyến,"Die Linien 1, 2 und 3 sind nicht in Betrieb.","Các tuyến 1, 2 và 3 không hoạt động.",Verkehr,B1;DTZ;Verkehr,
+1.142,Friseursalon,Substantiv,"der Friseursalon, -s",tiệm cắt tóc,Eine Terminänderung im Friseursalon.,Một thay đổi lịch hẹn ở tiệm cắt tóc.,Alltag,B1;DTZ;Alltag,
+1.142,Terminänderung,Substantiv,"die Terminänderung, -en",việc thay đổi lịch hẹn,Benachrichtigung zur Terminänderung.,Thông báo về thay đổi lịch hẹn.,Alltag,B1;DTZ;Alltag,
+1.142,wahrnehmen,Verb,nahm wahr - hat wahrgenommen,"thực hiện, nhận",Wann könnte sie den Termin wahrnehmen?,Khi nào cô ấy có thể thực hiện lịch hẹn?,Alltag,B1;DTZ;Alltag,trennbar
+1.142,übermorgen,Adverb,,ngày kia,Übermorgen um 17 Uhr.,Ngày kia lúc 17 giờ.,Allgemein,B1;DTZ;Allgemein,
+1.142,Benachrichtigung,Substantiv,"die Benachrichtigung, -en",thông báo,Benachrichtigung zur Terminänderung.,Thông báo về việc đổi lịch hẹn.,Allgemein,B1;DTZ;Allgemein,
+1.143,Ausweis,Substantiv,"der Ausweis, -e",giấy tờ tùy thân,Abholung eines neuen Ausweises im Bürgerbüro.,Lấy giấy tờ tùy thân mới ở văn phòng công dân.,Behörde,B1;DTZ;Behörde,
+1.143,Bürgerbüro,Substantiv,"das Bürgerbüro, -s",văn phòng công dân,Den Ausweis im Bürgerbüro abholen.,Lấy giấy tờ ở văn phòng công dân.,Behörde,B1;DTZ;Behörde,
+1.143,Abholung,Substantiv,"die Abholung, -en",việc đến lấy,Eine Abholung wäre möglich.,Việc đến lấy có thể được.,Behörde,B1;DTZ;Behörde,
+1.143,Umbauarbeiten,Substantiv,die Umbauarbeiten (Pl),công trình cải tạo,Das Bürgerbüro ist wegen Umbauarbeiten geschlossen.,Văn phòng công dân đóng cửa vì cải tạo.,Wohnen,B1;DTZ;Wohnen,
+1.143,Zeitspanne,Substantiv,"die Zeitspanne, -n",khoảng thời gian,Die einzige mögliche Zeitspanne zur Abholung.,Khoảng thời gian duy nhất có thể đến lấy.,Allgemein,B1;DTZ;Allgemein,
+1.144,Kontonummer,Substantiv,"die Kontonummer, -n",số tài khoản,Die richtige Kontonummer mitteilen.,Thông báo số tài khoản chính xác.,Behörde,B1;DTZ;Behörde,
+1.144,mitteilen,Verb,teilte mit - hat mitgeteilt,thông báo,Die richtige Kontonummer mitteilen.,Thông báo số tài khoản đúng.,Allgemein,B1;DTZ;Allgemein,trennbar
+1.144,abbuchen,Verb,buchte ab - hat abgebucht,trừ tiền tự động,Damit die Beiträge abgebucht werden können.,Để các khoản phí có thể được trừ tự động.,Behörde,B1;DTZ;Behörde,trennbar
+1.144,Beitrag,Substantiv,"der Beitrag, Beiträge","khoản đóng góp, phí",Damit die Beiträge abgebucht werden können.,Để các khoản phí có thể được trừ.,Behörde,B1;DTZ;Behörde,
+1.144,Versicherungsschutz,Substantiv,der Versicherungsschutz,sự bảo hiểm bảo vệ,Damit der Versicherungsschutz besteht.,Để sự bảo hiểm còn hiệu lực.,Behörde,B1;DTZ;Behörde,thường số ít
+1.144,Korrektur,Substantiv,"die Korrektur, -en",sự sửa đổi,Es geht um eine Korrektur.,Đây là về một sự sửa đổi.,Allgemein,B1;DTZ;Allgemein,
+1.145,Wunschkonzert,Substantiv,"das Wunschkonzert, -e",chương trình nhạc theo yêu cầu,Auf WDR 2 läuft das Wunschkonzert.,Trên WDR 2 phát chương trình nhạc theo yêu cầu.,Freizeit,B1;DTZ;Freizeit,
+1.145,Hörer,Substantiv,"der Hörer, -",thính giả,Die Wünsche der Hörer werden gespielt.,Yêu cầu của thính giả được phát.,Freizeit,B1;DTZ;Freizeit,
+1.145,Hörspielkrimi,Substantiv,"der Hörspielkrimi, -s",kịch radio trinh thám,Auf WDR 1 ist ein Hörspielkrimi zu hören.,Trên WDR 1 phát kịch radio trinh thám.,Freizeit,B1;DTZ;Freizeit,
+1.145,Dokumentation,Substantiv,"die Dokumentation, -en",phim tài liệu,Eine Dokumentation über die Arbeit der Bundesregierung.,Phim tài liệu về công việc của chính phủ liên bang.,Gesellschaft,B1;DTZ;Gesellschaft,
+1.145,Bundesregierung,Substantiv,"die Bundesregierung, -en",chính phủ liên bang,Eine Dokumentation über die Bundesregierung.,Phim tài liệu về chính phủ liên bang.,Gesellschaft,B1;DTZ;Gesellschaft,
+1.145,ausstrahlen,Verb,strahlte aus - hat ausgestrahlt,phát sóng,Auf WDR 3 wird eine Dokumentation ausgestrahlt.,Trên WDR 3 phát sóng một phim tài liệu.,Freizeit,B1;DTZ;Freizeit,trennbar
+1.146,einnehmen,Verb,nahm ein - hat eingenommen,"uống (thuốc), nhận",Wie sollen Erwachsene das Medikament einnehmen?,Người lớn uống thuốc thế nào?,Gesundheit,B1;DTZ;Gesundheit,trennbar
+1.146,Erwachsene,Substantiv,"der/die Erwachsene, -n",người lớn,Erwachsene sollen das Medikament mit Wasser einnehmen.,Người lớn nên uống thuốc với nước.,Gesundheit,B1;DTZ;Gesundheit,
+1.146,Zustimmung,Substantiv,"die Zustimmung, -en",sự đồng ý,Die Zustimmung des Arztes ist erforderlich.,Cần có sự đồng ý của bác sĩ.,Gesundheit,B1;DTZ;Gesundheit,
+1.146,zustimmen,Verb,stimmte zu - hat zugestimmt,đồng ý,Nur wenn die Ärztin zustimmt.,Chỉ khi bác sĩ đồng ý.,Allgemein,B1;DTZ;Allgemein,trennbar
+1.146,erforderlich,Adjektiv,,"cần thiết, bắt buộc",Die Zustimmung eines Arztes ist erforderlich.,Cần có sự đồng ý của bác sĩ.,Allgemein,B1;DTZ;Allgemein,
+1.146,Medikament,Substantiv,"das Medikament, -e","thuốc, dược phẩm",Das Medikament mit Wasser einnehmen.,Uống thuốc với nước.,Gesundheit,B1;DTZ;Gesundheit,
+1.147,Arztpraxis,Substantiv,"die Arztpraxis, -praxen",phòng khám bác sĩ,Eine Arztpraxis ruft an.,Một phòng khám bác sĩ gọi đến.,Gesundheit,B1;DTZ;Gesundheit,
+1.147,Apotheke,Substantiv,"die Apotheke, -n",nhà thuốc,Es ist keine Apotheke.,Đó không phải nhà thuốc.,Gesundheit,B1;DTZ;Gesundheit,
+1.147,anrufen,Verb,rief an - hat angerufen,gọi điện,Wer ruft an?,Ai gọi đến?,Alltag,B1;DTZ;Alltag,trennbar
+1.147,hinweisen,Verb,wies hin - hat hingewiesen,"chỉ ra, nhắc đến","Das Büro weist darauf hin, dass es sich um eine Arztpraxis handelt.",Văn phòng chỉ ra rằng đây là phòng khám bác sĩ.,Allgemein,B1;DTZ;Allgemein,trennbar; auf + Akk
+1.147,es handelt sich um,Redemittel,,"đây là, đó là về",Es handelt sich um eine Arztpraxis.,Đây là một phòng khám bác sĩ.,Allgemein,B1;DTZ;Allgemein,

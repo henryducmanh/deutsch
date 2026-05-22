@@ -1,0 +1,180 @@
+{
+  "4.1": {
+    "vocab": [
+      {"wort": "Lernportal", "wortart": "Substantiv", "formen": "das Lernportal, -e", "bedeutung": "cổng học trực tuyến", "beispiel": "ein interaktives Lernportal, das Sie bequem am Laptop oder Smartphone nutzen können", "uebersetzung": "một cổng học trực tuyến tương tác, bạn có thể dùng tiện lợi trên laptop hoặc điện thoại", "thema": "Bildung", "notes": ""},
+      {"wort": "Probeaufgabe", "wortart": "Substantiv", "formen": "die Probeaufgabe, -n", "bedeutung": "bài tập thử", "beispiel": "Über die Startseite gelangen Sie zu kostenlosen Probeaufgaben für alle Fertigkeiten", "uebersetzung": "Qua trang chủ bạn truy cập các bài tập thử miễn phí cho tất cả các kỹ năng", "thema": "Bildung", "notes": ""},
+      {"wort": "Fertigkeit", "wortart": "Substantiv", "formen": "die Fertigkeit, -en", "bedeutung": "kỹ năng", "beispiel": "kostenlosen Probeaufgaben für alle Fertigkeiten – Lesen, Hören, Schreiben und Sprechen", "uebersetzung": "bài tập thử miễn phí cho mọi kỹ năng - Đọc, Nghe, Viết và Nói", "thema": "Bildung", "notes": ""},
+      {"wort": "Grammatikübersicht", "wortart": "Substantiv", "formen": "die Grammatikübersicht, -en", "bedeutung": "bảng tổng quan ngữ pháp", "beispiel": "Außerdem finden Sie dort täglich aktualisierte Grammatikübersichten", "uebersetzung": "Ngoài ra bạn tìm thấy các bảng tổng quan ngữ pháp cập nhật hàng ngày", "thema": "Bildung", "notes": ""},
+      {"wort": "Beschwerdebrief", "wortart": "Substantiv", "formen": "der Beschwerdebrief, -e", "bedeutung": "thư khiếu nại", "beispiel": "nützliche Tipps zum Formulieren gelungener Beschwerdebriefe", "uebersetzung": "lời khuyên hữu ích về cách viết thư khiếu nại tốt", "thema": "Konsum", "notes": ""},
+      {"wort": "sich registrieren", "wortart": "Verb", "formen": "registrierte sich - hat sich registriert", "bedeutung": "đăng ký (tài khoản)", "beispiel": "Wer noch mehr möchte, kann sich registrieren", "uebersetzung": "Ai muốn nhiều hơn có thể đăng ký", "thema": "Konsum", "notes": "reflexiv"},
+      {"wort": "Motivationsschreiben", "wortart": "Substantiv", "formen": "das Motivationsschreiben, -", "bedeutung": "thư động lực (xin việc)", "beispiel": "ein individuelles Lebenslauf- und Motivationsschreiben-Paket", "uebersetzung": "gói CV và thư động lực cá nhân hóa", "thema": "Arbeit", "notes": ""},
+      {"wort": "individuell", "wortart": "Adjektiv", "formen": "individuell", "bedeutung": "cá nhân hóa, riêng biệt", "beispiel": "entwickeln wir gemeinsam mit Ihnen ein individuelles Lebenslauf- und Motivationsschreiben-Paket", "uebersetzung": "chúng tôi cùng bạn xây dựng gói CV và thư động lực cá nhân hóa", "thema": "Arbeit", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "sich gezielt auf etwas vorbereiten", "chunk_vn": "chuẩn bị có chủ đích cho điều gì", "type": "Kollokation", "topic": "Bildung", "note": "vorbereiten auf + Akk"},
+      {"chunk_de": "Feedback geben lassen", "chunk_vn": "yêu cầu được nhận phản hồi", "type": "Kollokation", "topic": "Bildung", "note": "lassen + Inf"}
+    ]
+  },
+  "4.2": {
+    "vocab": [
+      {"wort": "Bibliotheksausweis", "wortart": "Substantiv", "formen": "der Bibliotheksausweis, -e", "bedeutung": "thẻ thư viện", "beispiel": "Wie bekomme ich einen Bibliotheksausweis?", "uebersetzung": "Làm sao để có thẻ thư viện?", "thema": "Bildung", "notes": ""},
+      {"wort": "Registrierung", "wortart": "Substantiv", "formen": "die Registrierung, -en", "bedeutung": "việc đăng ký", "beispiel": "Die Registrierung ist nur vor Ort und mit einem gültigen Ausweisdokument möglich", "uebersetzung": "Việc đăng ký chỉ có thể thực hiện tại chỗ và với giấy tờ tùy thân còn hiệu lực", "thema": "Behörde", "notes": ""},
+      {"wort": "gültig", "wortart": "Adjektiv", "formen": "gültig", "bedeutung": "có hiệu lực", "beispiel": "nur vor Ort und mit einem gültigen Ausweisdokument möglich", "uebersetzung": "chỉ tại chỗ và với giấy tờ tùy thân còn hiệu lực", "thema": "Behörde", "notes": ""},
+      {"wort": "Zustimmung", "wortart": "Substantiv", "formen": "die Zustimmung, -en", "bedeutung": "sự đồng ý/chấp thuận", "beispiel": "Kinder und Jugendliche unter 16 Jahren benötigen eine schriftliche Zustimmung ihrer Eltern", "uebersetzung": "Trẻ em và thanh thiếu niên dưới 16 tuổi cần sự đồng ý bằng văn bản của bố mẹ", "thema": "Behörde", "notes": ""},
+      {"wort": "übertragbar", "wortart": "Adjektiv", "formen": "übertragbar", "bedeutung": "có thể chuyển nhượng", "beispiel": "Ist mein Bibliotheksausweis übertragbar?", "uebersetzung": "Thẻ thư viện của tôi có thể chuyển nhượng không?", "thema": "Behörde", "notes": ""},
+      {"wort": "personengebunden", "wortart": "Adjektiv", "formen": "personengebunden", "bedeutung": "gắn với cá nhân, không chuyển nhượng được", "beispiel": "Der Ausweis ist personengebunden und darf nicht weitergegeben werden", "uebersetzung": "Thẻ này gắn với cá nhân và không được phép chuyển cho người khác", "thema": "Behörde", "notes": ""},
+      {"wort": "ausleihen", "wortart": "Verb", "formen": "lieh aus - hat ausgeliehen", "bedeutung": "mượn", "beispiel": "Wie lange darf ich Medien ausleihen?", "uebersetzung": "Tôi được phép mượn tài liệu trong bao lâu?", "thema": "Bildung", "notes": "trennbar"},
+      {"wort": "Leihfrist", "wortart": "Substantiv", "formen": "die Leihfrist, -en", "bedeutung": "thời hạn mượn", "beispiel": "Kann ich die Leihfrist verlängern?", "uebersetzung": "Tôi có thể gia hạn thời gian mượn không?", "thema": "Bildung", "notes": ""},
+      {"wort": "verlängern", "wortart": "Verb", "formen": "verlängerte - hat verlängert", "bedeutung": "gia hạn", "beispiel": "Sie können Bücher und andere Medien bis zu zwei Mal verlängern", "uebersetzung": "Bạn có thể gia hạn sách và tài liệu khác tối đa hai lần", "thema": "Behörde", "notes": ""},
+      {"wort": "Bearbeitungsgebühr", "wortart": "Substantiv", "formen": "die Bearbeitungsgebühr, -en", "bedeutung": "phí xử lý", "beispiel": "Zusätzlich fällt eine Bearbeitungsgebühr in Höhe von 7 Euro an", "uebersetzung": "Ngoài ra phát sinh phí xử lý là 7 Euro", "thema": "Konsum", "notes": ""},
+      {"wort": "fristgerecht", "wortart": "Adjektiv", "formen": "fristgerecht", "bedeutung": "đúng hạn", "beispiel": "Zahlen Sie bitte fristgerecht, sonst kann der Ausweis vorübergehend gesperrt werden", "uebersetzung": "Vui lòng thanh toán đúng hạn, nếu không thẻ có thể bị khóa tạm thời", "thema": "Behörde", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "darf nicht weitergegeben werden", "chunk_vn": "không được phép chuyển cho người khác", "type": "Redemittel", "topic": "Behörde", "note": ""},
+      {"chunk_de": "in Höhe von ...", "chunk_vn": "với mức/trị giá ...", "type": "Wendung", "topic": "Behörde", "note": ""},
+      {"chunk_de": "Bei Verlust oder Beschädigung", "chunk_vn": "trong trường hợp mất hoặc hư hỏng", "type": "Redemittel", "topic": "Behörde", "note": ""}
+    ]
+  },
+  "4.3": {
+    "vocab": [
+      {"wort": "Kaution", "wortart": "Substantiv", "formen": "die Kaution, -en", "bedeutung": "tiền đặt cọc", "beispiel": "Nach einmaliger Online-Registrierung sowie einer Kaution von 10 Euro erhalten Sie ein Startguthaben", "uebersetzung": "Sau khi đăng ký online một lần và đặt cọc 10 Euro, bạn nhận số dư khởi đầu", "thema": "Konsum", "notes": ""},
+      {"wort": "Startguthaben", "wortart": "Substantiv", "formen": "das Startguthaben, -", "bedeutung": "số dư khởi đầu", "beispiel": "erhalten Sie ein Startguthaben von 15 Euro", "uebersetzung": "bạn nhận số dư khởi đầu là 15 Euro", "thema": "Konsum", "notes": ""},
+      {"wort": "Tarif", "wortart": "Substantiv", "formen": "der Tarif, -e", "bedeutung": "biểu giá", "beispiel": "Tarife: Standardpreis 1 Euro je angefangene 30 Minuten", "uebersetzung": "Biểu giá: giá chuẩn 1 Euro cho mỗi 30 phút đã bắt đầu", "thema": "Konsum", "notes": ""},
+      {"wort": "entsperren", "wortart": "Verb", "formen": "entsperrte - hat entsperrt", "bedeutung": "mở khóa", "beispiel": "Alle Räder werden über einen QR-Code am Lenker entsperrt", "uebersetzung": "Tất cả xe được mở khóa qua mã QR trên tay lái", "thema": "Verkehr", "notes": ""},
+      {"wort": "andocken", "wortart": "Verb", "formen": "dockte an - hat angedockt", "bedeutung": "gắn/cắm vào trạm", "beispiel": "Zwischen 0 Uhr und 5 Uhr müssen alle Räder an eine Station angedockt sein", "uebersetzung": "Từ 0 đến 5 giờ tất cả xe phải được gắn vào trạm", "thema": "Verkehr", "notes": "trennbar"},
+      {"wort": "defekt", "wortart": "Adjektiv", "formen": "defekt", "bedeutung": "hỏng, hư", "beispiel": "Defekte Fahrräder melden Sie direkt in der App", "uebersetzung": "Xe đạp hỏng bạn báo trực tiếp qua app", "thema": "Verkehr", "notes": ""},
+      {"wort": "melden", "wortart": "Verb", "formen": "meldete - hat gemeldet", "bedeutung": "báo cáo, thông báo", "beispiel": "Defekte Fahrräder melden Sie direkt in der App", "uebersetzung": "Xe đạp hỏng bạn báo trực tiếp qua app", "thema": "Behörde", "notes": ""},
+      {"wort": "freischalten", "wortart": "Verb", "formen": "schaltete frei - hat freigeschaltet", "bedeutung": "kích hoạt", "beispiel": "kann sich im Premium-Bereich individuelle Trainingspläne freischalten lassen", "uebersetzung": "có thể kích hoạt kế hoạch tập luyện cá nhân trong khu Premium", "thema": "Konsum", "notes": "trennbar"}
+    ],
+    "chunks": [
+      {"chunk_de": "rund um die Uhr", "chunk_vn": "suốt 24/24 giờ", "type": "Wendung", "topic": "Allgemein", "note": ""},
+      {"chunk_de": "Bitte beachten Sie folgende Regeln", "chunk_vn": "Xin lưu ý các quy định sau", "type": "Redemittel", "topic": "Behörde", "note": ""},
+      {"chunk_de": "je angefangene 30 Minuten", "chunk_vn": "mỗi 30 phút đã bắt đầu", "type": "Wendung", "topic": "Konsum", "note": ""}
+    ]
+  },
+  "4.4": {
+    "vocab": [
+      {"wort": "Berufsalltag", "wortart": "Substantiv", "formen": "der Berufsalltag, -e", "bedeutung": "đời sống công việc thường nhật", "beispiel": "Auch im stressigen Berufsalltag kann man etwas für die eigene Gesundheit tun", "uebersetzung": "Ngay trong cuộc sống công việc căng thẳng cũng có thể làm gì đó cho sức khỏe", "thema": "Arbeit", "notes": ""},
+      {"wort": "leistungsfähig", "wortart": "Adjektiv", "formen": "leistungsfähig", "bedeutung": "có năng lực, làm việc hiệu quả", "beispiel": "So bleiben Sie fit und leistungsfähig", "uebersetzung": "Như vậy bạn giữ được sức khỏe và năng lực làm việc", "thema": "Arbeit", "notes": ""},
+      {"wort": "versorgen", "wortart": "Verb", "formen": "versorgte - hat versorgt", "bedeutung": "cung cấp, nuôi dưỡng", "beispiel": "Wer gleich morgens etwas isst, versorgt Körper und Gehirn mit Energie", "uebersetzung": "Ai ăn ngay vào buổi sáng sẽ cung cấp năng lượng cho cơ thể và não bộ", "thema": "Gesundheit", "notes": "versorgen mit + Dat"},
+      {"wort": "auslassen", "wortart": "Verb", "formen": "ließ aus - hat ausgelassen", "bedeutung": "bỏ qua, bỏ bữa", "beispiel": "Ein kleines Frühstück sollten Sie aber nicht ganz auslassen", "uebersetzung": "Nhưng đừng hoàn toàn bỏ bữa sáng nhỏ", "thema": "Gesundheit", "notes": "trennbar"},
+      {"wort": "reichhaltig", "wortart": "Adjektiv", "formen": "reichhaltig", "bedeutung": "thịnh soạn, nhiều món", "beispiel": "Verzichten Sie auf sehr reichhaltige Gerichte, denn sie machen träge", "uebersetzung": "Hãy từ bỏ những món quá thịnh soạn, vì chúng làm uể oải", "thema": "Gesundheit", "notes": ""},
+      {"wort": "träge", "wortart": "Adjektiv", "formen": "träge", "bedeutung": "uể oải, chậm chạp", "beispiel": "Verzichten Sie auf sehr reichhaltige Gerichte, denn sie machen träge", "uebersetzung": "Hãy từ bỏ những món quá thịnh soạn, vì chúng làm uể oải", "thema": "Gesundheit", "notes": ""},
+      {"wort": "belasten", "wortart": "Verb", "formen": "belastete - hat belastet", "bedeutung": "gây áp lực, gánh nặng cho", "beispiel": "Das hält lange satt und belastet den Magen nicht", "uebersetzung": "Cái đó no lâu và không làm nặng dạ dày", "thema": "Gesundheit", "notes": ""},
+      {"wort": "abschalten", "wortart": "Verb", "formen": "schaltete ab - hat abgeschaltet", "bedeutung": "thư giãn, ngắt khỏi công việc", "beispiel": "Wer in der Pause abschalten möchte, sollte bewusst raus aus dem Arbeitsmodus", "uebersetzung": "Ai muốn thư giãn trong giờ giải lao nên chủ động ra khỏi chế độ làm việc", "thema": "Arbeit", "notes": "trennbar"},
+      {"wort": "vermeiden", "wortart": "Verb", "formen": "vermied - hat vermieden", "bedeutung": "tránh", "beispiel": "Vermeiden Sie Diskussionen über schwierige Themen", "uebersetzung": "Hãy tránh tranh luận về các chủ đề khó", "thema": "Arbeit", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "Verzichten Sie auf + Akk", "chunk_vn": "Hãy từ bỏ/không dùng điều gì", "type": "Redemittel", "topic": "Gesundheit", "note": ""},
+      {"chunk_de": "Mahlzeiten zu sich nehmen", "chunk_vn": "dùng bữa, ăn", "type": "Wendung", "topic": "Gesundheit", "note": "formal hơn essen"}
+    ]
+  },
+  "4.5": {
+    "vocab": [
+      {"wort": "Bedienungsanleitung", "wortart": "Substantiv", "formen": "die Bedienungsanleitung, -en", "bedeutung": "hướng dẫn sử dụng", "beispiel": "Bedienungsanleitung – SmartCall Z1", "uebersetzung": "Hướng dẫn sử dụng - SmartCall Z1", "thema": "Konsum", "notes": ""},
+      {"wort": "Mobilgerät", "wortart": "Substantiv", "formen": "das Mobilgerät, -e", "bedeutung": "thiết bị di động", "beispiel": "Willkommen zu Ihrem neuen Mobilgerät!", "uebersetzung": "Chào mừng đến với thiết bị di động mới của bạn!", "thema": "Konsum", "notes": ""},
+      {"wort": "verfügen", "wortart": "Verb", "formen": "verfügte - hat verfügt", "bedeutung": "có, sở hữu (tính năng)", "beispiel": "Es verfügt über eine 2-Megapixel-Kamera für spontane Aufnahmen", "uebersetzung": "Nó có một camera 2 megapixel cho ảnh chụp ngẫu hứng", "thema": "Konsum", "notes": "verfügen über + Akk"},
+      {"wort": "Handhabung", "wortart": "Substantiv", "formen": "die Handhabung, -en", "bedeutung": "cách thao tác, vận hành", "beispiel": "Schäden, die durch falsche Handhabung entstehen, sind nicht von der Garantie abgedeckt", "uebersetzung": "Hư hỏng do thao tác sai không được bảo hành chi trả", "thema": "Konsum", "notes": ""},
+      {"wort": "Garantie", "wortart": "Substantiv", "formen": "die Garantie, -n", "bedeutung": "bảo hành", "beispiel": "sind nicht von der Garantie abgedeckt", "uebersetzung": "không được bảo hành chi trả", "thema": "Konsum", "notes": ""},
+      {"wort": "einsetzen", "wortart": "Verb", "formen": "setzte ein - hat eingesetzt", "bedeutung": "lắp vào, đặt vào", "beispiel": "Öffnen Sie die Rückseite des Geräts und setzen Sie zuerst Ihre SIM-Karte ein", "uebersetzung": "Mở mặt sau thiết bị và lắp SIM trước", "thema": "Konsum", "notes": "trennbar"},
+      {"wort": "aufladen", "wortart": "Verb", "formen": "lud auf - hat aufgeladen", "bedeutung": "sạc (pin)", "beispiel": "Laden Sie das Gerät beim ersten Mal bitte mindestens drei Stunden lang auf", "uebersetzung": "Sạc thiết bị lần đầu tối thiểu ba tiếng", "thema": "Konsum", "notes": "trennbar"},
+      {"wort": "entfernen", "wortart": "Verb", "formen": "entfernte - hat entfernt", "bedeutung": "tháo ra, gỡ bỏ", "beispiel": "Bitte entfernen Sie den Akku zukünftig nur bei ausgeschaltetem Zustand", "uebersetzung": "Tương lai vui lòng chỉ tháo pin khi thiết bị đã tắt", "thema": "Konsum", "notes": ""},
+      {"wort": "ausgeschaltet", "wortart": "Adjektiv", "formen": "ausgeschaltet", "bedeutung": "đã tắt", "beispiel": "Bitte entfernen Sie den Akku zukünftig nur bei ausgeschaltetem Zustand", "uebersetzung": "Vui lòng chỉ tháo pin khi thiết bị đã tắt", "thema": "Konsum", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "Bevor Sie das Gerät verwenden, beachten Sie ...", "chunk_vn": "Trước khi sử dụng thiết bị, hãy lưu ý ...", "type": "Redemittel", "topic": "Konsum", "note": "câu hướng dẫn formal"},
+      {"chunk_de": "von der Garantie abgedeckt sein", "chunk_vn": "được bảo hành chi trả", "type": "Kollokation", "topic": "Konsum", "note": ""},
+      {"chunk_de": "bei ausgeschaltetem Zustand", "chunk_vn": "khi thiết bị đang tắt", "type": "Wendung", "topic": "Konsum", "note": ""}
+    ]
+  },
+  "4.6": {
+    "vocab": [
+      {"wort": "Versandbedingungen", "wortart": "Substantiv", "formen": "die Versandbedingungen (Pl.)", "bedeutung": "điều kiện vận chuyển", "beispiel": "Allgemeine Versandbedingungen (AVB) der MediaBox GmbH", "uebersetzung": "Điều kiện vận chuyển chung của công ty MediaBox", "thema": "Konsum", "notes": ""},
+      {"wort": "Bestellung", "wortart": "Substantiv", "formen": "die Bestellung, -en", "bedeutung": "đơn đặt hàng", "beispiel": "Sobald Sie im Online-Shop von MediaBox eine Bestellung aufgegeben haben", "uebersetzung": "Ngay khi bạn đặt một đơn hàng tại cửa hàng online", "thema": "Konsum", "notes": "eine Bestellung aufgeben"},
+      {"wort": "Eingangsbestätigung", "wortart": "Substantiv", "formen": "die Eingangsbestätigung, -en", "bedeutung": "xác nhận đã nhận đơn", "beispiel": "erhalten Sie umgehend eine automatische Eingangsbestätigung per E-Mail", "uebersetzung": "bạn sẽ nhận được xác nhận đơn tự động qua email ngay lập tức", "thema": "Konsum", "notes": ""},
+      {"wort": "Rückgaberecht", "wortart": "Substantiv", "formen": "das Rückgaberecht, -e", "bedeutung": "quyền trả hàng", "beispiel": "gewährt MediaBox ein freiwilliges Rückgaberecht von bis zu 30 Tagen ab Erhalt", "uebersetzung": "MediaBox cho phép quyền trả hàng tự nguyện đến 30 ngày kể từ khi nhận", "thema": "Konsum", "notes": ""},
+      {"wort": "Voraussetzung", "wortart": "Substantiv", "formen": "die Voraussetzung, -en", "bedeutung": "điều kiện tiên quyết", "beispiel": "Voraussetzung ist, dass die Ware vollständig, unbenutzt und unbeschädigt ist", "uebersetzung": "Điều kiện là hàng phải đầy đủ, chưa qua sử dụng và không hư hỏng", "thema": "Konsum", "notes": ""},
+      {"wort": "unbeschädigt", "wortart": "Adjektiv", "formen": "unbeschädigt", "bedeutung": "không hư hỏng, nguyên vẹn", "beispiel": "dass die Ware vollständig, unbenutzt und unbeschädigt ist", "uebersetzung": "rằng hàng phải đầy đủ, chưa qua sử dụng và không hư hỏng", "thema": "Konsum", "notes": ""},
+      {"wort": "Anschrift", "wortart": "Substantiv", "formen": "die Anschrift, -en", "bedeutung": "địa chỉ", "beispiel": "Wir liefern an die von Ihnen angegebene Anschrift", "uebersetzung": "Chúng tôi giao hàng đến địa chỉ bạn đã cung cấp", "thema": "Konsum", "notes": ""},
+      {"wort": "zustellen", "wortart": "Verb", "formen": "stellte zu - hat zugestellt", "bedeutung": "giao (hàng) tới nơi", "beispiel": "Kann die Sendung dort nicht zugestellt werden, weil niemand angetroffen wird", "uebersetzung": "Nếu lô hàng không thể giao vì không có ai ở nhà", "thema": "Konsum", "notes": "trennbar"},
+      {"wort": "abholen", "wortart": "Verb", "formen": "holte ab - hat abgeholt", "bedeutung": "đến lấy, nhận", "beispiel": "Während dieser Zeit müssen Sie es selbst abholen", "uebersetzung": "Trong thời gian này bạn phải tự đến lấy", "thema": "Konsum", "notes": "trennbar"},
+      {"wort": "gewähren", "wortart": "Verb", "formen": "gewährte - hat gewährt", "bedeutung": "cấp, cho phép (quyền lợi)", "beispiel": "gewährt MediaBox ein freiwilliges Rückgaberecht von bis zu 30 Tagen", "uebersetzung": "MediaBox cho phép quyền trả hàng tự nguyện đến 30 ngày", "thema": "Konsum", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "eine Bestellung aufgeben", "chunk_vn": "đặt một đơn hàng", "type": "Kollokation", "topic": "Einkauf", "note": ""},
+      {"chunk_de": "Voraussetzung ist, dass ...", "chunk_vn": "Điều kiện tiên quyết là ...", "type": "Redemittel", "topic": "Einkauf", "note": ""},
+      {"chunk_de": "ab Erhalt", "chunk_vn": "kể từ khi nhận hàng", "type": "Wendung", "topic": "Einkauf", "note": ""}
+    ]
+  },
+  "4.7": {
+    "vocab": [
+      {"wort": "Pinnwand", "wortart": "Substantiv", "formen": "die Pinnwand, -wände", "bedeutung": "bảng tin", "beispiel": "Mit nur wenigen Klicks können Sie auf unserer Pinnwand kaufen oder verkaufen", "uebersetzung": "Chỉ vài cú nhấp chuột bạn có thể mua hoặc bán trên bảng tin của chúng tôi", "thema": "Konsum", "notes": ""},
+      {"wort": "Lokalnachricht", "wortart": "Substantiv", "formen": "die Lokalnachricht, -en", "bedeutung": "tin tức địa phương", "beispiel": "nach passenden Jobs suchen und die neuesten Lokalnachrichten lesen", "uebersetzung": "tìm công việc phù hợp và đọc tin tức địa phương mới nhất", "thema": "Allgemein", "notes": ""},
+      {"wort": "Ausstellung", "wortart": "Substantiv", "formen": "die Ausstellung, -en", "bedeutung": "triển lãm", "beispiel": "wann spannende Ausstellungen, Konzerte oder Stadtfeste stattfinden", "uebersetzung": "khi nào có các triển lãm, hòa nhạc hoặc lễ hội phố thú vị", "thema": "Freizeit", "notes": ""},
+      {"wort": "Stellenanzeige", "wortart": "Substantiv", "formen": "die Stellenanzeige, -n", "bedeutung": "tin tuyển dụng", "beispiel": "senden wir Ihnen die neuesten Stellenanzeigen aus Ihrer Branche direkt per E-Mail", "uebersetzung": "chúng tôi gửi cho bạn các tin tuyển dụng mới nhất trong ngành của bạn qua email", "thema": "Arbeit", "notes": ""},
+      {"wort": "Branche", "wortart": "Substantiv", "formen": "die Branche, -n", "bedeutung": "ngành nghề", "beispiel": "die neuesten Stellenanzeigen aus Ihrer Branche", "uebersetzung": "các tin tuyển dụng mới nhất trong ngành của bạn", "thema": "Arbeit", "notes": ""},
+      {"wort": "Abo-Bereich", "wortart": "Substantiv", "formen": "der Abo-Bereich, -e", "bedeutung": "khu vực gói thuê bao", "beispiel": "Im Abo-Bereich stellen Sie sich Ihr persönliches Informationspaket zusammen", "uebersetzung": "Trong khu Abo bạn tự lập gói thông tin cá nhân", "thema": "Konsum", "notes": ""},
+      {"wort": "verpassen", "wortart": "Verb", "formen": "verpasste - hat verpasst", "bedeutung": "bỏ lỡ", "beispiel": "So verpassen Sie kein Angebot in Ihrer Nähe", "uebersetzung": "Như vậy bạn không bỏ lỡ ưu đãi nào ở gần bạn", "thema": "Konsum", "notes": ""},
+      {"wort": "kostenfrei", "wortart": "Adjektiv", "formen": "kostenfrei", "bedeutung": "miễn phí", "beispiel": "erhalten Sie kostenfrei unseren aktuellen Newsletter", "uebersetzung": "bạn nhận bản tin mới nhất của chúng tôi miễn phí", "thema": "Konsum", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "auf dem Laufenden bleiben", "chunk_vn": "luôn cập nhật thông tin mới nhất", "type": "Wendung", "topic": "Allgemein", "note": ""},
+      {"chunk_de": "sich etwas zusammenstellen", "chunk_vn": "tự ghép/tạo điều gì theo ý mình", "type": "Kollokation", "topic": "Einkauf", "note": "reflexiv"}
+    ]
+  },
+  "4.8": {
+    "vocab": [
+      {"wort": "Wirkstoff", "wortart": "Substantiv", "formen": "der Wirkstoff, -e", "bedeutung": "hoạt chất", "beispiel": "Wirkstoff: Trockenextrakt aus Baldrianwurzel", "uebersetzung": "Hoạt chất: chiết xuất khô từ rễ Baldrian", "thema": "Gesundheit", "notes": ""},
+      {"wort": "rezeptfrei", "wortart": "Adjektiv", "formen": "rezeptfrei", "bedeutung": "không cần đơn thuốc", "beispiel": "Erhältlich: Rezeptfrei in Apotheken", "uebersetzung": "Có thể mua: Không cần đơn thuốc tại nhà thuốc", "thema": "Gesundheit", "notes": ""},
+      {"wort": "Linderung", "wortart": "Substantiv", "formen": "die Linderung, -en", "bedeutung": "sự giảm nhẹ (triệu chứng)", "beispiel": "Valerina N wird zur Linderung von nervöser Unruhe eingesetzt", "uebersetzung": "Valerina N được dùng để giảm sự bồn chồn", "thema": "Gesundheit", "notes": ""},
+      {"wort": "Einnahme", "wortart": "Substantiv", "formen": "die Einnahme, -n", "bedeutung": "việc uống thuốc", "beispiel": "entwickelt sich bei regelmäßiger Einnahme über mehrere Tage", "uebersetzung": "phát triển khi uống đều đặn trong nhiều ngày", "thema": "Gesundheit", "notes": ""},
+      {"wort": "überempfindlich", "wortart": "Adjektiv", "formen": "überempfindlich", "bedeutung": "quá mẫn cảm", "beispiel": "wenn Sie überempfindlich auf Baldrian oder andere Bestandteile reagieren", "uebersetzung": "nếu bạn quá mẫn cảm với Baldrian hoặc thành phần khác", "thema": "Gesundheit", "notes": "überempfindlich auf + Akk"},
+      {"wort": "Bestandteil", "wortart": "Substantiv", "formen": "der Bestandteil, -e", "bedeutung": "thành phần", "beispiel": "wenn Sie überempfindlich auf Baldrian oder andere Bestandteile reagieren", "uebersetzung": "nếu bạn quá mẫn cảm với Baldrian hoặc thành phần khác", "thema": "Gesundheit", "notes": ""},
+      {"wort": "Rücksprache", "wortart": "Substantiv", "formen": "die Rücksprache, -n", "bedeutung": "việc trao đổi, tham vấn", "beispiel": "Schwangere und Stillende sollten vor der Einnahme Rücksprache mit einem Arzt halten", "uebersetzung": "Phụ nữ mang thai và cho con bú nên tham vấn bác sĩ trước khi uống", "thema": "Gesundheit", "notes": "Rücksprache halten mit + Dat"},
+      {"wort": "Nebenwirkung", "wortart": "Substantiv", "formen": "die Nebenwirkung, -en", "bedeutung": "tác dụng phụ", "beispiel": "Welche Nebenwirkungen sind möglich?", "uebersetzung": "Có thể có những tác dụng phụ nào?", "thema": "Gesundheit", "notes": ""},
+      {"wort": "absetzen", "wortart": "Verb", "formen": "setzte ab - hat abgesetzt", "bedeutung": "ngưng (thuốc)", "beispiel": "Bei ungewöhnlichen Reaktionen sollten Sie das Präparat absetzen", "uebersetzung": "Khi có phản ứng bất thường, bạn nên ngưng sản phẩm", "thema": "Gesundheit", "notes": "trennbar"}
+    ],
+    "chunks": [
+      {"chunk_de": "darf nicht eingenommen werden, wenn ...", "chunk_vn": "không được uống nếu ...", "type": "Redemittel", "topic": "Gesundheit", "note": "Passiv"},
+      {"chunk_de": "ärztlichen Rat einholen", "chunk_vn": "xin lời khuyên bác sĩ", "type": "Kollokation", "topic": "Gesundheit", "note": ""},
+      {"chunk_de": "Rücksprache mit einem Arzt halten", "chunk_vn": "tham vấn với bác sĩ", "type": "Kollokation", "topic": "Gesundheit", "note": ""}
+    ]
+  },
+  "4.9": {
+    "vocab": [
+      {"wort": "Arzneimittel", "wortart": "Substantiv", "formen": "das Arzneimittel, -", "bedeutung": "thuốc, dược phẩm", "beispiel": "Dieses Arzneimittel ist ohne Rezept erhältlich", "uebersetzung": "Dược phẩm này có thể mua không cần đơn", "thema": "Gesundheit", "notes": ""},
+      {"wort": "Gebrauchsinformation", "wortart": "Substantiv", "formen": "die Gebrauchsinformation, -en", "bedeutung": "tờ hướng dẫn sử dụng (thuốc)", "beispiel": "muss aber genau nach Gebrauchsinformation angewendet werden", "uebersetzung": "nhưng phải được dùng đúng theo hướng dẫn sử dụng", "thema": "Gesundheit", "notes": ""},
+      {"wort": "lindern", "wortart": "Verb", "formen": "linderte - hat gelindert", "bedeutung": "làm giảm nhẹ (đau, triệu chứng)", "beispiel": "Grippalix forte lindert Erkältungssymptome, mäßige Schmerzen und Fieber", "uebersetzung": "Grippalix forte giảm triệu chứng cảm cúm, đau vừa và sốt", "thema": "Gesundheit", "notes": ""},
+      {"wort": "Allergie", "wortart": "Substantiv", "formen": "die Allergie, -n", "bedeutung": "dị ứng", "beispiel": "bei Allergie gegen Salicylate", "uebersetzung": "khi dị ứng với Salicylate", "thema": "Gesundheit", "notes": "Allergie gegen + Akk"},
+      {"wort": "Magengeschwür", "wortart": "Substantiv", "formen": "das Magengeschwür, -e", "bedeutung": "loét dạ dày", "beispiel": "bei Magen- oder Darmgeschwüren", "uebersetzung": "khi bị loét dạ dày hoặc ruột", "thema": "Gesundheit", "notes": ""},
+      {"wort": "stillen", "wortart": "Verb", "formen": "stillte - hat gestillt", "bedeutung": "cho con bú", "beispiel": "wenn Sie schwanger sind oder stillen", "uebersetzung": "nếu bạn đang mang thai hoặc cho con bú", "thema": "Familie", "notes": ""},
+      {"wort": "Übelkeit", "wortart": "Substantiv", "formen": "die Übelkeit (kein Pl.)", "bedeutung": "buồn nôn", "beispiel": "Mögliche Nebenwirkungen: Übelkeit | Durchfall", "uebersetzung": "Tác dụng phụ có thể: buồn nôn, tiêu chảy", "thema": "Gesundheit", "notes": ""},
+      {"wort": "Schlaflosigkeit", "wortart": "Substantiv", "formen": "die Schlaflosigkeit (kein Pl.)", "bedeutung": "mất ngủ", "beispiel": "leichter Blutdruckanstieg | Schlaflosigkeit", "uebersetzung": "tăng huyết áp nhẹ, mất ngủ", "thema": "Gesundheit", "notes": ""},
+      {"wort": "Dosierung", "wortart": "Substantiv", "formen": "die Dosierung, -en", "bedeutung": "liều lượng", "beispiel": "Dosierung: Erwachsene: 1–2 Portionsbeutel pro Gabe", "uebersetzung": "Liều: Người lớn: 1–2 gói mỗi lần dùng", "thema": "Gesundheit", "notes": ""},
+      {"wort": "Anweisung", "wortart": "Substantiv", "formen": "die Anweisung, -en", "bedeutung": "chỉ dẫn, chỉ định", "beispiel": "nur nach ärztlicher Anweisung erhalten", "uebersetzung": "chỉ được dùng theo chỉ định của bác sĩ", "thema": "Gesundheit", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "nach ärztlicher Anweisung", "chunk_vn": "theo chỉ định của bác sĩ", "type": "Redemittel", "topic": "Gesundheit", "note": ""},
+      {"chunk_de": "ohne Rezept erhältlich", "chunk_vn": "có thể mua mà không cần đơn thuốc", "type": "Redemittel", "topic": "Gesundheit", "note": ""},
+      {"chunk_de": "einen Arzt aufsuchen", "chunk_vn": "đến gặp bác sĩ", "type": "Kollokation", "topic": "Gesundheit", "note": "aufsuchen = besuchen formal"}
+    ]
+  },
+  "4.10": {
+    "vocab": [
+      {"wort": "Stromlieferung", "wortart": "Substantiv", "formen": "die Stromlieferung, -en", "bedeutung": "việc cung cấp điện", "beispiel": "Vertragsinfo – Stromlieferung mit Teilzahlung", "uebersetzung": "Thông tin hợp đồng - Cung cấp điện với trả góp", "thema": "Konsum", "notes": ""},
+      {"wort": "Teilzahlung", "wortart": "Substantiv", "formen": "die Teilzahlung, -en", "bedeutung": "trả góp", "beispiel": "Stromlieferung mit Teilzahlung", "uebersetzung": "Cung cấp điện với trả góp", "thema": "Konsum", "notes": ""},
+      {"wort": "Jahresrechnung", "wortart": "Substantiv", "formen": "die Jahresrechnung, -en", "bedeutung": "hóa đơn năm", "beispiel": "können Sie Ihre Jahresrechnung in Raten zahlen und hohe Nachzahlungen vermeiden", "uebersetzung": "bạn có thể trả hóa đơn năm theo đợt và tránh khoản trả thêm cao", "thema": "Konsum", "notes": ""},
+      {"wort": "Nachzahlung", "wortart": "Substantiv", "formen": "die Nachzahlung, -en", "bedeutung": "khoản phải trả thêm", "beispiel": "Ihre Jahresrechnung in Raten zahlen und hohe Nachzahlungen vermeiden", "uebersetzung": "trả hóa đơn năm theo đợt và tránh khoản trả thêm cao", "thema": "Konsum", "notes": ""},
+      {"wort": "Verbrauch", "wortart": "Substantiv", "formen": "der Verbrauch (kein Pl.)", "bedeutung": "mức tiêu thụ", "beispiel": "alle Haushalte mit einem durchschnittlichen Verbrauch von bis zu 3.500 Kilowattstunden pro Jahr", "uebersetzung": "tất cả hộ gia đình có mức tiêu thụ trung bình đến 3.500 kWh mỗi năm", "thema": "Wohnen", "notes": ""},
+      {"wort": "Verwaltungspauschale", "wortart": "Substantiv", "formen": "die Verwaltungspauschale, -n", "bedeutung": "phí quản lý trọn gói", "beispiel": "zusätzlich eine Verwaltungspauschale in Höhe von 12 Euro", "uebersetzung": "thêm phí quản lý trọn gói 12 Euro", "thema": "Konsum", "notes": ""},
+      {"wort": "Abschlag", "wortart": "Substantiv", "formen": "der Abschlag, -schläge", "bedeutung": "khoản thanh toán định kỳ (trả góp)", "beispiel": "Sie können selbst bestimmen, an welchem Tag im Monat der Abschlag abgebucht wird", "uebersetzung": "Bạn có thể tự quyết định ngày nào trong tháng khoản trả góp được khấu trừ", "thema": "Konsum", "notes": ""},
+      {"wort": "Kündigung", "wortart": "Substantiv", "formen": "die Kündigung, -en", "bedeutung": "việc hủy hợp đồng", "beispiel": "Kündigungen müssen mindestens vier Wochen vor Monatsende schriftlich beim Anbieter eingehen", "uebersetzung": "Đơn hủy phải đến nhà cung cấp bằng văn bản tối thiểu 4 tuần trước cuối tháng", "thema": "Konsum", "notes": ""},
+      {"wort": "Mindestvertragsdauer", "wortart": "Substantiv", "formen": "die Mindestvertragsdauer, -n", "bedeutung": "thời hạn hợp đồng tối thiểu", "beispiel": "Ein Wechsel des Stromanbieters ist nach Ablauf der Mindestvertragsdauer (12 Monate) jederzeit möglich", "uebersetzung": "Có thể đổi nhà cung cấp điện sau khi hết hạn hợp đồng tối thiểu (12 tháng)", "thema": "Konsum", "notes": ""}
+    ],
+    "chunks": [
+      {"chunk_de": "in Raten zahlen", "chunk_vn": "thanh toán trả góp", "type": "Kollokation", "topic": "Einkauf", "note": ""},
+      {"chunk_de": "unter zwei Bedingungen", "chunk_vn": "với hai điều kiện", "type": "Redemittel", "topic": "Behörde", "note": ""},
+      {"chunk_de": "nach Ablauf + Gen", "chunk_vn": "sau khi (thời hạn) kết thúc", "type": "Wendung", "topic": "Behörde", "note": ""}
+    ]
+  }
+}
