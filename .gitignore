@@ -1,0 +1,2 @@
+# AI task locks (local only, TTL 60min — không đẩy lên remote)
+.ai-locks/
