@@ -337,6 +337,54 @@ Curl probe pk=659048133: PATCH lên 250/1000/5000/20000/**100000** chars — ser
 
 ---
 
+## Phase K — Lessons CRUD
+
+Phase C/D/J chỉ xử lý **CARDS** (vocab từ rời). Phase K thêm CRUD cho **LESSONS** —
+học từ trong ngữ cảnh (đoạn văn highlight vàng) thay vì từ rời. CSV riêng `data/lingq_lessons.csv`.
+
+Chia 3 stage commit độc lập: **K1** list+delete · **K2** push text (Lesen) · **K3** push audio (Hören).
+
+### Endpoint LingQ (verified 2026-05-24, token thật + OPTIONS)
+
+| Thao tác | Method + URL | Ghi chú |
+|---|---|---|
+| LIST my lessons | `GET /api/v3/{lang}/search/?shelf=my_lessons` | Paginate qua `next` (KHÔNG có `count`). v3, khác base_url v2 → `LingqClient::v3Base()`. |
+| GET 1 lesson | `GET /api/v2/{lang}/lessons/{id}/` | Dùng cho delete preview fallback. |
+| DELETE | `DELETE /api/v2/{lang}/lessons/{id}/` | OPTIONS allow `DELETE`. 404 = already gone. |
+| CREATE | `POST /api/v2/{lang}/lessons/` | OPTIONS allow `POST`. Fields: `title,text,status,level,collection,tags,external_audio,duration,audio`(file). K2/K3. |
+
+### K1 — list + delete
+
+```cmd
+REM Sync toàn bộ lessons của user → data/lingq_lessons.csv (atomic, idempotent)
+C:\php\php74\php.exe module\lingq_sync\lessons_sync.php
+C:\php\php74\php.exe module\lingq_sync\lessons_sync.php --dry-run
+
+REM Xoá bài (DRY-RUN mặc định — chỉ in preview; cần --apply để xoá thật)
+C:\php\php74\php.exe module\lingq_sync\lessons_delete.php <id1> <id2> ...
+C:\php\php74\php.exe module\lingq_sync\lessons_delete.php <id1> --apply
+C:\php\php74\php.exe module\lingq_sync\lessons_delete.php <id1> --apply --no-resync
+```
+
+| File | Mô tả |
+|---|---|
+| `lessons_sync.php` | Paginated fetch `shelf=my_lessons` → `data/lingq_lessons.csv`. Idempotent: giữ `first_seen` + `source_local` + `words_count` cũ, bump `last_synced`. Removed (có trong CSV, mất trên web) → KHÔNG drop, chỉ đếm. |
+| `lessons_delete.php` | DRY-RUN default in preview (title/audio/unknown/course). `--apply`: snapshot backup `data/lingq_lessons_backup_<ts>.csv` → DELETE từng id (404 = already gone) → re-sync CSV (trừ `--no-resync`). |
+
+CSV `data/lingq_lessons.csv` (UTF-8 BOM, 10 cột, sort `lesson_id` asc):
+
+```
+lesson_id,course_id,title,language,audio_url,words_count,unknown_count,source_local,first_seen,last_synced
+```
+
+- `words_count`: **để trống** — endpoint `search?shelf=my_lessons` chỉ trả `newWordsCount` (→ `unknown_count`), không trả tổng word count. Per-lesson GET để lấy sẽ phá ngân sách 30s với 455 bài → cố ý bỏ. Chỉ set nếu push (K2/K3) ghi.
+- `source_local`: chỉ set khi push từ folder local (K2/K3). Sync preserve theo `lesson_id`. Dùng cho idempotency check + update khi text gốc đổi.
+- Log: `logs/lessons_YYYY-MM-DD.log`.
+
+Acceptance K1 (verified 2026-05-24): sync 455 bài/3 trang/7.4s; idempotent run #2 = New 0/Updated 0/Unchanged 455; delete dry-run preview OK (in-CSV + fallback getLesson cho id lạ → 404).
+
+---
+
 ## Tham chiếu
 
 - Spec đầy đủ Phase C: `docs/ai/tasks/LINGQ_SYNC_PROMPT.md`

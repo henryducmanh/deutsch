@@ -193,6 +193,133 @@ class LingqClient
         throw new RuntimeException("DELETE pk={$pk} unexpected HTTP {$resp['http_code']}");
     }
 
+    // -------------------------------------------------------------------------
+    // Phase K — Lessons CRUD (độc lập với CARD methods ở trên).
+    //
+    // Endpoint verified 2026-05-24 (token thật, GET/OPTIONS):
+    //   LIST   GET    /api/v3/{lang}/search/?shelf=my_lessons  (paginate qua 'next', KHÔNG có 'count')
+    //   GET    GET    /api/v2/{lang}/lessons/{id}/
+    //   DELETE DELETE /api/v2/{lang}/lessons/{id}/             (OPTIONS allow: GET,PUT,PATCH,DELETE)
+    //   CREATE POST   /api/v2/{lang}/lessons/                  (OPTIONS allow: GET,POST) — thêm ở K2/K3
+    // base_url trong config = .../api/v2; search endpoint là v3 → derive qua v3Base().
+    // -------------------------------------------------------------------------
+
+    /**
+     * Fetch toàn bộ lessons của user (shelf=my_lessons). Returns flat array of
+     * lesson dicts (raw search result — caller normalize).
+     *
+     * Search endpoint KHÔNG trả 'count' (khác /cards/) → paginate cho tới khi
+     * 'next' rỗng hoặc page trả 0 result. page_size kế thừa config.
+     */
+    public function fetchAllLessons()
+    {
+        $all = [];
+        $page = 1;
+        $pageSize = (int)$this->cfg['page_size'];
+        $lang = $this->cfg['language'];
+        $baseV3 = $this->v3Base();
+
+        while (true) {
+            $url = "{$baseV3}/{$lang}/search/?shelf=my_lessons&page={$page}&page_size={$pageSize}";
+            $start = microtime(true);
+            $resp = $this->requestWithRetry('GET', $url);
+            $ms = (int)round((microtime(true) - $start) * 1000);
+
+            if ($resp['http_code'] < 200 || $resp['http_code'] >= 300) {
+                $snippet = substr($resp['body'], 0, 200);
+                call_user_func($this->log, 'ERROR', "HTTP {$resp['http_code']} on {$url} — {$snippet}");
+                throw new RuntimeException("HTTP {$resp['http_code']} " . $this->httpReason($resp['http_code']) . " — {$snippet}");
+            }
+
+            $payload = json_decode($resp['body'], true);
+            if (!is_array($payload) || !isset($payload['results'])) {
+                throw new RuntimeException("Invalid JSON response on lessons page {$page}: " . substr($resp['body'], 0, 200));
+            }
+
+            $results = $payload['results'];
+            $count = count($results);
+            $msg = sprintf("Fetching page %d...   %d lessons (HTTP %d, %dms)", $page, $count, $resp['http_code'], $ms);
+            call_user_func($this->log, 'INFO', $msg);
+            echo $msg . PHP_EOL;
+
+            foreach ($results as $row) {
+                $all[] = $row;
+            }
+
+            if (empty($payload['next']) || $count === 0) {
+                break;
+            }
+
+            $page++;
+            $this->sleepMs((int)$this->cfg['sleep_ms']);
+        }
+
+        return $all;
+    }
+
+    /**
+     * GET /{lang}/lessons/{id}/ — single lesson detail (v2). Returns decoded
+     * dict, hoặc null nếu 404 (already deleted / không tồn tại). Throw 4xx khác /
+     * 5xx-after-retry. Dùng cho delete preview (fallback khi CSV thiếu data) +
+     * verify sau push.
+     */
+    public function getLesson($id)
+    {
+        $lang = $this->cfg['language'];
+        $base = rtrim($this->cfg['base_url'], '/');
+        $id   = (string)$id;
+        $url  = "{$base}/{$lang}/lessons/{$id}/";
+        $resp = $this->requestWithRetry('GET', $url);
+
+        if ($resp['http_code'] === 404) {
+            return null;
+        }
+        if ($resp['http_code'] < 200 || $resp['http_code'] >= 300) {
+            $snippet = substr($resp['body'], 0, 300);
+            call_user_func($this->log, 'ERROR', "GET lesson id={$id} HTTP {$resp['http_code']} body=" . $snippet);
+            throw new RuntimeException("GET lesson id={$id} failed HTTP {$resp['http_code']} — {$snippet}");
+        }
+        $decoded = json_decode($resp['body'], true);
+        return is_array($decoded) ? $decoded : null;
+    }
+
+    /**
+     * DELETE /{lang}/lessons/{id}/ — xoá lesson (v2).
+     * Returns ['http_code'=>int, 'body'=>string]. 204/200 = success, 404 =
+     * already gone (KHÔNG throw — giống deleteCard). 4xx khác / 5xx-after-retry → throw.
+     */
+    public function deleteLesson($id)
+    {
+        $lang = $this->cfg['language'];
+        $base = rtrim($this->cfg['base_url'], '/');
+        $id   = (string)$id;
+        $url  = "{$base}/{$lang}/lessons/{$id}/";
+        $resp = $this->requestWithRetry('DELETE', $url);
+
+        if ($resp['http_code'] === 204 || $resp['http_code'] === 200 || $resp['http_code'] === 404) {
+            return $resp;
+        }
+        if ($resp['http_code'] >= 400 && $resp['http_code'] < 500) {
+            $snippet = substr($resp['body'], 0, 300);
+            call_user_func($this->log, 'ERROR', "DELETE lesson id={$id} HTTP {$resp['http_code']} body=" . $snippet);
+            throw new RuntimeException("DELETE lesson id={$id} failed HTTP {$resp['http_code']} — {$snippet}");
+        }
+        throw new RuntimeException("DELETE lesson id={$id} unexpected HTTP {$resp['http_code']}");
+    }
+
+    /**
+     * Derive v3 API base từ config base_url (v2). search endpoint chỉ tồn tại ở v3.
+     * `https://www.lingq.com/api/v2` → `https://www.lingq.com/api/v3`.
+     */
+    private function v3Base()
+    {
+        $base = rtrim($this->cfg['base_url'], '/');
+        if (strpos($base, '/api/v2') !== false) {
+            return str_replace('/api/v2', '/api/v3', $base);
+        }
+        return $base;
+    }
+
     /**
      * Phase F helper — build hints array cho POST/PATCH payload.
      * LingQ API v2 dùng plural `hints` field = array of {text, locale}.
