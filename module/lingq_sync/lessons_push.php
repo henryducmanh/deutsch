@@ -128,7 +128,7 @@ $hasAudio = !empty($mp3Files);
 $isHoren  = (stripos(str_replace('\\', '/', $folderAbs), '/horen/') !== false);
 $skill    = $isHoren ? 'Hören' : 'Lesen';
 
-echo "Input: " . push_basename($textFile) . " | skill=" . $skill . ($hasAudio ? " | audio: " . push_basename($mp3Files[0]) . " (K3 — push text-only ở K2)" : "") . PHP_EOL;
+echo "Input: " . push_basename($textFile) . " | skill=" . $skill . ($hasAudio ? " | audio: " . push_basename($mp3Files[0]) . " (upload sau khi tạo lesson)" : "") . PHP_EOL;
 
 // Parse markdown.
 $parsed = push_parse_markdown(file_get_contents($textFile));
@@ -201,6 +201,9 @@ if (!$apply) {
         $json = json_encode($preview, JSON_PRETTY_PRINT | JSON_PARTIAL_OUTPUT_ON_ERROR);
     }
     echo $json . PHP_EOL;
+    if ($hasAudio) {
+        echo PHP_EOL . "Audio: " . push_basename($mp3Files[0]) . " → sẽ PATCH multipart sau khi tạo lesson (dry-run: KHÔNG upload)." . PHP_EOL;
+    }
     echo PHP_EOL . "Dry run. Thêm --apply để POST. Exit 0." . PHP_EOL;
     $logger('INFO', "dry-run payload built source={$sourceLocal}");
     exit(0);
@@ -243,7 +246,14 @@ if ($already !== null && $forceUpdate) {
         $logger('ERROR', "PATCH lesson id={$lessonId} — " . $e->getMessage());
         exit(1);
     }
+    // K3 — re-upload audio nếu folder có mp3.
+    $fuAudioUrl = '';
+    if ($hasAudio) {
+        $fuAudioUrl = push_upload_audio($client, $lessonId, $mp3Files[0], $logger);
+    }
     if ($resync) push_run_resync($syncScript, $logger);
+    // Upsert SAU re-sync để audio_url vừa upload không bị sync (index lag) ghi đè rỗng.
+    push_upsert_source_local($csvPath, $lessonId, $sourceLocal, $logger, $fuAudioUrl);
     $elapsed = number_format(microtime(true) - $startedAt, 1);
     echo PHP_EOL . "Done in {$elapsed}s. Exit 0." . PHP_EOL;
     exit(0);
@@ -263,6 +273,16 @@ $ms = (int)round((microtime(true) - $start) * 1000);
 $lessonId = LingqClient::extractLessonId($resp['body']);
 echo "  HTTP {$resp['http_code']} ({$ms}ms)" . ($lessonId !== '' ? " lesson_id={$lessonId}" : " (id chưa rõ từ response — sẽ re-sync match title)") . PHP_EOL;
 $logger('INFO', "POST lesson source={$sourceLocal} HTTP {$resp['http_code']} id=" . ($lessonId !== '' ? $lessonId : '?') . " {$ms}ms");
+
+// K3 — audio upload (multipart PATCH) nếu folder có mp3. Cần lessonId từ POST.
+$serverAudioUrl = '';
+if ($hasAudio) {
+    if ($lessonId === '') {
+        fwrite(STDERR, "WARN: chưa có lesson_id từ POST → bỏ qua audio. Chạy lại với --force-update sau khi sync để attach.\n");
+    } else {
+        $serverAudioUrl = push_upload_audio($client, $lessonId, $mp3Files[0], $logger);
+    }
+}
 
 // Re-sync để bắt lesson mới + (nếu id chưa rõ) match theo title.
 if ($resync) {
@@ -285,8 +305,8 @@ if ($resync) {
 
 // Upsert source_local vào CSV cho lesson_id.
 if ($lessonId !== '') {
-    $n = push_upsert_source_local($csvPath, $lessonId, $sourceLocal, $logger);
-    echo "  CSV: set source_local cho lesson_id={$lessonId} ({$n} rows total)." . PHP_EOL;
+    $n = push_upsert_source_local($csvPath, $lessonId, $sourceLocal, $logger, $serverAudioUrl);
+    echo "  CSV: set source_local" . ($serverAudioUrl !== '' ? " + audio_url" : "") . " cho lesson_id={$lessonId} ({$n} rows total)." . PHP_EOL;
     echo PHP_EOL . "✅ Pushed. Xem: https://www.lingq.com/learn/{$lang}/web/reader/{$lessonId}" . PHP_EOL;
     $logger('INFO', "pushed source={$sourceLocal} lesson_id={$lessonId}");
 } else {
@@ -469,21 +489,44 @@ function push_load_csv($path)
 }
 
 /**
- * Set source_local cho lesson_id trong CSV (read-modify-write atomic, BOM, sort).
- * Nếu lesson_id chưa có (re-sync chưa bắt) → tạo row tối thiểu. Returns số rows.
+ * Upload audio cho lesson (K3). Returns server audio URL ('' nếu fail/không có).
+ * Lỗi audio KHÔNG abort — lesson text đã tạo; user có thể --force-update lại.
  */
-function push_upsert_source_local($path, $lessonId, $sourceLocal, callable $logger)
+function push_upload_audio($client, $lessonId, $mp3Path, callable $logger)
+{
+    echo "Upload audio: " . push_basename($mp3Path) . " ..." . PHP_EOL;
+    try {
+        $au = $client->uploadLessonAudio($lessonId, $mp3Path);
+        $url = isset($au['audio']) ? (string)$au['audio'] : (isset($au['audioUrl']) ? (string)$au['audioUrl'] : '');
+        $dur = isset($au['duration']) ? $au['duration'] : '?';
+        echo "  Audio OK (duration={$dur}s)" . ($url !== '' ? " — url set" : "") . PHP_EOL;
+        $logger('INFO', "audio upload lesson id={$lessonId} duration={$dur} url=" . ($url !== '' ? 'set' : 'none'));
+        return $url;
+    } catch (Throwable $e) {
+        fwrite(STDERR, "WARN: audio upload fail: " . $e->getMessage() . " (lesson text đã tạo; thử --force-update để attach lại).\n");
+        $logger('ERROR', "audio upload id={$lessonId} — " . $e->getMessage());
+        return '';
+    }
+}
+
+/**
+ * Set source_local (+ optional audio_url) cho lesson_id trong CSV (read-modify-write
+ * atomic, BOM, sort). Nếu lesson_id chưa có (re-sync chưa bắt) → tạo row tối thiểu.
+ * $audioUrl != '' → ghi đè audio_url. Returns số rows.
+ */
+function push_upsert_source_local($path, $lessonId, $sourceLocal, callable $logger, $audioUrl = '')
 {
     $rows = push_load_csv($path);
     $today = date('Y-m-d');
     if (isset($rows[$lessonId])) {
         $rows[$lessonId]['source_local'] = $sourceLocal;
+        if ($audioUrl !== '') $rows[$lessonId]['audio_url'] = $audioUrl;
         if ($rows[$lessonId]['last_synced'] === '') $rows[$lessonId]['last_synced'] = $today;
         if ($rows[$lessonId]['first_seen'] === '') $rows[$lessonId]['first_seen'] = $today;
     } else {
         $rows[$lessonId] = [
             'lesson_id' => (string)$lessonId, 'course_id' => '', 'title' => '',
-            'language' => '', 'audio_url' => '', 'words_count' => '', 'unknown_count' => '',
+            'language' => '', 'audio_url' => $audioUrl, 'words_count' => '', 'unknown_count' => '',
             'source_local' => $sourceLocal, 'first_seen' => $today, 'last_synced' => $today,
         ];
     }

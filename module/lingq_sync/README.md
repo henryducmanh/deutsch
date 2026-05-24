@@ -354,7 +354,8 @@ Chia 3 stage commit độc lập: **K1** list+delete · **K2** push text (Lesen)
 | LIST my lessons | `GET /api/v3/{lang}/search/?shelf=my_lessons` | Paginate qua `next` (KHÔNG có `count`). |
 | GET 1 lesson | `GET /api/v3/{lang}/lessons/{id}/` | Delete preview fallback + verify sau push. |
 | DELETE | `DELETE /api/v3/{lang}/lessons/{id}/` | OPTIONS allow `GET,PUT,PATCH,DELETE`. 404 = already gone. |
-| CREATE | `POST /api/v3/{lang}/lessons/` | Live verified 201. Fields: `title,text,status,level,collection(course PK),tags,original_url`. K3 thêm audio. |
+| CREATE | `POST /api/v3/{lang}/lessons/` | Live verified 201. Fields: `title,text,status,level,collection(course PK),tags,original_url`. |
+| AUDIO | `PATCH /api/v3/{lang}/lessons/{id}/` (multipart `audio`) | K3. Live verified 200 — server lưu file + auto-tính `duration`. Approach A. |
 | (course) CREATE | `POST /api/v3/{lang}/collections/` | Tạo course chứa bài; trả `pk`. Dùng 1 lần, paste vào `lessons_course_id`. |
 
 ### K1 — list + delete
@@ -419,6 +420,28 @@ Config keys (Phase K, trong `config.php` / `config.example.php`):
 | `lessons_default_tags` | `['DTZ','B1']` | Tag chung; push thêm skill + Teil. |
 
 Acceptance K2 (verified 2026-05-24, live): tạo course "DTZ Vorbereitung" (PK 2747707) → push Lesen 1.1 → **HTTP 201 lesson_id=44743333**, hiện trên LingQ với tags `[b1,lesen,dtz,teil1]`, 195 từ; CSV set `source_local`, sync sau giữ `first_seen` + điền metadata; push lại → skip "Already pushed".
+
+### K3 — push audio (Hören)
+
+Cùng `lessons_push.php`. Folder có `*.mp3` → tự bật mode audio: tạo lesson text (transcript)
+trước, rồi PATCH multipart audio (approach A — verified), server tự tính `duration`.
+
+```cmd
+C:\php\php74\php.exe module\lingq_sync\lessons_push.php input\html\deutsch-vorbereitung\horen\1.1\ --apply
+```
+
+Flow `--apply` (Hören): POST transcript text → `uploadLessonAudio` (PATCH multipart) →
+re-sync → upsert `source_local` + `audio_url`. Lỗi audio KHÔNG abort (text đã tạo; chạy
+`--force-update` để attach lại). `--force-update` cũng re-upload audio.
+
+- Transcript Hören (`*_transcript.md`) KHÔNG có YAML frontmatter (khác Lesen): title lấy từ
+  `# Transcript — X.X <title>`, url từ `Source:`. Tag `Teil<N>` chỉ thêm khi có (Hören
+  thường thiếu → tag `[DTZ, B1, Hören]`).
+- Audio chậm hơn → `uploadLessonAudio` nới timeout tối thiểu 120s, retry 5xx như JSON.
+
+Acceptance K3 (verified 2026-05-24, live): Hören 1.1 → text lesson_id=44743345 →
+PATCH multipart `1.1.mp3` (572 KB) → **HTTP 200**, `audioUrl` + `duration=35s` set trên
+LingQ (DTZ Vorbereitung); CSV `audio_url` ghi đúng; dry-run Hören 1.2 in note audio OK.
 
 ---
 

@@ -208,20 +208,75 @@ PATCH /api/v2/de/cards/{pk}/ + {notes: "..."} → HTTP 200, GET back lưu chính
 
 ---
 
+## 14. Phase K — Lessons CRUD (2026-05-24)
+
+Phase C/D/F/J xử lý **CARDS** (vocab từ rời). Phase K thêm CRUD cho **LESSONS** — học từ
+trong ngữ cảnh (đoạn văn highlight vàng). CSV riêng `data/lingq_lessons.csv` (10 cột, BOM,
+sort `lesson_id` asc). 3 stage: K1 list+delete · K2 push text (Lesen) · K3 push audio (Hören).
+
+### Quirk API: lessons = **v3** (KHÁC cards v2)
+
+`POST /api/v2/{lang}/lessons/` trả `["API is obsolete. Use v3 instead."]` (list, không phải
+lỗi DRF dict). `base_url` config giữ v2 cho CARD; mọi LESSON op derive v3 qua `LingqClient::v3Base()`.
+
+| Op | Endpoint v3 | Verify |
+|---|---|---|
+| LIST my | `GET /search/?shelf=my_lessons` (paginate `next`, no `count`) | 455 bài/3 trang |
+| GET/DELETE | `GET`/`DELETE /lessons/{id}/` | OPTIONS + 404=gone |
+| CREATE | `POST /lessons/` (JSON) | live 201 |
+| AUDIO | `PATCH /lessons/{id}/` multipart `audio` | live 200, auto `duration` |
+| COURSE | `POST /collections/` | live → `pk` |
+
+### Flow
+
+```
+Lesen folder  X.X_text.md (frontmatter)
+Hören folder  X.X_transcript.md + X.X.mp3
+        │  parse → title + plaintext + tags[DTZ,B1,skill,Teil?]
+        ▼
+   lessons_push.php ──(JSON POST /lessons/)──► LingQ  (lesson_id)
+        │                                         │
+        │ if mp3: PATCH multipart audio ──────────┤ (audioUrl + duration)
+        ▼                                         ▼
+   lessons_sync.php ──(GET search my_lessons)──► data/lingq_lessons.csv
+        ▲                                         │  upsert source_local + audio_url
+        └── idempotency: source_local ◄───────────┘  (skip nếu đã push; --force-update → PATCH)
+
+   lessons_delete.php <id> --apply: backup CSV → DELETE /lessons/{id}/ → re-sync
+```
+
+- **Idempotency**: `source_local` (relative folder path) trong CSV. `lessons_sync` preserve
+  `source_local` + `first_seen` + `words_count` qua mỗi sync (giống Phase C cho cards).
+- **words_count** để trống: search `my_lessons` chỉ trả `newWordsCount` (→ `unknown_count`),
+  không trả tổng. Per-lesson GET sẽ phá ngân sách 30s (455 bài) → bỏ.
+- **Course**: user tạo 1 collection (vd "DTZ Vorbereitung" PK 2747707) → `lessons_course_id`
+  trong config.php. Rỗng → push `--apply` chặn (trừ `--no-course`).
+- Config keys: `lessons_course_id`, `lessons_level` (3=B1), `lessons_status` (private),
+  `lessons_default_tags` (['DTZ','B1']).
+
+Acceptance live 2026-05-24: Lesen 1.1 → 201 id=44743333; Hören 1.1 → 201 id=44743345 +
+audio 35s; idempotent skip; sync 455→457 bài. Chi tiết: `module/lingq_sync/README.md` §Phase K.
+
+---
+
 ## 12. Files
 
 ```
 module/lingq_sync/
-├── config.php             gitignored, chứa api_key
-├── config.example.php     template (Phase J keys: notes_prefix, notes_max_chars, ...)
-├── lingq_client.php       cURL wrapper (GET/POST/PATCH/DELETE + retry + 429)
-├── sync.php               pull from LingQ → lingq_cards.csv (Phase J: 12 cột, parse card.notes)
+├── config.php             gitignored, chứa api_key (+ Phase K: lessons_course_id)
+├── config.example.php     template (Phase J + K keys)
+├── lingq_client.php       cURL wrapper. CARD: GET/POST/PATCH/DELETE. LESSON (Phase K, v3):
+│                          fetchAllLessons/getLesson/createLesson/updateLesson/deleteLesson/uploadLessonAudio
+├── sync.php               pull cards → lingq_cards.csv (Phase J: 12 cột, parse card.notes)
 ├── update_local.php       vocab_master + 3 nguồn → lingq_target.csv (Phase J join)
-├── push.php               diff → POST/PATCH/DELETE (Phase J: notes diff + merge + --force-overwrite-notes)
+├── push.php               diff cards → POST/PATCH/DELETE (Phase J: notes merge)
 ├── notes_builder.php      Phase J utility (build/merge/parse/truncate)
-├── cron.bat               4-step orchestrator (Task Scheduler entry, unchanged)
+├── lessons_sync.php       Phase K1 — pull my_lessons → lingq_lessons.csv
+├── lessons_delete.php     Phase K1 — DRY-RUN preview + --apply DELETE + backup + re-sync
+├── lessons_push.php       Phase K2/K3 — push 1 folder (text + audio) → lesson, idempotent
+├── cron.bat               4-step orchestrator (cards; unchanged)
 ├── README.md              module-level doc
-└── logs/                  daily log files
+└── logs/                  daily log (cards) + lessons_YYYY-MM-DD.log
 
 docs/
 ├── LINGQ_SYNC.md          quick reference (3 lệnh hay dùng)
@@ -232,9 +287,10 @@ docs/ai/tasks/
 ├── LINGQ_PUSH_PROMPT.md   Phase D spec (push 2-way)
 ├── LINGQ_PHASE_E_PROMPT.md  Phase E spec (zombie cleanup)
 ├── LINGQ_PHASE_F_PROMPT.md  Phase F spec (hints array format)
-└── LINGQ_NOTES_SYNC_PROMPT.md  Phase J spec (enriched notes sync)
+├── LINGQ_NOTES_SYNC_PROMPT.md  Phase J spec (enriched notes sync)
+└── LINGQ_LESSONS_CRUD_PROMPT.md  Phase K spec (lessons CRUD: list/delete/push text+audio)
 ```
 
 ---
 
-**Last updated:** 2026-05-19 (Phase C + D + F + **J** done; E + G + H + I backlog).
+**Last updated:** 2026-05-24 (Phase C + D + F + J + **K** done; E + G + H + I backlog).

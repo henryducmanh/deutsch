@@ -354,6 +354,78 @@ class LingqClient
     }
 
     /**
+     * PATCH /{lang}/lessons/{id}/ multipart — upload/attach audio file (K3, approach A).
+     * Verified 2026-05-24: server lưu file + auto-tính duration. Multipart cần code
+     * path riêng (requestWithRetry chỉ làm JSON). Retry 5xx + network như requestWithRetry.
+     * Returns decoded body (chứa 'audio' url + 'duration'). Throw 4xx / 5xx-after-retry.
+     */
+    public function uploadLessonAudio($id, $audioPath)
+    {
+        if (!is_file($audioPath)) {
+            throw new RuntimeException("Audio file không tồn tại: {$audioPath}");
+        }
+        $lang = $this->cfg['language'];
+        $base = $this->v3Base();
+        $id   = (string)$id;
+        $url  = "{$base}/{$lang}/lessons/{$id}/";
+
+        $attempts = max(1, (int)$this->cfg['retry']);
+        $backoff  = [1, 3, 9, 27, 60];
+        $lastErr  = '';
+
+        for ($i = 0; $i < $attempts; $i++) {
+            $ch = curl_init();
+            $cfile = new CURLFile($audioPath, $this->guessAudioMime($audioPath), basename($audioPath));
+            curl_setopt_array($ch, [
+                CURLOPT_URL            => $url,
+                CURLOPT_RETURNTRANSFER => true,
+                // Audio upload chậm hơn JSON — nới timeout tối thiểu 120s.
+                CURLOPT_TIMEOUT        => max((int)$this->cfg['timeout'], 120),
+                CURLOPT_HTTPHEADER     => [
+                    "Authorization: Token {$this->cfg['api_key']}",
+                    "Accept: application/json",
+                ],
+                CURLOPT_USERAGENT      => "lingq-sync-deutsch/1.0",
+                CURLOPT_CUSTOMREQUEST  => 'PATCH',
+                CURLOPT_POSTFIELDS     => ['audio' => $cfile], // array → curl tự set multipart/form-data + boundary.
+            ]);
+            $body  = curl_exec($ch);
+            $errno = curl_errno($ch);
+            $err   = curl_error($ch);
+            $code  = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            curl_close($ch);
+
+            if ($errno !== 0 || $body === false) {
+                $lastErr = "cURL errno={$errno} {$err}";
+                call_user_func($this->log, 'WARN', "audio upload id={$id} attempt " . ($i + 1) . " — {$lastErr}");
+                if ($i < $attempts - 1) { $this->sleepMs(($backoff[$i] ?? end($backoff)) * 1000); continue; }
+                throw new RuntimeException("Audio upload network error after {$attempts} attempts: {$lastErr}");
+            }
+            if ($code >= 200 && $code < 300) {
+                $decoded = json_decode($body, true);
+                return is_array($decoded) ? $decoded : [];
+            }
+            if ($code >= 400 && $code < 500) {
+                $snippet = substr((string)$body, 0, 300);
+                call_user_func($this->log, 'ERROR', "audio upload id={$id} HTTP {$code} body={$snippet}");
+                throw new RuntimeException("Audio upload id={$id} failed HTTP {$code} — {$snippet}");
+            }
+            $lastErr = "HTTP {$code}";
+            call_user_func($this->log, 'WARN', "audio upload id={$id} attempt " . ($i + 1) . " — {$lastErr}");
+            if ($i < $attempts - 1) { $this->sleepMs(($backoff[$i] ?? end($backoff)) * 1000); continue; }
+            throw new RuntimeException("Audio upload id={$id} server error after {$attempts} attempts: {$lastErr}");
+        }
+        throw new RuntimeException("Unreachable audio upload loop: {$lastErr}");
+    }
+
+    private function guessAudioMime($path)
+    {
+        $ext = strtolower(pathinfo($path, PATHINFO_EXTENSION));
+        $map = ['mp3' => 'audio/mpeg', 'm4a' => 'audio/mp4', 'mp4' => 'audio/mp4', 'ogg' => 'audio/ogg', 'wav' => 'audio/wav'];
+        return isset($map[$ext]) ? $map[$ext] : 'application/octet-stream';
+    }
+
+    /**
      * Helper — extract lesson_id từ POST response body (dict hoặc list).
      * Trả (string) id hoặc '' nếu không tìm thấy. Defensive vì v2 import có thể
      * trả array. Caller fallback re-sync + match title nếu '' .
