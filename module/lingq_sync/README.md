@@ -344,14 +344,18 @@ học từ trong ngữ cảnh (đoạn văn highlight vàng) thay vì từ rời
 
 Chia 3 stage commit độc lập: **K1** list+delete · **K2** push text (Lesen) · **K3** push audio (Hören).
 
-### Endpoint LingQ (verified 2026-05-24, token thật + OPTIONS)
+### Endpoint LingQ (verified 2026-05-24, token thật + OPTIONS + live POST 201)
+
+> ⚠️ **Lessons API = v3.** `POST /api/v2/{lang}/lessons/` trả `["API is obsolete. Use v3 instead."]`.
+> Mọi lesson op derive v3 từ `base_url` (v2) qua `LingqClient::v3Base()`. base_url giữ v2 cho CARD (Phase C/D).
 
 | Thao tác | Method + URL | Ghi chú |
 |---|---|---|
-| LIST my lessons | `GET /api/v3/{lang}/search/?shelf=my_lessons` | Paginate qua `next` (KHÔNG có `count`). v3, khác base_url v2 → `LingqClient::v3Base()`. |
-| GET 1 lesson | `GET /api/v2/{lang}/lessons/{id}/` | Dùng cho delete preview fallback. |
-| DELETE | `DELETE /api/v2/{lang}/lessons/{id}/` | OPTIONS allow `DELETE`. 404 = already gone. |
-| CREATE | `POST /api/v2/{lang}/lessons/` | OPTIONS allow `POST`. Fields: `title,text,status,level,collection,tags,external_audio,duration,audio`(file). K2/K3. |
+| LIST my lessons | `GET /api/v3/{lang}/search/?shelf=my_lessons` | Paginate qua `next` (KHÔNG có `count`). |
+| GET 1 lesson | `GET /api/v3/{lang}/lessons/{id}/` | Delete preview fallback + verify sau push. |
+| DELETE | `DELETE /api/v3/{lang}/lessons/{id}/` | OPTIONS allow `GET,PUT,PATCH,DELETE`. 404 = already gone. |
+| CREATE | `POST /api/v3/{lang}/lessons/` | Live verified 201. Fields: `title,text,status,level,collection(course PK),tags,original_url`. K3 thêm audio. |
+| (course) CREATE | `POST /api/v3/{lang}/collections/` | Tạo course chứa bài; trả `pk`. Dùng 1 lần, paste vào `lessons_course_id`. |
 
 ### K1 — list + delete
 
@@ -382,6 +386,39 @@ lesson_id,course_id,title,language,audio_url,words_count,unknown_count,source_lo
 - Log: `logs/lessons_YYYY-MM-DD.log`.
 
 Acceptance K1 (verified 2026-05-24): sync 455 bài/3 trang/7.4s; idempotent run #2 = New 0/Updated 0/Unchanged 455; delete dry-run preview OK (in-CSV + fallback getLesson cho id lạ → 404).
+
+### K2 — push text (Lesen)
+
+```cmd
+REM Setup 1 lần: tạo course chứa bài → paste PK vào config.php 'lessons_course_id'.
+REM Dry-run: in payload JSON, KHÔNG gửi.
+C:\php\php74\php.exe module\lingq_sync\lessons_push.php input\html\deutsch-vorbereitung\lesen\1.1\
+REM Push thật:
+C:\php\php74\php.exe module\lingq_sync\lessons_push.php input\html\deutsch-vorbereitung\lesen\1.1\ --apply
+REM Bài đã push → PATCH lại:
+C:\php\php74\php.exe module\lingq_sync\lessons_push.php input\html\deutsch-vorbereitung\lesen\1.1\ --apply --force-update
+REM Push không gắn course (bài rời) khi lessons_course_id rỗng:
+C:\php\php74\php.exe module\lingq_sync\lessons_push.php <folder> --apply --no-course
+```
+
+`lessons_push.php` (1 folder/lần):
+- Tìm input: `*_text.md` (Lesen) hoặc `*_transcript.md` (Hören). Parse YAML frontmatter (`chu_de`→title, `teil`→tag, `url`→original_url) hoặc heading `# Transcript — X.X <title>` + `Source:` (Hören không frontmatter).
+- Body → plaintext: bỏ `#` heading + `**`/`*` emphasis, strip H1 đầu trùng title, collapse dòng trống. (Title lặp ở đầu body là cố ý — giống payload mẫu spec.)
+- Tags: `lessons_default_tags` + `Lesen`/`Hören` (theo path) + `Teil<N>`.
+- **Idempotency**: `source_local` (relative folder path) trong CSV. Đã có → skip (`--force-update` để PATCH).
+- DRY-RUN default in payload JSON. `--apply`: POST v3 → re-sync CSV (bắt `lesson_id`, fallback match title) → set `source_local`.
+- **Course guard**: `lessons_course_id` rỗng + không `--no-course` → abort + hướng dẫn tạo course.
+
+Config keys (Phase K, trong `config.php` / `config.example.php`):
+
+| Key | Default | Mục đích |
+|---|---|---|
+| `lessons_course_id` | `''` | PK course chứa bài push. Rỗng → `--apply` chặn (trừ `--no-course`). |
+| `lessons_level` | `3` | LingQ level 0..6 (3 = Intermediate 1, hợp B1). |
+| `lessons_status` | `private` | `private` (chỉ user) / `shared` (public). |
+| `lessons_default_tags` | `['DTZ','B1']` | Tag chung; push thêm skill + Teil. |
+
+Acceptance K2 (verified 2026-05-24, live): tạo course "DTZ Vorbereitung" (PK 2747707) → push Lesen 1.1 → **HTTP 201 lesson_id=44743333**, hiện trên LingQ với tags `[b1,lesen,dtz,teil1]`, 195 từ; CSV set `source_local`, sync sau giữ `first_seen` + điền metadata; push lại → skip "Already pushed".
 
 ---
 

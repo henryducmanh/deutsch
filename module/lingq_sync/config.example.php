@@ -37,4 +37,13 @@ return [
     'notes_max_mistakes'        => 5,    // top N entries từ MISTAKES_LOG per row.
     'notes_enrichment'          => true, // false → fallback: chỉ push '[AI-sync ...] <vocab.notes plain>'.
     'notes_strict_chunk_match'  => false,// true → word-boundary regex match (tránh Mut→Mutter false hit).
+
+    // Phase K — Lessons push (K2 text / K3 audio). lessons_push.php POST bài lên LingQ.
+    // lessons_course_id: PK của 1 collection (course) user TỰ TẠO trên LingQ web để chứa
+    //   bài push. Lấy từ URL course (.../library/course/<PK>) hoặc collections/my API.
+    //   Để '' → push.php --apply sẽ chặn + in hướng dẫn (trừ khi chạy với --no-course).
+    'lessons_course_id'   => '',
+    'lessons_level'       => 3,         // 0..6 (3 = Intermediate 1, hợp B1). Xem README endpoint table.
+    'lessons_status'      => 'private', // 'private' = chỉ user; 'shared' = public library.
+    'lessons_default_tags'=> ['DTZ', 'B1'], // tag chung; lessons_push thêm Lesen/Hören + Teil<N>.
 ];

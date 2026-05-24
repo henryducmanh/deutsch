@@ -196,12 +196,12 @@ class LingqClient
     // -------------------------------------------------------------------------
     // Phase K — Lessons CRUD (độc lập với CARD methods ở trên).
     //
-    // Endpoint verified 2026-05-24 (token thật, GET/OPTIONS):
+    // Endpoint verified 2026-05-24 (token thật, GET/OPTIONS + live POST):
     //   LIST   GET    /api/v3/{lang}/search/?shelf=my_lessons  (paginate qua 'next', KHÔNG có 'count')
-    //   GET    GET    /api/v2/{lang}/lessons/{id}/
-    //   DELETE DELETE /api/v2/{lang}/lessons/{id}/             (OPTIONS allow: GET,PUT,PATCH,DELETE)
-    //   CREATE POST   /api/v2/{lang}/lessons/                  (OPTIONS allow: GET,POST) — thêm ở K2/K3
-    // base_url trong config = .../api/v2; search endpoint là v3 → derive qua v3Base().
+    //   GET    GET    /api/v3/{lang}/lessons/{id}/
+    //   DELETE DELETE /api/v3/{lang}/lessons/{id}/             (OPTIONS allow GET,PUT,PATCH,DELETE)
+    //   CREATE POST   /api/v3/{lang}/lessons/                  (v2 POST trả ["API is obsolete. Use v3 instead."])
+    // base_url trong config = .../api/v2 → mọi lesson op derive v3 qua v3Base().
     // -------------------------------------------------------------------------
 
     /**
@@ -266,7 +266,7 @@ class LingqClient
     public function getLesson($id)
     {
         $lang = $this->cfg['language'];
-        $base = rtrim($this->cfg['base_url'], '/');
+        $base = $this->v3Base();   // lessons API canonical = v3 (v2 trả "API is obsolete").
         $id   = (string)$id;
         $url  = "{$base}/{$lang}/lessons/{$id}/";
         $resp = $this->requestWithRetry('GET', $url);
@@ -291,7 +291,7 @@ class LingqClient
     public function deleteLesson($id)
     {
         $lang = $this->cfg['language'];
-        $base = rtrim($this->cfg['base_url'], '/');
+        $base = $this->v3Base();   // lessons API canonical = v3.
         $id   = (string)$id;
         $url  = "{$base}/{$lang}/lessons/{$id}/";
         $resp = $this->requestWithRetry('DELETE', $url);
@@ -305,6 +305,81 @@ class LingqClient
             throw new RuntimeException("DELETE lesson id={$id} failed HTTP {$resp['http_code']} — {$snippet}");
         }
         throw new RuntimeException("DELETE lesson id={$id} unexpected HTTP {$resp['http_code']}");
+    }
+
+    /**
+     * POST /{lang}/lessons/ — tạo lesson mới (K2 text). $payload keys:
+     *   title, text, status, level, collection, tags(array), original_url,
+     *   external_audio, duration (K3). Audio file upload (multipart) tách riêng ở K3.
+     * Returns ['http_code'=>int, 'body'=>mixed] với body = decoded JSON (dict HOẶC
+     * list — v2 import có thể trả array các lesson tạo ra). Throw 4xx/5xx.
+     */
+    public function createLesson(array $payload)
+    {
+        $lang = $this->cfg['language'];
+        $base = $this->v3Base();   // POST v2 obsolete → dùng v3.
+        $url  = "{$base}/{$lang}/lessons/";
+        $body = json_encode($payload, JSON_UNESCAPED_UNICODE);
+        $resp = $this->requestWithRetry('POST', $url, $body);
+
+        if ($resp['http_code'] < 200 || $resp['http_code'] >= 300) {
+            $snippet = substr($resp['body'], 0, 400);
+            call_user_func($this->log, 'ERROR', "POST lessons HTTP {$resp['http_code']} title=" . (isset($payload['title']) ? $payload['title'] : '?') . " body=" . $snippet);
+            throw new RuntimeException("POST lesson failed HTTP {$resp['http_code']} — {$snippet}");
+        }
+        $decoded = json_decode($resp['body'], true);
+        return ['http_code' => $resp['http_code'], 'body' => $decoded, 'raw' => $resp['body']];
+    }
+
+    /**
+     * PATCH /{lang}/lessons/{id}/ — update lesson (--force-update). $patch =
+     * field thay đổi (title/text/tags/...). Returns decoded body (có thể []). Throw 4xx/5xx.
+     */
+    public function updateLesson($id, array $patch)
+    {
+        $lang = $this->cfg['language'];
+        $base = $this->v3Base();   // lessons API canonical = v3.
+        $id   = (string)$id;
+        $url  = "{$base}/{$lang}/lessons/{$id}/";
+        $body = json_encode($patch, JSON_UNESCAPED_UNICODE);
+        $resp = $this->requestWithRetry('PATCH', $url, $body);
+
+        if ($resp['http_code'] < 200 || $resp['http_code'] >= 300) {
+            $snippet = substr($resp['body'], 0, 400);
+            call_user_func($this->log, 'ERROR', "PATCH lesson id={$id} HTTP {$resp['http_code']} body=" . $snippet);
+            throw new RuntimeException("PATCH lesson id={$id} failed HTTP {$resp['http_code']} — {$snippet}");
+        }
+        $decoded = json_decode($resp['body'], true);
+        return is_array($decoded) ? $decoded : [];
+    }
+
+    /**
+     * Helper — extract lesson_id từ POST response body (dict hoặc list).
+     * Trả (string) id hoặc '' nếu không tìm thấy. Defensive vì v2 import có thể
+     * trả array. Caller fallback re-sync + match title nếu '' .
+     */
+    public static function extractLessonId($body)
+    {
+        $pick = function ($d) {
+            if (!is_array($d)) return '';
+            foreach (['id', 'pk', 'contentId'] as $k) {
+                if (isset($d[$k]) && (is_int($d[$k]) || ctype_digit((string)$d[$k]))) {
+                    return (string)$d[$k];
+                }
+            }
+            return '';
+        };
+        if (is_array($body)) {
+            // dict trực tiếp?
+            $id = $pick($body);
+            if ($id !== '') return $id;
+            // list of dicts → lấy phần tử đầu có id.
+            foreach ($body as $el) {
+                $id = $pick($el);
+                if ($id !== '') return $id;
+            }
+        }
+        return '';
     }
 
     /**
