@@ -6,15 +6,15 @@
 
 ## Bộ vai (tpl-hoc-deutsch@v1.1)
 
-| Vai | Trigger | Khi nào dùng | Output |
-|---|---|---|---|
-| **Vocab Extractor** | `đóng vai Vocab Extractor` | Có text/image/audio/PDF tiếng Đức mới → cần bóc vocab + chunk | append row `data/03_unified/vocab_master.csv` + `data/chunks_master.csv` + move file `queue/` → `archive/` |
-| **Tutor** | `đóng vai Tutor` | Buổi học interactive (Q&A grammar, dialog drill, feedback) | `docs/ai/SESSION_<YYYY-MM-DD>.md` |
-| **Mistake Auditor** | `đóng vai Mistake Auditor` | Review bài viết / nói gần đây → bóc lỗi pattern | append `docs/ai/MISTAKES_LOG.md` + cross-link `data/weak_words.csv` |
-| **Speaking Coach** | `đóng vai Speaking Coach` | Drill phát âm + speaking response → cần feedback | `output/drills/<YYYY-MM-DD>_speaking.md` |
-| **Listening Coach** | `đóng vai Listening Coach` | Listening exercise + transcript verify | `output/drills/<YYYY-MM-DD>_listening.md` |
-| **Lesson Planner** | `đóng vai Lesson Planner` | Lên kế hoạch học tuần/tháng theo mục tiêu DTZ | `tutor/lesson_plans/<YYYY-WXX>.md` hoặc `<YYYY-MM>.md` |
-| **Homework Generator** | `đóng vai Homework Generator` | Cần bài tập per chủ đề (ngữ pháp / chủ đề DTZ) | `tutor/homework/<topic>_<YYYY-MM-DD>.md` |
+| Vai                        | Trigger                                  | Khi nào dùng                                                                                             | Output                                                                                                                                                   |
+| -------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Vocab Extractor**        | `đóng vai Vocab Extractor`               | Có text/image/audio/PDF tiếng Đức mới → cần bóc vocab + chunk                                            | append row `data/03_unified/vocab_master.csv` + `data/chunks_master.csv` + move file `queue/` → `archive/`                                               |
+| **Tutor**                  | `đóng vai Tutor`                         | Buổi học interactive (Q&A grammar, dialog drill, feedback)                                               | `docs/ai/SESSION_<YYYY-MM-DD>.md`                                                                                                                        |
+| **Mistake Auditor**        | `đóng vai Mistake Auditor`               | Review bài viết / nói gần đây → bóc lỗi pattern                                                          | append `docs/ai/MISTAKES_LOG.md` + cross-link `data/weak_words.csv`                                                                                      |
+| **Speaking Coach**         | `đóng vai Speaking Coach`                | Drill phát âm + speaking response → cần feedback                                                         | `output/drills/<YYYY-MM-DD>_speaking.md`                                                                                                                 |
+| **Listening Coach**        | `đóng vai Listening Coach`               | Listening exercise + transcript verify                                                                   | `output/drills/<YYYY-MM-DD>_listening.md`                                                                                                                |
+| **Lesson Planner**         | `đóng vai Lesson Planner`                | Lên kế hoạch học tuần/tháng theo mục tiêu DTZ                                                            | `tutor/lesson_plans/<YYYY-WXX>.md` hoặc `<YYYY-MM>.md`                                                                                                   |
+| **Homework Generator**     | `đóng vai Homework Generator`            | Cần bài tập per chủ đề (ngữ pháp / chủ đề DTZ)                                                           | `tutor/homework/<topic>_<YYYY-MM-DD>.md`                                                                                                                 |
 | **Module Engineer** (v1.1) | `đóng vai Module Engineer cho <service>` | Build/debug/extend integration module PHP local (lingq_sync, anki_sync, ...) — KHÔNG học, là engineering | `module/<service>_sync/` + `docs/ai/tasks/<SERVICE>_<PHASE>_PROMPT.md` + `docs/<SERVICE>_INTEGRATION.md`. Mode delegation: handoff Claude Code làm code. |
 
 Default (không trigger): hỏi user vai nào.

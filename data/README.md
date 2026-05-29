@@ -68,8 +68,59 @@ data/03_unified/vocab_master.csv
 ## CSV schema chính
 
 ```csv
-id,wort,wortart,formen,bedeutung,beispiel,uebersetzung,thema,lerndatum,level,quelle,source_type,tags,notes
+id,wort,wortart,formen,bedeutung,beispiel,uebersetzung,thema,lerndatum,level,quelle,source_type,tags,notes,parent_id,form_type
 ```
+
+### Mô tả 16 cột
+
+| Cột | Ý nghĩa | Ví dụ |
+|---|---|---|
+| `id` | VOC ID duy nhất | `VOC-20260527-0002` |
+| `wort` | Dạng từ (lemma gốc hoặc biến thể) | `Karneval` / `Karnevals` |
+| `wortart` | Từ loại | `Substantiv` / `Adjektiv` / `Verb` |
+| `formen` | Các dạng biến hoá chuẩn (chỉ điền ở lemma) | `der Karneval, -e/-s` |
+| `bedeutung` | Nghĩa tiếng Việt | `lễ hội hóa trang` |
+| `beispiel` | Câu ví dụ từ nguồn gốc | *(câu tiếng Đức)* |
+| `uebersetzung` | Dịch câu ví dụ | *(câu tiếng Việt)* |
+| `thema` | Chủ đề DTZ | `Freizeit` / `Verkehr` |
+| `lerndatum` | Ngày thêm vào | `2026-05-27` |
+| `level` | Trình độ | `A2` / `B1` |
+| `quelle` | Nguồn | `horen/1.1` |
+| `source_type` | Loại nguồn | `horen` / `lesen` / `tutor` |
+| `tags` | Tags tìm kiếm | `B1;DTZ;Verkehr` |
+| `notes` | Ghi chú ngữ pháp / collocations | *(text tự do)* |
+| `parent_id` | VOC ID của lemma gốc (rỗng nếu đây là lemma) | `VOC-20260527-0002` |
+| `form_type` | Loại biến cách (rỗng nếu đây là lemma) | `GEN.SG` / `ADJ.AKK` |
+
+### form_type — bảng mã chuẩn
+
+| Code | Ý nghĩa |
+|---|---|
+| `NOM.SG` | Nominativ số ít |
+| `GEN.SG` | Genitiv số ít |
+| `DAT.SG` | Dativ số ít |
+| `AKK.SG` | Akkusativ số ít |
+| `NOM.PL` | Nominativ số nhiều |
+| `GEN.PL` | Genitiv số nhiều |
+| `DAT.PL` | Dativ số nhiều |
+| `AKK.PL` | Akkusativ số nhiều |
+| `ADJ.NOM` | Tính từ biến cách Nominativ |
+| `ADJ.AKK` | Tính từ biến cách Akkusativ |
+| `ADJ.DAT` | Tính từ biến cách Dativ |
+| `ADJ.GEN` | Tính từ biến cách Genitiv |
+| `KOMP` | So sánh hơn (Komparativ) |
+| `SUP` | So sánh nhất (Superlativ) |
+| `PRAET` | Quá khứ đơn (Präteritum) |
+| `PERF` | Quá khứ hoàn thành (Perfekt / Partizip II) |
+
+### Quy tắc biến thể (inflected forms)
+
+- **ID biến thể:** `{parent_id}-{FORM_CODE}` — vd `VOC-20260527-0002-GEN.SG`
+- **`wort`:** ghi đúng ký tự biến thể xuất hiện trong văn bản — vd `Karnevals`
+- **`bedeutung`:** hint LingQ format — `{lemma} ({form_type viết đầy đủ}) = {nghĩa}` — vd `Karneval (Genitiv Sg.) = lễ hội hóa trang`
+- **`formen`:** để rỗng (chỉ điền ở lemma)
+- **`parent_id`:** VOC ID của lemma gốc
+- **Append-only:** biến thể cũng append-only, không override
 
 ## Level
 

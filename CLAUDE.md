@@ -43,6 +43,31 @@ Default (không command): hỏi user vai nào.
 
 ---
 
+## Daily B1 Triggers (CRUNCH MODE 2026-05 → 06)
+
+Trigger ngắn user gõ → AI tự nhận vai phù hợp, không cần "đóng vai X" đầy đủ.
+Tham chiếu chiến lược 4 trụ cột tại `tutor/lesson_plans/2026-W22.md` + memory `project_dtz_b1_retrieval_gap` + `project_dtz_b1_crunch_timeline`.
+
+| User gõ              | AI làm                                                                                                                       | Trụ     | Vai ngầm                |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ------- | ----------------------- |
+| `daily`              | Full 30 phút all 4 trụ tuần tự: 5 retrieval → 1 Hören → 1 Schreiben → reminder Anki                                          | 1+2+3+4 | Tutor combo             |
+| `retrieval 5`        | Lấy 5 từ chưa active từ `data/weak_words.csv` → cảnh huống Việt → user gõ Đức → AI sửa                                       | 2       | Tutor                   |
+| `hören <bai>`        | Load bài Hören (vd `hören 1.5`) từ `input/html/deutsch-vorbereitung/horen/X/` → nghe mù → transcript → shadow 3×             | 3       | Listening Coach         |
+| `hören next`         | Auto chọn bài Hören chưa làm tiếp theo (check `output/drills/horen_progress.csv`)                                            | 3       | Listening Coach         |
+| `schreiben <chủ đề>` | Prompt Brief DTZ (vd `schreiben absage termin`) → user viết → AI sửa câu-by-câu → append `output/drills/schreiben/<date>.md` | 4       | Tutor + Mistake Auditor |
+| `sprechen <chủ đề>`  | Mini-roleplay DTZ Modul Sprechen (Vorstellung / Bilder beschreiben / Planung)                                                | 4       | Speaking Coach          |
+| `audit`              | Cuối ngày: tổng kết từ bật/fail, append `docs/ai/MISTAKES_LOG.md`, gợi ý chủ đề mai                                          | 1+all   | Mistake Auditor         |
+| `weak`               | Trả về 10 từ "yếu nhất" hiện tại (mistake_count cao nhất trong weak_words.csv)                                               | 1       | Tutor                   |
+
+Rule cho mọi trigger:
+- Vẫn tuân CLAUDE.md cấm "tiếng Anh khi giải thích" (DD-20260522-001).
+- Trigger là sub-mode, KHÔNG ghi đè vai "đóng vai X" nếu user gõ rõ vai.
+- Sau session: append `docs/ai/SESSION_<date>.md` (1 file/ngày, group nhiều trigger trong cùng ngày).
+
+Scheduled task daily 7h sáng: `claude-deutsch-morning-ping` — gửi ping kèm 5 từ ôn + 1 bài Hören đề xuất.
+
+---
+
 ## Stack học tập (tools + format)
 
 | Layer | Tool / Format |

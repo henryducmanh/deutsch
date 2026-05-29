@@ -80,4 +80,20 @@ ID convention: `DD-<YYYYMMDD>-<NNN>` (DD = Deutsch Decision).
 
 ---
 
-**Last updated:** 2026-05-22 (4 entries — thêm rule style giải thích thuần Việt + Đức).
+## DD-20260527-005 — Thêm biến thể (inflected forms) vào vocab_master với parent_id + form_type
+
+- **Date:** 2026-05-27
+- **Topic:** vocab schema — xử lý biến cách tiếng Đức trong LingQ
+- **Decision:** Thêm 2 cột vào `vocab_master.csv`: `parent_id` (VOC ID của lemma gốc) và `form_type` (mã biến cách). Biến thể được lưu là row riêng với ID = `{parent_id}-{FORM_CODE}`. Hint của biến thể theo công thức: `{lemma} ({dạng biến cách đầy đủ}) = {nghĩa}` để LingQ hiển thị đúng khi đọc văn bản.
+- **Alternatives considered:**
+  - (a) Chỉ lưu lemma, tự mark thủ công trong LingQ → loại vì phụ thuộc user nhớ, không tự động hoá được
+  - (b) Ghi tất cả forms vào cột `formen` rồi parse → loại vì khó push từng form lên LingQ riêng biệt
+  - (c) Push hàng loạt mọi biến cách (4-8 forms/từ) → loại vì bùng nổ cards, loãng review
+- **Why:** LingQ nhận diện theo word form, không theo lemma. Khi đọc *Karnevals* mà chỉ có card *Karneval* → LingQ đánh dấu lạ, mất cơ hội học. Lưu biến thể có cấu trúc → push lên LingQ đúng form → vừa học nghĩa vừa học ngữ pháp biến cách trong context thật.
+- **form_type codes:** `NOM/GEN/DAT/AKK` × `SG/PL` cho danh từ; `ADJ.NOM/AKK/DAT/GEN` cho tính từ; `KOMP/SUP/PRAET/PERF` cho động từ + tính từ so sánh.
+- **Linked files:** `data/README.md` (schema đầy đủ + bảng form_type), `data/03_unified/vocab_master.csv`
+- **Status:** active
+
+---
+
+**Last updated:** 2026-05-27 (5 entries — thêm schema biến thể parent_id + form_type).

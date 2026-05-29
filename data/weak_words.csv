@@ -5,3 +5,96 @@
 # status enum: active | mastered | dropped
 # Append-only. Update mistake_count + last_mistake_date + status.
 wort,wortart,artikel,mistake_count,last_mistake_date,related_rule,related_mistakes_log_entries,status
+Blick,Substantiv,der,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Zubehör,Substantiv,das,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Lautsprecher,Substantiv,der,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Heimkino-System,Substantiv,das,1,2026-05-24,Lesen 1.1 Center Solaris — compound: Heim + Kino + System,,active
+Verlängerungskabel,Substantiv,das,1,2026-05-24,Lesen 1.1 — compound: Verlängerung + Kabel,,active
+Ladegerät,Substantiv,das,1,2026-05-24,Lesen 1.1 — compound: laden + Gerät,,active
+Heimwerken,Substantiv,das,1,2026-05-24,Lesen 1.1 — nominalisiertes Verb (heimwerken),,active
+Haushaltsware,Substantiv,die,1,2026-05-24,Lesen 1.1 — thường dùng plural Haushaltswaren,,active
+Kochtopf,Substantiv,der,1,2026-05-24,Lesen 1.1 — compound: kochen + Topf,,active
+Pfanne,Substantiv,die,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Küchenhelfer,Substantiv,der,1,2026-05-24,Lesen 1.1 — compound: Küche + Helfer,,active
+Handtuch,Substantiv,das,1,2026-05-24,Lesen 1.1 — compound: Hand + Tuch,,active
+Bademantel,Substantiv,der,1,2026-05-24,Lesen 1.1 — compound: baden + Mantel,,active
+Duschvorhang,Substantiv,der,1,2026-05-24,Lesen 1.1 — compound: Dusche + Vorhang,,active
+Porzellan,Substantiv,das,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Geschirr,Substantiv,das,1,2026-05-24,Lesen 1.1 — uncountable thường ở dạng số ít,,active
+Teekanne,Substantiv,die,1,2026-05-24,Lesen 1.1 — compound: Tee + Kanne,,active
+Tasse,Substantiv,die,1,2026-05-24,Lesen 1.1 — phân biệt với Becher (cốc không quai),,active
+Leuchte,Substantiv,die,1,2026-05-24,Lesen 1.1 — đèn (đồ vật phát sáng); phân biệt với Lampe,,active
+Stehlampe,Substantiv,die,1,2026-05-24,Lesen 1.1 — compound: stehen + Lampe,,active
+Bettware,Substantiv,die,1,2026-05-24,Lesen 1.1 — thường dùng plural Bettwaren,,active
+Bettdecke,Substantiv,die,1,2026-05-24,Lesen 1.1 — compound: Bett + Decke,,active
+Kissen,Substantiv,das,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Matratzenauflage,Substantiv,die,1,2026-05-24,Lesen 1.1 — compound: Matratze + Auflage,,active
+Heimwerkerbedarf,Substantiv,der,1,2026-05-24,Lesen 1.1 — compound: Heimwerker + Bedarf,,active
+Werkzeug,Substantiv,das,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Schraube,Substantiv,die,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Dübel,Substantiv,der,1,2026-05-24,Lesen 1.1 — đồ gắn tường để bắt vít,,active
+Reparaturset,Substantiv,das,1,2026-05-24,Lesen 1.1 — compound: Reparatur + Set,,active
+Anzug,Substantiv,der,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Hemd,Substantiv,das,1,2026-05-24,Lesen 1.1 — phân biệt với T-Shirt,,active
+Sneaker,Substantiv,der,1,2026-05-24,Lesen 1.1 — Anglizismus,,active
+Herrenwäsche,Substantiv,die,1,2026-05-24,Lesen 1.1 — compound: Herren + Wäsche,,active
+Unterwäsche,Substantiv,die,1,2026-05-24,Lesen 1.1 — compound: unter + Wäsche,,active
+Socke,Substantiv,die,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Schlafanzug,Substantiv,der,1,2026-05-24,Lesen 1.1 — compound: schlafen + Anzug,,active
+Anzugzubehör,Substantiv,das,1,2026-05-24,Lesen 1.1 — compound: Anzug + Zubehör,,active
+Krawatte,Substantiv,die,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Gürtel,Substantiv,der,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Manschettenknopf,Substantiv,der,1,2026-05-24,Lesen 1.1 — compound: Manschette + Knopf,,active
+Geschenkservice,Substantiv,der,1,2026-05-24,Lesen 1.1 — compound: Geschenk + Service,,active
+Geschenkverpackung,Substantiv,die,1,2026-05-24,Lesen 1.1 — compound: Geschenk + Verpackung,,active
+Grußkarte,Substantiv,die,1,2026-05-24,Lesen 1.1 — compound: Gruß + Karte,,active
+Wäsche,Substantiv,die,1,2026-05-24,Lesen 1.1 — đa nghĩa: đồ lót / đồ giặt,,active
+BH,Substantiv,der,1,2026-05-24,Lesen 1.1 — viết tắt của Büstenhalter,,active
+Bettwäsche,Substantiv,die,1,2026-05-24,Lesen 1.1 — compound: Bett + Wäsche,,active
+Heimtextilien,Substantiv,die,1,2026-05-24,Lesen 1.1 — Plurale tantum,,active
+Bettbezug,Substantiv,der,1,2026-05-24,Lesen 1.1 — compound: Bett + Bezug,,active
+Tagesdecke,Substantiv,die,1,2026-05-24,Lesen 1.1 — compound: Tag + Decke,,active
+Kissenhülle,Substantiv,die,1,2026-05-24,Lesen 1.1 — compound: Kissen + Hülle,,active
+Designermode,Substantiv,die,1,2026-05-24,Lesen 1.1 — compound: Designer + Mode,,active
+In-Boutique,Substantiv,die,1,2026-05-24,Lesen 1.1 — Anglizismus / Gallizismus,,active
+Markenmode,Substantiv,die,1,2026-05-24,Lesen 1.1 — compound: Marke + Mode,,active
+Parfümerie,Substantiv,die,1,2026-05-24,Lesen 1.1 — cửa hàng nước hoa,,active
+Duft,Substantiv,der,1,2026-05-24,Lesen 1.1 — mùi hương; plural: Düfte,,active
+Schreibware,Substantiv,die,1,2026-05-24,Lesen 1.1 — thường dùng plural Schreibwaren,,active
+Stift,Substantiv,der,1,2026-05-24,Lesen 1.1 — bút (chung),,active
+Notizbuch,Substantiv,das,1,2026-05-24,Lesen 1.1 — compound: Notiz + Buch,,active
+Uhr,Substantiv,die,1,2026-05-24,Lesen 1.1 — vừa là đồng hồ vừa là giờ,,active
+Schmuck,Substantiv,der,1,2026-05-24,Lesen 1.1 — uncountable,,active
+Armbanduhr,Substantiv,die,1,2026-05-24,Lesen 1.1 — compound: Armband + Uhr,,active
+Kette,Substantiv,die,1,2026-05-24,Lesen 1.1 — đa nghĩa: dây chuyền / chuỗi / xích,,active
+Ohrring,Substantiv,der,1,2026-05-24,Lesen 1.1 — compound: Ohr + Ring,,active
+Süßware,Substantiv,die,1,2026-05-24,Lesen 1.1 — thường dùng plural Süßwaren,,active
+Praline,Substantiv,die,1,2026-05-24,Lesen 1.1 — sô-cô-la viên có nhân,,active
+Regenschirm,Substantiv,der,1,2026-05-24,Lesen 1.1 — compound: Regen + Schirm,,active
+faltbar,Adjektiv,,1,2026-05-24,Lesen 1.1 — từ động từ falten + suffix -bar,,active
+stabil,Adjektiv,,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Modell,Substantiv,das,1,2026-05-24,Lesen 1.1 — đa nghĩa: mẫu / kiểu / mô hình,,active
+Schnäppchen,Substantiv,das,1,2026-05-24,Lesen 1.1 — diminutiv -chen,,active
+Feier,Substantiv,die,1,2026-05-24,Lesen 1.1 — phân biệt với động từ feiern,,active
+Sonderangebot,Substantiv,das,1,2026-05-24,Lesen 1.1 — compound: Sonder + Angebot,,active
+Restposten,Substantiv,der,1,2026-05-24,Lesen 1.1 — compound: Rest + Posten,,active
+reduziert,Adjektiv,,1,2026-05-24,Lesen 1.1 — Partizip II của reduzieren dùng làm Adjektiv,,active
+Ware,Substantiv,die,1,2026-05-24,Lesen 1.1 — hàng hóa (chung),,active
+Deli-Feinkost,Substantiv,die,1,2026-05-24,Lesen 1.1 — compound: Deli (Anglizismus) + Feinkost,,active
+Käse,Substantiv,der,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Wurst,Substantiv,die,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Olive,Substantiv,die,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Spezialität,Substantiv,die,1,2026-05-24,Lesen 1.1 — món đặc sản,,active
+Tabakware,Substantiv,die,1,2026-05-24,Lesen 1.1 — thường dùng plural Tabakwaren,,active
+Zigarette,Substantiv,die,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Zigarre,Substantiv,die,1,2026-05-24,Lesen 1.1 — xì gà (phân biệt với Zigarette),,active
+E-Zigarette,Substantiv,die,1,2026-05-24,Lesen 1.1 — thuốc lá điện tử,,active
+Dekorationsartikel,Substantiv,der,1,2026-05-24,Lesen 1.1 — compound: Dekoration + Artikel,,active
+Kerze,Substantiv,die,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Vase,Substantiv,die,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Bilderrahmen,Substantiv,der,1,2026-05-24,Lesen 1.1 — compound: Bild + Rahmen,,active
+Partybedarf,Substantiv,der,1,2026-05-24,Lesen 1.1 — compound: Party + Bedarf,,active
+Luftballon,Substantiv,der,1,2026-05-24,Lesen 1.1 — compound: Luft + Ballon,,active
+Girlande,Substantiv,die,1,2026-05-24,Lesen 1.1 — dải trang trí,,active
+Serviette,Substantiv,die,1,2026-05-24,Lesen 1.1 Center Solaris,,active
+Partygeschirr,Substantiv,das,1,2026-05-24,Lesen 1.1 — compound: Party + Geschirr,,active
