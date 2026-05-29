@@ -6,8 +6,14 @@
 //   cp   config.example.php config.php    (*nix)
 
 return [
-    // SQLite DB sinh runtime ở data/ (gitignored). Tự tạo khi migrate.
-    'db_path'      => __DIR__ . '/data/deutsch_web.sqlite',
+    // MySQL (PDO) — server deutsch.twv.app shared cPanel. DB riêng apptwv_deutsch.
+    'db' => [
+        'host'    => 'localhost',          // cPanel: localhost (UNIX socket)
+        'name'    => 'apptwv_deutsch',
+        'user'    => 'apptwv_deutschu',
+        'pass'    => 'PASTE_DB_PASSWORD',
+        'charset' => 'utf8mb4',
+    ],
 
     // Bearer token cho /api/* — CHỈ Cowork/CLI dùng. Dán chuỗi ngẫu nhiên DÀI.
     // Sinh nhanh: php -r "echo bin2hex(random_bytes(32));"

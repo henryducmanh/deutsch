@@ -1,7 +1,4 @@
 # Secrets + runtime — KHÔNG commit
 config.php
-data/*.sqlite
-data/*.sqlite-wal
-data/*.sqlite-shm
 logs/
 *.log

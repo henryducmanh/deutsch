@@ -104,8 +104,8 @@ ID convention: `DD-<YYYYMMDD>-<NNN>` (DD = Deutsch Decision).
 
 | # | Câu hỏi | Quyết định | Lý do |
 |---|---|---|---|
-| 1 | DB web | **SQLite** (`module/deutsch_web/data/deutsch_web.sqlite`) | 1 user, vai "operational DB". Zero infra, file portable, backup = copy file. MySQL shared mieu bị loại: dự án mieu chỉ tham khảo, KHÔNG được ghép DB (coupling 2 dự án). |
-| 2 | Auth | Bảng **`users` riêng trong SQLite deutsch_web**, single user, password hash trong DB + session PHP. Tái dùng **pattern** session mieu, KHÔNG dùng bảng/DB mieu. | Tách biệt domain. Không phụ thuộc mieu schema. |
+| 1 | DB web | ~~SQLite~~ → **MySQL, database riêng `apptwv_deutsch`** (cập nhật 2026-05-29 sau khi xem server thật). | Host deutsch.twv.app là **shared cPanel MySQL-first** (MySQL 5.7.44 sẵn, `pdo_mysql` ✓; `pdo_sqlite` KHÔNG xác nhận bật). MySQL = first-class, debug qua phpMyAdmin, cPanel auto-backup, không lo file-lock/extension. **Database riêng** `apptwv_deutsch` + user riêng → vẫn KHÔNG đụng schema/bảng/code mieu (chỉ chung MySQL server, tách DB). Lý do SQLite cũ ("tránh ghép dự án") quá thận trọng khi host đã có MySQL chuẩn. |
+| 2 | Auth | Bảng **`users` riêng trong MySQL `apptwv_deutsch`**, single user, password hash trong DB + session PHP. Tái dùng **pattern** session mieu, KHÔNG dùng bảng/DB mieu. | Tách biệt domain. Không phụ thuộc mieu schema. |
 | 3 | Audio (~220 MB) | **Phase 1: dùng URL LingQ S3** (đã push, ổn định, 0 cost storage/bandwidth trên twv.app). Lesson JSON chứa `audio.url`. KHÔNG upload 220 MB lên server. | Prototype đã chạy với `s3.amazonaws.com/media.lingq.com`. Host local để Phase sau nếu S3 đổi (có sẵn `audio.local_path` fallback). |
 | 4 | Sync tần suất | **Cron 30 phút** (giống pattern `lingq_sync`) + chạy manual được. Pull-based, web KHÔNG push tới Cowork. | Nhất quán cron Windows hiện có. Realtime không cần cho 1 user. |
 | 5 | Ack model | **Giữ audit log** — cột `synced_at` (NULL = pending). Ack = set timestamp, KHÔNG xóa row. | Append-only spirit giống vocab_master. Re-pull/debug được. |

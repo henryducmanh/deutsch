@@ -1,7 +1,8 @@
 <?php
-// db.php — PDO SQLite singleton + migrate runner.
-// SQLite app-managed: schema chạy qua scripts/migrate.php (đọc migrations/*.sql, idempotent).
-// KHÔNG gõ DDL tay ở console.
+// db.php — PDO MySQL singleton + migrate runner.
+// Server deutsch.twv.app = shared cPanel MySQL-first (MySQL 5.7, pdo_mysql ✓).
+// DB app-managed qua scripts/migrate.php (đọc migrations/*.sql, idempotent IF NOT EXISTS).
+// KHÔNG gõ DDL tay ở console. Code chạy được cả PHP 7.4 và 8.1.
 
 function dw_config()
 {
@@ -10,7 +11,7 @@ function dw_config()
         $path = __DIR__ . '/../config.php';
         if (!is_file($path)) {
             http_response_code(500);
-            exit("config.php chưa có. Copy config.example.php → config.php và điền api_key.");
+            exit("config.php chưa có. Copy config.example.php → config.php và điền creds + api_key.");
         }
         $cfg = require $path;
     }
@@ -22,20 +23,28 @@ function db()
     static $pdo = null;
     if ($pdo === null) {
         $cfg = dw_config();
-        $dir = dirname($cfg['db_path']);
-        if (!is_dir($dir)) { mkdir($dir, 0777, true); }
-        $pdo = new PDO('sqlite:' . $cfg['db_path']);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-        // WAL: đọc/ghi mượt khi cron pull lúc đang học (mục 6 prompt).
-        $pdo->exec('PRAGMA journal_mode=WAL');
-        $pdo->exec('PRAGMA foreign_keys=ON');
-        $pdo->exec('PRAGMA busy_timeout=5000');
+        $db = $cfg['db'] ?? null;
+        if (!is_array($db)) {
+            http_response_code(500);
+            exit("config.php thiếu block 'db' (host/name/user/pass). Xem config.example.php.");
+        }
+        $charset = $db['charset'] ?? 'utf8mb4';
+        $dsn = "mysql:host={$db['host']};dbname={$db['name']};charset={$charset}";
+        $pdo = new PDO($dsn, $db['user'], $db['pass'], [
+            PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_EMULATE_PREPARES   => false,
+        ]);
+        // Pin connection về UTC (offset số → KHÔNG cần timezone tables trên shared host).
+        // Giữ created_at (CURRENT_TIMESTAMP) đồng nhất UTC với ack gmdate() + since UTC của Cowork.
+        $pdo->exec("SET time_zone = '+00:00'");
     }
     return $pdo;
 }
 
-// Chạy tất cả migrations/*.sql theo thứ tự tên. Idempotent nhờ IF NOT EXISTS.
+// Chạy tất cả migrations/*.sql theo thứ tự tên. Tách câu theo ';' rồi exec từng câu
+// (MySQL PDO không chạy nhiều statement 1 exec khi emulate_prepares=false).
+// Idempotent nhờ IF NOT EXISTS.
 function dw_migrate()
 {
     $pdo = db();
@@ -43,11 +52,32 @@ function dw_migrate()
     sort($files);
     foreach ($files as $f) {
         $sql = file_get_contents($f);
-        if ($sql !== false && trim($sql) !== '') {
-            $pdo->exec($sql);
+        if ($sql === false) { continue; }
+        foreach (dw_split_sql($sql) as $stmt) {
+            $pdo->exec($stmt);
         }
     }
     return $files;
+}
+
+// Tách file SQL thành từng câu lệnh. Bỏ comment dòng (-- ...) + dòng trống.
+// Migration của module không chứa ';' bên trong chuỗi → split theo ';' an toàn.
+function dw_split_sql($sql)
+{
+    $lines = preg_split('/\R/', $sql);
+    $clean = [];
+    foreach ($lines as $line) {
+        $trim = ltrim($line);
+        if ($trim === '' || strpos($trim, '--') === 0) { continue; }
+        $clean[] = $line;
+    }
+    $joined = implode("\n", $clean);
+    $parts = explode(';', $joined);
+    $out = [];
+    foreach ($parts as $p) {
+        if (trim($p) !== '') { $out[] = trim($p); }
+    }
+    return $out;
 }
 
 // UUID v4 sinh thuần PHP (không cần ext). Dùng cho events.event_id.

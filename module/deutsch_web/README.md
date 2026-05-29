@@ -1,8 +1,8 @@
 # deutsch_web — Phase 1
 
 Web phục vụ bài **Hören** DTZ B1 (login + drill + click-từ + progress + API read).
-Stack: **PHP 7.4** (`C:\php\php74\php.exe`), **SQLite** (PDO), no framework, no Composer.
-Deploy: `https://deutsch.twv.app`.
+Stack: **PHP 7.4/8.1** (cPanel MultiPHP), **MySQL 5.7** (PDO), no framework, no Composer.
+Deploy: `https://deutsch.twv.app` (shared cPanel, DB riêng `apptwv_deutsch`).
 
 > **Ranh giới:** web chỉ **queue** dữ liệu vào bảng `events`. `vocab_master.csv` vẫn là source of truth —
 > Cowork (máy local) pull qua API rồi curate + push LingQ. Web KHÔNG gọi GitHub/LingQ, KHÔNG đụng dự án mieu.
@@ -11,25 +11,29 @@ Deploy: `https://deutsch.twv.app`.
 
 ## Yêu cầu PHP (1 lần)
 
-App cần extension **`pdo_sqlite`** + **`sqlite3`**. Trên `C:\php\php74` 2 dòng này đang bị
-comment trong `php.ini` (DLL có sẵn trong `ext/`). Chọn 1 trong 2:
+App cần extension **`pdo_mysql`** (cPanel server đã có ✓). Local Windows test: `C:\php\php74`
+DLL `php_pdo_mysql.dll` có sẵn trong `ext/` nhưng có thể đang comment trong `php.ini`. Chọn 1 trong 2:
 
-- **Cách A (khuyến nghị):** mở `C:\php\php74\php.ini`, bỏ dấu `;` ở 2 dòng:
-  `extension=pdo_sqlite` và `extension=sqlite3`. (Implementer KHÔNG tự sửa — php.ini là
-  tài nguyên dùng chung ngoài scope dự án.)
-- **Cách B (không đụng php.ini):** thêm cờ vào mọi lệnh php:
-  `-d extension=php_pdo_sqlite.dll -d extension=php_sqlite3.dll`
+- **Cách A:** mở `C:\php\php74\php.ini`, bỏ dấu `;` ở dòng `extension=pdo_mysql`
+  (Implementer KHÔNG tự sửa — php.ini là tài nguyên dùng chung ngoài scope dự án).
+- **Cách B (không đụng php.ini):** thêm cờ vào mọi lệnh php: `-d extension=php_pdo_mysql.dll`
 
-Kiểm tra: `C:\php\php74\php.exe -m` phải thấy `pdo_sqlite` + `sqlite3`.
+Kiểm tra: `C:\php\php74\php.exe -m` phải thấy `pdo_mysql`. (Cần 1 MySQL server local để test;
+hoặc test thẳng trên server staging twv.app.)
 
 ---
 
 ## Setup local
 
 ```bat
+:: 0) Tạo DB + user MySQL (local hoặc qua cPanel). Vd local:
+::    CREATE DATABASE apptwv_deutsch CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+::    CREATE USER 'apptwv_deutschu'@'localhost' IDENTIFIED BY '...';
+::    GRANT ALL ON apptwv_deutsch.* TO 'apptwv_deutschu'@'localhost';
+
 :: 1) Config
 copy module\deutsch_web\config.example.php module\deutsch_web\config.php
-:: → mở config.php, dán api_key ngẫu nhiên dài. Sinh nhanh:
+:: → mở config.php: điền block 'db' (host/name/user/pass) + api_key ngẫu nhiên dài. Sinh key:
 C:\php\php74\php.exe -r "echo bin2hex(random_bytes(32));"
 
 :: 2) Tạo schema (idempotent — chạy lại an toàn)
@@ -101,18 +105,22 @@ curl -X POST -H "Authorization: Bearer $KEY" -d '{"event_ids":["<id>"]}' "$BASE/
 
 1. Upload `module/deutsch_web/` lên server, **trỏ web root vào thư mục `public/`**.
 2. Bật `mod_rewrite` (Apache) — `.htaccess` đã có sẵn rewrite + forward Authorization header.
-3. Tạo `config.php` trên server (không commit), dán `api_key`.
-4. Chạy `php scripts/migrate.php` + `--add-user henry` trên server.
-5. Bật HTTPS → mở `'secure' => true` trong `lib/auth.php` cookie params (đang comment).
-6. `data/` phải ghi được (SQLite + WAL). `data/*.sqlite` + `config.php` đã trong `.gitignore`.
+3. Tạo DB `apptwv_deutsch` + user trong cPanel → MySQL Databases.
+4. Tạo `config.php` trên server (không commit), điền block `db` creds + `api_key`.
+5. Chạy `php scripts/migrate.php` + `--add-user henry` trên server (PHP 7.4 hoặc 8.1 đều OK).
+6. Bật HTTPS → mở `'secure' => true` trong `lib/auth.php` cookie params (đang comment).
 
 ---
 
 ## Schema DB
 
-`migrations/001_init.sql` — `users` (id, username, password_hash) + `events` (append-only,
-`synced_at NULL = pending`). WAL mode bật trong `lib/db.php`. Chạy qua `scripts/migrate.php`
-(idempotent nhờ `IF NOT EXISTS`) — **KHÔNG gõ DDL tay**.
+`migrations/001_init.sql` — MySQL 5.7 InnoDB utf8mb4. `users` (id, username, password_hash) +
+`events` (append-only, `payload` JSON, `synced_at NULL = pending`). Chạy qua `scripts/migrate.php`
+(tách câu theo `;`, exec từng câu; idempotent nhờ `IF NOT EXISTS`) — **KHÔNG gõ DDL tay**.
+
+Thời gian: kết nối pin `time_zone='+00:00'` (UTC) trong `lib/db.php` → `created_at`
+(CURRENT_TIMESTAMP) đồng nhất UTC với `ack` (`gmdate`) + `since` UTC của Cowork.
+Nếu host báo `JSON` không hỗ trợ: đổi `payload JSON` → `payload LONGTEXT NOT NULL` (app đã `json_encode`).
 
 Payload theo type (cột `events.payload`, JSON):
 
@@ -138,10 +146,10 @@ Audio dùng `audio.url` (LingQ S3) — KHÔNG upload MP3 lên server.
 
 ## Troubleshooting
 
-- **`PDOException: could not find driver`**: chưa bật `pdo_sqlite` → xem mục "Yêu cầu PHP" trên (cách A hoặc B).
+- **`PDOException: could not find driver`**: chưa bật `pdo_mysql` → xem mục "Yêu cầu PHP" trên.
+- **`SQLSTATE[HY000] [2002]` / connection refused**: sai `db` host/creds trong `config.php`, hoặc MySQL chưa chạy.
+- **`Unknown database 'apptwv_deutsch'`**: chưa tạo DB (xem Setup bước 0 / Deploy bước 3).
 - **404 cho `/login`** khi `php -S`: thiếu router script → thêm `module/deutsch_web/public/index.php` vào cuối lệnh serve.
 - **500 "config.php chưa có"**: chưa copy `config.example.php` → `config.php`.
 - **401 mọi API**: `api_key` còn để `PASTE_LONG_RANDOM_TOKEN_HERE`, hoặc thiếu header `Authorization: Bearer`.
 - **Bearer mất trên Apache CGI**: `.htaccess` đã forward `HTTP_AUTHORIZATION`; `api_auth.php` đọc cả `REDIRECT_HTTP_AUTHORIZATION` + `apache_request_headers()`.
-- **`data/` không ghi được**: cấp quyền ghi cho thư mục `data/` (SQLite cần tạo file + WAL/SHM).
-```
