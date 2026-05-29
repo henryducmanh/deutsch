@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hören Übung — DTZ B1 (4.29 / 4.30 / 4.31)</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0f0f0; color: #222; font-size: 17px; }
+
+  .app { max-width: 960px; margin: 0 auto; padding: 28px 24px 80px; }
+
+  /* Nav tabs */
+  .tabs { display: flex; gap: 10px; margin-bottom: 24px; flex-wrap: wrap; }
+  .tab { padding: 10px 22px; border-radius: 24px; border: 2px solid #ddd; background: #fff;
+         cursor: pointer; font-size: 15px; font-weight: 500; transition: all .15s; }
+  .tab:hover { border-color: #e06030; }
+  .tab.active { background: #e06030; color: #fff; border-color: #e06030; }
+  .tab.done { border-color: #27ae60; color: #27ae60; }
+  .tab.done.active { background: #27ae60; color: #fff; }
+
+  /* Lesson panel */
+  .lesson { display: none; }
+  .lesson.active { display: block; }
+
+  /* Header */
+  .lesson-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 18px; }
+  .lesson-title { font-size: 26px; font-weight: 700; color: #1a1a1a; }
+  .lesson-source { font-size: 13px; color: #888; margin-top: 4px; }
+  .score-badge { background: #e06030; color: #fff; border-radius: 14px; padding: 6px 18px;
+                 font-weight: 700; font-size: 18px; min-width: 70px; text-align: center; white-space: nowrap; }
+  .score-badge.perfect { background: #27ae60; }
+
+  /* Instructions */
+  .instructions { font-style: italic; font-size: 16px; color: #444; margin-bottom: 20px;
+                  padding: 16px 20px; background: #fff; border-radius: 10px; border-left: 4px solid #e06030; }
+
+  /* Audio player — custom sticky */
+  .audio-wrap { background: #fff; border-radius: 50px; padding: 10px 20px; margin-bottom: 28px;
+                box-shadow: 0 1px 6px rgba(0,0,0,.10);
+                position: sticky; top: 8px; z-index: 100;
+                transition: box-shadow .2s; display: flex; align-items: center; gap: 12px; }
+  .audio-wrap.pinned { box-shadow: 0 4px 18px rgba(0,0,0,.18); }
+
+  .play-btn { width: 32px; height: 32px; border: none; background: none; cursor: pointer;
+              color: #333; font-size: 16px; flex-shrink: 0; display: flex; align-items: center;
+              justify-content: center; padding: 0; }
+  .play-btn:hover { color: #e06030; }
+
+  .time-cur { font-size: 14px; color: #555; min-width: 34px; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+
+  .progress-bar { flex: 1; height: 4px; background: #e0e0e0; border-radius: 2px;
+                  position: relative; cursor: pointer; margin: 0 4px; }
+  .progress-fill { height: 100%; background: #e06030; border-radius: 2px; width: 0%; pointer-events: none; }
+  .progress-dot { width: 14px; height: 14px; background: #e06030; border-radius: 50%;
+                  position: absolute; top: 50%; transform: translate(-50%, -50%);
+                  left: 0%; pointer-events: none; box-shadow: 0 1px 4px rgba(224,96,48,.4); }
+
+  .time-total { font-size: 14px; color: #555; min-width: 34px; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+
+  .ctrl-btn { border: none; background: none; cursor: pointer; color: #555; font-size: 15px;
+              padding: 4px 6px; border-radius: 6px; flex-shrink: 0; display: flex;
+              align-items: center; justify-content: center; transition: color .15s, background .15s; }
+  .ctrl-btn:hover { color: #e06030; background: #fff3ee; }
+  .ctrl-btn.active { color: #e06030; }
+
+  .speed-btn { font-size: 13px; font-weight: 600; min-width: 30px; }
+  .vol-btn { font-size: 16px; }
+  .repeat-btn { font-size: 18px; line-height: 1; }
+
+  /* Questions */
+  .aussagen { display: flex; flex-direction: column; gap: 28px; }
+
+  .aussage-block { background: #fff; border-radius: 12px; padding: 24px 28px;
+                   box-shadow: 0 1px 6px rgba(0,0,0,.08); }
+  .aussage-label { font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #e06030; }
+
+  .options { display: flex; flex-direction: column; gap: 10px; }
+  .option { display: flex; align-items: center; gap: 14px; padding: 16px 20px; border-radius: 10px;
+            border: 1px solid #ddd; cursor: pointer; transition: all .15s; background: #fff; }
+  .option:hover { border-color: #e06030; background: #fff8f5; }
+  .option input[type=radio] { width: 20px; height: 20px; accent-color: #e06030; cursor: pointer; flex-shrink: 0; }
+  .option span { font-size: 16px; line-height: 1.5; }
+
+  /* States after check */
+  .option.selected  { border-color: #e06030; border-width: 2px; background: #fff3ee; }
+  .option.correct   { border-color: #27ae60; border-width: 2px; background: #f0faf4; color: #1e8449; font-weight: 600; }
+  .option.wrong     { border-color: #c0392b; border-width: 2px; background: #fef0ef; color: #c0392b; font-weight: 600; }
+  .option.show-correct { border-color: #27ae60; border-width: 2px; background: #f0faf4; color: #1e8449; font-weight: 600; }
+
+  .option .mark { font-size: 20px; margin-left: auto; flex-shrink: 0; font-weight: 700; }
+  .option.correct .mark { color: #27ae60; }
+  .option.wrong .mark   { color: #c0392b; }
+
+  /* Buttons */
+  .btn-row { display: flex; justify-content: flex-end; gap: 14px; margin-top: 28px; }
+  .btn { padding: 13px 34px; border-radius: 10px; font-size: 16px; font-weight: 600;
+         cursor: pointer; border: 2px solid; transition: all .15s; }
+  .btn-secondary { background: #fff; color: #e06030; border-color: #e06030; }
+  .btn-secondary:hover { background: #fff3ee; }
+  .btn-primary { background: #e06030; color: #fff; border-color: #e06030; }
+  .btn-primary:hover { background: #c94e24; }
+  .btn:disabled { opacity: .4; cursor: not-allowed; }
+
+  /* Result bar */
+  .result-bar { display: none; margin-top: 20px; padding: 16px 20px; border-radius: 10px;
+                font-weight: 600; font-size: 16px; }
+  .result-bar.show { display: block; }
+  .result-bar.perfect { background: #eafaf1; color: #1e8449; border: 1px solid #a9dfbf; }
+  .result-bar.ok { background: #fef9e7; color: #7d6608; border: 1px solid #f9e79f; }
+  .result-bar.poor { background: #fef0ef; color: #c0392b; border: 1px solid #f1948a; }
+
+  /* Transcript */
+  .transcript-toggle { margin-top: 20px; }
+  .btn-transcript { background: none; border: 1px solid #bbb; border-radius: 8px; padding: 10px 18px;
+                    font-size: 15px; cursor: pointer; color: #555; display: flex; align-items: center; gap: 8px; }
+  .btn-transcript:hover { border-color: #e06030; color: #e06030; }
+  .transcript-box { display: none; margin-top: 12px; padding: 20px 24px; background: #f8f8f8;
+                    border-radius: 10px; font-size: 15px; line-height: 1.8; color: #444;
+                    border-left: 4px solid #e06030; }
+  .transcript-box.show { display: block; }
+  .transcript-box p { margin-bottom: 12px; }
+  .transcript-box strong { color: #222; }
+
+  /* Progress dots */
+  .progress-dots { display: flex; gap: 8px; justify-content: center; margin-top: 36px; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; background: #ddd; transition: background .2s; }
+  .dot.active { background: #e06030; }
+  .dot.done { background: #27ae60; }
+
+  @media (max-width: 600px) {
+    .app { padding: 16px 12px 60px; }
+    .lesson-title { font-size: 20px; }
+    .aussage-block { padding: 16px 14px; }
+    .option { padding: 12px 14px; }
+    .option span { font-size: 15px; }
+    .btn { padding: 11px 20px; font-size: 15px; }
+  }
+
+  /* ── Vocab Panel ── */
+  .vocab-btn { position: fixed; top: 14px; right: 14px; z-index: 300;
+               background: #fff; border: 2px solid #ddd; border-radius: 10px;
+               padding: 8px 10px; cursor: pointer; color: #555;
+               box-shadow: 0 2px 8px rgba(0,0,0,.12); transition: all .15s;
+               display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; }
+  .vocab-btn:hover { border-color: #e06030; color: #e06030; }
+  .vocab-btn.active { border-color: #e06030; background: #fff3ee; color: #e06030; }
+  .vocab-btn svg { width: 18px; height: 18px; }
+
+  .vocab-overlay { display: none; }  /* overlay removed */
+
+  .vocab-panel { position: fixed; right: -340px; top: 0; width: 320px; height: 100vh;
+                 background: #fff; box-shadow: -4px 0 24px rgba(0,0,0,.15); z-index: 260;
+                 transition: right .28s cubic-bezier(.4,0,.2,1); display: flex; flex-direction: column; }
+  .vocab-panel.open { right: 0; }
+
+  .vocab-head { padding: 10px 14px 8px; border-bottom: 1px solid #eee; flex-shrink: 0; }
+  .vocab-head-row1 { display: flex; align-items: center; gap: 8px; }
+
+  /* Nút collapse kiểu LingQ — góc trái panel */
+  .vocab-collapse-btn { background: none; border: 1px solid #ddd; border-radius: 6px;
+                        cursor: pointer; color: #777; padding: 4px 7px; line-height: 1;
+                        flex-shrink: 0; transition: all .15s; font-size: 14px; }
+  .vocab-collapse-btn:hover { border-color: #e06030; color: #e06030; }
+
+  .vocab-head-title { font-size: 12px; font-weight: 700; color: #333; flex: 1;
+                      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .vocab-head-actions { display: flex; align-items: center; gap: 5px; flex-shrink: 0; }
+
+  .vocab-hl-btn { font-size: 11px; font-weight: 600; padding: 4px 8px; border-radius: 12px;
+                  border: 1.5px solid #ddd; background: #fff; color: #777; cursor: pointer;
+                  transition: all .15s; white-space: nowrap; }
+  .vocab-hl-btn.on { background: #ffd700; border-color: #e6c000; color: #444; }
+
+  /* Vocab-btn chính — ẩn khi panel mở */
+  .vocab-btn.panel-open { display: none; }
+
+  .vocab-head-tabs { display: flex; gap: 0; margin-top: 6px; }
+  .vocab-tab { padding: 4px 10px; font-size: 12px; font-weight: 600; cursor: pointer;
+               border-bottom: 2px solid transparent; color: #888; }
+  .vocab-tab.active { color: #e06030; border-color: #e06030; }
+
+  /* Word highlight in text */
+  .vocab-mark { border-radius: 3px; transition: background .15s; cursor: pointer; }
+
+  /* hl-selected: LUÔN hiện viền cam + nền cam, bất kể bật/tắt nền vàng */
+  .vocab-mark.hl-selected { background: #ffa520 !important; outline: 2px solid #e06030;
+                             outline-offset: 1px; border-radius: 3px; }
+
+  /* Nền vàng tất cả từ — chỉ khi bật toggle */
+  body.hl-on .vocab-mark { background: #ffe066; }
+  body.hl-on .vocab-mark:hover { background: #ffc926; }
+
+  .vocab-list { overflow-y: auto; flex: 1; padding: 4px 0; }
+  .vocab-item { display: flex; align-items: flex-start; gap: 12px;
+                padding: 11px 18px; border-bottom: 1px solid #f2f2f2; }
+  .vocab-item:hover { background: #fafafa; }
+  .vocab-item.hl-active { background: #fff3ee; border-left: 3px solid #e06030; padding-left: 15px; }
+  .vocab-lv { width: 26px; height: 26px; border-radius: 50%; color: #fff; font-size: 12px;
+              font-weight: 700; display: flex; align-items: center; justify-content: center;
+              flex-shrink: 0; margin-top: 1px; }
+  .lv-new  { background: #e8a020; }
+  .lv-ok   { background: #3aaa6e; }
+  .lv-hard { background: #e06030; }
+  .vocab-text { flex: 1; min-width: 0; }
+  .vocab-word { font-size: 15px; font-weight: 600; color: #222; }
+  .vocab-art  { font-size: 11px; color: #999; margin-left: 4px; font-weight: 400; }
+  .vocab-meaning { font-size: 13px; color: #666; margin-top: 2px; line-height: 1.4; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchLesson(0)">4.29 — Digitalisierung</button>
+    <button class="tab" onclick="switchLesson(1)">4.30 — Homeoffice</button>
+    <button class="tab" onclick="switchLesson(2)">4.31 — Zukunft der Arbeit</button>
+  </div>
+
+  <!-- ===== LESSON 4.29 ===== -->
+  <div class="lesson active" id="lesson-0">
+    <div class="lesson-header">
+      <div>
+        <div class="lesson-title">Digitalisierung in der Bildung</div>
+        <div class="lesson-source">Aufgabe 4.29 · DTZ B1 · Hören</div>
+      </div>
+      <div class="score-badge" id="score-0">0/3</div>
+    </div>
+
+    <div class="instructions">
+      Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen?
+      Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.
+    </div>
+
+    <div class="audio-wrap" id="player-0">
+      <audio id="audio-0" src="https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/4.29.a0dc1a5e1c85.mp3" preload="none"></audio>
+      <button class="play-btn" id="playbtn-0" onclick="togglePlay(0)" title="Play / Pause">
+        <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor"><path d="M0 0 L14 8 L0 16 Z"/></svg>
+      </button>
+      <span class="time-cur" id="cur-0">0:00</span>
+      <div class="progress-bar" id="bar-0" onmousedown="startSeek(event,0)" ontouchstart="startSeek(event,0)">
+        <div class="progress-fill" id="fill-0"></div>
+        <div class="progress-dot" id="dothandle-0"></div>
+      </div>
+      <span class="time-total" id="total-0">0:00</span>
+      <button class="ctrl-btn repeat-btn" id="repeat-0" onclick="toggleRepeat(0)" title="Lặp lại">&#x21BA;</button>
+      <button class="ctrl-btn speed-btn" id="speed-0" onclick="cycleSpeed(0)">1x</button>
+      <button class="ctrl-btn vol-btn" id="vol-0" onclick="toggleMute(0)" title="Tắt tiếng">&#x1F50A;</button>
+    </div>
+
+    <div class="aussagen" id="aussagen-0">
+
+      <div class="aussage-block">
+        <div class="aussage-label">1. Aussage 1</div>
+        <div class="options" data-aussage="0-1" data-correct="d">
+          <label class="option"><input type="radio" name="q0-1" value="a"><span>a) Digitale Technologien verbessern den Zugang zu Bildung.</span></label>
+          <label class="option"><input type="radio" name="q0-1" value="b"><span>b) Die Digitalisierung verstärkt die Bildungsungleichheit.</span></label>
+          <label class="option"><input type="radio" name="q0-1" value="c"><span>c) Traditioneller Unterricht hat seine Vorzüge.</span></label>
+          <label class="option"><input type="radio" name="q0-1" value="d"><span>d) Schulen sollten in die neuesten Technologien investieren.</span></label>
+          <label class="option"><input type="radio" name="q0-1" value="e"><span>e) Persönliche Interaktion ist unersetzlich für effektives Lernen.</span></label>
+          <label class="option"><input type="radio" name="q0-1" value="f"><span>f) Die Digitalisierung sollte die traditionelle Form des Unterrichts ersetzen.</span></label>
+        </div>
+      </div>
+
+      <div class="aussage-block">
+        <div class="aussage-label">2. Aussage 2</div>
+        <div class="options" data-aussage="0-2" data-correct="b">
+          <label class="option"><input type="radio" name="q0-2" value="a"><span>a) Digitale Technologien verbessern den Zugang zu Bildung.</span></label>
+          <label class="option"><input type="radio" name="q0-2" value="b"><span>b) Die Digitalisierung verstärkt die Bildungsungleichheit.</span></label>
+          <label class="option"><input type="radio" name="q0-2" value="c"><span>c) Traditioneller Unterricht hat seine Vorzüge.</span></label>
+          <label class="option"><input type="radio" name="q0-2" value="d"><span>d) Schulen sollten in die neuesten Technologien investieren.</span></label>
+          <label class="option"><input type="radio" name="q0-2" value="e"><span>e) Persönliche Interaktion ist unersetzlich für effektives Lernen.</span></label>
+          <label class="option"><input type="radio" name="q0-2" value="f"><span>f) Die Digitalisierung sollte die traditionelle Form des Unterrichts ersetzen.</span></label>
+        </div>
+      </div>
+
+      <div class="aussage-block">
+        <div class="aussage-label">3. Aussage 3</div>
+        <div class="options" data-aussage="0-3" data-correct="e">
+          <label class="option"><input type="radio" name="q0-3" value="a"><span>a) Digitale Technologien verbessern den Zugang zu Bildung.</span></label>
+          <label class="option"><input type="radio" name="q0-3" value="b"><span>b) Die Digitalisierung verstärkt die Bildungsungleichheit.</span></label>
+          <label class="option"><input type="radio" name="q0-3" value="c"><span>c) Traditioneller Unterricht hat seine Vorzüge.</span></label>
+          <label class="option"><input type="radio" name="q0-3" value="d"><span>d) Schulen sollten in die neuesten Technologien investieren.</span></label>
+          <label class="option"><input type="radio" name="q0-3" value="e"><span>e) Persönliche Interaktion ist unersetzlich für effektives Lernen.</span></label>
+          <label class="option"><input type="radio" name="q0-3" value="f"><span>f) Die Digitalisierung sollte die traditionelle Form des Unterrichts ersetzen.</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="transcript-toggle">
+      <button class="btn-transcript" onclick="toggleTranscript(0)">🎧 Transkription anzeigen</button>
+      <div class="transcript-box" id="transcript-0">
+        <p><strong>Aussage 1:</strong> Digitale Technologien können das Lernen erleichtern und den Zugang zur Bildung verbessern. Es ist wichtig, dass <strong>Schulen und Universitäten in die neuesten Technologien investieren</strong>, um Schülerinnen und Schülern bestmögliche Bildungschancen zu bieten.</p>
+        <p><strong>Aussage 2:</strong> Ich bin skeptisch gegenüber der Digitalisierung in der Bildung. Nicht alle Schülerinnen und Schüler haben Zugang zu den notwendigen Geräten. <strong>Die digitale Kluft könnte die Bildungsungleichheit verstärken.</strong></p>
+        <p><strong>Aussage 3:</strong> Die traditionelle Form des Unterrichts hat ihre Vorteile. <strong>Persönliche Interaktion zwischen Lehrern und Schülern ist unersetzlich.</strong> Digitalisierung sollte als Ergänzung, nicht als Ersatz, betrachtet werden.</p>
+      </div>
+    </div>
+
+    <div class="result-bar" id="result-0"></div>
+    <div class="btn-row">
+      <button class="btn btn-secondary" onclick="resetLesson(0)">↺ Neu starten</button>
+      <button class="btn btn-primary" id="check-0" onclick="checkLesson(0)">Prüfen</button>
+    </div>
+  </div>
+
+  <!-- ===== LESSON 4.30 ===== -->
+  <div class="lesson" id="lesson-1">
+    <div class="lesson-header">
+      <div>
+        <div class="lesson-title">Erfahrungen im Homeoffice</div>
+        <div class="lesson-source">Aufgabe 4.30 · DTZ B1 · Hören</div>
+      </div>
+      <div class="score-badge" id="score-1">0/3</div>
+    </div>
+
+    <div class="instructions">
+      Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen?
+      Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.
+    </div>
+
+    <div class="audio-wrap" id="player-1">
+      <audio id="audio-1" src="https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/4.30.157f5fd4c28e.mp3" preload="none"></audio>
+      <button class="play-btn" id="playbtn-1" onclick="togglePlay(1)" title="Play / Pause">
+        <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor"><path d="M0 0 L14 8 L0 16 Z"/></svg>
+      </button>
+      <span class="time-cur" id="cur-1">0:00</span>
+      <div class="progress-bar" id="bar-1" onmousedown="startSeek(event,1)" ontouchstart="startSeek(event,1)">
+        <div class="progress-fill" id="fill-1"></div>
+        <div class="progress-dot" id="dothandle-1"></div>
+      </div>
+      <span class="time-total" id="total-1">0:00</span>
+      <button class="ctrl-btn repeat-btn" id="repeat-1" onclick="toggleRepeat(1)" title="Lặp lại">&#x21BA;</button>
+      <button class="ctrl-btn speed-btn" id="speed-1" onclick="cycleSpeed(1)">1x</button>
+      <button class="ctrl-btn vol-btn" id="vol-1" onclick="toggleMute(1)" title="Tắt tiếng">&#x1F50A;</button>
+    </div>
+
+    <div class="aussagen" id="aussagen-1">
+
+      <div class="aussage-block">
+        <div class="aussage-label">1. Aussage 1</div>
+        <div class="options" data-aussage="1-1" data-correct="c">
+          <label class="option"><input type="radio" name="q1-1" value="a"><span>a) Die Zeitersparnis durch Homeoffice ist ein großer Vorteil.</span></label>
+          <label class="option"><input type="radio" name="q1-1" value="b"><span>b) Die sozialen Aspekte im Büro sind für mich entscheidend.</span></label>
+          <label class="option"><input type="radio" name="q1-1" value="c"><span>c) Die flexible Arbeitszeitgestaltung ist der größte Pluspunkt von Homeoffice.</span></label>
+          <label class="option"><input type="radio" name="q1-1" value="d"><span>d) Der persönliche Kontakt zu Kollegen fehlt mir im Homeoffice.</span></label>
+          <label class="option"><input type="radio" name="q1-1" value="e"><span>e) Homeoffice bietet mehr Zeit für die Familie.</span></label>
+          <label class="option"><input type="radio" name="q1-1" value="f"><span>f) Die klare Trennung von Arbeit und Freizeit ist im Homeoffice schwierig.</span></label>
+        </div>
+      </div>
+
+      <div class="aussage-block">
+        <div class="aussage-label">2. Aussage 2</div>
+        <div class="options" data-aussage="1-2" data-correct="d">
+          <label class="option"><input type="radio" name="q1-2" value="a"><span>a) Die Zeitersparnis durch Homeoffice ist ein großer Vorteil.</span></label>
+          <label class="option"><input type="radio" name="q1-2" value="b"><span>b) Die sozialen Aspekte im Büro sind für mich entscheidend.</span></label>
+          <label class="option"><input type="radio" name="q1-2" value="c"><span>c) Die flexible Arbeitszeitgestaltung ist der größte Pluspunkt von Homeoffice.</span></label>
+          <label class="option"><input type="radio" name="q1-2" value="d"><span>d) Der persönliche Kontakt zu Kollegen fehlt mir im Homeoffice.</span></label>
+          <label class="option"><input type="radio" name="q1-2" value="e"><span>e) Homeoffice bietet mehr Zeit für die Familie.</span></label>
+          <label class="option"><input type="radio" name="q1-2" value="f"><span>f) Die klare Trennung von Arbeit und Freizeit ist im Homeoffice schwierig.</span></label>
+        </div>
+      </div>
+
+      <div class="aussage-block">
+        <div class="aussage-label">3. Aussage 3</div>
+        <div class="options" data-aussage="1-3" data-correct="f">
+          <label class="option"><input type="radio" name="q1-3" value="a"><span>a) Die Zeitersparnis durch Homeoffice ist ein großer Vorteil.</span></label>
+          <label class="option"><input type="radio" name="q1-3" value="b"><span>b) Die sozialen Aspekte im Büro sind für mich entscheidend.</span></label>
+          <label class="option"><input type="radio" name="q1-3" value="c"><span>c) Die flexible Arbeitszeitgestaltung ist der größte Pluspunkt von Homeoffice.</span></label>
+          <label class="option"><input type="radio" name="q1-3" value="d"><span>d) Der persönliche Kontakt zu Kollegen fehlt mir im Homeoffice.</span></label>
+          <label class="option"><input type="radio" name="q1-3" value="e"><span>e) Homeoffice bietet mehr Zeit für die Familie.</span></label>
+          <label class="option"><input type="radio" name="q1-3" value="f"><span>f) Die klare Trennung von Arbeit und Freizeit ist im Homeoffice schwierig.</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="transcript-toggle">
+      <button class="btn-transcript" onclick="toggleTranscript(1)">🎧 Transkription anzeigen</button>
+      <div class="transcript-box" id="transcript-1">
+        <p><strong>Aussage 1:</strong> Also ich finde Homeoffice super. Man spart viel Zeit, die man sonst im Verkehr verbringen würde. <strong>Außerdem kann ich flexibel arbeiten</strong> und habe mehr Zeit für meine Familie.</p>
+        <p><strong>Aussage 2:</strong> Ich bin überhaupt kein Fan von Homeoffice. <strong>Mir fehlt der persönliche Kontakt zu meinen Kollegen.</strong> Die informellen Gespräche am Kaffeeautomaten sind genauso wichtig wie die formellen Meetings.</p>
+        <p><strong>Aussage 3:</strong> Homeoffice ist für mich ein Albtraum. Es gibt immer Ablenkungen zu Hause. Ich vermisse <strong>die klare Trennung zwischen Arbeit und Freizeit</strong> im Büro.</p>
+      </div>
+    </div>
+
+    <div class="result-bar" id="result-1"></div>
+    <div class="btn-row">
+      <button class="btn btn-secondary" onclick="resetLesson(1)">↺ Neu starten</button>
+      <button class="btn btn-primary" id="check-1" onclick="checkLesson(1)">Prüfen</button>
+    </div>
+  </div>
+
+  <!-- ===== LESSON 4.31 ===== -->
+  <div class="lesson" id="lesson-2">
+    <div class="lesson-header">
+      <div>
+        <div class="lesson-title">Zukunft der Arbeit nach der COVID-19-Pandemie</div>
+        <div class="lesson-source">Aufgabe 4.31 · DTZ B1 · Hören</div>
+      </div>
+      <div class="score-badge" id="score-2">0/3</div>
+    </div>
+
+    <div class="instructions">
+      Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen?
+      Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.
+    </div>
+
+    <div class="audio-wrap" id="player-2">
+      <audio id="audio-2" src="https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/4.31.1bad95aa9b4b.mp3" preload="none"></audio>
+      <button class="play-btn" id="playbtn-2" onclick="togglePlay(2)" title="Play / Pause">
+        <svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor"><path d="M0 0 L14 8 L0 16 Z"/></svg>
+      </button>
+      <span class="time-cur" id="cur-2">0:00</span>
+      <div class="progress-bar" id="bar-2" onmousedown="startSeek(event,2)" ontouchstart="startSeek(event,2)">
+        <div class="progress-fill" id="fill-2"></div>
+        <div class="progress-dot" id="dothandle-2"></div>
+      </div>
+      <span class="time-total" id="total-2">0:00</span>
+      <button class="ctrl-btn repeat-btn" id="repeat-2" onclick="toggleRepeat(2)" title="Lặp lại">&#x21BA;</button>
+      <button class="ctrl-btn speed-btn" id="speed-2" onclick="cycleSpeed(2)">1x</button>
+      <button class="ctrl-btn vol-btn" id="vol-2" onclick="toggleMute(2)" title="Tắt tiếng">&#x1F50A;</button>
+    </div>
+
+    <div class="aussagen" id="aussagen-2">
+
+      <div class="aussage-block">
+        <div class="aussage-label">1. Aussage 1</div>
+        <div class="options" data-aussage="2-1" data-correct="f">
+          <label class="option"><input type="radio" name="q2-1" value="a"><span>a) Digitale Fähigkeiten werden in der postpandemischen Arbeitswelt noch wichtiger sein.</span></label>
+          <label class="option"><input type="radio" name="q2-1" value="b"><span>b) Die Flexibilisierung von Arbeitszeiten wird einen höheren Stellenwert haben.</span></label>
+          <label class="option"><input type="radio" name="q2-1" value="c"><span>c) Homeoffice bietet Flexibilität, aber es gibt Herausforderungen hinsichtlich sozialer Interaktion.</span></label>
+          <label class="option"><input type="radio" name="q2-1" value="d"><span>d) Die Automatisierung wird einige Berufe verändern und neue Möglichkeiten schaffen.</span></label>
+          <label class="option"><input type="radio" name="q2-1" value="e"><span>e) Die Weiterbildung der Arbeitnehmerinnen und Arbeitnehmer ist entscheidend.</span></label>
+          <label class="option"><input type="radio" name="q2-1" value="f"><span>f) Unternehmen sollten Strategien zur Förderung der psychischen Gesundheit entwickeln.</span></label>
+        </div>
+      </div>
+
+      <div class="aussage-block">
+        <div class="aussage-label">2. Aussage 2</div>
+        <div class="options" data-aussage="2-2" data-correct="d">
+          <label class="option"><input type="radio" name="q2-2" value="a"><span>a) Digitale Fähigkeiten werden in der postpandemischen Arbeitswelt noch wichtiger sein.</span></label>
+          <label class="option"><input type="radio" name="q2-2" value="b"><span>b) Die Flexibilisierung von Arbeitszeiten wird einen höheren Stellenwert haben.</span></label>
+          <label class="option"><input type="radio" name="q2-2" value="c"><span>c) Homeoffice bietet Flexibilität, aber es gibt Herausforderungen hinsichtlich sozialer Interaktion.</span></label>
+          <label class="option"><input type="radio" name="q2-2" value="d"><span>d) Die Automatisierung wird einige Berufe verändern und neue Möglichkeiten schaffen.</span></label>
+          <label class="option"><input type="radio" name="q2-2" value="e"><span>e) Die Weiterbildung der Arbeitnehmerinnen und Arbeitnehmer ist entscheidend.</span></label>
+          <label class="option"><input type="radio" name="q2-2" value="f"><span>f) Unternehmen sollten Strategien zur Förderung der psychischen Gesundheit entwickeln.</span></label>
+        </div>
+      </div>
+
+      <div class="aussage-block">
+        <div class="aussage-label">3. Aussage 3</div>
+        <div class="options" data-aussage="2-3" data-correct="c">
+          <label class="option"><input type="radio" name="q2-3" value="a"><span>a) Digitale Fähigkeiten werden in der postpandemischen Arbeitswelt noch wichtiger sein.</span></label>
+          <label class="option"><input type="radio" name="q2-3" value="b"><span>b) Die Flexibilisierung von Arbeitszeiten wird einen höheren Stellenwert haben.</span></label>
+          <label class="option"><input type="radio" name="q2-3" value="c"><span>c) Homeoffice bietet Flexibilität, aber es gibt Herausforderungen hinsichtlich sozialer Interaktion.</span></label>
+          <label class="option"><input type="radio" name="q2-3" value="d"><span>d) Die Automatisierung wird einige Berufe verändern und neue Möglichkeiten schaffen.</span></label>
+          <label class="option"><input type="radio" name="q2-3" value="e"><span>e) Die Weiterbildung der Arbeitnehmerinnen und Arbeitnehmer ist entscheidend.</span></label>
+          <label class="option"><input type="radio" name="q2-3" value="f"><span>f) Unternehmen sollten Strategien zur Förderung der psychischen Gesundheit entwickeln.</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="transcript-toggle">
+      <button class="btn-transcript" onclick="toggleTranscript(2)">🎧 Transkription anzeigen</button>
+      <div class="transcript-box" id="transcript-2">
+        <p><strong>Aussage 1:</strong> Unternehmen sollten Strategien entwickeln, um <strong>die psychische Gesundheit der Arbeitnehmer zu fördern</strong>. Die ständigen Veränderungen können zu erhöhtem Stress führen. Die Investition in das Wohlbefinden der Mitarbeiter ist nicht nur eine ethische Verpflichtung, sondern wirkt sich positiv auf Produktivität aus.</p>
+        <p><strong>Aussage 2:</strong> <strong>Die zunehmende Automatisierung wird einige Berufe verändern</strong>, aber auch neue Möglichkeiten für kreative und innovative Tätigkeiten schaffen. Arbeitskräfte sollten Fähigkeiten entwickeln, die schwerer automatisiert werden können — Kreativität, Kommunikation, strategische Planung.</p>
+        <p><strong>Aussage 3:</strong> <strong>Homeoffice bietet zwar Flexibilität, aber es gibt Herausforderungen</strong> hinsichtlich sozialer Interaktion und des klaren Trennens von Arbeit und Privatleben. Unternehmen müssen Maßnahmen ergreifen, um den sozialen Zusammenhalt der Belegschaft zu stärken.</p>
+      </div>
+    </div>
+
+    <div class="result-bar" id="result-2"></div>
+    <div class="btn-row">
+      <button class="btn btn-secondary" onclick="resetLesson(2)">↺ Neu starten</button>
+      <button class="btn btn-primary" id="check-2" onclick="checkLesson(2)">Prüfen</button>
+    </div>
+  </div>
+
+  <div class="progress-dots">
+    <div class="dot active" id="dot-0"></div>
+    <div class="dot" id="dot-1"></div>
+    <div class="dot" id="dot-2"></div>
+  </div>
+
+</div>
+
+<script>
+  var currentLesson = 0;
+  var lessonDone = [false, false, false];
+
+  function switchLesson(n) {
+    document.querySelectorAll('.lesson').forEach(function(el, i) {
+      el.classList.toggle('active', i === n);
+    });
+    document.querySelectorAll('.tab').forEach(function(el, i) {
+      el.classList.toggle('active', i === n);
+    });
+    document.querySelectorAll('.dot').forEach(function(el, i) {
+      el.classList.toggle('active', i === n);
+    });
+    currentLesson = n;
+  }
+
+  function checkLesson(n) {
+    var correct = 0;
+    var optionGroups = document.querySelectorAll('#lesson-' + n + ' .options');
+    var allAnswered = true;
+
+    optionGroups.forEach(function(group) {
+      var selected = group.querySelector('input:checked');
+      if (!selected) { allAnswered = false; }
+    });
+
+    if (!allAnswered) {
+      alert('Bitte alle Aussagen beantworten!');
+      return;
+    }
+
+    optionGroups.forEach(function(group) {
+      var correctVal = group.dataset.correct;
+      var selected = group.querySelector('input:checked');
+      var options = group.querySelectorAll('.option');
+
+      // disable all
+      group.querySelectorAll('input').forEach(function(inp) { inp.disabled = true; });
+
+      options.forEach(function(opt) {
+        var inp = opt.querySelector('input');
+        if (inp.value === correctVal && inp.checked) {
+          opt.classList.add('correct');
+          opt.innerHTML += '<span class="mark">✓</span>';
+          correct++;
+        } else if (inp.checked && inp.value !== correctVal) {
+          opt.classList.add('wrong');
+          opt.innerHTML += '<span class="mark">✗</span>';
+        } else if (inp.value === correctVal) {
+          opt.classList.add('show-correct');
+        }
+      });
+    });
+
+    // Update score badge
+    var badge = document.getElementById('score-' + n);
+    badge.textContent = correct + '/3';
+    if (correct === 3) badge.classList.add('perfect');
+
+    // Result bar
+    var bar = document.getElementById('result-' + n);
+    bar.classList.add('show');
+    if (correct === 3) {
+      bar.className = 'result-bar show perfect';
+      bar.textContent = '✓ Perfekt! Alle 3 Aussagen richtig.';
+    } else if (correct >= 2) {
+      bar.className = 'result-bar show ok';
+      bar.textContent = correct + '/3 richtig. Fast! Hören Sie die Aussage(n) noch einmal.';
+    } else {
+      bar.className = 'result-bar show poor';
+      bar.textContent = correct + '/3 richtig. Lesen Sie die Transkription und versuchen Sie es erneut.';
+    }
+
+    // Mark tab as done
+    lessonDone[n] = true;
+    var tabs = document.querySelectorAll('.tab');
+    tabs[n].classList.add('done');
+    var dots = document.querySelectorAll('.dot');
+    dots[n].classList.add('done');
+
+    document.getElementById('check-' + n).disabled = true;
+  }
+
+  function resetLesson(n) {
+    var lesson = document.getElementById('lesson-' + n);
+
+    // Reset radios
+    lesson.querySelectorAll('input[type=radio]').forEach(function(inp) {
+      inp.checked = false;
+      inp.disabled = false;
+    });
+
+    // Reset option classes + remove mark spans
+    lesson.querySelectorAll('.option').forEach(function(opt) {
+      opt.className = 'option';
+      var mark = opt.querySelector('.mark');
+      if (mark) mark.remove();
+    });
+
+    // Reset score, result, button
+    document.getElementById('score-' + n).textContent = '0/3';
+    document.getElementById('score-' + n).classList.remove('perfect');
+    var bar = document.getElementById('result-' + n);
+    bar.className = 'result-bar';
+    bar.textContent = '';
+    document.getElementById('check-' + n).disabled = false;
+
+    // Reset transcript
+    document.getElementById('transcript-' + n).classList.remove('show');
+
+    // Reset tab/dot
+    lessonDone[n] = false;
+    document.querySelectorAll('.tab')[n].classList.remove('done');
+    document.querySelectorAll('.dot')[n].classList.remove('done');
+  }
+
+  function toggleTranscript(n) {
+    var box = document.getElementById('transcript-' + n);
+    box.classList.toggle('show');
+  }
+
+  // ── Custom Audio Player ──
+  var speeds = [0.75, 1, 1.25, 1.5, 2];
+  var speedIdx = [1, 1, 1];
+  var repeatOn = [false, false, false];
+
+  function fmt(s) {
+    var m = Math.floor(s / 60);
+    var sec = Math.floor(s % 60);
+    return m + ':' + (sec < 10 ? '0' : '') + sec;
+  }
+
+  function initPlayer(n) {
+    var audio = document.getElementById('audio-' + n);
+    if (!audio || audio._inited) return;
+    audio._inited = true;
+
+    audio.addEventListener('timeupdate', function() {
+      if (!audio.duration) return;
+      var pct = (audio.currentTime / audio.duration) * 100;
+      document.getElementById('fill-' + n).style.width = pct + '%';
+      document.getElementById('dothandle-' + n).style.left = pct + '%';
+      document.getElementById('cur-' + n).textContent = fmt(audio.currentTime);
+    });
+    audio.addEventListener('loadedmetadata', function() {
+      document.getElementById('total-' + n).textContent = fmt(audio.duration);
+    });
+    audio.addEventListener('ended', function() {
+      if (repeatOn[n]) { audio.currentTime = 0; audio.play(); }
+      else { setPauseIcon(n); }
+    });
+  }
+
+  function togglePlay(n) {
+    var audio = document.getElementById('audio-' + n);
+    initPlayer(n);
+    if (audio.paused) { audio.play(); setPlayIcon(n); }
+    else { audio.pause(); setPauseIcon(n); }
+  }
+
+  function setPlayIcon(n) {
+    document.getElementById('playbtn-' + n).innerHTML =
+      '<svg width="12" height="14" viewBox="0 0 12 14" fill="currentColor"><rect x="0" y="0" width="4" height="14"/><rect x="8" y="0" width="4" height="14"/></svg>';
+  }
+  function setPauseIcon(n) {
+    document.getElementById('playbtn-' + n).innerHTML =
+      '<svg width="14" height="16" viewBox="0 0 14 16" fill="currentColor"><path d="M0 0 L14 8 L0 16 Z"/></svg>';
+  }
+
+  function startSeek(e, n) {
+    e.preventDefault();
+    var audio = document.getElementById('audio-' + n);
+    initPlayer(n);
+    function doSeek(ev) {
+      var bar = document.getElementById('bar-' + n);
+      var rect = bar.getBoundingClientRect();
+      var clientX = ev.touches ? ev.touches[0].clientX : ev.clientX;
+      var pct = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+      if (audio.duration) audio.currentTime = pct * audio.duration;
+    }
+    doSeek(e);
+    function onMove(ev) { doSeek(ev); }
+    function onUp() {
+      document.removeEventListener('mousemove', onMove);
+      document.removeEventListener('touchmove', onMove);
+      document.removeEventListener('mouseup', onUp);
+      document.removeEventListener('touchend', onUp);
+    }
+    document.addEventListener('mousemove', onMove);
+    document.addEventListener('touchmove', onMove, {passive:false});
+    document.addEventListener('mouseup', onUp);
+    document.addEventListener('touchend', onUp);
+  }
+
+  function toggleRepeat(n) {
+    repeatOn[n] = !repeatOn[n];
+    document.getElementById('repeat-' + n).classList.toggle('active', repeatOn[n]);
+  }
+
+  function cycleSpeed(n) {
+    speedIdx[n] = (speedIdx[n] + 1) % speeds.length;
+    var s = speeds[speedIdx[n]];
+    var audio = document.getElementById('audio-' + n);
+    audio.playbackRate = s;
+    document.getElementById('speed-' + n).textContent = s + 'x';
+  }
+
+  function toggleMute(n) {
+    var audio = document.getElementById('audio-' + n);
+    audio.muted = !audio.muted;
+    document.getElementById('vol-' + n).innerHTML = audio.muted ? '&#x1F507;' : '&#x1F50A;';
+  }
+
+  // Sticky shadow on scroll
+  window.addEventListener('scroll', function() {
+    document.querySelectorAll('.audio-wrap').forEach(function(el) {
+      el.classList.toggle('pinned', el.getBoundingClientRect().top <= 10);
+    });
+  });
+
+  // Highlight selected option on click
+  document.querySelectorAll('.options').forEach(function(group) {
+    group.querySelectorAll('input').forEach(function(inp) {
+      inp.addEventListener('change', function() {
+        group.querySelectorAll('.option').forEach(function(opt) {
+          opt.classList.remove('selected');
+        });
+        inp.parentElement.classList.add('selected');
+      });
+    });
+  });
+
+  var vocabData = {
+    0: [
+      {w:'Digitalisierung', art:'die · Subst.', m:'số hóa', lv:'new'},
+      {w:'erleichtern',      art:'Verb',        m:'làm dễ dàng hơn', lv:'new'},
+      {w:'Zugang',           art:'der · Subst.',m:'quyền truy cập / lối vào', lv:'new'},
+      {w:'investieren',      art:'Verb',        m:'đầu tư (in + Akk.)', lv:'new'},
+      {w:'Bildungsungleichheit', art:'die · Subst.', m:'bất bình đẳng giáo dục', lv:'new'},
+      {w:'digitale Kluft',   art:'die · Subst.',m:'khoảng cách kỹ thuật số', lv:'new'},
+      {w:'skeptisch',        art:'Adj.',        m:'hoài nghi (gegenüber + Dat.)', lv:'new'},
+      {w:'unersetzlich',     art:'Adj.',        m:'không thể thay thế', lv:'hard'},
+      {w:'Ergänzung',        art:'die · Subst.',m:'sự bổ sung (als Ergänzung)', lv:'new'},
+      {w:'Ersatz',           art:'der · Subst.',m:'sự thay thế (nicht als Ersatz)', lv:'new'},
+      {w:'betrachten',       art:'Verb',        m:'coi là, xem xét', lv:'ok'},
+    ],
+    1: [
+      {w:'Zeitersparnis',    art:'die · Subst.',m:'tiết kiệm thời gian', lv:'new'},
+      {w:'flexibel',         art:'Adj.',        m:'linh hoạt (flexibel arbeiten)', lv:'ok'},
+      {w:'Ablenkung',        art:'die · Subst.',m:'sự phân tâm', lv:'new'},
+      {w:'informell',        art:'Adj.',        m:'không chính thức (≠ formell)', lv:'new'},
+      {w:'vermissen',        art:'Verb',        m:'nhớ (một thứ không còn)', lv:'new'},
+      {w:'Versuchung',       art:'die · Subst.',m:'cám dỗ', lv:'new'},
+      {w:'sich entspannen',  art:'Verb',        m:'thư giãn', lv:'ok'},
+      {w:'Trennung',         art:'die · Subst.',m:'sự phân chia (klare Trennung)', lv:'new'},
+      {w:'Kaffeeautomat',    art:'der · Subst.',m:'máy pha cà phê tự động', lv:'new'},
+      {w:'Haushalt',         art:'der · Subst.',m:'việc nhà / hộ gia đình', lv:'ok'},
+    ],
+    2: [
+      {w:'Automatisierung',  art:'die · Subst.',m:'tự động hóa', lv:'new'},
+      {w:'Herausforderung',  art:'die · Subst.',m:'thách thức', lv:'new'},
+      {w:'psychisch',        art:'Adj.',        m:'thuộc tâm lý (psychische Gesundheit)', lv:'new'},
+      {w:'Wohlbefinden',     art:'das · Subst.',m:'sự an lành / phúc lợi', lv:'new'},
+      {w:'fördern',          art:'Verb',        m:'thúc đẩy / hỗ trợ', lv:'new'},
+      {w:'Weiterbildung',    art:'die · Subst.',m:'đào tạo nâng cao', lv:'new'},
+      {w:'Fähigkeit',        art:'die · Subst.',m:'kỹ năng / khả năng', lv:'new'},
+      {w:'Maßnahme',         art:'die · Subst.',m:'biện pháp', lv:'new'},
+      {w:'Verpflichtung',    art:'die · Subst.',m:'nghĩa vụ / cam kết', lv:'new'},
+      {w:'Zusammenhalt',     art:'der · Subst.',m:'sự gắn kết xã hội', lv:'new'},
+      {w:'Unsicherheit',     art:'die · Subst.',m:'sự bất ổn', lv:'new'},
+      {w:'antizipieren',     art:'Verb',        m:'dự đoán trước', lv:'hard'},
+    ]
+  };
+
+  // ── Vocab Panel ──
+  var vocabOpen = false;
+  var lessonTitles = ['Bài 4.29 — Digitalisierung', 'Bài 4.30 — Homeoffice', 'Bài 4.31 — Zukunft der Arbeit'];
+
+  function renderVocab(n) {
+    var list = document.getElementById('vocabList');
+    var items = vocabData[n] || [];
+    list.innerHTML = items.map(function(v) {
+      var wKey = v.w.toLowerCase();
+      return '<div class="vocab-item" data-word="' + wKey + '" onclick="selectWord(\'' + wKey + '\')" style="cursor:pointer">' +
+        '<div class="vocab-lv lv-' + v.lv + '">' + (v.lv === 'new' ? '1' : v.lv === 'ok' ? '2' : '3') + '</div>' +
+        '<div class="vocab-text">' +
+          '<span class="vocab-word">' + v.w + '</span>' +
+          '<span class="vocab-art">' + v.art + '</span>' +
+          '<div class="vocab-meaning">' + v.m + '</div>' +
+        '</div></div>';
+    }).join('');
+    document.getElementById('vocabPanelTitle').textContent = 'Vokabeln — ' + lessonTitles[n];
+  }
+
+  function toggleVocab() {
+    if (vocabOpen) closeVocab(); else openVocab();
+  }
+  var hlOn = false;
+
+  function openVocab() {
+    renderVocab(currentLesson);
+    injectMarks(currentLesson);
+    document.getElementById('vocabPanel').classList.add('open');
+    document.getElementById('vocabToggleBtn').classList.add('active');
+    document.getElementById('vocabToggleBtn').classList.add('panel-open');
+    vocabOpen = true;
+  }
+
+  function toggleHighlight() {
+    hlOn = !hlOn;
+    document.body.classList.toggle('hl-on', hlOn);
+    document.getElementById('hlToggleBtn').classList.toggle('on', hlOn);
+  }
+
+  // ── Inject <span class="vocab-mark"> vào text option + transcript ──
+  var marksInjected = {};
+
+  function escapeReg(s) {
+    return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function injectMarks(n) {
+    if (marksInjected[n]) return;
+    marksInjected[n] = true;
+    var words = (vocabData[n] || []).map(function(v) { return v.w; });
+    // Sắp xếp dài trước để tránh partial match
+    words.sort(function(a,b){ return b.length - a.length; });
+
+    var lesson = document.getElementById('lesson-' + n);
+    var targets = lesson.querySelectorAll('.option span, .transcript-box p');
+    targets.forEach(function(el) {
+      var html = el.innerHTML;
+      words.forEach(function(w) {
+        var re = new RegExp('(?<![\w\u00c0-\u017e])(' + escapeReg(w) + ')(?![\w\u00c0-\u017e])', 'gi');
+        html = html.replace(re, '<span class="vocab-mark" data-word="' + w.toLowerCase() + '" onclick="selectWord(\'' + w.toLowerCase() + '\')" title="' + w + '">$1</span>');
+      });
+      el.innerHTML = html;
+    });
+  }
+
+  function selectWord(wKey) {
+    // Bỏ chọn cũ
+    document.querySelectorAll('.vocab-mark.hl-selected').forEach(function(m) {
+      m.classList.remove('hl-selected');
+    });
+    // Highlight tất cả span cùng từ
+    var targets = document.querySelectorAll('.vocab-mark[data-word="' + wKey + '"]');
+    targets.forEach(function(m) { m.classList.add('hl-selected'); });
+    // Scroll đến cái đầu tiên hiện thị
+    if (targets.length > 0) {
+      targets[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    // Highlight row trong panel
+    document.querySelectorAll('.vocab-item').forEach(function(item) {
+      item.classList.toggle('hl-active', item.dataset.word === wKey);
+    });
+  }
+  function closeVocab() {
+    document.getElementById('vocabPanel').classList.remove('open');
+    document.getElementById('vocabToggleBtn').classList.remove('active');
+    document.getElementById('vocabToggleBtn').classList.remove('panel-open');
+    vocabOpen = false;
+  }
+
+  // Cập nhật vocab khi đổi tab bài
+  var _origSwitchLesson = switchLesson;
+  switchLesson = function(n) {
+    _origSwitchLesson(n);
+    if (vocabOpen) renderVocab(n);
+  };
+</script>
+
+<button class="vocab-btn" id="vocabToggleBtn" onclick="toggleVocab()">
+  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8">
+    <rect x="3" y="2" width="14" height="16" rx="2"/>
+    <line x1="7" y1="7" x2="13" y2="7"/>
+    <line x1="7" y1="10" x2="13" y2="10"/>
+    <line x1="7" y1="13" x2="11" y2="13"/>
+  </svg>
+  Vokabeln
+</button>
+
+
+
+<div class="vocab-panel" id="vocabPanel">
+  <div class="vocab-head">
+    <div class="vocab-head-row1">
+      <button class="vocab-collapse-btn" onclick="closeVocab()" title="Thu bảng từ vựng">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <polyline points="9,2 13,7 9,12"/>
+          <line x1="1" y1="7" x2="13" y2="7"/>
+        </svg>
+      </button>
+      <div class="vocab-head-title" id="vocabPanelTitle">Bài 4.29 — Digitalisierung</div>
+      <div class="vocab-head-actions">
+        <button class="vocab-hl-btn" id="hlToggleBtn" onclick="toggleHighlight()" title="Bật/tắt nền vàng">☀ Nền vàng</button>
+      </div>
+    </div>
+    <div class="vocab-head-tabs">
+      <span class="vocab-tab active">Alle Wörter</span>
+    </div>
+  </div>
+  <div class="vocab-list" id="vocabList"></div>
+</div>
+</body>
+</html>

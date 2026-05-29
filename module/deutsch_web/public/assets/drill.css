@@ -1,0 +1,230 @@
+/* drill.css — tách nguyên khối từ <style> của output/drills/horen_test_4.29-4.31.html (Phase 0).
+   Giữ nguyên tên class + biến màu + responsive. KHÔNG đổi tên class. */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0f0f0; color: #222; font-size: 17px; }
+
+.app { max-width: 960px; margin: 0 auto; padding: 28px 24px 80px; }
+
+/* Nav tabs (Phase 1: dùng cho nav quay lại danh sách) */
+.tabs { display: flex; gap: 10px; margin-bottom: 24px; flex-wrap: wrap; }
+.tab { padding: 10px 22px; border-radius: 24px; border: 2px solid #ddd; background: #fff;
+       cursor: pointer; font-size: 15px; font-weight: 500; transition: all .15s; text-decoration: none; color: #222; }
+.tab:hover { border-color: #e06030; }
+.tab.active { background: #e06030; color: #fff; border-color: #e06030; }
+.tab.done { border-color: #27ae60; color: #27ae60; }
+.tab.done.active { background: #27ae60; color: #fff; }
+
+/* Lesson panel */
+.lesson { display: none; }
+.lesson.active { display: block; }
+
+/* Header */
+.lesson-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 18px; }
+.lesson-title { font-size: 26px; font-weight: 700; color: #1a1a1a; }
+.lesson-source { font-size: 13px; color: #888; margin-top: 4px; }
+.score-badge { background: #e06030; color: #fff; border-radius: 14px; padding: 6px 18px;
+               font-weight: 700; font-size: 18px; min-width: 70px; text-align: center; white-space: nowrap; }
+.score-badge.perfect { background: #27ae60; }
+
+/* Instructions */
+.instructions { font-style: italic; font-size: 16px; color: #444; margin-bottom: 20px;
+                padding: 16px 20px; background: #fff; border-radius: 10px; border-left: 4px solid #e06030; }
+
+/* Audio player — custom sticky */
+.audio-wrap { background: #fff; border-radius: 50px; padding: 10px 20px; margin-bottom: 28px;
+              box-shadow: 0 1px 6px rgba(0,0,0,.10);
+              position: sticky; top: 8px; z-index: 100;
+              transition: box-shadow .2s; display: flex; align-items: center; gap: 12px; }
+.audio-wrap.pinned { box-shadow: 0 4px 18px rgba(0,0,0,.18); }
+
+.play-btn { width: 32px; height: 32px; border: none; background: none; cursor: pointer;
+            color: #333; font-size: 16px; flex-shrink: 0; display: flex; align-items: center;
+            justify-content: center; padding: 0; }
+.play-btn:hover { color: #e06030; }
+
+.time-cur { font-size: 14px; color: #555; min-width: 34px; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+
+.progress-bar { flex: 1; height: 4px; background: #e0e0e0; border-radius: 2px;
+                position: relative; cursor: pointer; margin: 0 4px; }
+.progress-fill { height: 100%; background: #e06030; border-radius: 2px; width: 0%; pointer-events: none; }
+.progress-dot { width: 14px; height: 14px; background: #e06030; border-radius: 50%;
+                position: absolute; top: 50%; transform: translate(-50%, -50%);
+                left: 0%; pointer-events: none; box-shadow: 0 1px 4px rgba(224,96,48,.4); }
+
+.time-total { font-size: 14px; color: #555; min-width: 34px; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+
+.ctrl-btn { border: none; background: none; cursor: pointer; color: #555; font-size: 15px;
+            padding: 4px 6px; border-radius: 6px; flex-shrink: 0; display: flex;
+            align-items: center; justify-content: center; transition: color .15s, background .15s; }
+.ctrl-btn:hover { color: #e06030; background: #fff3ee; }
+.ctrl-btn.active { color: #e06030; }
+
+.speed-btn { font-size: 13px; font-weight: 600; min-width: 30px; }
+.vol-btn { font-size: 16px; }
+.repeat-btn { font-size: 18px; line-height: 1; }
+
+/* Questions */
+.aussagen { display: flex; flex-direction: column; gap: 28px; }
+
+.aussage-block { background: #fff; border-radius: 12px; padding: 24px 28px;
+                 box-shadow: 0 1px 6px rgba(0,0,0,.08); }
+.aussage-label { font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #e06030; }
+
+.options { display: flex; flex-direction: column; gap: 10px; }
+.option { display: flex; align-items: center; gap: 14px; padding: 16px 20px; border-radius: 10px;
+          border: 1px solid #ddd; cursor: pointer; transition: all .15s; background: #fff; }
+.option:hover { border-color: #e06030; background: #fff8f5; }
+.option input[type=radio] { width: 20px; height: 20px; accent-color: #e06030; cursor: pointer; flex-shrink: 0; }
+.option span { font-size: 16px; line-height: 1.5; }
+
+/* States after check */
+.option.selected  { border-color: #e06030; border-width: 2px; background: #fff3ee; }
+.option.correct   { border-color: #27ae60; border-width: 2px; background: #f0faf4; color: #1e8449; font-weight: 600; }
+.option.wrong     { border-color: #c0392b; border-width: 2px; background: #fef0ef; color: #c0392b; font-weight: 600; }
+.option.show-correct { border-color: #27ae60; border-width: 2px; background: #f0faf4; color: #1e8449; font-weight: 600; }
+
+.option .mark { font-size: 20px; margin-left: auto; flex-shrink: 0; font-weight: 700; }
+.option.correct .mark { color: #27ae60; }
+.option.wrong .mark   { color: #c0392b; }
+
+/* Buttons */
+.btn-row { display: flex; justify-content: flex-end; gap: 14px; margin-top: 28px; }
+.btn { padding: 13px 34px; border-radius: 10px; font-size: 16px; font-weight: 600;
+       cursor: pointer; border: 2px solid; transition: all .15s; }
+.btn-secondary { background: #fff; color: #e06030; border-color: #e06030; }
+.btn-secondary:hover { background: #fff3ee; }
+.btn-primary { background: #e06030; color: #fff; border-color: #e06030; }
+.btn-primary:hover { background: #c94e24; }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+
+/* Result bar */
+.result-bar { display: none; margin-top: 20px; padding: 16px 20px; border-radius: 10px;
+              font-weight: 600; font-size: 16px; }
+.result-bar.show { display: block; }
+.result-bar.perfect { background: #eafaf1; color: #1e8449; border: 1px solid #a9dfbf; }
+.result-bar.ok { background: #fef9e7; color: #7d6608; border: 1px solid #f9e79f; }
+.result-bar.poor { background: #fef0ef; color: #c0392b; border: 1px solid #f1948a; }
+
+/* Transcript */
+.transcript-toggle { margin-top: 20px; }
+.btn-transcript { background: none; border: 1px solid #bbb; border-radius: 8px; padding: 10px 18px;
+                  font-size: 15px; cursor: pointer; color: #555; display: flex; align-items: center; gap: 8px; }
+.btn-transcript:hover { border-color: #e06030; color: #e06030; }
+.transcript-box { display: none; margin-top: 12px; padding: 20px 24px; background: #f8f8f8;
+                  border-radius: 10px; font-size: 15px; line-height: 1.8; color: #444;
+                  border-left: 4px solid #e06030; }
+.transcript-box.show { display: block; }
+.transcript-box p { margin-bottom: 12px; }
+.transcript-box strong { color: #222; }
+
+/* Progress dots */
+.progress-dots { display: flex; gap: 8px; justify-content: center; margin-top: 36px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; background: #ddd; transition: background .2s; }
+.dot.active { background: #e06030; }
+.dot.done { background: #27ae60; }
+
+@media (max-width: 600px) {
+  .app { padding: 16px 12px 60px; }
+  .lesson-title { font-size: 20px; }
+  .aussage-block { padding: 16px 14px; }
+  .option { padding: 12px 14px; }
+  .option span { font-size: 15px; }
+  .btn { padding: 11px 20px; font-size: 15px; }
+}
+
+/* ── Vocab Panel ── */
+.vocab-btn { position: fixed; top: 14px; right: 14px; z-index: 300;
+             background: #fff; border: 2px solid #ddd; border-radius: 10px;
+             padding: 8px 10px; cursor: pointer; color: #555;
+             box-shadow: 0 2px 8px rgba(0,0,0,.12); transition: all .15s;
+             display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; }
+.vocab-btn:hover { border-color: #e06030; color: #e06030; }
+.vocab-btn.active { border-color: #e06030; background: #fff3ee; color: #e06030; }
+.vocab-btn svg { width: 18px; height: 18px; }
+
+.vocab-overlay { display: none; }  /* overlay removed */
+
+.vocab-panel { position: fixed; right: -340px; top: 0; width: 320px; height: 100vh;
+               background: #fff; box-shadow: -4px 0 24px rgba(0,0,0,.15); z-index: 260;
+               transition: right .28s cubic-bezier(.4,0,.2,1); display: flex; flex-direction: column; }
+.vocab-panel.open { right: 0; }
+
+.vocab-head { padding: 10px 14px 8px; border-bottom: 1px solid #eee; flex-shrink: 0; }
+.vocab-head-row1 { display: flex; align-items: center; gap: 8px; }
+
+/* Nút collapse kiểu LingQ — góc trái panel */
+.vocab-collapse-btn { background: none; border: 1px solid #ddd; border-radius: 6px;
+                      cursor: pointer; color: #777; padding: 4px 7px; line-height: 1;
+                      flex-shrink: 0; transition: all .15s; font-size: 14px; }
+.vocab-collapse-btn:hover { border-color: #e06030; color: #e06030; }
+
+.vocab-head-title { font-size: 12px; font-weight: 700; color: #333; flex: 1;
+                    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vocab-head-actions { display: flex; align-items: center; gap: 5px; flex-shrink: 0; }
+
+.vocab-hl-btn { font-size: 11px; font-weight: 600; padding: 4px 8px; border-radius: 12px;
+                border: 1.5px solid #ddd; background: #fff; color: #777; cursor: pointer;
+                transition: all .15s; white-space: nowrap; }
+.vocab-hl-btn.on { background: #ffd700; border-color: #e6c000; color: #444; }
+
+/* Vocab-btn chính — ẩn khi panel mở */
+.vocab-btn.panel-open { display: none; }
+
+.vocab-head-tabs { display: flex; gap: 0; margin-top: 6px; }
+.vocab-tab { padding: 4px 10px; font-size: 12px; font-weight: 600; cursor: pointer;
+             border-bottom: 2px solid transparent; color: #888; }
+.vocab-tab.active { color: #e06030; border-color: #e06030; }
+
+/* Word highlight in text */
+.vocab-mark { border-radius: 3px; transition: background .15s; cursor: pointer; }
+
+/* hl-selected: LUÔN hiện viền cam + nền cam, bất kể bật/tắt nền vàng */
+.vocab-mark.hl-selected { background: #ffa520 !important; outline: 2px solid #e06030;
+                           outline-offset: 1px; border-radius: 3px; }
+
+/* Nền vàng tất cả từ — chỉ khi bật toggle */
+body.hl-on .vocab-mark { background: #ffe066; }
+body.hl-on .vocab-mark:hover { background: #ffc926; }
+
+.vocab-list { overflow-y: auto; flex: 1; padding: 4px 0; }
+.vocab-item { display: flex; align-items: flex-start; gap: 12px;
+              padding: 11px 18px; border-bottom: 1px solid #f2f2f2; }
+.vocab-item:hover { background: #fafafa; }
+.vocab-item.hl-active { background: #fff3ee; border-left: 3px solid #e06030; padding-left: 15px; }
+.vocab-lv { width: 26px; height: 26px; border-radius: 50%; color: #fff; font-size: 12px;
+            font-weight: 700; display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0; margin-top: 1px; cursor: pointer; }
+.lv-new  { background: #e8a020; }
+.lv-ok   { background: #3aaa6e; }
+.lv-hard { background: #e06030; }
+.vocab-text { flex: 1; min-width: 0; }
+.vocab-word { font-size: 15px; font-weight: 600; color: #222; }
+.vocab-art  { font-size: 11px; color: #999; margin-left: 4px; font-weight: 400; }
+.vocab-meaning { font-size: 13px; color: #666; margin-top: 2px; line-height: 1.4; }
+
+/* ── Lesson list (Phase 1) ── */
+.list-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.list-head h1 { font-size: 24px; font-weight: 700; }
+.logout-link { font-size: 14px; color: #888; text-decoration: none; }
+.logout-link:hover { color: #e06030; }
+.lesson-card { display: flex; justify-content: space-between; align-items: center;
+               background: #fff; border-radius: 12px; padding: 18px 24px; margin-bottom: 14px;
+               box-shadow: 0 1px 6px rgba(0,0,0,.08); text-decoration: none; color: #222;
+               border: 2px solid transparent; transition: all .15s; }
+.lesson-card:hover { border-color: #e06030; transform: translateY(-1px); }
+.lesson-card .lc-id { font-size: 13px; color: #e06030; font-weight: 700; }
+.lesson-card .lc-title { font-size: 18px; font-weight: 600; margin-top: 2px; }
+.lesson-card .lc-thema { font-size: 13px; color: #888; margin-top: 2px; }
+
+/* ── Login (Phase 1) ── */
+.login-wrap { max-width: 360px; margin: 90px auto; padding: 0 20px; }
+.login-card { background: #fff; border-radius: 14px; padding: 32px 28px; box-shadow: 0 2px 14px rgba(0,0,0,.10); }
+.login-card h1 { font-size: 22px; font-weight: 700; margin-bottom: 20px; text-align: center; }
+.login-card label { display: block; font-size: 14px; color: #555; margin-bottom: 6px; }
+.login-card input { width: 100%; padding: 12px 14px; border: 1px solid #ddd; border-radius: 8px;
+                    font-size: 16px; margin-bottom: 16px; }
+.login-card input:focus { outline: none; border-color: #e06030; }
+.login-card .btn { width: 100%; }
+.login-error { background: #fef0ef; color: #c0392b; border: 1px solid #f1948a; border-radius: 8px;
+               padding: 10px 14px; font-size: 14px; margin-bottom: 16px; }

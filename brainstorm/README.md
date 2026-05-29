@@ -15,6 +15,8 @@ Mục tiêu của thư mục này:
 brainstorm/
 ├── README.md
 ├── 2026-05-17-german-ai-learning-os.md
+├── deutsch-web-platform-brief.md   ← deutsch.twv.app + API ↔ Cowork (2026-05-29)
+├── dtz-training-os/                ← brainstorm ChatGPT (tham khảo)
 └── claude-handoff.md
 ```
 

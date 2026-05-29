@@ -96,4 +96,26 @@ ID convention: `DD-<YYYYMMDD>-<NNN>` (DD = Deutsch Decision).
 
 ---
 
-**Last updated:** 2026-05-27 (5 entries — thêm schema biến thể parent_id + form_type).
+## DD-20260529-006 — deutsch.twv.app: chốt 7 quyết định nền tảng web (mục 12 brief)
+
+- **Date:** 2026-05-29
+- **Topic:** kiến trúc nền tảng học online `deutsch.twv.app` (PHP + API ↔ Cowork desktop). Chốt trước khi handoff Claude Code Phase 1.
+- **Ref:** `brainstorm/deutsch-web-platform-brief.md` mục 12, `docs/ai/tasks/DEUTSCH_WEB_PHASE1_PROMPT.md`
+
+| # | Câu hỏi | Quyết định | Lý do |
+|---|---|---|---|
+| 1 | DB web | **SQLite** (`module/deutsch_web/data/deutsch_web.sqlite`) | 1 user, vai "operational DB". Zero infra, file portable, backup = copy file. MySQL shared mieu bị loại: dự án mieu chỉ tham khảo, KHÔNG được ghép DB (coupling 2 dự án). |
+| 2 | Auth | Bảng **`users` riêng trong SQLite deutsch_web**, single user, password hash trong DB + session PHP. Tái dùng **pattern** session mieu, KHÔNG dùng bảng/DB mieu. | Tách biệt domain. Không phụ thuộc mieu schema. |
+| 3 | Audio (~220 MB) | **Phase 1: dùng URL LingQ S3** (đã push, ổn định, 0 cost storage/bandwidth trên twv.app). Lesson JSON chứa `audio.url`. KHÔNG upload 220 MB lên server. | Prototype đã chạy với `s3.amazonaws.com/media.lingq.com`. Host local để Phase sau nếu S3 đổi (có sẵn `audio.local_path` fallback). |
+| 4 | Sync tần suất | **Cron 30 phút** (giống pattern `lingq_sync`) + chạy manual được. Pull-based, web KHÔNG push tới Cowork. | Nhất quán cron Windows hiện có. Realtime không cần cho 1 user. |
+| 5 | Ack model | **Giữ audit log** — cột `synced_at` (NULL = pending). Ack = set timestamp, KHÔNG xóa row. | Append-only spirit giống vocab_master. Re-pull/debug được. |
+| 6 | Vocab panel | **Phase 1: JSON tĩnh** deploy cùng lesson (`lessons/{id}.json`, filter từ vocab_master). DB động (Cowork POST enrich) = **Phase 2**. | Bám brief 6.6 + bảng phase. Tránh over-build. |
+| 7 | Gia sư mode | **Solo-only Phase 1.** Defer multi-user/tutor view. | Ngoài scope trước thi DTZ 06/2026. |
+
+- **Nguyên tắc xuyên suốt (giữ nguyên brief mục 11):** `vocab_master.csv` = source of truth (web chỉ queue, Cowork curate→append); LingQ push từ local qua `lingq_sync`; web KHÔNG gọi GitHub API; giải thích thuần Việt + tiếng Đức (DD-20260522-001).
+- **Linked files:** `module/deutsch_web/`, `module/deutsch_web_sync/`, `docs/ai/tasks/DEUTSCH_WEB_PHASE1_PROMPT.md`, `module/deutsch_web/lessons/4.29.json`
+- **Status:** active
+
+---
+
+**Last updated:** 2026-05-29 (6 entries — thêm DD-20260529-006 chốt nền tảng deutsch.twv.app).

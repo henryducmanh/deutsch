@@ -7,4 +7,5 @@
 - Lesson: https://www.lingq.com/en/learn/de/web/reader/44825402/
 - lesson_id: 44825402
 - course_id: 2747707
-- Pushed: 2026-05-29 (text OK, audio cần re-upload MP3 chuẩn)
+- Audio: https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/4.31.1bad95aa9b4b.mp3
+- Pushed: 2026-05-29 (text + audio OK)

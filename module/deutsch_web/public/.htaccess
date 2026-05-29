@@ -1,0 +1,23 @@
+# .htaccess — rewrite mọi request không phải file/thư mục thật về index.php (Apache deploy twv.app).
+# File tĩnh thật (assets/drill.css, drill.js) vẫn được serve trực tiếp.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Cho Authorization header tới được PHP (Bearer cho /api/*) khi PHP chạy CGI/FastCGI.
+  RewriteCond %{HTTP:Authorization} .
+  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+  # File / thư mục tồn tại → serve trực tiếp.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Còn lại → front controller.
+  RewriteRule ^ index.php [L]
+</IfModule>
+
+# Chặn truy cập trực tiếp file nhạy cảm (phòng khi docroot đặt sai).
+<FilesMatch "\.(sqlite|sqlite-wal|sqlite-shm)$">
+  Require all denied
+</FilesMatch>

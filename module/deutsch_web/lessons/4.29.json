@@ -1,0 +1,97 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.29",
+  "aufgabe": "4.29",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Digitalisierung",
+  "title": "Digitalisierung in der Bildung",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1233.html",
+    "lingq_lesson_id": 44825394,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44825394/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/4.29.a0dc1a5e1c85.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.29/4.29.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.29-1",
+      "label": "Aussage 1",
+      "correct": "d",
+      "options": [
+        { "key": "a", "text": "Digitale Technologien verbessern den Zugang zu Bildung." },
+        { "key": "b", "text": "Die Digitalisierung verstärkt die Bildungsungleichheit." },
+        { "key": "c", "text": "Traditioneller Unterricht hat seine Vorzüge." },
+        { "key": "d", "text": "Schulen sollten in die neuesten Technologien investieren." },
+        { "key": "e", "text": "Persönliche Interaktion ist unersetzlich für effektives Lernen." },
+        { "key": "f", "text": "Die Digitalisierung sollte die traditionelle Form des Unterrichts ersetzen." }
+      ]
+    },
+    {
+      "id": "4.29-2",
+      "label": "Aussage 2",
+      "correct": "b",
+      "options": [
+        { "key": "a", "text": "Digitale Technologien verbessern den Zugang zu Bildung." },
+        { "key": "b", "text": "Die Digitalisierung verstärkt die Bildungsungleichheit." },
+        { "key": "c", "text": "Traditioneller Unterricht hat seine Vorzüge." },
+        { "key": "d", "text": "Schulen sollten in die neuesten Technologien investieren." },
+        { "key": "e", "text": "Persönliche Interaktion ist unersetzlich für effektives Lernen." },
+        { "key": "f", "text": "Die Digitalisierung sollte die traditionelle Form des Unterrichts ersetzen." }
+      ]
+    },
+    {
+      "id": "4.29-3",
+      "label": "Aussage 3",
+      "correct": "e",
+      "options": [
+        { "key": "a", "text": "Digitale Technologien verbessern den Zugang zu Bildung." },
+        { "key": "b", "text": "Die Digitalisierung verstärkt die Bildungsungleichheit." },
+        { "key": "c", "text": "Traditioneller Unterricht hat seine Vorzüge." },
+        { "key": "d", "text": "Schulen sollten in die neuesten Technologien investieren." },
+        { "key": "e", "text": "Persönliche Interaktion ist unersetzlich für effektives Lernen." },
+        { "key": "f", "text": "Die Digitalisierung sollte die traditionelle Form des Unterrichts ersetzen." }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": "Digitale Technologien können das Lernen erleichtern und den Zugang zur Bildung verbessern. Es ist wichtig, dass Schulen und Universitäten in die neuesten Technologien investieren, um Schülerinnen und Schülern bestmögliche Bildungschancen zu bieten.",
+      "key_phrase": "Schulen und Universitäten in die neuesten Technologien investieren"
+    },
+    {
+      "label": "Aussage 2",
+      "text": "Ich bin skeptisch gegenüber der Digitalisierung in der Bildung. Nicht alle Schülerinnen und Schüler haben Zugang zu den notwendigen Geräten und einer stabilen Internetverbindung. Die digitale Kluft könnte die Bildungsungleichheit verstärken.",
+      "key_phrase": "Die digitale Kluft könnte die Bildungsungleichheit verstärken"
+    },
+    {
+      "label": "Aussage 3",
+      "text": "Die traditionelle Form des Unterrichts hat ihre Vorteile. Persönliche Interaktion zwischen Lehrern und Schülern ist unersetzlich. Digitalisierung sollte als Ergänzung, nicht als Ersatz, betrachtet werden.",
+      "key_phrase": "Persönliche Interaktion zwischen Lehrern und Schülern ist unersetzlich"
+    }
+  ],
+  "vocab": [
+    { "w": "Digitalisierung", "art": "die · Subst.", "m": "số hóa", "lv": "new", "vocab_id": null },
+    { "w": "erleichtern", "art": "Verb", "m": "làm dễ dàng hơn", "lv": "new", "vocab_id": null },
+    { "w": "Zugang", "art": "der · Subst.", "m": "quyền truy cập / lối vào", "lv": "new", "vocab_id": null },
+    { "w": "investieren", "art": "Verb", "m": "đầu tư (in + Akk.)", "lv": "new", "vocab_id": null },
+    { "w": "Bildungsungleichheit", "art": "die · Subst.", "m": "bất bình đẳng giáo dục", "lv": "new", "vocab_id": null },
+    { "w": "digitale Kluft", "art": "die · Subst.", "m": "khoảng cách kỹ thuật số", "lv": "new", "vocab_id": null },
+    { "w": "skeptisch", "art": "Adj.", "m": "hoài nghi (gegenüber + Dat.)", "lv": "new", "vocab_id": null },
+    { "w": "unersetzlich", "art": "Adj.", "m": "không thể thay thế", "lv": "hard", "vocab_id": null },
+    { "w": "Ergänzung", "art": "die · Subst.", "m": "sự bổ sung (als Ergänzung)", "lv": "new", "vocab_id": null },
+    { "w": "Ersatz", "art": "der · Subst.", "m": "sự thay thế (nicht als Ersatz)", "lv": "new", "vocab_id": null },
+    { "w": "betrachten", "art": "Verb", "m": "coi là, xem xét", "lv": "ok", "vocab_id": null }
+  ],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css. Nguồn ban đầu: filter vocab_master theo lesson; user đổi trên web → ghi DB → Cowork merge weak_words.",
+    "generated_by": "Cowork (Module Engineer) 2026-05-29 từ input/html/deutsch-vorbereitung/horen/4.29/{4.29_questions.md, 4.29_transcript.md, url.md} + vocabData[0] trong output/drills/horen_test_4.29-4.31.html"
+  }
+}
