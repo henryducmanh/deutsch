@@ -120,6 +120,21 @@
 - **Pattern count:** 2 (lặp pattern "tiếng Anh lọt vào" từ 2026-05-24)
 - **Source:** SESSION_2026-05-26.md
 
+## 2026-05-29 — Hören — Bắt từ khoá đầu câu thay vì ý trọng tâm (Zuordnung bẫy)
+
+- **Mistake:** 4.29 Aussage 1 → chọn **a** (*Digitale Technologien verbessern den Zugang zu Bildung*) vì nghe thấy „den Zugang zur Bildung verbessern" đầu câu. Đúng là **d** (*Schulen sollten in die neuesten Technologien investieren*).
+- **Mistake:** 4.29 Aussage 3 → chọn **c** (*Traditioneller Unterricht hat seine Vorzüge*) vì nghe thấy „Die traditionelle Form … hat ihre Vorteile" đầu câu. Đúng là **e** (*Persönliche Interaktion ist unersetzlich*).
+- **Rule:** Trong bài Zuordnung (DTZ Hören), câu mở đầu thường chỉ là *bối cảnh dẫn dắt* — từ khoá của nó hay trùng với đáp án sai. Ý trọng tâm người nói muốn nhấn thường xuất hiện *sau* các marker: „Es ist wichtig, dass …" / „Außerdem …" / „vor allem …" / „… ist unersetzlich / entscheidend / der größte Vorteil".
+- **Example đúng thêm (cách nhận marker):**
+  - *„Man spart Zeit. **Außerdem** kann ich flexibel arbeiten."* → ý chính = flexibel (4.30 Aussage 1)
+  - *„… hat ihre Vorteile. **Persönliche Interaktion ist unersetzlich.**"* → ý chính = Persönliche Interaktion (4.29 Aussage 3)
+  - *„… verbessern. **Es ist wichtig, dass** Schulen investieren."* → ý chính = investieren (4.29 Aussage 1)
+- **Pattern count:** 1 (lần đầu — 2 câu sai cùng 1 pattern trong buổi gia sư 2026-05-29)
+- **Source:** SESSION_2026-05-29.md (gia sư — Hören 4.29)
+- **Related words:** unersetzlich, investieren, Zugang
+
+---
+
 ## 2026-05-24 — Văn hóa/Grammar — du vs Sie với người lạ
 
 - **Mistake:** "Verkaufts du Verlängerungskabel?" (dùng "du" với nhân viên cửa hàng)
