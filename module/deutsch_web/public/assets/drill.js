@@ -418,13 +418,62 @@
     });
   }
 
+  // Danh sách global words (đã học ở bài khác) đang xuất hiện trong bài hiện tại,
+  // đã lọc bỏ từ có trong vocabData/formMap (giống Pass 3 injectMarks).
+  function globalWordsForPanel() {
+    var vocabKeys = {};
+    (vocabData || []).forEach(function (v) { vocabKeys[v.w.toLowerCase()] = true; });
+    Object.keys(formMap).forEach(function (k) { vocabKeys[k] = true; });
+    return Object.keys(globalKnownData)
+      .filter(function (gk) { return !vocabKeys[gk]; })
+      .map(function (gk) { return { key: gk, info: globalKnownData[gk] }; })
+      .sort(function (a, b) { return a.info.w.toLowerCase().localeCompare(b.info.w.toLowerCase()); });
+  }
+
+  // HTML cho section "Đã học (bài khác)" — chỉ render khi có ≥ 1 global word.
+  function globalSectionHtml() {
+    var gw = globalWordsForPanel();
+    if (gw.length === 0) { return ''; }
+    var rows = gw.map(function (item) {
+      var info = item.info;
+      return '<div class="vocab-global-item" data-word="' + escHtml(item.key) + '">' +
+        '<span class="vgi-word">' + escHtml(info.w) + '</span>' +
+        (info.art ? '<span class="vgi-art">' + escHtml(info.art) + '</span>' : '') +
+        (info.bedeutung ? '<span class="vgi-mean">' + escHtml(info.bedeutung) + '</span>' : '') +
+        '</div>';
+    }).join('');
+    return '<div class="vocab-global-section">Đã học (bài khác) — ' + gw.length + '</div>' + rows;
+  }
+
+  // Click từ trong section "Đã học" → scroll đến vị trí đầu tiên trong đề + toggle hl-selected.
+  function selectGlobalWord(gKey) {
+    if (!gKey) { return; }
+    document.querySelectorAll('.vocab-global-mark.hl-selected')
+      .forEach(function (m) { m.classList.remove('hl-selected'); });
+    var marks = document.querySelectorAll('.vocab-global-mark[data-word="' + gKey + '"]');
+    marks.forEach(function (m) { m.classList.add('hl-selected'); });
+    if (marks.length > 0) { marks[0].scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+  }
+
+  // Wire click cho các item trong section "Đã học" (gọi sau khi set list.innerHTML).
+  function wireGlobalSection(list) {
+    list.querySelectorAll('.vocab-global-item').forEach(function (el) {
+      el.addEventListener('click', function () { selectGlobalWord(el.dataset.word); });
+    });
+  }
+
   function renderVocab() {
     var list = document.getElementById('vocabList');
     var items = vocabData || [];
+    var globalHtml = globalSectionHtml();
     if (items.length === 0) {
-      list.innerHTML = '<div class="vocab-empty">Chưa có từ vựng cho bài này.</div>';
+      // Không có vocab riêng cho bài — vẫn hiện section "Đã học" nếu có global word.
+      list.innerHTML = globalHtml
+        ? ('<div class="vocab-empty">Chưa có từ vựng riêng cho bài này.</div>' + globalHtml)
+        : '<div class="vocab-empty">Chưa có từ vựng cho bài này.</div>';
       var t0 = LESSON.title ? ('Vokabeln — Bài ' + LESSON_ID + ' — ' + LESSON.title) : 'Vokabeln';
       document.getElementById('vocabPanelTitle').textContent = t0;
+      wireGlobalSection(list);
       return;
     }
     list.innerHTML = items.map(function (v) {
@@ -446,7 +495,7 @@
           '<div class="vocab-meaning">' + (v.m || '') + '</div>' +
           variantLine +
         '</div></div>';
-    }).join('');
+    }).join('') + globalHtml;   // append section "Đã học (bài khác)" nếu có
     var title = LESSON.title ? ('Vokabeln — Bài ' + LESSON_ID + ' — ' + LESSON.title) : 'Vokabeln';
     document.getElementById('vocabPanelTitle').textContent = title;
 
@@ -457,6 +506,7 @@
     list.querySelectorAll('.vocab-text').forEach(function (el) {
       el.addEventListener('click', function () { selectWord(el.dataset.word); });
     });
+    wireGlobalSection(list);   // wire click cho section "Đã học"
   }
 
   function toggleVocab() { if (vocabOpen) closeVocab(); else openVocab(); }
@@ -495,9 +545,9 @@
     });
   }
 
-  // Xóa tất cả span.vocab-mark + .vocab-form-mark (unwrap về text thuần) để re-inject sạch.
+  // Xóa tất cả span.vocab-mark + .vocab-form-mark + .vocab-global-mark (unwrap về text thuần) để re-inject sạch.
   function stripMarks() {
-    document.querySelectorAll('.vocab-mark, .vocab-form-mark').forEach(function (m) {
+    document.querySelectorAll('.vocab-mark, .vocab-form-mark, .vocab-global-mark').forEach(function (m) {
       if (m.parentNode) {
         m.parentNode.replaceChild(document.createTextNode(m.textContent), m);
       }
@@ -518,44 +568,54 @@
     var forms = Object.keys(formMap).map(function (k) { return formMap[k].form; });
     forms.sort(function (a, b) { return b.length - a.length; });
 
+    // Pass 3: global known (DB từ bài khác) → .vocab-global-mark (xanh nhạt).
+    // Xây danh sách TRƯỚC forEach: lọc bỏ từ đã cover ở Pass 1/2 (vocabKeys) để dedup.
+    var vocabKeys = {};
+    (vocabData || []).forEach(function (v) { vocabKeys[v.w.toLowerCase()] = true; });
+    Object.keys(formMap).forEach(function (k) { vocabKeys[k] = true; });
+    var globalWords = Object.keys(globalKnownData)
+      .filter(function (gk) { return !vocabKeys[gk]; })
+      .map(function (gk) {
+        var info = globalKnownData[gk];
+        var tip = escHtml(info.w)
+          + (info.art ? ' · ' + escHtml(info.art) : '')
+          + (info.bedeutung ? ' = ' + escHtml(info.bedeutung) : '')
+          + ' (đã học)';
+        return { key: gk, w: info.w, tip: tip };
+      });
+    globalWords.sort(function (a, b) { return b.w.length - a.w.length; });
+
     var targets = document.querySelectorAll('.option span, .transcript-box p');
     targets.forEach(function (el) {
-      var html = el.innerHTML;
+      var html = el.innerHTML;  // đọc 1 lần từ DOM gốc
+
+      // Pass 1
       words.forEach(function (w) {
         // FIX double-escape \\w + dải ký tự có dấu Đức/tiếng Việt
         var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(w) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
-        html = html.replace(re, '<span class="vocab-mark" data-word="' + w.toLowerCase() + '" title="' + w + '">$1</span>');
+        html = html.replace(re, '<span class="vocab-mark" data-word="' + w.toLowerCase() + '" title="' + escHtml(w) + '">$1</span>');
       });
+
+      // Pass 2
       forms.forEach(function (fw) {
         var fk = fw.toLowerCase();
         var info = formMap[fk];
         if (!info) { return; }
         var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(fw) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
-        var tip = fw + ' [' + (info.form_type || '?') + '] → ' + (info.lemma || '');
+        var tip = escHtml(fw) + ' [' + escHtml(info.form_type || '?') + '] → ' + escHtml(info.lemma || '');
         html = html.replace(re, '<span class="vocab-form-mark" data-form="' + fk +
-          '" data-lemma="' + (info.lemma_key || '') + '" data-ftype="' + (info.form_type || '') +
+          '" data-lemma="' + escHtml(info.lemma_key || '') + '" data-ftype="' + escHtml(info.form_type || '') +
           '" title="' + tip + '">$1</span>');
       });
-      el.innerHTML = html;
-    });
-    // Pass 3: global known (DB từ bài khác) → .vocab-global-mark (xanh nhạt)
-    // Chỉ inject từ đã có trong DB nhưng KHÔNG có trong vocabData hoặc formMap
-    var vocabKeys = {};
-    (vocabData || []).forEach(function (v) { vocabKeys[v.w.toLowerCase()] = true; });
-    Object.keys(formMap).forEach(function (k) { vocabKeys[k] = true; });
 
-    Object.keys(globalKnownData).forEach(function (gk) {
-      if (vocabKeys[gk]) { return; }  // đã có ở Pass 1 hoặc Pass 2 → skip
-      var info = globalKnownData[gk];
-      var w = info.w;
-      var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(w) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
-      var tip = w + (info.art ? ' · ' + info.art : '') + (info.bedeutung ? ' = ' + info.bedeutung : '') + ' (đã học)';
-      targets.forEach(function (el) {
-        if (el.innerHTML.indexOf('<span') === -1 || el.innerHTML.match(re)) {
-          el.innerHTML = el.innerHTML.replace(re,
-            '<span class="vocab-global-mark" data-word="' + gk + '" title="' + tip + '">$1</span>');
-        }
+      // Pass 3 — TRONG cùng forEach, cùng html string (tránh đọc/ghi innerHTML đã có span)
+      globalWords.forEach(function (item) {
+        var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(item.w) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
+        html = html.replace(re,
+          '<span class="vocab-global-mark" data-word="' + item.key + '" title="' + item.tip + '">$1</span>');
       });
+
+      el.innerHTML = html;  // ghi 1 lần duy nhất vào DOM
     });
 
     // Click mark trong đề/transcript → selectWord (form-mark → chọn lemma)

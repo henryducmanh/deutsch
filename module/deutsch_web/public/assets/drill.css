@@ -241,6 +241,16 @@ body.hl-on .vocab-global-mark { background: #deeeff; }
 body.hl-on .vocab-global-mark:hover { background: #b8d9ff; }
 .vocab-global-mark.hl-selected { background: #4a9eff !important; color: #fff; border-radius: 3px; }
 
+/* Section "Đã học (bài khác)" trong panel Alle Wörter */
+.vocab-global-section { padding: 6px 12px 4px; font-size: 11px; font-weight: 700;
+                        color: #4a9eff; border-top: 1px solid #e8f4ff; margin-top: 6px; }
+.vocab-global-item { display: flex; align-items: flex-start; gap: 8px; padding: 4px 12px;
+                     cursor: pointer; }
+.vocab-global-item:hover { background: #f0f8ff; }
+.vocab-global-item .vgi-word { font-weight: 600; color: #222; font-size: 13px; }
+.vocab-global-item .vgi-art { font-size: 11px; color: #4a9eff; }
+.vocab-global-item .vgi-mean { font-size: 12px; color: #555; }
+
 /* Dòng phụ "↳ Fähigkeiten (NOM.PL)" dưới nghĩa lemma trong panel */
 .vocab-variants { font-size: 12px; color: #b5651d; margin-top: 3px; line-height: 1.4; }
 
