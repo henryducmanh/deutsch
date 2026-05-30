@@ -158,6 +158,24 @@ function route_api($path, $method, $BASE)
         if ($method === 'GET') { api_lessons_vocab($m[1]); return; }
         if ($method === 'POST') { api_lessons_vocab_post($m[1]); return; }
     }
+    // /api/vocab (GET session/Bearer, POST session) — Phase 2/3 vocab panel + web-add
+    if ($path === '/api/vocab') {
+        require_once $BASE . '/api/vocab.php';
+        if ($method === 'GET')  { api_vocab_get();  return; }
+        if ($method === 'POST') { api_vocab_post(); return; }
+    }
+    // POST /api/vocab/bulk (Bearer) — push_vocab upsert
+    if ($path === '/api/vocab/bulk' && $method === 'POST') {
+        require_once $BASE . '/api/vocab.php';
+        api_vocab_bulk();
+        return;
+    }
+    // GET /api/vocab/new (Bearer) — pull_vocab kéo web-add
+    if ($path === '/api/vocab/new' && $method === 'GET') {
+        require_once $BASE . '/api/vocab.php';
+        api_vocab_new();
+        return;
+    }
 
     http_response_code(404);
     header('Content-Type: application/json; charset=utf-8');

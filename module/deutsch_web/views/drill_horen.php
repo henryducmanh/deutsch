@@ -133,10 +133,12 @@ $total = count($aussagen);
       </div>
     </div>
     <div class="vocab-head-tabs">
-      <span class="vocab-tab active">Alle Wörter</span>
+      <span class="vocab-tab active" id="tabAll" data-tab="all">Alle Wörter</span>
+      <span class="vocab-tab" id="tabNew" data-tab="new">Neu wort</span>
     </div>
   </div>
   <div class="vocab-list" id="vocabList"></div>
+  <div class="vocab-list vocab-new-list" id="vocabNewList" style="display:none"></div>
 </div>
 
 <script>

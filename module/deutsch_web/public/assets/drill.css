@@ -203,6 +203,27 @@ body.hl-on .vocab-mark:hover { background: #ffc926; }
 .vocab-art  { font-size: 11px; color: #999; margin-left: 4px; font-weight: 400; }
 .vocab-meaning { font-size: 13px; color: #666; margin-top: 2px; line-height: 1.4; }
 
+/* Empty state (Phase 2) — không có từ vựng cho bài */
+.vocab-empty { padding: 24px 18px; font-size: 13px; color: #999; text-align: center; line-height: 1.5; }
+
+/* ── Tab "Neu wort" (Phase 3) ── */
+.vocab-tab { user-select: none; }
+.vocab-new-list { overflow-y: auto; flex: 1; padding: 4px 0; }
+.vocab-new-item { padding: 10px 16px; border-bottom: 1px solid #f2f2f2; }
+.vocab-new-item:hover { background: #fafafa; }
+.vnw-word { font-size: 15px; font-weight: 600; color: #222; margin-bottom: 6px; }
+.vnw-form { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.vnw-art, .vnw-wortart { font-size: 12px; padding: 5px 4px; border: 1px solid #ddd;
+                         border-radius: 6px; background: #fff; color: #444; cursor: pointer; flex-shrink: 0; }
+.vnw-mean { flex: 1; min-width: 90px; font-size: 13px; padding: 6px 8px;
+            border: 1px solid #ddd; border-radius: 6px; }
+.vnw-mean:focus, .vnw-art:focus, .vnw-wortart:focus { outline: none; border-color: #e06030; }
+.vnw-add { font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 6px;
+           border: 1.5px solid #e06030; background: #e06030; color: #fff; cursor: pointer;
+           flex-shrink: 0; transition: background .15s; }
+.vnw-add:hover { background: #c94e24; }
+.vnw-add:disabled { opacity: .5; cursor: not-allowed; }
+
 /* ── Lesson list (Phase 1) ── */
 .list-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
 .list-head h1 { font-size: 24px; font-weight: 700; }

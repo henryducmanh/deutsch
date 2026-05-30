@@ -23,5 +23,21 @@ if errorlevel 1 (
 )
 
 echo [cron.bat] %DATE% %TIME% — pull OK >> %LOG%
+
+REM ── Vocab pull: kéo web-add (curated=0) → staging vocab_new_web.csv (1 lần/ngày là đủ) ──
+REM Chỉ chạy nhánh vocab khi biến RUN_VOCAB=1 (đăng ký task riêng daily, tránh chạy mỗi 30').
+if "%RUN_VOCAB%"=="1" (
+    echo [cron.bat] %DATE% %TIME% — pull_vocab start >> %LOG%
+    %PHP% module\deutsch_web_sync\pull_vocab.php >> %LOG% 2>&1
+    if errorlevel 1 (
+        echo [cron.bat] %DATE% %TIME% — pull_vocab FAILED (exit 1) >> %LOG%
+    ) else (
+        echo [cron.bat] %DATE% %TIME% — pull_vocab OK >> %LOG%
+    )
+)
+
+REM push_vocab.php KHÔNG để trong cron tự động (đẩy 1926 row) — chạy tay khi vocab_master đổi:
+REM   %PHP% module\deutsch_web_sync\push_vocab.php --dry-run   (review)
+REM   %PHP% module\deutsch_web_sync\push_vocab.php             (live)
 endlocal
 exit /b 0
