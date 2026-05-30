@@ -234,6 +234,13 @@ body.hl-on .vocab-form-mark:hover { background: #ffe08a; }
 .vocab-form-mark.hl-selected { background: #ffa520 !important; outline: 2px solid #e06030;
                                outline-offset: 1px; border-radius: 3px; }
 
+/* Pass 3: từ đã học ở bài khác — xanh lam nhạt, gạch chân xanh */
+.vocab-global-mark { border-radius: 3px; cursor: pointer;
+                     border-bottom: 2px solid #4a9eff; transition: background .15s; }
+body.hl-on .vocab-global-mark { background: #deeeff; }
+body.hl-on .vocab-global-mark:hover { background: #b8d9ff; }
+.vocab-global-mark.hl-selected { background: #4a9eff !important; color: #fff; border-radius: 3px; }
+
 /* Dòng phụ "↳ Fähigkeiten (NOM.PL)" dưới nghĩa lemma trong panel */
 .vocab-variants { font-size: 12px; color: #b5651d; margin-top: 3px; line-height: 1.4; }
 

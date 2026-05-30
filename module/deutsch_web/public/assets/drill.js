@@ -383,9 +383,10 @@
     return out;
   }
 
-  // Bước 3: quét DB global cho mọi token lạ trong bài → đánh dấu knownKeys nếu đã học ở bài khác.
-  //   KHÔNG thêm vào vocabData (không hiện trong panel "Alle Wörter") — chỉ dùng để lọc "Neu wort".
-  //   Chia batch ≤ 300/request (khớp cap GET /api/vocab). Chạy sau lesson vocab → không block render.
+  // Bước 3: quét DB global cho mọi token lạ trong bài → đánh dấu knownKeys + lưu globalKnownData.
+  //   KHÔNG thêm vào vocabData (không hiện trong panel "Alle Wörter") — chỉ lọc "Neu wort" + Pass 3 highlight.
+  var globalKnownData = {};   // {wort_key: {w, art, bedeutung}} — cho Pass 3 injectMarks
+
   function loadGlobalKnownFromDB() {
     var tokens = collectAllLessonTokens();
     if (tokens.length === 0) { return Promise.resolve(); }
@@ -403,9 +404,17 @@
       results.forEach(function (rows) {
         rows.forEach(function (row) {
           var k = (row.wort_key || row.w || '').toLowerCase();
-          if (k) { knownKeys[k] = true; }   // global known → chỉ lọc, KHÔNG push vocabData
+          if (!k) { return; }
+          knownKeys[k] = true;
+          // Lưu data cho Pass 3 highlight (chỉ khi chưa có trong vocabData/formMap)
+          if (!globalKnownData[k]) {
+            globalKnownData[k] = { w: row.w || k, art: row.art || '', bedeutung: row.bedeutung || '' };
+          }
         });
       });
+      // Re-inject marks nếu "Nền vàng" đang bật (để Pass 3 chạy ngay)
+      if (hlOn) { stripMarks(); marksInjected = false; injectMarks(); }
+      refreshNeuIfOpen();
     });
   }
 
@@ -529,12 +538,39 @@
       });
       el.innerHTML = html;
     });
+    // Pass 3: global known (DB từ bài khác) → .vocab-global-mark (xanh nhạt)
+    // Chỉ inject từ đã có trong DB nhưng KHÔNG có trong vocabData hoặc formMap
+    var vocabKeys = {};
+    (vocabData || []).forEach(function (v) { vocabKeys[v.w.toLowerCase()] = true; });
+    Object.keys(formMap).forEach(function (k) { vocabKeys[k] = true; });
+
+    Object.keys(globalKnownData).forEach(function (gk) {
+      if (vocabKeys[gk]) { return; }  // đã có ở Pass 1 hoặc Pass 2 → skip
+      var info = globalKnownData[gk];
+      var w = info.w;
+      var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(w) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
+      var tip = w + (info.art ? ' · ' + info.art : '') + (info.bedeutung ? ' = ' + info.bedeutung : '') + ' (đã học)';
+      targets.forEach(function (el) {
+        if (el.innerHTML.indexOf('<span') === -1 || el.innerHTML.match(re)) {
+          el.innerHTML = el.innerHTML.replace(re,
+            '<span class="vocab-global-mark" data-word="' + gk + '" title="' + tip + '">$1</span>');
+        }
+      });
+    });
+
     // Click mark trong đề/transcript → selectWord (form-mark → chọn lemma)
     document.querySelectorAll('.vocab-mark').forEach(function (m) {
       m.addEventListener('click', function () { selectWord(m.dataset.word); });
     });
     document.querySelectorAll('.vocab-form-mark').forEach(function (m) {
       m.addEventListener('click', function () { selectWord(m.dataset.lemma); });
+    });
+    // Global mark: tooltip only (từ không có trong panel bài này)
+    document.querySelectorAll('.vocab-global-mark').forEach(function (m) {
+      m.addEventListener('click', function () {
+        // Hiện tooltip ngắn thay vì scroll panel (không có trong Alle Wörter)
+        m.classList.toggle('hl-selected');
+      });
     });
   }
 
