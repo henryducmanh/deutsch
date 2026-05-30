@@ -16,3 +16,6 @@ __pycache__/
 
 # Module secrets (api_key, DB password) — chỉ giữ config.example.php
 module/**/config.php
+
+# Debug probe tạm — chỉ local, không đẩy remote
+module/deutsch_web/public/debug_auth.php
