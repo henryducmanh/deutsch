@@ -7,15 +7,18 @@ require_once __DIR__ . '/db.php';
 function api_bearer_token()
 {
     $hdr = '';
-    if (isset($_SERVER['HTTP_AUTHORIZATION'])) {
+    // Priority 1: mod_php / FastCGI trực tiếp có header
+    if (!empty($_SERVER['HTTP_AUTHORIZATION'])) {
         $hdr = $_SERVER['HTTP_AUTHORIZATION'];
+    // Priority 2: cgi-fcgi (cPanel) — Apache RewriteRule đặt REDIRECT_ prefix
+    } elseif (!empty($_SERVER['REDIRECT_HTTP_AUTHORIZATION'])) {
+        $hdr = $_SERVER['REDIRECT_HTTP_AUTHORIZATION'];
+    // Priority 3: mod_php apache_request_headers() (trả rỗng trên cgi-fcgi → check sau)
     } elseif (function_exists('apache_request_headers')) {
         $h = apache_request_headers();
         foreach ($h as $k => $v) {
             if (strtolower($k) === 'authorization') { $hdr = $v; break; }
         }
-    } elseif (isset($_SERVER['REDIRECT_HTTP_AUTHORIZATION'])) {
-        $hdr = $_SERVER['REDIRECT_HTTP_AUTHORIZATION'];
     }
     if (preg_match('/Bearer\s+(.+)/i', $hdr, $m)) {
         return trim($m[1]);
