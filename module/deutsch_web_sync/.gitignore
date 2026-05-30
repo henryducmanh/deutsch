@@ -1,0 +1,11 @@
+# Secret — token Bearer trùng server.
+config.php
+
+# Runtime state / audit dump / staging (dữ liệu, không commit).
+state/
+staging/
+processed_events.log
+
+# Logs.
+logs/*
+!logs/.gitkeep
