@@ -289,7 +289,8 @@
         vocabData.push({
           w: q.w, art: q.art || '?',
           m: (q.bedeutung && q.bedeutung !== '') ? q.bedeutung : '— (chưa tra)',
-          lv: 'new', vocab_id: q.vocab_id, queued: true
+          lv: 'new', vocab_id: q.vocab_id,
+          queued: q.curated === 0  // chỉ badge "?" nếu chưa dịch
         });
       });
 

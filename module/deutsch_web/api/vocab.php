@@ -192,9 +192,11 @@ function api_vocab_queued()
     $lid = isset($_GET['lesson_id']) ? trim($_GET['lesson_id']) : '';
     if ($lid === '') { api_json(200, ['vocab' => []]); }
 
+    // Lấy TẤT CẢ từ có source = lesson_id (kể cả curated=1 sau khi auto-translate push).
+    // Các từ từ vocab_master có source = quelle (vd 'SRC-001'), không phải lesson_id → không lẫn.
     $st = db()->prepare(
-        "SELECT wort, wort_key, wortart, artikel, bedeutung, level, id
-         FROM vocab WHERE source = ? AND curated = 0
+        "SELECT wort, wort_key, wortart, artikel, bedeutung, level, id, curated
+         FROM vocab WHERE source = ?
          ORDER BY created_at ASC LIMIT 200"
     );
     $st->execute([$lid]);
@@ -208,7 +210,7 @@ function api_vocab_queued()
             'bedeutung'=> $row['bedeutung'],
             'level'    => (int)$row['level'],
             'vocab_id' => $row['id'],
-            'queued'   => true,  // flag cho drill.js biết đây là từ chưa curate
+            'curated'  => (int)$row['curated'],  // 0=chưa dịch, 1=đã có nghĩa
         ];
     }
     api_json(200, ['vocab' => $vocab]);
