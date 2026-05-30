@@ -19,7 +19,7 @@ $total = count($aussagen);
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= h($title) ?> — Aufgabe <?= h($lid) ?></title>
-<?php $assetV = '20260530c'; ?>
+<?php $assetV = '20260530d'; ?>
 <link rel="stylesheet" href="/assets/drill.css?v=<?= $assetV ?>">
 </head>
 <body>

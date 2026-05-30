@@ -328,15 +328,35 @@
     hlOn = !hlOn;
     document.body.classList.toggle('hl-on', hlOn);
     document.getElementById('hlToggleBtn').classList.toggle('on', hlOn);
+    if (hlOn) {
+      // Re-inject mỗi lần bật: dùng vocabData hiện tại (bao gồm từ DB + từ queue mới)
+      stripMarks();
+      marksInjected = false;
+      injectMarks();
+    }
   }
 
   // ── Inject <span class="vocab-mark"> vào option text + transcript ──
   var marksInjected = false;
   function escapeReg(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 
+  // Xóa tất cả span.vocab-mark (unwrap về text thuần) để re-inject sạch.
+  function stripMarks() {
+    document.querySelectorAll('.vocab-mark').forEach(function (m) {
+      if (m.parentNode) {
+        m.parentNode.replaceChild(document.createTextNode(m.textContent), m);
+      }
+    });
+    // Gộp text node liền kề lại để regex tiếp theo match đúng
+    document.querySelectorAll('.option span, .transcript-box p').forEach(function (el) {
+      el.normalize();
+    });
+  }
+
   function injectMarks() {
     if (marksInjected) return;
     marksInjected = true;
+    // Dùng vocabData (không phải LESSON.vocab) để highlight cả từ DB + từ queue
     var words = (vocabData || []).map(function (v) { return v.w; });
     words.sort(function (a, b) { return b.length - a.length; }); // dài trước, tránh partial match
 
