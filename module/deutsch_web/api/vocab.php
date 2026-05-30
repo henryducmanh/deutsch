@@ -183,6 +183,37 @@ function api_vocab_bulk()
     api_json(200, ['upserted' => $upserted, 'skipped' => $skipped]);
 }
 
+// ── GET /api/vocab/queued?lesson_id=4.31 (session) — load queued words khi mở bài ──
+// Trả về tất cả từ có source = lesson_id VÀ curated=0 (web-add chưa curate).
+// drill.js merge vào vocabData để persist panel sau reload.
+function api_vocab_queued()
+{
+    api_vocab_guard();
+    $lid = isset($_GET['lesson_id']) ? trim($_GET['lesson_id']) : '';
+    if ($lid === '') { api_json(200, ['vocab' => []]); }
+
+    $st = db()->prepare(
+        "SELECT wort, wort_key, wortart, artikel, bedeutung, level, id
+         FROM vocab WHERE source = ? AND curated = 0
+         ORDER BY created_at ASC LIMIT 200"
+    );
+    $st->execute([$lid]);
+
+    $vocab = [];
+    foreach ($st->fetchAll() as $row) {
+        $vocab[] = [
+            'w'        => $row['wort'],
+            'wort_key' => $row['wort_key'],
+            'art'      => vocab_art($row['artikel'], $row['wortart']),
+            'bedeutung'=> $row['bedeutung'],
+            'level'    => (int)$row['level'],
+            'vocab_id' => $row['id'],
+            'queued'   => true,  // flag cho drill.js biết đây là từ chưa curate
+        ];
+    }
+    api_json(200, ['vocab' => $vocab]);
+}
+
 // ── GET /api/vocab/new?since= (Bearer) — pull_vocab kéo web-add (curated=0) ──
 function api_vocab_new()
 {

@@ -176,6 +176,12 @@ function route_api($path, $method, $BASE)
         api_vocab_new();
         return;
     }
+    // GET /api/vocab/queued?lesson_id=4.31 (session) — load queued words khi mở bài
+    if ($path === '/api/vocab/queued' && $method === 'GET') {
+        require_once $BASE . '/api/vocab.php';
+        api_vocab_queued();
+        return;
+    }
 
     http_response_code(404);
     header('Content-Type: application/json; charset=utf-8');

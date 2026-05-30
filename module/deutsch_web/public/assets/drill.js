@@ -247,20 +247,31 @@
   var knownKeys = {};
   function loadVocabFromDB() {
     var words = vocabData.map(function (v) { return v.w; });
-    if (words.length === 0) { return Promise.resolve(); }
-    return fetch('/api/vocab?words=' + encodeURIComponent(words.join(',')), {
+    // Phase 2: fetch nghĩa từ DB cho các từ trong lesson JSON
+    var p1 = words.length === 0 ? Promise.resolve([]) :
+      fetch('/api/vocab?words=' + encodeURIComponent(words.join(',')), {
+        credentials: 'same-origin', headers: { 'Accept': 'application/json' }
+      }).then(function (r) { return r.ok ? r.json() : { vocab: [] }; })
+        .then(function (d) { return (d && d.vocab) || []; })
+        .catch(function () { return []; });
+
+    // Phase 2 + 3: fetch queued words (curated=0) đã queue cho bài này → persist sau reload
+    var p2 = LESSON_ID ? fetch('/api/vocab/queued?lesson_id=' + encodeURIComponent(LESSON_ID), {
       credentials: 'same-origin', headers: { 'Accept': 'application/json' }
-    }).then(function (r) {
-      if (!r.ok) { throw new Error('HTTP ' + r.status); }
-      return r.json();
-    }).then(function (data) {
-      var rows = (data && data.vocab) || [];
+    }).then(function (r) { return r.ok ? r.json() : { vocab: [] }; })
+      .then(function (d) { return (d && d.vocab) || []; })
+      .catch(function () { return []; }) : Promise.resolve([]);
+
+    Promise.all([p1, p2]).then(function (results) {
+      var dbRows   = results[0];   // từ lesson JSON matched trong DB
+      var queued   = results[1];   // từ đã queue (curated=0) cho bài này
+
+      // Merge DB rows vào vocabData (đè nghĩa/art)
       var byKey = {};
-      rows.forEach(function (row) {
+      dbRows.forEach(function (row) {
         var k = (row.wort_key || row.w || '').toLowerCase();
         if (k) { byKey[k] = row; knownKeys[k] = true; }
       });
-      // Merge: DB đè nghĩa/art/vocab_id/level lên JSON. Từ không có trong DB giữ JSON.
       vocabData.forEach(function (v) {
         var hit = byKey[v.w.toLowerCase()];
         if (!hit) { return; }
@@ -268,11 +279,21 @@
         if (hit.art != null && hit.art !== '') { v.art = hit.art; }
         if (hit.vocab_id != null) { v.vocab_id = hit.vocab_id; }
       });
-      // Nếu panel đang mở → re-render để hiện nghĩa DB ngay.
+
+      // Append queued words vào vocabData nếu chưa có (tránh dup)
+      queued.forEach(function (q) {
+        var k = (q.wort_key || q.w || '').toLowerCase();
+        if (!k || knownKeys[k]) { return; }   // đã có trong lesson vocab → skip
+        knownKeys[k] = true;
+        wordStatus[k] = 'new';
+        vocabData.push({
+          w: q.w, art: q.art || '?',
+          m: (q.bedeutung && q.bedeutung !== '') ? q.bedeutung : '— (chưa tra)',
+          lv: 'new', vocab_id: q.vocab_id, queued: true
+        });
+      });
+
       if (vocabOpen) { renderVocab(); }
-      refreshNeuIfOpen();   // known set đầy đủ → lọc lại "Neu wort" nếu đang mở
-    }).catch(function () {
-      // offline / 401 → giữ nguyên vocabData từ JSON (fallback §9 bước 5). Không chặn UX.
       refreshNeuIfOpen();
     });
   }
