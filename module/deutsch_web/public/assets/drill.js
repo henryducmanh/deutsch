@@ -476,21 +476,27 @@
       return;
     }
     list.innerHTML = cands.map(function (w) {
+      // Form tối giản: chỉ cần click "Thêm" để queue từ về local.
+      // Nghĩa / artikel / wortart để trống → điền sau trong Cowork khi pull về.
       return '<div class="vocab-new-item" data-word="' + w + '">' +
-        '<div class="vnw-word">' + w + '</div>' +
-        '<div class="vnw-form">' +
-          '<select class="vnw-art" title="Artikel"><option value="">—</option>' +
-            '<option value="der">der</option><option value="die">die</option><option value="das">das</option></select>' +
-          '<input class="vnw-mean" type="text" placeholder="Nghĩa (tiếng Việt)">' +
-          '<select class="vnw-wortart" title="Wortart">' +
-            '<option value="Substantiv">Subst.</option><option value="Verb">Verb</option>' +
-            '<option value="Adjektiv">Adj.</option><option value="Adverb">Adv.</option></select>' +
-          '<button class="vnw-add" type="button">Thêm</button>' +
-        '</div></div>';
+        '<div class="vnw-row">' +
+          '<div class="vnw-word">' + w + '</div>' +
+          '<button class="vnw-add" type="button" title="Queue từ về local để tra sau">+ Queue</button>' +
+        '</div>' +
+        '<div class="vnw-expand" style="display:none">' +
+          '<input class="vnw-mean" type="text" placeholder="Nghĩa (tuỳ chọn — tra sau cũng được)">' +
+        '</div>' +
+        '</div>';
     }).join('');
     list.querySelectorAll('.vocab-new-item').forEach(function (item) {
       item.querySelector('.vnw-add').addEventListener('click', function () { addNewWord(item); });
-      item.querySelector('.vnw-mean').addEventListener('keydown', function (e) {
+      var inp = item.querySelector('.vnw-mean');
+      item.querySelector('.vnw-word').addEventListener('click', function () {
+        var exp = item.querySelector('.vnw-expand');
+        exp.style.display = exp.style.display === 'none' ? '' : 'none';
+        if (exp.style.display !== 'none') { inp.focus(); }
+      });
+      inp.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') { addNewWord(item); }
       });
     });
@@ -498,9 +504,9 @@
 
   function addNewWord(item) {
     var wort    = item.dataset.word;
-    var mean    = item.querySelector('.vnw-mean').value.trim();
-    var artikel = item.querySelector('.vnw-art').value;
-    var wortart = item.querySelector('.vnw-wortart').value;
+    var meanEl  = item.querySelector('.vnw-mean');
+    var mean    = meanEl ? meanEl.value.trim() : '';
+    // artikel / wortart bỏ trống — điền sau khi pull về local (Cowork curate)
     var btn     = item.querySelector('.vnw-add');
     btn.disabled = true; btn.textContent = '…';
 
@@ -508,7 +514,7 @@
       method: 'POST', credentials: 'same-origin',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
-        wort: wort, bedeutung: mean, wortart: wortart, artikel: artikel, source_lesson: LESSON_ID
+        wort: wort, bedeutung: mean || null, wortart: null, artikel: null, source_lesson: LESSON_ID
       })
     }).then(function (r) {
       if (!r.ok) { throw new Error('HTTP ' + r.status); }
@@ -516,7 +522,8 @@
     }).then(function (data) {
       var key = wort.toLowerCase();
       knownKeys[key] = true;
-      vocabData.push({ w: wort, art: jsArt(artikel, wortart), m: mean, lv: 'new',
+      // Hiện trong "Alle Wörter" với badge "?" — nghĩa chưa có, điền sau
+      vocabData.push({ w: wort, art: '?', m: mean || '— (chưa tra)', lv: 'new',
                        vocab_id: (data && data.id ? data.id : null) });
       wordStatus[key] = 'new';
       if (item.parentNode) { item.parentNode.removeChild(item); }

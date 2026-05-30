@@ -19,7 +19,8 @@ $total = count($aussagen);
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= h($title) ?> — Aufgabe <?= h($lid) ?></title>
-<link rel="stylesheet" href="/assets/drill.css">
+<?php $assetV = '20260530c'; ?>
+<link rel="stylesheet" href="/assets/drill.css?v=<?= $assetV ?>">
 </head>
 <body>
 <div class="app">
@@ -144,6 +145,6 @@ $total = count($aussagen);
 <script>
   window.LESSON = <?= json_encode($lesson, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG) ?>;
 </script>
-<script src="/assets/drill.js"></script>
+<script src="/assets/drill.js?v=<?= $assetV ?>"></script>
 </body>
 </html>
