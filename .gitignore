@@ -13,3 +13,6 @@
 # Python cache
 __pycache__/
 *.pyc
+
+# Module secrets (api_key, DB password) — chỉ giữ config.example.php
+module/**/config.php
