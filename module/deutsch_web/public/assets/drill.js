@@ -299,8 +299,12 @@
         });
       });
 
-      // Phase 4: fetch biến thể đã biết (forms) cho token chưa biết trong bài → formMap
-      loadFormsFromDB().then(function () {
+      // Bước 3 (global scan, LingQ-style): đánh dấu từ đã học ở BÀI KHÁC → lọc "Neu wort".
+      //   chạy TRƯỚC loadFormsFromDB để base word đã biết global không lọt vào query forms.
+      // Phase 4: fetch biến thể đã biết (forms) cho token còn lại → formMap.
+      loadGlobalKnownFromDB().then(function () {
+        return loadFormsFromDB();
+      }).then(function () {
         if (vocabOpen) { renderVocab(); }
         if (hlOn) { stripMarks(); marksInjected = false; injectMarks(); }  // re-inject để hiện form-mark
         refreshNeuIfOpen();
@@ -355,6 +359,54 @@
         });
       })
       .catch(function () { /* offline → bỏ qua Phase 4, không chặn panel */ });
+  }
+
+  // Bước 3: gom MỌI token trong bài (option + transcript) CHƯA có trong knownKeys.
+  // Trả lowercase wort_key list — dùng để quét DB global tìm từ đã học ở bài khác.
+  function collectAllLessonTokens() {
+    var texts = [];
+    (LESSON.aussagen || []).forEach(function (a) {
+      (a.options || []).forEach(function (o) { if (o.text) { texts.push(o.text); } });
+    });
+    (LESSON.transcript || []).forEach(function (t) { if (t.text) { texts.push(t.text); } });
+    var seen = {};
+    var out = [];
+    texts.forEach(function (txt) {
+      tokenize(txt).forEach(function (tok) {
+        var k = tok.toLowerCase();
+        if (k.length >= 3 && !seen[k] && !knownKeys[k] && !STOPWORDS[k]) {
+          seen[k] = true;
+          out.push(k);
+        }
+      });
+    });
+    return out;
+  }
+
+  // Bước 3: quét DB global cho mọi token lạ trong bài → đánh dấu knownKeys nếu đã học ở bài khác.
+  //   KHÔNG thêm vào vocabData (không hiện trong panel "Alle Wörter") — chỉ dùng để lọc "Neu wort".
+  //   Chia batch ≤ 300/request (khớp cap GET /api/vocab). Chạy sau lesson vocab → không block render.
+  function loadGlobalKnownFromDB() {
+    var tokens = collectAllLessonTokens();
+    if (tokens.length === 0) { return Promise.resolve(); }
+    var batches = [];
+    for (var i = 0; i < tokens.length; i += 300) {
+      batches.push(tokens.slice(i, i + 300));
+    }
+    return Promise.all(batches.map(function (batch) {
+      return fetch('/api/vocab?words=' + encodeURIComponent(batch.join(',')), {
+        credentials: 'same-origin', headers: { 'Accept': 'application/json' }
+      }).then(function (r) { return r.ok ? r.json() : { vocab: [] }; })
+        .then(function (d) { return (d && d.vocab) || []; })
+        .catch(function () { return []; });
+    })).then(function (results) {
+      results.forEach(function (rows) {
+        rows.forEach(function (row) {
+          var k = (row.wort_key || row.w || '').toLowerCase();
+          if (k) { knownKeys[k] = true; }   // global known → chỉ lọc, KHÔNG push vocabData
+        });
+      });
+    });
   }
 
   function renderVocab() {

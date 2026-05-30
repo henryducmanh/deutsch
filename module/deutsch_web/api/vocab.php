@@ -69,12 +69,12 @@ function api_vocab_get()
     $raw = isset($_GET['words']) ? trim($_GET['words']) : '';
     if ($raw === '') { api_json(200, ['vocab' => []]); }
 
-    // Tách + chuẩn hoá wort_key, dedup, cap 50 (spec §6: ≤ 50 words/request).
+    // Tách + chuẩn hoá wort_key, dedup, cap 300 (global token scan LingQ-style: cần quét cả bài).
     $keys = [];
     foreach (explode(',', $raw) as $w) {
         $k = vocab_key($w);
         if ($k !== '' && !isset($keys[$k])) { $keys[$k] = true; }
-        if (count($keys) >= 50) { break; }
+        if (count($keys) >= 300) { break; }
     }
     if (count($keys) === 0) { api_json(200, ['vocab' => []]); }
 

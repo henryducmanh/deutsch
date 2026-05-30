@@ -1938,3 +1938,9 @@ WEB-20260530-010,hinsichtlich,Adverb,,"liên quan đến, về",,,web-queue,2026
 WEB-20260530-011,entwickeln,Verb,entwickeln (entwickelt),"phát triển, xây dựng",,,web-queue,2026-05-30,1,4.31,web,B1;DTZ;web-queue,,,
 WEB-20260530-012,Maßnahmen,Substantiv,"die Maßnahme, -n",biện pháp,,,web-queue,2026-05-30,1,4.31,web,B1;DTZ;web-queue,,,
 VOC-20260518-027-NOM.PL,Fähigkeiten,Substantiv,"die Fähigkeit, -en (NOM.PL)","khả năng, năng lực (số nhiều)",,,,2026-05-30,1,SRC-001,tutor,B1;DTZ;Arbeit;Bildung,,VOC-20260518-027,NOM.PL
+WEB-20260530-013,Arbeit,Substantiv,die Arbeit (Sg.),công việc; lao động,,,web-queue,2026-05-30,1,4.31,web,B1;DTZ;Arbeit;web-queue,,,
+WEB-20260530-014,Arbeitszeit,Substantiv,"die Arbeitszeit, -en",thời gian làm việc; giờ làm,,,web-queue,2026-05-30,1,4.31,web,B1;DTZ;Arbeit;web-queue,,,
+WEB-20260530-015,Arbeitszeiten,Substantiv,"die Arbeitszeit, -en (NOM.PL)",thời gian làm việc (số nhiều),,,web-queue,2026-05-30,1,4.31,web,B1;DTZ;Arbeit;web-queue,,WEB-20260530-014,NOM.PL
+WEB-20260530-016,automatisieren,Verb,automatisiert - hat automatisiert,tự động hóa,,,web-queue,2026-05-30,1,4.31,web,B1;DTZ;Arbeit;Technologie;web-queue,,,
+WEB-20260530-017,automatisiert,Adjektiv,,được tự động hóa; tự động,,,web-queue,2026-05-30,1,4.31,web,B1;DTZ;Arbeit;Technologie;web-queue,,WEB-20260530-016,PART.II
+WEB-20260530-018,ergreifen,Verb,ergriff - hat ergriffen,nắm bắt; thực hiện,,,web-queue,2026-05-30,1,4.31,web,B1;DTZ;Arbeit;web-queue,,,
