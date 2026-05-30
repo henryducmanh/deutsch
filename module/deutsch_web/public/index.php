@@ -182,6 +182,12 @@ function route_api($path, $method, $BASE)
         api_vocab_queued();
         return;
     }
+    // GET /api/vocab/forms?words=a,b (session/Bearer) — biến thể đã biết → lemma (Phase 4)
+    if ($path === '/api/vocab/forms' && $method === 'GET') {
+        require_once $BASE . '/api/vocab.php';
+        api_vocab_forms();
+        return;
+    }
 
     http_response_code(404);
     header('Content-Type: application/json; charset=utf-8');

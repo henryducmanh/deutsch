@@ -245,6 +245,11 @@
   // ── Phase 2: load nghĩa vocab từ DB, merge đè JSON ──
   // Set wort_key đã biết (có trong DB) — Phase 3 dùng để lọc "Neu wort".
   var knownKeys = {};
+  // ── Phase 4: biến thể đã biết (inflected forms) ──
+  // formMap: form_key → {form, lemma_key, lemma, lemma_id, form_type, art, bedeutung}
+  // formsByLemma: lemma_key → [ {form, form_type}, ... ] (để hiện dòng phụ "↳ ..." dưới lemma)
+  var formMap = {};
+  var formsByLemma = {};
   function loadVocabFromDB() {
     var words = vocabData.map(function (v) { return v.w; });
     // Phase 2: fetch nghĩa từ DB cho các từ trong lesson JSON
@@ -294,9 +299,62 @@
         });
       });
 
-      if (vocabOpen) { renderVocab(); }
-      refreshNeuIfOpen();
+      // Phase 4: fetch biến thể đã biết (forms) cho token chưa biết trong bài → formMap
+      loadFormsFromDB().then(function () {
+        if (vocabOpen) { renderVocab(); }
+        if (hlOn) { stripMarks(); marksInjected = false; injectMarks(); }  // re-inject để hiện form-mark
+        refreshNeuIfOpen();
+      });
     });
+  }
+
+  // Gom mọi token trong bài (option + transcript) CHƯA có trong knownKeys → query forms.
+  function collectUnknownTokens() {
+    var texts = [];
+    (LESSON.aussagen || []).forEach(function (a) {
+      (a.options || []).forEach(function (o) { if (o.text) { texts.push(o.text); } });
+    });
+    (LESSON.transcript || []).forEach(function (t) { if (t.text) { texts.push(t.text); } });
+    var known = buildKnownSet();
+    var seen = {};
+    var out = [];
+    texts.forEach(function (txt) {
+      tokenize(txt).forEach(function (tok) {
+        if (tok.length < 2) { return; }
+        var key = tok.toLowerCase();
+        if (seen[key] || known[key] || STOPWORDS[key]) { return; }
+        seen[key] = true;
+        out.push(tok);
+        if (out.length >= 100) { return; }   // cap §5 (≤ 100 words/request)
+      });
+    });
+    return out.slice(0, 100);
+  }
+
+  // Phase 4: gọi GET /api/vocab/forms → build formMap + formsByLemma.
+  function loadFormsFromDB() {
+    var tokens = collectUnknownTokens();
+    if (tokens.length === 0) { return Promise.resolve(); }
+    return fetch('/api/vocab/forms?words=' + encodeURIComponent(tokens.join(',')), {
+      credentials: 'same-origin', headers: { 'Accept': 'application/json' }
+    }).then(function (r) { return r.ok ? r.json() : { forms: [] }; })
+      .then(function (d) {
+        var forms = (d && d.forms) || [];
+        forms.forEach(function (f) {
+          var fk = (f.form_key || f.form || '').toLowerCase();
+          if (!fk) { return; }
+          formMap[fk] = {
+            form: f.form, lemma_key: (f.lemma_key || '').toLowerCase(), lemma: f.lemma,
+            lemma_id: f.lemma_id, form_type: f.form_type, art: f.art, bedeutung: f.bedeutung
+          };
+          var lk = (f.lemma_key || '').toLowerCase();
+          if (lk) {
+            if (!formsByLemma[lk]) { formsByLemma[lk] = []; }
+            formsByLemma[lk].push({ form: f.form, form_type: f.form_type });
+          }
+        });
+      })
+      .catch(function () { /* offline → bỏ qua Phase 4, không chặn panel */ });
   }
 
   function renderVocab() {
@@ -311,12 +369,21 @@
     list.innerHTML = items.map(function (v) {
       var wKey = v.w.toLowerCase();
       var lv = wordStatus[wKey] || v.lv || 'new';
+      // Phase 4: dòng phụ "↳ biến thể (FORM_TYPE)" nếu lemma này có biến thể đã biết trong bài
+      var variantLine = '';
+      var vlist = formsByLemma[wKey];
+      if (vlist && vlist.length) {
+        variantLine = '<div class="vocab-variants">↳ ' + vlist.map(function (f) {
+          return escHtml(f.form) + ' (' + escHtml(f.form_type || '?') + ')';
+        }).join(', ') + '</div>';
+      }
       return '<div class="vocab-item" data-word="' + wKey + '">' +
         '<div class="vocab-lv lv-' + lv + '" data-word="' + wKey + '" title="Click: đổi trạng thái new→hard→ok">' + (lvNum[lv] || '1') + '</div>' +
         '<div class="vocab-text" style="cursor:pointer" data-word="' + wKey + '">' +
           '<span class="vocab-word">' + v.w + '</span>' +
           '<span class="vocab-art">' + (v.art || '') + '</span>' +
           '<div class="vocab-meaning">' + (v.m || '') + '</div>' +
+          variantLine +
         '</div></div>';
     }).join('');
     var title = LESSON.title ? ('Vokabeln — Bài ' + LESSON_ID + ' — ' + LESSON.title) : 'Vokabeln';
@@ -361,10 +428,15 @@
   // ── Inject <span class="vocab-mark"> vào option text + transcript ──
   var marksInjected = false;
   function escapeReg(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+  function escHtml(s) {
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
 
-  // Xóa tất cả span.vocab-mark (unwrap về text thuần) để re-inject sạch.
+  // Xóa tất cả span.vocab-mark + .vocab-form-mark (unwrap về text thuần) để re-inject sạch.
   function stripMarks() {
-    document.querySelectorAll('.vocab-mark').forEach(function (m) {
+    document.querySelectorAll('.vocab-mark, .vocab-form-mark').forEach(function (m) {
       if (m.parentNode) {
         m.parentNode.replaceChild(document.createTextNode(m.textContent), m);
       }
@@ -378,9 +450,12 @@
   function injectMarks() {
     if (marksInjected) return;
     marksInjected = true;
-    // Dùng vocabData (không phải LESSON.vocab) để highlight cả từ DB + từ queue
+    // Pass 1: từ đã có (vocabData) → .vocab-mark (nền cam đậm)
     var words = (vocabData || []).map(function (v) { return v.w; });
     words.sort(function (a, b) { return b.length - a.length; }); // dài trước, tránh partial match
+    // Pass 2: biến thể đã biết (formMap) → .vocab-form-mark (nền nhạt + link lemma)
+    var forms = Object.keys(formMap).map(function (k) { return formMap[k].form; });
+    forms.sort(function (a, b) { return b.length - a.length; });
 
     var targets = document.querySelectorAll('.option span, .transcript-box p');
     targets.forEach(function (el) {
@@ -390,22 +465,46 @@
         var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(w) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
         html = html.replace(re, '<span class="vocab-mark" data-word="' + w.toLowerCase() + '" title="' + w + '">$1</span>');
       });
+      forms.forEach(function (fw) {
+        var fk = fw.toLowerCase();
+        var info = formMap[fk];
+        if (!info) { return; }
+        var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(fw) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
+        var tip = fw + ' [' + (info.form_type || '?') + '] → ' + (info.lemma || '');
+        html = html.replace(re, '<span class="vocab-form-mark" data-form="' + fk +
+          '" data-lemma="' + (info.lemma_key || '') + '" data-ftype="' + (info.form_type || '') +
+          '" title="' + tip + '">$1</span>');
+      });
       el.innerHTML = html;
     });
-    // Click mark trong đề/transcript → selectWord
+    // Click mark trong đề/transcript → selectWord (form-mark → chọn lemma)
     document.querySelectorAll('.vocab-mark').forEach(function (m) {
       m.addEventListener('click', function () { selectWord(m.dataset.word); });
+    });
+    document.querySelectorAll('.vocab-form-mark').forEach(function (m) {
+      m.addEventListener('click', function () { selectWord(m.dataset.lemma); });
     });
   }
 
   function selectWord(wKey) {
-    document.querySelectorAll('.vocab-mark.hl-selected').forEach(function (m) { m.classList.remove('hl-selected'); });
-    var targets = document.querySelectorAll('.vocab-mark[data-word="' + wKey + '"]');
-    targets.forEach(function (m) { m.classList.add('hl-selected'); });
-    if (targets.length > 0) targets[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (!wKey) { return; }
+    document.querySelectorAll('.vocab-mark.hl-selected, .vocab-form-mark.hl-selected')
+      .forEach(function (m) { m.classList.remove('hl-selected'); });
+    // Highlight cả từ gốc (vocab-mark[data-word]) và mọi biến thể của lemma (form-mark[data-lemma]).
+    var marks = document.querySelectorAll('.vocab-mark[data-word="' + wKey + '"]');
+    var fmarks = document.querySelectorAll('.vocab-form-mark[data-lemma="' + wKey + '"]');
+    marks.forEach(function (m) { m.classList.add('hl-selected'); });
+    fmarks.forEach(function (m) { m.classList.add('hl-selected'); });
+    var scrollTo = marks.length > 0 ? marks[0] : (fmarks.length > 0 ? fmarks[0] : null);
+    if (scrollTo) { scrollTo.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+    // Panel: kích hoạt + scroll đến lemma item
+    var activeItem = null;
     document.querySelectorAll('.vocab-item').forEach(function (item) {
-      item.classList.toggle('hl-active', item.dataset.word === wKey);
+      var on = item.dataset.word === wKey;
+      item.classList.toggle('hl-active', on);
+      if (on) { activeItem = item; }
     });
+    if (activeItem) { activeItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
   }
 
   // ── Cycle trạng thái từ + POST word_mark ──
@@ -513,23 +612,52 @@
     var list = document.getElementById('vocabNewList');
     if (!list) { return; }
     var cands = collectCandidates();
+    // Phase 4: tách "Biến thể đã biết" (form_key ∈ formMap) khỏi "Từ gốc mới".
+    var variants = [];
+    var fresh = [];
+    cands.forEach(function (w) {
+      if (formMap[w.toLowerCase()]) { variants.push(w); } else { fresh.push(w); }
+    });
+
     if (cands.length === 0) {
       list.innerHTML = '<div class="vocab-empty">Không có từ lạ trong bài (tất cả đã có trong DB).</div>';
       return;
     }
-    list.innerHTML = cands.map(function (w) {
-      // Form tối giản: chỉ cần click "Thêm" để queue từ về local.
-      // Nghĩa / artikel / wortart để trống → điền sau trong Cowork khi pull về.
-      return '<div class="vocab-new-item" data-word="' + w + '">' +
-        '<div class="vnw-row">' +
-          '<div class="vnw-word">' + w + '</div>' +
-          '<button class="vnw-add" type="button" title="Queue từ về local để tra sau">+ Queue</button>' +
-        '</div>' +
-        '<div class="vnw-expand" style="display:none">' +
-          '<input class="vnw-mean" type="text" placeholder="Nghĩa (tuỳ chọn — tra sau cũng được)">' +
-        '</div>' +
-        '</div>';
-    }).join('');
+
+    var html = '';
+    // Nhóm 1: biến thể đã biết → link về lemma, KHÔNG cần "+ Queue" (đã có trong DB).
+    if (variants.length) {
+      html += '<div class="vnw-group-head">Biến thể đã biết (' + variants.length + ')</div>';
+      html += variants.map(function (w) {
+        var info = formMap[w.toLowerCase()];
+        return '<div class="vocab-form-item" data-lemma="' + escHtml(info.lemma_key) + '">' +
+          '<div class="vfi-form">' + escHtml(w) + '</div>' +
+          '<div class="vfi-arrow">→</div>' +
+          '<div class="vfi-lemma">' + escHtml(info.lemma) +
+            ' <span class="vfi-ftype">' + escHtml(info.form_type || '?') + '</span>' +
+            (info.bedeutung ? '<span class="vfi-mean">' + escHtml(info.bedeutung) + '</span>' : '') +
+          '</div>' +
+          '</div>';
+      }).join('');
+    }
+    // Nhóm 2: từ gốc mới → form "+ Queue" như cũ.
+    if (fresh.length) {
+      html += '<div class="vnw-group-head">Từ gốc mới (' + fresh.length + ')</div>';
+      html += fresh.map(function (w) {
+        return '<div class="vocab-new-item" data-word="' + escHtml(w) + '">' +
+          '<div class="vnw-row">' +
+            '<div class="vnw-word">' + escHtml(w) + '</div>' +
+            '<button class="vnw-add" type="button" title="Queue từ về local để tra sau">+ Queue</button>' +
+          '</div>' +
+          '<div class="vnw-expand" style="display:none">' +
+            '<input class="vnw-mean" type="text" placeholder="Nghĩa (tuỳ chọn — tra sau cũng được)">' +
+          '</div>' +
+          '</div>';
+      }).join('');
+    }
+    list.innerHTML = html;
+
+    // Wire nhóm "từ gốc mới"
     list.querySelectorAll('.vocab-new-item').forEach(function (item) {
       item.querySelector('.vnw-add').addEventListener('click', function () { addNewWord(item); });
       var inp = item.querySelector('.vnw-mean');
@@ -540,6 +668,13 @@
       });
       inp.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') { addNewWord(item); }
+      });
+    });
+    // Wire nhóm "biến thể đã biết": click → sang tab Alle Wörter + chọn lemma
+    list.querySelectorAll('.vocab-form-item').forEach(function (item) {
+      item.addEventListener('click', function () {
+        switchTab('all');
+        selectWord(item.dataset.lemma);
       });
     });
   }

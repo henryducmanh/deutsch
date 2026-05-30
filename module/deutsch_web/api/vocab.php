@@ -138,6 +138,9 @@ function api_vocab_post()
 }
 
 // ── POST /api/vocab/bulk (Bearer) — push_vocab upsert (curated=1) ──
+// Hỗ trợ lemma → biến thể (DD-20260527-005): row có 'parent_vocab_id' (VOC-id của lemma trong CSV)
+// → server resolve sang vocab.id rồi set parent_id. 'form_type' = mã biến cách (NOM.PL, PART.II...).
+// push_vocab gửi 2-pass (lemma trước → biến thể sau) để lookup parent_vocab_id luôn thấy lemma.
 function api_vocab_bulk()
 {
     api_require_key();
@@ -147,16 +150,34 @@ function api_vocab_bulk()
     if (count($rows) > 100) { api_json(400, ['error' => 'batch > 100 rows (cap §6)']); }
 
     $pdo = db();
-    $sql = "INSERT INTO vocab (vocab_id, wort, wort_key, wortart, artikel, bedeutung, niveau, level, thema, tags, curated)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1)
+    $sql = "INSERT INTO vocab (vocab_id, wort, wort_key, wortart, artikel, bedeutung, niveau, level, thema, tags, parent_id, form_type, curated)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1)
             ON DUPLICATE KEY UPDATE
               vocab_id=VALUES(vocab_id), wort=VALUES(wort), wortart=VALUES(wortart),
               artikel=VALUES(artikel), bedeutung=VALUES(bedeutung), niveau=VALUES(niveau),
-              level=VALUES(level), thema=VALUES(thema), tags=VALUES(tags), curated=1";
+              level=VALUES(level), thema=VALUES(thema), tags=VALUES(tags),
+              parent_id = IF(VALUES(parent_id) IS NOT NULL, VALUES(parent_id), parent_id),
+              form_type = IF(VALUES(form_type) IS NOT NULL AND VALUES(form_type) <> '', VALUES(form_type), form_type),
+              curated=1";
     $st = $pdo->prepare($sql);
+
+    // Resolver vocab_id (CSV, vd 'VOC-20260518-010') → vocab.id (INT). Cache trong request.
+    $lemmaCache = [];
+    $lemmaLookup = $pdo->prepare('SELECT id FROM vocab WHERE vocab_id = ? LIMIT 1');
+    $resolveParent = function ($parentVocabId) use (&$lemmaCache, $lemmaLookup) {
+        $pid = trim((string)$parentVocabId);
+        if ($pid === '') { return null; }
+        if (array_key_exists($pid, $lemmaCache)) { return $lemmaCache[$pid]; }
+        $lemmaLookup->execute([$pid]);
+        $row = $lemmaLookup->fetch();
+        $id = $row ? (int)$row['id'] : null;
+        $lemmaCache[$pid] = $id;
+        return $id;
+    };
 
     $upserted = 0;
     $skipped  = 0;
+    $orphan   = 0;   // biến thể có parent_vocab_id nhưng lemma chưa có trong DB
     $pdo->beginTransaction();
     foreach ($rows as $r) {
         if (!is_array($r)) { $skipped++; continue; }
@@ -164,6 +185,12 @@ function api_vocab_bulk()
         if ($wort === '') { $skipped++; continue; }
         $wkey = vocab_key($wort);
         $level = isset($r['level']) && is_numeric($r['level']) ? max(1, min(4, (int)$r['level'])) : 1;
+
+        $parentVocabId = isset($r['parent_vocab_id']) ? trim((string)$r['parent_vocab_id']) : '';
+        $parentId = $parentVocabId !== '' ? $resolveParent($parentVocabId) : null;
+        if ($parentVocabId !== '' && $parentId === null) { $orphan++; }  // lemma chưa push → parent_id NULL
+        $formType = isset($r['form_type']) && $r['form_type'] !== '' ? (string)$r['form_type'] : null;
+
         $st->execute([
             isset($r['vocab_id']) && $r['vocab_id'] !== '' ? (string)$r['vocab_id'] : null,
             $wort,
@@ -175,12 +202,84 @@ function api_vocab_bulk()
             $level,
             isset($r['thema']) && $r['thema'] !== '' ? (string)$r['thema'] : null,
             isset($r['tags']) && $r['tags'] !== '' ? (string)$r['tags'] : null,
+            $parentId,
+            $formType,
         ]);
         // affected-rows: insert=1, update đổi giá trị=2 → tính upsert; 0 = không đổi → skipped.
         if ($st->rowCount() > 0) { $upserted++; } else { $skipped++; }
     }
     $pdo->commit();
-    api_json(200, ['upserted' => $upserted, 'skipped' => $skipped]);
+    api_json(200, ['upserted' => $upserted, 'skipped' => $skipped, 'orphan' => $orphan]);
+}
+
+// ── GET /api/vocab/forms?words=Fähigkeiten,automatisiert (session/Bearer) ──
+// Trả các từ đã là BIẾN THỂ đã biết (parent_id IS NOT NULL) → link về lemma.
+// words không khớp biến thể nào → trả vào "unknown" (frontend tự xử lý / queue).
+function api_vocab_forms()
+{
+    api_vocab_guard();
+    $raw = isset($_GET['words']) ? trim($_GET['words']) : '';
+    if ($raw === '') { api_json(200, ['forms' => [], 'unknown' => []]); }
+
+    // Tách + chuẩn hoá wort_key, dedup, cap 100 (spec §5).
+    $keys = [];
+    foreach (explode(',', $raw) as $w) {
+        $k = vocab_key($w);
+        if ($k !== '' && !isset($keys[$k])) { $keys[$k] = true; }
+        if (count($keys) >= 100) { break; }
+    }
+    if (count($keys) === 0) { api_json(200, ['forms' => [], 'unknown' => []]); }
+    $keyList = array_keys($keys);
+
+    // Query 1: từ là biến thể đã biết (parent_id IS NOT NULL).
+    $ph = implode(',', array_fill(0, count($keyList), '?'));
+    $sql = "SELECT id, wort, wort_key, form_type, parent_id, wortart, artikel, bedeutung
+            FROM vocab WHERE wort_key IN ($ph) AND parent_id IS NOT NULL";
+    $st = db()->prepare($sql);
+    $st->execute($keyList);
+    $variants = $st->fetchAll();
+
+    // Gom parent_id để query lemma 1 lần.
+    $parentIds = [];
+    foreach ($variants as $v) {
+        $pid = (int)$v['parent_id'];
+        if ($pid > 0) { $parentIds[$pid] = true; }
+    }
+    $lemmaById = [];
+    if (count($parentIds) > 0) {
+        $pidList = array_keys($parentIds);
+        $ph2 = implode(',', array_fill(0, count($pidList), '?'));
+        $sql2 = "SELECT id, wort, wort_key, wortart, artikel, bedeutung
+                 FROM vocab WHERE id IN ($ph2)";
+        $st2 = db()->prepare($sql2);
+        $st2->execute($pidList);
+        foreach ($st2->fetchAll() as $l) { $lemmaById[(int)$l['id']] = $l; }
+    }
+
+    // Build forms[]. Biến thể mà lemma không còn (parent xoá) → coi như unknown.
+    $forms = [];
+    $matchedKeys = [];
+    foreach ($variants as $v) {
+        $lemma = $lemmaById[(int)$v['parent_id']] ?? null;
+        if ($lemma === null) { continue; }
+        $matchedKeys[$v['wort_key']] = true;
+        $forms[] = [
+            'form'      => $v['wort'],
+            'form_key'  => $v['wort_key'],
+            'form_type' => $v['form_type'],
+            'lemma'     => $lemma['wort'],
+            'lemma_key' => $lemma['wort_key'],
+            'lemma_id'  => (int)$lemma['id'],
+            'art'       => vocab_art($lemma['artikel'], $lemma['wortart']),
+            'bedeutung' => $lemma['bedeutung'],
+        ];
+    }
+
+    $unknown = [];
+    foreach ($keyList as $k) {
+        if (!isset($matchedKeys[$k])) { $unknown[] = $k; }
+    }
+    api_json(200, ['forms' => $forms, 'unknown' => $unknown]);
 }
 
 // ── GET /api/vocab/queued?lesson_id=4.31 (session) — load queued words khi mở bài ──

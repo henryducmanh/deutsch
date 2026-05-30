@@ -189,16 +189,23 @@ try {
         $levelRaw = $get('level');
         $level = is_numeric($levelRaw) ? max(1, min(4, (int)$levelRaw)) : 1;
 
+        // Lemma → biến thể (DD-20260527-005): parent_id (CSV) = VOC-id của lemma; form_type = mã biến cách.
+        // Server (api_vocab_bulk) resolve parent_vocab_id → vocab.id. Cột có thể vắng ở CSV cũ → $get='' an toàn.
+        $parentVocabId = $get('parent_id');
+        $formType      = $get('form_type');
+
         $payloads[] = [
-            'vocab_id'  => $get('id') !== '' ? $get('id') : null,
-            'wort'      => $wort,
-            'wortart'   => $get('wortart') !== '' ? $get('wortart') : null,
-            'artikel'   => parse_artikel($get('formen')),
-            'bedeutung' => $get('bedeutung') !== '' ? $get('bedeutung') : null,
-            'niveau'    => parse_niveau($get('tags')),
-            'level'     => $level,
-            'thema'     => $get('thema') !== '' ? $get('thema') : null,
-            'tags'      => $get('tags') !== '' ? $get('tags') : null,
+            'vocab_id'        => $get('id') !== '' ? $get('id') : null,
+            'wort'            => $wort,
+            'wortart'         => $get('wortart') !== '' ? $get('wortart') : null,
+            'artikel'         => parse_artikel($get('formen')),
+            'bedeutung'       => $get('bedeutung') !== '' ? $get('bedeutung') : null,
+            'niveau'          => parse_niveau($get('tags')),
+            'level'           => $level,
+            'thema'           => $get('thema') !== '' ? $get('thema') : null,
+            'tags'            => $get('tags') !== '' ? $get('tags') : null,
+            'parent_vocab_id' => $parentVocabId !== '' ? $parentVocabId : null,
+            'form_type'       => $formType !== '' ? $formType : null,
         ];
 
         if ($limit !== null && count($payloads) >= $limit) { break; }
@@ -217,9 +224,20 @@ try {
         exit(0);
     }
 
-    // 3. Chunk
-    $chunks = array_chunk($payloads, $chunkSize);
-    $log('INFO', ($dryRun ? '[DRY-RUN] ' : '') . "$total rows sẽ upsert qua " . count($chunks) . " request (POST /api/vocab/bulk).");
+    // 3. Tách 2-pass: lemma (parent_vocab_id rỗng) push TRƯỚC, biến thể push SAU.
+    //    → khi server resolve parent_vocab_id của biến thể, lemma đã có trong DB (tránh parent_id NULL).
+    $lemmaPayloads   = [];
+    $variantPayloads = [];
+    foreach ($payloads as $p) {
+        if (!empty($p['parent_vocab_id'])) { $variantPayloads[] = $p; }
+        else { $lemmaPayloads[] = $p; }
+    }
+    $lemmaChunks   = array_chunk($lemmaPayloads, $chunkSize);
+    $variantChunks = array_chunk($variantPayloads, $chunkSize);
+    $log('INFO', ($dryRun ? '[DRY-RUN] ' : '') . sprintf(
+        "%d rows = %d lemma (%d req) + %d biến thể (%d req). Push lemma → biến thể (POST /api/vocab/bulk).",
+        $total, count($lemmaPayloads), count($lemmaChunks), count($variantPayloads), count($variantChunks)
+    ));
 
     if ($dryRun) {
         // In mẫu 3 payload đầu để soi mapping.
@@ -231,30 +249,46 @@ try {
         exit(0);
     }
 
-    // 4. POST từng chunk
-    $upserted = 0;
-    $skippedSrv = 0;
+    // 4. POST 2-pass. Helper push 1 nhóm chunk → trả [upserted, skipped, orphan].
     $url = $apiBase . '/api/vocab/bulk';
-    foreach ($chunks as $idx => $chunk) {
-        $resp = http_post_json($url, $cfg['api_key'], ['rows' => array_values($chunk)], $cfg, $log);
-        $up = isset($resp['upserted']) ? (int)$resp['upserted'] : 0;
-        $sk = isset($resp['skipped']) ? (int)$resp['skipped'] : 0;
-        $upserted += $up;
-        $skippedSrv += $sk;
-        $log('INFO', sprintf("Chunk %d/%d: upserted=%d skipped=%d", $idx + 1, count($chunks), $up, $sk));
-        usleep(100000); // 0.1s/chunk (spec §6)
+    $pushChunks = function ($chunks, $label) use ($url, $cfg, $log) {
+        $up = 0; $sk = 0; $orph = 0;
+        $n = count($chunks);
+        foreach ($chunks as $idx => $chunk) {
+            $resp = http_post_json($url, $cfg['api_key'], ['rows' => array_values($chunk)], $cfg, $log);
+            $u = isset($resp['upserted']) ? (int)$resp['upserted'] : 0;
+            $s = isset($resp['skipped']) ? (int)$resp['skipped'] : 0;
+            $o = isset($resp['orphan']) ? (int)$resp['orphan'] : 0;
+            $up += $u; $sk += $s; $orph += $o;
+            $log('INFO', sprintf("[%s] Chunk %d/%d: upserted=%d skipped=%d orphan=%d", $label, $idx + 1, $n, $u, $s, $o));
+            usleep(100000); // 0.1s/chunk (spec §6)
+        }
+        return [$up, $sk, $orph];
+    };
+
+    list($upL, $skL, $orphL) = $pushChunks($lemmaChunks, 'lemma');
+    list($upV, $skV, $orphV) = $pushChunks($variantChunks, 'biến thể');
+    $upserted   = $upL + $upV;
+    $skippedSrv = $skL + $skV;
+    $orphan     = $orphL + $orphV;
+    if ($orphan > 0) {
+        $log('WARN', "$orphan biến thể có parent chưa thấy trong DB → parent_id NULL. Chạy lại push để fix (lemma sẽ có trước).");
     }
 
     // 5. State
     $state = [
         'last_push'      => gmdate('Y-m-d\TH:i:s\Z'),
         'rows_parsed'    => $total,
+        'lemmas'         => count($lemmaPayloads),
+        'variants'       => count($variantPayloads),
         'upserted'       => $upserted,
         'skipped_server' => $skippedSrv,
+        'orphan'         => $orphan,
     ];
     atomic_put($lastPushFile, json_encode($state, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . "\n");
 
-    $log('INFO', sprintf("DONE: upserted=%d skipped_server=%d / %d rows. last_push ghi state.", $upserted, $skippedSrv, $total));
+    $log('INFO', sprintf("DONE: upserted=%d skipped_server=%d orphan=%d / %d rows (%d lemma + %d biến thể). last_push ghi state.",
+        $upserted, $skippedSrv, $orphan, $total, count($lemmaPayloads), count($variantPayloads)));
     if ($logFh) { fclose($logFh); }
     exit(0);
 
