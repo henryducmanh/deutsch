@@ -61,7 +61,6 @@ function lesson_list($userId)
     $cfg = dw_config();
     $dir = rtrim($cfg['lessons_dir'], '/\\');
     $files = glob($dir . DIRECTORY_SEPARATOR . '*.json');
-    sort($files);
     $idx = horen_index();
 
     // Điểm tốt nhất từng bài (từ events horen_complete của user).
@@ -90,6 +89,14 @@ function lesson_list($userId)
             'best'        => $scores[$id] ?? null, // ['correct'=>x,'total'=>y] hoặc null
         ];
     }
+    // Sort số học: 1.1 < 1.2 < 1.10 < 1.101 (tránh string sort sai thứ tự)
+    usort($out, function($a, $b) {
+        $pa = explode('.', $a['lesson_id'], 2);
+        $pb = explode('.', $b['lesson_id'], 2);
+        $t1 = (int)($pa[0] ?? 0); $n1 = (int)($pa[1] ?? 0);
+        $t2 = (int)($pb[0] ?? 0); $n2 = (int)($pb[1] ?? 0);
+        return $t1 !== $t2 ? $t1 - $t2 : $n1 - $n2;
+    });
     return $out;
 }
 
