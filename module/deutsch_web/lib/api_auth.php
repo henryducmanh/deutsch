@@ -3,6 +3,15 @@
 // Dùng cho CLI/Cowork pull event. KHÔNG dùng cho route web (route web dùng session).
 
 require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/auth.php';
+
+// Route /api/* cần session: trả JSON 401, KHÔNG redirect HTML /login (fetch không parse được).
+function auth_api_require()
+{
+    if (!auth_check()) {
+        api_json(401, ['error' => 'not logged in']);
+    }
+}
 
 function api_bearer_token()
 {

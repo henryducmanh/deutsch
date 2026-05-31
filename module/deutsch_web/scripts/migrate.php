@@ -27,7 +27,10 @@ for ($i = 0; $i < count($args); $i++) {
 // ── Migrate ──
 $files = dw_migrate();
 $dbcfg = dw_config()['db'] ?? [];
-echo "Migrated " . count($files) . " file(s): users + events ready (idempotent).\n";
+echo "Migrated " . count($files) . " file(s) (idempotent):\n";
+foreach ($files as $f) {
+    echo "  - " . basename($f) . "\n";
+}
 echo "DB: " . ($dbcfg['user'] ?? '?') . "@" . ($dbcfg['host'] ?? '?') . "/" . ($dbcfg['name'] ?? '?') . " (MySQL)\n";
 
 // ── Seed user (optional) ──

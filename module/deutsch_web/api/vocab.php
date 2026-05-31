@@ -355,7 +355,7 @@ function api_vocab_new()
 // ── GET /api/vocab/pins?lesson_id=X (session) — pinned words "Đang ôn" của 1 bài ──
 function api_vocab_pins_get()
 {
-    auth_require();
+    auth_api_require();
     $uid       = auth_active_student_id();
     $lesson_id = trim($_GET['lesson_id'] ?? '');
     if (!$lesson_id) { api_json(400, ['error' => 'missing lesson_id']); }
@@ -375,30 +375,37 @@ function api_vocab_pins_get()
 // ── POST /api/vocab/pins  body: {lesson_id, vocab_db_id} (session) — ghim từ ──
 function api_vocab_pins_post()
 {
-    auth_require();
+    auth_api_require();
     $uid  = auth_active_student_id();
     $body = api_body_json();
     $lesson_id   = trim($body['lesson_id']   ?? '');
     $vocab_db_id = (int)($body['vocab_db_id'] ?? 0);
     if (!$lesson_id || !$vocab_db_id) { api_json(400, ['error' => 'missing params']); }
 
+    $pdo = db();
+    $chk = $pdo->prepare('SELECT id FROM vocab WHERE id = ? LIMIT 1');
+    $chk->execute([$vocab_db_id]);
+    if (!$chk->fetch()) { api_json(404, ['error' => 'vocab not found']); }
+
     try {
-        $st = db()->prepare('
+        $st = $pdo->prepare('
             INSERT IGNORE INTO lesson_vocab_pins (user_id, lesson_id, vocab_id)
             VALUES (?, ?, ?)
         ');
         $st->execute([$uid, $lesson_id, $vocab_db_id]);
-        $pin_id = db()->lastInsertId() ?: null;
+        $pin_id = $pdo->lastInsertId() ?: null;
         api_json(200, ['ok' => true, 'pin_id' => $pin_id]);
     } catch (\PDOException $e) {
-        api_json(500, ['error' => 'db_error']);
+        // Thường gặp: chưa chạy migration 005 (bảng lesson_vocab_pins chưa có).
+        error_log('api_vocab_pins_post: ' . $e->getMessage());
+        api_json(500, ['error' => 'db_error', 'hint' => 'run migration 005_lesson_vocab_pins.sql']);
     }
 }
 
 // ── DELETE /api/vocab/pins  body: {lesson_id, vocab_db_id} (session) — bỏ ghim ──
 function api_vocab_pins_delete()
 {
-    auth_require();
+    auth_api_require();
     $uid  = auth_active_student_id();
     $body = api_body_json();
     $lesson_id   = trim($body['lesson_id']   ?? '');

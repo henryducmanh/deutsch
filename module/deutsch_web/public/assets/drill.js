@@ -270,10 +270,9 @@
       .catch(function () { return []; }) : Promise.resolve([]);
 
     // p3: fetch pinned words cho bài này (persist "Đang ôn" sau reload)
-    var p3 = LESSON_ID ? fetch('/api/vocab/pins?lesson_id=' + encodeURIComponent(LESSON_ID), {
+    var p3 = LESSON_ID ? fetchJsonOrReject('/api/vocab/pins?lesson_id=' + encodeURIComponent(LESSON_ID), {
       credentials: 'same-origin', headers: { 'Accept': 'application/json' }
-    }).then(function (r) { return r.ok ? r.json() : { pins: [] }; })
-      .then(function (d) { return (d && d.pins) || []; })
+    }).then(function (d) { return (d && d.pins) || []; })
       .catch(function () { return []; }) : Promise.resolve([]);
 
     Promise.all([p1, p2, p3]).then(function (results) {
@@ -432,7 +431,7 @@
           // Lưu data cho Pass 3 highlight (chỉ khi chưa có trong vocabData/formMap)
           if (!globalKnownData[k]) {
             globalKnownData[k] = { w: row.w || k, art: row.art || '', bedeutung: row.bedeutung || '',
-              db_id: (row.id != null ? row.id : (row.vocab_id != null ? row.vocab_id : null)) };
+              db_id: vocabDbId(row) };
           }
         });
       });
@@ -460,14 +459,16 @@
     if (gw.length === 0) { return ''; }
     var rows = gw.map(function (item) {
       var info = item.info;
+      var dbId = info.db_id != null ? info.db_id : '';
       return '<div class="vocab-global-item" data-word="' + escHtml(item.key) + '">' +
         '<span class="vgi-word">' + escHtml(info.w) + '</span>' +
         (info.art ? '<span class="vgi-art">' + escHtml(info.art) + '</span>' : '') +
         (info.bedeutung ? '<span class="vgi-mean">' + escHtml(info.bedeutung) + '</span>' : '') +
-        '<button class="vgi-add-btn" data-word="' + escHtml(item.key) + '" title="Thêm vào Từ trong bài">+</button>' +
+        '<button class="vgi-add-btn" data-word="' + escHtml(item.key) + '" data-db-id="' + dbId +
+        '" title="Thêm vào Đang ôn">+</button>' +
         '</div>';
     }).join('');
-    return '<div class="vocab-global-section">Trong kho — ' + gw.length + '</div>' + rows;
+    return '<div class="vocab-global-section">Đã dịch — ' + gw.length + '</div>' + rows;
   }
 
   // Click từ trong section "Đã học" → scroll đến vị trí đầu tiên trong đề + toggle hl-selected.
@@ -485,42 +486,45 @@
     list.querySelectorAll('.vocab-global-item').forEach(function (el) {
       el.addEventListener('click', function () { selectGlobalWord(el.dataset.word); });
     });
-    // Nút "+" → ghim từ "Trong kho" vào "Đang ôn" (persist qua API nếu có db_id)
+    // Nút "+" → ghim từ "Đã dịch" vào "Đang ôn" (persist qua API nếu có vocab.id)
     list.querySelectorAll('.vgi-add-btn').forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.stopPropagation();  // không trigger scroll/select của item
         var gk = btn.dataset.word;
         var gd = globalKnownData[gk];
         if (!gd) { return; }
+        var dbId = parseInt(btn.dataset.dbId || gd.db_id || '0', 10);
         var alreadyIn = vocabData.some(function (v) { return v.w.toLowerCase() === gk; });
         if (alreadyIn) { btn.textContent = '✓'; btn.disabled = true; return; }
         btn.disabled = true; btn.textContent = '…';
-        if (gd.db_id && LESSON_ID) {
+        if (dbId > 0 && LESSON_ID) {
           // Persist qua API → còn sau reload
-          fetch('/api/vocab/pins', {
+          fetchJsonOrReject('/api/vocab/pins', {
             method: 'POST', credentials: 'same-origin',
             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify({ lesson_id: LESSON_ID, vocab_db_id: gd.db_id })
-          }).then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
-            .then(function () {
+            body: JSON.stringify({ lesson_id: LESSON_ID, vocab_db_id: dbId })
+          }).then(function () {
               vocabData.push({ w: gd.w, art: gd.art || '', m: gd.bedeutung || '— (chưa tra)',
-                               lv: 'new', db_id: gd.db_id, pinned: true });
+                               lv: 'new', db_id: dbId, pinned: true });
               wordStatus[gk] = 'new';
               if (vocabOpen) { renderVocab(); }
               if (hlOn) { stripMarks(); marksInjected = false; injectMarks(); }
               btn.textContent = '✓';
-            }).catch(function () {
+            }).catch(function (err) {
               btn.disabled = false; btn.textContent = '+';
-              alert('Không lưu được. Kiểm tra kết nối.');
+              alert('Không lưu được. ' + pinApiErrorMsg(err));
             });
         } else {
-          // Fallback session-only (không có db_id)
+          // Fallback session-only (không có vocab.id — deploy cũ hoặc từ chưa sync DB)
           vocabData.push({ w: gd.w, art: gd.art || '', m: gd.bedeutung || '— (chưa tra)',
                            lv: 'new', addedFromGlobal: true });
           wordStatus[gk] = 'new';
           if (vocabOpen) { renderVocab(); }
           if (hlOn) { stripMarks(); marksInjected = false; injectMarks(); }
           btn.textContent = '✓';
+          if (!dbId) {
+            console.warn('pin skip: không có vocab.id cho', gk, '— chỉ lưu session');
+          }
         }
       });
     });
@@ -633,6 +637,159 @@
     });
   }
 
+  // vocab.id (PK INT) từ GET /api/vocab — KHÔNG dùng vocab_id CSV (VOC-...) cho pins API.
+  function vocabDbId(row) {
+    if (!row) { return null; }
+    var id = row.id != null ? parseInt(row.id, 10) : 0;
+    return id > 0 ? id : null;
+  }
+
+  function pinApiErrorMsg(err) {
+    var body = err && err.body;
+    if (body && body.error === 'db_error') {
+      return 'Chưa có bảng lesson_vocab_pins trên server. Chạy: php scripts/migrate.php';
+    }
+    if (body && body.error === 'vocab not found') {
+      return 'Từ không có trong DB web (vocab.id). Thử sync vocab trước.';
+    }
+    if (body && body.error === 'missing params') {
+      return 'Thiếu vocab_db_id — deploy lại api/vocab.php (GET phải trả field id).';
+    }
+    if (err && err.status) { return 'HTTP ' + err.status + (body && body.error ? ': ' + body.error : ''); }
+    return 'Kiểm tra kết nối / đăng nhập.';
+  }
+
+  function fetchJsonOrReject(url, opts) {
+    return fetch(url, opts).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (body) {
+        if (!r.ok) { return Promise.reject({ status: r.status, body: body }); }
+        return body;
+      });
+    });
+  }
+
+  // ── Popup nghĩa từ (click mark trong đề — mobile + desktop) ──
+  var vocabModalEl = null;
+
+  function lookupWordInfo(wKey) {
+    wKey = (wKey || '').toLowerCase();
+    if (!wKey) { return null; }
+    var i, v, f, g, li;
+    for (i = 0; i < (vocabData || []).length; i++) {
+      v = vocabData[i];
+      if (v.w.toLowerCase() === wKey) {
+        return { w: v.w, art: v.art || '', meaning: v.m || '', badge: 'Đang ôn', source: 'lesson' };
+      }
+    }
+    f = formMap[wKey];
+    if (f) {
+      var meaning = f.bedeutung || '';
+      if (!meaning && f.lemma_key) {
+        li = lookupWordInfo(f.lemma_key);
+        if (li && li.meaning) { meaning = li.meaning; }
+      }
+      return {
+        w: f.form, art: f.art || '', meaning: meaning,
+        form_type: f.form_type || '', lemma: f.lemma || f.lemma_key || '',
+        badge: 'Biến thể', source: 'form', lemma_key: (f.lemma_key || '').toLowerCase()
+      };
+    }
+    g = globalKnownData[wKey];
+    if (g) {
+      return { w: g.w, art: g.art || '', meaning: g.bedeutung || '', badge: 'Đã dịch', source: 'global' };
+    }
+    return { w: wKey, art: '', meaning: '', badge: '', source: 'unknown' };
+  }
+
+  function ensureVocabModal() {
+    if (vocabModalEl) { return vocabModalEl; }
+    var root = document.createElement('div');
+    root.id = 'vocabModal';
+    root.className = 'vocab-modal';
+    root.setAttribute('hidden', '');
+    root.innerHTML =
+      '<div class="vocab-modal-backdrop" data-close="1"></div>' +
+      '<div class="vocab-modal-box" role="dialog" aria-modal="true" aria-labelledby="vocabModalWord">' +
+        '<button type="button" class="vocab-modal-close" data-close="1" aria-label="Đóng">&times;</button>' +
+        '<div class="vocab-modal-head">' +
+          '<span class="vocab-modal-badge" id="vocabModalBadge"></span>' +
+          '<div class="vocab-modal-word" id="vocabModalWord"></div>' +
+          '<div class="vocab-modal-art" id="vocabModalArt"></div>' +
+          '<div class="vocab-modal-meta" id="vocabModalMeta"></div>' +
+        '</div>' +
+        '<div class="vocab-modal-body" id="vocabModalBody"></div>' +
+      '</div>';
+    document.body.appendChild(root);
+    root.querySelectorAll('[data-close]').forEach(function (el) {
+      el.addEventListener('click', closeVocabPopup);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && vocabModalEl && !vocabModalEl.hasAttribute('hidden')) {
+        closeVocabPopup();
+      }
+    });
+    vocabModalEl = root;
+    return root;
+  }
+
+  function formatModalMeaning(raw) {
+    var t = (raw || '').trim();
+    if (!t || t === '—' || t === '— (chưa tra)' || t === '— (chưa có nghĩa)') {
+      return '— (chưa có nghĩa)';
+    }
+    return t;
+  }
+
+  function openVocabPopup(wKey) {
+    var info = lookupWordInfo(wKey);
+    if (!info) { return; }
+    if (info.source === 'global') {
+      selectGlobalWord(wKey);
+    } else if (info.source === 'form' && info.lemma_key) {
+      selectWord(info.lemma_key);
+    } else {
+      selectWord(wKey);
+    }
+    var modal = ensureVocabModal();
+    var badgeEl = document.getElementById('vocabModalBadge');
+    var wordEl = document.getElementById('vocabModalWord');
+    var artEl = document.getElementById('vocabModalArt');
+    var metaEl = document.getElementById('vocabModalMeta');
+    var bodyEl = document.getElementById('vocabModalBody');
+    wordEl.textContent = info.w;
+    if (info.badge) {
+      badgeEl.textContent = info.badge;
+      badgeEl.className = 'vocab-modal-badge badge-' + info.source;
+      badgeEl.style.display = '';
+    } else {
+      badgeEl.style.display = 'none';
+    }
+    artEl.textContent = info.art || '';
+    artEl.style.display = info.art ? '' : 'none';
+    if (info.source === 'form' && info.form_type) {
+      metaEl.textContent = '[' + info.form_type + ']' + (info.lemma ? ' → ' + info.lemma : '');
+      metaEl.style.display = '';
+    } else {
+      metaEl.textContent = '';
+      metaEl.style.display = 'none';
+    }
+    bodyEl.textContent = formatModalMeaning(info.meaning);
+    modal.removeAttribute('hidden');
+    document.body.classList.add('vocab-modal-open');
+  }
+
+  function closeVocabPopup() {
+    if (!vocabModalEl) { return; }
+    vocabModalEl.setAttribute('hidden', '');
+    document.body.classList.remove('vocab-modal-open');
+  }
+
+  function markClick(e, wKey) {
+    e.stopPropagation();
+    e.preventDefault();
+    openVocabPopup(wKey);
+  }
+
   // Chỉ replace trong text nodes, KHÔNG replace trong HTML tags/attributes
   // (tránh match nhầm vào data-word/title của span đã chèn ở Pass trước).
   function replaceTextOnly(html, re, replacement) {
@@ -715,19 +872,15 @@
       el.innerHTML = html;  // ghi 1 lần duy nhất vào DOM
     });
 
-    // Click mark trong đề/transcript → selectWord (form-mark → chọn lemma)
+    // Click mark trong đề/transcript → popup nghĩa (+ highlight)
     document.querySelectorAll('.vocab-mark').forEach(function (m) {
-      m.addEventListener('click', function () { selectWord(m.dataset.word); });
+      m.addEventListener('click', function (e) { markClick(e, m.dataset.word); });
     });
     document.querySelectorAll('.vocab-form-mark').forEach(function (m) {
-      m.addEventListener('click', function () { selectWord(m.dataset.lemma); });
+      m.addEventListener('click', function (e) { markClick(e, m.dataset.form || m.dataset.lemma); });
     });
-    // Global mark: tooltip only (từ không có trong panel bài này)
     document.querySelectorAll('.vocab-global-mark').forEach(function (m) {
-      m.addEventListener('click', function () {
-        // Hiện tooltip ngắn thay vì scroll panel (không có trong Alle Wörter)
-        m.classList.toggle('hl-selected');
-      });
+      m.addEventListener('click', function (e) { markClick(e, m.dataset.word); });
     });
   }
 
