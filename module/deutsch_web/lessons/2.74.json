@@ -11,13 +11,13 @@
   "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
   "source": {
     "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1942.html",
-    "lingq_lesson_id": null,
-    "lingq_course_id": null,
-    "lingq_reader_url": null
+    "lingq_lesson_id": 44849209,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44849209/"
   },
   "audio": {
-    "url": null,
-    "host": "none",
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/2.74.2056351e3ff1.mp3",
+    "host": "lingq_s3",
     "local_path": "input/html/deutsch-vorbereitung/horen/2.74/2.74.mp3"
   },
   "aussagen": [

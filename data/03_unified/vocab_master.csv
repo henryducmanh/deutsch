@@ -1963,3 +1963,19 @@ WEB-20260531-008,gewöhnen,Verb,gewöhnte - hat gewöhnt,làm quen; thích nghi,
 WEB-20260531-009,klappen,Verb,klappte - hat geklappt,diễn ra suôn sẻ; thành công,,,web-queue,2026-05-31,1,4.2,web,B1;DTZ;web-queue,,,
 WEB-20260531-010,konkret,Adjektiv,,cụ thể,,,web-queue,2026-05-31,1,4.2,web,B1;DTZ;web-queue,,,
 WEB-20260531-011,zweieinhalb,Adverb,,hai rưỡi,,,web-queue,2026-05-31,1,4.2,web,B1;DTZ;web-queue,,,
+WEB-20260531-012,Vorliebe,Substantiv,"die Vorliebe, -n",sở thích đặc biệt,,,web-queue,2026-05-31,1,4.12,web,B1;DTZ;web-queue,,,
+WEB-20260531-013,Vorlieben,Substantiv,,những sở thích,,,web-queue,2026-05-31,1,4.12,web,B1;DTZ;web-queue,,WEB-20260531-012,NOM.PL
+WEB-20260531-014,verschieden,Adjektiv,,khác nhau; đa dạng,,,web-queue,2026-05-31,1,4.12,web,B1;DTZ;web-queue,,,
+WEB-20260531-015,verschiedene,Adjektiv,,khác nhau; nhiều loại,,,web-queue,2026-05-31,1,4.12,web,B1;DTZ;web-queue,,WEB-20260531-014,ADJ.NOM
+WEB-20260531-016,faszinieren,Verb,faszinierte - hat fasziniert,làm say mê; quyến rũ,,,web-queue,2026-05-31,1,4.12,web,B1;DTZ;web-queue,,,
+WEB-20260531-017,fasziniert,Verb,,bị say mê; bị quyến rũ,,,web-queue,2026-05-31,1,4.12,web,B1;DTZ;web-queue,,WEB-20260531-016,PART.II
+WEB-20260531-018,experimentiere,Verb,,thực nghiệm; thử nghiệm,,,web-queue,2026-05-31,1,4.12,web,B1;DTZ;web-queue,,,
+WEB-20260531-019,Hörerforum,Substantiv,"das Hörerforum, -foren",diễn đàn thính giả,,,web-queue,2026-05-31,1,4.12,web,B1;DTZ;web-queue,,,
+WEB-20260531-020,genieße,Verb,,thưởng thức; tận hưởng,,,web-queue,2026-05-31,1,4.12,web,B1;DTZ;web-queue,,,
+WEB-20260531-021,traumhaft,Adjektiv,,tuyệt vời; như mơ,,,web-queue,2026-05-31,1,4.12,web,B1;DTZ;web-queue,,,
+WEB-20260531-022,teilgenommen,Verb,,đã tham gia (Partizip II),,,web-queue,2026-05-31,1,4.12,web,B1;DTZ;web-queue,,VOC-20260522-055,PART.II
+WEB-20260531-023,stammen,Verb,,có nguồn gốc từ; xuất phát từ,,,web-queue,2026-05-31,1,4.11,web,B1;DTZ;web-queue,,,
+WEB-20260531-024,aufwendig,Adjektiv,,tốn kém; phức tạp,,,web-queue,2026-05-31,1,4.11,web,B1;DTZ;web-queue,,,
+WEB-20260531-025,mittlerweile,Adverb,,trong thời gian đó; hiện nay,,,web-queue,2026-05-31,1,4.11,web,B1;DTZ;web-queue,,,
+WEB-20260531-026,vermeide,Verb,,tránh (Präsens 1.Pers.Sg),,,web-queue,2026-05-31,1,4.11,web,B1;DTZ;web-queue,,VOC-20260522-990,
+WEB-20260531-027,aufwendigere,Adjektiv,,tốn kém hơn; phức tạp hơn,,,web-queue,2026-05-31,1,4.11,web,B1;DTZ;web-queue,,WEB-20260531-024,KOMP

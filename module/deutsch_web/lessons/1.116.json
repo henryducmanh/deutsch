@@ -11,13 +11,13 @@
   "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
   "source": {
     "origin_url": "https://deutsch-vorbereitung.com/en/uebung-923.html",
-    "lingq_lesson_id": null,
-    "lingq_course_id": null,
-    "lingq_reader_url": null
+    "lingq_lesson_id": 44848910,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44848910/"
   },
   "audio": {
-    "url": null,
-    "host": "none",
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/1.116.d9fa0feca4a9.mp3",
+    "host": "lingq_s3",
     "local_path": "input/html/deutsch-vorbereitung/horen/1.116/1.116.mp3"
   },
   "aussagen": [

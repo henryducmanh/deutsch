@@ -11,13 +11,13 @@
   "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
   "source": {
     "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3972.html",
-    "lingq_lesson_id": null,
-    "lingq_course_id": null,
-    "lingq_reader_url": null
+    "lingq_lesson_id": 44849461,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44849461/"
   },
   "audio": {
-    "url": null,
-    "host": "none",
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audionorm/3.26.1e68a2167734.mp3",
+    "host": "lingq_s3",
     "local_path": "input/html/deutsch-vorbereitung/horen/3.26/3.26.mp3"
   },
   "aussagen": [
