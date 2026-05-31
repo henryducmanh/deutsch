@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.10",
+  "aufgabe": "4.10",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Wie nutzen Sie die modernen Technologien in Ihrem Alltag?",
+  "title": "Wie nutzen Sie die modernen Technologien in Ihrem Alltag?",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-2831.html",
+    "lingq_lesson_id": 44843209,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44843209/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/4.10.b9b256144584.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.10/4.10.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.10-1",
+      "label": "Aussage 1",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Messenger-Apps sind praktisch für schnelle Nachrichten und das Teilen von Fotos."
+        },
+        {
+          "key": "b",
+          "text": "Mein Laptop ist im Homeoffice mein wichtigstes Arbeitsmittel."
+        },
+        {
+          "key": "c",
+          "text": "Smart-Home-Geräte lassen sich bequem über das Smartphone steuern."
+        },
+        {
+          "key": "d",
+          "text": "E-Mails zu checken, ist für meine Arbeit unterwegs wichtig."
+        },
+        {
+          "key": "e",
+          "text": "Ohne moderne Technologien wäre das Arbeiten von zu Hause aus viel schwieriger."
+        },
+        {
+          "key": "f",
+          "text": "Im Homeoffice erleichtern Videokonferenz-Tools und Cloud-Dienste die Arbeit."
+        }
+      ]
+    },
+    {
+      "id": "4.10-2",
+      "label": "Aussage 2",
+      "correct": "f",
+      "options": [
+        {
+          "key": "a",
+          "text": "Messenger-Apps sind praktisch für schnelle Nachrichten und das Teilen von Fotos."
+        },
+        {
+          "key": "b",
+          "text": "Mein Laptop ist im Homeoffice mein wichtigstes Arbeitsmittel."
+        },
+        {
+          "key": "c",
+          "text": "Smart-Home-Geräte lassen sich bequem über das Smartphone steuern."
+        },
+        {
+          "key": "d",
+          "text": "E-Mails zu checken, ist für meine Arbeit unterwegs wichtig."
+        },
+        {
+          "key": "e",
+          "text": "Ohne moderne Technologien wäre das Arbeiten von zu Hause aus viel schwieriger."
+        },
+        {
+          "key": "f",
+          "text": "Im Homeoffice erleichtern Videokonferenz-Tools und Cloud-Dienste die Arbeit."
+        }
+      ]
+    },
+    {
+      "id": "4.10-3",
+      "label": "Aussage 3",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Messenger-Apps sind praktisch für schnelle Nachrichten und das Teilen von Fotos."
+        },
+        {
+          "key": "b",
+          "text": "Mein Laptop ist im Homeoffice mein wichtigstes Arbeitsmittel."
+        },
+        {
+          "key": "c",
+          "text": "Smart-Home-Geräte lassen sich bequem über das Smartphone steuern."
+        },
+        {
+          "key": "d",
+          "text": "E-Mails zu checken, ist für meine Arbeit unterwegs wichtig."
+        },
+        {
+          "key": "e",
+          "text": "Ohne moderne Technologien wäre das Arbeiten von zu Hause aus viel schwieriger."
+        },
+        {
+          "key": "f",
+          "text": "Im Homeoffice erleichtern Videokonferenz-Tools und Cloud-Dienste die Arbeit."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": "Ich nutze mein Smartphone hauptsächlich, um mit Freunden und Familie in Kontakt zu bleiben. Besonders praktisch finde ich die verschiedenen Messenger-Apps, weil ich damit schnell Nachrichten verschicken und Fotos teilen kann. Auch für die Arbeit ist es nützlich, da ich oft unterwegs bin und E-Mails checken muss.",
+      "key_phrase": "Ich nutze mein Smartphone hauptsächlich, um mit Freunden und Familie in Kontakt zu bleiben."
+    },
+    {
+      "label": "Aussage 2",
+      "text": "Im Homeoffice hat mir mein Laptop sehr geholfen, produktiv zu bleiben. Mit Videokonferenztools kann ich an Meetings teilnehmen und mit Cloud-Diensten habe ich jederzeit Zugriff auf meine Dateien. Ohne diese Technologien wäre es viel schwieriger gewesen, meine Arbeit von zu Hause aus zu erledigen.",
+      "key_phrase": "Im Homeoffice hat mir mein Laptop sehr geholfen, produktiv zu bleiben."
+    },
+    {
+      "label": "Aussage 3",
+      "text": "Ich bin ein großer Fan von Smart-Home-Technologien. In meiner Wohnung habe ich viele Geräte, die ich über mein Smartphone steuern kann. Das Licht, die Heizung und sogar meine Kaffeemaschine lassen sich so einfach bedienen. Das spart nicht nur Zeit, sondern macht auch Spaß.",
+      "key_phrase": "Ich bin ein großer Fan von Smart-Home-Technologien."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

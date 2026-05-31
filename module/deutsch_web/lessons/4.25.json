@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.25",
+  "aufgabe": "4.25",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Technologische Entwicklungen und deren Einfluss auf die Gesellschaft",
+  "title": "Technologische Entwicklungen und deren Einfluss auf die Gesellschaft",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1238.html",
+    "lingq_lesson_id": 44844367,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844367/"
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.25/4.25.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.25-1",
+      "label": "Aussage 1",
+      "correct": "d",
+      "options": [
+        {
+          "key": "a",
+          "text": "Technologischer Fortschritt sollte ethisch gestaltet werden."
+        },
+        {
+          "key": "b",
+          "text": "Die ältere Generation sollte die positiven Aspekte der Technologie erkennen und nutzen."
+        },
+        {
+          "key": "c",
+          "text": "Bildungssysteme müssen sich an die digitalisierte Welt anpassen."
+        },
+        {
+          "key": "d",
+          "text": "Künstliche Intelligenz und Automatisierung dürfen keine sozialen Ungerechtigkeiten verstärken."
+        },
+        {
+          "key": "e",
+          "text": "Die jüngere Generation hat immense Chancen durch ihre digitale Verbundenheit."
+        },
+        {
+          "key": "f",
+          "text": "Technologie ist unaufhaltsam, und wir müssen uns darauf einstellen."
+        }
+      ]
+    },
+    {
+      "id": "4.25-2",
+      "label": "Aussage 2",
+      "correct": "e",
+      "options": [
+        {
+          "key": "a",
+          "text": "Technologischer Fortschritt sollte ethisch gestaltet werden."
+        },
+        {
+          "key": "b",
+          "text": "Die ältere Generation sollte die positiven Aspekte der Technologie erkennen und nutzen."
+        },
+        {
+          "key": "c",
+          "text": "Bildungssysteme müssen sich an die digitalisierte Welt anpassen."
+        },
+        {
+          "key": "d",
+          "text": "Künstliche Intelligenz und Automatisierung dürfen keine sozialen Ungerechtigkeiten verstärken."
+        },
+        {
+          "key": "e",
+          "text": "Die jüngere Generation hat immense Chancen durch ihre digitale Verbundenheit."
+        },
+        {
+          "key": "f",
+          "text": "Technologie ist unaufhaltsam, und wir müssen uns darauf einstellen."
+        }
+      ]
+    },
+    {
+      "id": "4.25-3",
+      "label": "Aussage 3",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Technologischer Fortschritt sollte ethisch gestaltet werden."
+        },
+        {
+          "key": "b",
+          "text": "Die ältere Generation sollte die positiven Aspekte der Technologie erkennen und nutzen."
+        },
+        {
+          "key": "c",
+          "text": "Bildungssysteme müssen sich an die digitalisierte Welt anpassen."
+        },
+        {
+          "key": "d",
+          "text": "Künstliche Intelligenz und Automatisierung dürfen keine sozialen Ungerechtigkeiten verstärken."
+        },
+        {
+          "key": "e",
+          "text": "Die jüngere Generation hat immense Chancen durch ihre digitale Verbundenheit."
+        },
+        {
+          "key": "f",
+          "text": "Technologie ist unaufhaltsam, und wir müssen uns darauf einstellen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": "Technologische Fortschritte bringen viele Vorteile für die Gesellschaft, aber wir dürfen die ethischen Aspekte nicht vernachlässigen. Künstliche Intelligenz und Automatisierung sollten so gestaltet werden, dass sie das Gemeinwohl fördern und keine sozialen Ungerechtigkeiten verstärken.",
+      "key_phrase": "Technologische Fortschritte bringen viele Vorteile für die Gesellschaft, aber wir dürfen die ethischen Aspekte nicht…"
+    },
+    {
+      "label": "Aussage 2",
+      "text": "Die jüngere Generation wächst mit Technologie auf und ist von klein auf mit digitalen Medien verbunden. Das eröffnet immense Chancen für Bildung und Kommunikation. Es ist wichtig, dass die ältere Generation die positiven Aspekte der Technologie erkennt und nutzt.",
+      "key_phrase": "Die jüngere Generation wächst mit Technologie auf und ist von klein auf mit digitalen Medien verbunden."
+    },
+    {
+      "label": "Aussage 3",
+      "text": "Technologischer Fortschritt ist unauffaltsam und wir müssen uns darauf einstellen. Es ist entscheidend, dass Bildungssysteme sich anpassen und die notwendigen Fähigkeiten vermitteln, um in einer digitalisierten Welt erfolgreich zu sein.Technologie kann die Gesellschaft voranbringen, wenn sie klug eingesetzt wird.",
+      "key_phrase": "Technologischer Fortschritt ist unauffaltsam und wir müssen uns darauf einstellen."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.16",
+  "aufgabe": "4.16",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Freizeit",
+  "title": "Freizeit",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-2825.html",
+    "lingq_lesson_id": 44844346,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844346/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/4.16.eac10b471c79.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.16/4.16.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.16-1",
+      "label": "Aussage 1",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Lesen entspannt mich sehr."
+        },
+        {
+          "key": "b",
+          "text": "Ich treffe mich oft mit Freunden zum Tennisspielen."
+        },
+        {
+          "key": "c",
+          "text": "Actionfilme und Science-Fiction gefallen mir besonders."
+        },
+        {
+          "key": "d",
+          "text": "Ich finde es spannend, Krimis zu lesen."
+        },
+        {
+          "key": "e",
+          "text": "Filme sind meine große Leidenschaft."
+        },
+        {
+          "key": "f",
+          "text": "Tennis ist mein Lieblingssport seit meiner Kindheit."
+        }
+      ]
+    },
+    {
+      "id": "4.16-2",
+      "label": "Aussage 2",
+      "correct": "e",
+      "options": [
+        {
+          "key": "a",
+          "text": "Lesen entspannt mich sehr."
+        },
+        {
+          "key": "b",
+          "text": "Ich treffe mich oft mit Freunden zum Tennisspielen."
+        },
+        {
+          "key": "c",
+          "text": "Actionfilme und Science-Fiction gefallen mir besonders."
+        },
+        {
+          "key": "d",
+          "text": "Ich finde es spannend, Krimis zu lesen."
+        },
+        {
+          "key": "e",
+          "text": "Filme sind meine große Leidenschaft."
+        },
+        {
+          "key": "f",
+          "text": "Tennis ist mein Lieblingssport seit meiner Kindheit."
+        }
+      ]
+    },
+    {
+      "id": "4.16-3",
+      "label": "Aussage 3",
+      "correct": "f",
+      "options": [
+        {
+          "key": "a",
+          "text": "Lesen entspannt mich sehr."
+        },
+        {
+          "key": "b",
+          "text": "Ich treffe mich oft mit Freunden zum Tennisspielen."
+        },
+        {
+          "key": "c",
+          "text": "Actionfilme und Science-Fiction gefallen mir besonders."
+        },
+        {
+          "key": "d",
+          "text": "Ich finde es spannend, Krimis zu lesen."
+        },
+        {
+          "key": "e",
+          "text": "Filme sind meine große Leidenschaft."
+        },
+        {
+          "key": "f",
+          "text": "Tennis ist mein Lieblingssport seit meiner Kindheit."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": ". Ich verbringe meine Freizeit am liebsten mit Lesen. Ich finde es sehr entspannend, in ein gutes Buch einzutauchen und für eine Weile alles um mich herum zu vergessen. Besonders gern lese ich Krimis und Thriller. Es ist spannend, die Geschichten zu verfolgen und mit den Detektiven mitzufiebern.",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 2",
+      "text": ". In meiner Freizeit gehe ich oft ins Kino. Filme sind meine große Leidenschaft und ich versuche, möglichst viele neue Filme zu sehen. Besonders gefallen mir Actionfilme und Science-Fiction. Die Spezialeffekte und die spannende Handlung fesseln mich immer wieder aufs Neue.",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 3",
+      "text": ". Ich spiele gern Tennis. Seit meiner Kindheit ist Tennis mein Lieblingssport.Ich treffe mich regelmäßig mit Freunden auf dem Tennisplatz und wir spielen ein paar Sätze. Es ist eine tolle Möglichkeit, fit zu bleiben und gleichzeitig Spaß zu haben. Außerdem genieße ich die Gesellschaft meiner Freunde.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

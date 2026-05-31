@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.22",
+  "aufgabe": "4.22",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Gesunde Ernährung",
+  "title": "Gesunde Ernährung",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1242.html",
+    "lingq_lesson_id": 44844362,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844362/"
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.22/4.22.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.22-1",
+      "label": "Aussage 1",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Verkaufsoffene Sonntage sollten genutzt werden, um über gesunde Ernährung zu informieren und frische Lebensmittel anzubieten."
+        },
+        {
+          "key": "b",
+          "text": "Sonntage sollten als Tage der Entdeckung neuer Gerichte und Rezepte genutzt werden."
+        },
+        {
+          "key": "c",
+          "text": "Eine gesunde Ernährung ist essentiell für ein gesundes und glückliches Leben."
+        },
+        {
+          "key": "d",
+          "text": "Sonntage sollten für Fast-Food-Angebote genutzt werden, um Stress abzubauen."
+        },
+        {
+          "key": "e",
+          "text": "Sonntage sollten dazu genutzt werden, um gesunde Mahlzeiten für die ganze Woche vorzubereiten."
+        },
+        {
+          "key": "f",
+          "text": "Sonntage sollten als Tage der bewussten und genussvollen Ernährung genutzt werden."
+        }
+      ]
+    },
+    {
+      "id": "4.22-2",
+      "label": "Aussage 2",
+      "correct": "f",
+      "options": [
+        {
+          "key": "a",
+          "text": "Verkaufsoffene Sonntage sollten genutzt werden, um über gesunde Ernährung zu informieren und frische Lebensmittel anzubieten."
+        },
+        {
+          "key": "b",
+          "text": "Sonntage sollten als Tage der Entdeckung neuer Gerichte und Rezepte genutzt werden."
+        },
+        {
+          "key": "c",
+          "text": "Eine gesunde Ernährung ist essentiell für ein gesundes und glückliches Leben."
+        },
+        {
+          "key": "d",
+          "text": "Sonntage sollten für Fast-Food-Angebote genutzt werden, um Stress abzubauen."
+        },
+        {
+          "key": "e",
+          "text": "Sonntage sollten dazu genutzt werden, um gesunde Mahlzeiten für die ganze Woche vorzubereiten."
+        },
+        {
+          "key": "f",
+          "text": "Sonntage sollten als Tage der bewussten und genussvollen Ernährung genutzt werden."
+        }
+      ]
+    },
+    {
+      "id": "4.22-3",
+      "label": "Aussage 3",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Verkaufsoffene Sonntage sollten genutzt werden, um über gesunde Ernährung zu informieren und frische Lebensmittel anzubieten."
+        },
+        {
+          "key": "b",
+          "text": "Sonntage sollten als Tage der Entdeckung neuer Gerichte und Rezepte genutzt werden."
+        },
+        {
+          "key": "c",
+          "text": "Eine gesunde Ernährung ist essentiell für ein gesundes und glückliches Leben."
+        },
+        {
+          "key": "d",
+          "text": "Sonntage sollten für Fast-Food-Angebote genutzt werden, um Stress abzubauen."
+        },
+        {
+          "key": "e",
+          "text": "Sonntage sollten dazu genutzt werden, um gesunde Mahlzeiten für die ganze Woche vorzubereiten."
+        },
+        {
+          "key": "f",
+          "text": "Sonntage sollten als Tage der bewussten und genussvollen Ernährung genutzt werden."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": ". Ich bin überzeugt, dass eine gesunde Ernährung essentiell für ein glückliches und gesundes Leben ist.Sonntage sollten daher genutzt werden, um frische Lebensmittel einzukaufen und gemeinsam gesunde Mahlzeiten zuzubereiten.",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 2",
+      "text": ". Als Koch finde ich es wichtig, dass die Kultur des Slow Food gefördert wird. Sonntage sollten dazu genutzt werden, um in Ruhe zu kochen, hochwertige Zutaten zu verwenden und die Zeit beim Essen zu genießen.",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 3",
+      "text": ". Ich arbeite im Gesundheitswesen und bin besorgt über die steigende Zahl von ernährungsbedingten Krankheiten. Sonntags sollten daher Informationsveranstaltungen stattfinden, um die Menschen über gesunde Ernährung aufzuklären.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.8",
+  "aufgabe": "4.8",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Wie gehen Sie mit Stress um?",
+  "title": "Wie gehen Sie mit Stress um?",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-2834.html",
+    "lingq_lesson_id": 44844378,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844378/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/4.8.7c1d79950028.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.8/4.8.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.8-1",
+      "label": "Aussage 1",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Meditation hat mir geholfen, ruhiger und ausgeglichener zu werden."
+        },
+        {
+          "key": "b",
+          "text": "Spaziergänge im Park sind eine einfache, aber effektive Methode, um Stress abzubauen."
+        },
+        {
+          "key": "c",
+          "text": "Musik hilft mir, mich zu entspannen und meine Gedanken zu ordnen."
+        },
+        {
+          "key": "d",
+          "text": "Verschiedene Musikrichtungen helfen mir, mich aufzumuntern."
+        },
+        {
+          "key": "e",
+          "text": "Die Natur hilft mir, den Kopf frei zu bekommen."
+        },
+        {
+          "key": "f",
+          "text": "Ich spiele Gitarre, um abzuschalten."
+        }
+      ]
+    },
+    {
+      "id": "4.8-2",
+      "label": "Aussage 2",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Meditation hat mir geholfen, ruhiger und ausgeglichener zu werden."
+        },
+        {
+          "key": "b",
+          "text": "Spaziergänge im Park sind eine einfache, aber effektive Methode, um Stress abzubauen."
+        },
+        {
+          "key": "c",
+          "text": "Musik hilft mir, mich zu entspannen und meine Gedanken zu ordnen."
+        },
+        {
+          "key": "d",
+          "text": "Verschiedene Musikrichtungen helfen mir, mich aufzumuntern."
+        },
+        {
+          "key": "e",
+          "text": "Die Natur hilft mir, den Kopf frei zu bekommen."
+        },
+        {
+          "key": "f",
+          "text": "Ich spiele Gitarre, um abzuschalten."
+        }
+      ]
+    },
+    {
+      "id": "4.8-3",
+      "label": "Aussage 3",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Meditation hat mir geholfen, ruhiger und ausgeglichener zu werden."
+        },
+        {
+          "key": "b",
+          "text": "Spaziergänge im Park sind eine einfache, aber effektive Methode, um Stress abzubauen."
+        },
+        {
+          "key": "c",
+          "text": "Musik hilft mir, mich zu entspannen und meine Gedanken zu ordnen."
+        },
+        {
+          "key": "d",
+          "text": "Verschiedene Musikrichtungen helfen mir, mich aufzumuntern."
+        },
+        {
+          "key": "e",
+          "text": "Die Natur hilft mir, den Kopf frei zu bekommen."
+        },
+        {
+          "key": "f",
+          "text": "Ich spiele Gitarre, um abzuschalten."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": "Um Stress abzubauen, mache ich regelmäßig Spaziergänger im Park.Die frische Luft und die Natur helfen mir, den Kopf frei zu bekommen. Besonders am Wochenende nehme ich mir viel Zeit dafür. Es ist erstaunlich, wie beruhigend ein einfacher Spaziergang sein kann.",
+      "key_phrase": "Um Stress abzubauen, mache ich regelmäßig Spaziergänger im Park."
+    },
+    {
+      "label": "Aussage 2",
+      "text": "Ich habe vor einiger Zeit mit dem Meditieren begonnen. Jeden Morgen nehme ich mir eine halbe Stunde Zeit, um zu meditieren und mich auf den Tag vorzubereiten. Das hat mir sehr geholfen, ruhiger und ausgeglichener zu werden.Meditation ist für mich zu einem festen Bestandteil meines Lebens geworden.",
+      "key_phrase": "Ich habe vor einiger Zeit mit dem Meditieren begonnen."
+    },
+    {
+      "label": "Aussage 3",
+      "text": "Wenn ich gestresst bin, höre ich gerne Musik. Unterschiedliche Musikrichtungen helfen mir, mich zu entspannen oder aufzumuntern.Manchmal spiele ich auch selbst Gitarre, was eine wunderbare Möglichkeit ist, meine Gedanken zu ordnen und abzuschalten. Musik ist für mich ein unverzichtbarer Stressabbau.",
+      "key_phrase": "Wenn ich gestresst bin, höre ich gerne Musik."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

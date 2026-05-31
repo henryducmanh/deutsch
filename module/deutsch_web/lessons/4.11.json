@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.11",
+  "aufgabe": "4.11",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Wie wichtig ist Ihnen gesunde Ernährung?",
+  "title": "Wie wichtig ist Ihnen gesunde Ernährung?",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-2830.html",
+    "lingq_lesson_id": 44843210,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44843210/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/4.11.8a7d3d8e747e.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.11/4.11.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.11-1",
+      "label": "Aussage 1",
+      "correct": "d",
+      "options": [
+        {
+          "key": "a",
+          "text": "Ich habe wenig Zeit zum Kochen und greife manchmal zu Fertiggerichten."
+        },
+        {
+          "key": "b",
+          "text": "Am Wochenende probiere ich gerne neue Rezepte aus."
+        },
+        {
+          "key": "c",
+          "text": "Ich vermeide Zucker und Fast Food."
+        },
+        {
+          "key": "d",
+          "text": "Einmal pro Woche gönne ich mir ein kleines Stück Schokolade."
+        },
+        {
+          "key": "e",
+          "text": "Abends versuche ich, frisch zu kochen."
+        },
+        {
+          "key": "f",
+          "text": "Ich ernähre mich vegetarisch und achte auf biologischen Anbau."
+        }
+      ]
+    },
+    {
+      "id": "4.11-2",
+      "label": "Aussage 2",
+      "correct": "f",
+      "options": [
+        {
+          "key": "a",
+          "text": "Ich habe wenig Zeit zum Kochen und greife manchmal zu Fertiggerichten."
+        },
+        {
+          "key": "b",
+          "text": "Am Wochenende probiere ich gerne neue Rezepte aus."
+        },
+        {
+          "key": "c",
+          "text": "Ich vermeide Zucker und Fast Food."
+        },
+        {
+          "key": "d",
+          "text": "Einmal pro Woche gönne ich mir ein kleines Stück Schokolade."
+        },
+        {
+          "key": "e",
+          "text": "Abends versuche ich, frisch zu kochen."
+        },
+        {
+          "key": "f",
+          "text": "Ich ernähre mich vegetarisch und achte auf biologischen Anbau."
+        }
+      ]
+    },
+    {
+      "id": "4.11-3",
+      "label": "Aussage 3",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Ich habe wenig Zeit zum Kochen und greife manchmal zu Fertiggerichten."
+        },
+        {
+          "key": "b",
+          "text": "Am Wochenende probiere ich gerne neue Rezepte aus."
+        },
+        {
+          "key": "c",
+          "text": "Ich vermeide Zucker und Fast Food."
+        },
+        {
+          "key": "d",
+          "text": "Einmal pro Woche gönne ich mir ein kleines Stück Schokolade."
+        },
+        {
+          "key": "e",
+          "text": "Abends versuche ich, frisch zu kochen."
+        },
+        {
+          "key": "f",
+          "text": "Ich ernähre mich vegetarisch und achte auf biologischen Anbau."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": "Ich achte sehr auf meine Ernährung und versuche, mich so gesund wie möglich zu ernähren. Ich esse viel Obst und Gemüse und vermeide Zucker und Fastfood. Einmal pro Woche gönne ich mir jedoch ein kleines Stück Schokolade, weil ich finde, dass man sich auch mal etwas gönnen sollte.",
+      "key_phrase": "Ich achte sehr auf meine Ernährung und versuche, mich so gesund wie möglich zu ernähren."
+    },
+    {
+      "label": "Aussage 2",
+      "text": "Seit einigen Jahren ernähre ich mich vegetarisch. Anfangs war es etwas schwierig, aber mittlerweile habe ich viele leckere Rezepte gefunden. Besonders wichtig ist mir, dass die Lebensmittel, die ich kaufe, aus biologischem Anbau stammen. Ich finde, das ist nicht nur besser für die Umwelt, sondern auch gesünder für mich.",
+      "key_phrase": "Seit einigen Jahren ernähre ich mich vegetarisch."
+    },
+    {
+      "label": "Aussage 3",
+      "text": "Ich habe eine ziemlich stressige Arbeit und oft wenig Zeit, um zu kochen. Deshalb greife ich manchmal zu Fertiggerichten. Trotzdem versuche ich, zumindest abends frisch zu kochen, wenn ich mehr Zeit habe. Am Wochenende koche ich gerne aufwendigere Gerichte und probiere neue Rezepte aus.",
+      "key_phrase": "Ich habe eine ziemlich stressige Arbeit und oft wenig Zeit, um zu kochen."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.3",
+  "aufgabe": "4.3",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Wie stehen Sie zum Thema berufliche Weiterbildung?",
+  "title": "Wie stehen Sie zum Thema berufliche Weiterbildung?",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-2840.html",
+    "lingq_lesson_id": 44844372,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844372/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/4.3.a4c541b987c6.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.3/4.3.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.3-1",
+      "label": "Aussage 1",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Projektmanagementkurs besucht."
+        },
+        {
+          "key": "b",
+          "text": "Zeitmanagement-Workshop gemacht."
+        },
+        {
+          "key": "c",
+          "text": "Online-Kurs abgeschlossen."
+        },
+        {
+          "key": "d",
+          "text": "Weiterbildung sehr wichtig."
+        },
+        {
+          "key": "e",
+          "text": "Interne Schulungen regelmäßig."
+        },
+        {
+          "key": "f",
+          "text": "Lernen von zu Hause."
+        }
+      ]
+    },
+    {
+      "id": "4.3-2",
+      "label": "Aussage 2",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Projektmanagementkurs besucht."
+        },
+        {
+          "key": "b",
+          "text": "Zeitmanagement-Workshop gemacht."
+        },
+        {
+          "key": "c",
+          "text": "Online-Kurs abgeschlossen."
+        },
+        {
+          "key": "d",
+          "text": "Weiterbildung sehr wichtig."
+        },
+        {
+          "key": "e",
+          "text": "Interne Schulungen regelmäßig."
+        },
+        {
+          "key": "f",
+          "text": "Lernen von zu Hause."
+        }
+      ]
+    },
+    {
+      "id": "4.3-3",
+      "label": "Aussage 3",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Projektmanagementkurs besucht."
+        },
+        {
+          "key": "b",
+          "text": "Zeitmanagement-Workshop gemacht."
+        },
+        {
+          "key": "c",
+          "text": "Online-Kurs abgeschlossen."
+        },
+        {
+          "key": "d",
+          "text": "Weiterbildung sehr wichtig."
+        },
+        {
+          "key": "e",
+          "text": "Interne Schulungen regelmäßig."
+        },
+        {
+          "key": "f",
+          "text": "Lernen von zu Hause."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": "Ich finde berufliche Weiterbildung sehr wichtig, besonders in unserer schnelllebigen Zeit.Letztes Jahr habe ich einen Kurs in Projektmanagement besucht, der mir wirklich geholfen hat, meine Fähigkeiten zu verbessern. Es war intensiv, aber die neuen Kenntnisse und Techniken, die ich gelernt habe, kann ich jetzt täglich in meine Arbeit anwenden. Ich plane, in Zukunft weitere Kurse zu belegen, um immer auf dem neuesten Stand zu bleiben.",
+      "key_phrase": "Ich finde berufliche Weiterbildung sehr wichtig, besonders in unserer schnelllebigen Zeit."
+    },
+    {
+      "label": "Aussage 2",
+      "text": "In meiner Firma wird viel Wert auf Weiterbildung gelegt. Wir haben regelmäßig interne Schulungen und Workshops zu verschiedenen Themen. Vor Kurzem habe ich an einem Workshop zum Thema Zeitmanagement teilgenommen, was mir sehr geholfen hat, meine Arbeit effizienter zu organisieren. Diese Schulungen sind eine großartige Möglichkeit, sich beruflich weiterzuentwickeln und gleichzeitig mit Kollegen zu vernetzen.",
+      "key_phrase": "In meiner Firma wird viel Wert auf Weiterbildung gelegt."
+    },
+    {
+      "label": "Aussage 3",
+      "text": "Ich habe kürzlich eine Online-Weiterbildung zum Thema digitale Kommunikation abgeschlossen. Die Flexibilität, von zu Hause aus lernen zu können, war für mich besonders wichtig, da ich beruflich und familiär sehr eingespannt bin. Der Kurs war sehr praxisorientiert und ich konnte das Gelernte sofort in meinem Job anwenden. Es ist erstaunlich, wie viel man online lernen kann, ohne einen Fuß in ein Klassenzimmer setzen zu müssen.",
+      "key_phrase": "Ich habe kürzlich eine Online-Weiterbildung zum Thema digitale Kommunikation abgeschlossen."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

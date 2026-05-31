@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.26",
+  "aufgabe": "4.26",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Ernährungsgewohnheiten und Gesundheit",
+  "title": "Ernährungsgewohnheiten und Gesundheit",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1237.html",
+    "lingq_lesson_id": 44844369,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844369/"
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.26/4.26.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.26-1",
+      "label": "Aussage 1",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Vegane Ernährung ist nicht nur gut für die Gesundheit, sondern auch für die Umwelt."
+        },
+        {
+          "key": "b",
+          "text": "Diäten und strenge Ernährungsregeln sind oft kontraproduktiv."
+        },
+        {
+          "key": "c",
+          "text": "Die Schnelllebigkeit unserer Gesellschaft fördert ungesunde Essgewohnheiten."
+        },
+        {
+          "key": "d",
+          "text": "Verbote und Zwänge führen zu Frust und Scheitern."
+        },
+        {
+          "key": "e",
+          "text": "Ausgewogene Ernährung basierend auf persönlichen Bedürfnissen ist entscheidend."
+        },
+        {
+          "key": "f",
+          "text": "Fertigprodukte und Fast Food sind die einfache Wahl in unserer Gesellschaft."
+        }
+      ]
+    },
+    {
+      "id": "4.26-2",
+      "label": "Aussage 2",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Vegane Ernährung ist nicht nur gut für die Gesundheit, sondern auch für die Umwelt."
+        },
+        {
+          "key": "b",
+          "text": "Diäten und strenge Ernährungsregeln sind oft kontraproduktiv."
+        },
+        {
+          "key": "c",
+          "text": "Die Schnelllebigkeit unserer Gesellschaft fördert ungesunde Essgewohnheiten."
+        },
+        {
+          "key": "d",
+          "text": "Verbote und Zwänge führen zu Frust und Scheitern."
+        },
+        {
+          "key": "e",
+          "text": "Ausgewogene Ernährung basierend auf persönlichen Bedürfnissen ist entscheidend."
+        },
+        {
+          "key": "f",
+          "text": "Fertigprodukte und Fast Food sind die einfache Wahl in unserer Gesellschaft."
+        }
+      ]
+    },
+    {
+      "id": "4.26-3",
+      "label": "Aussage 3",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Vegane Ernährung ist nicht nur gut für die Gesundheit, sondern auch für die Umwelt."
+        },
+        {
+          "key": "b",
+          "text": "Diäten und strenge Ernährungsregeln sind oft kontraproduktiv."
+        },
+        {
+          "key": "c",
+          "text": "Die Schnelllebigkeit unserer Gesellschaft fördert ungesunde Essgewohnheiten."
+        },
+        {
+          "key": "d",
+          "text": "Verbote und Zwänge führen zu Frust und Scheitern."
+        },
+        {
+          "key": "e",
+          "text": "Ausgewogene Ernährung basierend auf persönlichen Bedürfnissen ist entscheidend."
+        },
+        {
+          "key": "f",
+          "text": "Fertigprodukte und Fast Food sind die einfache Wahl in unserer Gesellschaft."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": ". Für mich sind vegane Ernährung und ein gesunder Leben still untrennbar miteinander verbunden. Es ist nicht nur gut für meine Gesundheit, sondern auch für die Umwelt. Ich versuche, möglichst auf tierische Produkte zu verzichten.",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 2",
+      "text": ". Ich denke, dass Diäten und strenge Ernährungsregeln oft mehr Schaden als Nutzen bringen. Eine ausgewogene Ernährung, die auf persönlichen Bedürfnissen basiert, ist entscheidend. Verbote und Zwänge führen oft zu Frust und langfristigem Scheitern.",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 3",
+      "text": ". Die Schnelllebigkeit unserer Gesellschaft hat dazu geführt, dass viele Menschen zu ungesundenes Gewohnheiten meiden. Fertigprodukte und fast Futs sind oft die einfache Wahl. Es ist wichtig, Bewusstsein für eine ausgewogene Ernährung zu schaffen und den Menschen dabei zu helfen, gesündere Entscheidungen zu treffen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

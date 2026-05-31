@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.12",
+  "aufgabe": "4.12",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Wie verbringen Sie Ihre Freizeit?",
+  "title": "Wie verbringen Sie Ihre Freizeit?",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-2829.html",
+    "lingq_lesson_id": 44843213,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44843213/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/4.12.111974aac66b.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.12/4.12.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.12-1",
+      "label": "Aussage 1",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Wandern ist die beste Möglichkeit, dem Alltag zu entfliehen."
+        },
+        {
+          "key": "b",
+          "text": "Obwohl ich beruflich stark eingespannt bin, nehme ich mir regelmäßig Zeit zum Üben."
+        },
+        {
+          "key": "c",
+          "text": "Ich spiele regelmäßig bei kleinen Konzerten."
+        },
+        {
+          "key": "d",
+          "text": "Ich habe an einem Kochkurs teilgenommen."
+        },
+        {
+          "key": "e",
+          "text": "Besonders im Herbst genieße ich das Wandern."
+        },
+        {
+          "key": "f",
+          "text": "Musik ist eine wunderbare Möglichkeit, sich auszudrücken und zu entspannen."
+        }
+      ]
+    },
+    {
+      "id": "4.12-2",
+      "label": "Aussage 2",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Wandern ist die beste Möglichkeit, dem Alltag zu entfliehen."
+        },
+        {
+          "key": "b",
+          "text": "Obwohl ich beruflich stark eingespannt bin, nehme ich mir regelmäßig Zeit zum Üben."
+        },
+        {
+          "key": "c",
+          "text": "Ich spiele regelmäßig bei kleinen Konzerten."
+        },
+        {
+          "key": "d",
+          "text": "Ich habe an einem Kochkurs teilgenommen."
+        },
+        {
+          "key": "e",
+          "text": "Besonders im Herbst genieße ich das Wandern."
+        },
+        {
+          "key": "f",
+          "text": "Musik ist eine wunderbare Möglichkeit, sich auszudrücken und zu entspannen."
+        }
+      ]
+    },
+    {
+      "id": "4.12-3",
+      "label": "Aussage 3",
+      "correct": "d",
+      "options": [
+        {
+          "key": "a",
+          "text": "Wandern ist die beste Möglichkeit, dem Alltag zu entfliehen."
+        },
+        {
+          "key": "b",
+          "text": "Obwohl ich beruflich stark eingespannt bin, nehme ich mir regelmäßig Zeit zum Üben."
+        },
+        {
+          "key": "c",
+          "text": "Ich spiele regelmäßig bei kleinen Konzerten."
+        },
+        {
+          "key": "d",
+          "text": "Ich habe an einem Kochkurs teilgenommen."
+        },
+        {
+          "key": "e",
+          "text": "Besonders im Herbst genieße ich das Wandern."
+        },
+        {
+          "key": "f",
+          "text": "Musik ist eine wunderbare Möglichkeit, sich auszudrücken und zu entspannen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": ". In meiner Freizeit gehe ich gerne wandern. Es ist für mich die beste Möglichkeit, dem Alltag zu entfliehen und die Natur zu genießen. Besonders im Herbst, wenn die Blätter sich verfärben, ist es einfach traumhaft. Letztes Wochenende war ich in den Bergen und habe eine 20 Kilometer lange Wanderung gemacht. Danach fühle ich mich immer erfrischt und voller Energie.",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 2",
+      "text": ". Ich spiele seit meiner Kindheit Klavier. Musik ist für mich eine wunderbare Möglichkeit, mich auszudrücken und zu entspannen. Obwohl ich beruflich stark eingespannt bin, nehme ich mir regelmäßig Zeit zum Üben. Manchmal trete ich auch bei kleinen Konzerten auf, was mir großen Spaß macht. Es ist toll, meine Leidenschaft mit anderen zu teilen.",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 3",
+      "text": ". Meine Leidenschaft ist das Kochen. Ich experimentiere gerne mit neuen Rezepten und versuche, verschiedene Küchen auszuprobieren. Besonders fasziniert mich die asiatische Küche. Neulich habe ich an einem Kochkurs teilgenommen, bei dem wir gelernt haben, Sushi zu machen. Das war eine tolle Erfahrung und ich habe viele neue Techniken gelernt.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

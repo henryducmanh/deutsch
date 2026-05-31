@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.21",
+  "aufgabe": "4.21",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "digitale Medien",
+  "title": "digitale Medien",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1243.html",
+    "lingq_lesson_id": 44844358,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844358/"
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.21/4.21.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.21-1",
+      "label": "Aussage 1",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Verkaufsoffene Sonntage sollten genutzt werden, um über den verantwortungsvollen Umgang mit digitalen Medien aufzuklären."
+        },
+        {
+          "key": "b",
+          "text": "Digitale Medien haben das Potenzial, Bildung und Lernen zu verbessern."
+        },
+        {
+          "key": "c",
+          "text": "Sonntage sollten als medienfreie Tage genutzt werden, um soziale Interaktionen zu fördern."
+        },
+        {
+          "key": "d",
+          "text": "Die Nutzung digitaler Medien sollte sonntags eingeschränkt werden, um die Menschen zum Entspannen zu ermutigen."
+        },
+        {
+          "key": "e",
+          "text": "Digitale Medien haben einen großen Einfluss auf die Werbeindustrie und bieten neue Möglichkeiten der Vermarktung."
+        },
+        {
+          "key": "f",
+          "text": "Sonntage sollten als Tage der kreativen Nutzung digitaler Medien genutzt werden."
+        }
+      ]
+    },
+    {
+      "id": "4.21-2",
+      "label": "Aussage 2",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Verkaufsoffene Sonntage sollten genutzt werden, um über den verantwortungsvollen Umgang mit digitalen Medien aufzuklären."
+        },
+        {
+          "key": "b",
+          "text": "Digitale Medien haben das Potenzial, Bildung und Lernen zu verbessern."
+        },
+        {
+          "key": "c",
+          "text": "Sonntage sollten als medienfreie Tage genutzt werden, um soziale Interaktionen zu fördern."
+        },
+        {
+          "key": "d",
+          "text": "Die Nutzung digitaler Medien sollte sonntags eingeschränkt werden, um die Menschen zum Entspannen zu ermutigen."
+        },
+        {
+          "key": "e",
+          "text": "Digitale Medien haben einen großen Einfluss auf die Werbeindustrie und bieten neue Möglichkeiten der Vermarktung."
+        },
+        {
+          "key": "f",
+          "text": "Sonntage sollten als Tage der kreativen Nutzung digitaler Medien genutzt werden."
+        }
+      ]
+    },
+    {
+      "id": "4.21-3",
+      "label": "Aussage 3",
+      "correct": "e",
+      "options": [
+        {
+          "key": "a",
+          "text": "Verkaufsoffene Sonntage sollten genutzt werden, um über den verantwortungsvollen Umgang mit digitalen Medien aufzuklären."
+        },
+        {
+          "key": "b",
+          "text": "Digitale Medien haben das Potenzial, Bildung und Lernen zu verbessern."
+        },
+        {
+          "key": "c",
+          "text": "Sonntage sollten als medienfreie Tage genutzt werden, um soziale Interaktionen zu fördern."
+        },
+        {
+          "key": "d",
+          "text": "Die Nutzung digitaler Medien sollte sonntags eingeschränkt werden, um die Menschen zum Entspannen zu ermutigen."
+        },
+        {
+          "key": "e",
+          "text": "Digitale Medien haben einen großen Einfluss auf die Werbeindustrie und bieten neue Möglichkeiten der Vermarktung."
+        },
+        {
+          "key": "f",
+          "text": "Sonntage sollten als Tage der kreativen Nutzung digitaler Medien genutzt werden."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": ". Als Studentin schätze ich die Vorteile digitaler Medien im Bildungsbereich.Es ermöglicht uns den Zugang zu einer Fülle von Informationen und Ressourcen, die unser Lernen bereichern.",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 2",
+      "text": ". Als Elternteil bin ich besorgt über den übermäßigen Einsatz digitaler Medien bei Kindern. Es ist wichtig, dass wir die Nutzung kontrollieren und sicherstellen, dass sie einen ausgewogenen Leben stillführen.",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 3",
+      "text": ". Ich arbeite in der Werbebranche und finde es faszinierend, wie digitale Medien neue Möglichkeiten für die Vermarktung von Produkten und Dienstleistungen eröffnen. Sonntags sollten daher auch Werbe- und Marketingaktivitäten stattfinden.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

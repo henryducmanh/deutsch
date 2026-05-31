@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.7",
+  "aufgabe": "4.7",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Wie wichtig ist Ihnen eine ausgewogene Work-Life-Balance?",
+  "title": "Wie wichtig ist Ihnen eine ausgewogene Work-Life-Balance?",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-2836.html",
+    "lingq_lesson_id": 44844377,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844377/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/4.7.eea8f8a86653.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.7/4.7.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.7-1",
+      "label": "Aussage 1",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Joggen am Morgen gibt mir die Energie für den ganzen Tag."
+        },
+        {
+          "key": "b",
+          "text": "Ich versuche, nach Feierabend keine geschäftlichen E-Mails mehr zu lesen."
+        },
+        {
+          "key": "c",
+          "text": "Meine Hobbys haben nichts mit meiner Arbeit zu tun."
+        },
+        {
+          "key": "d",
+          "text": "Sport hilft mir, meine Gedanken zu ordnen."
+        },
+        {
+          "key": "e",
+          "text": "Klare Grenzen zwischen Arbeit und Freizeit zu ziehen, ist wichtig."
+        },
+        {
+          "key": "f",
+          "text": "Ich spiele in einer Band, um meine kreative Seite auszuleben."
+        }
+      ]
+    },
+    {
+      "id": "4.7-2",
+      "label": "Aussage 2",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Joggen am Morgen gibt mir die Energie für den ganzen Tag."
+        },
+        {
+          "key": "b",
+          "text": "Ich versuche, nach Feierabend keine geschäftlichen E-Mails mehr zu lesen."
+        },
+        {
+          "key": "c",
+          "text": "Meine Hobbys haben nichts mit meiner Arbeit zu tun."
+        },
+        {
+          "key": "d",
+          "text": "Sport hilft mir, meine Gedanken zu ordnen."
+        },
+        {
+          "key": "e",
+          "text": "Klare Grenzen zwischen Arbeit und Freizeit zu ziehen, ist wichtig."
+        },
+        {
+          "key": "f",
+          "text": "Ich spiele in einer Band, um meine kreative Seite auszuleben."
+        }
+      ]
+    },
+    {
+      "id": "4.7-3",
+      "label": "Aussage 3",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Joggen am Morgen gibt mir die Energie für den ganzen Tag."
+        },
+        {
+          "key": "b",
+          "text": "Ich versuche, nach Feierabend keine geschäftlichen E-Mails mehr zu lesen."
+        },
+        {
+          "key": "c",
+          "text": "Meine Hobbys haben nichts mit meiner Arbeit zu tun."
+        },
+        {
+          "key": "d",
+          "text": "Sport hilft mir, meine Gedanken zu ordnen."
+        },
+        {
+          "key": "e",
+          "text": "Klare Grenzen zwischen Arbeit und Freizeit zu ziehen, ist wichtig."
+        },
+        {
+          "key": "f",
+          "text": "Ich spiele in einer Band, um meine kreative Seite auszuleben."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": "Um eine gute Work-Life-Balance zu erreichen, ist es für mich wichtig, klare Grenzen zwischen Arbeit und Freizeit zu ziehen. Ich versuche, nach Feierabend keine geschäftlichen E-Mails mehr zu lesen und mich auf meine Familie und Freunde zu konzentrieren. Das hilft mir, den Stress des Arbeitseitags hinter mir zu lassen.",
+      "key_phrase": "Um eine gute Work-Life-Balance zu erreichen, ist es für mich wichtig, klare Grenzen zwischen Arbeit und Freizeit zu…"
+    },
+    {
+      "label": "Aussage 2",
+      "text": "Ich habe einen sehr anstrengenden Job, daher achte ich darauf, regelmäßige Pausen einzulegen und Sport zu treiben.Joggen am Morgen gibt mir die Energie für den ganzen Tag und hilft mir, meine Gedanken zu ordnen. Ohne diese Routine würde ich mich schnell ausgebrannt fühlen.",
+      "key_phrase": "Ich habe einen sehr anstrengenden Job, daher achte ich darauf, regelmäßige Pausen einzulegen und Sport zu treiben."
+    },
+    {
+      "label": "Aussage 3",
+      "text": "Für mich ist es wichtig, Hobbys zu haben, die nichts mit meiner Arbeit zu tun haben. Ich spiele zum Beispiel in einer Band, was mir sehr viel Freude bereitet und einen guten Ausgleich zur Arbeit darstellt. So kann ich meine kreative Seite ausleben und gleichzeitig entspannen.",
+      "key_phrase": "Für mich ist es wichtig, Hobbys zu haben, die nichts mit meiner Arbeit zu tun haben."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

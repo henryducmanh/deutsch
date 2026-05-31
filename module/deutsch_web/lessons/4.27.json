@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.27",
+  "aufgabe": "4.27",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Arbeitswelt der Zukunft – Remote Work und flexible Arbeitsmodelle",
+  "title": "Arbeitswelt der Zukunft – Remote Work und flexible Arbeitsmodelle",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1236.html",
+    "lingq_lesson_id": 44844370,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844370/"
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.27/4.27.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.27-1",
+      "label": "Aussage 1",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Remote Work sollte in der Zukunft weiterhin eine zentrale Rolle spielen."
+        },
+        {
+          "key": "b",
+          "text": "Das Büro ist der beste Ort, um effektiv zu arbeiten."
+        },
+        {
+          "key": "c",
+          "text": "Hybride Arbeitsmodelle sind die Zukunft der Arbeit."
+        },
+        {
+          "key": "d",
+          "text": "Die informellen Gespräche im Büro sind für die Zusammenarbeit wichtig."
+        },
+        {
+          "key": "e",
+          "text": "Flexibilität ist entscheidend für talentierte Fachkräfte."
+        },
+        {
+          "key": "f",
+          "text": "Remote Work verringert die Produktivität."
+        }
+      ]
+    },
+    {
+      "id": "4.27-2",
+      "label": "Aussage 2",
+      "correct": "f",
+      "options": [
+        {
+          "key": "a",
+          "text": "Remote Work sollte in der Zukunft weiterhin eine zentrale Rolle spielen."
+        },
+        {
+          "key": "b",
+          "text": "Das Büro ist der beste Ort, um effektiv zu arbeiten."
+        },
+        {
+          "key": "c",
+          "text": "Hybride Arbeitsmodelle sind die Zukunft der Arbeit."
+        },
+        {
+          "key": "d",
+          "text": "Die informellen Gespräche im Büro sind für die Zusammenarbeit wichtig."
+        },
+        {
+          "key": "e",
+          "text": "Flexibilität ist entscheidend für talentierte Fachkräfte."
+        },
+        {
+          "key": "f",
+          "text": "Remote Work verringert die Produktivität."
+        }
+      ]
+    },
+    {
+      "id": "4.27-3",
+      "label": "Aussage 3",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Remote Work sollte in der Zukunft weiterhin eine zentrale Rolle spielen."
+        },
+        {
+          "key": "b",
+          "text": "Das Büro ist der beste Ort, um effektiv zu arbeiten."
+        },
+        {
+          "key": "c",
+          "text": "Hybride Arbeitsmodelle sind die Zukunft der Arbeit."
+        },
+        {
+          "key": "d",
+          "text": "Die informellen Gespräche im Büro sind für die Zusammenarbeit wichtig."
+        },
+        {
+          "key": "e",
+          "text": "Flexibilität ist entscheidend für talentierte Fachkräfte."
+        },
+        {
+          "key": "f",
+          "text": "Remote Work verringert die Produktivität."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": "Die Möglichkeit, von zu Hause aus zu arbeiten, hat meine Lebensqualität erheblich verbessert.Ich kann meinen Arbeitstag flexibel gestalten und habe mehr Zeit für meine Familie. Remote Work sollte in der Zukunft weiterhin eine zentrale Rolle spielen.",
+      "key_phrase": "Die Möglichkeit, von zu Hause aus zu arbeiten, hat meine Lebensqualität erheblich verbessert."
+    },
+    {
+      "label": "Aussage 2",
+      "text": "Ich bin der Meinung, dass Remote Work die Produktivität verringert. Die informellen Gespräche im Büro und der direkte Austausch mit Kollegen fehlen, was sich negativ auf die Zusammenarbeit auswirkt. Das Büro bleibt für mich der beste Ort, um effektiv zu arbeiten.",
+      "key_phrase": "Ich bin der Meinung, dass Remote Work die Produktivität verringert."
+    },
+    {
+      "label": "Aussage 3",
+      "text": "Die Zukunft der Arbeit liegt in hybriden Arbeitsmodellen.Eine Kombination aus Büroarbeit und Remote Work ermöglicht es den Mitarbeitern, das Beste aus beiden Welten zu nutzen. Flexibilität ist entscheidend, um talentierte Fachkräfte zu halten und anzuziehen.",
+      "key_phrase": "Die Zukunft der Arbeit liegt in hybriden Arbeitsmodellen."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

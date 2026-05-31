@@ -118,4 +118,21 @@ ID convention: `DD-<YYYYMMDD>-<NNN>` (DD = Deutsch Decision).
 
 ---
 
-**Last updated:** 2026-05-29 (6 entries — thêm DD-20260529-006 chốt nền tảng deutsch.twv.app).
+## DD-20260531-007 — Phase A Hören JSON Generator: `horen_to_lesson_json.py` live
+
+- **Date:** 2026-05-31
+- **Topic:** pipeline tự động generate lesson JSON cho series Hören 4.x lên `deutsch.twv.app`, không phải làm tay từng bài.
+- **Ref:** `docs/ai/tasks/HOREN_LESSON_JSON_PHASE_A_PROMPT.md`
+- **Decision:** build `module/scan_extract/horen_to_lesson_json.py` (CLI `--dry-run`/`--apply`/`--id`/`--force`/`--series`) + `cron_generate_lessons.bat` (push LingQ → sync csv → gen JSON). Schema `deutsch_web_lesson_v1` canonical theo `lessons/4.31.json`. Audio + LingQ meta lookup priority: `url.md` → `data/lingq_lessons.csv` → null.
+- **Kết quả:** 27 bài generate (4.2–4.28), 3 skip (4.29–4.31 đã có, KHÔNG overwrite). 0 errors. Tất cả JSON valid, aussagen a–f × 3.
+- **Phát hiện nguồn (empiric):**
+  - Transcript marker 3 dạng: `Aussage N` / `Nummer N` / `Nr. N` → regex gom cả ba, normalize label về `Aussage N`.
+  - Scrape `_questions.md` đôi khi bỏ sót option ở Aussage đầu (vd 4.4 thiếu `f` ở Aussage 1+2). Vì a–f là ngân hàng câu chung → parser gom **union** options, áp đủ a–f cho mọi Aussage.
+  - 4.18–4.28 có `lesson_id` nhưng `audio_url` rỗng trong csv → `audio.host="none"` (chờ LingQ push audio đợt sau).
+  - Windows console cp1252 không encode `→`/`Ö` → `sys.stdout.reconfigure(encoding="utf-8")`.
+- **Linked files:** `module/scan_extract/horen_to_lesson_json.py`, `module/scan_extract/cron_generate_lessons.bat`, `module/deutsch_web/lessons/4.2.json`–`4.28.json`
+- **Status:** active
+
+---
+
+**Last updated:** 2026-05-31 (7 entries — thêm DD-20260531-007 Phase A Hören JSON Generator).

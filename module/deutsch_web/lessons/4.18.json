@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.18",
+  "aufgabe": "4.18",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Radiosendung - Meinungen zu Lebensstilen (Fortsetzung)",
+  "title": "Radiosendung - Meinungen zu Lebensstilen (Fortsetzung)",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1594.html",
+    "lingq_lesson_id": 44844352,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844352/"
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.18/4.18.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.18-1",
+      "label": "Aussage 1",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Die Bedeutung von alternativen Ansätzen in der Kinderbetreuung und Ausbildung wird betont."
+        },
+        {
+          "key": "b",
+          "text": "Die Freude am eigenen Gemüseanbau und die Geschmacksqualität werden hervorgehoben."
+        },
+        {
+          "key": "c",
+          "text": "Die Verbundenheit mit der Gemeinschaft als entscheidender Aspekt des Wohnens wird betont."
+        },
+        {
+          "key": "d",
+          "text": "Die Vielfalt der Lehrmethoden sollte auf die Einzigartigkeit jedes Kindes abgestimmt sein."
+        },
+        {
+          "key": "e",
+          "text": "Die persönliche Verantwortung für die Pflege des eigenen Gartens wird betont."
+        },
+        {
+          "key": "f",
+          "text": "Wohnen ist nicht nur ein physisches Dach über dem Kopf, sondern auch eine emotionale Verbindung zur Umgebung."
+        }
+      ]
+    },
+    {
+      "id": "4.18-2",
+      "label": "Aussage 2",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Die Bedeutung von alternativen Ansätzen in der Kinderbetreuung und Ausbildung wird betont."
+        },
+        {
+          "key": "b",
+          "text": "Die Freude am eigenen Gemüseanbau und die Geschmacksqualität werden hervorgehoben."
+        },
+        {
+          "key": "c",
+          "text": "Die Verbundenheit mit der Gemeinschaft als entscheidender Aspekt des Wohnens wird betont."
+        },
+        {
+          "key": "d",
+          "text": "Die Vielfalt der Lehrmethoden sollte auf die Einzigartigkeit jedes Kindes abgestimmt sein."
+        },
+        {
+          "key": "e",
+          "text": "Die persönliche Verantwortung für die Pflege des eigenen Gartens wird betont."
+        },
+        {
+          "key": "f",
+          "text": "Wohnen ist nicht nur ein physisches Dach über dem Kopf, sondern auch eine emotionale Verbindung zur Umgebung."
+        }
+      ]
+    },
+    {
+      "id": "4.18-3",
+      "label": "Aussage 3",
+      "correct": "f",
+      "options": [
+        {
+          "key": "a",
+          "text": "Die Bedeutung von alternativen Ansätzen in der Kinderbetreuung und Ausbildung wird betont."
+        },
+        {
+          "key": "b",
+          "text": "Die Freude am eigenen Gemüseanbau und die Geschmacksqualität werden hervorgehoben."
+        },
+        {
+          "key": "c",
+          "text": "Die Verbundenheit mit der Gemeinschaft als entscheidender Aspekt des Wohnens wird betont."
+        },
+        {
+          "key": "d",
+          "text": "Die Vielfalt der Lehrmethoden sollte auf die Einzigartigkeit jedes Kindes abgestimmt sein."
+        },
+        {
+          "key": "e",
+          "text": "Die persönliche Verantwortung für die Pflege des eigenen Gartens wird betont."
+        },
+        {
+          "key": "f",
+          "text": "Wohnen ist nicht nur ein physisches Dach über dem Kopf, sondern auch eine emotionale Verbindung zur Umgebung."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": "Ich bin der Überzeugung, dass selbst angebautes Obst und Gemüse deutlich besser schmecken als das, was man im Supermarkt bekommt. Der eigene Anbau ermöglicht nicht nur eine engere Verbindung zur Natur, sondern auch eine bewusstiere Wertschätzung für die Früchte der eigenen Arbeit. Zudem bereitet es Freude, sich um den eigenen Garten zu kümmern und der Genuss von frisch geernteten Lebensmitteln trägt zu einem intensiveren Geschmackserlebnis bei.Diese persönliche Investition in den Anbau von Nahrungsmitteln kann nicht nur zu einer gesünderen Ernährung beitragen, sondern auch eine erfüllende und sinnstiftende Freizeitaktivität darstellen.",
+      "key_phrase": "Ich bin der Überzeugung, dass selbst angebautes Obst und Gemüse deutlich besser schmecken als das, was man im…"
+    },
+    {
+      "label": "Aussage 2",
+      "text": "In Bezug auf Kinderbetreuung und Ausbildung sollten wir vermehrt auf alternative Ansätze setzen. Die Anerkennung der Einzigartigkeit jedes Kindes erfordert die Erkundung verschiedener Lehrmethoden.Es ist wichtig, vielfältige pädagogische Ansätze zu berücksichtigen, um den unterschiedlichen Bedürfnissen, Talenten und Lernstilen gerecht zu werden. Die Förderung von Flexibilität im Bildungssystem ermöglicht es, die individuellen Potenziale jedes Kindes optimal zu entfalten. Durch die Implementierung alternativer Lehrmethoden können wir sicherstellen, dass Kinder ihre Talente entdecken und ihre persönliche Entwicklung in einer unterstützenden Umgebung entfalten können.",
+      "key_phrase": "In Bezug auf Kinderbetreuung und Ausbildung sollten wir vermehrt auf alternative Ansätze setzen."
+    },
+    {
+      "label": "Aussage 3",
+      "text": "Wohnen bedeutet für mich mehr als nur ein Dach über den Kopf zu haben. Es ist auch der Ort, an dem man sich mit seiner Umgebung verbunden fühlt. Die Gemeinschaft spielt eine entscheidende Rolle. Der Bonort sollte nicht nur ein physischer Raum sein, sondern auch ein sozialer, in dem man sich mit anderen Menschen verbunden und integriert fühlt.",
+      "key_phrase": "Wohnen bedeutet für mich mehr als nur ein Dach über den Kopf zu haben."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

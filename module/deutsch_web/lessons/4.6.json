@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.6",
+  "aufgabe": "4.6",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Wie wichtig ist Ihnen das Thema Nachhaltigkeit?",
+  "title": "Wie wichtig ist Ihnen das Thema Nachhaltigkeit?",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-2837.html",
+    "lingq_lesson_id": 44844376,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844376/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/4.6.19711a5da69b.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.6/4.6.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.6-1",
+      "label": "Aussage 1",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Ich benutze keine Plastiktüten mehr und kaufe nur noch unverpackte Lebensmittel."
+        },
+        {
+          "key": "b",
+          "text": "Energiesparlampen helfen mir, Energie zu sparen und Kosten zu reduzieren."
+        },
+        {
+          "key": "c",
+          "text": "Fahrradfahren ist eine gute Möglichkeit, fit zu bleiben und gleichzeitig etwas für die Natur zu tun."
+        },
+        {
+          "key": "d",
+          "text": "Öffentliche Verkehrsmittel nutze ich nur selten, weil ich das Radfahren bevorzuge."
+        },
+        {
+          "key": "e",
+          "text": "Eine Solaranlage auf dem Dach hilft mir, meinen eigenen Strom zu produzieren."
+        },
+        {
+          "key": "f",
+          "text": "Meinen eigenen Kompost im Garten anzulegen, ist aufwendig, aber lohnenswert."
+        }
+      ]
+    },
+    {
+      "id": "4.6-2",
+      "label": "Aussage 2",
+      "correct": "e",
+      "options": [
+        {
+          "key": "a",
+          "text": "Ich benutze keine Plastiktüten mehr und kaufe nur noch unverpackte Lebensmittel."
+        },
+        {
+          "key": "b",
+          "text": "Energiesparlampen helfen mir, Energie zu sparen und Kosten zu reduzieren."
+        },
+        {
+          "key": "c",
+          "text": "Fahrradfahren ist eine gute Möglichkeit, fit zu bleiben und gleichzeitig etwas für die Natur zu tun."
+        },
+        {
+          "key": "d",
+          "text": "Öffentliche Verkehrsmittel nutze ich nur selten, weil ich das Radfahren bevorzuge."
+        },
+        {
+          "key": "e",
+          "text": "Eine Solaranlage auf dem Dach hilft mir, meinen eigenen Strom zu produzieren."
+        },
+        {
+          "key": "f",
+          "text": "Meinen eigenen Kompost im Garten anzulegen, ist aufwendig, aber lohnenswert."
+        }
+      ]
+    },
+    {
+      "id": "4.6-3",
+      "label": "Aussage 3",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Ich benutze keine Plastiktüten mehr und kaufe nur noch unverpackte Lebensmittel."
+        },
+        {
+          "key": "b",
+          "text": "Energiesparlampen helfen mir, Energie zu sparen und Kosten zu reduzieren."
+        },
+        {
+          "key": "c",
+          "text": "Fahrradfahren ist eine gute Möglichkeit, fit zu bleiben und gleichzeitig etwas für die Natur zu tun."
+        },
+        {
+          "key": "d",
+          "text": "Öffentliche Verkehrsmittel nutze ich nur selten, weil ich das Radfahren bevorzuge."
+        },
+        {
+          "key": "e",
+          "text": "Eine Solaranlage auf dem Dach hilft mir, meinen eigenen Strom zu produzieren."
+        },
+        {
+          "key": "f",
+          "text": "Meinen eigenen Kompost im Garten anzulegen, ist aufwendig, aber lohnenswert."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": "Ich versuche, meinen Alltag so nachhaltig wie möglich zu bestalten. Ich benutze keine Plastiktüten mehr und kaufe nur noch unverpackte Lebensmittel. Außerdem habe ich angefangen, meinen eigenen Kompost im Garten anzulegen. Es ist zwar manchmal aufwendiger, aber ich finde, dass es sich lohnt.",
+      "key_phrase": "Ich versuche, meinen Alltag so nachhaltig wie möglich zu bestalten."
+    },
+    {
+      "label": "Aussage 2",
+      "text": "Für mich ist es wichtig, Energie zu sparen. In meinem Haus habe ich überall Energiesparlampen installiert und ich achte darauf, elektrische Geräte nicht im Standby-Modus zu lassen. Ich habe sogar eine Solaranlage auf dem Dach, um meinen eigenen Strom zu produzieren. Das reduziert nicht nur meinen Co-Fußabdruck, sondern spart auch Kosten.",
+      "key_phrase": "Für mich ist es wichtig, Energie zu sparen."
+    },
+    {
+      "label": "Aussage 3",
+      "text": "Ich fahre jeden Tag mit dem Fahrrad zur Arbeit, um die Umwelt zu schonen. Es ist eine gute Möglichkeit, fit zu bleiben und gleichzeitig etwas für die Natur zu tun. Öffentliche Verkehrsmittel nutze ich nur selten, weil ich das Radfahren bevorzuge. Manchmal fahre ich sogar längere Strecken mit dem Fahrrad, wenn das Wetter mitspielt.",
+      "key_phrase": "Ich fahre jeden Tag mit dem Fahrrad zur Arbeit, um die Umwelt zu schonen."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

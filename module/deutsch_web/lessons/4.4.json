@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.4",
+  "aufgabe": "4.4",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Wie stehen Sie zu gesunder Ernährung?",
+  "title": "Wie stehen Sie zu gesunder Ernährung?",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-2839.html",
+    "lingq_lesson_id": 44844373,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844373/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/4.4.bb8a5a6d6827.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.4/4.4.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.4-1",
+      "label": "Aussage 1",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Ich habe meine Ernährung umgestellt und verzichte auf Zucker und verarbeitete Lebensmittel."
+        },
+        {
+          "key": "b",
+          "text": "Es ist manchmal schwierig, glutenfreie Produkte zu finden, aber ich halte mich streng an meine Diät."
+        },
+        {
+          "key": "c",
+          "text": "Eine ausgewogene Ernährung mit genügend Proteinen, Kohlenhydraten und Fetten ist mir wichtig."
+        },
+        {
+          "key": "d",
+          "text": "Früher habe ich oft Fast Food gegessen, aber jetzt bereite ich meine Mahlzeiten selbst zu."
+        },
+        {
+          "key": "e",
+          "text": "Meine Glutenunverträglichkeit zwingt mich, sehr genau auf meine Ernährung zu achten."
+        },
+        {
+          "key": "f",
+          "text": "Ab und zu gönne ich mir etwas Süßes, um die Balance zu halten."
+        }
+      ]
+    },
+    {
+      "id": "4.4-2",
+      "label": "Aussage 2",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Ich habe meine Ernährung umgestellt und verzichte auf Zucker und verarbeitete Lebensmittel."
+        },
+        {
+          "key": "b",
+          "text": "Es ist manchmal schwierig, glutenfreie Produkte zu finden, aber ich halte mich streng an meine Diät."
+        },
+        {
+          "key": "c",
+          "text": "Eine ausgewogene Ernährung mit genügend Proteinen, Kohlenhydraten und Fetten ist mir wichtig."
+        },
+        {
+          "key": "d",
+          "text": "Früher habe ich oft Fast Food gegessen, aber jetzt bereite ich meine Mahlzeiten selbst zu."
+        },
+        {
+          "key": "e",
+          "text": "Meine Glutenunverträglichkeit zwingt mich, sehr genau auf meine Ernährung zu achten."
+        },
+        {
+          "key": "f",
+          "text": "Ab und zu gönne ich mir etwas Süßes, um die Balance zu halten."
+        }
+      ]
+    },
+    {
+      "id": "4.4-3",
+      "label": "Aussage 3",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Ich habe meine Ernährung umgestellt und verzichte auf Zucker und verarbeitete Lebensmittel."
+        },
+        {
+          "key": "b",
+          "text": "Es ist manchmal schwierig, glutenfreie Produkte zu finden, aber ich halte mich streng an meine Diät."
+        },
+        {
+          "key": "c",
+          "text": "Eine ausgewogene Ernährung mit genügend Proteinen, Kohlenhydraten und Fetten ist mir wichtig."
+        },
+        {
+          "key": "d",
+          "text": "Früher habe ich oft Fast Food gegessen, aber jetzt bereite ich meine Mahlzeiten selbst zu."
+        },
+        {
+          "key": "e",
+          "text": "Meine Glutenunverträglichkeit zwingt mich, sehr genau auf meine Ernährung zu achten."
+        },
+        {
+          "key": "f",
+          "text": "Ab und zu gönne ich mir etwas Süßes, um die Balance zu halten."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": "Seit einigen Jahren achte ich sehr auf meine Ernährung. Früher habe ich oft fast Food gegessen, aber jetzt bereite ich meine Mahlzeiten, selbstzu- und verwende frische Zutaten. Besonders wichtig ist mir, dass ich genug Obst und Gemüse esse. Außerdem versuche ich, auf Zucker und verarbeitete Leben.",
+      "key_phrase": "Seit einigen Jahren achte ich sehr auf meine Ernährung."
+    },
+    {
+      "label": "Aussage 2",
+      "text": "Ich habe eine Gluten und Verträglichkeit, deshalb muss ich sehr genau darauf achten, was ich esse. Es ist nicht immer einfach, blutenfreue Produkte zu finden, aber inzwischen gibt es zum Glück viele Alternativen. Auch wenn es manchmal schwierig ist, halte ich mich streng an meine Diät, weil ich mich sonst sehr unwohl fühle. Diese Ernährungsweise hat mir geholfen, gesünder zu leben.",
+      "key_phrase": "Ich habe eine Gluten und Verträglichkeit, deshalb muss ich sehr genau darauf achten, was ich esse."
+    },
+    {
+      "label": "Aussage 3",
+      "text": "Für mich ist eine ausgewogene Ernährung sehr wichtig. Ich achte darauf, dass ich genügend Proteine, Kohlenhydrate und gesunde Fette zu mir nehme. Einmal in der Woche gönne ich mir allerdings auch etwas Süßes, weil ich finde, dass man sich ab und zu etwas gönnen sollte. Diese Ballons halte ich für das Beste, um langfristig gesund und zufrieden zu bleiben.",
+      "key_phrase": "Für mich ist eine ausgewogene Ernährung sehr wichtig."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

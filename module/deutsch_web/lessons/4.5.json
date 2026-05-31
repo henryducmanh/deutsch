@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.5",
+  "aufgabe": "4.5",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Wie stehen Sie zu sozialen Medien?",
+  "title": "Wie stehen Sie zu sozialen Medien?",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-2838.html",
+    "lingq_lesson_id": 44844375,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844375/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/4.5.382a79436fbe.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.5/4.5.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.5-1",
+      "label": "Aussage 1",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Soziale Medien sind für meine Arbeit im Marketing unverzichtbar."
+        },
+        {
+          "key": "b",
+          "text": "Ich nutze soziale Medien hauptsächlich, um mit Freunden und Familie in Kontakt zu bleiben."
+        },
+        {
+          "key": "c",
+          "text": "Ich schütze meine Privatsphäre, indem ich wenig über mich selbst teile."
+        },
+        {
+          "key": "d",
+          "text": "Plattformen wie Instagram und Facebook helfen mir, eine große Zielgruppe zu erreichen."
+        },
+        {
+          "key": "e",
+          "text": "Ich verwende soziale Medien, um mich über aktuelle Ereignisse zu informieren."
+        },
+        {
+          "key": "f",
+          "text": "Soziale Medien sind eine gute Möglichkeit, Neuigkeiten auszutauschen und Bilder zu teilen."
+        }
+      ]
+    },
+    {
+      "id": "4.5-2",
+      "label": "Aussage 2",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Soziale Medien sind für meine Arbeit im Marketing unverzichtbar."
+        },
+        {
+          "key": "b",
+          "text": "Ich nutze soziale Medien hauptsächlich, um mit Freunden und Familie in Kontakt zu bleiben."
+        },
+        {
+          "key": "c",
+          "text": "Ich schütze meine Privatsphäre, indem ich wenig über mich selbst teile."
+        },
+        {
+          "key": "d",
+          "text": "Plattformen wie Instagram und Facebook helfen mir, eine große Zielgruppe zu erreichen."
+        },
+        {
+          "key": "e",
+          "text": "Ich verwende soziale Medien, um mich über aktuelle Ereignisse zu informieren."
+        },
+        {
+          "key": "f",
+          "text": "Soziale Medien sind eine gute Möglichkeit, Neuigkeiten auszutauschen und Bilder zu teilen."
+        }
+      ]
+    },
+    {
+      "id": "4.5-3",
+      "label": "Aussage 3",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Soziale Medien sind für meine Arbeit im Marketing unverzichtbar."
+        },
+        {
+          "key": "b",
+          "text": "Ich nutze soziale Medien hauptsächlich, um mit Freunden und Familie in Kontakt zu bleiben."
+        },
+        {
+          "key": "c",
+          "text": "Ich schütze meine Privatsphäre, indem ich wenig über mich selbst teile."
+        },
+        {
+          "key": "d",
+          "text": "Plattformen wie Instagram und Facebook helfen mir, eine große Zielgruppe zu erreichen."
+        },
+        {
+          "key": "e",
+          "text": "Ich verwende soziale Medien, um mich über aktuelle Ereignisse zu informieren."
+        },
+        {
+          "key": "f",
+          "text": "Soziale Medien sind eine gute Möglichkeit, Neuigkeiten auszutauschen und Bilder zu teilen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": "Ich nutze soziale Medien hauptsächlich, um mit meinen Freunden und meiner Familie in Kontakt zu bleiben. Da viele meiner Verwandten im Ausland leben, ist es für mich die beste Möglichkeit, regelmäßig Neuigkeiten auszutauschen und Bilder zu teilen. So fühle ich mich ihnen näher, obwohl wir weit voneinander entfernt sind.",
+      "key_phrase": "Ich nutze soziale Medien hauptsächlich, um mit meinen Freunden und meiner Familie in Kontakt zu bleiben."
+    },
+    {
+      "label": "Aussage 2",
+      "text": "Für meine Arbeit sind soziale Medien unverzichtbar. Ich bin im Marketing tätig und benutze Plattformen wie Instagram und Facebook, um unsere Produkte zu bewerben und mit Kunden zu interagieren. Es ist erstaunlich, wie effektiv diese Tools sind, um eine große Zielgruppe zu erreichen und Feedback zu bekommen.",
+      "key_phrase": "Für meine Arbeit sind soziale Medien unverzichtbar."
+    },
+    {
+      "label": "Aussage 3",
+      "text": "Ich bin sehr vorsichtig im Umgang mit sozialen Medien. Mir ist es wichtig, meine Privatsphäre zu schützen, deshalb teile ich nur sehr wenig über mich selbst. Ich nutze soziale Medien eher, um Nachrichten zu lesen und mich über aktuelle Ereignisse zu informieren, als um persönliche Informationen zu posten.",
+      "key_phrase": "Ich bin sehr vorsichtig im Umgang mit sozialen Medien."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

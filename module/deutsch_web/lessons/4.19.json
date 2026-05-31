@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.19",
+  "aufgabe": "4.19",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Den ganzen Tag Schule",
+  "title": "Den ganzen Tag Schule",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1428.html",
+    "lingq_lesson_id": 44844354,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844354/"
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.19/4.19.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.19-1",
+      "label": "Aussage 1",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Es ist gut, wenn Kinder ihre Hausaufgaben in der Schule machen können."
+        },
+        {
+          "key": "b",
+          "text": "Die ganztägige Grundschule ist zu teuer."
+        },
+        {
+          "key": "c",
+          "text": "Es ist schade, dass Kinder dann keine Freizeit mehr haben."
+        },
+        {
+          "key": "d",
+          "text": "Kinder sollen nachmittags nicht allein am Computer sitzen."
+        },
+        {
+          "key": "e",
+          "text": "Kinder haben nachmittags in der Ganztagsschule interessante Beschäftigung."
+        },
+        {
+          "key": "f",
+          "text": "In der ganztägigen Grundschule machen die Kinder Lernspiele am Computer."
+        }
+      ]
+    },
+    {
+      "id": "4.19-2",
+      "label": "Aussage 2",
+      "correct": "e",
+      "options": [
+        {
+          "key": "a",
+          "text": "Es ist gut, wenn Kinder ihre Hausaufgaben in der Schule machen können."
+        },
+        {
+          "key": "b",
+          "text": "Die ganztägige Grundschule ist zu teuer."
+        },
+        {
+          "key": "c",
+          "text": "Es ist schade, dass Kinder dann keine Freizeit mehr haben."
+        },
+        {
+          "key": "d",
+          "text": "Kinder sollen nachmittags nicht allein am Computer sitzen."
+        },
+        {
+          "key": "e",
+          "text": "Kinder haben nachmittags in der Ganztagsschule interessante Beschäftigung."
+        },
+        {
+          "key": "f",
+          "text": "In der ganztägigen Grundschule machen die Kinder Lernspiele am Computer."
+        }
+      ]
+    },
+    {
+      "id": "4.19-3",
+      "label": "Aussage 3",
+      "correct": "d",
+      "options": [
+        {
+          "key": "a",
+          "text": "Es ist gut, wenn Kinder ihre Hausaufgaben in der Schule machen können."
+        },
+        {
+          "key": "b",
+          "text": "Die ganztägige Grundschule ist zu teuer."
+        },
+        {
+          "key": "c",
+          "text": "Es ist schade, dass Kinder dann keine Freizeit mehr haben."
+        },
+        {
+          "key": "d",
+          "text": "Kinder sollen nachmittags nicht allein am Computer sitzen."
+        },
+        {
+          "key": "e",
+          "text": "Kinder haben nachmittags in der Ganztagsschule interessante Beschäftigung."
+        },
+        {
+          "key": "f",
+          "text": "In der ganztägigen Grundschule machen die Kinder Lernspiele am Computer."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": "Ich bin der Meinung, dass heutige Kinder keine traditionelle Kindheit mehr erleben. Sie sind ständig im Lernmodus. Früher endete die Schule mittags für sie und danach widmeten sie sich den Hausaufgaben. Anschließend trafen sie sich mit anderen Kindern aus der Gegend, spielten draußen Fußball oder gingen schwimmen. Diese Freizeitaktivitäten sind für Kinder essentiell. Wenn sie jedoch den gesamten Tag in der Schule verbringen, bleibt ihnen keine Zeit mehr zum Spielen.",
+      "key_phrase": "Ich bin der Meinung, dass heutige Kinder keine traditionelle Kindheit mehr erleben."
+    },
+    {
+      "label": "Aussage 2",
+      "text": "Meine siebenjährige Tochter Tina besucht die Grundschule, die gleichzeitig eine Ganztagsschule ist. Wir haben uns bewusst dafür entschieden, da die Kinder am Nachmittag viele Möglichkeiten haben. Dort können sie Musik machen, tanzen, gemeinsam kochen, malen oder basteln. Denken Sie nur einmal darüber nach, wie viel Geld ich monatlich an verschiedene Vereine zahlen müsste. Außerdem gefällt es Tina dort sehr gut, weil sie viele Freundinnen hat und die Lehrer auch sehr nett sind.",
+      "key_phrase": "Meine siebenjährige Tochter Tina besucht die Grundschule, die gleichzeitig eine Ganztagsschule ist."
+    },
+    {
+      "label": "Aussage 3",
+      "text": "Nun ja, ich bin unsicher, ob ich an ihrer Umfrage teilnehmen soll. Ich habe selbst keine Kinder. Jedoch mein Neffe, der neun Jahre alt ist, verbindet sich mit meiner Tochter. Jedoch mein Neffe, der neun Jahre alt ist, verbringt den gesamten Tag vor dem Computer. Er hat keine anderen Hobbys, den ganzen Tag lang spielt er irgendwelche Computerspiele oder schaut fern. Für ihn könnte eine Ganztagsschule sicherlich von Vorteil sein. Dann wäre er nachmittags nicht allein und hätte die Möglichkeit, sinnvolle Aktivitäten zu unternehmen, wie zum Beispiel Sport oder das Erlernen eines Musikinstruments.",
+      "key_phrase": "Nun ja, ich bin unsicher, ob ich an ihrer Umfrage teilnehmen soll."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

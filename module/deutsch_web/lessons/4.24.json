@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.24",
+  "aufgabe": "4.24",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Technologie und Innovation",
+  "title": "Technologie und Innovation",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1239.html",
+    "lingq_lesson_id": 44844365,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844365/"
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.24/4.24.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.24-1",
+      "label": "Aussage 1",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Verkaufsoffene Sonntage sollten dazu genutzt werden, um Technologie- und Innovationsmessen zu veranstalten."
+        },
+        {
+          "key": "b",
+          "text": "Sonntage sollten als Tage der Entspannung genutzt werden, um den technologischen Fortschritt zu reflektieren."
+        },
+        {
+          "key": "c",
+          "text": "Die Integration von Technologie und Innovation bietet neue Möglichkeiten für persönliches und berufliches Wachstum."
+        },
+        {
+          "key": "d",
+          "text": "Sonntage sollten dazu genutzt werden, um kreative Ideen zu entwickeln und innovative Projekte voranzutreiben."
+        },
+        {
+          "key": "e",
+          "text": "Sonntage sollten als Tage der technologischen Bildung genutzt werden, um das Verständnis für neue Technologien zu fördern."
+        },
+        {
+          "key": "f",
+          "text": "Verkaufsoffene Sonntage sollten dazu genutzt werden, um Rabatte auf technologische Produkte anzubieten."
+        }
+      ]
+    },
+    {
+      "id": "4.24-2",
+      "label": "Aussage 2",
+      "correct": "d",
+      "options": [
+        {
+          "key": "a",
+          "text": "Verkaufsoffene Sonntage sollten dazu genutzt werden, um Technologie- und Innovationsmessen zu veranstalten."
+        },
+        {
+          "key": "b",
+          "text": "Sonntage sollten als Tage der Entspannung genutzt werden, um den technologischen Fortschritt zu reflektieren."
+        },
+        {
+          "key": "c",
+          "text": "Die Integration von Technologie und Innovation bietet neue Möglichkeiten für persönliches und berufliches Wachstum."
+        },
+        {
+          "key": "d",
+          "text": "Sonntage sollten dazu genutzt werden, um kreative Ideen zu entwickeln und innovative Projekte voranzutreiben."
+        },
+        {
+          "key": "e",
+          "text": "Sonntage sollten als Tage der technologischen Bildung genutzt werden, um das Verständnis für neue Technologien zu fördern."
+        },
+        {
+          "key": "f",
+          "text": "Verkaufsoffene Sonntage sollten dazu genutzt werden, um Rabatte auf technologische Produkte anzubieten."
+        }
+      ]
+    },
+    {
+      "id": "4.24-3",
+      "label": "Aussage 3",
+      "correct": "e",
+      "options": [
+        {
+          "key": "a",
+          "text": "Verkaufsoffene Sonntage sollten dazu genutzt werden, um Technologie- und Innovationsmessen zu veranstalten."
+        },
+        {
+          "key": "b",
+          "text": "Sonntage sollten als Tage der Entspannung genutzt werden, um den technologischen Fortschritt zu reflektieren."
+        },
+        {
+          "key": "c",
+          "text": "Die Integration von Technologie und Innovation bietet neue Möglichkeiten für persönliches und berufliches Wachstum."
+        },
+        {
+          "key": "d",
+          "text": "Sonntage sollten dazu genutzt werden, um kreative Ideen zu entwickeln und innovative Projekte voranzutreiben."
+        },
+        {
+          "key": "e",
+          "text": "Sonntage sollten als Tage der technologischen Bildung genutzt werden, um das Verständnis für neue Technologien zu fördern."
+        },
+        {
+          "key": "f",
+          "text": "Verkaufsoffene Sonntage sollten dazu genutzt werden, um Rabatte auf technologische Produkte anzubieten."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": ". Ich bin begeistert von den Möglichkeiten, die Technologie und Innovation bieten. Sonntage sollten daher genutzt werden, um neue Technologien zu erforschen und innovative Projekte zu unterstützen.",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 2",
+      "text": ". Als Unternehmerin finde ich es wichtig, dass Sonntagszeit für Kreativität und Entwicklung neuer Ideen eingeplant wird. Sonntage sollten daher als Tage der Innovation und des Concept Designs genutzt werden.",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 3",
+      "text": ". Ich arbeite in der IT-Branche und finde es wichtig, dass Menschen Sonntags die Zeit haben, sich mit den neuesten technologischen Entwicklungen auseinanderzusetzen. Sonntage sollten daher als Tage des technologischen Fortschritts genutzt werden.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

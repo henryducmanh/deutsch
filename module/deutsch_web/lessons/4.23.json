@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.23",
+  "aufgabe": "4.23",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "kulturelle Vielfalt",
+  "title": "kulturelle Vielfalt",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1241.html",
+    "lingq_lesson_id": 44844363,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844363/"
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.23/4.23.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.23-1",
+      "label": "Aussage 1",
+      "correct": "e",
+      "options": [
+        {
+          "key": "a",
+          "text": "Verkaufsoffene Sonntage sollten genutzt werden, um kulturelle Produkte aus aller Welt anzubieten."
+        },
+        {
+          "key": "b",
+          "text": "Sonntage sollten als Tage des multikulturellen Austauschs und der Begegnung genutzt werden."
+        },
+        {
+          "key": "c",
+          "text": "Kulturelle Vielfalt bereichert unsere Gesellschaft und sollte gefördert und geschützt werden."
+        },
+        {
+          "key": "d",
+          "text": "Sonntage sollten als Tage der kulturellen Bildung und des interkulturellen Lernens genutzt werden."
+        },
+        {
+          "key": "e",
+          "text": "Sonntage sollten dazu genutzt werden, um verschiedene kulturelle Traditionen zu zelebrieren und zu feiern."
+        },
+        {
+          "key": "f",
+          "text": "Verkaufsoffene Sonntage sollten dazu genutzt werden, um Produkte aus dem eigenen Land zu unterstützen und lokale Künstler zu fördern."
+        }
+      ]
+    },
+    {
+      "id": "4.23-2",
+      "label": "Aussage 2",
+      "correct": "d",
+      "options": [
+        {
+          "key": "a",
+          "text": "Verkaufsoffene Sonntage sollten genutzt werden, um kulturelle Produkte aus aller Welt anzubieten."
+        },
+        {
+          "key": "b",
+          "text": "Sonntage sollten als Tage des multikulturellen Austauschs und der Begegnung genutzt werden."
+        },
+        {
+          "key": "c",
+          "text": "Kulturelle Vielfalt bereichert unsere Gesellschaft und sollte gefördert und geschützt werden."
+        },
+        {
+          "key": "d",
+          "text": "Sonntage sollten als Tage der kulturellen Bildung und des interkulturellen Lernens genutzt werden."
+        },
+        {
+          "key": "e",
+          "text": "Sonntage sollten dazu genutzt werden, um verschiedene kulturelle Traditionen zu zelebrieren und zu feiern."
+        },
+        {
+          "key": "f",
+          "text": "Verkaufsoffene Sonntage sollten dazu genutzt werden, um Produkte aus dem eigenen Land zu unterstützen und lokale Künstler zu fördern."
+        }
+      ]
+    },
+    {
+      "id": "4.23-3",
+      "label": "Aussage 3",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Verkaufsoffene Sonntage sollten genutzt werden, um kulturelle Produkte aus aller Welt anzubieten."
+        },
+        {
+          "key": "b",
+          "text": "Sonntage sollten als Tage des multikulturellen Austauschs und der Begegnung genutzt werden."
+        },
+        {
+          "key": "c",
+          "text": "Kulturelle Vielfalt bereichert unsere Gesellschaft und sollte gefördert und geschützt werden."
+        },
+        {
+          "key": "d",
+          "text": "Sonntage sollten als Tage der kulturellen Bildung und des interkulturellen Lernens genutzt werden."
+        },
+        {
+          "key": "e",
+          "text": "Sonntage sollten dazu genutzt werden, um verschiedene kulturelle Traditionen zu zelebrieren und zu feiern."
+        },
+        {
+          "key": "f",
+          "text": "Verkaufsoffene Sonntage sollten dazu genutzt werden, um Produkte aus dem eigenen Land zu unterstützen und lokale Künstler zu fördern."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": ". Als Weltenbummler schätze ich die Vielfalt kultureller Traditionen und Bräuche. Sonntage sollten daher genutzt werden, um verschiedene kulturelle Veranstaltungen zu besuchen und sich mit den Menschen aus anderen Ländern auszutauschen.",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 2",
+      "text": ". Als Lehrer finde ich es wichtig, dass Schülerinnen und Schüler die Möglichkeit haben, verschiedene Kulturen kennenzulernen. Sonntage sollten daher genutzt werden, um kulturelle Aktivitäten und Projekte in Schulen anzubieten.",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 3",
+      "text": ". Ich arbeite in einer internationalen Organisation und finde es wichtig, die kulturelle Vielfalt zu feiern und zu schützen. Sonntage sollten daher kulturelle Festivals und Veranstaltungen stattfinden, um den Austausch und die Integration zu fördern.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

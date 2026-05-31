@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.9",
+  "aufgabe": "4.9",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Wie verbringen Sie Ihre Abende nach der Arbeit?",
+  "title": "Wie verbringen Sie Ihre Abende nach der Arbeit?",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-2833.html",
+    "lingq_lesson_id": 44844379,
+    "lingq_course_id": null,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844379/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/4.9.f2d42aa0c59e.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.9/4.9.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.9-1",
+      "label": "Aussage 1",
+      "correct": "f",
+      "options": [
+        {
+          "key": "a",
+          "text": "Yoga-Kurse helfen mir, zur Ruhe zu kommen."
+        },
+        {
+          "key": "b",
+          "text": "Nach der Arbeit gehe ich oft ins Fitnessstudio."
+        },
+        {
+          "key": "c",
+          "text": "Lesen hilft mir, den Alltag zu vergessen."
+        },
+        {
+          "key": "d",
+          "text": "Fachliteratur lesen ist eine großartige Möglichkeit, sich weiterzubilden."
+        },
+        {
+          "key": "e",
+          "text": "Ich probiere gerne neue Rezepte aus und koche mit Freunden."
+        },
+        {
+          "key": "f",
+          "text": "Fitness und Sport sind mir wichtig, um den Stress des Tages abzubauen."
+        }
+      ]
+    },
+    {
+      "id": "4.9-2",
+      "label": "Aussage 2",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Yoga-Kurse helfen mir, zur Ruhe zu kommen."
+        },
+        {
+          "key": "b",
+          "text": "Nach der Arbeit gehe ich oft ins Fitnessstudio."
+        },
+        {
+          "key": "c",
+          "text": "Lesen hilft mir, den Alltag zu vergessen."
+        },
+        {
+          "key": "d",
+          "text": "Fachliteratur lesen ist eine großartige Möglichkeit, sich weiterzubilden."
+        },
+        {
+          "key": "e",
+          "text": "Ich probiere gerne neue Rezepte aus und koche mit Freunden."
+        },
+        {
+          "key": "f",
+          "text": "Fitness und Sport sind mir wichtig, um den Stress des Tages abzubauen."
+        }
+      ]
+    },
+    {
+      "id": "4.9-3",
+      "label": "Aussage 3",
+      "correct": "e",
+      "options": [
+        {
+          "key": "a",
+          "text": "Yoga-Kurse helfen mir, zur Ruhe zu kommen."
+        },
+        {
+          "key": "b",
+          "text": "Nach der Arbeit gehe ich oft ins Fitnessstudio."
+        },
+        {
+          "key": "c",
+          "text": "Lesen hilft mir, den Alltag zu vergessen."
+        },
+        {
+          "key": "d",
+          "text": "Fachliteratur lesen ist eine großartige Möglichkeit, sich weiterzubilden."
+        },
+        {
+          "key": "e",
+          "text": "Ich probiere gerne neue Rezepte aus und koche mit Freunden."
+        },
+        {
+          "key": "f",
+          "text": "Fitness und Sport sind mir wichtig, um den Stress des Tages abzubauen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": "Nach der Arbeit gehe ich oft ins Fitnessstudio.Sport hilft mir, den Stress des Tages abzubauen und mich fit zu halten. Danach fühle ich mich immer erfrischt und bereit für den Abend. Manchmal nehme ich auch an Yoga-Kursen teil, was mir besonders gut tut, um zur Ruhe zu kommen.",
+      "key_phrase": "Nach der Arbeit gehe ich oft ins Fitnessstudio."
+    },
+    {
+      "label": "Aussage 2",
+      "text": "Ich verbringe meine Abende meistens mit Lesen. Ich liebe es, in spannende Geschichten einzutauchen und den Alltag zu vergessen. Manchmal lese ich auch Fachliteratur, um mich weiterzubilden.Bücher sind für mich eine großartige Möglichkeit, zu entspannen und gleichzeitig etwas Neues zu lernen.",
+      "key_phrase": "Ich verbringe meine Abende meistens mit Lesen."
+    },
+    {
+      "label": "Aussage 3",
+      "text": "Nach einem langen Arbeitstag koche ich gerne. Es entspannt mich, neue Rezepte auszuprobieren und frische Zutaten zu verwenden. Oft lade ich Freunde ein, und wir kochen gemeinsam. Das macht nicht nur Spaß, sondern wir können auch zusammen essen und den Abend gemütlich ausklingen lassen.",
+      "key_phrase": "Nach einem langen Arbeitstag koche ich gerne."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

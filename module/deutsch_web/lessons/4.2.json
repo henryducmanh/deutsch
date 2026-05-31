@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.2",
+  "aufgabe": "4.2",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Kinderbetreuung",
+  "title": "Kinderbetreuung",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-12874.html",
+    "lingq_lesson_id": 44844356,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844356/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/4.2.dcea52063f3d.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.2/4.2.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.2-1",
+      "label": "Aussage 1",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Kinder brauchen den Austausch mit anderen Kindern."
+        },
+        {
+          "key": "b",
+          "text": "Kinder gewöhnen sich schnell an den Kita-Alltag."
+        },
+        {
+          "key": "c",
+          "text": "Großeltern unterstützen, möchten aber Zeit für sich behalten."
+        },
+        {
+          "key": "d",
+          "text": "Es gibt finanzielle Hilfe für die Betreuung, auch wenn sie teuer ist."
+        },
+        {
+          "key": "e",
+          "text": "Mindestens ein Elternteil sollte im ersten Jahr beim Kind bleiben."
+        },
+        {
+          "key": "f",
+          "text": "Jede Familie entscheidet selbst, was gut zum Alltag passt."
+        }
+      ]
+    },
+    {
+      "id": "4.2-2",
+      "label": "Aussage 2",
+      "correct": "f",
+      "options": [
+        {
+          "key": "a",
+          "text": "Kinder brauchen den Austausch mit anderen Kindern."
+        },
+        {
+          "key": "b",
+          "text": "Kinder gewöhnen sich schnell an den Kita-Alltag."
+        },
+        {
+          "key": "c",
+          "text": "Großeltern unterstützen, möchten aber Zeit für sich behalten."
+        },
+        {
+          "key": "d",
+          "text": "Es gibt finanzielle Hilfe für die Betreuung, auch wenn sie teuer ist."
+        },
+        {
+          "key": "e",
+          "text": "Mindestens ein Elternteil sollte im ersten Jahr beim Kind bleiben."
+        },
+        {
+          "key": "f",
+          "text": "Jede Familie entscheidet selbst, was gut zum Alltag passt."
+        }
+      ]
+    },
+    {
+      "id": "4.2-3",
+      "label": "Aussage 3",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Kinder brauchen den Austausch mit anderen Kindern."
+        },
+        {
+          "key": "b",
+          "text": "Kinder gewöhnen sich schnell an den Kita-Alltag."
+        },
+        {
+          "key": "c",
+          "text": "Großeltern unterstützen, möchten aber Zeit für sich behalten."
+        },
+        {
+          "key": "d",
+          "text": "Es gibt finanzielle Hilfe für die Betreuung, auch wenn sie teuer ist."
+        },
+        {
+          "key": "e",
+          "text": "Mindestens ein Elternteil sollte im ersten Jahr beim Kind bleiben."
+        },
+        {
+          "key": "f",
+          "text": "Jede Familie entscheidet selbst, was gut zum Alltag passt."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": "Meine Schwiegereltern wohnen bei uns in Bad Lüben gleich um die Ecke, und wir sind wirklich dankbar, dass sie regelmäßig auf unseren Sohn aufpassen, wenn wir arbeiten. Es gibt dadurch keine langen Fahrzeiten, und unser Kleiner fühlt sich bei Oma und Opa sehr wohl. Aber wir merken auch, dass sie inzwischen älter werden und ihre Zeit brauchen – für Arzttermine, Sport oder einfach zum Ausruhen. Deswegen haben wir uns bewusst entschieden, sie nicht jeden Tag einzuspannen. An zwei Nachmittagen übernimmt jetzt eine Tagesmutter, damit die Großeltern entlastet werden. Ich finde, das ist ein guter Kompromiss.",
+      "key_phrase": "Meine Schwiegereltern wohnen bei uns in Bad Lüben gleich um die Ecke, und wir sind wirklich dankbar, dass sie…"
+    },
+    {
+      "label": "Aussage 2",
+      "text": "Ich finde es ehrlich gesagt problematisch, wenn von außen Erwartungen kommen, wann ein Kind in die Kita „gehört“. Bei unserem ersten Kind in 2021 haben wir drei Jahre gewartet, weil es für uns einfach besser gepasst hat – auch emotional. Jetzt, mit unserer Tochter, wird es wahrscheinlich schon nach einem Jahr klappen, weil ich bald wieder in Teilzeit arbeite. Für mich ist klar: Es gibt keine ideale Lösung für alle. Entscheidend ist, wie sich Familie und Beruf konkret miteinander verbinden lassen – und das kann bei jeder Familie ganz anders aussehen.",
+      "key_phrase": "Ich finde es ehrlich gesagt problematisch, wenn von außen Erwartungen kommen, wann ein Kind in die Kita „gehört“."
+    },
+    {
+      "label": "Aussage 3",
+      "text": "Wir haben unsere Zwillinge letzten Herbst mit zweieinhalb Jahren in die Kita Sonnenwinkel hier in Berndorf gebracht. Die erste Woche war wirklich anstrengend – die beiden haben geweint, wollten morgens nicht los und ich hatte selbst ein schlechtes Gefühl. Aber die Erzieherinnen waren sehr einfühlsam, haben uns viele Tipps gegeben und uns nie unter Druck gesetzt. Nach knapp vier Wochen war die Eingewöhnung geschafft – jetzt springen die zwei morgens schon vor Freude in ihre Gummistiefel. Sie erzählen nachmittags begeistert von ihren neuen Freunden und singen sogar die Lieder aus der Gruppe. Im Nachhinein war es absolut die richtige Entscheidung, auch wenn der Anfang schwer war.",
+      "key_phrase": "Wir haben unsere Zwillinge letzten Herbst mit zweieinhalb Jahren in die Kita Sonnenwinkel hier in Berndorf gebracht."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

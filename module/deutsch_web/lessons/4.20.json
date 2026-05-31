@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.20",
+  "aufgabe": "4.20",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Umweltschutz 2",
+  "title": "Umweltschutz 2",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1244.html",
+    "lingq_lesson_id": 44844357,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44844357/"
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.20/4.20.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.20-1",
+      "label": "Aussage 1",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Verkaufsoffene Sonntage sollten genutzt werden, um über Umweltthemen zu informieren."
+        },
+        {
+          "key": "b",
+          "text": "Sonntage sollten dazu genutzt werden, die Natur zu schützen und die Umwelt zu bewahren."
+        },
+        {
+          "key": "c",
+          "text": "Umweltschutz erfordert eine Änderung unserer täglichen Gewohnheiten."
+        },
+        {
+          "key": "d",
+          "text": "Sonntags sollten öffentliche Verkehrsmittel kostenlos angeboten werden, um die Nutzung von Autos zu reduzieren."
+        },
+        {
+          "key": "e",
+          "text": "Unternehmen sollten sonntags geschlossen bleiben, um Energie zu sparen und die Umwelt zu schonen."
+        },
+        {
+          "key": "f",
+          "text": "Sonntage sollten für Aktionen und Demonstrationen für den Umweltschutz genutzt werden."
+        }
+      ]
+    },
+    {
+      "id": "4.20-2",
+      "label": "Aussage 2",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Verkaufsoffene Sonntage sollten genutzt werden, um über Umweltthemen zu informieren."
+        },
+        {
+          "key": "b",
+          "text": "Sonntage sollten dazu genutzt werden, die Natur zu schützen und die Umwelt zu bewahren."
+        },
+        {
+          "key": "c",
+          "text": "Umweltschutz erfordert eine Änderung unserer täglichen Gewohnheiten."
+        },
+        {
+          "key": "d",
+          "text": "Sonntags sollten öffentliche Verkehrsmittel kostenlos angeboten werden, um die Nutzung von Autos zu reduzieren."
+        },
+        {
+          "key": "e",
+          "text": "Unternehmen sollten sonntags geschlossen bleiben, um Energie zu sparen und die Umwelt zu schonen."
+        },
+        {
+          "key": "f",
+          "text": "Sonntage sollten für Aktionen und Demonstrationen für den Umweltschutz genutzt werden."
+        }
+      ]
+    },
+    {
+      "id": "4.20-3",
+      "label": "Aussage 3",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Verkaufsoffene Sonntage sollten genutzt werden, um über Umweltthemen zu informieren."
+        },
+        {
+          "key": "b",
+          "text": "Sonntage sollten dazu genutzt werden, die Natur zu schützen und die Umwelt zu bewahren."
+        },
+        {
+          "key": "c",
+          "text": "Umweltschutz erfordert eine Änderung unserer täglichen Gewohnheiten."
+        },
+        {
+          "key": "d",
+          "text": "Sonntags sollten öffentliche Verkehrsmittel kostenlos angeboten werden, um die Nutzung von Autos zu reduzieren."
+        },
+        {
+          "key": "e",
+          "text": "Unternehmen sollten sonntags geschlossen bleiben, um Energie zu sparen und die Umwelt zu schonen."
+        },
+        {
+          "key": "f",
+          "text": "Sonntage sollten für Aktionen und Demonstrationen für den Umweltschutz genutzt werden."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": "Ich bin der Meinung, dass wir alle unsere Gewohnheiten ändern müssen, um die Umwelt zu schützen. Der Klimawandel ist eine ernsthafte Bedrohung und es liegt in unserer Verantwortung, Maßnahmen zu ergreifen, um die Natur zu bewahren.",
+      "key_phrase": "Ich bin der Meinung, dass wir alle unsere Gewohnheiten ändern müssen, um die Umwelt zu schützen."
+    },
+    {
+      "label": "Aussage 2",
+      "text": "Als Naturliebhaber genieße ich es, Sonntagszeit im Freien zu verbringen. Es ist wichtig, dass wir uns bewusst sind, wie unsere Handlungen die Umwelt beeinflussen und unseren Lebensstil anpassen, um diese wertvollen Ressourcen zu erhalten.",
+      "key_phrase": "Als Naturliebhaber genieße ich es, Sonntagszeit im Freien zu verbringen."
+    },
+    {
+      "label": "Aussage 3",
+      "text": "Ich arbeite in einem Unternehmen, das sich auf erneuerbare Energien spezialisiert hat. Sonntags öffnen wir unser Büro und bieten Führungen an, um das Bewusstsein für umweltfreundliche Technologien zu schärfen und die Menschen zum Handeln zu ermutigen.",
+      "key_phrase": "Ich arbeite in einem Unternehmen, das sich auf erneuerbare Energien spezialisiert hat."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}

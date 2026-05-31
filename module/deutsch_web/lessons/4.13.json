@@ -1,0 +1,139 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "4.13",
+  "aufgabe": "4.13",
+  "modul": "Hören",
+  "niveau": "B1",
+  "thema": "Wie wichtig ist Ihnen Umweltschutz?",
+  "title": "Wie wichtig ist Ihnen Umweltschutz?",
+  "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-2828.html",
+    "lingq_lesson_id": 44843215,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44843215/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/4.13.5d40c0197d9a.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/4.13/4.13.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "4.13-1",
+      "label": "Aussage 1",
+      "correct": "f",
+      "options": [
+        {
+          "key": "a",
+          "text": "Recycling ist ein wesentlicher Bestandteil meines Alltags."
+        },
+        {
+          "key": "b",
+          "text": "Alle meine Haushaltsgeräte sind energieeffizient."
+        },
+        {
+          "key": "c",
+          "text": "Ich kaufe hauptsächlich regionale und saisonale Produkte."
+        },
+        {
+          "key": "d",
+          "text": "Ich nutze hauptsächlich LED-Lampen."
+        },
+        {
+          "key": "e",
+          "text": "Ich engagiere mich ehrenamtlich in Recycling-Initiativen."
+        },
+        {
+          "key": "f",
+          "text": "Ich fahre nur noch mit dem Fahrrad oder benutze öffentliche Verkehrsmittel."
+        }
+      ]
+    },
+    {
+      "id": "4.13-2",
+      "label": "Aussage 2",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Recycling ist ein wesentlicher Bestandteil meines Alltags."
+        },
+        {
+          "key": "b",
+          "text": "Alle meine Haushaltsgeräte sind energieeffizient."
+        },
+        {
+          "key": "c",
+          "text": "Ich kaufe hauptsächlich regionale und saisonale Produkte."
+        },
+        {
+          "key": "d",
+          "text": "Ich nutze hauptsächlich LED-Lampen."
+        },
+        {
+          "key": "e",
+          "text": "Ich engagiere mich ehrenamtlich in Recycling-Initiativen."
+        },
+        {
+          "key": "f",
+          "text": "Ich fahre nur noch mit dem Fahrrad oder benutze öffentliche Verkehrsmittel."
+        }
+      ]
+    },
+    {
+      "id": "4.13-3",
+      "label": "Aussage 3",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Recycling ist ein wesentlicher Bestandteil meines Alltags."
+        },
+        {
+          "key": "b",
+          "text": "Alle meine Haushaltsgeräte sind energieeffizient."
+        },
+        {
+          "key": "c",
+          "text": "Ich kaufe hauptsächlich regionale und saisonale Produkte."
+        },
+        {
+          "key": "d",
+          "text": "Ich nutze hauptsächlich LED-Lampen."
+        },
+        {
+          "key": "e",
+          "text": "Ich engagiere mich ehrenamtlich in Recycling-Initiativen."
+        },
+        {
+          "key": "f",
+          "text": "Ich fahre nur noch mit dem Fahrrad oder benutze öffentliche Verkehrsmittel."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Aussage 1",
+      "text": "Ich versuche, meinen ökologischen Fußabdruck zu reduzieren.Zum Beispiel fahre ich nur noch mit dem Fahrrad oder benutze öffentliche Verkehrsmittel. Außerdem kaufe ich hauptsächlich regionale und saisonale Produkte. Es ist wichtig, dass wir alle unseren Beitrag leisten, um die Umwelt zu schützen.",
+      "key_phrase": "Ich versuche, meinen ökologischen Fußabdruck zu reduzieren."
+    },
+    {
+      "label": "Aussage 2",
+      "text": "Für mich ist Recycling ein wesentlicher Bestandteil meines Alltags. Ich trenne meinen Müll sorgfältig und versuche, so wenig Plastik wie möglich zu verwenden. In meiner Stadt gibt es viele Initiativen, die das Recycling unterstützen, und ich engagiere mich dort auch ehrenamtlich.",
+      "key_phrase": "Für mich ist Recycling ein wesentlicher Bestandteil meines Alltags."
+    },
+    {
+      "label": "Aussage 3",
+      "text": "Ich achte sehr darauf, Energie zu sparen. Alle meine Haushaltsgeräte sind energieeffizient und ich nutze hauptsächlich LED-Lampen. Außerdem habe ich Solarpanele auf dem Dach installiert, um meinen eigenen Strom zu erzeugen.So kann ich nicht nur Geld sparen, sondern auch die Umwelt schonen.",
+      "key_phrase": "Ich achte sehr darauf, Energie zu sparen."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+  }
+}
