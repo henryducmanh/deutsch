@@ -246,6 +246,24 @@ function route_api($path, $method, $BASE)
         api_vocab_forms();
         return;
     }
+    // GET /api/vocab/pins?lesson_id=X (session) — pinned words "Đang ôn" của 1 bài
+    if ($path === '/api/vocab/pins' && $method === 'GET') {
+        require_once $BASE . '/api/vocab.php';
+        api_vocab_pins_get();
+        return;
+    }
+    // POST /api/vocab/pins (session) — ghim từ vào bài
+    if ($path === '/api/vocab/pins' && $method === 'POST') {
+        require_once $BASE . '/api/vocab.php';
+        api_vocab_pins_post();
+        return;
+    }
+    // DELETE /api/vocab/pins (session) — bỏ ghim
+    if ($path === '/api/vocab/pins' && $method === 'DELETE') {
+        require_once $BASE . '/api/vocab.php';
+        api_vocab_pins_delete();
+        return;
+    }
     // GET/POST /api/notes (session) — collaborative tutor note editor
     if ($path === '/api/notes') {
         require_once $BASE . '/api/notes.php';

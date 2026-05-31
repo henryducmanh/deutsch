@@ -80,7 +80,7 @@ function api_vocab_get()
 
     $keyList = array_keys($keys);
     $ph = implode(',', array_fill(0, count($keyList), '?'));
-    $sql = "SELECT vocab_id, wort, wort_key, wortart, artikel, bedeutung, level
+    $sql = "SELECT id, vocab_id, wort, wort_key, wortart, artikel, bedeutung, level
             FROM vocab WHERE wort_key IN ($ph)";
     $st = db()->prepare($sql);
     $st->execute($keyList);
@@ -88,6 +88,7 @@ function api_vocab_get()
     $vocab = [];
     foreach ($st->fetchAll() as $row) {
         $vocab[] = [
+            'id'        => (int)$row['id'],     // vocab.id (PK) — cần cho lesson_vocab_pins
             'w'         => $row['wort'],
             'wort_key'  => $row['wort_key'],
             'art'       => vocab_art($row['artikel'], $row['wortart']),
@@ -349,4 +350,64 @@ function api_vocab_new()
         ];
     }
     api_json(200, ['count' => count($vocab), 'vocab' => $vocab]);
+}
+
+// ── GET /api/vocab/pins?lesson_id=X (session) — pinned words "Đang ôn" của 1 bài ──
+function api_vocab_pins_get()
+{
+    auth_require();
+    $uid       = auth_active_student_id();
+    $lesson_id = trim($_GET['lesson_id'] ?? '');
+    if (!$lesson_id) { api_json(400, ['error' => 'missing lesson_id']); }
+
+    $st = db()->prepare('
+        SELECT v.id AS db_id, v.wort AS w, v.wortart AS art, v.artikel,
+               v.bedeutung, v.niveau, v.level AS lv
+        FROM lesson_vocab_pins p
+        JOIN vocab v ON v.id = p.vocab_id
+        WHERE p.user_id = ? AND p.lesson_id = ?
+        ORDER BY v.wort
+    ');
+    $st->execute([$uid, $lesson_id]);
+    api_json(200, ['pins' => $st->fetchAll()]);
+}
+
+// ── POST /api/vocab/pins  body: {lesson_id, vocab_db_id} (session) — ghim từ ──
+function api_vocab_pins_post()
+{
+    auth_require();
+    $uid  = auth_active_student_id();
+    $body = api_body_json();
+    $lesson_id   = trim($body['lesson_id']   ?? '');
+    $vocab_db_id = (int)($body['vocab_db_id'] ?? 0);
+    if (!$lesson_id || !$vocab_db_id) { api_json(400, ['error' => 'missing params']); }
+
+    try {
+        $st = db()->prepare('
+            INSERT IGNORE INTO lesson_vocab_pins (user_id, lesson_id, vocab_id)
+            VALUES (?, ?, ?)
+        ');
+        $st->execute([$uid, $lesson_id, $vocab_db_id]);
+        $pin_id = db()->lastInsertId() ?: null;
+        api_json(200, ['ok' => true, 'pin_id' => $pin_id]);
+    } catch (\PDOException $e) {
+        api_json(500, ['error' => 'db_error']);
+    }
+}
+
+// ── DELETE /api/vocab/pins  body: {lesson_id, vocab_db_id} (session) — bỏ ghim ──
+function api_vocab_pins_delete()
+{
+    auth_require();
+    $uid  = auth_active_student_id();
+    $body = api_body_json();
+    $lesson_id   = trim($body['lesson_id']   ?? '');
+    $vocab_db_id = (int)($body['vocab_db_id'] ?? 0);
+    if (!$lesson_id || !$vocab_db_id) { api_json(400, ['error' => 'missing params']); }
+
+    $st = db()->prepare('
+        DELETE FROM lesson_vocab_pins WHERE user_id=? AND lesson_id=? AND vocab_id=?
+    ');
+    $st->execute([$uid, $lesson_id, $vocab_db_id]);
+    api_json(200, ['ok' => true]);
 }

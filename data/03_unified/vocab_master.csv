@@ -1992,3 +1992,12 @@ WEB-20260531-037,bringen,Verb,"brachte - hat gebracht","mang; đem; đưa đến
 WEB-20260531-038,gebracht,Verb,,đã mang/đưa đến (Partizip II),,,web-queue,2026-05-31,1,4.2,web,B1;DTZ;web-queue,,WEB-20260531-037,PART.II
 WEB-20260531-039,weinen,Verb,"weinte - hat geweint",khóc,,,web-queue,2026-05-31,1,4.2,web,B1;DTZ;web-queue,,,
 WEB-20260531-040,geweint,Verb,,đã khóc (Partizip II),,,web-queue,2026-05-31,1,4.2,web,B1;DTZ;web-queue,,WEB-20260531-039,PART.II
+WEB-20260531-041,verkaufsoffen,Adjektiv,,mở cửa bán hàng,,,web-queue,2026-05-31,1,4.21,web,B1;DTZ;web-queue,lemma của verkaufsoffene,,
+WEB-20260531-042,verkaufsoffene,Adjektiv,,mở cửa bán hàng (biến cách),,,web-queue,2026-05-31,1,4.21,web,B1;DTZ;web-queue,biến thể ADJ.NOM của verkaufsoffen,WEB-20260531-041,ADJ.NOM
+WEB-20260531-043,verantwortungsvollen,Adjektiv,,có trách nhiệm (biến cách -en),,,web-queue,2026-05-31,1,4.21,web,B1;DTZ;web-queue,biến thể ADJ.AKK của verantwortungsvoll,VOC-20260518-106,ADJ.AKK
+WEB-20260531-044,eingeschränkt,Verb,,bị hạn chế (Partizip II),,,web-queue,2026-05-31,1,4.21,web,B1;DTZ;web-queue,PART.II của einschränken,VOC-20260518-113,PART.II
+WEB-20260531-045,sicherstellen,Verb,,"đảm bảo; chắc chắn rằng",,,web-queue,2026-05-31,1,4.21,web,B1;DTZ;web-queue,,,
+WEB-20260531-046,ausgewogenen,Adjektiv,,cân bằng (biến cách -en),,,web-queue,2026-05-31,1,4.21,web,B1;DTZ;web-queue,biến thể ADJ.DAT của ausgewogen,VOC-20260518-048,ADJ.DAT
+WEB-20260531-047,faszinierend,Adjektiv,,hấp dẫn; kỳ diệu,,,web-queue,2026-05-31,1,4.21,web,B1;DTZ;web-queue,Partizip I của faszinieren dùng như Adjektiv độc lập,,
+WEB-20260531-048,Werbebranche,Substantiv,"die Werbebranche, -n",ngành quảng cáo,,,web-queue,2026-05-31,1,4.21,web,B1;DTZ;web-queue,,,
+WEB-20260531-049,Auskünfte,Substantiv,,thông tin (số nhiều),,,web-queue,2026-05-31,1,1.2,web,B1;DTZ;web-queue,NOM.PL của Auskunft,VOC-20260522-041,NOM.PL

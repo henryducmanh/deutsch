@@ -269,9 +269,17 @@
       .then(function (d) { return (d && d.vocab) || []; })
       .catch(function () { return []; }) : Promise.resolve([]);
 
-    Promise.all([p1, p2]).then(function (results) {
+    // p3: fetch pinned words cho bài này (persist "Đang ôn" sau reload)
+    var p3 = LESSON_ID ? fetch('/api/vocab/pins?lesson_id=' + encodeURIComponent(LESSON_ID), {
+      credentials: 'same-origin', headers: { 'Accept': 'application/json' }
+    }).then(function (r) { return r.ok ? r.json() : { pins: [] }; })
+      .then(function (d) { return (d && d.pins) || []; })
+      .catch(function () { return []; }) : Promise.resolve([]);
+
+    Promise.all([p1, p2, p3]).then(function (results) {
       var dbRows   = results[0];   // từ lesson JSON matched trong DB
       var queued   = results[1];   // từ đã queue (curated=0) cho bài này
+      var pins     = results[2];   // từ đã ghim (pinned) cho bài này
 
       // Merge DB rows vào vocabData (đè nghĩa/art)
       var byKey = {};
@@ -298,6 +306,18 @@
           m: (q.bedeutung && q.bedeutung !== '') ? q.bedeutung : '— (chưa tra)',
           lv: 'new', vocab_id: q.vocab_id,
           queued: q.curated === 0  // chỉ badge "?" nếu chưa dịch
+        });
+      });
+
+      // Append pinned words vào vocabData nếu chưa có (pinned: true để phân biệt với queued)
+      pins.forEach(function (pin) {
+        var k = (pin.w || '').toLowerCase();
+        if (!k || knownKeys[k]) { return; }
+        knownKeys[k] = true;
+        wordStatus[k] = 'new';
+        vocabData.push({
+          w: pin.w, art: pin.art || '', m: pin.bedeutung || '—', lv: pin.lv || 1,
+          db_id: pin.db_id, pinned: true
         });
       });
 
@@ -411,7 +431,8 @@
           knownKeys[k] = true;
           // Lưu data cho Pass 3 highlight (chỉ khi chưa có trong vocabData/formMap)
           if (!globalKnownData[k]) {
-            globalKnownData[k] = { w: row.w || k, art: row.art || '', bedeutung: row.bedeutung || '' };
+            globalKnownData[k] = { w: row.w || k, art: row.art || '', bedeutung: row.bedeutung || '',
+              db_id: (row.id != null ? row.id : (row.vocab_id != null ? row.vocab_id : null)) };
           }
         });
       });
@@ -464,21 +485,43 @@
     list.querySelectorAll('.vocab-global-item').forEach(function (el) {
       el.addEventListener('click', function () { selectGlobalWord(el.dataset.word); });
     });
-    // Nút "+" → thêm từ "Đã dịch" vào "Từ trong bài" (session-only, không persist)
+    // Nút "+" → ghim từ "Trong kho" vào "Đang ôn" (persist qua API nếu có db_id)
     list.querySelectorAll('.vgi-add-btn').forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.stopPropagation();  // không trigger scroll/select của item
         var gk = btn.dataset.word;
         var gd = globalKnownData[gk];
         if (!gd) { return; }
-        // Thêm vào vocabData nếu chưa có
         var alreadyIn = vocabData.some(function (v) { return v.w.toLowerCase() === gk; });
         if (alreadyIn) { btn.textContent = '✓'; btn.disabled = true; return; }
-        vocabData.push({ w: gd.w, art: gd.art || '', m: gd.bedeutung || '—', lv: 'new', addedFromGlobal: true });
-        wordStatus[gk] = 'new';
-        if (vocabOpen) { renderVocab(); }
-        if (hlOn) { stripMarks(); marksInjected = false; injectMarks(); }
-        btn.textContent = '✓'; btn.disabled = true;
+        btn.disabled = true; btn.textContent = '…';
+        if (gd.db_id && LESSON_ID) {
+          // Persist qua API → còn sau reload
+          fetch('/api/vocab/pins', {
+            method: 'POST', credentials: 'same-origin',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({ lesson_id: LESSON_ID, vocab_db_id: gd.db_id })
+          }).then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+            .then(function () {
+              vocabData.push({ w: gd.w, art: gd.art || '', m: gd.bedeutung || '— (chưa tra)',
+                               lv: 'new', db_id: gd.db_id, pinned: true });
+              wordStatus[gk] = 'new';
+              if (vocabOpen) { renderVocab(); }
+              if (hlOn) { stripMarks(); marksInjected = false; injectMarks(); }
+              btn.textContent = '✓';
+            }).catch(function () {
+              btn.disabled = false; btn.textContent = '+';
+              alert('Không lưu được. Kiểm tra kết nối.');
+            });
+        } else {
+          // Fallback session-only (không có db_id)
+          vocabData.push({ w: gd.w, art: gd.art || '', m: gd.bedeutung || '— (chưa tra)',
+                           lv: 'new', addedFromGlobal: true });
+          wordStatus[gk] = 'new';
+          if (vocabOpen) { renderVocab(); }
+          if (hlOn) { stripMarks(); marksInjected = false; injectMarks(); }
+          btn.textContent = '✓';
+        }
       });
     });
   }
@@ -529,15 +572,26 @@
     list.querySelectorAll('.vocab-text').forEach(function (el) {
       el.addEventListener('click', function () { selectWord(el.dataset.word); });
     });
-    // Nút "×" → bỏ từ khỏi "Từ trong bài" (session-only, không persist)
+    // Nút "×" → bỏ từ khỏi "Đang ôn". Pinned word → DELETE pin; queued/global → session-only.
     list.querySelectorAll('.vocab-remove-btn').forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.stopPropagation();
         var wKey = btn.dataset.word;
+        var removed = vocabData.filter(function (v) { return v.w.toLowerCase() === wKey; });
         vocabData = vocabData.filter(function (v) { return v.w.toLowerCase() !== wKey; });
         delete wordStatus[wKey];
         renderVocab();
         if (hlOn) { stripMarks(); marksInjected = false; injectMarks(); }
+        // Nếu là pinned word → DELETE pin từ DB (queued curated=0 thì bỏ qua, chỉ session)
+        var pinnedItem = removed.find ? removed.find(function (v) { return v.pinned && v.db_id; }) : null;
+        if (!pinnedItem) { removed.forEach(function (v) { if (v.pinned && v.db_id) { pinnedItem = v; } }); }
+        if (pinnedItem && LESSON_ID) {
+          fetch('/api/vocab/pins', {
+            method: 'DELETE', credentials: 'same-origin',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({ lesson_id: LESSON_ID, vocab_db_id: pinnedItem.db_id })
+          }).catch(function () { /* offline, bỏ qua */ });
+        }
       });
     });
     wireGlobalSection(list);   // wire click cho section "Đã dịch"
