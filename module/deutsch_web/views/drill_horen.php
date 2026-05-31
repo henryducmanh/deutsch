@@ -13,6 +13,12 @@ $audio  = $lesson['audio']['url'] ?? '';
 $aussagen   = $lesson['aussagen'] ?? [];
 $transcript = $lesson['transcript'] ?? [];
 $total = count($aussagen);
+
+// Link mở note buổi học (collaborative tutor note) — student_id = user hiện tại, date = hôm nay.
+$noteUid  = (int)auth_user_id();
+$noteHref = '/tutor/note?lesson_id=' . rawurlencode($lid)
+          . '&student_id=' . $noteUid
+          . '&date=' . date('Y-m-d');
 ?><!DOCTYPE html>
 <html lang="de">
 <head>
@@ -27,6 +33,7 @@ $total = count($aussagen);
 
   <div class="tabs">
     <a class="tab" href="/">← Alle Übungen</a>
+    <a class="tab" href="<?= h($noteHref) ?>">📝 Notizen</a>
   </div>
 
   <div class="lesson active" id="lesson">

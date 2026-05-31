@@ -39,14 +39,14 @@ switch (true) {
             $u = $_POST['username'] ?? '';
             $p = $_POST['password'] ?? '';
             if (auth_attempt($u, $p)) {
-                header('Location: /');
+                header('Location: ' . auth_home_path());
                 exit;
             }
             $error = 'Sai tên đăng nhập hoặc mật khẩu.';
             require $BASE . '/views/login.php';
             exit;
         }
-        if (auth_check()) { header('Location: /'); exit; }
+        if (auth_check()) { header('Location: ' . auth_home_path()); exit; }
         $error = null;
         require $BASE . '/views/login.php';
         exit;
@@ -58,13 +58,43 @@ switch (true) {
 
     case $path === '/':
         auth_require();
+        if (auth_role() === 'tutor') { header('Location: /tutor'); exit; }
         $lessons = lesson_list(auth_user_id());
         $uname = $_SESSION['uname'] ?? '';
         require $BASE . '/views/lesson_list.php';
         exit;
 
+    case $path === '/tutor':
+        auth_require_role('tutor');
+        require_once $BASE . '/api/notes.php';
+        $students = tutor_student_list(auth_user_id());
+        $uname = $_SESSION['uname'] ?? '';
+        require $BASE . '/views/tutor_dashboard.php';
+        exit;
+
+    case $path === '/tutor/note':
+        auth_require();
+        require_once $BASE . '/api/notes.php';
+        $noteStudentId = isset($_GET['student_id']) ? (int)$_GET['student_id'] : 0;
+        $noteLessonId  = isset($_GET['lesson_id']) ? trim($_GET['lesson_id']) : '';
+        $noteDate      = isset($_GET['date']) ? trim($_GET['date']) : date('Y-m-d');
+        if (!notes_valid_lesson($noteLessonId) || !notes_valid_date($noteDate) || !notes_can_access($noteStudentId)) {
+            header('Location: ' . auth_home_path());
+            exit;
+        }
+        $noteLesson      = lesson_load($noteLessonId);
+        $noteLessonTitle = $noteLesson['title'] ?? $noteLessonId;
+        $stU = db()->prepare('SELECT username FROM users WHERE id = ? LIMIT 1');
+        $stU->execute([$noteStudentId]);
+        $rU  = $stU->fetch();
+        $noteStudentName = $rU ? $rU['username'] : ('#' . $noteStudentId);
+        $uname = $_SESSION['uname'] ?? '';
+        require $BASE . '/views/tutor_note.php';
+        exit;
+
     case preg_match('#^/lesson/([A-Za-z0-9._-]+)$#', $path, $m) === 1:
         auth_require();
+        if (auth_role() === 'tutor') { header('Location: /tutor'); exit; }
         $lesson = lesson_load($m[1]);
         if ($lesson === null) {
             http_response_code(404);
@@ -187,6 +217,12 @@ function route_api($path, $method, $BASE)
         require_once $BASE . '/api/vocab.php';
         api_vocab_forms();
         return;
+    }
+    // GET/POST /api/notes (session) — collaborative tutor note editor
+    if ($path === '/api/notes') {
+        require_once $BASE . '/api/notes.php';
+        if ($method === 'GET')  { api_notes_get();  return; }
+        if ($method === 'POST') { api_notes_post(); return; }
     }
 
     http_response_code(404);

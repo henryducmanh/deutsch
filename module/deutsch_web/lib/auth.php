@@ -20,7 +20,7 @@ function auth_session_start()
 
 function auth_attempt($username, $password)
 {
-    $st = db()->prepare('SELECT id, username, password_hash FROM users WHERE username = ? LIMIT 1');
+    $st = db()->prepare('SELECT id, username, password_hash, role FROM users WHERE username = ? LIMIT 1');
     $st->execute([$username]);
     $row = $st->fetch();
     if (!$row) { return false; }
@@ -29,6 +29,7 @@ function auth_attempt($username, $password)
     session_regenerate_id(true);
     $_SESSION['uid'] = (int)$row['id'];
     $_SESSION['uname'] = $row['username'];
+    $_SESSION['role'] = $row['role'] ?? 'student';
     return true;
 }
 
@@ -54,11 +55,44 @@ function auth_check()
     return auth_user_id() !== null;
 }
 
+// Role của user đang login: 'student' | 'tutor' | 'admin'. null nếu chưa login.
+// Session cũ (login trước migration 004) chưa có role → fallback query DB 1 lần rồi cache vào session.
+function auth_role()
+{
+    $uid = auth_user_id();
+    if ($uid === null) { return null; }
+    if (isset($_SESSION['role']) && $_SESSION['role'] !== '') {
+        return $_SESSION['role'];
+    }
+    $st = db()->prepare('SELECT role FROM users WHERE id = ? LIMIT 1');
+    $st->execute([$uid]);
+    $row = $st->fetch();
+    $role = ($row && isset($row['role']) && $row['role'] !== '') ? $row['role'] : 'student';
+    $_SESSION['role'] = $role;
+    return $role;
+}
+
+// Route đích sau login theo role: tutor → /tutor, còn lại → /.
+function auth_home_path()
+{
+    return auth_role() === 'tutor' ? '/tutor' : '/';
+}
+
 // Gọi đầu route cần login. Chưa login → redirect /login.
 function auth_require()
 {
     if (!auth_check()) {
         header('Location: /login');
+        exit;
+    }
+}
+
+// Yêu cầu role cụ thể. Chưa login → /login. Sai role → về home của role hiện tại.
+function auth_require_role($role)
+{
+    auth_require();
+    if (auth_role() !== $role) {
+        header('Location: ' . auth_home_path());
         exit;
     }
 }
