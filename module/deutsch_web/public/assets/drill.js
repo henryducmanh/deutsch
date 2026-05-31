@@ -326,7 +326,7 @@
       loadGlobalKnownFromDB().then(function () {
         return loadFormsFromDB();
       }).then(function () {
-        if (vocabOpen) { renderVocab(); }
+        if (vocabOpen) { refreshVocabPanel(); }
         if (vocabOpen || hlOn) { stripMarks(); marksInjected = false; injectMarks(); }
         refreshNeuIfOpen();
       });
@@ -453,11 +453,9 @@
       .sort(function (a, b) { return a.info.w.toLowerCase().localeCompare(b.info.w.toLowerCase()); });
   }
 
-  // HTML cho section "Đã học (bài khác)" — chỉ render khi có ≥ 1 global word.
-  function globalSectionHtml() {
-    var gw = globalWordsForPanel();
-    if (gw.length === 0) { return ''; }
-    var rows = gw.map(function (item) {
+  // HTML danh sách tab "Đã dịch" (từ kho, xuất hiện trong bài, chưa trong Đang ôn).
+  function globalItemsHtml(gw) {
+    return gw.map(function (item) {
       var info = item.info;
       var dbId = info.db_id != null ? info.db_id : '';
       return '<div class="vocab-global-item" data-word="' + escHtml(item.key) + '">' +
@@ -468,7 +466,42 @@
         '" title="Thêm vào Đang ôn">+</button>' +
         '</div>';
     }).join('');
-    return '<div class="vocab-global-section">Đã dịch — ' + gw.length + '</div>' + rows;
+  }
+
+  function renderGlobalWords() {
+    var list = document.getElementById('vocabGlobalList');
+    if (!list) { return; }
+    var gw = globalWordsForPanel();
+    if (gw.length === 0) {
+      list.innerHTML = '<div class="vocab-empty">Không có từ đã dịch trong bài (chưa có trong kho hoặc đã thêm vào Đang ôn).</div>';
+      return;
+    }
+    list.innerHTML = globalItemsHtml(gw);
+    wireGlobalSection(list);
+    var title = LESSON.title ? ('Vokabeln — Bài ' + LESSON_ID + ' — ' + LESSON.title) : 'Vokabeln';
+    var titleEl = document.getElementById('vocabPanelTitle');
+    if (titleEl) { titleEl.textContent = title; }
+  }
+
+  function getActiveVocabTab() {
+    var tabNew = document.getElementById('tabNew');
+    var tabGlobal = document.getElementById('tabGlobal');
+    if (tabNew && tabNew.classList.contains('active')) { return 'new'; }
+    if (tabGlobal && tabGlobal.classList.contains('active')) { return 'global'; }
+    return 'all';
+  }
+
+  function refreshVocabPanel() {
+    if (!vocabOpen) { return; }
+    var tab = getActiveVocabTab();
+    if (tab === 'new') {
+      renderNewWords();
+      injectNewInlineMarks();
+    } else if (tab === 'global') {
+      renderGlobalWords();
+    } else {
+      renderVocab();
+    }
   }
 
   // Click từ trong section "Đã học" → scroll đến vị trí đầu tiên trong đề + toggle hl-selected.
@@ -507,7 +540,7 @@
               vocabData.push({ w: gd.w, art: gd.art || '', m: gd.bedeutung || '— (chưa tra)',
                                lv: 'new', db_id: dbId, pinned: true });
               wordStatus[gk] = 'new';
-              if (vocabOpen) { renderVocab(); }
+              if (vocabOpen) { refreshVocabPanel(); }
               if (hlOn) { stripMarks(); marksInjected = false; injectMarks(); }
               btn.textContent = '✓';
             }).catch(function (err) {
@@ -519,7 +552,7 @@
           vocabData.push({ w: gd.w, art: gd.art || '', m: gd.bedeutung || '— (chưa tra)',
                            lv: 'new', addedFromGlobal: true });
           wordStatus[gk] = 'new';
-          if (vocabOpen) { renderVocab(); }
+          if (vocabOpen) { refreshVocabPanel(); }
           if (hlOn) { stripMarks(); marksInjected = false; injectMarks(); }
           btn.textContent = '✓';
           if (!dbId) {
@@ -533,15 +566,10 @@
   function renderVocab() {
     var list = document.getElementById('vocabList');
     var items = vocabData || [];
-    var globalHtml = globalSectionHtml();
     if (items.length === 0) {
-      // Không có vocab riêng cho bài — vẫn hiện section "Đã học" nếu có global word.
-      list.innerHTML = globalHtml
-        ? ('<div class="vocab-empty">Chưa có từ vựng riêng cho bài này.</div>' + globalHtml)
-        : '<div class="vocab-empty">Chưa có từ vựng cho bài này.</div>';
+      list.innerHTML = '<div class="vocab-empty">Chưa có từ trong Đang ôn. Thêm từ tab Đã dịch hoặc Từ lạ.</div>';
       var t0 = LESSON.title ? ('Vokabeln — Bài ' + LESSON_ID + ' — ' + LESSON.title) : 'Vokabeln';
       document.getElementById('vocabPanelTitle').textContent = t0;
-      wireGlobalSection(list);
       return;
     }
     list.innerHTML = items.map(function (v) {
@@ -563,9 +591,9 @@
           '<div class="vocab-meaning">' + (v.m || '') + '</div>' +
           variantLine +
         '</div>' +
-        '<button class="vocab-remove-btn" data-word="' + wKey + '" title="Bỏ khỏi Từ trong bài">×</button>' +
+        '<button class="vocab-remove-btn" data-word="' + wKey + '" title="Bỏ khỏi Đang ôn">×</button>' +
         '</div>';
-    }).join('') + globalHtml;   // append section "Đã dịch" nếu có
+    }).join('');
     var title = LESSON.title ? ('Vokabeln — Bài ' + LESSON_ID + ' — ' + LESSON.title) : 'Vokabeln';
     document.getElementById('vocabPanelTitle').textContent = title;
 
@@ -598,13 +626,12 @@
         }
       });
     });
-    wireGlobalSection(list);   // wire click cho section "Đã dịch"
   }
 
   function toggleVocab() { if (vocabOpen) closeVocab(); else openVocab(); }
 
   function openVocab() {
-    renderVocab();
+    refreshVocabPanel();
     injectMarks();
     document.getElementById('vocabPanel').classList.add('open');
     document.getElementById('vocabToggleBtn').classList.add('active', 'panel-open');
@@ -1215,20 +1242,35 @@
       });
   }
 
+  function setVocabTabActive(which) {
+    var tabs = {
+      all: document.getElementById('tabAll'),
+      global: document.getElementById('tabGlobal'),
+      new: document.getElementById('tabNew')
+    };
+    var lists = {
+      all: document.getElementById('vocabList'),
+      global: document.getElementById('vocabGlobalList'),
+      new: document.getElementById('vocabNewList')
+    };
+    ['all', 'global', 'new'].forEach(function (key) {
+      if (tabs[key]) { tabs[key].classList.toggle('active', key === which); }
+      if (lists[key]) { lists[key].style.display = key === which ? '' : 'none'; }
+    });
+  }
+
   function switchTab(which) {
-    var tabAll = document.getElementById('tabAll');
-    var tabNew = document.getElementById('tabNew');
-    var listAll = document.getElementById('vocabList');
-    var listNew = document.getElementById('vocabNewList');
-    if (!tabAll || !tabNew) { return; }
+    if (!document.getElementById('tabAll') || !document.getElementById('tabNew')) { return; }
     if (which === 'new') {
-      tabNew.classList.add('active'); tabAll.classList.remove('active');
-      listAll.style.display = 'none'; listNew.style.display = '';
+      setVocabTabActive('new');
       renderNewWords();
       injectNewInlineMarks();
+    } else if (which === 'global') {
+      setVocabTabActive('global');
+      stripNewInlineMarks();
+      renderGlobalWords();
     } else {
-      tabAll.classList.add('active'); tabNew.classList.remove('active');
-      listNew.style.display = 'none'; listAll.style.display = '';
+      setVocabTabActive('all');
       stripNewInlineMarks();
       renderVocab();
     }
@@ -1236,18 +1278,22 @@
 
   function wireTabs() {
     var tabAll = document.getElementById('tabAll');
+    var tabGlobal = document.getElementById('tabGlobal');
     var tabNew = document.getElementById('tabNew');
     if (tabAll) { tabAll.addEventListener('click', function () { switchTab('all'); }); }
+    if (tabGlobal) { tabGlobal.addEventListener('click', function () { switchTab('global'); }); }
     if (tabNew) { tabNew.addEventListener('click', function () { switchTab('new'); }); }
   }
 
-  // Nếu đang ở tab Neu wort → refresh sau khi DB load xong (known set đầy đủ).
+  // Refresh tab đang mở sau khi DB load (known set / global words đầy đủ).
   function refreshNeuIfOpen() {
-    var listNew = document.getElementById('vocabNewList');
-    if (listNew && listNew.style.display !== 'none') {
+    var tab = getActiveVocabTab();
+    if (tab === 'new') {
       stripNewInlineMarks();
       renderNewWords();
       injectNewInlineMarks();
+    } else if (tab === 'global') {
+      renderGlobalWords();
     }
   }
 
