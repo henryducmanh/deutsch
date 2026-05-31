@@ -1985,3 +1985,10 @@ WEB-20260531-030,Sonderausstellung,Substantiv,"die Sonderausstellung, -en",tri�
 WEB-20260531-031,Sonnenwinkel,Substantiv,"der Sonnenwinkel, -",góc chiếu sáng mặt trời,,,web-queue,2026-05-31,1,4.2,web,B1;DTZ;web-queue,,,
 WEB-20260531-032,Belastung,Substantiv,"die Belastung, -en",gánh nặng / áp lực,,,web-queue,2026-05-31,1,4.31,web,B1;DTZ;web-queue,,,
 WEB-20260531-033,Belastungen,Substantiv,,gánh nặng / áp lực (số nhiều),,,web-queue,2026-05-31,1,4.31,web,B1;DTZ;web-queue,,WEB-20260531-032,NOM.PL
+WEB-20260531-034,Schwiegereltern,Substantiv,"die Schwiegereltern (nur Plural)",bố mẹ chồng/vợ,,,web-queue,2026-05-31,1,4.2,web,B1;DTZ;web-queue;Familie,,,
+WEB-20260531-035,entlasten,Verb,"entlastete - hat entlastet",giảm gánh nặng; giải phóng khỏi trách nhiệm,,,web-queue,2026-05-31,1,4.2,web,B1;DTZ;web-queue,,,
+WEB-20260531-036,entlastet,Verb,,đã giảm gánh nặng (Partizip II),,,web-queue,2026-05-31,1,4.2,web,B1;DTZ;web-queue,,WEB-20260531-035,PART.II
+WEB-20260531-037,bringen,Verb,"brachte - hat gebracht","mang; đem; đưa đến",,,web-queue,2026-05-31,1,4.2,web,B1;DTZ;web-queue,,,
+WEB-20260531-038,gebracht,Verb,,đã mang/đưa đến (Partizip II),,,web-queue,2026-05-31,1,4.2,web,B1;DTZ;web-queue,,WEB-20260531-037,PART.II
+WEB-20260531-039,weinen,Verb,"weinte - hat geweint",khóc,,,web-queue,2026-05-31,1,4.2,web,B1;DTZ;web-queue,,,
+WEB-20260531-040,geweint,Verb,,đã khóc (Partizip II),,,web-queue,2026-05-31,1,4.2,web,B1;DTZ;web-queue,,WEB-20260531-039,PART.II

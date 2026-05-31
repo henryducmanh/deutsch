@@ -446,7 +446,7 @@
         '<button class="vgi-add-btn" data-word="' + escHtml(item.key) + '" title="Thêm vào Từ trong bài">+</button>' +
         '</div>';
     }).join('');
-    return '<div class="vocab-global-section">Đã dịch — ' + gw.length + '</div>' + rows;
+    return '<div class="vocab-global-section">Trong kho — ' + gw.length + '</div>' + rows;
   }
 
   // Click từ trong section "Đã học" → scroll đến vị trí đầu tiên trong đề + toggle hl-selected.

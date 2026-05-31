@@ -153,8 +153,8 @@ $noteHref = '/tutor/note?lesson_id=' . rawurlencode($lid)
       </div>
     </div>
     <div class="vocab-head-tabs">
-      <span class="vocab-tab active" id="tabAll" data-tab="all">Từ trong bài</span>
-      <span class="vocab-tab" id="tabNew" data-tab="new">Neu wort</span>
+      <span class="vocab-tab active" id="tabAll" data-tab="all">Đang ôn</span>
+      <span class="vocab-tab" id="tabNew" data-tab="new">Từ lạ</span>
     </div>
   </div>
   <div class="vocab-list" id="vocabList"></div>
