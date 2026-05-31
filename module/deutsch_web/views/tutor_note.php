@@ -12,8 +12,8 @@ function h($s) { return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
 
 // Back link: tutor → dashboard, student → lesson.
 $isTutor  = (auth_role() === 'tutor');
-$backHref = $isTutor ? '/tutor' : ('/lesson/' . rawurlencode($noteLessonId));
-$backText = $isTutor ? '← Học viên' : '← Bài học';
+$backHref = '/lesson/' . rawurlencode($noteLessonId);
+$backText = '← Bài học';
 ?><!DOCTYPE html>
 <html lang="vi">
 <head>
