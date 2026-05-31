@@ -4,7 +4,7 @@
   "aufgabe": "4.31",
   "modul": "Hören",
   "niveau": "B1",
-  "thema": "Zukunft der Arbeit",
+  "thema": "Zukunft der Arbeit nach der COVID-19-Pandemie",
   "title": "Zukunft der Arbeit nach der COVID-19-Pandemie",
   "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
   "source": {
@@ -24,12 +24,30 @@
       "label": "Aussage 1",
       "correct": "f",
       "options": [
-        { "key": "a", "text": "Digitale Fähigkeiten werden in der postpandemischen Arbeitswelt noch wichtiger sein." },
-        { "key": "b", "text": "Die Flexibilisierung von Arbeitszeiten wird einen höheren Stellenwert haben." },
-        { "key": "c", "text": "Homeoffice bietet Flexibilität, aber es gibt Herausforderungen hinsichtlich sozialer Interaktion." },
-        { "key": "d", "text": "Die Automatisierung wird einige Berufe verändern und neue Möglichkeiten schaffen." },
-        { "key": "e", "text": "Die Weiterbildung der Arbeitnehmerinnen und Arbeitnehmer ist entscheidend." },
-        { "key": "f", "text": "Unternehmen sollten Strategien zur Förderung der psychischen Gesundheit entwickeln." }
+        {
+          "key": "a",
+          "text": "Digitale Fähigkeiten werden in der postpandemischen Arbeitswelt noch wichtiger sein."
+        },
+        {
+          "key": "b",
+          "text": "Die Flexibilisierung von Arbeitszeiten wird in der zukünftigen Arbeitswelt einen höheren Stellenwert haben."
+        },
+        {
+          "key": "c",
+          "text": "Homeoffice bietet Flexibilität, aber es gibt Herausforderungen hinsichtlich sozialer Interaktion."
+        },
+        {
+          "key": "d",
+          "text": "Die Automatisierung wird einige Berufe verändern und neue Möglichkeiten schaffen."
+        },
+        {
+          "key": "e",
+          "text": "Die Weiterbildung der Arbeitnehmerinnen und Arbeitnehmer ist entscheidend."
+        },
+        {
+          "key": "f",
+          "text": "Unternehmen sollten Strategien zur Förderung der psychischen Gesundheit entwickeln."
+        }
       ]
     },
     {
@@ -37,12 +55,30 @@
       "label": "Aussage 2",
       "correct": "d",
       "options": [
-        { "key": "a", "text": "Digitale Fähigkeiten werden in der postpandemischen Arbeitswelt noch wichtiger sein." },
-        { "key": "b", "text": "Die Flexibilisierung von Arbeitszeiten wird einen höheren Stellenwert haben." },
-        { "key": "c", "text": "Homeoffice bietet Flexibilität, aber es gibt Herausforderungen hinsichtlich sozialer Interaktion." },
-        { "key": "d", "text": "Die Automatisierung wird einige Berufe verändern und neue Möglichkeiten schaffen." },
-        { "key": "e", "text": "Die Weiterbildung der Arbeitnehmerinnen und Arbeitnehmer ist entscheidend." },
-        { "key": "f", "text": "Unternehmen sollten Strategien zur Förderung der psychischen Gesundheit entwickeln." }
+        {
+          "key": "a",
+          "text": "Digitale Fähigkeiten werden in der postpandemischen Arbeitswelt noch wichtiger sein."
+        },
+        {
+          "key": "b",
+          "text": "Die Flexibilisierung von Arbeitszeiten wird in der zukünftigen Arbeitswelt einen höheren Stellenwert haben."
+        },
+        {
+          "key": "c",
+          "text": "Homeoffice bietet Flexibilität, aber es gibt Herausforderungen hinsichtlich sozialer Interaktion."
+        },
+        {
+          "key": "d",
+          "text": "Die Automatisierung wird einige Berufe verändern und neue Möglichkeiten schaffen."
+        },
+        {
+          "key": "e",
+          "text": "Die Weiterbildung der Arbeitnehmerinnen und Arbeitnehmer ist entscheidend."
+        },
+        {
+          "key": "f",
+          "text": "Unternehmen sollten Strategien zur Förderung der psychischen Gesundheit entwickeln."
+        }
       ]
     },
     {
@@ -50,49 +86,59 @@
       "label": "Aussage 3",
       "correct": "c",
       "options": [
-        { "key": "a", "text": "Digitale Fähigkeiten werden in der postpandemischen Arbeitswelt noch wichtiger sein." },
-        { "key": "b", "text": "Die Flexibilisierung von Arbeitszeiten wird einen höheren Stellenwert haben." },
-        { "key": "c", "text": "Homeoffice bietet Flexibilität, aber es gibt Herausforderungen hinsichtlich sozialer Interaktion." },
-        { "key": "d", "text": "Die Automatisierung wird einige Berufe verändern und neue Möglichkeiten schaffen." },
-        { "key": "e", "text": "Die Weiterbildung der Arbeitnehmerinnen und Arbeitnehmer ist entscheidend." },
-        { "key": "f", "text": "Unternehmen sollten Strategien zur Förderung der psychischen Gesundheit entwickeln." }
+        {
+          "key": "a",
+          "text": "Digitale Fähigkeiten werden in der postpandemischen Arbeitswelt noch wichtiger sein."
+        },
+        {
+          "key": "b",
+          "text": "Die Flexibilisierung von Arbeitszeiten wird in der zukünftigen Arbeitswelt einen höheren Stellenwert haben."
+        },
+        {
+          "key": "c",
+          "text": "Homeoffice bietet Flexibilität, aber es gibt Herausforderungen hinsichtlich sozialer Interaktion."
+        },
+        {
+          "key": "d",
+          "text": "Die Automatisierung wird einige Berufe verändern und neue Möglichkeiten schaffen."
+        },
+        {
+          "key": "e",
+          "text": "Die Weiterbildung der Arbeitnehmerinnen und Arbeitnehmer ist entscheidend."
+        },
+        {
+          "key": "f",
+          "text": "Unternehmen sollten Strategien zur Förderung der psychischen Gesundheit entwickeln."
+        }
       ]
     }
   ],
   "transcript": [
     {
+      "label": "Einleitung",
+      "text": "Liebe Hörerinnen und Hörer von Die Stimme der Zukunft, herzlich Willkommen zu dieser spannenden Sendung. Heute werden wir das Thema Zukunft der Arbeit nach der Covid-19 Pandemie diskutieren. Wir haben drei Gäste eingeladen, um ihre Perspektiven zu teilen und wie sie die Veränderungen in der Arbeitswelt erlebt haben. Bleiben Sie dran für fesselnde Geschichten und Erkenntnisse, die uns dazu anregen werden, über unsere Zukunft nachzudenken. Hier ist die Stimme der Zukunft.",
+      "key_phrase": ""
+    },
+    {
       "label": "Aussage 1",
-      "text": "Unternehmen sollten Strategien entwickeln, um die psychische Gesundheit der Arbeitnehmer zu fördern. Die ständigen Veränderungen können zu erhöhtem Stress führen. Die Investition in das Wohlbefinden der Mitarbeiter ist nicht nur eine ethische Verpflichtung, sondern wirkt sich positiv auf Produktivität aus.",
-      "key_phrase": "die psychische Gesundheit der Arbeitnehmer zu fördern"
+      "text": "Unternehmen sollten Strategien entwickeln, um die psychische Gesundheit der Arbeitnehmerinnen und Arbeitnehmer zu fördern, da die Arbeitswelt zunehmend von Unsicherheiten geprägt ist. Die ständigen Veränderungen, wie sie beispielsweise durch die Covid-19-Pandemie hervorgerufen wurden, können zu erhöhtem Stress und Belastungen führen. Die Implementierung von Maßnahmen zur psychischen Gesundheitsförderung, wie etwa Schulungen zur Stressbewältigung, Zugang zu psychologischer Beratung und die Schaffung einer unterstützenden Unternehmenskultur, wird immer wichtiger. Die Investition in das Wohlbefinden der Mitarbeiter ist nicht nur eine ethische Verpflichtung, sondern kann sich auch positiv auf die Mitarbeiterbindung, Produktivität und das Unternehmensimage auswirken.",
+      "key_phrase": "Unternehmen sollten Strategien entwickeln, um die psychische Gesundheit der Arbeitnehmerinnen und Arbeitnehmer zu…"
     },
     {
       "label": "Aussage 2",
-      "text": "Die zunehmende Automatisierung wird einige Berufe verändern, aber auch neue Möglichkeiten für kreative und innovative Tätigkeiten schaffen. Arbeitskräfte sollten Fähigkeiten entwickeln, die schwerer automatisiert werden können — Kreativität, Kommunikation, strategische Planung.",
-      "key_phrase": "Die zunehmende Automatisierung wird einige Berufe verändern"
+      "text": "Die zunehmende Automatisierung wird einige Berufe verändern, aber auch neue Möglichkeiten für kreative und innovative Tätigkeiten schaffen. Während bestimmte Aufgaben durch Automatisierung effizienter erledigt werden können, entstehen gleichzeitig neue Anforderungen an Fähigkeiten im Bereich Kreativität, Problemlösung und menschenzentriertes Denken. Arbeitskräfte sollten sich auf die Entwicklung von Fähigkeiten konzentrieren, die schwerer automatisiert werden können, wie kreative Gestaltung, zwischenmenschlicher Kommunikation und strategische Planung. Unternehmen, die diese Veränderungen antizipieren, können ihre Belegschaft gezielt Schulen und somit die Innovationsfähigkeit steigern. Es wird erwartet, dass die Zukunft der Arbeit einer Verschmelzung von menschlichen Fähigkeiten und automatisierten Prozessen darstellt, wodurch Raum für eine vielfältige und zukunftsorientierte Arbeitswelt geschaffen wird.",
+      "key_phrase": "Die zunehmende Automatisierung wird einige Berufe verändern, aber auch neue Möglichkeiten für kreative und innovative…"
     },
     {
       "label": "Aussage 3",
-      "text": "Homeoffice bietet zwar Flexibilität, aber es gibt Herausforderungen hinsichtlich sozialer Interaktion und des klaren Trennens von Arbeit und Privatleben. Unternehmen müssen Maßnahmen ergreifen, um den sozialen Zusammenhalt der Belegschaft zu stärken.",
-      "key_phrase": "Homeoffice bietet zwar Flexibilität, aber es gibt Herausforderungen"
+      "text": "Homomorphies bietet zwar Flexibilität, aber es gibt auch Herausforderungen hinsichtlich der sozialen Interaktion und des klaren Trennens von Arbeit und Privatleben. Der Verlust des physischen Zusammenseins im Büro kann zu einer Verringerung des informellen Austauschs und lässt ihm Gefühls führen. Zudem können die Grenzen zwischen beruflichen und persönlichen Bereichen verschwimmen, da der Arbeitsplatz im eigenen Zuhause angesiedelt ist. Dies erfordert eine bewusste Selbstorganisation, um Arbeitszeiten zu definieren und sich Pausen zu gönnen. Unternehmen sind gefordert, Maßnahmen zu ergreifen, um den sozialen Zusammenhalt der Belegschaft zu stärken, sei es durch Virtuality-Pweeding, Aktivitäten oder die Schaffung von virtuellen Pausenräumen. Die erfolgreiche Bewältigung dieser Herausforderungen wird entscheidend dafür sein, die Vorzüge des Homomorphies zu nutzen, ohne die sozialen und psychologischen Aspekte der Arbeit aus dem Auge zu verlieren. \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "key_phrase": "Homomorphies bietet zwar Flexibilität, aber es gibt auch Herausforderungen hinsichtlich der sozialen Interaktion und…"
     }
   ],
-  "vocab": [
-    { "w": "Automatisierung", "art": "die · Subst.", "m": "tự động hóa", "lv": "new", "vocab_id": null },
-    { "w": "Herausforderung", "art": "die · Subst.", "m": "thách thức", "lv": "new", "vocab_id": null },
-    { "w": "psychisch", "art": "Adj.", "m": "thuộc tâm lý (psychische Gesundheit)", "lv": "new", "vocab_id": null },
-    { "w": "Wohlbefinden", "art": "das · Subst.", "m": "sự an lành / phúc lợi", "lv": "new", "vocab_id": null },
-    { "w": "fördern", "art": "Verb", "m": "thúc đẩy / hỗ trợ", "lv": "new", "vocab_id": null },
-    { "w": "Weiterbildung", "art": "die · Subst.", "m": "đào tạo nâng cao", "lv": "new", "vocab_id": null },
-    { "w": "Fähigkeit", "art": "die · Subst.", "m": "kỹ năng / khả năng", "lv": "new", "vocab_id": null },
-    { "w": "Maßnahme", "art": "die · Subst.", "m": "biện pháp", "lv": "new", "vocab_id": null },
-    { "w": "Verpflichtung", "art": "die · Subst.", "m": "nghĩa vụ / cam kết", "lv": "new", "vocab_id": null },
-    { "w": "Zusammenhalt", "art": "der · Subst.", "m": "sự gắn kết xã hội", "lv": "new", "vocab_id": null },
-    { "w": "Unsicherheit", "art": "die · Subst.", "m": "sự bất ổn", "lv": "new", "vocab_id": null },
-    { "w": "antizipieren", "art": "Verb", "m": "dự đoán trước", "lv": "hard", "vocab_id": null }
-  ],
+  "vocab": [],
   "_meta": {
     "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
     "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
-    "generated_by": "Claude Code (Implementer Phase 0) 2026-05-29 từ output/drills/horen_test_4.29-4.31.html (lesson-2 + vocabData[2]) + input/html/deutsch-vorbereitung/horen/4.31/url.md"
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
   }
 }
