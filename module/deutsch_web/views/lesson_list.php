@@ -14,6 +14,7 @@ function h($s) { return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
 <link rel="stylesheet" href="/assets/drill.css">
 </head>
 <body>
+<?php require __DIR__ . '/_tutor_banner.php'; ?>
 <div class="app">
   <div class="list-head">
     <h1>Hören Übungen — DTZ B1</h1>

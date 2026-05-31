@@ -78,6 +78,26 @@ function auth_home_path()
     return auth_role() === 'tutor' ? '/tutor' : '/';
 }
 
+// student_id của DỮ LIỆU đang xem (vocab/events/progress/note).
+//   - tutor đang "học cùng" 1 học viên → $_SESSION['view_student_id']
+//   - còn lại → chính mình (auth_user_id)
+// LƯU Ý: đây KHÔNG phải identity. Mọi security check vẫn dùng auth_user_id()/auth_role().
+function auth_active_student_id()
+{
+    auth_session_start();
+    if (isset($_SESSION['view_student_id']) && auth_role() === 'tutor') {
+        return (int)$_SESSION['view_student_id'];
+    }
+    return auth_user_id();
+}
+
+// True nếu tutor đang impersonate 1 học viên (để hiện banner "👁 Đang xem").
+function auth_is_tutor_viewing()
+{
+    auth_session_start();
+    return auth_role() === 'tutor' && isset($_SESSION['view_student_id']);
+}
+
 // Gọi đầu route cần login. Chưa login → redirect /login.
 function auth_require()
 {

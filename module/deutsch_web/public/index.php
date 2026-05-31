@@ -58,8 +58,11 @@ switch (true) {
 
     case $path === '/':
         auth_require();
-        if (auth_role() === 'tutor') { header('Location: /tutor'); exit; }
-        $lessons = lesson_list(auth_user_id());
+        // Tutor CHƯA chọn học viên → về dashboard. Đang "học cùng" → xem như học viên.
+        if (auth_role() === 'tutor' && !isset($_SESSION['view_student_id'])) {
+            header('Location: /tutor'); exit;
+        }
+        $lessons = lesson_list(auth_active_student_id());
         $uname = $_SESSION['uname'] ?? '';
         require $BASE . '/views/lesson_list.php';
         exit;
@@ -67,9 +70,31 @@ switch (true) {
     case $path === '/tutor':
         auth_require_role('tutor');
         require_once $BASE . '/api/notes.php';
-        $students = tutor_student_list(auth_user_id());
+        $students = tutor_student_list(auth_user_id());   // identity tutor → student được gán
         $uname = $_SESSION['uname'] ?? '';
         require $BASE . '/views/tutor_dashboard.php';
+        exit;
+
+    case preg_match('#^/tutor/select/(\d+)$#', $path, $m) === 1:
+        auth_require_role('tutor');
+        require_once $BASE . '/api/notes.php';
+        $sel = (int)$m[1];
+        if (!tutor_has_student(auth_user_id(), $sel)) {
+            http_response_code(403);
+            echo 'Không có quyền với học viên này.';
+            exit;
+        }
+        auth_session_start();
+        $_SESSION['view_student_id'] = $sel;
+        header('Location: /');
+        exit;
+
+    case $path === '/tutor/exit':
+        auth_require();
+        auth_session_start();
+        unset($_SESSION['view_student_id']);
+        // student gõ nhầm /tutor/exit → về / (không lỗi); tutor → về dashboard.
+        header('Location: ' . (auth_role() === 'tutor' ? '/tutor' : '/'));
         exit;
 
     case $path === '/tutor/note':
@@ -94,7 +119,10 @@ switch (true) {
 
     case preg_match('#^/lesson/([A-Za-z0-9._-]+)$#', $path, $m) === 1:
         auth_require();
-        if (auth_role() === 'tutor') { header('Location: /tutor'); exit; }
+        // Tutor chưa chọn học viên → về dashboard. Đang "học cùng" → xem bài như học viên.
+        if (auth_role() === 'tutor' && !isset($_SESSION['view_student_id'])) {
+            header('Location: /tutor'); exit;
+        }
         $lesson = lesson_load($m[1]);
         if ($lesson === null) {
             http_response_code(404);
@@ -154,7 +182,7 @@ function route_track($method)
     );
     $st->execute([
         $eventId,
-        auth_user_id(),
+        auth_active_student_id(),   // tutor đang "học cùng" → progress ghi theo học viên
         $type,
         $lessonId,
         json_encode($payload, JSON_UNESCAPED_UNICODE),

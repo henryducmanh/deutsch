@@ -14,8 +14,9 @@ $aussagen   = $lesson['aussagen'] ?? [];
 $transcript = $lesson['transcript'] ?? [];
 $total = count($aussagen);
 
-// Link mở note buổi học (collaborative tutor note) — student_id = user hiện tại, date = hôm nay.
-$noteUid  = (int)auth_user_id();
+// Link mở note buổi học (collaborative tutor note) — student_id = học viên đang xem
+// (chính mình, hoặc học viên mà tutor đang "học cùng"), date = hôm nay.
+$noteUid  = (int)auth_active_student_id();
 $noteHref = '/tutor/note?lesson_id=' . rawurlencode($lid)
           . '&student_id=' . $noteUid
           . '&date=' . date('Y-m-d');
@@ -29,6 +30,7 @@ $noteHref = '/tutor/note?lesson_id=' . rawurlencode($lid)
 <link rel="stylesheet" href="/assets/drill.css?v=<?= $assetV ?>">
 </head>
 <body>
+<?php require __DIR__ . '/_tutor_banner.php'; ?>
 <div class="app">
 
   <div class="tabs">

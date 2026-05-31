@@ -87,6 +87,7 @@ function api_notes_get()
 {
     if (!auth_check()) { api_json(401, ['error' => 'not logged in']); }
     $studentId = isset($_GET['student_id']) ? (int)$_GET['student_id'] : 0;
+    if ($studentId <= 0) { $studentId = (int)auth_active_student_id(); }   // default: học viên đang xem
     $lessonId  = isset($_GET['lesson_id']) ? trim((string)$_GET['lesson_id']) : '';
     $date      = isset($_GET['date']) ? trim((string)$_GET['date']) : '';
 
@@ -127,6 +128,7 @@ function api_notes_post()
     if (!auth_check()) { api_json(401, ['error' => 'not logged in']); }
     $body = api_body_json();
     $studentId = isset($body['student_id']) ? (int)$body['student_id'] : 0;
+    if ($studentId <= 0) { $studentId = (int)auth_active_student_id(); }   // default: học viên đang xem
     $lessonId  = isset($body['lesson_id']) ? trim((string)$body['lesson_id']) : '';
     $date      = isset($body['date']) ? trim((string)$body['date']) : '';
     $content   = isset($body['content']) ? (string)$body['content'] : '';
