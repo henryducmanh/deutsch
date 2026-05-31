@@ -63,13 +63,13 @@ def load_csv() -> dict[str, dict]:
 
 
 def safe_write(path: Path, data: dict) -> None:
-    """Ghi JSON qua tempfile → copy (cross-platform, tránh Windows mount truncation)."""
+    """Ghi JSON: temp trong cùng thư mục → os.replace() atomic.
+    Không dùng cross-dir copy (shutil.copy2 từ AppData→FUSE mount bị truncate).
+    """
     content = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
-    tmp_dir = Path(tempfile.gettempdir())
-    tmp = tmp_dir / f"patch_{path.name}"
+    tmp = path.with_suffix(".json.tmp")
     tmp.write_text(content, encoding="utf-8")
-    shutil.copy2(tmp, path)
-    tmp.unlink(missing_ok=True)
+    os.replace(tmp, path)
 
 
 def patch_one(lesson_id: str, csv_table: dict, apply: bool) -> dict | None:
