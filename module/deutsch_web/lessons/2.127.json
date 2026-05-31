@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.127",
+  "aufgabe": "2.127",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Das Wetter",
+  "title": "Das Wetter",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-295.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.127/2.127.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.127-1",
+      "label": "Wie wird das Wetter im Norden?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Es wird wärmer."
+        },
+        {
+          "key": "b",
+          "text": "Es wird kühl."
+        },
+        {
+          "key": "c",
+          "text": "Es regnet."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Und nun zur Wettervorhersage. Der Sommer steht endlich vor der Tür. Zwar war es heute noch etwas frisch und regnerisch, aber morgen werden die Temperaturen deutschlandweit steigen. Im Norden erwarten wir 20 bis 25 Grad, während im Süden sogar bis zu 28 Grad möglich sind, und es bleibt trocken. Ein Blick auf die kommenden Tage. Am Wochenende wird die Sonne in ganz Deutschland scheinen, und die Temperaturen erreichen Höchstwerte zwischen 25 und 30 Grad.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

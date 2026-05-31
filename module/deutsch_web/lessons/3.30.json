@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.30",
+  "aufgabe": "3.30",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "In der Apotheke",
+  "title": "In der Apotheke",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3966.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.30/3.30.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.30-1",
+      "label": "Die Kundin kauft eine Salbe gegen Rückenschmerzen.",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Richtig"
+        },
+        {
+          "key": "b",
+          "text": "Falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.30-2",
+      "label": "Wie teuer ist das Medikament, das die Kundin kauft?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "6,90 Euro"
+        },
+        {
+          "key": "b",
+          "text": "9,50 Euro"
+        },
+        {
+          "key": "c",
+          "text": "8,90 Euro"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Person 1 Guten Tag, ich habe Rückenschmerzen. Können Sie mir ein gutes Schmerzmittel empfehlen? Person 2 Natürlich. Nehmen Sie Tabletten oder lieber eine Salve. Person 1 Tabletten, bitte. Person 2 Diese hier wirken schnell und sind gut verträglich. Sie kosten 9,50 Euro. Person 1 Gibt es auch eine günstigere Alternative? Person 2 Ja, diese kostet 6,90 Euro, ist aber etwas schwächer. Person 1 Ich denke, ich nehme die teurere Variante. Wie oft soll ich sie nehmen? Person 2 Zweimal täglich, nach den Mahlzeiten.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

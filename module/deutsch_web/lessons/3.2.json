@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.2",
+  "aufgabe": "3.2",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Fitnessvertrag",
+  "title": "Fitnessvertrag",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-14229.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.2/3.2.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.2-1",
+      "label": "Die Frau möchte ihren Fitnessvertrag kündigen.",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "richtig"
+        },
+        {
+          "key": "b",
+          "text": "falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.2-2",
+      "label": "Warum kann die Frau den Vertrag nicht kündigen?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Der Vertrag ist noch zu neu."
+        },
+        {
+          "key": "b",
+          "text": "Der Vertrag gehört ihrer Tochter."
+        },
+        {
+          "key": "c",
+          "text": "Die Kündigungsfrist ist schon abgelaufen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Mitarbeiterin: Guten Tag, willkommen in unserem Fitnessstudio. Was kann ich für Sie tun? Kundin: Guten Tag. Ich möchte gern wissen, wie man einen Vertrag bei Ihnen kündigen kann. Mitarbeiterin: Gern erkläre ich Ihnen das. Unsere Verträge haben in der Regel eine feste Laufzeit. Eine Kündigung ist möglich, wenn der Vertrag nicht mehr neu ist und die Kündigungsfrist eingehalten wird. Wenn die Frist bereits abgelaufen ist, verlängert sich der Vertrag automatisch. Kundin: Verstehe. Dann würde ich den Vertrag gern beenden. Mitarbeiterin: In Ordnung. Ist es Ihr eigener Vertrag? Kundin: Nein, der Vertrag gehört meiner Tochter. Mitarbeiterin: Wie alt ist Ihre Tochter? Kundin: Sie ist siebzehn. Mitarbeiterin: Dann kann ich die Kündigung leider nicht von Ihnen annehmen. Auch wenn der Vertrag nicht mehr neu ist und die Kündigungsfrist noch läuft, muss Ihre Tochter selbst kündigen. Kundin: Aber Sie haben eben über Laufzeit und Fristen gesprochen. Vom Alter war keine Rede. Mitarbeiterin: Das stimmt, aber das ist gesetzlich geregelt. Nach deutschem Recht müssen Personen ab einem bestimmten Alter Vertragsänderungen selbst erklären. Im Bürgerlichen Gesetzbuch steht sinngemäß, dass Willenserklärungen, zum Beispiel eine Kündigung, von der betroffenen Person abgegeben werden müssen (§ 107 BGB). Kundin: Das heißt, ich darf das wirklich nicht für sie erledigen? Mitarbeiterin: Leider nein. Ihre Tochter muss die Kündigung selbst einreichen. Kundin: Na gut, dann sage ich ihr Bescheid. Danke für die Information.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

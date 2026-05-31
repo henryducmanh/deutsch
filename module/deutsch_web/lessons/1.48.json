@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.48",
+  "aufgabe": "1.48",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Fit\\&Gesund",
+  "title": "Fit\\&Gesund",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1974.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.48/1.48.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.48-1",
+      "label": "Was bietet Fit&Gesund an?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Fitnesskurse und Training."
+        },
+        {
+          "key": "b",
+          "text": "Wellnessmassagen."
+        },
+        {
+          "key": "c",
+          "text": "Gesundheit."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Willkommen bei Fit & Health. Hier finden Sie modernste Fitnessgeräte, ein breites Kursangebot und kompetente Trainer. Jetzt ist es an der Zeit, fit zu werden und sich wohl zu fühlen. Melden Sie sich noch heute für eine kostenlose Probestunde an und erhalten Sie Wellnessmassagen mit 5% Rabatt.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

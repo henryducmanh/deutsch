@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.63",
+  "aufgabe": "2.63",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Wetter im Osten",
+  "title": "Wetter im Osten",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1953.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.63/2.63.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.63-1",
+      "label": "Wie wird das Wetter im Osten?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Es wird wärmer."
+        },
+        {
+          "key": "b",
+          "text": "Es wird kühl."
+        },
+        {
+          "key": "c",
+          "text": "Es regnet."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Und jetzt die Wettervorhersage. Der Sommer beginnt endlich. Heute war es noch etwas frisch und regnerisch, aber morgen werden die Temperaturen in ganz Deutschland steigen. Im Osten auf 20 bis 25 Grad, im Süden sind sogar 28 Grad möglich und es bleibt trocken. Die Aussichten für die kommenden Tage. Am Wochenende wird die Sonne in ganz Deutschland scheinen, mit Höchsttemperaturen zwischen 25 und 30 Grad.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

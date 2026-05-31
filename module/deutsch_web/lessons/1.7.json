@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.7",
+  "aufgabe": "1.7",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Informationen zum Veranstaltungskalender im Kulturzentrum",
+  "title": "Informationen zum Veranstaltungskalender im Kulturzentrum",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3876.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.7/1.7.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.7-1",
+      "label": "Sie möchten Tickets für eine Veranstaltung im Kulturzentrum kaufen. Was sollen Sie tun?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Am Mittwoch das Infobüro besuchen."
+        },
+        {
+          "key": "b",
+          "text": "Die Nummer 987654321 anrufen."
+        },
+        {
+          "key": "c",
+          "text": "Am Sonntag vorbeikommen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Herzlich willkommen beim Kulturzentrum PRISMA. Sie sind mit unserem Veranstaltungskalender verbunden. Leider können wir Ihren Anruf gerade nicht persönlich entgegennehmen. Unser Infobüro ist montags von 14 bis 19 Uhr, mittwochs von 10 bis 15 Uhr und samstags von 12 bis 16 Uhr geöffnet. Tickets für aktuelle Veranstaltungen können Sie dort direkt kaufen. Für Fragen zu unseren Kunstkursen und Workshops erreichen Sie uns unter der separaten Hotline 987 654 321. Vielen Dank für Ihr Interesse und auf Wiederhören!",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

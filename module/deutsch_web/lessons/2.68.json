@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.68",
+  "aufgabe": "2.68",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Wettervorhersage für Dortmund",
+  "title": "Wettervorhersage für Dortmund",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1948.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.68/2.68.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.68-1",
+      "label": "Wie wird das Wetter am Sonntag?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Es gibt Regen."
+        },
+        {
+          "key": "b",
+          "text": "Es wird wärmer."
+        },
+        {
+          "key": "c",
+          "text": "Es wird sehr windig."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Hier ist die Wettervorhersage für Dortmund. Am Freitag bleibt es feucht und kühl mit Höchsttemperaturen um 8 Grad und starkem Wind, aber am Wochenende wird die Sonne häufiger zu sehen sein, begleitet von steigenden Temperaturen. In der nächsten Woche werden erneut starke Regenfälle mit Wind erwartet.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

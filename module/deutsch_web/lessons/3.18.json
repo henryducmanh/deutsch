@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.18",
+  "aufgabe": "3.18",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Nachhilfeunterricht",
+  "title": "Nachhilfeunterricht",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3988.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.18/3.18.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.18-1",
+      "label": "Herr Bauer möchte, dass Frau Meier nur bei den Prüfungen hilft.",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Richtig"
+        },
+        {
+          "key": "b",
+          "text": "Falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.18-2",
+      "label": "Worin hat die Tochter von Herrn Bauer Schwierigkeiten?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Bruchrechnung und Geometrie."
+        },
+        {
+          "key": "b",
+          "text": "Algebra und Textaufgaben."
+        },
+        {
+          "key": "c",
+          "text": "Grundrechenarten und Statistik."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Person 1 Guten Tag, Frau Mayer. Vielen Dank, dass Sie so kurzfristig kommen konnten. Meine Tochter braucht dringend Nachhilfe in Mathematik. Sie hat große Probleme mit den Grundlagen und verliert langsam den Anschluss. Person 2 Guten Tag, Herr Bauer. Kein Problem, ich helfe gerne. Ich habe früher als Lehrerin gearbeitet, bevor ich in die Verwaltung gewechselt bin. Seitdem gebe ich auch regelmäßig Nachhilfe für Kinder in der Mittelstufe. Welche Klassenstufe hat Ihre Tochter? Person 1 Sie ist jetzt in der siebten Klasse. Besonders schwer fallen ihr Geometrie und Bruchrechnung. Person 2 Das sind Themen, bei denen man mit viel Übung schnell Fortschritte machen kann. Möchten Sie, dass ich auch bei den Hausaufgaben helfe oder nur auf die Prüfungen vorbereite? Person 1 Beides wäre ideal. Wissen Sie, ich habe selbst kaum Zeit, ihr zu helfen, da ich oft beruflich unterwegs bin.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

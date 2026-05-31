@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.116",
+  "aufgabe": "2.116",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Hund ist krank",
+  "title": "Hund ist krank",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-922.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.116/2.116.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.116-1",
+      "label": "Mark fragt, ob Anja",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "auch am Samstag arbeiten kann."
+        },
+        {
+          "key": "b",
+          "text": "die Lieferung am Morgen annehmen kann."
+        },
+        {
+          "key": "c",
+          "text": "schon früher zur Arbeit kommen kann."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Hallo Anja, hier ist Marc. Entschuldige, dass ich dich jetzt noch anrufe, aber mein Hund ist krank und ich muss morgen zu Hause bleiben, um ihn zu betreuen. Wäre es möglich, dass du morgen ausnahmsweise schon um 6 Uhr statt um 8 Uhr ins Büro kommst? Ich weiß, das ist früh, aber jemand muss die Lieferung annehmen. Am nächsten Samstag kannst du dafür einen freien Tag nehmen. Dann kommt meine Schwester zurück und kann einspringen. Könntest du mir bitte zurückrufen, wenn du die Nachricht gehört hast?",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

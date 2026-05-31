@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.30",
+  "aufgabe": "1.30",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "InvestMax",
+  "title": "InvestMax",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1994.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.30/1.30.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.30-1",
+      "label": "Was bietet InvestMax an?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Nur Aktienhandel."
+        },
+        {
+          "key": "b",
+          "text": "Kostenlose Beratungstermine."
+        },
+        {
+          "key": "c",
+          "text": "Maßgeschneiderte Anlagestrategien."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Willkommen bei Investmax, Ihrem Partner für maßgeschneiderte Anlagestrategien. Unsere Experten unterstützen Sie bei der optimalen Verwaltung Ihres Vermögens, sei es für den Aufbau von Altersvorsorge, Immobilieninvestitionen oder Aktienhandel. Vereinbaren Sie noch heute einen Beratungstermin und sichern Sie sich Ihre finanzielle Zukunft.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

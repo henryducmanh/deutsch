@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.10",
+  "aufgabe": "1.10",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Informationen zum gefundenen Gegenstand im Supermarkt",
+  "title": "Informationen zum gefundenen Gegenstand im Supermarkt",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3873.html",
+    "lingq_lesson_id": 44762451,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44762451/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/1.10.e493db6fb10a.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.10/1.10.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.10-1",
+      "label": "Sie haben Ihren Geldbeutel verloren. Welche Nummer sollten Sie anrufen?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "015145678912"
+        },
+        {
+          "key": "b",
+          "text": "08005553321"
+        },
+        {
+          "key": "c",
+          "text": "08003344556"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Einleitung",
+      "text": "Achtung, liebe Kunden! In unserem Supermarkt wurde ein schwarzer Geldbeutel mit mehreren Karten und Bargeld gefunden. Wenn Sie Ihren Geldbeutel vermissen, melden Sie sich bitte unter der",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 015145678912",
+      "text": ", um die Abholung zu arrangieren. Zusätzlich möchten wir Sie daran erinnern, dass Sie unsere Kundenhotline unter der",
+      "key_phrase": ", um die Abholung zu arrangieren."
+    },
+    {
+      "label": "Aussage 0805",
+      "text": "553 321 erreichen können. Für Feedback und Anregungen zur Qualität unseres Services steht Ihnen außerdem die",
+      "key_phrase": "553 321 erreichen können."
+    },
+    {
+      "label": "Aussage 0800",
+      "text": "334 4556 zur Verfügung. Vielen Dank für Ihre Aufmerksamkeit.",
+      "key_phrase": "334 4556 zur Verfügung."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.17",
+  "aufgabe": "2.17",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Konzertankündigung",
+  "title": "Konzertankündigung",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4109.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.17/2.17.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.17-1",
+      "label": "Wann beginnt das Konzert von Sonnenschein?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Um 19 Uhr."
+        },
+        {
+          "key": "b",
+          "text": "Um 20 Uhr."
+        },
+        {
+          "key": "c",
+          "text": "Um 22 Uhr."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Liebe Musikfreunde, wir freuen uns, Ihnen mitteilen zu können, dass die bekannte Band Sonnenschein am Freitag den 22. Dezember um 20 Uhr in der Stadthalle auftreten wird. Der Einlass beginnt um 19 Uhr. Tickets können Sie an der Abendkasse oder online erwerben. Bitte beachten Sie, dass die Anzahl der Sitzplätze begrenzt ist. Für Schüler und Studenten gibt es ermäßigte Preise. Wir möchten Sie außerdem darauf hinweisen, dass das Parkhaus neben der Stadthalle wegen Bauarbeiten nicht genutzt werden kann. Wir empfehlen Ihnen, öffentliche Verkehrsmittel zu nutzen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

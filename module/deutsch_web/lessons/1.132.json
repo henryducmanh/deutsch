@@ -1,0 +1,62 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.132",
+  "aufgabe": "1.132",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Deutschkurs anmelden",
+  "title": "Deutschkurs anmelden",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-289.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.132/1.132.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.132-1",
+      "label": "Sie möchten sich für einen Deutschkurs anmelden. Was sollen Sie tun?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Montags oder mittwochs vorbeikommen."
+        },
+        {
+          "key": "b",
+          "text": "Sich im Kurs anmelden."
+        },
+        {
+          "key": "c",
+          "text": "Die Nummer 123456 wählen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Einleitung",
+      "text": "Guten Tag. Sie sind verbunden mit der Volkshochschule Dortmund, Sprachenberatung. Im Augenblick ist unser Telefon leider nicht besetzt. Die Sprachenberatung hat Montags von 13 - 18 Uhr und Mittwochs von 9 - 12 Uhr geöffnet. Wenn Sie einen Sprachkurs besuchen möchten, müssen Sie vorher in die Beratung kommen, damit wir für Sie den besten Kurs finden können. Informationen zu anderen Kursen an der Volkshochschule erhalten Sie unter der",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 10320456",
+      "text": ". Vielen Dank.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

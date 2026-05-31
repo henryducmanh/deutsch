@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.92",
+  "aufgabe": "1.92",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Reisebüro am Bahnhof",
+  "title": "Reisebüro am Bahnhof",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1836.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.92/1.92.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.92-1",
+      "label": "Warum wurde der Zug annulliert?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Wegen eines Unfalls."
+        },
+        {
+          "key": "b",
+          "text": "Wegen Gleisbauarbeiten."
+        },
+        {
+          "key": "c",
+          "text": "Wegen einer Störung."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Hallo, hier ist das Reisebüro am Bahnhof. Ihr gebuchter Zug nach München am Samstag wurde aufgrund von Gleisbauarbeiten annulliert. Bitte kontaktieren Sie uns um eine Rückerstattung oder alternative Reiseoptionen zu besprechen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

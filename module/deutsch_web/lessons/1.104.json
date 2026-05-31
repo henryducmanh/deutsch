@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.104",
+  "aufgabe": "1.104",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Reparaturarbeiten",
+  "title": "Reparaturarbeiten",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1029.html",
+    "lingq_lesson_id": 44762463,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44762463/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/1.104.fcd3427e501b.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.104/1.104.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.104-1",
+      "label": "Was wird als vorübergehende Alternative empfohlen?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Die Nutzung der Treppen oder des Nebeneingangs."
+        },
+        {
+          "key": "b",
+          "text": "Das Warten auf die Reparatur des Aufzugs."
+        },
+        {
+          "key": "c",
+          "text": "Die Verwendung des Aufzugs im Nebengebäude."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrte Kunden! Aufgrund unerwarteter Reparaturarbeiten wird der Aufzug im Gebäude bis zum 5. August außer Betrieb sein. Wir entschuldigen uns für die Unannehmlichkeiten. Bitte nutzen Sie vorübergehend die Treppen oder den Nebeneingang.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

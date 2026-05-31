@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.18",
+  "aufgabe": "2.18",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Öffnungszeiten des Schwimmbads",
+  "title": "Öffnungszeiten des Schwimmbads",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4108.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.18/2.18.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.18-1",
+      "label": "Wann öffnet das Schwimmbad am Wochenende?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Um 7 Uhr."
+        },
+        {
+          "key": "b",
+          "text": "Um 8 Uhr."
+        },
+        {
+          "key": "c",
+          "text": "Um 9 Uhr."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Liebe Gäste, wir möchten Sie über die neuen Winteröffnungszeiten unseres Hallenbads informieren. Ab dem 1. Dezember haben wir montags bis freitags von 7 Uhr bis 21 Uhr geöffnet. An Wochenenden können Sie unser Schwimmbad von 8 Uhr bis 20 Uhr nutzen. Bitte beachten Sie, dass die Saunadierzeit wegen Renovierungsarbeiten geschlossen bleibt. Wir danken für Ihr Verständnis. Für Kinder unter 6 Jahren ist der Eintritt frei. Weitere Informationen finden Sie auf unserer Website.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.141",
+  "aufgabe": "1.141",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Straßenbahnen sind während der Sommerferien",
+  "title": "Straßenbahnen sind während der Sommerferien",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-84.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.141/1.141.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.141-1",
+      "label": "Welche Straßenbahnen sind während der Sommerferien ebenfalls in Betrieb?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "1 und 2."
+        },
+        {
+          "key": "b",
+          "text": "2 und 3."
+        },
+        {
+          "key": "c",
+          "text": "4 und 5."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Die Sommerferien sind zurück. Die Schüler haben schulfrei und die Würzburger Verkehrsbetriebe haben ihren Sommerfahrplan eingeführt. Vom 28. Juli bis zum 10. September verkehren nur die Straßenbahnen 4 und 5. Die Linien 1, 2 und 3 sind in dieser Zeit nicht in Betrieb, da sie hauptsächlich von Schülern und Studenten genutzt werden. Alle Busse fahren wie gewohnt.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

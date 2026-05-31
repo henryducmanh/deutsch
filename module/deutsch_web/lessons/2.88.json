@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.88",
+  "aufgabe": "2.88",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Liebe Zuhörer",
+  "title": "Liebe Zuhörer",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1400.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.88/2.88.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.88-1",
+      "label": "Was hören Sie?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Das Horoskop."
+        },
+        {
+          "key": "b",
+          "text": "Den Wetterbericht."
+        },
+        {
+          "key": "c",
+          "text": "Die Sportnachrichten."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Liebe Zuhörer, es ist 8 Uhr und es ist Zeit für einen Blick in die Sterne. Hier ist Ihr Horoskop für Montag, den 5. Februar. Fische, in letzter Zeit haben Sie viel Stress gehabt. Ein kurzer Urlaub könnte Ihnen guttun. Stier, Ihr Partner, benötigt Ihre Unterstützung. Lassen Sie ihn nicht allein. Zwillinge, fühlen Sie sich in Ihrem Beruf unzufrieden. Ihr Traumjob wartet bereits auf Sie.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -4,6 +4,8 @@
   "aufgabe": "4.30",
   "modul": "Hören",
   "niveau": "B1",
+  "teil": 4,
+  "source_book": "deutsch-vorbereitung",
   "thema": "Erfahrungen im Homeoffice",
   "title": "Erfahrungen im Homeoffice",
   "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
@@ -126,7 +128,7 @@
     },
     {
       "label": "Aussage 3",
-      "text": "Homeoffice ist für mich ein Eiltraum. Es gibt immer Ablenkungen zu Hause, sei es der Haushalt oder die ständige Versuchung, sich vor dem Fernseher zu entspannen. Ich vermisse die klare Trennung zwischen Arbeit und Freizeit im Büro. \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "text": "Homeoffice ist für mich ein Eiltraum. Es gibt immer Ablenkungen zu Hause, sei es der Haushalt oder die ständige Versuchung, sich vor dem Fernseher zu entspannen. Ich vermisse die klare Trennung zwischen Arbeit und Freizeit im Büro.",
       "key_phrase": "Homeoffice ist für mich ein Eiltraum."
     }
   ],
@@ -205,6 +207,6 @@
   "_meta": {
     "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
     "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
-    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
   }
 }

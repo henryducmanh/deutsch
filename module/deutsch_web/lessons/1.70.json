@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.70",
+  "aufgabe": "1.70",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Orthopäde",
+  "title": "Orthopäde",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1911.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.70/1.70.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.70-1",
+      "label": "Was tun, wenn ein Orthopäde dringend benötigt wird?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Am 1. März vorbeikommen."
+        },
+        {
+          "key": "b",
+          "text": "Am 1. März anrufen."
+        },
+        {
+          "key": "c",
+          "text": "Eine andere Nummer anrufen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Tag, hier meldet sich die orthopädische Praxis Dr. Kranz. Momentan befinden wir uns im Betriebsurlaub und unsere Praxis bleibt bis zum 1. März geschlossen. Bei dringenden Angelegenheiten steht Ihnen unsere Vertretung, Frau Dr. Lopez, in der Kaiserstraße 100, Telefonnummer 123555667, zur Verfügung. Für Akupunktur-Behandlungen übernimmt Frau Müller in dieser Zeit die Vertretung, zu finden ebenfalls in der Kaiserstraße 20, Telefonnummer 3457890. Ab dem 3. März sind wir wieder wie gewohnt für Sie erreichbar. Vielen Dank für Ihr Verständnis.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.107",
+  "aufgabe": "1.107",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "In Geschäft",
+  "title": "In Geschäft",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1026.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.107/1.107.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.107-1",
+      "label": "Wann ist das Geschäft ab nächster Woche geschlossen?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Montags."
+        },
+        {
+          "key": "b",
+          "text": "Dienstags bis samstags."
+        },
+        {
+          "key": "c",
+          "text": "Sonntags."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrte Kunden, wir informieren Sie über geänderte Öffnungszeiten in unserem Geschäft. Ab nächster Woche haben wir montags geschlossen, aber dafür sind wir dienstags bis samstags von 9 Uhr bis 18 Uhr für Sie da. Sonntags bleibt unser Geschäft wie gewohnt geschlossen. Wir hoffen auf Ihr Verständnis.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

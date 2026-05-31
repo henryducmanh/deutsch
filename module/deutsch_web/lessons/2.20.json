@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.20",
+  "aufgabe": "2.20",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Schneefälle",
+  "title": "Schneefälle",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4106.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.20/2.20.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.20-1",
+      "label": "Welche Haltestelle wird heute von der Linie 12 nicht angefahren?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Hauptbahnhof"
+        },
+        {
+          "key": "b",
+          "text": "Marktplatz"
+        },
+        {
+          "key": "c",
+          "text": "Zentralstraße"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Liebe Fahrgäste, wegen starker Schneefälle fährt der Bus der Linie 12 heute nicht die Haltestelle Marktplatz an. Stattdessen gibt es einen Ersatzbus, der alle 30 Minuten ab der Haltestelle Zentralstrasse fährt. Beachten Sie, dass die Linie 8 weiterhin planmäßig fährt und die Haltestelle Hauptbahnhof bedient. Für Besucher des Weihnachtsmarktes empfehlen wir die Straßenbahn Linie 3, die zusätzliche Wagen einsetzt. Vielen Dank für Ihr Verständnis.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

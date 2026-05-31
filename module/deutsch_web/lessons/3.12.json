@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.12",
+  "aufgabe": "3.12",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Bücherei",
+  "title": "Bücherei",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4168.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.12/3.12.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.12-1",
+      "label": "Man kann Filme, Hörbücher und Spiele ausleihen.",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "richtig"
+        },
+        {
+          "key": "b",
+          "text": "falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.12-2",
+      "label": "Die Bücherei bietet an,",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Bücher nur vor Ort zu lesen."
+        },
+        {
+          "key": "b",
+          "text": "E-Books von zu Hause auszuleihen."
+        },
+        {
+          "key": "c",
+          "text": "Bücher für eine Woche kostenlos auszuleihen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Person 1 Hallo Paul, hast du schon von der neuen Bücherei gehört? Person 2 Nein, was gibt es denn da? Person 1 Sie hat viele neue Angebote. Man kann jetzt nicht nur Bücher ausleihen, sondern auch Filme, Bücher und Spiele. Person 2 Das klingt interessant. Gibt es auch E Books? Person 1 Ja, und man kann sie sogar von zu Hause aus online ausleihen. Dafür braucht man nur einen Ausweis und der ist in den ersten drei Monaten gratis. Person 2 Super, ich wollte mir sowieso ein Buch über Gartengestaltung holen. Gibt es eine Liste der verfügbaren Titel? Person 1 Die Liste ist auf der Webseite der Bücherei. Schau einfach dort nach.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.25",
+  "aufgabe": "1.25",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Cafe-Restaurant",
+  "title": "Cafe-Restaurant",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1999.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.25/1.25.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.25-1",
+      "label": "Für welche Angebote wirbt das Kaufhaus?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Für einen Besuch im Kaufhaus-Restaurant."
+        },
+        {
+          "key": "b",
+          "text": "Für Fitness und Gesundheit."
+        },
+        {
+          "key": "c",
+          "text": "Für gesunde Lebensmittel."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Geschätzte Gäste, bereiten Sie sich fit und gesund auf den Sommer vor. Unser Café-Restaurant im dritten Stock präsentiert Ihnen daher eine Auswahl an leichten und köstlichen Saisonsalaten, wie beispielsweise mit gebratener Hähnchenbrust oder Schafskäse, begleitet von frisch gepressten. Fruchtsäften Ihrer Wahl. All dies zu einem unschlagbaren Sommer-Fitnesspreis. Ein Salat Ihrer Wahl zusammen mit einem Glassaft für nur 5 Euro. Besuchen Sie uns und lassen Sie es sich schmecken.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

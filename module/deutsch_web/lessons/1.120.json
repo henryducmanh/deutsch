@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.120",
+  "aufgabe": "1.120",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Der orthopädischen Praxis Dr. Ulrich",
+  "title": "Der orthopädischen Praxis Dr. Ulrich",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-701.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.120/1.120.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.120-1",
+      "label": "Was soll Herr Ellen machen?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Zum Hausarzt gehen."
+        },
+        {
+          "key": "b",
+          "text": "Eine Überweisung vorbeibringen."
+        },
+        {
+          "key": "c",
+          "text": "Einen Termin ausmachen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrter Herr Ellen, ich melde mich im Namen der orthopädischen Praxis Dr. Ulrich. Im Hinblick auf Ihre bevorstehende Knieoperation in 20 Tagen benötigen wir dringend die aktuellen Blutwerte für die anstehende Anästhesie. Wir möchten Sie höflich darum bitten, Ihren Hausarzt sobald wie möglich aufzusuchen und uns die Ergebnisse seiner Untersuchung zukommen zu lassen. Ihre Kooperation in dieser Angelegenheit wäre sehr geschätzt. Wir bedanken uns in wo aus für ihre Bemühungen, mit freundlichen Grüßen und auf baldiges Wiederhören.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

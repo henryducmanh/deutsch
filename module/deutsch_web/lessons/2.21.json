@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.21",
+  "aufgabe": "2.21",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Die Supermarktkette „Frisch & Günstig“",
+  "title": "Die Supermarktkette „Frisch & Günstig“",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4105.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.21/2.21.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.21-1",
+      "label": "Wo gibt es heute Rabatte?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "bei Brot"
+        },
+        {
+          "key": "b",
+          "text": "bei Fleischprodukten"
+        },
+        {
+          "key": "c",
+          "text": "beim Kundenparkplatz"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Achtung, liebe Kundinnen und Kunden, die Supermarktkette frisch und günstig bietet heute exklusive Rabatte. Obst und Gemüse erhalten Sie 20 Prozent günstiger. In unserer Bäckerei gibt es frisches Brot zum halben Preis. Außerdem können Sie an unserem Glücksrad vor der Kasse tolle Preise gewinnen. Bitte beachten Sie, dass der Kundenparkplatz wegen Bauarbeiten nur teilweise genutzt werden kann. Unser Lieferservice steht Ihnen aber wie gewohnt zur Verfügung. Die Aktion gilt nur heute bis 19 Uhr. Viel Spaß beim Einkaufen!",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

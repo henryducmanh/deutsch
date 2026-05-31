@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.34",
+  "aufgabe": "2.34",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Waldbrandgefahr",
+  "title": "Waldbrandgefahr",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4092.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.34/2.34.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.34-1",
+      "label": "Wo ist das Grillen erlaubt?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "An öffentlichen Grillplätzen"
+        },
+        {
+          "key": "b",
+          "text": "Auf offenen Feuerstellen"
+        },
+        {
+          "key": "c",
+          "text": "Im Stadtpark"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Achtung, Achtung! Aufgrund einer erhöhten Waldbrandgefahr ist das Grillen im gesamten Stadtparkgebiet ab sofort untersagt. Bitte nutzen Sie die öffentlichen Grillplätze am Stadtrand. Offene Feuerstellen sind strikt verboten. Wir bitten Sie, mitzuhelfen, die Umwelt zu schützen. Vielen Dank für Ihr Verständnis.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

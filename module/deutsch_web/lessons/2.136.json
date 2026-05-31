@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.136",
+  "aufgabe": "2.136",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Ostbahnhof",
+  "title": "Ostbahnhof",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-69.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.136/2.136.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.136-1",
+      "label": "Was sollen die Reisenden tun?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Im Zug bleiben."
+        },
+        {
+          "key": "b",
+          "text": "Mit einem Shuttlebus weiterfahren."
+        },
+        {
+          "key": "c",
+          "text": "Mit einem anderen Zug weiterreisen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Der nächste Halt ist der Bahnhof Weststadt. Liebe Reisende, aufgrund eines unerwarteten technischen Problems muss dieser Zug seine Fahrt hier beenden. Wir bitten alle Passagiere, den Zug zu verlassen und die bereitgestellten Shuttlebusse am Ausgang des Bahnhofs zu nutzen, um ihre Reise fortzusetzen. Wir entschuldigen uns für die Unannehmlichkeiten und hoffen, dass Sie Ihre Weiterreise angenehm fortsetzen können.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

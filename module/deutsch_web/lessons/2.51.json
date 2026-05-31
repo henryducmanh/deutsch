@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.51",
+  "aufgabe": "2.51",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "NRW",
+  "title": "NRW",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1967.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.51/2.51.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.51-1",
+      "label": "Wo können Sie Musik hören?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Auf NRW 2."
+        },
+        {
+          "key": "b",
+          "text": "Auf NRW 3."
+        },
+        {
+          "key": "c",
+          "text": "Auf NRW 5."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Und hier sind unsere Programm-Tipps für den Abend. Auf NRW 2 erwartet Sie heute Abend ein spannendes Hörspiel-Krimi. Auf NRW 3 können Sie das Wunschkonzert mit Carmen Wasser hören, bei dem Lieder gespielt werden, die sich unsere Hörer wünschen. Und auf NRW 5 läuft eine Dokumentation über die Arbeit der Bundesregierung. Wenn Sie wissen möchten, was Politiker den ganzen Tag tun, schalten Sie einfach ein.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

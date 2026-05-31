@@ -1,0 +1,62 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.67",
+  "aufgabe": "1.67",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Volkshochschule Dortmund/Nord",
+  "title": "Volkshochschule Dortmund/Nord",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1914.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.67/1.67.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.67-1",
+      "label": "Was ist der richtige Schritt, wenn Sie sich für einen Deutschkurs anmelden möchten?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Sich im Kurs anmelden."
+        },
+        {
+          "key": "b",
+          "text": "Die Nummer 22334455 wählen."
+        },
+        {
+          "key": "c",
+          "text": "Montags oder mittwochs vorbeikommen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Einleitung",
+      "text": "Hallo! Sie haben die Sprachenberatung der Volkshochschule Dortmund Nord erreicht. Leider ist unser Telefon gerade nicht besetzt. Die Sprachenberatung ist montags von 13 bis 18 Uhr und mittwochs von 9 bis 12 Uhr geöffnet. Wenn Sie Interesse an einem Sprachkurs haben, bitten wir Sie, vorab zur Beratung zu kommen, damit wir den passenden Kurs für Sie finden können. Für Informationen zu anderen Kursen an der Volkshochschule können Sie die",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 22334455",
+      "text": "wählen. Vielen Dank!",
+      "key_phrase": "wählen."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

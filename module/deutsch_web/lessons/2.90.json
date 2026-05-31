@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.90",
+  "aufgabe": "2.90",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Die Straße vor dem Bahnhof",
+  "title": "Die Straße vor dem Bahnhof",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1065.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.90/2.90.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.90-1",
+      "label": "Was wird empfohlen, um dennoch zum Bahnhof zu gelangen?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Den Besuch des Bahnhofs verschieben."
+        },
+        {
+          "key": "b",
+          "text": "Die gesperrte Straße passieren."
+        },
+        {
+          "key": "c",
+          "text": "Am Supermarkt parken und den Umleitungen folgen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Tag. Wir möchten darauf hinweisen, dass aufgrund von Baumaßnahmen die Straße vor dem Bahnhof für die nächsten zwei Wochen gesperrt ist. Für Reisende, die mit dem Auto kommen, empfehlen wir die Nutzung der Parkplätze am nahegelegenen Supermarkt. Beachten Sie die Umleitungen und folgen Sie den Schildern. Vielen Dank für Ihr Verständnis.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

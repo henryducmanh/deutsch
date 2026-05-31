@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.21",
+  "aufgabe": "3.21",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "In der Reinigung",
+  "title": "In der Reinigung",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3984.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.21/3.21.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.21-1",
+      "label": "Die Kundin möchte einen Teppich reinigen lassen.",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Richtig"
+        },
+        {
+          "key": "b",
+          "text": "Falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.21-2",
+      "label": "Was kostet die Standard-Reinigung eines Mantels diese Woche?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "12 Euro"
+        },
+        {
+          "key": "b",
+          "text": "15 Euro"
+        },
+        {
+          "key": "c",
+          "text": "20 Euro"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Person 1 Guten Tag, wie kann ich Ihnen helfen? Person 2 Guten Tag, ich möchte diesen Mantel reinigen lassen. Wie lange dauert das normalerweise? Person 1 Für Mäntel brauchen wir in der Regel zwei Werktage. Wenn es schneller gehen muss, bieten wir auch eine Expressreinigung an. Person 2 Und wie teuer ist das? Person 1 Die Standardreinigung kostet 15 Euro. Für die Expressreinigung berechnen wir 20 Euro. Diese Woche gibt es allerdings auf Standardreinigungen eine Ermäßigung von 3 Euro. Person 2 Das klingt gut. Und reinigen Sie auch Teppiche? Person 1 Natürlich, Teppichreinigungen sind diese Woche ebenfalls reduziert. Der Preis hängt von der Größe ab. Kleine Teppiche kosten normalerweise 25 Euro, aber mit der Ermäßigung zahlen Sie nur 20 Euro. Person 2 Interessant. Und wie lange dauert eine Teppichreinigung? Person 1 Das hängt von der Verschmutzung ab, aber normalerweise dauert es etwa fünf Werktage.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

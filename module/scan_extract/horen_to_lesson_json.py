@@ -45,6 +45,13 @@ INSTRUCTIONS = (
     "Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. "
     "Danach hören Sie die Aussagen."
 )
+# Instruction theo Teil (series). Key 4 = INSTRUCTIONS cũ (backward compat).
+INSTRUCTIONS_BY_TEIL = {
+    1: "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+    2: "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+    3: "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+    4: INSTRUCTIONS,
+}
 NOTE_VOCAB_ID = (
     "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền "
     "sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID."
@@ -200,6 +207,65 @@ def parse_questions(text: str, lesson_id: str):
     return thema, origin_url, aussagen
 
 
+def parse_questions_simple(text: str, lesson_id: str):
+    """(thema, origin_url, aussagen[]) cho series 1.x / 2.x / 3.x.
+
+    Khác parser series 4.x: mỗi H2 = nguyên văn câu hỏi (label), options a/b/c
+    nằm trong block ngay dưới H2 đó. 1.x/2.x có 1 H2; 3.x có 2 H2 (Q1 richtig/falsch,
+    Q2 a/b/c). KHÔNG gom union options — mỗi câu hỏi có ngân hàng riêng.
+    """
+    thema = ""
+    hm = re.search(r"^#\s*Aufgabe\b[^\n]*?[—\-]\s*(.+?)\s*$", text, re.MULTILINE)
+    if hm:
+        thema = hm.group(1).strip()
+
+    sm = re.search(r"^Source:\s*(\S+)", text, re.MULTILINE)
+    origin_url = sm.group(1).strip() if sm else ""
+
+    # H2 = question text. Bỏ qua các H2 không có option (vd section phụ).
+    headers = list(re.finditer(r"^##\s*(.+?)\s*$", text, re.MULTILINE))
+    if not headers:
+        logger.warning("[%s] parse_simple: không tìm thấy H2", lesson_id)
+        return thema, origin_url, []
+
+    aussagen = []
+    for i, h in enumerate(headers):
+        question_text = h.group(1).strip()
+        block_start = h.end()
+        block_end = headers[i + 1].start() if i + 1 < len(headers) else len(text)
+        block = text[block_start:block_end]
+
+        correct = ""
+        options = []
+        for om in OPTION_LINE.finditer(block):
+            key = om.group(1)
+            raw = om.group(2)
+            if RICHTIG.search(raw):
+                correct = key
+            opt_text = clean(RICHTIG.sub("", raw))
+            if opt_text:
+                options.append({"key": key, "text": opt_text})
+
+        if not options:
+            continue  # H2 không có options (Lösung/Erklärung section) → bỏ
+
+        if not correct:
+            logger.warning("[%s] H2 '%s': không tìm thấy **(richtig)**",
+                           lesson_id, question_text[:40])
+
+        aussagen.append({
+            "id": f"{lesson_id}-{len(aussagen) + 1}",
+            "label": question_text,
+            "correct": correct,
+            "options": sorted(options, key=lambda o: o["key"]),
+        })
+
+    if not aussagen:
+        logger.warning("[%s] parse_simple: 0 aussagen sau filter", lesson_id)
+
+    return thema, origin_url, aussagen
+
+
 # ── Parse transcript ──────────────────────────────────────────────────────
 def parse_transcript(text: str, lesson_id: str):
     """transcript[] + flag warn (split failed).
@@ -245,7 +311,7 @@ def parse_transcript(text: str, lesson_id: str):
 
 # ── Build 1 lesson ────────────────────────────────────────────────────────
 def build_lesson(lesson_id: str, csv_table: dict[str, dict], date: str,
-                 old_json: "dict | None" = None):
+                 old_json: "dict | None" = None, series: int = 4):
     """Build lesson dict.
 
     old_json: nội dung JSON cũ (đọc trước khi --force overwrite).
@@ -265,7 +331,13 @@ def build_lesson(lesson_id: str, csv_table: dict[str, dict], date: str,
         raise FileNotFoundError(f"thiếu {q_path}")
 
     q_text = q_path.read_text(encoding="utf-8")
-    thema, origin_url, aussagen = parse_questions(q_text, lesson_id)
+    if series in (1, 2, 3):
+        # 1.x/2.x = 1 câu hỏi; 3.x = 2 câu hỏi. Cùng dùng parser generic theo H2.
+        thema, origin_url, aussagen = parse_questions_simple(q_text, lesson_id)
+    else:  # series == 4: parser cũ (gom union options a–f)
+        thema, origin_url, aussagen = parse_questions(q_text, lesson_id)
+
+    instructions = INSTRUCTIONS_BY_TEIL.get(series, INSTRUCTIONS)
 
     transcript, warn = ([], False)
     if t_path.exists():
@@ -311,9 +383,11 @@ def build_lesson(lesson_id: str, csv_table: dict[str, dict], date: str,
         "aufgabe": lesson_id,
         "modul": "Hören",
         "niveau": "B1",
+        "teil": series,
+        "source_book": "deutsch-vorbereitung",
         "thema": thema,
         "title": thema,
-        "instructions": INSTRUCTIONS,
+        "instructions": instructions,
         "source": {
             "origin_url": origin_url,
             "lingq_lesson_id": lingq_lid,
@@ -331,7 +405,7 @@ def build_lesson(lesson_id: str, csv_table: dict[str, dict], date: str,
         "_meta": {
             "note_vocab_id": NOTE_VOCAB_ID,
             "note_lv": NOTE_LV,
-            "generated_by": f"horen_to_lesson_json.py Phase A {date}",
+            "generated_by": f"horen_to_lesson_json.py Phase B {date}",
         },
     }
     info = {
@@ -385,6 +459,14 @@ def main(argv=None) -> int:
     date = datetime.now().strftime("%Y-%m-%d")
     csv_table = load_lingq_csv()
 
+    # series quyết định parser + instructions + field teil. Mặc định 4 nếu --id
+    # không suy ra được (vd --id 4.2 → "4"; --id abc → 4).
+    series_src = args.series
+    if args.id:
+        head = args.id.split(".", 1)[0]
+        series_src = head if head.isdigit() else "4"
+    series_int = int(series_src) if series_src.isdigit() else 4
+
     ids = [args.id] if args.id else discover_ids(args.series)
 
     if dry:
@@ -417,11 +499,20 @@ def main(argv=None) -> int:
                 pass  # JSON cũ lỗi → bỏ qua, không merge
 
         try:
-            lesson, info = build_lesson(lesson_id, csv_table, date, old_json=old_json)
+            lesson, info = build_lesson(
+                lesson_id, csv_table, date, old_json=old_json, series=series_int
+            )
         except Exception as exc:  # noqa: BLE001
             n_err += 1
             logger.error("[%s] build lỗi: %s", lesson_id, exc)
             print(f"{lesson_id:<6}→ ERROR     {exc}")
+            continue
+
+        # Bài scrape thiếu options (vd 1.21) → 0 aussagen → skip, KHÔNG ghi file.
+        if not lesson["aussagen"]:
+            n_skip += 1
+            logger.warning("[%s] 0 aussagen, skip", lesson_id)
+            print(f"{lesson_id:<6}→ SKIP      (0 aussagen — scrape thiếu options)")
             continue
 
         if info["audio_host"] == "none":

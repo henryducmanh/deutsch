@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.130",
+  "aufgabe": "2.130",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Hamburg-Altona",
+  "title": "Hamburg-Altona",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-96.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.130/2.130.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.130-1",
+      "label": "Sie wollen nach Hamburg-Harburg. Was sollen Sie tun?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Bis Hamburg-Altona fahren."
+        },
+        {
+          "key": "b",
+          "text": "Bis Hannover fahren."
+        },
+        {
+          "key": "c",
+          "text": "Bis Hamburg-Hauptbahnhof fahren."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Wichtiger Hinweis für alle Fahrgäste, der S70 von Basel nach Hamburg-Altona, der normalerweise um 17 Uhr und 16 Minuten abfährt und über Frankfurt am Main, Kassel-Wilhelmshöhe, Göttingen und Hannover fährt, wird heute aufgrund von technischen Problemen nicht in Hamburg-Harburg anhalten. Reisende, die nach Hamburg-Harburg möchten, wird geraten, bis zum Hauptbahnhof Hamburg zu fahren. Weitere Informationen zu Anschlussmöglichkeiten erhalten Sie von den Zugbegleitern.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.97",
+  "aufgabe": "2.97",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Sonnenschein",
+  "title": "Sonnenschein",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1058.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.97/2.97.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.97-1",
+      "label": "Was wird empfohlen, um dennoch Ihren Besuch zu genießen?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Gemütliche Innenplätze nutzen."
+        },
+        {
+          "key": "b",
+          "text": "Auf der geschlossenen Terrasse bleiben."
+        },
+        {
+          "key": "c",
+          "text": "Das Cafe Sonnenschein verlassen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Herzlich willkommen im Café Sonnenschein. Beachten Sie bitte, dass aufgrund von Renovierungsarbeiten die Terrasse vorübergehend geschlossen ist. Wir bieten jedoch weiterhin gemütliche Innenplätze an. Ihre Aufgabe besteht galen, die geschlossene Terrasse zu verlassen und die gemütlichen Innenplätze zu nutzen. Wir danken für Ihr Verständnis und freuen uns auf Ihren Besuch.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

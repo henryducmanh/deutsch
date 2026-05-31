@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.23",
+  "aufgabe": "2.23",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Durchsage am Bahnhof",
+  "title": "Durchsage am Bahnhof",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4103.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.23/2.23.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.23-1",
+      "label": "Welcher Zug verspätet sich heute?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "der Zug nach Graz"
+        },
+        {
+          "key": "b",
+          "text": "der Zug nach Salzburg"
+        },
+        {
+          "key": "c",
+          "text": "der Zug nach Linz"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrte Fahrgäste, der Zug nach Salzburg, der normalerweise um 15 Uhr und 45 Minuten von Gleis 6 abfährt, verspätet sich heute und fährt erst um 16 Uhr und 10 Minuten ab. Wir bitten Sie, während der Wartezeit, die Annehmlichkeiten unserer Lounge am Gleis 3 zu nutzen. Beachten Sie, dass der Zug nach Linz weiterhin planmäßig um 15 Uhr und 50 Minuten von Gleis 5 abfährt. Der Sonderzug nach Graz, der heute ausnahmsweise eingesetzt wird, verlässt den Bahnhof um 16 Uhr und 20 Minuten von Gleis 8. Wir entschuldigen uns für die Unannehmlichkeiten und danken Ihnen für Ihr Verständnis.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

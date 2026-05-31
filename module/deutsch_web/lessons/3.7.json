@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.7",
+  "aufgabe": "3.7",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Reparatur einer Waschmaschine",
+  "title": "Reparatur einer Waschmaschine",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4173.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.7/3.7.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.7-1",
+      "label": "Die Schläuche der Waschmaschine mussten repariert werden.",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "richtig"
+        },
+        {
+          "key": "b",
+          "text": "falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.7-2",
+      "label": "Die Frau sagt dem Mann, dass",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "die Reparatur morgen fertig sein wird"
+        },
+        {
+          "key": "b",
+          "text": "die Reparatur 90 Euro kostet"
+        },
+        {
+          "key": "c",
+          "text": "die Schläuche ausgetauscht wurden"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Person 1 Guten Tag, ich habe gestern meine Waschmaschine bei Ihnen zur Reparatur abgegeben. Können Sie mir sagen, wann sie fertig ist? Person 2 Guten Tag, laut unserem System sollte die Reparatur spätestens morgen abgeschlossen sein. Person 1 Das ist gut zu hören. Was war denn das Problem? Person 2 Die Pumpe war defekt und musste ausgetauscht werden. Außerdem haben wir die Schläuche geprüft, die aber in Ordnung sind. Verstehe. Person 1 Wie viel wird mich das kosten? Person 2 Die Reparatur kostet insgesamt 79 Euro. Wenn Sie möchten, können wir Sie anrufen, sobald die Maschine fertig ist.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

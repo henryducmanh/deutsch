@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.115",
+  "aufgabe": "2.115",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Die Anzeigetafeln",
+  "title": "Die Anzeigetafeln",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-954.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.115/2.115.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.115-1",
+      "label": "Wo sollten die Passagiere hingehen?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Gleis 1"
+        },
+        {
+          "key": "b",
+          "text": "Gleis 2"
+        },
+        {
+          "key": "c",
+          "text": "Gleis 3"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Achtung, der Zug nach München fährt vom Gleis 3 ab. Bitte achten Sie auf die Durchsagen und beachten Sie die Anzeigetafeln für weitere Informationen. Reisende nach Stuttgart beachten bitte, dass sich die Gleisbelegung ändern kann.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

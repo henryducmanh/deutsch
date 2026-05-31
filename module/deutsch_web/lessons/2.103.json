@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.103",
+  "aufgabe": "2.103",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Alle Kinobesucher",
+  "title": "Alle Kinobesucher",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1052.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.103/2.103.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.103-1",
+      "label": "Was wird empfohlen, um die besten Plätze zu sichern?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Spontan am Tag des Films ins Kino gehen."
+        },
+        {
+          "key": "b",
+          "text": "Die Sitzplatzreservierungen ignorieren."
+        },
+        {
+          "key": "c",
+          "text": "Frühzeitig zum Kino kommen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Achtung, alle Kinobesucher! Aufgrund einer technischen Störung sind die Sitzplatzreservierungen für die nächsten Vorstellungen nicht verfügbar. Wir bitten um Ihr Verständnis und empfehlen, frühzeitig zum Kino zu kommen, um die besten verfügbaren Plätze zu sichern.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

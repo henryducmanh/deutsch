@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.115",
+  "aufgabe": "1.115",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Welche Plattform",
+  "title": "Welche Plattform",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-940.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.115/1.115.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.115-1",
+      "label": "Der Zug, der 60 Minuten Verspätung hat, kommt",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Auf Gleis 12"
+        },
+        {
+          "key": "b",
+          "text": "Auf Gleis 13"
+        },
+        {
+          "key": "c",
+          "text": "Auf Gleis 11"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Liebe Fahrgäste, der Zug aus Prag, der um 11 Uhr auf Gleis 12 ankommen sollte, hat 30 Minuten Verspätung und kommt auf Gleis 13 an. Der Zug, der aus Wien auf Gleis 13 ankommen sollte, hat eine Stunde Verspätung und Ankunft auf Gleis 11.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

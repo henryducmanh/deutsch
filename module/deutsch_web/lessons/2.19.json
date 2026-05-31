@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.19",
+  "aufgabe": "2.19",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Kulturveranstaltung",
+  "title": "Kulturveranstaltung",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4107.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.19/2.19.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.19-1",
+      "label": "Was ist das besondere Highlight des Weihnachtsmarkts?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Der Auftritt des örtlichen Chors um 18 Uhr."
+        },
+        {
+          "key": "b",
+          "text": "Die Tombola mit tollen Preisen um 20 Uhr."
+        },
+        {
+          "key": "c",
+          "text": "Das Kinderkarussell für die kleinen Gäste."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Tag, liebe Zuhörerinnen und Zuhörer! Am kommenden Samstag, den 16. Dezember, laden wir Sie herzlich zum großen Weihnachtsmarkt im Stadtpark ein. Der Markt beginnt um 10 Uhr und endet um 22 Uhr. Sie können sich auf viele Attraktionen freuen, Handwerksstände, ein Kinderkarussell und natürlich einen Auftritt des örtlichen Chors um 18 Uhr. Ein besonderes Highlight ist die Tombola mit tollen Preisen, die um 20 Uhr stattfindet. Bitte beachten Sie, dass Hunde aus Sicherheitsgründen nicht mitgebracht werden dürfen. Der Eintritt ist frei. Wir freuen uns auf Ihren Besuch.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

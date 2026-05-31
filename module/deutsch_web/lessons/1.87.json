@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.87",
+  "aufgabe": "1.87",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Autowerkstatt",
+  "title": "Autowerkstatt",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1858.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.87/1.87.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.87-1",
+      "label": "Warum hat sich die Reparatur verzögert?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Wegen einer verspäteten Lieferung."
+        },
+        {
+          "key": "b",
+          "text": "Wegen eines Personalmangels."
+        },
+        {
+          "key": "c",
+          "text": "Wegen der Notwendigkeit mehrerer Ersatzteile."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Autohaus Berger am Apparat. Die Reparatur Ihres Fahrzeugs ist abgeschlossen – es steht nun zur Abholung bereit. Wir bitten um Entschuldigung für die Verzögerung. Diese war notwendig, weil mehrere Ersatzteile bestellt werden mussten. Vielen Dank für Ihr Verständnis. Wir freuen uns, Sie bald bei uns begrüßen zu dürfen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

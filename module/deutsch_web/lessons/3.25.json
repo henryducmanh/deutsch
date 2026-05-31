@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.25",
+  "aufgabe": "3.25",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Beim Friseur",
+  "title": "Beim Friseur",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3974.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.25/3.25.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.25-1",
+      "label": "Herr Meier war bereits beim Arzt wegen seines Knies.",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Richtig"
+        },
+        {
+          "key": "b",
+          "text": "Falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.25-2",
+      "label": "Wo findet der Dialog statt?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "In einer Klinik"
+        },
+        {
+          "key": "b",
+          "text": "Im Wartezimmer eines Orthopäden"
+        },
+        {
+          "key": "c",
+          "text": "Beim Friseur"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Person 1 Guten Tag, Herr May. Schön, dass Sie da sind. Wie geht es Ihnen heute? Person 2 Guten Tag. Ach, na ja, ich habe seit ein paar Tagen Schmerzen im Knie. Vielleicht bin ich falsch aufgetreten. Person 1 Oh, das klingt unangenehm.Haben Sie schon einen Arzt besucht? Person 2 Noch nicht. Aber wenn es nicht besser wird, gehe ich nächste Woche. Person 1 Mein Bruder hatte auch Knieprobleme und war in der neuen Klinik am Stadtpark.Dort gibt es sehr gute Orthopäden. Person 2 Danke für den Tipp, das schaue ich mir an. Jetzt aber zu etwas Angenehmeren.Ich hätte gern die Haare etwas kürzer. Person 1 Kein Problem. Wollen wir es wie beim letzten Mal schneiden? Person 2 Ja, bitte.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

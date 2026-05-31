@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.142",
+  "aufgabe": "1.142",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Benachrichtigung zur Terminänderung im Friseursalon",
+  "title": "Benachrichtigung zur Terminänderung im Friseursalon",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-81.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.142/1.142.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.142-1",
+      "label": "Wann könnte Frau Hübsch ihren Termin bei Frau Keskin wahrnehmen?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Heute um 17 Uhr"
+        },
+        {
+          "key": "b",
+          "text": "Morgen um 17 Uhr"
+        },
+        {
+          "key": "c",
+          "text": "Übermorgen um 17 Uhr"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Tag, Frau Hübsch, ich bin Gabi Kaplan vom Friseursalon Star. Sie haben heute um 17 Uhr einen Termin bei Frau Keskin zum Haareschneiden. Leider ist sie heute krank. Es sind heute keine anderen Termine mehr verfügbar und ich kann Ihnen auch für morgen noch nichts anbieten. Jedoch wird Frau Keskin übermorgen wieder im Salon sein und Sie könnten um 17 Uhr kommen. Bitte lassen Sie uns kurz wissen, ob Ihnen das passt.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

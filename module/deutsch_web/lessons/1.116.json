@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.116",
+  "aufgabe": "1.116",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Frau Nasser",
+  "title": "Frau Nasser",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-923.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.116/1.116.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.116-1",
+      "label": "Frau Nasser soll",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "aktuelle Informationen zum Werbematerial einholen."
+        },
+        {
+          "key": "b",
+          "text": "die Kontakte externer Dienstleister neu organisieren."
+        },
+        {
+          "key": "c",
+          "text": "im Teamgespräch mit Herrn Wrobel zusammen Protokoll schreiben."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Morgen, Frau Nasser. Hier ist Leonel Meyer. Ich wollte Ihnen noch mitteilen, dass das Teamgespräch heute, wie bekannt, auf 15 Uhr verschoben wurde. Außerdem soll ich Ihnen von unserer Abteilungsleiterin ausrichten, dass Sie sich heute um das Protokoll keine Sorgen machen müssen. Herr Wrobel wird es übernehmen. Stattdessen bitten wir Sie, vor dem Teamgespräch bei unserer Werbeagentur anzurufen, um den aktuellen Status der neuen Broschüren zu erfahren. Die Kontaktdaten der Agentur finden Sie im zentralen Laufwerk unter externe Dienstleister. Ihre Erkenntnisse können Sie dann später in unserem Teamgespräch vorstellen. Vielen Dank und bis nachher.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

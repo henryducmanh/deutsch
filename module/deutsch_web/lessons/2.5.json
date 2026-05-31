@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.5",
+  "aufgabe": "2.5",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Gesundheitshinweis von Ärzten",
+  "title": "Gesundheitshinweis von Ärzten",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4121.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.5/2.5.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.5-1",
+      "label": "Wann kann ein Erkrankter zur Erstuntersuchung ins Ärztehaus kommen?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Montag bis Freitag von 8:00 bis 18:00 Uhr."
+        },
+        {
+          "key": "b",
+          "text": "Am Wochenende von 10:00 bis 14:00 Uhr."
+        },
+        {
+          "key": "c",
+          "text": "Täglich von 8:00 bis 20:00 Uhr."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Liebe Mitbürgerinnen und Mitbürger, mit Beginn der Grippesaison möchten wir Sie daran erinnern, wie wichtig der Schutz vor Infektionen ist. Waschen Sie regelmäßig Ihre Hände und vermeiden Sie engen Kontakt mit kranken Personen. Besonders für ältere Menschen und Personen mit chronischen Krankheiten wird eine Grippeimpfung empfohlen. Die Impfung kann in Ihrer Hausarztpraxis oder im Gesundheitszentrum durchgeführt werden. Das Gesundheitszentrum ist täglich von 8.00 bis 20 Uhr geöffnet. Die Sprechzeiten des Gesundheitszentrums sind Montag bis Freitag von 8, 00 bis 18 Uhr. Am Wochenende können Sie sich an die Notfallambulanz wenden, die von 10 Uhr bis 14 Uhr geöffnet ist. Denken Sie an Ihre Gesundheit und lassen Sie sich beraten.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.62",
+  "aufgabe": "2.62",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Stau",
+  "title": "Stau",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1954.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.62/2.62.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.62-1",
+      "label": "Wo gibt es einen Stau?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Auf der A7."
+        },
+        {
+          "key": "b",
+          "text": "Auf der A8."
+        },
+        {
+          "key": "c",
+          "text": "Auf der A9."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Die aktuellen Verkehrsinformationen lauten wie folgt. Auf der A7 in Richtung Dortmund-Nachham, der zuvor gemeldete Stau zwischen Würzburg-Heidingsfeld und der Raststätte Würzburg ist aufgelöst. Die Fahrbahn ist frei. Auf der A8 von München in Richtung Baden-Baden, zwischen Bernau am Chiemsee und Fraßdorf gibt es aufgrund eines Unfalls einen 10 km langen Stau. Bitte fahren Sie vorsichtig. Auf der A9 von Berlin in Richtung Cottbus, zwischen Pegnitz und Trockau besteht Gefahr durch Gegenstände auf der Fahrbahn.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

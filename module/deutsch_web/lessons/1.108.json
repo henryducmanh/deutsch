@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.108",
+  "aufgabe": "1.108",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Die Buslinie 45",
+  "title": "Die Buslinie 45",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1025.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.108/1.108.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.108-1",
+      "label": "Welche beiden Ersatzhaltestellen werden empfohlen?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Rathaus und Marktstraße."
+        },
+        {
+          "key": "b",
+          "text": "Marktstraße und Hauptbahnhof."
+        },
+        {
+          "key": "c",
+          "text": "Hauptbahnhof und Rathaus."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Achtung Fahrgäste! Die Buslinie 45 wird ab morgen aufgrund von Straßenarbeiten umgeleitet. Die Haltestelle am Rathaus entfällt vorübergehend. Bitte beachten Sie die Ersatzhaltestellen an der Marktstraße und Hauptbahnhof. Wir bitten um Ihr Verständnis für die Unannehmlichkeiten.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.43",
+  "aufgabe": "2.43",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Wettervorhersage für Westdeutschland",
+  "title": "Wettervorhersage für Westdeutschland",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3883.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.43/2.43.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.43-1",
+      "label": "Wie wird das Wetter in Westdeutschland am Freitag?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Es wird sonnig."
+        },
+        {
+          "key": "b",
+          "text": "Es gibt Regen."
+        },
+        {
+          "key": "c",
+          "text": "Es gibt Schnee."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Tag, liebe Zuhörer, die Wetterprognose für Westdeutschland sieht wie folgt aus. Am Freitag wird es in den westlichen Regionen größtenteils bewölkt sein mit vereinzelten Sonnenstrahlen, die durch die Wolken brechen. Im Laufe des Nachmittags ziehen jedoch Regenwolken auf und es sind teilweise starke Niederschläge zu erwarten, die in höheren Lagen sogar in Schnee übergehen können. In den tiefer gelegenen Gebieten bleibt es zunächst trocken, aber Gegenabend könnte es auch dort regnen. Die Temperaturen werden zwischen 4 und 7 Grad liegen, während die Gipfel der höheren Berge mit Schnee bedeckt sein könnten. Für das Wochenende wird wieder Sonnenschein prognostiziert, aber mit kühlen Temperaturen und weiterhin möglichen Regenschauen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

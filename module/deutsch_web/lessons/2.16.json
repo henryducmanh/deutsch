@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.16",
+  "aufgabe": "2.16",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Buchvorstellung in der Bibliothek",
+  "title": "Buchvorstellung in der Bibliothek",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4110.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.16/2.16.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.16-1",
+      "label": "Wann endet die Anmeldefrist für die Buchvorstellung?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Am Montag, den 11. Dezember."
+        },
+        {
+          "key": "b",
+          "text": "Am Mittwoch, den 13. Dezember."
+        },
+        {
+          "key": "c",
+          "text": "Am Freitag, den 15. Dezember."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Liebe Besucherinnen und Besucher, wir laden Sie herzlich zu einer besonderen Buchvorstellung in der Stadtbibliothek ein. Am kommenden Mittwoch, den 13. Dezember, wird die bekannte Autorin Laura Berger ihr neues Buch Winterträume vorstellen. Die Veranstaltung beginnt um 18 Uhr und 30 Minuten, der Eintritt ist kostenlos. Bitte beachten Sie, dass die Plätze begrenzt sind. Eine Anmeldung ist bis spätestens Montag, den 11. Dezember erforderlich. Für Kinder wird es eine separate Leserke geben und die Cafeteria ist ebenfalls geöffnet. Nach der Lesung gibt es die Möglichkeit, das Buch zu kaufen und signieren zu lassen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

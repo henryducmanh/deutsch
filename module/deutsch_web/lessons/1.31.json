@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.31",
+  "aufgabe": "1.31",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Baufirma",
+  "title": "Baufirma",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1993.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.31/1.31.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.31-1",
+      "label": "Was soll die Person dringend tun?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Die Baufirma zurückrufen."
+        },
+        {
+          "key": "b",
+          "text": "Die Renovierung verschieben."
+        },
+        {
+          "key": "c",
+          "text": "Eine E-Mail senden."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Hallo, hier ist Herr Schmidt von der Baufirma. Wir müssen dringend mit Ihnen über die geplante Renovierung Ihres Hauses sprechen. Wir haben Ihnen eine E-Mail geschickt, aber noch keine Antwort erhalten. Bitte rufen Sie uns so schnell wie möglich zurück, um die Details zu besprechen. Die Nummer lautet 030123456789. Herzlichen Dank!",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

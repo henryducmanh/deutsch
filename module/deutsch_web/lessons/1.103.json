@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.103",
+  "aufgabe": "1.103",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Der Buslinie 62",
+  "title": "Der Buslinie 62",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1030.html",
+    "lingq_lesson_id": 44762458,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44762458/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/1.103.b5f119c765be.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.103/1.103.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.103-1",
+      "label": "Was ändert sich in Bezug auf die Fahrplanfrequenz?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Die Busse fahren jetzt alle 15 Minuten."
+        },
+        {
+          "key": "b",
+          "text": "Die Busse fahren jetzt alle 30 Minuten."
+        },
+        {
+          "key": "c",
+          "text": "Die Busse fahren jetzt stündlich."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Liebe Fahrgäste, wir informieren Sie darüber, dass ab nächster Woche der Fahrplan der Buslinie 62 geändert wird. Die Busse werden nun alle 30 Minuten verkehren, aber es gibt zusätzliche Haltestellen. Bitte beachten Sie die aktualisierten Fahrpläne an den Haltestellen und auf der Website des Verkehrsunternehmens.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.59",
+  "aufgabe": "2.59",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Kfz-Versicherungen",
+  "title": "Kfz-Versicherungen",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1957.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.59/2.59.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.59-1",
+      "label": "Welches ist das letzte Datum, an dem Sie Ihre Versicherung kündigen müssen?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Bis Ende November."
+        },
+        {
+          "key": "b",
+          "text": "Bis zum Jahresende."
+        },
+        {
+          "key": "c",
+          "text": "Es gibt keinen festen Termin."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Geschätzte Zuhörer, herzlich willkommen zu unserem Programm HIT.Fm. Der 30. November stellt den finalen Zeitpunkt dar, an dem Sie Ihre Kraftfahrzeugversicherung für das folgende Jahr umstellen können. Warum ausgerechnet Ende November? Die meisten Kfz-Versicherungen erstrecken sich bis zum 31. Dezember und die gesetzliche Kündigungsfrist beträgt einen Monat. Es sei denn, es liegt ein spezieller Kündigungsgrund vor. Versäumt man den 30. November, versäumt man somit die Möglichkeit, finanziell zu profitieren.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

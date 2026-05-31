@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.35",
+  "aufgabe": "2.35",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Wochenmarkt",
+  "title": "Wochenmarkt",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4091.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.35/2.35.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.35-1",
+      "label": "Wo findet der Wochenmarkt morgen statt?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Auf dem Parkplatz der Sporthalle"
+        },
+        {
+          "key": "b",
+          "text": "In der Fußgängerzone"
+        },
+        {
+          "key": "c",
+          "text": "Am Rathausplatz"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrte Damen und Herren, wir möchten Sie darauf hinweisen, dass der Wochenmarkt am Rathausplatz aufgrund einer Kulturveranstaltung morgen nicht wie gewohnt stattfinden wird. Stattdessen finden Sie den Markt auf dem Parkplatz der Sporthalle. Bitte beachten Sie, dass die Öffnungszeiten dieselben bleiben, von 8, 00 bis 14 Uhr. Der Parkplatz ist für Autos gesperrt. Nutzen Sie bitte die öffentlichen Verkehrsmittel. Wir danken Ihnen für Ihr Verständnis.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

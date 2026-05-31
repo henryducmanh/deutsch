@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.43",
+  "aufgabe": "1.43",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Einkaufszentrum",
+  "title": "Einkaufszentrum",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1980.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.43/1.43.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.43-1",
+      "label": "Welcher Bereich des Einkaufszentrums ist betroffen?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Der Nordflügel."
+        },
+        {
+          "key": "b",
+          "text": "Der Südflügel."
+        },
+        {
+          "key": "c",
+          "text": "Der Westflügel."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrte Kunden, aufgrund von Wartungsarbeiten wird der Aufzug im Westflügel des Gebäudes für den Rest des Tages außer Betrieb sein. Bitte nutzen Sie die Treppen oder den Aufzug im Ostflügel. Wir entschuldigen uns für die Unannehmlichkeiten und danken Ihnen für Ihr Verständnis.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

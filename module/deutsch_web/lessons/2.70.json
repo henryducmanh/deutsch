@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.70",
+  "aufgabe": "2.70",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Vermisst",
+  "title": "Vermisst",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1946.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.70/2.70.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.70-1",
+      "label": "Herr Müller",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "wird von der Polizei gesucht."
+        },
+        {
+          "key": "b",
+          "text": "wird seit Tagen vermisst."
+        },
+        {
+          "key": "c",
+          "text": "hatte einen Unfall."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Hier sind die aktuellen Nachrichten. Zusätzlich liegt uns eine Bekanntmachung der Polizei vor. Seit gestern Abend wird Herr Müller vermisst. Herr Müller, 80 Jahre alt, begab sich auf dem Heimweg von der Kaiserstraße zu seiner Wohnung im Kreuzviertel von Dortmund. Er ist etwa 1,70 Meter groß, trägt einen braunen Wintermantel und eine Brille. Aufgrund seiner Orientierungsschwierigkeiten bitten wir um Hinweise, die von jeder Polizeidienststelle entgegengenommen werden.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

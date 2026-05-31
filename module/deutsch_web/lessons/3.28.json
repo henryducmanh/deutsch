@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.28",
+  "aufgabe": "3.28",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Auf der Arbeit",
+  "title": "Auf der Arbeit",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3969.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.28/3.28.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.28-1",
+      "label": "Die neue Kaffeemaschine bietet kostenpflichtigen Kaffee an.",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Richtig"
+        },
+        {
+          "key": "b",
+          "text": "Falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.28-2",
+      "label": "Wo wird die neue Kaffeemaschine stehen?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Nur im Erdgeschoss"
+        },
+        {
+          "key": "b",
+          "text": "Im Erdgeschoss und im dritten Stock"
+        },
+        {
+          "key": "c",
+          "text": "Nur im dritten Stock"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Person 1 Hallo Anna, hast du schon gehört, dass nächste Woche eine neue Kaffeemaschine geliefert wird? Person 2 Ja, ich habe davon gehört. Die alte Maschine war aber auch noch gut, oder? Person 1 Vielleicht. Aber die neue bietet gratis Kaffee für alle Mitarbeiter. Person 2 Wirklich? Das ist ja toll. Wo wird die neue Maschine stehen? Person 1 Eine in der Küche im Erdgeschoss und die andere im dritten Stock. Person 2 Perfekt. Und kann man sie auch für Tee nutzen? Person 1 Nein, nur für Kaffee. Aber es gibt weiterhin den Wasserkocher für Tee.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

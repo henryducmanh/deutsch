@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.1",
+  "aufgabe": "1.1",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "ICE 577 nach Köln",
+  "title": "ICE 577 nach Köln",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-14234.html",
+    "lingq_lesson_id": 44743345,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44743345/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audionorm/1.1.597e42cbf077.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.1/1.1.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.1-1",
+      "label": "Sie haben eine Reservierung in Wagen 25. Wohin müssen Sie?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Ganz nach vorne."
+        },
+        {
+          "key": "b",
+          "text": "Nach A bis C."
+        },
+        {
+          "key": "c",
+          "text": "Nach D bis F."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrte Fahrgäste, auf Gleis 4 fährt der ICE 577 nach Köln ein. Achtung! Aufgrund des heutigen Karnevals verkehrt dieser Zug in geänderter Wagenreihenfolge. Die Wagen der ersten Klasse befinden sich ganz nach vorne. Die Wagen mit den Nummern 22 bis 27 finden Sie in den Abschnitten A bis C. Die Wagen mit den Nummern 32 bis 37 finden Sie in den Abschnitten D bis F. Ich wiederhole: Die Wagen der ersten Klasse befinden sich ganz nach vorne. Die Wagen mit den Nummern 22 bis 27 finden Sie in den Abschnitten A bis C. Die Wagen mit den Nummern 32 bis 37 finden Sie in den Abschnitten D bis F.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

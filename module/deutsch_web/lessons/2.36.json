@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.36",
+  "aufgabe": "2.36",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Aqua Relax",
+  "title": "Aqua Relax",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4090.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.36/2.36.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.36-1",
+      "label": "Bis wann bleibt der Wellness-Bereich heute geöffnet?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "bis 17:00 Uhr"
+        },
+        {
+          "key": "b",
+          "text": "bis 20:00 Uhr"
+        },
+        {
+          "key": "c",
+          "text": "bis 22:00 Uhr"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrte Gäste, das Schwimmbad Aquarelex schließt heute aufgrund einer privaten Veranstaltung bereits um 17 Uhr. Normalerweise haben wir bis 22 Uhr geöffnet. Der Wellnessbereich bleibt allerdings für Mitglieder bis 20 Uhr geöffnet. Bitte beachten Sie, dass der Parkplatz vor dem Schwimmbad ebenfalls ab 18 Uhr gesperrt wird. Vielen Dank für Ihr Verständnis.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

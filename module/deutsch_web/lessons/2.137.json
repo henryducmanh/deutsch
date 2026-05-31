@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.137",
+  "aufgabe": "2.137",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Rosengarten",
+  "title": "Rosengarten",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-67.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.137/2.137.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.137-1",
+      "label": "Sie möchten zum Blumenplatz. Was sollten Sie tun?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Mit der U-Bahn-Linie 5 oder 6 fahren."
+        },
+        {
+          "key": "b",
+          "text": "Am „Stadtpark“ in den Bus umsteigen."
+        },
+        {
+          "key": "c",
+          "text": "Mit der Straßenbahn 23 fahren."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Werte Fahrgäste, wegen Arbeiten im Untergrund bleibt die Haltestelle Blumenplötz vorerst geschlossen. Deshalb werden die Linien U5 und U6 umgeleitet. Wenn Sie zum Blumenplötz fahren möchten, steigen Sie bitte am Stadtpark aus und nehmen Sie den Bus 23 bis zur Haltestelle Wasserplötz, wo Sie in die Straßenbahn 415 oder den Bus 56 umsteigen können. Beide bringen Sie zur Haltestelle Blumenplötz.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

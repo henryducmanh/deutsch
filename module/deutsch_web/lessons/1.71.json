@@ -1,0 +1,62 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.71",
+  "aufgabe": "1.71",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Anrufbeantworter des Bürgeramts Dortmund",
+  "title": "Anrufbeantworter des Bürgeramts Dortmund",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1910.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.71/1.71.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.71-1",
+      "label": "Wann hat das Bürgeramt geöffnet?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Täglich bis 18 Uhr."
+        },
+        {
+          "key": "b",
+          "text": "Auch samstagmittags."
+        },
+        {
+          "key": "c",
+          "text": "Auch samstagabends."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Einleitung",
+      "text": "Hallo, dies ist der automatische Anrufbeantworter des Bürgeramts Dortmund. Sie erreichen uns außerhalb unserer regulären Öffnungszeiten. Diese sind von Montag bis Freitag von 8 bis 14 Uhr und Dienstag sowie Donnerstags von 8 bis 18 Uhr. Zusätzlich haben wir auch samstags von 9 bis 14 Uhr geöffnet. Wenn Sie weitere Informationen benötigen, können Sie gerne unsere Telefon-Hotline unter der",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 123456",
+      "text": "anrufen. Vielen Dank!",
+      "key_phrase": "anrufen."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

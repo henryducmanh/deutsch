@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.20",
+  "aufgabe": "3.20",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Beim Schuster (Schuhreparatur)",
+  "title": "Beim Schuster (Schuhreparatur)",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3985.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.20/3.20.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.20-1",
+      "label": "Die Kundin möchte die Schuhe imprägnieren lassen.",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Richtig"
+        },
+        {
+          "key": "b",
+          "text": "Falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.20-2",
+      "label": "Was kostet die Reparatur eines Absatzes diese Woche?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "15 Euro"
+        },
+        {
+          "key": "b",
+          "text": "10 Euro"
+        },
+        {
+          "key": "c",
+          "text": "20 Euro"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Person 1 Guten Tag. Wie kann ich Ihnen helfen? Person 2 Guten Tag. Diese Schuhe haben einen kaputten Absatz. Können Sie das reparieren? Person 1 Natürlich. Das dauert normalerweise zwei Tage. Möchten Sie den Absatz austauschen oder reparieren lassen? Person 2 Was ist der Unterschied? Person 1 Ein neuer Absatz kostet 20 Euro, die Reparatur nur 15 Euro. Aber diese Woche gibt es auf Reparaturen einen Rabatt von 5 Euro. Person 2 Interessant. Was kostet es, wenn ich die Schuhe zusätzlich imprägnieren lassen möchte? Person 1 Imprägnieren kostet normalerweise 10 Euro. Diese Woche bieten wir das für 8 Euro an, aber nur in Kombination mit einem Austausch, nicht mit einer Reparatur. Person 2 Das klingt kompliziert. Und wie lange dauert das Imprägnieren? Person 1 Nur einen Tag extra, wenn es zusammen mit der Reparatur oder dem Austausch gemacht wird.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

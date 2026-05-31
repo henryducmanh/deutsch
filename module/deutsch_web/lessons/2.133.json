@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.133",
+  "aufgabe": "2.133",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Tropfen „Berliner“",
+  "title": "Tropfen „Berliner“",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-82.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.133/2.133.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.133-1",
+      "label": "Wer darf die Tropfen „Berliner“ nehmen?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Auch Babys."
+        },
+        {
+          "key": "b",
+          "text": "Auch Kinder ab 6 Jahren."
+        },
+        {
+          "key": "c",
+          "text": "Nur Erwachsene."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Tag, liebe Kunden. Der Herbst ist da und mit ihm auch die Erkältungssaison. Haben Sie bereits ein leichtes Kratzen im Hals bemerkt? Müssen Sie öfter niesen oder fühlen sich einfach erschöpft? Das sind Anzeichen für eine Erkältung. Dann empfehlen wir Ihnen die neuen pflanzlichen Erkältungstropfen Berliner. Diese Tropfen sind besonders gut verträglich und können von Erwachsenen und Kindern ab 6 Jahren verwendet werden. Fragen Sie Ihren Arzt oder Apotheker nach Berliner und erfahren Sie mehr.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

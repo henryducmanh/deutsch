@@ -73,13 +73,21 @@ function lesson_list($userId)
         $data = lesson_load($id);
         if ($data === null) { continue; }
         $title = $data['title'] ?? ($idx[$id]['chu_de'] ?? $id);
+        // teil: lấy từ JSON nếu có, fallback parse từ lesson_id ("1.5" → 1).
+        $t = $data['teil'] ?? null;
+        if ($t === null) {
+            $parts = explode('.', $id, 2);
+            $t = is_numeric($parts[0]) ? (int)$parts[0] : 0;
+        }
         $out[] = [
-            'lesson_id' => $id,
-            'title'     => $title,
-            'thema'     => $data['thema'] ?? ($idx[$id]['chu_de'] ?? ''),
-            'modul'     => $data['modul'] ?? 'Hören',
-            'niveau'    => $data['niveau'] ?? '',
-            'best'      => $scores[$id] ?? null, // ['correct'=>x,'total'=>y] hoặc null
+            'lesson_id'   => $id,
+            'title'       => $title,
+            'thema'       => $data['thema'] ?? ($idx[$id]['chu_de'] ?? ''),
+            'modul'       => $data['modul'] ?? 'Hören',
+            'niveau'      => $data['niveau'] ?? '',
+            'teil'        => (int)$t,
+            'source_book' => $data['source_book'] ?? 'deutsch-vorbereitung',
+            'best'        => $scores[$id] ?? null, // ['correct'=>x,'total'=>y] hoặc null
         ];
     }
     return $out;

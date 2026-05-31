@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.27",
+  "aufgabe": "1.27",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Der Intercity 348",
+  "title": "Der Intercity 348",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1997.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.27/1.27.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.27-1",
+      "label": "Was ist die empfohlene Vorgehensweise für Passagiere mit Fahrrädern?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "In der Mitte des Zuges einsteigen."
+        },
+        {
+          "key": "b",
+          "text": "Den Zug hinten betreten."
+        },
+        {
+          "key": "c",
+          "text": "Den Zug vorne betreten."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Bitte beachten Sie am Bahnsteig 3, der Intercity 348 von Dortmund nach Klagenfurt über Mannheim, Stuttgart, Augsburg, München, Salzburg hat heute eine umgekehrte Wagenreihung. Die Wagen der 1. Klasse sind im Bereich C in der Mitte des Zuges, während sich die Wagen der 2. Klasse in den Bereichen A, B und D befinden. Das Fahrradabteil ist heute ausnahmsweise am Ende des Zuges.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

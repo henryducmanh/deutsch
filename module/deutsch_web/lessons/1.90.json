@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.90",
+  "aufgabe": "1.90",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Tierarztpraxis Müller",
+  "title": "Tierarztpraxis Müller",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1838.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.90/1.90.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.90-1",
+      "label": "Warum werden die Termine abgesagt?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Wegen einer Renovierung."
+        },
+        {
+          "key": "b",
+          "text": "Wegen einer Schwangerschaft."
+        },
+        {
+          "key": "c",
+          "text": "Wegen einer Krankenhauseinlieferung."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Tag, hier spricht die Tierarztpraxis Müller. Leider müssen wir alle Termine für kommende Woche absagen, da unsere Hauptärztin unerwartet ins Krankenhaus eingeliefert wurde. Wir werden uns sobald wie möglich mit Ihnen in Verbindung setzen, um neue Termine zu vereinbaren.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

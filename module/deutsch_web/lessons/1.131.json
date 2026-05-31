@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.131",
+  "aufgabe": "1.131",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Angebot einer Wohnung",
+  "title": "Angebot einer Wohnung",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-290.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.131/1.131.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.131-1",
+      "label": "Was für eine Wohnung kann Familie Müller bekommen?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Eine 3-Zimmer-Wohnung."
+        },
+        {
+          "key": "b",
+          "text": "Eine Wohnung mit Balkon."
+        },
+        {
+          "key": "c",
+          "text": "Eine 2-Zimmer-Wohnung."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrte Frau Müller, ich bin Kahn von du Immobilien und grüße Sie herzlich. Möglicherweise haben wir eine interessante Gelegenheit für Sie. Es handelt sich nicht um die gesuchte Zweizimmerwohnung mit Balkon, sondern um eine Dreizimmerwohnung. Der Mietpreis beträgt lediglich 420 Euro inklusive Nebenkosten. Jedoch verfügt die Wohnung leider nicht über einen Balkon. Falls Sie Interesse an einer Besichtigung haben, freuen wir uns, wenn Sie zeitnah Kontakt mit uns aufnehmen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

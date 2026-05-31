@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.45",
+  "aufgabe": "2.45",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Programmvorschau",
+  "title": "Programmvorschau",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-2004.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.45/2.45.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.45-1",
+      "label": "Was kann man heute Abend im Radio lernen?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Tipps zum Ausgehen."
+        },
+        {
+          "key": "b",
+          "text": "Die Nachrichten."
+        },
+        {
+          "key": "c",
+          "text": "Kochen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Hier präsentiert Radio NRW die Programmvorschau für den heutigen Abend. Um 19 Uhr und 30 Minuten, wie üblich, die globalen Nachrichten, begleitet von Sportberichten und Wettervorhersagen. Um 20 Uhr gibt es entspannende Musik mit Billy John. Um 21 Uhr startet Tinder, bei dem Hörerinnen und Hörer Gleichgesinnte für gemeinsame Aktivitäten am Wochenende suchen. Um 22 Uhr können Hörer ihre Wunschmusik bei Andreas Wächter anfordern. Um 22 Uhr und 30 Minuten gibt Starkoch Axel Humbug Kochtipps sowohl für Anfänger als auch für Fortgeschrittene.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

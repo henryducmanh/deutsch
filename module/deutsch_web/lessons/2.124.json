@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.124",
+  "aufgabe": "2.124",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Von welchem Gleis",
+  "title": "Von welchem Gleis",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-314.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.124/2.124.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.124-1",
+      "label": "Von welchem Gleis müssen Sie heute fahren, um zum Bahnhof Westend zu gelangen?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Von Gleis 6."
+        },
+        {
+          "key": "b",
+          "text": "Von Gleis 4."
+        },
+        {
+          "key": "c",
+          "text": "Von Gleis 7."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrte Reisende, aufgrund technischer Schwierigkeiten kommt es bei der Zugverbindung Z15 zum Bahnhof Westend zu einer Verzögerung von 15 Minuten. Zudem möchten wir Sie darauf hinweisen, dass der Zug heute nicht wie gewohnt von Gleis 6 abfährt, sondern von Gleis 4. Wir bitten um Ihr Verständnis.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

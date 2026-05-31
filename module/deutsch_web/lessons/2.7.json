@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.7",
+  "aufgabe": "2.7",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Straßenreinigung im Winter",
+  "title": "Straßenreinigung im Winter",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4119.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.7/2.7.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.7-1",
+      "label": "Wann beginnt die Straßenreinigung am Wochenende?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Um 6:00 Uhr."
+        },
+        {
+          "key": "b",
+          "text": "Um 8:00 Uhr."
+        },
+        {
+          "key": "c",
+          "text": "Um 9:00 Uhr."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Tag liebe Bürgerinnen und Bürger. Mit Beginn der kalten Jahreszeit erinnert die Stadtverwaltung an die Winterdienstregelungen. Die Straßenreinigung erfolgt werktags zwischen 6:00 und 8 Uhr. An Wochenende beginnt die Reinigung etwas später, nämlich um 9 Uhr und dauert bis 11 Uhr. Bitte parken Sie Ihr Auto nicht auf den Hauptverkehrsstraßen, um den Winterdienst nicht zu behindern. Beachten Sie, dass es bei starkem Schneefall zu Verzögerungen kommen kann. Vielen Dank für Ihre Unterstützung.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

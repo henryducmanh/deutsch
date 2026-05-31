@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.5",
+  "aufgabe": "3.5",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Autowerkstatt",
+  "title": "Autowerkstatt",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4176.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.5/3.5.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.5-1",
+      "label": "Die Bremsen des Autos wurden überprüft.",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "richtig"
+        },
+        {
+          "key": "b",
+          "text": "falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.5-2",
+      "label": "Der Mann erfährt, dass",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "die Reparatur 300 Euro kostet"
+        },
+        {
+          "key": "b",
+          "text": "die Scheibenwischer bald gewechselt werden sollten"
+        },
+        {
+          "key": "c",
+          "text": "die Reifen repariert werden müssen"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Person 1 Guten Tag, ich wollte mich erkundigen, ob mein Auto schon repariert ist. Person 2 Guten Tag. Lassen Sie mich kurz nachsehen. Ja, die Reparatur ist fertig. Wir haben die Bremsen erneuert und den Ölwechsel gemacht. Person 1 Und wie viel wird das kosten? Person 2 Die Rechnung beläuft sich auf 345 Euro. Person 1 Gab es Probleme mit den Reifen? Person 2 Nein, die Reifen sind in Ordnung, aber die Scheibenwischer sollten bald ausgetauscht werden. Möchten Sie das gleich machen lassen? Person 1 Nein, das mache ich später.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

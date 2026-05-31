@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.59",
+  "aufgabe": "1.59",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Weg zu einem Freund",
+  "title": "Weg zu einem Freund",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1922.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.59/1.59.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.59-1",
+      "label": "Wo wohnt Karl?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "An einem Park."
+        },
+        {
+          "key": "b",
+          "text": "Neben einer Schule."
+        },
+        {
+          "key": "c",
+          "text": "Neben dem Busbahnhof."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Hallo, Karl hier. Ich habe gerade deine Nachricht erhalten und freue mich, dass du morgen kommen kannst. Lass uns um 3 Uhr bei mir treffen. Der Weg zu meinem Haus ist unkompliziert. Du nimmst einfach den Bus 78 vom Busbahnhof in Richtung Westpark und steigst an der Haltestelle Lippenstraße aus. Dort befindet sich eine große Schule, die Käthe-Kollwitz-Schule. Mein Zuhause ist direkt gegenüber. Bis morgen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

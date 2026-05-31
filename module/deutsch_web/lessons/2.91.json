@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.91",
+  "aufgabe": "2.91",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Im Buchladen",
+  "title": "Im Buchladen",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1064.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.91/2.91.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.91-1",
+      "label": "Was wird empfohlen, wenn Sie das Buch suchen?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Den Buchladen verlassen."
+        },
+        {
+          "key": "b",
+          "text": "Auf die Verfügbarkeit des Buches im Lager warten."
+        },
+        {
+          "key": "c",
+          "text": "Vorab anrufen, um die Verfügbarkeit zu prüfen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Herzlich willkommen im Buchladen. Beachten Sie bitte, dass aufgrund von Platzmangel im Lager bestimmte Bücher vorübergehend nicht verfügbar sind. Wenn Sie ein bestimmtes Buch suchen, empfehlen wir, vorher anzurufen, um die aktuelle Verfügbarkeit zu klären. Wir danken für Ihr Verständnis und freuen uns auf Ihren Besuch.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

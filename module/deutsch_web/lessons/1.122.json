@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.122",
+  "aufgabe": "1.122",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "1 plus 1",
+  "title": "1 plus 1",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-697.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.122/1.122.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.122-1",
+      "label": "Ihr Internet-Anschluss funktioniert nicht. Was sollen Sie tun?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Die Taste 1 drücken."
+        },
+        {
+          "key": "b",
+          "text": "DieTaste 2 drücken."
+        },
+        {
+          "key": "c",
+          "text": "Die Taste 3 drücken."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Willkommen bei der gebührenfreien Service-Hotline von Internet 1plus1. Wir freuen uns, Ihnen weiterhelfen zu können. Wenn Sie Auskünfte zu unseren Tarifen oder Änderungen daran wünschen, wählen Sie bitte die erste. Bei Fragen zu Ihrer Rechnung drücken Sie die zweite. Für Unterstützung bei technischen Anliegen oder Informationen zur Einrichtung eines drahtlosen Internetzugangs wählen Sie bitte die dritte. Anschließend werden Sie mit einem unserer Mitarbeiter verbunden.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

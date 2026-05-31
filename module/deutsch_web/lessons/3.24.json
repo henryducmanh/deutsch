@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.24",
+  "aufgabe": "3.24",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Auf der Post",
+  "title": "Auf der Post",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3977.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.24/3.24.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.24-1",
+      "label": "Der Kunde entscheidet sich für den Standardversand",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Richtig"
+        },
+        {
+          "key": "b",
+          "text": "Falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.24-2",
+      "label": "Wie viel Geld hat der Kunde für den Versand der Sendung nach Frankreich bezahlt?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "12 Euro"
+        },
+        {
+          "key": "b",
+          "text": "15 Euro"
+        },
+        {
+          "key": "c",
+          "text": "30 Euro"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Person 1 Hallo, wie kann ich Ihnen helfen? Person 2 Hallo, ich möchte ein Paket nach Frankreich versenden. Können Sie mir sagen, wie lange es dauern wird? Person 1 Das hängt davon ab, ob Sie Standardversand oder Expressversand wählen. Der Standardversand dauert etwa 5 bis 7 Werktage, der Expressversand 2 bis 3. Person 2 Wie groß ist der Preisunterschied? Person 1 Standard kostet 12 Euro, Express 25 Euro. Person 2 Ich nehme den Standardversand. Es gibt keine Eile. Hängt der Preis von der Größe des Pakets ab? Person 1 Ja, der Preis hängt von der Größe des Pakets ab, aber ich sehe, dass Ihr Paket nicht groß ist, obwohl es nicht in den kleinsten Karton passt. Ich habe Ihnen den Preis für ein kleines Paket gesagt. Person 2 Und was kostet der Versand für ein mittleres Paket? Person 1 15 Euro im Standardversand und 30 Euro im Expressversand. Person 2 Alles klar, dann bleibe ich beim Standardversand.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

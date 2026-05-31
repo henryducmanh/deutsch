@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.113",
+  "aufgabe": "2.113",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Sommer-Festivals in Karlsruhe",
+  "title": "Sommer-Festivals in Karlsruhe",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-958.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.113/2.113.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.113-1",
+      "label": "Was wird am Sonntag angeboten?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Ein Musikprogramm."
+        },
+        {
+          "key": "b",
+          "text": "Ein Programm für Kinder."
+        },
+        {
+          "key": "c",
+          "text": "Internationale Kurzfilme."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Ankündigung eines Sommerfestivals in Karlsruhe. Am Wochenende findet im Schlosspark ein Sommerfestival statt. Musikgruppen aus Argentinien, Kuba und Venezuela treten am Samstag auf. Am Abend werden internationale Kurzfilme gezeigt. Für die Kleinen gibt es am Sonntag spezielle Aktions- und Programmpunkte, darunter Puppentheater, einen Zauberer, eine Hüpfburg und viele interessante Spielgeräte.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.124",
+  "aufgabe": "1.124",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Lutz fragt",
+  "title": "Lutz fragt",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-470.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.124/1.124.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.124-1",
+      "label": "Lutz fragt, ob Lena",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "schon früher zur Arbeit kommen kann."
+        },
+        {
+          "key": "b",
+          "text": "die Getränke am Morgen bestellen kann."
+        },
+        {
+          "key": "c",
+          "text": "auch am Wochenende arbeiten kann."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Hallo Lena, hier ist Lutz. Entschuldige, dass ich so spät anrufe. Leider ist meine Tochter krank und ich muss deshalb morgen zu Hause bleiben, um mich um sie zu kümmern. Wäre es für dich möglich, morgen schon um 6 Uhr anstatt um 7 Uhr zum Imbiss zu kommen? Ich weiß, das ist früh, aber jemand muss die Getränkelieferung annehmen. Falls du einspringen kannst, biete ich dir dafür an, am Sonntag freizunehmen, wo seiher da meine Frau dann von ihrer Reise zurück ist und übernehmen kann. Gib mir bitte kurz Bescheid, wenn du die Nachricht gehört hast. Danke dir.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

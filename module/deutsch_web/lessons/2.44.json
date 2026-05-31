@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.44",
+  "aufgabe": "2.44",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Änderung im Programm",
+  "title": "Änderung im Programm",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3882.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.44/2.44.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.44-1",
+      "label": "Wann kann man die Dokumentation sehen?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Morgen Abend um 21:00 Uhr."
+        },
+        {
+          "key": "b",
+          "text": "Heute um 21:00 Uhr."
+        },
+        {
+          "key": "c",
+          "text": "Zu einem späteren Zeitpunkt in dieser Woche."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Abend, liebe Hörer, wir möchten Sie darüber informieren, dass aufgrund eines kurzfristig angesetzten Fussballspiels die geplante Dokumentation über den Klimawandel heute Abend um 21 Uhr verschoben wird. Das Spiel zwischen Dortmund und München wird live übertragen. Die Dokumentation wird zu einem späteren Zeitpunkt in dieser Woche ausgestrahlt. Der neue Sendetermin wird auf unserer Website und in der App veröffentlicht.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

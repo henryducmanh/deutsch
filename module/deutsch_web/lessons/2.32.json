@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.32",
+  "aufgabe": "2.32",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Flug nach Frankfurt",
+  "title": "Flug nach Frankfurt",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4094.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.32/2.32.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.32-1",
+      "label": "Wann fliegt der nächste Flug nach Frankfurt?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "um 16:45 Uhr"
+        },
+        {
+          "key": "b",
+          "text": "um 18:00 Uhr"
+        },
+        {
+          "key": "c",
+          "text": "um 19:15 Uhr"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrte Passagiere, der Flug nach Frankfurt um 16 Uhr und 45 Minuten wurde auf 18 Uhr verschoben. Der Check-in erfolgt wie gewohnt am Schalter 12. Passagiere, die nach Berlin reisen, werden gebeten, sich direkt zum Garte C4 zu begeben. Bitte beachten Sie, dass alle anderen Flüge planmäßig starten. Wir danken Ihnen für Ihr Verständnis.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

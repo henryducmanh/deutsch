@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.107",
+  "aufgabe": "2.107",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Umleitungen",
+  "title": "Umleitungen",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1047.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.107/2.107.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.107-1",
+      "label": "Was wird empfohlen, um Verzögerungen zu vermeiden?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Die Umleitungen ignorieren."
+        },
+        {
+          "key": "b",
+          "text": "Zusätzliche Reisezeit einplanen."
+        },
+        {
+          "key": "c",
+          "text": "Am Samstag nicht ins Stadtzentrum fahren."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Liebe Bürgerinnen und Bürger, wir möchten Sie darüber informieren, dass aufgrund von Straßenfestlichkeiten am kommenden Samstag einige Straßen im Stadtzentrum vorübergehend gesperrt sein werden. Beachten Sie bitte die Umleitungen und planen Sie zusätzliche Reisezeit ein, um eventuelle Verzögerungen zu vermeiden. Wir wünschen Ihnen viel Freude auf dem Fest.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

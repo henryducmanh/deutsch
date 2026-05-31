@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.65",
+  "aufgabe": "1.65",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Firma Komfi-Elektrik",
+  "title": "Firma Komfi-Elektrik",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1916.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.65/1.65.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.65-1",
+      "label": "Was soll Herr Barak tun?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Zwischen 17 und 19 Uhr bei der Firma Komfi vorbeikommen."
+        },
+        {
+          "key": "b",
+          "text": "Den Gasherd anschließen."
+        },
+        {
+          "key": "c",
+          "text": "Die Firma Komfi anrufen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Morgen, Herr Barack. Ich melde mich von der Firma Comfy Elektrik. Es tut uns leid, aber wir können den Gasherd heute Mittag um 13 Uhr nicht anschließen, wie geplant. Unsere Verfügbarkeit liegt nun zwischen 17 und 19 Uhr. Es scheint, dass Sie momentan nicht zu Hause sind. Wenn Sie diese Nachricht erhalten, würden wir uns über eine Rückmeldung freuen, ob der Zeitraum zwischen 17 und 19 Uhr für Sie passt. Sie erreichen uns unter der Telefonnummer 445566. Vielen Dank für Ihr Verständnis und bis bald.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

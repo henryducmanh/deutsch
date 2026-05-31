@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.64",
+  "aufgabe": "1.64",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Möbelhaus Müller",
+  "title": "Möbelhaus Müller",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1917.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.64/1.64.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.64-1",
+      "label": "Sommerschlussverkauf gültig bis",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "zum Ende des Sommers."
+        },
+        {
+          "key": "b",
+          "text": "zum Ende des Herbstes."
+        },
+        {
+          "key": "c",
+          "text": "bis zum Weihnachten."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Willkommen zum großen Sommerschlussverkauf im Möbelhaus Müller, der noch bis zum Ende des Herbstes läuft. Profitieren Sie von konkurrenzlosen Angeboten für Ihre Wohnungseinrichtung. Entdecken Sie hochwertige Möbel, modische Accessoires und vieles mehr zu noch nie dagewesenen Preisen. Besuchen Sie uns und lassen Sie sich inspirieren. Besuchen Sie uns noch heute in unserem Geschäft in der Hauptstraße 10 und finden Sie die perfekten Weihnachtsgeschenke. Wir freuen uns auf ihren Besuch.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

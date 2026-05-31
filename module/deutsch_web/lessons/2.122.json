@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.122",
+  "aufgabe": "2.122",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Abend im Radio WAVE 107",
+  "title": "Abend im Radio WAVE 107",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-357.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.122/2.122.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.122-1",
+      "label": "Was wird heute Abend im Radio ausgestrahlt?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Einen Thriller."
+        },
+        {
+          "key": "b",
+          "text": "Eine Musiksendung."
+        },
+        {
+          "key": "c",
+          "text": "Eine Sendung zu Wirtschaft und Politik."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Es ist 16 Uhr und 10 Minuten. Auf Radio WF107 hören Sie bald die besten Hits aus Rock, Pop und Jazz. Aber zuerst gibt es eine wichtige Änderung im Programm. Aufgrund einer Sondersendung über die Auswirkungen der Finanzkrise wird der geplante Thriller heute Abend nicht ausgestrahlt. In dieser Sondersendung diskutieren Experten aus der Politik und der Wirtschaft über die Folgen der Krise.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

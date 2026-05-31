@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.117",
+  "aufgabe": "2.117",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Gespräch mit Maxine",
+  "title": "Gespräch mit Maxine",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-920.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.117/2.117.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.117-1",
+      "label": "Was muss Sandra morgen tun?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Am Gespräch mit Maxine Lehmann teilnehmen."
+        },
+        {
+          "key": "b",
+          "text": "Die neue Kollegin am Empfang begrüßen."
+        },
+        {
+          "key": "c",
+          "text": "Maxine Lehmann zusammen mit dem Team in der Teeküche empfangen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Morgen, liebe Kolleginnen und Kollegen. Morgen wird ein neuer Mitarbeiter, Maxine Lehmann, ihren ersten Arbeitstag in unserer Agentur haben. Sie kommt um 11 Uhr zu mir ins Büro und ich werde sie dort persönlich abholen. Es wäre toll, wenn sich alle im Team zur Begrüßung in der Teeküche versammeln könnten. Mein Gespräch mit Maxine wird ungefähr 20 Minuten dauern. Daher wird unser Treffen um 11 Uhr und 20 Minuten stattfinden. Könntet ihr den anderen bitte Bescheid geben? Vielen Dank und bis bald!",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

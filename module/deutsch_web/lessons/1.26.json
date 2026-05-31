@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.26",
+  "aufgabe": "1.26",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Stadtmitte",
+  "title": "Stadtmitte",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1998.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.26/1.26.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.26-1",
+      "label": "Was sollen die Fahrgäste tun, die in die Innenstadt möchten?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "An der City-Westallee aussteigen."
+        },
+        {
+          "key": "b",
+          "text": "In einen Bus umsteigen."
+        },
+        {
+          "key": "c",
+          "text": "Zur Klubhaus gehen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Geschätzte Fahrgäste, aufgrund einer Demonstration in der Innenstadt wird der. Friedenplatz bis etwa 13 Uhr nicht angefahren. Alle Straßenbahnen werden daher über die Rhein-Neudi-Kirche und die City-West-Allee umgeleitet. Passagiere, die in die Stadtmitte möchten, werden gebeten bis zur City-West-Allee zu fahren. Dort erfolgt ein Umstieg in einen Bus der Linie 43 Richtung Clubhaus.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

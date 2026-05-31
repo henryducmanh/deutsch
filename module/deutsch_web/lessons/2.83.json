@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.83",
+  "aufgabe": "2.83",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Radio Verkehrschaos",
+  "title": "Radio Verkehrschaos",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1656.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.83/2.83.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.83-1",
+      "label": "Welche Autobahn ist aufgrund eines Fahrzeugbrands stark betroffen?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "A1."
+        },
+        {
+          "key": "b",
+          "text": "A7."
+        },
+        {
+          "key": "c",
+          "text": "A3."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Tag, geschätzte Autofahrerinnen und Autofahrer. Willkommen bei Radio Verkehrschaos. Wir müssen Ihnen mitteilen, dass es heute auf mehreren Autobahnen zu erheblichen Verkehrsbeeinträchtigungen kommt. Hier sind die aktuellsten Meldungen. A1 in Richtung Norden, aufgrund eines schweren Unfalls ist die A1 zwischen den Ausfahrten 3 und 20 und 25 vollständig gesperrt. Und fahren Sie die Sperrung bitte über die lokale Landstraße L12. A7 in Richtung Süden, ein Fahrzeugbrand sorgt für massive Staus auf der A7. Nutzen Sie die Ausfahrt 15 und folgen Sie den Umleitungsschildern über die B6. A3 in Richtung Osten, schwere Baustellenverzögerungen erwarten Sie auf der A3. Nutzen Sie die Alternativroute über die A72, um schneller voranzukommen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

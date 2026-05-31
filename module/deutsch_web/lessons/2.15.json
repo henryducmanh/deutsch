@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.15",
+  "aufgabe": "2.15",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Änderung der Zugverbindung",
+  "title": "Änderung der Zugverbindung",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4111.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.15/2.15.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.15-1",
+      "label": "Von welchem Gleis fährt der Regionalzug Richtung Salzburg?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Gleis 3."
+        },
+        {
+          "key": "b",
+          "text": "Gleis 5."
+        },
+        {
+          "key": "c",
+          "text": "Gleis 8."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrte Fahrgäste, aufgrund von Bauarbeiten kommt es in den nächsten zwei Wochen zu Änderungen bei den Zugverbindungen. Der Regionalzug F45 Richtung Salzburg fährt nicht wie gewohnt um 14 Uhr, sondern um 14 Uhr und 30 Minuten ab Gleis 5. Der Schnellzug nach Linz bleibt unverändert und fährt weiterhin um 15 Uhr von Gleis 8 ab. Bitte prüfen Sie die aktuellen Fahrpläne vor Ihrer Reise. Wir danken für Ihr Verständnis.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

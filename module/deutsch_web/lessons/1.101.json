@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.101",
+  "aufgabe": "1.101",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Die Zugverbindung",
+  "title": "Die Zugverbindung",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1032.html",
+    "lingq_lesson_id": 44762453,
+    "lingq_course_id": 2747707,
+    "lingq_reader_url": "https://www.lingq.com/en/learn/de/web/reader/44762453/"
+  },
+  "audio": {
+    "url": "https://s3.amazonaws.com/media.lingq.com/resources/contents/audio/1.101.ca42b0f5a5d7.mp3",
+    "host": "lingq_s3",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.101/1.101.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.101-1",
+      "label": "Was wird als Alternative für den Transport zwischen den Städten angeboten?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Ein Shuttle-Service mit Privatfahrzeugen."
+        },
+        {
+          "key": "b",
+          "text": "Taxis stehen zur Verfügung."
+        },
+        {
+          "key": "c",
+          "text": "Busse als Ersatzverkehr."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Achtung, Reisende! Die Zugverbindung zwischen den Städten Dortmund und Papenburg ist aufgrund von Wartungsarbeiten unterbrochen. Für die Dauer der Unterbrechung werden Busse als Ersatzverkehr eingesetzt. Bitte überprüfen Sie die Abfahrtszeiten und Haltestellen auf unserer Website, da sie variieren können.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

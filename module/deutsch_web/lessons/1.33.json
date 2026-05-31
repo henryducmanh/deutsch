@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.33",
+  "aufgabe": "1.33",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Der Check-in-Schalter",
+  "title": "Der Check-in-Schalter",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1991.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.33/1.33.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.33-1",
+      "label": "Welcher Check-in-Schalter ist vorübergehend geschlossen?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Auf Mallorca."
+        },
+        {
+          "key": "b",
+          "text": "Barcelona."
+        },
+        {
+          "key": "c",
+          "text": "Paris."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrte Fluggäste, aufgrund einer technischen Störung ist der Check-in-Schalter für den Flug LH 123 nach Paris vorübergehend geschlossen. Wir arbeiten bereits an einer Lösung des Problems. Der Check-in-Schalter für den Flug nach Barcelona ist geöffnet. Bitte beachten Sie, dass es für Reisende, die nach Mallorca fliegen, zu Einschränkungen kommen kann. Weitere Informationen folgen in Kürze. Wir entschuldigen uns für die entstandenen Unannehmlichkeiten und danken Ihnen für Ihr Verständnis.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

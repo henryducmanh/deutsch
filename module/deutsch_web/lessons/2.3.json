@@ -1,0 +1,62 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.3",
+  "aufgabe": "2.3",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Informationen vom Krankenhaus",
+  "title": "Informationen vom Krankenhaus",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4123.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.3/2.3.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.3-1",
+      "label": "Welche Nummer gilt speziell für den ärztlichen Bereitschaftsdienst?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "141"
+        },
+        {
+          "key": "b",
+          "text": "112"
+        },
+        {
+          "key": "c",
+          "text": "144"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Einleitung",
+      "text": "Liebe Bürgerinnen und Bürger, wir möchten Sie über die Öffnungszeiten unserer Notaufnahme informieren. Diese ist rund um die Uhr für Notfälle geöffnet. Bei leichten Beschwerden empfehlen wir, den ärztlichen Bereitschaftsdienst unter der",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 141",
+      "text": "zu kontaktieren. Für akute medizinische Notfälle wie Herzinfarkte oder Schlaganfälle, rufen Sie bitte die Rettungsnummer 144 an. In lebensbedrohlichen Situationen, die auch andere Einsatzkräfte erfordern, können Sie die allgemeine Notrufnummer 112 fällen. Denken Sie daran, dass Sie in nicht dringenden Fällen auch einen Termin bei Ihrem Hausarzt vereinbaren können. Vielen Dank für Ihre Aufmerksamkeit.",
+      "key_phrase": "zu kontaktieren."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.58",
+  "aufgabe": "2.58",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Reise nach Südamerika",
+  "title": "Reise nach Südamerika",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1959.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.58/2.58.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.58-1",
+      "label": "Was hat den Sprecher während seiner Reise nach Peru beeindruckt?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Die moderne Architektur."
+        },
+        {
+          "key": "b",
+          "text": "Die lebhafte Atmosphäre der Städte."
+        },
+        {
+          "key": "c",
+          "text": "Die Geschichte und die Landschaft von Machu Picchu."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Hallo, liebe Hörerinnen und Hörer! Heute möchte ich Ihnen von meiner Reise nach Südamerika und der lebendigen Atmosphäre in den Städten berichten. Eines der faszinierendsten Länder, die ich besucht habe, war Peru. Dort habe ich die beeindruckende Inka-Stadt Machu Picchu besucht. Die Geschichte und die atemberaubende Landschaft haben einen bleibenden Eindruck bei mir hinterlassen. Ich empfehle jedem, der die Gelegenheit hat, dieses faszinierende Land zu besuchen und sich die moderne Architektur anzusehen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.9",
+  "aufgabe": "2.9",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Müllabholung in Wohngebieten",
+  "title": "Müllabholung in Wohngebieten",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4117.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.9/2.9.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.9-1",
+      "label": "Wann wird der gelbe Sack abgeholt?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Freitags ab 6:00 Uhr."
+        },
+        {
+          "key": "b",
+          "text": "Dienstags ab 7:00 Uhr."
+        },
+        {
+          "key": "c",
+          "text": "Mittwochs ab 9:00 Uhr."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Liebe Anwohnerinnen und Anwohner, die Stadtverwaltung erinnert an die neuen Abholzeiten für Müll und Recyclingmaterialien. Ab sofort wird der Restmüll jeden Dienstag ab 7 Uhr abgeholt. Papier und Kartonagen werden mittwochs ab 9 Uhr eingesammelt, während der gelbe Sack für Plastik und Metall freitags ab 6 Uhr bereitgestellt werden sollte. Bitte stellen Sie Ihre Mülltonnen rechtzeitig an den Straßenrand, da verspätet bereitgestellte Müll nicht mitgenommen wird. Für Fragen wenden Sie sich bitte an die Hotline, die mittags bis freitags von 8.00 bis 17.00 Uhr erreichbar ist.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

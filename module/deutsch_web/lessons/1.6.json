@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.6",
+  "aufgabe": "1.6",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Wettervorhersage für Spanien",
+  "title": "Wettervorhersage für Spanien",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3877.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.6/1.6.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.6-1",
+      "label": "Wie wird das Wetter am Montag in Spanien?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Es wird heiß und sonnig."
+        },
+        {
+          "key": "b",
+          "text": "Es wird kühl mit Regen und Wind."
+        },
+        {
+          "key": "c",
+          "text": "Es bleibt bewölkt und warm."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Tag und herzlich Willkommen zur Wettervorhersage für Spanien. Heute bleibt es in den meisten Regionen angenehm warm bei Temperaturen um die 25 Grad, jedoch mit bewölktem Himmel und nur wenigen Sonnenstunden. Morgen wird es im Norden des Landes regnerisch, während die Mittelmeerküste sonnige 28 Grad erwarten kann. Das Wochenende bringt dann einen Temperaturanstieg mit sich, besonders in Andalusien, wo bis zu 35 Grad und strahlender Sonnenschein möglich sind. Ab Montag ist jedoch eine Kaltfront zu erwarten, die im ganzen Land zu einem starken Temperaturabfall führen wird, begleitet von Regen und starkem Wind.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

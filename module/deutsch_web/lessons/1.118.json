@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.118",
+  "aufgabe": "1.118",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "A 6 München–Stuttgart",
+  "title": "A 6 München–Stuttgart",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-706.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.118/1.118.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.118-1",
+      "label": "Welche Probleme gibt es auf der A6?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Bauarbeiten."
+        },
+        {
+          "key": "b",
+          "text": "Einen Unfall."
+        },
+        {
+          "key": "c",
+          "text": "Lange Staus."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Die Autobahn A6 von München nach Stuttgart wird bis Samstagmorgen um 6 Uhr zwischen den Anschlussstellen Augsburg-West und Neusis in beiden Fahrtrichtungen aufgrund des Baus einer frischen Eisenbahnbrücke vollständig blockiert. Der Verkehr wird in beiden Fahrtrichtungen über die U45 umgeleitet. Auf der A5 in Richtung Heidelberg ist besondere Vorsicht geboten. Nach einem Unfall gibt es einen Rückstau von 10 Kilometern.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

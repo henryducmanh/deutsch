@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.17",
+  "aufgabe": "3.17",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Im Elektronikgeschäft",
+  "title": "Im Elektronikgeschäft",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4055.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.17/3.17.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.17-1",
+      "label": "Frau Meier hat sich einen Drucker ausgesucht.",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Richtig"
+        },
+        {
+          "key": "b",
+          "text": "Falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.17-2",
+      "label": "Was ist im Preis des Multifunktionsdruckers enthalten?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Gratis Druckerpapier."
+        },
+        {
+          "key": "b",
+          "text": "Eine Garantieverlängerung."
+        },
+        {
+          "key": "c",
+          "text": "Ein Rabatt von 50 Prozent."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Person 1 Guten Tag, wie kann ich Ihnen helfen? Person 2 Guten Tag, ich suche einen neuen Drucker. Mein Alter funktioniert nicht mehr und ich brauche ihn dringend für die Arbeit. Person 1 Verstehe. Wir haben gerade einen Multifunktionsdrucker im Angebot. Er kostet 129 Euro und kann drucken, scannen und kopieren. Person 2 Das klingt interessant. Gibt es auch günstigere Modelle? Person 1 Ja, wir haben einen Basismodelldrucker für 79 Euro, aber er kann nur drucken. Allerdings bieten wir gerade eine Aktion an. Beim Kauf des Multifunktionsdruckers erhalten Sie eine Packung Druckerpapier kostenlos dazu. Person 2 Das klingt gut. Wie lange gilt das Angebot? Person 1 Nur noch bis Ende dieser Woche. Person 2 Ich überlege es mir, danke.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

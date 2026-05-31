@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.49",
+  "aufgabe": "2.49",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Bauarbeiten Kamm",
+  "title": "Bauarbeiten Kamm",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-2000.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.49/2.49.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.49-1",
+      "label": "Was hören Sie?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Die Nachrichten."
+        },
+        {
+          "key": "b",
+          "text": "Einen Verkehrsmeldung."
+        },
+        {
+          "key": "c",
+          "text": "Einen Reisebericht."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Eine Verkehrsankündigung für Kamm. Aufgrund von Bauarbeiten wird die Rheinbrücke in Kamm von heute 20 Uhr bis morgen 5 Uhr vollständig gesperrt sein. Fußgänger und Radfahrer können eine Fährverbindung nutzen. Autofahrer werden gebeten, die Autobahnbrücke zwischen Ludwigshafen und Mannheim zu benutzen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

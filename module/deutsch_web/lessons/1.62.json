@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.62",
+  "aufgabe": "1.62",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Kaiser Platz",
+  "title": "Kaiser Platz",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1919.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.62/1.62.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.62-1",
+      "label": "Was ist der erforderliche Schritt, um zum Kaiser Platz zu gelangen?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Mit der Straßenbahn 78 fahren."
+        },
+        {
+          "key": "b",
+          "text": "Mit der U-Bahn-Linie 1 oder 2 fahren."
+        },
+        {
+          "key": "c",
+          "text": "An der Haltestelle „Lippen Strasse“ umsteigen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Geschätzte Fahrgäste, aufgrund von Bauarbeiten ist die U-Bahn-Haltestelle Kaiserplatz momentan nicht zugänglich. Die U-Bahn-Linien U1 und U2 sind daher umgeleitet. Um zum Kaiserplatz zu gelangen, nehmen Sie bitte den Bus 78 bis zur Haltestelle Lippenstraße und wechseln dort zur Straßenbahnlinie 807 oder den Bus 87, welche beide bis zur Haltestelle Kaiserplatz fahren.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

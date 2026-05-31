@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.41",
+  "aufgabe": "1.41",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Reisebüro",
+  "title": "Reisebüro",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1983.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.41/1.41.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.41-1",
+      "label": "Warum muss die Flugreise verschoben werden?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Aufgrund eines Streiks."
+        },
+        {
+          "key": "b",
+          "text": "Aufgrund technischer Probleme."
+        },
+        {
+          "key": "c",
+          "text": "Aufgrund unerwarteter Wetterbedingungen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Hallo, hier ist Herr Müller vom Reisebüro. Leider müssen wir Ihnen mitteilen, dass Ihr gebuchter Flug aufgrund von unvorhergesehenen Wetterbedingungen verschoben wurde. Bitte setzen Sie sich so schnell wie möglich mit uns in Verbindung, um eine alternative Reisemöglichkeit zu besprechen, da in naher Zukunft ein Streik geplant ist. Herzlichen Dank!",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.64",
+  "aufgabe": "2.64",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Aktuelles",
+  "title": "Aktuelles",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1952.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.64/2.64.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.64-1",
+      "label": "Was hören Sie?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Die Nachrichten."
+        },
+        {
+          "key": "b",
+          "text": "Den Wetterbericht."
+        },
+        {
+          "key": "c",
+          "text": "Eine Verkehrsmeldung."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "In Düsseldorf wurde der Flughafen am Dienstag für etwa eine Stunde gesperrt. Um 9.30 Uhr wurde der Flugverkehr eingestellt, um die Start- und Landebahnen vom Eis zu befreien. In dieser Zeit wurden 13 Flüge zum Flughafen Schönefeld umgeleitet. Nun zu den internationalen Nachrichten. In der Ukraine hat der Gipfel zur Lage in dem Land nicht den erhofften Erfolg gebracht. Unser Korrespondent Hans Andersson berichtet aus Kyiv.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

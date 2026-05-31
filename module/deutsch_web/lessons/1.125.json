@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.125",
+  "aufgabe": "1.125",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Tipps für Patienten",
+  "title": "Tipps für Patienten",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-362.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.125/1.125.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.125-1",
+      "label": "In der Sendung „Tipps für Patienten\"",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "geht es um günstige Kassenbeiträge."
+        },
+        {
+          "key": "b",
+          "text": "gibt es Informationen zum Bonusheft."
+        },
+        {
+          "key": "c",
+          "text": "werden neue Zahnbehandlungen vorgestellt."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Liebe Hörerinnen und Hörer, herzlich willkommen zu unserer heutigen Ausgabe von. Tipps für Patienten. Heute geht es darum, wie Sie bei Ihrem Zahnarztbesuch wahres Geld sparen können. Haben Sie schon einmal vom Bonusheft gehört? Dieses kleine Heftchen kann sich für. Sie richtig lohnen. Nur mit regelmäßigen Einträgen und Stempeln der Vorsorgeuntersuchung erhalten Sie von Ihrer Krankenkasse höhere Zuschüsse für künftige Zahnbehandlungen. Möchten Sie mehr über die Vorteile und die genaue Funktionsweise des Bonushefts erfahren? Dann bleiben Sie dran, wir klären alles im Detail.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

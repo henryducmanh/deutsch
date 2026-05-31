@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.106",
+  "aufgabe": "2.106",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Wetterbedingungen",
+  "title": "Wetterbedingungen",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1048.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.106/2.106.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.106-1",
+      "label": "Was wird empfohlen, um sich vorzubereiten?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Einen Sonnenschirm mitbringen."
+        },
+        {
+          "key": "b",
+          "text": "Warme Kleidung tragen."
+        },
+        {
+          "key": "c",
+          "text": "Wetterbericht online prüfen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Tag. Wir möchten Sie darauf hinweisen, dass aufgrund von schlechten Wetterbedingungen für die nächsten Tage Regen und Gewitter erwartet werden. Wir empfehlen, entsprechende Vorbereitungen zu treffen, wenn Sie im Freien unterwegs sind. Überprüfen Sie den detaillierten Wetterbericht auf unserer Website für aktuelle Informationen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

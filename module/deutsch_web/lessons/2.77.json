@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.77",
+  "aufgabe": "2.77",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Eine wichtige Mitteilung",
+  "title": "Eine wichtige Mitteilung",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1939.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.77/2.77.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.77-1",
+      "label": "Was gibt es heute Abend im Radio?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Eine Komödie."
+        },
+        {
+          "key": "b",
+          "text": "Eine Musiksendung."
+        },
+        {
+          "key": "c",
+          "text": "Eine Sendung aus Wirtschaft und Politik."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Aktuell ist es 16 Uhr und 10 Minuten. Auf Radio NiederFM erwartet Sie in Kürze Neues aus den Genres Rock, Pop und Jazz. Doch zunächst gibt es eine wichtige Mitteilung. Aufgrund einer Sondersendung zur Bankenkrise entfällt heute Abend die geplante Komödie. In dieser Sondersendung werden Politiker und Wirtschaftsvertreter über die potenziellen Auswirkungen der Krise diskutieren. Jetzt setzen wir jedoch die Musik fort.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

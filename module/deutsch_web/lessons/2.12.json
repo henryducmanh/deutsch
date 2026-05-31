@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.12",
+  "aufgabe": "2.12",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Wochenmarkt auf dem Marktplatz",
+  "title": "Wochenmarkt auf dem Marktplatz",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4114.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.12/2.12.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.12-1",
+      "label": "Wie lange dauert der wöchentliche Samstagsmarkt normalerweise?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Bis 12:00 Uhr."
+        },
+        {
+          "key": "b",
+          "text": "Bis 14:00 Uhr."
+        },
+        {
+          "key": "c",
+          "text": "Bis 16:00 Uhr."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Morgen, liebe Bürger! Besuchen Sie unseren traditionellen Wochenmarkt auf dem Marktplatz. Jeden Samstag von 7.00 bis 14.00 Uhr bieten regionale Händler frisches Obst, Gemüse, Fleisch und Kunsthandwerk an. Diesen Samstag gibt es ein besonderes Angebot, frische Bioäpfel zum halben Preis. Und nur diesen Samstag ist der Markt bis 16.00 Uhr geöffnet, da der Markt am kommenden Samstag aufgrund des Protestmarsches zwei Stunden weniger geöffnet hat. Parkmöglichkeiten gibt es auf dem Ostparkplatz. Vergessen Sie nicht, Ihren Einkaufskorb mitzubringen. Wir freuen uns auf Ihren Besuch.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

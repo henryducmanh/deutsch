@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.89",
+  "aufgabe": "1.89",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Online-Banking-Zugriff",
+  "title": "Online-Banking-Zugriff",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1840.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.89/1.89.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.89-1",
+      "label": "Wann ist der Online-Banking-Zugriff nicht verfügbar?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Am Sonntagvormittag."
+        },
+        {
+          "key": "b",
+          "text": "Am Sonntagnachmittag."
+        },
+        {
+          "key": "c",
+          "text": "Am Sonntagmorgen in einer Woche."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Hallo, hier ist Ihre Bank. Wir möchten Sie darüber informieren, dass aufgrund von Wartungsarbeiten am System der Online-Banking-Zugriff am kommenden Sonntag von 8 bis 10 Uhr nicht verfügbar sein wird. Wir entschuldigen uns für die Unannehmlichkeiten.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.85",
+  "aufgabe": "1.85",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Autowerkstatt Müller",
+  "title": "Autowerkstatt Müller",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1895.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.85/1.85.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.85-1",
+      "label": "Was sollen Sie tun?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Das Fahrzeug vorbeibringen."
+        },
+        {
+          "key": "b",
+          "text": "Das Fahrzeug abholen."
+        },
+        {
+          "key": "c",
+          "text": "Ersatzteile beschaffen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Hallo, dies ist die Autowerkstatt Müller. Ihr Fahrzeug wurde bei uns zur Reparatur abgegeben. Es ist nun vollständig repariert und kann von Ihnen abgeholt werden. Wir möchten uns nochmals für die Verzögerung entschuldigen, die durch die Bestellung mehrerer Ersatzteile verursacht wurde. Vielen Dank für Ihr Verständnis.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

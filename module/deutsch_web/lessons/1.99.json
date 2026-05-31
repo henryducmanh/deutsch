@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.99",
+  "aufgabe": "1.99",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Gesundheitszentrum",
+  "title": "Gesundheitszentrum",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1654.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.99/1.99.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.99-1",
+      "label": "Was sollen Mitglieder tun, wenn der Zugang zum Fitnessraum eingeschränkt ist?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Den Zugang zum Fitnessraum abwarten."
+        },
+        {
+          "key": "b",
+          "text": "Sich an die Mitarbeiter im Café wenden."
+        },
+        {
+          "key": "c",
+          "text": "An den Gruppenkursen im Park teilnehmen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Tag, hier ist Ihr örtliches Gesundheitszentrum. Aufgrund von anstehenden Renovierungsarbeiten wird der Zugang zum Fitnessraum vorübergehend eingeschränkt. Für Mitglieder besteht die Möglichkeit, an den Gruppenkursen im Park teilzunehmen. Für genauere Informationen zu alternativen Trainingsmöglichkeiten stehen Ihnen unsere Mitarbeiter im Gesundheitszentrum gerne zur Verfügung.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

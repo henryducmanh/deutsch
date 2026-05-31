@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.119",
+  "aufgabe": "1.119",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Abend im Radio",
+  "title": "Abend im Radio",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-705.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.119/1.119.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.119-1",
+      "label": "Was gibt es heute Abend im Radio?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Einen Krimi."
+        },
+        {
+          "key": "b",
+          "text": "Eine Musiksendung."
+        },
+        {
+          "key": "c",
+          "text": "Eine Sendung aus Wirtschaft und Politik."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Um 16.15 Uhr schalten wir auf die Frequenz von Radiolux FM. Schon bald erwartet Sie eine Auswahl aktueller Musik aus Rock, Pop und Jazz. Zuvor möchten wir jedoch über eine Programmänderung informieren. Der für heute Abend geplante Krimi entfällt zugunsten einer Sondersendung zur aktuellen Bankenkrise. In dieser Spezialausgabe diskutieren Politiker und Vertreter der Wirtschaft über die möglichen Folgen der Krise.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

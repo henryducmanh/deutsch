@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.4",
+  "aufgabe": "3.4",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Baustellen und Kita",
+  "title": "Baustellen und Kita",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-14227.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.4/3.4.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.4-1",
+      "label": "Alex bringt seinen Sohn zur Kita.",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "richtig"
+        },
+        {
+          "key": "b",
+          "text": "falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.4-2",
+      "label": "Alex …",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "lädt Lena ein, zusammen eine Baustelle anzuschauen"
+        },
+        {
+          "key": "b",
+          "text": "liebt Baustellen"
+        },
+        {
+          "key": "c",
+          "text": "ist sehr warm angezogen"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Lena: Alex, das gibt es ja nicht, wir haben uns ewig nicht gesehen! Sag mal, warum bist du so dick angezogen? Trägst du eine Mütze und sogar zwei Schals? Dabei ist es heute doch gar nicht kalt. Alex: Ja, das stimmt. Das Wetter ist eigentlich mild. Ich bin aber gerade unterwegs zur Kita, weil ich meinen Sohn abhole. Er ist schon drei Jahre alt. Lena: Ah, verstehe. Trotzdem wundert mich deine Kleidung ein bisschen. Alex: Mein Sohn interessiert sich total für Baustellen. Alles mit Fahrzeugen, Kränen und Werkzeugen findet er spannend. Auf unserem Heimweg kommen wir an mehreren Baustellen vorbei. An jeder bleiben wir ziemlich lange stehen, und dann friert man schnell. Lena: Jetzt ergibt das Sinn. In unserer Straße wird im Moment auch gebaut. Komm doch mal mit deinem Sohn vorbei. Ich bin dann mit meinem Kind auch da, und die beiden können zusammen die Baustelle anschauen. Danach gehen wir zu uns, trinken einen Tee und wärmen uns auf. Die Kinder können noch ein bisschen miteinander spielen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

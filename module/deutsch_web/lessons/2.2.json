@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.2",
+  "aufgabe": "2.2",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Ankündigung",
+  "title": "Ankündigung",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-14231.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.2/2.2.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.2-1",
+      "label": "Was können Sie gewinnen?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Ein Radio."
+        },
+        {
+          "key": "b",
+          "text": "Einen Besuch ins Schwimmbad."
+        },
+        {
+          "key": "c",
+          "text": "Einen Getränkegutschein."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Gewinnaktion mit Radio Welle Nord. Gewinnen Sie einen Tag im Erlebnisbad Aquamira in Sonnenfeld. Wir verlosen dreimal zwei Tageskarten für einen ganzen Tag voller Spaß und Erholung. Jedes Ticket beinhaltet den Eintritt ins Schwimmbad für den ganzen Tag. Für alle Gewinner gibt es außerdem einen Essens-Gutschein und einen Getränke-Gutschein pro Person. Schalten Sie heute Radio Welle Nord ein und machen Sie mit!",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

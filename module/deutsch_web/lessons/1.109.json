@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.109",
+  "aufgabe": "1.109",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Sternenlicht",
+  "title": "Sternenlicht",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1024.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.109/1.109.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.109-1",
+      "label": "Was wird als Alternative vorgeschlagen?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Die Vorstellung um 22:30 Uhr."
+        },
+        {
+          "key": "b",
+          "text": "Den Film zu Hause anschauen."
+        },
+        {
+          "key": "c",
+          "text": "Einen anderen Film im Kino."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Tag, hier spricht das Kino Sternenlicht. Wir möchten Sie darüber informieren, dass heute Abend die Vorstellung des Films. Die verschwundene Stadt um 20 Uhr ausverkauft ist. Es sind jedoch noch Tickets für die Vorstellung um 22 Uhr und 30 Minuten verfügbar. Wir hoffen Sie dennoch begrüßen zu dürfen und wünschen Ihnen einen angenehmen Kinobesuch.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

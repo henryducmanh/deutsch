@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.16",
+  "aufgabe": "1.16",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Ihr Hund ist sehr krank",
+  "title": "Ihr Hund ist sehr krank",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3839.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.16/1.16.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.16-1",
+      "label": "Es ist Montagnachmittag, Ihr Hund ist sehr krank. Was können Sie tun?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Den Tiernotdienst anrufen."
+        },
+        {
+          "key": "b",
+          "text": "Die Notfallnummer anrufen."
+        },
+        {
+          "key": "c",
+          "text": "Den Bereitschaftsdienst anrufen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sie sind verbunden mit der Tierarztpraxis Dr. Schmitt. Leider rufen Sie außerhalb unserer Sprechzeiten an. Diese sind Montag bis Freitag von 8 bis 12 Uhr. In dringenden Fällen sind wir montags, mittwochs und freitags von 14 bis 18 Uhr unter der Notfallnummer 01753456 789 zu erreichen. Nach 18 Uhr sowie an Wochenenden und Feiertagen wenden Sie sich bitte an den tierärztlichen Bereitschaftsdienst unter der Rufnummer 118 118.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

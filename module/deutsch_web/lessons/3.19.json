@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.19",
+  "aufgabe": "3.19",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Auf dem Parkplatz",
+  "title": "Auf dem Parkplatz",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3987.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.19/3.19.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.19-1",
+      "label": "Frau Schmidt parkt ihr Auto direkt am Eingang.",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Richtig"
+        },
+        {
+          "key": "b",
+          "text": "Falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.19-2",
+      "label": "Was möchte Herr Meier tun?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Die Müllabfuhr informieren."
+        },
+        {
+          "key": "b",
+          "text": "Einen Zettel an das rote Auto hängen."
+        },
+        {
+          "key": "c",
+          "text": "Das Auto umparken."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Person 1 Guten Morgen, Frau Schmidt. Sagen Sie mal, ist das Ihr Auto, das da direkt am Eingang steht? Person 2 Guten Morgen, Herr Meyer. Nein, ich habe meinen Wagen ein Stück weiter geparkt, auf dem zweiten Platz von der Ecke.Wieso? Person 1 Ach so, der rote Wagen da blockiert ein bisschen die Zufahrt. Die Müllabfuhr hatte heute früh Probleme durchzukommen. Person 2 Oje, das ist natürlich ärgerlich. Vielleicht gehört er jemandem aus der Nachbarstraße. Person 1 Möglich. Aber ich habe gesehen, dass jemand kurz vor acht aus dem Auto gestiegen ist. Ich dachte, das könnten Sie gewesen sein. Person 2 Nein, ich war schon um halb acht im Büro. Vielleicht sollten wir einen Zettel an die Windschutzscheibe kleben, damit der Besitzer es bemerkt. Person 1 Gute Idee. Ich werde das gleich machen, bevor noch mehr Ärger entsteht.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

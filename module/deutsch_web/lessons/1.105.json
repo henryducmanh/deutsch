@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.105",
+  "aufgabe": "1.105",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Das Betriebsfest",
+  "title": "Das Betriebsfest",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1028.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.105/1.105.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.105-1",
+      "label": "Wann findet das Betriebsfest statt?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Am Freitag, dem 14. Juli."
+        },
+        {
+          "key": "b",
+          "text": "Am Samstag, dem 15. Juli."
+        },
+        {
+          "key": "c",
+          "text": "Am Sonntag, dem 16. Juli."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Tag, dies ist eine Erinnerung an alle Mitarbeiter, dass das Betriebsfest dieses Jahr am Samstag, dem 15. Juli stattfindet. Im Vergleich zum letzten Jahr, als das Fest am Freitag, dem 14. Juli gefeiert wurde und den ursprünglichen Planungen, nach denen die Veranstaltung auf Sonntag, dem 16. Juli angesetzt war, möchten wir Sie darum bitten, nun das endgültige Datum zu berücksichtigen. Die Veranstaltung beginnt um 18 Uhr in der Cafeteria des Unternehmens. Wir freuen uns auf Ihre Teilnahme und einen fröhlichen Abend.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

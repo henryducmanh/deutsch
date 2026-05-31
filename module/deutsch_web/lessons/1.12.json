@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.12",
+  "aufgabe": "1.12",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Hinweise im Supermarkt",
+  "title": "Hinweise im Supermarkt",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3871.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.12/1.12.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.12-1",
+      "label": "Warum sollten Kunden, die Tiefkühlprodukte suchen, direkt zum Bereich neben den Kassen gehen?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Weil die Obst- und Gemüseabteilung heute geschlossen ist."
+        },
+        {
+          "key": "b",
+          "text": "Weil die Tiefkühlprodukte nur vorübergehend dort sind."
+        },
+        {
+          "key": "c",
+          "text": "Weil der Supermarkt heute nur bis 20 Uhr geöffnet ist."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Liebe Kunden, wir möchten Sie darauf hinweisen, dass unsere Obst- und Gemüseabteilung heute aufgrund von Umbauarbeiten nur eingeschränkt zugänglich ist. Die Abteilung für Tiefkühlprodukte befindet sich ebenfalls vorübergehend im Bereich neben den Kassen. Vielen Dank für Ihr Verständnis und denken Sie daran, dass unser Laden heute wie gewohnt bis 20 Uhr geöffnet bleibt.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.22",
+  "aufgabe": "3.22",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Im Cafe",
+  "title": "Im Cafe",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3979.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.22/3.22.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.22-1",
+      "label": "Die Kundin entscheidet sich für den Zitronenkuchen.",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Richtig"
+        },
+        {
+          "key": "b",
+          "text": "Falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.22-2",
+      "label": "Was bietet das Cafe als kostenlose Nachfüllung an?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Kaffee"
+        },
+        {
+          "key": "b",
+          "text": "Eistee"
+        },
+        {
+          "key": "c",
+          "text": "Wasser"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Person 1 Guten Tag, Frau Müller. Schön, Sie wiederzusehen. Möchten Sie wie immer einen Cappuccino? Person 2 Guten Tag, vielleicht. Aber ich habe Lust auf etwas anderes. Was ist heute im Angebot? Person 1 Wir haben unseren berühmten Schokoladennusskuchen frisch gebacken. Er ist sehr beliebt, besonders bei Stammgästen. Person 2 Klingt gut. Haben Sie auch etwas Fruchtiges? Person 1 Natürlich. Unser Apfelkuchen ist ebenfalls frisch aus dem Ofen. Wir haben ihn auch mit Streuseln, falls Sie das lieber mögen. Person 2 Hm, schwierig. Ich habe heute Lust auf etwas Süßes, aber nicht zu schwer. Person 1 Dann könnte unser Zitronenkuchen eine gute Wahl sein. Er ist leichter und weniger süß. Person 2 Das klingt interessant. Und was trinken die meisten Gäste? Person 1 Cappuccino ist immer beliebt. Viele bestellen dazu unseren hausgemachten Eistee, den wir gratis nachfüllen. Person 2 Oh, sehr gut. Letzte Woche war es sehr heiß und Ihr Restaurant bot kostenloses Wasser an.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

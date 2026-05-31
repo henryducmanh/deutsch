@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.6",
+  "aufgabe": "2.6",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Warnung der Polizei (Polizeidurchsage)",
+  "title": "Warnung der Polizei (Polizeidurchsage)",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4120.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.6/2.6.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.6-1",
+      "label": "Welche Telefonnummer sollen Bürger bei verdächtigen Anrufen kontaktieren?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "112"
+        },
+        {
+          "key": "b",
+          "text": "133"
+        },
+        {
+          "key": "c",
+          "text": "144"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Achtung, liebe Bürgerinnen und Bürger! Die Polizei warnt vor aktuellen Betrugsversuchen in unserer Stadt. Betrüger geben sich am Telefon als Mitarbeiter von Banken aus und fordern sie auf, ihre Kontodaten oder Zugangsdaten preiszugeben. In einigen Fällen werden ältere Menschen auch aufgefordert, Bargeld oder Wertgegenstände an einen angeblichen Sicherheitsdienst zu übergeben. Die Polizei weist darauf hin, dass Banken niemals am Telefon solche Informationen verlangen. Sollten Sie einen verdächtigen Anruf erhalten, legen Sie sofort auf und informieren Sie uns über die Notrufnummer 133. Unsere Telefonzentrale ist rund um die Uhr erreichbar. Vergessen Sie nicht, keine Eile, keine Angst.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.49",
+  "aufgabe": "1.49",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Samstag",
+  "title": "Samstag",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1973.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.49/1.49.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.49-1",
+      "label": "Was findet am kommenden Samstag statt?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Ein Flohmarkt."
+        },
+        {
+          "key": "b",
+          "text": "Ein Kinderfest."
+        },
+        {
+          "key": "c",
+          "text": "Ein Straßenfest."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Tag, liebe Hörerinnen und Hörer! Das letzte Wochenende war ein erfolgreicher Flohmarkt. Und nächsten Samstag findet in unserem Viertel das jährliche Straßenfest statt. Es wird Livemusik geben, verschiedene Stände mit lokalen Spezialitäten und Unterhaltung für Kinder. Auch die örtlichen Geschäfte werden mit Sonderangeboten dabei sein. Kommen Sie und feiern Sie mit uns!",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

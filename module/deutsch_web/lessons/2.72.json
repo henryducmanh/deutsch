@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.72",
+  "aufgabe": "2.72",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Verkehrsinformationen",
+  "title": "Verkehrsinformationen",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1944.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.72/2.72.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.72-1",
+      "label": "Wo muss man sehr vorsichtig fahren?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Auf der A2."
+        },
+        {
+          "key": "b",
+          "text": "Auf der A3."
+        },
+        {
+          "key": "c",
+          "text": "Auf der A4."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Hier sind die aktuellen Verkehrsinformationen. Auf der A2 in Richtung Köln, zwischen Gebelsberg und dem Kreuz Wuppertal Ost, sind die Bauarbeiten abgeschlossen und die Straße ist wieder vollständig befahrbar. Der Stau auf der A3 in Richtung Frankfurt, zwischen dem Kreuz Köln Nord und dem Dreieck Heumar, ist aufgelöst und der Verkehr fließt wieder normal. Achtung an alle Autofahrer auf der A4 in Richtung Gronau. Zwischen Heeck und Gronau kommt Ihnen ein entgegenkommendes Fahrzeug entgegen. Bitte fahren Sie langsam, bleiben Sie auf der äußersten rechten Fahrspur und überholen Sie nicht. Bitte fahren Sie langsam, bleiben Sie auf der äußersten rechten Fahrspur und überholen",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.1",
+  "aufgabe": "3.1",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Gepäckservice",
+  "title": "Gepäckservice",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-14230.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.1/3.1.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.1-1",
+      "label": "Thomas und Lena fahren zusammen in den Urlaub.",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "richtig"
+        },
+        {
+          "key": "b",
+          "text": "falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.1-2",
+      "label": "Was soll Thomas machen?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "den Gepäckservice anrufen"
+        },
+        {
+          "key": "b",
+          "text": "den Koffer bezahlen"
+        },
+        {
+          "key": "c",
+          "text": "den Koffer in Lenas Wohnung stellen"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Lena: Thomas, wann planst du eigentlich deinen Urlaub? Du hattest doch gesagt, diese Woche. Thomas: Ja, Lena, das stimmt. Aber ich habe gerade total viel Stress bei der Arbeit. Deshalb fahre ich ein bisschen später. Lena: Verstehe. Ich fahre bald mit meinen Kindern weg, und wir nehmen den Zug. Damit es leichter ist, schicke ich einen Koffer schon vorher. Thomas: Macht Sinn. Kommt der Koffer mit einem Gepäckservice? Lena: Ja. Der Gepäckservice liefert morgen zwischen acht und zwölf Uhr. Thomas: Und musst du dafür noch etwas bezahlen? Manchmal kassieren die ja bei der Übergabe. Lena: Ich habe schon online bezahlt. Da ist alles erledigt, du musst nichts zahlen. Thomas: Okay. Soll ich den Gepäckservice anrufen, bevor er kommt? Lena: Das ist nicht nötig. Ich gebe ihnen einfach eine Info in der Bestellung, bei wem sie klingeln sollen. Thomas: Und du bist morgen Vormittag nicht zu Hause? Lena: Genau. Ich bin unterwegs. Du hast doch noch meinen Wohnungsschlüssel, oder? Könntest du den Koffer annehmen und ihn in meine Wohnung stellen? Thomas: Klar, das mache ich. Ich nehme ihn an und stelle ihn rein. Lena: Super, danke dir! Dann trage ich dich beim Gepäckservice als Kontakt ein.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

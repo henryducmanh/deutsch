@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.55",
+  "aufgabe": "1.55",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Elektrowerkstatt Meier & Co",
+  "title": "Elektrowerkstatt Meier & Co",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1926.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.55/1.55.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.55-1",
+      "label": "Warum ist die Elektrowerkstatt vorübergehend geschlossen?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Aufgrund Reparaturarbeiten."
+        },
+        {
+          "key": "b",
+          "text": "Aufgrund eines technischen Defekts."
+        },
+        {
+          "key": "c",
+          "text": "Aufgrund von Personalmangel."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Tag, hier ist Frau Meier von der Elektrowerkstatt Meier & Co. Wir möchten unsere Kunden darüber informieren, dass wir aufgrund eines technischen Defekts vorübergehend geschlossen haben. Alle bereits vereinbarten Reparaturtermine müssen leider verschoben werden. Wir entschuldigen uns für die Unannehmlichkeiten und bitten um Ihr Verständnis. Wir werden Sie sobald wie möglich informieren, sobald die Werkstatt wieder geöffnet ist.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

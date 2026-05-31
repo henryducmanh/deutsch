@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.27",
+  "aufgabe": "2.27",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Sonnenparadies",
+  "title": "Sonnenparadies",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4099.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.27/2.27.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.27-1",
+      "label": "Was bleibt heute geöffnet?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "der Wellness-Bereich"
+        },
+        {
+          "key": "b",
+          "text": "das Kinderbecken"
+        },
+        {
+          "key": "c",
+          "text": "das Schwimmbad"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Achtung liebe Besucherinnen und Besucher, das Schwimmbad Sonnenparadies bleibt heute wegen Reparaturarbeiten geschlossen. Morgen öffnet es wieder um 9 Uhr. Der Wellnessbereich ist jedoch weiterhin von 10 Uhr bis 20 Uhr zugänglich. Tickets für heute behalten ihre Gültigkeit für den morgigen Tag. Vielen Dank für Ihr Verständnis.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.14",
+  "aufgabe": "3.14",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Fahrkarten",
+  "title": "Fahrkarten",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4166.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.14/3.14.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.14-1",
+      "label": "Das Familienticket gilt nur vormittags.",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "richtig"
+        },
+        {
+          "key": "b",
+          "text": "falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.14-2",
+      "label": "Die Frau erfährt, dass",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "das Familienticket auch für Fahrräder gilt"
+        },
+        {
+          "key": "b",
+          "text": "Fahrräder gratis transportiert werden können"
+        },
+        {
+          "key": "c",
+          "text": "das Familienticket nur für zwei Kinder gilt"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Person 1 Guten Tag, ich habe eine Frage zu den Fahrkarten. Gibt es bei Ihnen aktuell ein Angebot für Familien? Person 2 Ja, wir haben ein Familienticket, das speziell für Wochenendausflüge gilt. Es kostet 29,90 Euro für zwei Erwachsene und bis zu drei Kinder. Person 1 Das klingt gut. Gilt das Ticket denn auch für Fahrten am Abend? Person 2 Ja, das Ticket ist den ganzen Tag gültig, auch abends. Person 1 Super! Und was ist mit Fahrrädern? Können wir die mitnehmen? Person 2 Fahrräder können Sie kostenlos mitnehmen, allerdings nur, wenn Platz im Zug ist. Person 1 Danke, das hilft mir weiter.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.139",
+  "aufgabe": "1.139",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Musikfestival",
+  "title": "Musikfestival",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-98.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.139/1.139.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.139-1",
+      "label": "Die Busse zum Musikfestival",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "fahren alle 15 Minuten."
+        },
+        {
+          "key": "b",
+          "text": "sind nur für Kinder kostenlos."
+        },
+        {
+          "key": "c",
+          "text": "starten am Südbahnhof."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Ein wichtiger Hinweis für alle Besucher des Musikfestivals Rock und Pop von A bis Z in Stadtpark. Es stehen den ganzen Tag über kostenlose Busse vom Hauptbahnhof zum Stadtpark zur Verfügung. Bitte zeigen Sie beim Einsteigen Ihre Konzertkarte vor. Die Busse fahren alle 15 Minuten vom Bussteig B7 ab. Die Bussteige befinden sich zwischen dem Südausgang und dem Westausgang. Vielen Dank für die Aufmerksamkeit.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -295,3 +295,11 @@ body.hl-on .vocab-global-mark:hover { background: #b8d9ff; }
 .login-card .btn { width: 100%; }
 .login-error { background: #fef0ef; color: #c0392b; border: 1px solid #f1948a; border-radius: 8px;
                padding: 10px 14px; font-size: 14px; margin-bottom: 16px; }
+
+/* ── Teil tabs (Phase B) — filter danh sách theo Teil 1/2/3/4 ── */
+.teil-tabs  { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.teil-tab   { padding: 8px 20px; border-radius: 20px; border: 2px solid #ddd;
+              background: #fff; cursor: pointer; font-size: 14px; font-weight: 500;
+              transition: all .15s; }
+.teil-tab:hover  { border-color: #e06030; color: #e06030; }
+.teil-tab.active { background: #e06030; color: #fff; border-color: #e06030; }

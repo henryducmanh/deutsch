@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.11",
+  "aufgabe": "2.11",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Fahrradmiete in der Stadt",
+  "title": "Fahrradmiete in der Stadt",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4115.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.11/2.11.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.11-1",
+      "label": "Wann können Fahrräder am Wochenende zurückgegeben werden?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Bis 12:00 Uhr."
+        },
+        {
+          "key": "b",
+          "text": "Bis 16:00 Uhr."
+        },
+        {
+          "key": "c",
+          "text": "Bis 22:00 Uhr."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Liebe Bürgerinnen und Bürger, unser städtisches Fahrradverleihsystem Citybike macht es noch einfacher, sich umweltfreundlich fortzubewegen. Ab sofort können Sie Fahrräder an über 50 Stationen in der Stadt mieten. Die erste halbe Stunde ist kostenlos, danach kostet jede weitere Stunde nur 2 Euro. Am Wochenende können Sie Fahrräder bis 16 Uhr zurückgeben, unter der Woche sogar bis 22 Uhr. Die Station am Hauptbahnhof ist rund um die Uhr geöffnet. Vergessen Sie nicht, Ihr Fahrrad rechtzeitig zurückzubringen, da sonst zusätzliche Gebühren anfallen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

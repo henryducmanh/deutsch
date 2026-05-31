@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.98",
+  "aufgabe": "1.98",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Verkehrshinweis",
+  "title": "Verkehrshinweis",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1671.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.98/1.98.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.98-1",
+      "label": "Welche Autobahnausfahrt ist aufgrund von Bauarbeiten gesperrt?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Ausfahrt 10."
+        },
+        {
+          "key": "b",
+          "text": "Ausfahrt 15."
+        },
+        {
+          "key": "c",
+          "text": "Ausfahrt 20."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Achtung Verkehrshinweis! Aufgrund von umfangreichen Bauarbeiten und Straßensperrungen im Stadtgebiet kommt es zu erheblichen Verkehrsbehinderungen. Die Autobahnausfahrt 15 ist momentan gesperrt und die Umleitung führt über lokale Straßen, darunter auch die Ausfahrt 10, die für den Verkehr freigegeben ist. Bitte beachten Sie, dass auch die Zufahrt zur Ausfahrt 20 durch lokale Straßensperrungen beeinträchtigt ist. Um Staus zu vermeiden, empfehlen wir dringend, alternative Routen zu wählen. Zusätzlich bieten wir eine kostenlose Verkehrsberatungshotline an, um Ihnen individuelle Empfehlungen zu geben. Wir danken Ihnen für Ihre Geduld und Ihr Verständnis.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

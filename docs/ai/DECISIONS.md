@@ -135,4 +135,42 @@ ID convention: `DD-<YYYYMMDD>-<NNN>` (DD = Deutsch Decision).
 
 ---
 
-**Last updated:** 2026-05-31 (7 entries — thêm DD-20260531-007 Phase A Hören JSON Generator).
+## DD-20260531-008 — replaceTextOnly(): regex inject HTML chỉ trong text nodes, KHÔNG trong attribute
+
+- **Date:** 2026-05-31
+- **Topic:** vocab highlight injection `drill.js` — bug regex match vào `title=""` attribute của span đã inject
+- **Decision:** Dùng helper `replaceTextOnly(html, re, replacement)` thay cho `html.replace(re, ...)` trực tiếp trong tất cả 3 Pass của `injectMarks()`. Helper tách HTML tại tag boundaries, chỉ replace trong text segments (`/(<[^>]*>)|([^<]+)/g` — tag → trả nguyên, text → replace).
+- **Why:**
+  - Pass 3 (global words) xử lý words TUẦN TỰ trên cùng html string. Word dài hơn được inject trước → title attribute của nó chứa nghĩa tiếng Việt (vd "áp lực, stress"). Word ngắn hơn ("Stress") được inject sau → regex `gi` match "stress" BÊN TRONG title attribute → tạo `<span>` nested trong attribute → HTML vỡ → browser render nội dung attribute ra màn hình.
+  - Lỗi chỉ xảy ra lần thứ 2+ toggle "Nền vàng" (lần 1: HTML sạch; lần 2+: spans từ Pass 1/2 có title chứa text có thể match).
+- **Alternatives considered:**
+  - (a) Bỏ nghĩa (bedeutung) khỏi title → loại vì mất tooltip hữu ích
+  - (b) Merge tất cả words 3 pass thành 1 sorted list → loại vì vẫn có vấn đề nếu meaning chứa German word
+  - (c) DOM traversal text nodes thay innerHTML → phức tạp hơn cần thiết
+  - (d) `replaceTextOnly()` → đơn giản, handle mọi case, 1 helper dùng lại cho cả 3 Pass ✓
+- **Linked files:** `module/deutsch_web/public/assets/drill.js` dòng 550 (`replaceTextOnly`), dòng 605/615/623 (3 Pass)
+- **Status:** active
+
+---
+
+## DD-20260531-009 — Phase B Hören 1.x/2.x/3.x + Teil-Navigation UI (~343 lessons live)
+
+- **Date:** 2026-05-31
+- **Topic:** Mở rộng web `deutsch.twv.app` từ 30 bài Teil 4 lên toàn bộ 4 phần Hören + tab điều hướng Teil.
+- **Decision:**
+  - `horen_to_lesson_json.py`: thêm `parse_questions_simple()` (1 câu hỏi/H2, options a/b/c) cho series 1/2/3; param `series` rẽ nhánh parser + `INSTRUCTIONS_BY_TEIL`; thêm field `teil` + `source_book` vào JSON; skip bài 0 aussagen (vd 1.21 scrape thiếu options).
+  - `lesson_loader.php`: thêm `teil` (fallback parse từ lesson_id) + `source_book` vào `lesson_list()`.
+  - `lesson_list.php`: tab bar Alle/Teil 1-4 + `data-teil` mỗi card + JS filter client-side.
+  - `drill.css`: chỉ thêm `.teil-tabs`/`.teil-tab` (các class list-page khác đã tồn tại sẵn nên KHÔNG append lại để tránh override style hiện tại).
+- **Why:** Henry luyện cả 4 phần Hören; series 1.x (146 folder), 2.x (137), 3.x (31) đã scrape sẵn nhưng chưa lên web. Field `source_book` chuẩn bị cho nguồn sách khác sau này.
+- **Result:** 343 file JSON (1.x=145 [1.21 skip], 2.x=137, 3.x=31, 4.x=30 regen giữ LingQ+vocab). Series 2.x/3.x `audio.host=none` (chưa push LingQ — Phase L sau). All JSON valid.
+- **Alternatives considered:**
+  - (a) Hàm parser riêng cho 3.x → loại, parser generic theo H2 đã handle multi-question.
+  - (b) Append full CSS block từ prompt → loại, trùng `.list-head`/`.lesson-card`/`.score-badge` đã có → override. Chỉ thêm phần `.teil-tab` mới.
+  - (c) Cache `lessons_index.json` → hoãn Phase C (343 file load < 1s chấp nhận được).
+- **Linked files:** `module/scan_extract/horen_to_lesson_json.py`, `module/deutsch_web/lib/lesson_loader.php`, `module/deutsch_web/views/lesson_list.php`, `module/deutsch_web/public/assets/drill.css`, handoff `docs/ai/tasks/HOREN_FULL_SERIES_PROMPT.md`
+- **Status:** active
+
+---
+
+**Last updated:** 2026-05-31 (9 entries — thêm DD-20260531-009 Phase B Hören full series + Teil UI).

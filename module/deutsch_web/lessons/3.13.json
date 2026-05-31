@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.13",
+  "aufgabe": "3.13",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Waschmaschine",
+  "title": "Waschmaschine",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4167.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.13/3.13.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.13-1",
+      "label": "Die Waschmaschine des Mannes ist brandneu.",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "richtig"
+        },
+        {
+          "key": "b",
+          "text": "falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.13-2",
+      "label": "Die Frau sagt, dass",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "die Reparatur immer bis 100 Euro kostet."
+        },
+        {
+          "key": "b",
+          "text": "definitiv die Pumpe das Problem sein könnte."
+        },
+        {
+          "key": "c",
+          "text": "die Anfahrt kostenfrei ist"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Person 1 Guten Tag, ich wollte fragen, ob sie mir mit meiner Waschmaschine helfen kann. Sie funktioniert seit gestern nicht mehr. Person 2 Natürlich, um welches Modell handelt es sich? Person 1 Es ist ein Modell von Marke X, etwa 5 Jahre alt. Person 2 Alles klar, habe ich Sie schon versucht, die Maschine zurückzusetzen. Oft hilft es, sie vom Strom zu trennen und nach einer Minute wieder anzuschließen. Person 1 Das habe ich schon gemacht, aber es hat nicht funktioniert. Person 2 Dann könnte es ein Problem mit der Pumpe sein. Wir könnten Ihnen morgen einen Techniker schicken. Die Anfahrt ist kostenlos. Person 1 Das wäre super. Was würde die Reparatur ungefähr kosten? Person 2 Das hängt vom Problem ab, aber meist liegen die Kosten zwischen 50 und 100 Euro.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

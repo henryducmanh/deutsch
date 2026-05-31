@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.29",
+  "aufgabe": "3.29",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "In der Schule",
+  "title": "In der Schule",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3968.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.29/3.29.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.29-1",
+      "label": "Lisa wird am Mathewettbewerb teilnehmen.",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Richtig"
+        },
+        {
+          "key": "b",
+          "text": "Falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.29-2",
+      "label": "Was kostet der Museumsbesuch insgesamt?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Kostenlos"
+        },
+        {
+          "key": "b",
+          "text": "10 Euro"
+        },
+        {
+          "key": "c",
+          "text": "5 Euro"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Person 1 Guten Tag, Frau Fischer. Ich wollte mit Ihnen über Ihre Tochter Lisa sprechen. Person 2 Guten Tag. Was gibt es? Person 1 Lisa hat im Mathematikunterricht außergewöhnliche Leistungen gezeigt. Wir möchten, dass sie am Mathe-Wettbewerb teilnimmt. Person 2 Oh, das ist wunderbar. Lisa mag Mathe sehr. Gibt es auch andere Wettbewerbe? Person 1 Ja, es gibt einen freiwilligen Musiknachmittag. Dieser ist kostenlos und für musikalisch begabte Schüler gedacht. Person 2 Interessant. Aber ist das für Lisa nicht zu viel? Gibt es sonstige Aktivitäten? Person 1 Nächste Woche ist ein Museumsbesuch geplant. Der Eintritt ist gratis, aber es werden 10 Euro für die Busfahrt benötigt.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

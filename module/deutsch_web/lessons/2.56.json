@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.56",
+  "aufgabe": "2.56",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Gesunde Ernährung",
+  "title": "Gesunde Ernährung",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1961.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.56/2.56.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.56-1",
+      "label": "Worum geht es in dem Gespräch?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Die Zubereitung von Fleischgerichten."
+        },
+        {
+          "key": "b",
+          "text": "Die Bedeutung von Obst und Gemüse in der Ernährung."
+        },
+        {
+          "key": "c",
+          "text": "Die Vorteile von Fast Food."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Hallo, liebe Hörerinnen und Hörer! Heute werden wir über die Bedeutung von Obst und Gemüse in unserer Ernährung sprechen. Obst und Gemüse sind reich an Vitaminen, Mineralien und Ballaststoffen, die sehr wichtig für unsere Gesundheit sind. Eine ausgewogene Ernährung mit viel Obst und Gemüse, das Kochen von Fleischgerichten und der reduzierte Verzehr von Fast Food, das nur wenig Vorteile bietet, kann das Risiko Sofür verschiedene Krankheiten wie Herzkrankheiten und Diabetes verringern.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

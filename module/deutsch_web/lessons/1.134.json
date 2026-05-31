@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.134",
+  "aufgabe": "1.134",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Frau Schönes Abo",
+  "title": "Frau Schönes Abo",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-112.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.134/1.134.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.134-1",
+      "label": "Frau Schöne",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "hat am 10. April einen neuen Computer gekauft."
+        },
+        {
+          "key": "b",
+          "text": "hat am 17. Mai eine Rechnung bekommen."
+        },
+        {
+          "key": "c",
+          "text": "hat am 14. Mai ein Abonnement bestellt."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrte Frau Schöne, wir möchten Sie darauf hinweisen, dass Sie am 10. April auf unserer Webseite ein Probeabo für die Zeitschrift ComputerGuru abgeschlossen haben. Da wir von Ihnen keine Kündigung erhalten haben, wurde Ihr Abonnement ab dem 15. Mai um ein Jahr verlängert. Das Abo läuft nun bis zum 14. Mai des nächsten Jahres. Die Rechnung für das Jahresabonnement haben wir Ihnen am 17. Mai per E-Mail zugesandt. Leider haben wir bis heute noch keine Zahlung von Ihnen erhalten. Wir möchten Sie bitten, den Betrag von 104,99 €, 79,90 € plus 25 € Mahngebühren innerhalb der nächsten fünf Werktage auf unser Bankkonto zu überweisen. Bei Fragen zur Rechnung und Bezahlung stehen wir Ihnen von Montag bis Freitag von 10 bis 17 Uhr unter der Rufnummer 123-567890 zur Verfügung. Mit freundlichen Grüßen, Ihr Kundenservice.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

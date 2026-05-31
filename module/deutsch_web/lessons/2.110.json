@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.110",
+  "aufgabe": "2.110",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Kunstmuseum",
+  "title": "Kunstmuseum",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1044.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.110/2.110.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.110-1",
+      "label": "Was müssen Sie beachten, bevor Sie die Ausstellung besuchen?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Die Abteilung für zeitgenössische Kunst ist geschlossen."
+        },
+        {
+          "key": "b",
+          "text": "Der Eintritt für die Sonderausstellung ist kostenpflichtig."
+        },
+        {
+          "key": "c",
+          "text": "Der Eintritt für die Sonderausstellung ist im regulären Eintrittspreis enthalten."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrte Besucher! Wir informieren Sie über eine temporäre Änderung der Ausstellung im Kunstmuseum. Aufgrund von Leihgaben aus anderen Museen wird die Abteilung für zeitgenössische Kunst vorübergehend in den ersten Stock verlegt. Bitte beachten Sie, dass der Eintritt für diese Sonderausstellung kostenpflichtig ist und nicht im regulären Eintrittspreis enthalten ist. Schauen Sie auf unserer Website nach den aktuellen Preisen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

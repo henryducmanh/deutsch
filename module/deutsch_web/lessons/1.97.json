@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.97",
+  "aufgabe": "1.97",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Realschule",
+  "title": "Realschule",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1829.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.97/1.97.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.97-1",
+      "label": "Was soll Frau Glück machen?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "An die Schule schreiben."
+        },
+        {
+          "key": "b",
+          "text": "Auf einen Brief warten."
+        },
+        {
+          "key": "c",
+          "text": "In die Schule kommen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrte Frau Glück, wir melden uns aus dem Sekretariat der Realschule. Es tut uns leid, Ihnen mitteilen zu müssen, dass der für nächsten Samstag geplante Elternsprechtag verschoben werden muss, da Herr Müller, der Klassenlehrer, erkrankt ist. Wir werden Ihnen einen neuen Termin für den Elternsprechtag schriftlich zukommen lassen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.137",
+  "aufgabe": "1.137",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Einkaufscenter",
+  "title": "Einkaufscenter",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-100.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.137/1.137.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.137-1",
+      "label": "An welchem Tag kann man am längsten einkaufen?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Freitag."
+        },
+        {
+          "key": "b",
+          "text": "Samstag."
+        },
+        {
+          "key": "c",
+          "text": "Sonntag."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Herzlich ein, unseren Geburtstag mitzufeiern. Das Einkaufszentrum Plaza in der Kölner Innenstadt feiert sein 10-jähriges Jubiläum. Aus diesem Anlass haben wir unsere Öffnungszeiten angepasst, damit Sie länger einkaufen können. Am kommenden Wochenende haben wir am Freitag bis 23 Uhr und am Samstag bis 22 Uhr geöffnet. Auch am Sonntag steht Ihnen das Plaza von 10 bis 18 Uhr zum Einkaufen zur Verfügung. Kommen Sie vorbei und erleben Sie viele aufregende Überraschungen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

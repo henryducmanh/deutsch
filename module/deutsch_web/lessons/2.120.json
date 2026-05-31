@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.120",
+  "aufgabe": "2.120",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Externe Partner",
+  "title": "Externe Partner",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-471.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.120/2.120.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.120-1",
+      "label": "Frau Müller soll",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Den aktuellen Stand der Flyer erfragen."
+        },
+        {
+          "key": "b",
+          "text": "Die Daten externer Partner neu sortieren."
+        },
+        {
+          "key": "c",
+          "text": "Das Protokoll im Meeting zusammen mit Herrn Weber schreiben."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Morgen Frau Müller, hier spricht Anna Schmidt. Wie bereits angekündigt, wurde das Team-Meeting heute auf 15 Uhr verschoben. Unsere Abteilungsleiterin hat mich gebeten, Ihnen Folgendes mitzuteilen. Das Protokoll müssen Sie heute nicht übernehmen, das macht Herr Weber. Stattdessen sollten Sie vor unserem Meeting unbedingt bei unserer Grafikagentur anrufen, um den aktuellen Stand der neuen Flyer zu überprüfen. Die Kontaktdaten finden Sie auf dem zentralen Server unter Externe Partner. Die Ergebnisse können Sie dann während des Meetings vorstellen. Vielen Dank und bis später!",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

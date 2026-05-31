@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.4",
+  "aufgabe": "1.4",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Anmeldung zur Mitgliedschaft im Fitnessstudio",
+  "title": "Anmeldung zur Mitgliedschaft im Fitnessstudio",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3879.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.4/1.4.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.4-1",
+      "label": "Bis wann müssen Sie sich anmelden, um im Februar Mitglied zu werden?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Bis Ende Januar."
+        },
+        {
+          "key": "b",
+          "text": "Bis Mitte Februar."
+        },
+        {
+          "key": "c",
+          "text": "Es gibt keine Frist."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Liebe Interessenten, hier ein wichtiger Hinweis zur Anmeldung in unserem Fitnessstudio. Wenn Sie ab Februar Mitglied werden möchten, haben Sie noch bis zum 31. Januar die Möglichkeit, sich anzumelden. Nach Ablauf dieser Anmeldefrist ist eine Anmeldung erst wieder Mitte Februar möglich. Allerdings für die Mitgliedschaft, die ab März beginnt. Die Nachfrage ist hoch und die Plätze sind begrenzt. Denken Sie daran, sich rechtzeitig zu entscheiden, da wir keine Nachmeldungen akzeptieren können. Wir freuen uns auf Sie und unterstützen Sie gerne bei Ihrer Fitnessreise.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

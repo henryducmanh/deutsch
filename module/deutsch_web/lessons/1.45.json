@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.45",
+  "aufgabe": "1.45",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Der Zug nach Berlin",
+  "title": "Der Zug nach Berlin",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1978.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.45/1.45.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.45-1",
+      "label": "Wann fährt der Zug nach Berlin ab?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Um 14:30 Uhr."
+        },
+        {
+          "key": "b",
+          "text": "Um 15:15 Uhr."
+        },
+        {
+          "key": "c",
+          "text": "Um 15:45 Uhr."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrte Fahrgäste, aufgrund von unvorhergesehenen Ereignissen kommt es zu einer Änderung des Fahrplans. Der Zug nach Berlin wird heute nicht wie geplant um 14 Uhr und 30 Minuten abfahren können. Stattdessen wird der Zug um 15 Uhr und 45 Minuten von Gleis 3 abfahren. Bitte beachten Sie die geänderten Abfahrtszeiten und entschuldigen Sie die Unannehmlichkeiten.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

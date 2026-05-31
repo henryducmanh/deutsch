@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.100",
+  "aufgabe": "2.100",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Zahlungen über die Online-Plattform",
+  "title": "Zahlungen über die Online-Plattform",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1055.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.100/2.100.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.100-1",
+      "label": "Welche Maßnahme wird vorgeschlagen, um die Bezahlung abzuschließen?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Die Zahlung über die Online-Plattform mehrmals versuchen."
+        },
+        {
+          "key": "b",
+          "text": "Barzahlungen und Kreditkarten in den Filialen verwenden."
+        },
+        {
+          "key": "c",
+          "text": "Warten Sie auf die Problembehebung und nutzen Sie keine anderen Zahlungsmethoden."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Achtung, alle Kunden. Wir informieren Sie darüber, dass aufgrund technischer Probleme einige Zahlungen über unsere Online-Plattform vorübergehend nicht möglich sind. Wir arbeiten daran, das Problem schnellstmöglich zu beheben. In der Zwischenzeit akzeptieren wir Barzahlungen und Kreditkarten in unseren Filialen. Wir entschuldigen uns für die Unannehmlichkeiten.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

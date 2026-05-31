@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.102",
+  "aufgabe": "2.102",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "In unserem Restaurant",
+  "title": "In unserem Restaurant",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1053.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.102/2.102.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.102-1",
+      "label": "Wie könnte man vorschlagen, alternative Möglichkeiten zu bekommen?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Auf die Verfügbarkeit der Gerichte warten."
+        },
+        {
+          "key": "b",
+          "text": "Das Restaurant verlassen und woanders essen."
+        },
+        {
+          "key": "c",
+          "text": "Das Personal nach alternativen Empfehlungen fragen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Herzlich willkommen in unserem Restaurant. Beachten Sie bitte, dass aufgrund von Personalengpässen einige Gerichte auf der Speisekarte vorübergehend nicht verfügbar sind. Unser Personal steht Ihnen gerne zur Verfügung, um alternative Empfehlungen auszusprechen. Vielen Dank für Ihr Verständnis.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

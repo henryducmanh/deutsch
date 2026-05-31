@@ -1,0 +1,67 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.4",
+  "aufgabe": "2.4",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Warnung der Feuerwehr",
+  "title": "Warnung der Feuerwehr",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4122.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.4/2.4.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.4-1",
+      "label": "Welche Nummer soll im Brandfall gewählt werden?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "122"
+        },
+        {
+          "key": "b",
+          "text": "112"
+        },
+        {
+          "key": "c",
+          "text": "144"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Einleitung",
+      "text": "Guten Tag liebe Bürgerinnen und Bürger. Aufgrund der aktuellen Trockenheit möchten wir Sie an wichtige Sicherheitsmaßnahmen erinnern. Bitte verzichten Sie im Freien auf das Grillen oder das Entzünden von Lagerfeuern, da bereits kleine Funken große Schäden anrichten können. Sollte es trotzdem zu einem Brand kommen, alarmieren Sie bitte sofort die Feuerwehr unter der",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 122",
+      "text": ". In lebensbedrohlichen Notfällen wie bei Verletzungen oder Rauchvergiftungen rufen Sie die Allgemeine Notrufnummer 112 an. Bei medizinischen Notfällen, zum Beispiel bei Verbrennungen, ist der Rettungsdienst unter der",
+      "key_phrase": ""
+    },
+    {
+      "label": "Aussage 144",
+      "text": "erreichbar. Bitte beachten Sie, Wasserquellen in öffentlichen Parks sind aktuell ausschließlich für die Brandbekämpfung reserviert. Wir danken für Ihre Mithilfe.",
+      "key_phrase": "erreichbar."
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.9",
+  "aufgabe": "3.9",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Termin beim Zahnarzt",
+  "title": "Termin beim Zahnarzt",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-4171.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.9/3.9.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.9-1",
+      "label": "Der Mann bekommt heute einen Termin beim Zahnarzt.",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "richtig"
+        },
+        {
+          "key": "b",
+          "text": "falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.9-2",
+      "label": "Die Frau sagt dem Mann, dass",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "er heute keinen Termin bekommt, aber morgen früh oder am Nachmittag kommen kann."
+        },
+        {
+          "key": "b",
+          "text": "er morgen Nachmittag nur dann kommen darf, wenn er seine Versichertenkarte schon heute abgibt."
+        },
+        {
+          "key": "c",
+          "text": "der einzige freie Termin heute um 15:30 Uhr stattfindet."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Man : Guten Tag, ich wollte fragen, ob ich heute noch einen Termin beim Zahnarzt bekommen kann. Frau : Guten Tag, heute ist unser Kalender leider voll. Sie könnten morgen früh um 9 Uhr kommen. Man : Morgen früh passt leider nicht. Haben Sie vielleicht am Nachmittag etwas frei? Frau : Ja, wir hätten einen Termin um 15 Uhr und 30 Minuten. Würde das gehen? Man : Ja, das wäre perfekt. Muss ich etwas mitbringen? Frau : Nur Ihre Versichertenkarte.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

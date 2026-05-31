@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.123",
+  "aufgabe": "1.123",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Versicherung",
+  "title": "Versicherung",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-688.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.123/1.123.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.123-1",
+      "label": "Sie brauchen einen Termin bei Ihrer Versicherung? Was sollen Sie tun?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Am Montag um acht Uhr anrufen."
+        },
+        {
+          "key": "b",
+          "text": "Eine Nachricht auf den Anrufbeantworter sprechen."
+        },
+        {
+          "key": "c",
+          "text": "Persönlich vorbeikommen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Tag, Sie haben die Prosekure-Versicherung erreicht. Leider befinden Sie sich momentan außerhalb unserer Geschäftszeiten. Wir sind von Montag bis Freitag zwischen 9 und 18 Uhr für Sie da. Gerne können Sie uns eine Nachricht auf dem Anrufbeantworter hinterlassen und wir melden uns schnellstmöglich bei Ihnen zurück. Vielen Dank, dass Sie uns kontaktiert haben.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

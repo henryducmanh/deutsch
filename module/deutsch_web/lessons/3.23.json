@@ -1,0 +1,72 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "3.23",
+  "aufgabe": "3.23",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 3,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Beim Arzt",
+  "title": "Beim Arzt",
+  "instructions": "Sie hören Gespräche. Zu jedem Gespräch gibt es zwei Aufgaben. Kreuzen Sie jeweils die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-3978.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/3.23/3.23.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "3.23-1",
+      "label": "Herr Müller hat Kopfschmerzen immer am Abend.",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Richtig"
+        },
+        {
+          "key": "b",
+          "text": "Falsch"
+        }
+      ]
+    },
+    {
+      "id": "3.23-2",
+      "label": "Welche Ursachen nennt der Arzt für die Kopfschmerzen?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Stress und schlechte Haltung"
+        },
+        {
+          "key": "b",
+          "text": "Flüssigkeitsmangel und Blutdruckprobleme"
+        },
+        {
+          "key": "c",
+          "text": "Stress und Dehydration"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Person 1 Hallo, Herr Müller. Wie geht es Ihnen heute? Person 2 Hallo. Manchmal habe ich Kopfschmerzen, diese treten aber meist abends auf. Person 1 Wissen Sie, ob das nach langen Arbeitstagen passiert? Stress ist häufig die Ursache für solche Beschwerden. Person 2 Vielleicht. Ich habe in letzter Zeit viele Überstunden gemacht. Es könnte aber auch an meinem Hals liegen, weil ich viel vor dem Computer sitze. Person 1 Das klingt plausibel. Eine schlechte Körperhaltung kann zu Verspannungen führen, die wiederum Kopfschmerzen verursachen. Person 2 Ja, und ich merke es besonders, wenn ich den ganzen Tag kaum trinke. Ich trinke oft Kaffee statt Wasser. Person 1 Das sollten Sie ändern. Auch Flüssigkeitsmangel ist eine mögliche Ursache. Lassen Sie uns später für alle Fälle Ihren Blutdruck messen. Der Blutdruck ist normal, das heißt, ein Flüssigkeitsmangel kann ausgeschlossen werden.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

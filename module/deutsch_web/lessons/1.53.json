@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.53",
+  "aufgabe": "1.53",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Wettervorhersage für heute",
+  "title": "Wettervorhersage für heute",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1969.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.53/1.53.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.53-1",
+      "label": "Was können die Zuschauer heute erwarten?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Regen."
+        },
+        {
+          "key": "b",
+          "text": "Sonniges Wetter mit wenig Wind."
+        },
+        {
+          "key": "c",
+          "text": "Sonniges Wetter mit Wind."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Morgen, liebe Hörerinnen und Hörer! Heute wird ein sonniger Tag mit Temperaturen um 10 Grad Celsius erwartet. Es wird fast windstill sein und die Luftfeuchtigkeit wird niedrig bleiben. Am Nachmittag ist eine leichte Bewölkung möglich, aber kein Regen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

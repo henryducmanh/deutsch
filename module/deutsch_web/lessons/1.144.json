@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.144",
+  "aufgabe": "1.144",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Wichtiges Anliegen zur Kfz-Versicherung",
+  "title": "Wichtiges Anliegen zur Kfz-Versicherung",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-79.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.144/1.144.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.144-1",
+      "label": "Warum sollte Herr Demir die SSG-Versicherung kontaktieren?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Um seine Kontonummer zu bestätigen."
+        },
+        {
+          "key": "b",
+          "text": "Um eine neue Versicherung abzuschließen."
+        },
+        {
+          "key": "c",
+          "text": "Um die richtige Kontonummer mitzuteilen."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrter Herr Demir, ich bin Ilmas von der SSG Versicherung. Vor drei Wochen haben Sie bei uns eine Kfz-Versicherung abgeschlossen. Leider können wir die Beiträge für Ihre Versicherung nicht von Ihrem Bankkonto abbuchen, da Sie uns eine falsche Kontonummer mitgeteilt haben. Bitte teilen Sie uns sobald wie möglich die richtige Kontonummer telefonisch mit. Dies ist wichtig, da andernfalls kein Versicherungsschutz besteht. Vielen Dank.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

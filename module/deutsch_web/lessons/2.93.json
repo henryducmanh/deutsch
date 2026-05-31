@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.93",
+  "aufgabe": "2.93",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Die Toiletten",
+  "title": "Die Toiletten",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1062.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.93/2.93.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.93-1",
+      "label": "Was wird empfohlen, um dringende Bedürfnisse zu erfüllen?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Die Toiletten im Stadtpark trotzdem benutzen."
+        },
+        {
+          "key": "b",
+          "text": "Die Toiletten im benachbarten Einkaufszentrum nutzen."
+        },
+        {
+          "key": "c",
+          "text": "Auf die Behebung der Toilettenprobleme im Stadtpark warten."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Guten Tag. Wir informieren Sie darüber, dass aufgrund von unerwarteten Reparaturen die öffentlichen Toiletten im Stadtpark vorübergehend geschlossen sind. Für dringende Bedürfnisse empfehlen wir, die Toiletten in nahegelegenen Einkaufszentrum zu nutzen. Beachten Sie die Beschilderung vor Ort für weitere Informationen. Wir entschuldigen uns für eventuelle Unannehmlichkeiten.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

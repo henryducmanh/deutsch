@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.38",
+  "aufgabe": "1.38",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Romeo und Julia",
+  "title": "Romeo und Julia",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-1986.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.38/1.38.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.38-1",
+      "label": "Wann findet die nächste Aufführung von Romeo und Julia genau statt?",
+      "correct": "c",
+      "options": [
+        {
+          "key": "a",
+          "text": "Diese Woche."
+        },
+        {
+          "key": "b",
+          "text": "Nächste Woche."
+        },
+        {
+          "key": "c",
+          "text": "Nicht bekannt."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Sehr geehrte Damen und Herren, aufgrund einer unerwarteten technischen Störung müssen wir die heutige Aufführung von Romeo und Julia leider absagen. Wir bemühen uns, das Problem zu beheben und werden Sie im Laufe dieser Woche über die weiteren Entwicklungen auf dem Laufenden halten. Bitte bewahren Sie Ihre Karten auf, sie sind für eine andere Vorstellung innerhalb der nächsten Woche gültig. Wir danken Ihnen für Ihr Verständnis.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

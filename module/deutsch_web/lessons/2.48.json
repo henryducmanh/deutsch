@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "2.48",
+  "aufgabe": "2.48",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 2,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Nachrichtenüberblick",
+  "title": "Nachrichtenüberblick",
+  "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-2001.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/2.48/2.48.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "2.48-1",
+      "label": "Was ist heute Abend in Dortmund?",
+      "correct": "a",
+      "options": [
+        {
+          "key": "a",
+          "text": "Der ukrainische Präsident kommt."
+        },
+        {
+          "key": "b",
+          "text": "Die Bundesgartenschau endet."
+        },
+        {
+          "key": "c",
+          "text": "Ein Fußballspiel findet statt."
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Es ist 17 Uhr und hier ist der aktuelle Nachrichtenüberblick von NRW1. Heute um 20 Uhr treten Bayern München und Hertha BSC Berlin in Frankfurt im DFB-Pokal gegeneinander an. Eine Willkommensfeier für den ukrainischen Präsidenten findet in Dortmund statt. Das Land Hessen plant, 200 Millionen Euro für neue Schulen bereitzustellen. Außerdem wurde die Bundesgartenschau feierlich eröffnet. Jetzt folgen die Einzelmeldungen.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}

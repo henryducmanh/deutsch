@@ -1,0 +1,57 @@
+{
+  "schema_version": "deutsch_web_lesson_v1",
+  "lesson_id": "1.24",
+  "aufgabe": "1.24",
+  "modul": "Hören",
+  "niveau": "B1",
+  "teil": 1,
+  "source_book": "deutsch-vorbereitung",
+  "thema": "Notdienst Apotheke",
+  "title": "Notdienst Apotheke",
+  "instructions": "Sie hören kurze Texte. Zu jedem Text gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
+  "source": {
+    "origin_url": "https://deutsch-vorbereitung.com/en/uebung-2644.html",
+    "lingq_lesson_id": null,
+    "lingq_course_id": null,
+    "lingq_reader_url": null
+  },
+  "audio": {
+    "url": null,
+    "host": "none",
+    "local_path": "input/html/deutsch-vorbereitung/horen/1.24/1.24.mp3"
+  },
+  "aussagen": [
+    {
+      "id": "1.24-1",
+      "label": "Welche Apotheke hat am Samstagabend Notdienst?",
+      "correct": "b",
+      "options": [
+        {
+          "key": "a",
+          "text": "Kaiser Apotheke"
+        },
+        {
+          "key": "b",
+          "text": "Bundesapotheke"
+        },
+        {
+          "key": "c",
+          "text": "Stadtapotheke"
+        }
+      ]
+    }
+  ],
+  "transcript": [
+    {
+      "label": "Transkription",
+      "text": "Willkommen bei der automatischen Ansage des Apotheken-Notdienstes. An diesem Wochenende haben folgende Apotheken Notdienst. Freitag 19 Uhr bis Samstagmorgen 9 Uhr. Kaiserapotheke in der Kaiserstraße. Samstagabend 19 Uhr bis Sonntagmorgen 9 Uhr. Bundesapotheke in der Bundesallee. Sonntagmorgen 9 Uhr bis Montagmorgen 9 Uhr. Stadtapotheke am Stadtpark.",
+      "key_phrase": ""
+    }
+  ],
+  "vocab": [],
+  "_meta": {
+    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
+    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
+    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
+  }
+}
