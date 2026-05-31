@@ -6,7 +6,7 @@
   "niveau": "B1",
   "teil": 2,
   "source_book": "deutsch-vorbereitung",
-  "thema": "Renovierung des Schwimmbads",
+  "thema": "Wohnen",
   "title": "Renovierung des Schwimmbads",
   "instructions": "Sie hören eine Sendung. Zu jedem Abschnitt gibt es eine Aufgabe. Kreuzen Sie die richtige Antwort an.",
   "source": {
@@ -48,10 +48,5 @@
       "key_phrase": ""
     }
   ],
-  "vocab": [],
-  "_meta": {
-    "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
-    "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
-    "generated_by": "horen_to_lesson_json.py Phase B 2026-05-31"
-  }
+  "vocab": []
 }
