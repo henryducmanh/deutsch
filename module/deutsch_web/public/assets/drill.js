@@ -240,6 +240,8 @@
   // ── Vocab Panel ──
   var vocabOpen = false;
   var hlOn = false;
+  var freshCandidates = [];
+  var neuInlineInjected = false;
   var lvNum = { new: '1', ok: '2', hard: '3' };
 
   // ── Phase 2: load nghĩa vocab từ DB, merge đè JSON ──
@@ -804,9 +806,11 @@
     // Phase 4: tách "Biến thể đã biết" (form_key ∈ formMap) khỏi "Từ gốc mới".
     var variants = [];
     var fresh = [];
+    freshCandidates = [];
     cands.forEach(function (w) {
       if (formMap[w.toLowerCase()]) { variants.push(w); } else { fresh.push(w); }
     });
+    freshCandidates = fresh;
 
     if (cands.length === 0) {
       list.innerHTML = '<div class="vocab-empty">Không có từ lạ trong bài (tất cả đã có trong DB).</div>';
@@ -901,6 +905,69 @@
     });
   }
 
+
+  function injectNewInlineMarks() {
+    if (neuInlineInjected || freshCandidates.length === 0) { return; }
+    neuInlineInjected = true;
+    var words = freshCandidates.slice().sort(function (a, b) { return b.length - a.length; });
+    var targets = document.querySelectorAll('.option span, .transcript-box p, .aussage-label');
+    targets.forEach(function (el) {
+      var html = el.innerHTML;
+      words.forEach(function (w) {
+        var wk = w.toLowerCase();
+        var already = !!knownKeys[wk];
+        var cls = 'vocab-new-inline-mark' + (already ? ' queued' : '');
+        var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(w) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
+        html = replaceTextOnly(html, re,
+          '<span class="' + cls + '" data-word="' + wk + '">$1</span>');
+      });
+      el.innerHTML = html;
+    });
+    document.querySelectorAll('.vocab-new-inline-mark:not(.queued)').forEach(function (m) {
+      m.addEventListener('click', function (e) {
+        e.stopPropagation();
+        addNewWordInline(m.dataset.word, m);
+      });
+    });
+  }
+
+  function stripNewInlineMarks() {
+    document.querySelectorAll('.vocab-new-inline-mark').forEach(function (m) {
+      if (m.parentNode) {
+        m.parentNode.replaceChild(document.createTextNode(m.textContent), m);
+      }
+    });
+    document.querySelectorAll('.option span, .transcript-box p, .aussage-label').forEach(function (el) {
+      el.normalize();
+    });
+    neuInlineInjected = false;
+  }
+
+  function addNewWordInline(wort, span) {
+    if (span) { span.classList.add('queued'); span.style.pointerEvents = 'none'; }
+    fetch('/api/vocab', {
+      method: 'POST', credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ wort: wort, bedeutung: null, wortart: null, artikel: null, source_lesson: LESSON_ID })
+    }).then(function (r) { return r.ok ? r.json() : Promise.reject('HTTP ' + r.status); })
+      .then(function (data) {
+        var key = wort.toLowerCase();
+        knownKeys[key] = true;
+        vocabData.push({ w: wort, art: '?', m: '— (chưa tra)', lv: 'new',
+                         vocab_id: (data && data.id ? data.id : null) });
+        wordStatus[key] = 'new';
+        document.querySelectorAll('.vocab-new-inline-mark[data-word="' + key + '"]').forEach(function (s) {
+          s.classList.add('queued'); s.style.pointerEvents = 'none';
+        });
+        var listItem = document.querySelector('.vocab-new-item[data-word="' + wort + '"]');
+        if (listItem && listItem.parentNode) { listItem.parentNode.removeChild(listItem); }
+        renderVocab();
+      }).catch(function () {
+        if (span) { span.classList.remove('queued'); span.style.pointerEvents = ''; }
+        alert('Không queue được từ. Kiểm tra kết nối.');
+      });
+  }
+
   function switchTab(which) {
     var tabAll = document.getElementById('tabAll');
     var tabNew = document.getElementById('tabNew');
@@ -911,9 +978,11 @@
       tabNew.classList.add('active'); tabAll.classList.remove('active');
       listAll.style.display = 'none'; listNew.style.display = '';
       renderNewWords();
+      injectNewInlineMarks();
     } else {
       tabAll.classList.add('active'); tabNew.classList.remove('active');
       listNew.style.display = 'none'; listAll.style.display = '';
+      stripNewInlineMarks();
       renderVocab();
     }
   }
@@ -928,7 +997,11 @@
   // Nếu đang ở tab Neu wort → refresh sau khi DB load xong (known set đầy đủ).
   function refreshNeuIfOpen() {
     var listNew = document.getElementById('vocabNewList');
-    if (listNew && listNew.style.display !== 'none') { renderNewWords(); }
+    if (listNew && listNew.style.display !== 'none') {
+      stripNewInlineMarks();
+      renderNewWords();
+      injectNewInlineMarks();
+    }
   }
 
   // ── Expose handlers cho inline onclick trong view ──
