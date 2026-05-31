@@ -223,7 +223,12 @@ function h($s) { return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
     });
   });
 
-  // ── Khởi tạo: sort all cards ngay khi tải trang ──────────────────────────
+  // ── Khởi tạo: sort + auto-activate Teil từ ?teil= ───────────────────────
+  var initTeil = parseInt(new URLSearchParams(location.search).get('teil'), 10) || 0;
+  if (initTeil > 0) {
+    var targetTab = document.querySelector('.teil-tab[data-teil="' + initTeil + '"]');
+    if (targetTab) { targetTab.click(); return; }
+  }
   sortCards(col.querySelectorAll('.lesson-card'));
 })();
 </script>

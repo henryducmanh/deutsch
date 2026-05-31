@@ -13,6 +13,9 @@ $audio  = $lesson['audio']['url'] ?? '';
 $aussagen   = $lesson['aussagen'] ?? [];
 $transcript = $lesson['transcript'] ?? [];
 $total = count($aussagen);
+// Back link → danh sách bài đúng Teil
+$teil     = (int)($lesson['teil'] ?? 0);
+$backHref = $teil > 0 ? '/?teil=' . $teil : '/';
 
 // Link mở note buổi học (collaborative tutor note) — student_id = học viên đang xem
 // (chính mình, hoặc học viên mà tutor đang "học cùng"), date = hôm nay.
@@ -34,7 +37,7 @@ $noteHref = '/tutor/note?lesson_id=' . rawurlencode($lid)
 <div class="app">
 
   <div class="tabs">
-    <a class="tab" href="/">← Alle Übungen</a>
+    <a class="tab" href="<?= h($backHref) ?>">← Alle Übungen</a>
     <a class="tab" href="<?= h($noteHref) ?>">📝 Notizen</a>
   </div>
 
