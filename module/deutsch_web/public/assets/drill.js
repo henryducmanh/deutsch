@@ -545,6 +545,15 @@
     });
   }
 
+  // Chỉ replace trong text nodes, KHÔNG replace trong HTML tags/attributes
+  // (tránh match nhầm vào data-word/title của span đã chèn ở Pass trước).
+  function replaceTextOnly(html, re, replacement) {
+    return html.replace(/(<[^>]*>)|([^<]+)/g, function (match, tag, text) {
+      if (tag) return tag;   // skip HTML tag + attributes
+      return text ? text.replace(re, replacement) : match;
+    });
+  }
+
   // Xóa tất cả span.vocab-mark + .vocab-form-mark + .vocab-global-mark (unwrap về text thuần) để re-inject sạch.
   function stripMarks() {
     document.querySelectorAll('.vocab-mark, .vocab-form-mark, .vocab-global-mark').forEach(function (m) {
@@ -593,7 +602,7 @@
       words.forEach(function (w) {
         // FIX double-escape \\w + dải ký tự có dấu Đức/tiếng Việt
         var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(w) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
-        html = html.replace(re, '<span class="vocab-mark" data-word="' + w.toLowerCase() + '" title="' + escHtml(w) + '">$1</span>');
+        html = replaceTextOnly(html, re, '<span class="vocab-mark" data-word="' + w.toLowerCase() + '" title="' + escHtml(w) + '">$1</span>');
       });
 
       // Pass 2
@@ -603,7 +612,7 @@
         if (!info) { return; }
         var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(fw) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
         var tip = escHtml(fw) + ' [' + escHtml(info.form_type || '?') + '] → ' + escHtml(info.lemma || '');
-        html = html.replace(re, '<span class="vocab-form-mark" data-form="' + fk +
+        html = replaceTextOnly(html, re, '<span class="vocab-form-mark" data-form="' + fk +
           '" data-lemma="' + escHtml(info.lemma_key || '') + '" data-ftype="' + escHtml(info.form_type || '') +
           '" title="' + tip + '">$1</span>');
       });
@@ -611,7 +620,7 @@
       // Pass 3 — TRONG cùng forEach, cùng html string (tránh đọc/ghi innerHTML đã có span)
       globalWords.forEach(function (item) {
         var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(item.w) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
-        html = html.replace(re,
+        html = replaceTextOnly(html, re,
           '<span class="vocab-global-mark" data-word="' + item.key + '" title="' + item.tip + '">$1</span>');
       });
 
