@@ -4,7 +4,7 @@
   "aufgabe": "4.30",
   "modul": "Hören",
   "niveau": "B1",
-  "thema": "Homeoffice",
+  "thema": "Erfahrungen im Homeoffice",
   "title": "Erfahrungen im Homeoffice",
   "instructions": "Sie hören Aussagen zu einem Thema. Welcher der Sätze a–f passt zu den Aussagen? Lesen Sie jetzt die Sätze a–f. Dazu haben Sie eine Minute Zeit. Danach hören Sie die Aussagen.",
   "source": {
@@ -24,12 +24,30 @@
       "label": "Aussage 1",
       "correct": "c",
       "options": [
-        { "key": "a", "text": "Die Zeitersparnis durch Homeoffice ist ein großer Vorteil." },
-        { "key": "b", "text": "Die sozialen Aspekte im Büro sind für mich entscheidend." },
-        { "key": "c", "text": "Die flexible Arbeitszeitgestaltung ist der größte Pluspunkt von Homeoffice." },
-        { "key": "d", "text": "Der persönliche Kontakt zu Kollegen fehlt mir im Homeoffice." },
-        { "key": "e", "text": "Homeoffice bietet mehr Zeit für die Familie." },
-        { "key": "f", "text": "Die klare Trennung von Arbeit und Freizeit ist im Homeoffice schwierig." }
+        {
+          "key": "a",
+          "text": "Die Zeitersparnis durch Homeoffice ist ein großer Vorteil."
+        },
+        {
+          "key": "b",
+          "text": "Die sozialen Aspekte im Büro sind für mich entscheidend."
+        },
+        {
+          "key": "c",
+          "text": "Die flexible Arbeitszeitgestaltung ist der größte Pluspunkt von Homeoffice."
+        },
+        {
+          "key": "d",
+          "text": "Der persönliche Kontakt zu Kollegen fehlt mir im Homeoffice."
+        },
+        {
+          "key": "e",
+          "text": "Homeoffice bietet mehr Zeit für die Familie."
+        },
+        {
+          "key": "f",
+          "text": "Die klare Trennung von Arbeit und Freizeit ist im Homeoffice schwierig."
+        }
       ]
     },
     {
@@ -37,12 +55,30 @@
       "label": "Aussage 2",
       "correct": "d",
       "options": [
-        { "key": "a", "text": "Die Zeitersparnis durch Homeoffice ist ein großer Vorteil." },
-        { "key": "b", "text": "Die sozialen Aspekte im Büro sind für mich entscheidend." },
-        { "key": "c", "text": "Die flexible Arbeitszeitgestaltung ist der größte Pluspunkt von Homeoffice." },
-        { "key": "d", "text": "Der persönliche Kontakt zu Kollegen fehlt mir im Homeoffice." },
-        { "key": "e", "text": "Homeoffice bietet mehr Zeit für die Familie." },
-        { "key": "f", "text": "Die klare Trennung von Arbeit und Freizeit ist im Homeoffice schwierig." }
+        {
+          "key": "a",
+          "text": "Die Zeitersparnis durch Homeoffice ist ein großer Vorteil."
+        },
+        {
+          "key": "b",
+          "text": "Die sozialen Aspekte im Büro sind für mich entscheidend."
+        },
+        {
+          "key": "c",
+          "text": "Die flexible Arbeitszeitgestaltung ist der größte Pluspunkt von Homeoffice."
+        },
+        {
+          "key": "d",
+          "text": "Der persönliche Kontakt zu Kollegen fehlt mir im Homeoffice."
+        },
+        {
+          "key": "e",
+          "text": "Homeoffice bietet mehr Zeit für die Familie."
+        },
+        {
+          "key": "f",
+          "text": "Die klare Trennung von Arbeit und Freizeit ist im Homeoffice schwierig."
+        }
       ]
     },
     {
@@ -50,47 +86,125 @@
       "label": "Aussage 3",
       "correct": "f",
       "options": [
-        { "key": "a", "text": "Die Zeitersparnis durch Homeoffice ist ein großer Vorteil." },
-        { "key": "b", "text": "Die sozialen Aspekte im Büro sind für mich entscheidend." },
-        { "key": "c", "text": "Die flexible Arbeitszeitgestaltung ist der größte Pluspunkt von Homeoffice." },
-        { "key": "d", "text": "Der persönliche Kontakt zu Kollegen fehlt mir im Homeoffice." },
-        { "key": "e", "text": "Homeoffice bietet mehr Zeit für die Familie." },
-        { "key": "f", "text": "Die klare Trennung von Arbeit und Freizeit ist im Homeoffice schwierig." }
+        {
+          "key": "a",
+          "text": "Die Zeitersparnis durch Homeoffice ist ein großer Vorteil."
+        },
+        {
+          "key": "b",
+          "text": "Die sozialen Aspekte im Büro sind für mich entscheidend."
+        },
+        {
+          "key": "c",
+          "text": "Die flexible Arbeitszeitgestaltung ist der größte Pluspunkt von Homeoffice."
+        },
+        {
+          "key": "d",
+          "text": "Der persönliche Kontakt zu Kollegen fehlt mir im Homeoffice."
+        },
+        {
+          "key": "e",
+          "text": "Homeoffice bietet mehr Zeit für die Familie."
+        },
+        {
+          "key": "f",
+          "text": "Die klare Trennung von Arbeit und Freizeit ist im Homeoffice schwierig."
+        }
       ]
     }
   ],
   "transcript": [
     {
       "label": "Aussage 1",
-      "text": "Also ich finde Homeoffice super. Man spart viel Zeit, die man sonst im Verkehr verbringen würde. Außerdem kann ich flexibel arbeiten und habe mehr Zeit für meine Familie.",
-      "key_phrase": "Außerdem kann ich flexibel arbeiten"
+      "text": "Also ich finde Homeoffice super. Man spart viel Zeit, die man sonst den Verkehr verbringen würde. Außerdem kann ich flexibel arbeiten und habe mehr Zeit für meine Familie.",
+      "key_phrase": "Also ich finde Homeoffice super."
     },
     {
       "label": "Aussage 2",
-      "text": "Ich bin überhaupt kein Fan von Homeoffice. Mir fehlt der persönliche Kontakt zu meinen Kollegen. Die informellen Gespräche am Kaffeeautomaten sind genauso wichtig wie die formellen Meetings.",
-      "key_phrase": "Mir fehlt der persönliche Kontakt zu meinen Kollegen"
+      "text": "Ich bin überhaupt kein Fan von Homeoffice. Mir fehlt der persönliche Kontakt zu meinem Kollegen. Die informellen Gespräche am Kaffeeautomaten sind genauso wichtig wie die formellen Meetings.",
+      "key_phrase": "Ich bin überhaupt kein Fan von Homeoffice."
     },
     {
       "label": "Aussage 3",
-      "text": "Homeoffice ist für mich ein Albtraum. Es gibt immer Ablenkungen zu Hause. Ich vermisse die klare Trennung zwischen Arbeit und Freizeit im Büro.",
-      "key_phrase": "die klare Trennung zwischen Arbeit und Freizeit"
+      "text": "Homeoffice ist für mich ein Eiltraum. Es gibt immer Ablenkungen zu Hause, sei es der Haushalt oder die ständige Versuchung, sich vor dem Fernseher zu entspannen. Ich vermisse die klare Trennung zwischen Arbeit und Freizeit im Büro. \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "key_phrase": "Homeoffice ist für mich ein Eiltraum."
     }
   ],
   "vocab": [
-    { "w": "Zeitersparnis", "art": "die · Subst.", "m": "tiết kiệm thời gian", "lv": "new", "vocab_id": null },
-    { "w": "flexibel", "art": "Adj.", "m": "linh hoạt (flexibel arbeiten)", "lv": "ok", "vocab_id": null },
-    { "w": "Ablenkung", "art": "die · Subst.", "m": "sự phân tâm", "lv": "new", "vocab_id": null },
-    { "w": "informell", "art": "Adj.", "m": "không chính thức (≠ formell)", "lv": "new", "vocab_id": null },
-    { "w": "vermissen", "art": "Verb", "m": "nhớ (một thứ không còn)", "lv": "new", "vocab_id": null },
-    { "w": "Versuchung", "art": "die · Subst.", "m": "cám dỗ", "lv": "new", "vocab_id": null },
-    { "w": "sich entspannen", "art": "Verb", "m": "thư giãn", "lv": "ok", "vocab_id": null },
-    { "w": "Trennung", "art": "die · Subst.", "m": "sự phân chia (klare Trennung)", "lv": "new", "vocab_id": null },
-    { "w": "Kaffeeautomat", "art": "der · Subst.", "m": "máy pha cà phê tự động", "lv": "new", "vocab_id": null },
-    { "w": "Haushalt", "art": "der · Subst.", "m": "việc nhà / hộ gia đình", "lv": "ok", "vocab_id": null }
+    {
+      "w": "Zeitersparnis",
+      "art": "die · Subst.",
+      "m": "tiết kiệm thời gian",
+      "lv": "new",
+      "vocab_id": null
+    },
+    {
+      "w": "flexibel",
+      "art": "Adj.",
+      "m": "linh hoạt (flexibel arbeiten)",
+      "lv": "ok",
+      "vocab_id": null
+    },
+    {
+      "w": "Ablenkung",
+      "art": "die · Subst.",
+      "m": "sự phân tâm",
+      "lv": "new",
+      "vocab_id": null
+    },
+    {
+      "w": "informell",
+      "art": "Adj.",
+      "m": "không chính thức (≠ formell)",
+      "lv": "new",
+      "vocab_id": null
+    },
+    {
+      "w": "vermissen",
+      "art": "Verb",
+      "m": "nhớ (một thứ không còn)",
+      "lv": "new",
+      "vocab_id": null
+    },
+    {
+      "w": "Versuchung",
+      "art": "die · Subst.",
+      "m": "cám dỗ",
+      "lv": "new",
+      "vocab_id": null
+    },
+    {
+      "w": "sich entspannen",
+      "art": "Verb",
+      "m": "thư giãn",
+      "lv": "ok",
+      "vocab_id": null
+    },
+    {
+      "w": "Trennung",
+      "art": "die · Subst.",
+      "m": "sự phân chia (klare Trennung)",
+      "lv": "new",
+      "vocab_id": null
+    },
+    {
+      "w": "Kaffeeautomat",
+      "art": "der · Subst.",
+      "m": "máy pha cà phê tự động",
+      "lv": "new",
+      "vocab_id": null
+    },
+    {
+      "w": "Haushalt",
+      "art": "der · Subst.",
+      "m": "việc nhà / hộ gia đình",
+      "lv": "ok",
+      "vocab_id": null
+    }
   ],
   "_meta": {
     "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
     "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",
-    "generated_by": "Claude Code (Implementer Phase 0) 2026-05-29 từ output/drills/horen_test_4.29-4.31.html (lesson-1 + vocabData[1]) + input/html/deutsch-vorbereitung/horen/4.30/url.md"
+    "generated_by": "horen_to_lesson_json.py Phase A 2026-05-31"
   }
 }

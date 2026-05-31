@@ -115,6 +115,11 @@
   ],
   "transcript": [
     {
+      "label": "Einleitung",
+      "text": "Sie hören Aussagen zu einem Thema, Technologie und Innovation. Welche der Sätze A, F pass zu den Aussagen 1 bis 3, markieren Sie Ihre Lösungen für die Aufgaben 1 bis 3. Lesen Sie jetzt die Sätze A, F. Danach hören Sie die Aussagen.",
+      "key_phrase": ""
+    },
+    {
       "label": "Aussage 1",
       "text": ". Ich bin begeistert von den Möglichkeiten, die Technologie und Innovation bieten. Sonntage sollten daher genutzt werden, um neue Technologien zu erforschen und innovative Projekte zu unterstützen.",
       "key_phrase": ""

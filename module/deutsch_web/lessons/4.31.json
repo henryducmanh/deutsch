@@ -135,7 +135,92 @@
       "key_phrase": "Homomorphies bietet zwar Flexibilität, aber es gibt auch Herausforderungen hinsichtlich der sozialen Interaktion und…"
     }
   ],
-  "vocab": [],
+  "vocab": [
+    {
+      "w": "Automatisierung",
+      "art": "die · Subst.",
+      "m": "tự động hóa",
+      "lv": "new",
+      "vocab_id": null
+    },
+    {
+      "w": "Herausforderung",
+      "art": "die · Subst.",
+      "m": "thách thức",
+      "lv": "new",
+      "vocab_id": null
+    },
+    {
+      "w": "psychisch",
+      "art": "Adj.",
+      "m": "thuộc tâm lý (psychische Gesundheit)",
+      "lv": "new",
+      "vocab_id": null
+    },
+    {
+      "w": "Wohlbefinden",
+      "art": "das · Subst.",
+      "m": "sự an lành / phúc lợi",
+      "lv": "new",
+      "vocab_id": null
+    },
+    {
+      "w": "fördern",
+      "art": "Verb",
+      "m": "thúc đẩy / hỗ trợ",
+      "lv": "new",
+      "vocab_id": null
+    },
+    {
+      "w": "Weiterbildung",
+      "art": "die · Subst.",
+      "m": "đào tạo nâng cao",
+      "lv": "new",
+      "vocab_id": null
+    },
+    {
+      "w": "Fähigkeit",
+      "art": "die · Subst.",
+      "m": "kỹ năng / khả năng",
+      "lv": "new",
+      "vocab_id": null
+    },
+    {
+      "w": "Maßnahme",
+      "art": "die · Subst.",
+      "m": "biện pháp",
+      "lv": "new",
+      "vocab_id": null
+    },
+    {
+      "w": "Verpflichtung",
+      "art": "die · Subst.",
+      "m": "nghĩa vụ / cam kết",
+      "lv": "new",
+      "vocab_id": null
+    },
+    {
+      "w": "Zusammenhalt",
+      "art": "der · Subst.",
+      "m": "sự gắn kết xã hội",
+      "lv": "new",
+      "vocab_id": null
+    },
+    {
+      "w": "Unsicherheit",
+      "art": "die · Subst.",
+      "m": "sự bất ổn",
+      "lv": "new",
+      "vocab_id": null
+    },
+    {
+      "w": "antizipieren",
+      "art": "Verb",
+      "m": "dự đoán trước",
+      "lv": "hard",
+      "vocab_id": null
+    }
+  ],
   "_meta": {
     "note_vocab_id": "null = chưa link vocab_master. Vai Vocab Extractor / deutsch_web_sync điền sau khi match wort trong data/03_unified/vocab_master.csv. KHÔNG bịa ID.",
     "note_lv": "lv = trạng thái panel (new/ok/hard) ánh xạ lv-new/lv-ok/lv-hard trong drill.css.",

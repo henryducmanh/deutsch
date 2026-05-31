@@ -202,18 +202,34 @@ def parse_questions(text: str, lesson_id: str):
 
 # ── Parse transcript ──────────────────────────────────────────────────────
 def parse_transcript(text: str, lesson_id: str):
-    """transcript[] + flag warn (split failed)."""
+    """transcript[] + flag warn (split failed).
+
+    Format output:
+      - Nếu có intro (trước marker đầu tiên) → entry đầu label="Einleitung", key_phrase=""
+      - Mỗi Aussage: label="Aussage N", text = FULL raw text của segment đó (không tóm tắt),
+        key_phrase = câu đầu tiên (cho UI bôi đậm)
+    Mục tiêu: giữ nguyên gốc transcript để học từ vựng + đối chiếu âm thanh.
+    """
     # Bỏ header "# Transcript ..." + "Source: ..." → body
     body = text
     body = re.sub(r"^#\s*Transcript[^\n]*\n", "", body, count=1)
     body = re.sub(r"^Source:[^\n]*\n", "", body, count=1, flags=re.MULTILINE)
+    body = body.strip()
 
     markers = list(TRANSCRIPT_MARKER.finditer(body))
     if not markers:
         logger.warning("transcript split failed for %s, using full text", lesson_id)
-        return [{"label": "Transcript", "text": clean(body), "key_phrase": ""}], True
+        return [{"label": "Transkription", "text": clean(body), "key_phrase": ""}], True
 
     segments = []
+
+    # Intro: phần text TRƯỚC marker đầu tiên (phần giới thiệu chủ đề)
+    intro_text = clean(body[: markers[0].start()])
+    if intro_text:
+        segments.append({"label": "Einleitung", "text": intro_text, "key_phrase": ""})
+
+    # Từng Aussage: lấy text từ SAU marker đến trước marker tiếp theo
+    # (marker bản thân — "Nr. 1", "Aussage 2" — không đưa vào text vì label đã có)
     for i, m in enumerate(markers):
         n = m.group(1)
         seg_start = m.end()
@@ -228,7 +244,18 @@ def parse_transcript(text: str, lesson_id: str):
 
 
 # ── Build 1 lesson ────────────────────────────────────────────────────────
-def build_lesson(lesson_id: str, csv_table: dict[str, dict], date: str):
+def build_lesson(lesson_id: str, csv_table: dict[str, dict], date: str,
+                 old_json: "dict | None" = None):
+    """Build lesson dict.
+
+    old_json: nội dung JSON cũ (đọc trước khi --force overwrite).
+    Merge strategy khi old_json không None:
+      - lingq_lesson_id/course_id/reader_url: nếu lookup mới trả None → giữ giá trị cũ
+      - audio.url/host: nếu lookup mới trả None → giữ giá trị cũ
+      - vocab: nếu old_json có vocab non-empty → giữ nguyên (ưu tiên curated data)
+    Lý do: lingq_lessons.csv có thể mất entry 4.x sau khi lessons_sync.php rebuild,
+    nhưng JSON cũ vẫn có đúng lesson_id + audio URL.
+    """
     folder = HOREN_ROOT / lesson_id
     q_path = folder / f"{lesson_id}_questions.md"
     t_path = folder / f"{lesson_id}_transcript.md"
@@ -256,6 +283,28 @@ def build_lesson(lesson_id: str, csv_table: dict[str, dict], date: str):
     audio_url, audio_host = get_audio_url(lesson_id, url_md, csv_row)
     lingq_lid, lingq_cid, reader_url = get_lingq_meta(lesson_id, url_md, csv_row)
 
+    # ── Merge strategy: giữ giá trị cũ nếu lookup mới trả None ──────────
+    if old_json:
+        old_src = old_json.get("source", {})
+        old_audio = old_json.get("audio", {})
+
+        if lingq_lid is None and old_src.get("lingq_lesson_id"):
+            lingq_lid = old_src["lingq_lesson_id"]
+            lingq_cid = old_src.get("lingq_course_id")
+            reader_url = old_src.get("lingq_reader_url")
+            logger.info("[%s] merge: lingq_lesson_id=%s từ JSON cũ", lesson_id, lingq_lid)
+
+        if audio_url is None and old_audio.get("url"):
+            audio_url = old_audio["url"]
+            audio_host = old_audio.get("host", "lingq_s3")
+            logger.info("[%s] merge: audio.url từ JSON cũ", lesson_id)
+
+    # Vocab: giữ nguyên nếu cũ đã có data curated (vocab: [] = trống = không giữ)
+    vocab = []
+    if old_json and old_json.get("vocab"):
+        vocab = old_json["vocab"]
+        logger.info("[%s] merge: vocab %d từ từ JSON cũ", lesson_id, len(vocab))
+
     lesson = {
         "schema_version": "deutsch_web_lesson_v1",
         "lesson_id": lesson_id,
@@ -278,7 +327,7 @@ def build_lesson(lesson_id: str, csv_table: dict[str, dict], date: str):
         },
         "aussagen": aussagen,
         "transcript": transcript,
-        "vocab": [],
+        "vocab": vocab,
         "_meta": {
             "note_vocab_id": NOTE_VOCAB_ID,
             "note_lv": NOTE_LV,
@@ -359,8 +408,16 @@ def main(argv=None) -> int:
                 print(f"{lesson_id:<6}→ SKIP      (already exists: {rel})")
             continue
 
+        # Đọc JSON cũ trước khi overwrite (cho merge strategy)
+        old_json = None
+        if args.force and out_path.exists():
+            try:
+                old_json = json.loads(out_path.read_text(encoding="utf-8"))
+            except Exception:
+                pass  # JSON cũ lỗi → bỏ qua, không merge
+
         try:
-            lesson, info = build_lesson(lesson_id, csv_table, date)
+            lesson, info = build_lesson(lesson_id, csv_table, date, old_json=old_json)
         except Exception as exc:  # noqa: BLE001
             n_err += 1
             logger.error("[%s] build lỗi: %s", lesson_id, exc)

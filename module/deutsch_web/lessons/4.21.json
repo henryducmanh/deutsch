@@ -115,6 +115,11 @@
   ],
   "transcript": [
     {
+      "label": "Einleitung",
+      "text": "Sie hören Aussagen zu einem Thema, digitale Medien. Welcher der Sätze A, F passt zu den Aussagen 1 bis 3? Markieren Sie Ihre Lösungen für die Aufgaben 1 bis 3. Lesen Sie jetzt die Sätze A, F. Danach hören Sie die Aussagen.",
+      "key_phrase": ""
+    },
+    {
       "label": "Aussage 1",
       "text": ". Als Studentin schätze ich die Vorteile digitaler Medien im Bildungsbereich.Es ermöglicht uns den Zugang zu einer Fülle von Informationen und Ressourcen, die unser Lernen bereichern.",
       "key_phrase": ""

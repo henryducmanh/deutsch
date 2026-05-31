@@ -115,6 +115,11 @@
   ],
   "transcript": [
     {
+      "label": "Einleitung",
+      "text": "Sie hören Aussagen zu einem Thema, gesunde Ernährung. Welcher der Sätze A, F passt zu den Aussagen 1 bis 3? Markieren Sie Ihre Lösungen für die Aufgaben 1 bis 3. Lesen Sie jetzt die Sätze A, F. Danach hören Sie die Aussagen.",
+      "key_phrase": ""
+    },
+    {
       "label": "Aussage 1",
       "text": ". Ich bin überzeugt, dass eine gesunde Ernährung essentiell für ein glückliches und gesundes Leben ist.Sonntage sollten daher genutzt werden, um frische Lebensmittel einzukaufen und gemeinsam gesunde Mahlzeiten zuzubereiten.",
       "key_phrase": ""
