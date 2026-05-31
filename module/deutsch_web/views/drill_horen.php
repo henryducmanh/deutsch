@@ -149,11 +149,11 @@ $noteHref = '/tutor/note?lesson_id=' . rawurlencode($lid)
       </button>
       <div class="vocab-head-title" id="vocabPanelTitle">Vokabeln</div>
       <div class="vocab-head-actions">
-        <button class="vocab-hl-btn" id="hlToggleBtn" onclick="toggleHighlight()" title="Bật/tắt nền vàng">☀ Nền vàng</button>
+        <button class="vocab-hl-btn" id="hlToggleBtn" onclick="toggleHighlight()" title="Bật/tắt highlight">☀ Highlight</button>
       </div>
     </div>
     <div class="vocab-head-tabs">
-      <span class="vocab-tab active" id="tabAll" data-tab="all">Alle Wörter</span>
+      <span class="vocab-tab active" id="tabAll" data-tab="all">Từ trong bài</span>
       <span class="vocab-tab" id="tabNew" data-tab="new">Neu wort</span>
     </div>
   </div>

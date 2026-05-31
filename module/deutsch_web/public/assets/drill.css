@@ -179,12 +179,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 /* Word highlight in text */
 .vocab-mark { border-radius: 3px; transition: background .15s; cursor: pointer; }
 
-/* hl-selected: LUÔN hiện viền cam + nền cam, bất kể bật/tắt nền vàng */
+/* hl-selected: LUÔN hiện viền cam + nền cam, bất kể bật/tắt highlight */
 .vocab-mark.hl-selected { background: #ffa520 !important; outline: 2px solid #e06030;
                            outline-offset: 1px; border-radius: 3px; }
 
-/* Nền vàng tất cả từ — chỉ khi bật toggle */
-body.hl-on .vocab-mark { background: #ffe066; }
+/* Highlight tất cả từ — chỉ khi bật toggle (nền vàng + gạch chân) */
+body.hl-on .vocab-mark { background: #ffe066; border-bottom: 2px solid #e8a020; }
 body.hl-on .vocab-mark:hover { background: #ffc926; }
 
 .vocab-list { overflow-y: auto; flex: 1; padding: 4px 0; }
@@ -225,19 +225,19 @@ body.hl-on .vocab-mark:hover { background: #ffc926; }
 .vnw-add:disabled { opacity: .5; cursor: not-allowed; }
 
 /* ── Phase 4: biến thể (inflected forms) ── */
-/* Form-mark trong đề/transcript: nền cam NHẠT + gạch dưới chấm cam → phân biệt với từ gốc */
-.vocab-form-mark { border-radius: 3px; cursor: pointer;
-                   border-bottom: 2px dotted #e06030; transition: background .15s; }
-body.hl-on .vocab-form-mark { background: #fff0c2; }
+/* Form-mark trong đề/transcript: nền cam NHẠT + gạch dưới chấm cam → phân biệt với từ gốc.
+   Gạch chân chỉ hiện khi Highlight ON (chuyển vào body.hl-on). */
+.vocab-form-mark { border-radius: 3px; cursor: pointer; transition: background .15s; }
+body.hl-on .vocab-form-mark { background: #fff0c2; border-bottom: 2px dotted #e06030; }
 body.hl-on .vocab-form-mark:hover { background: #ffe08a; }
 /* hl-selected dùng chung với vocab-mark (đã định nghĩa ở trên qua .vocab-mark.hl-selected) */
 .vocab-form-mark.hl-selected { background: #ffa520 !important; outline: 2px solid #e06030;
                                outline-offset: 1px; border-radius: 3px; }
 
-/* Pass 3: từ đã học ở bài khác — xanh lam nhạt, gạch chân xanh */
-.vocab-global-mark { border-radius: 3px; cursor: pointer;
-                     border-bottom: 2px solid #4a9eff; transition: background .15s; }
-body.hl-on .vocab-global-mark { background: #deeeff; }
+/* Pass 3: từ đã học ở bài khác — xanh lam nhạt, gạch chân xanh.
+   Gạch chân chỉ hiện khi Highlight ON (chuyển vào body.hl-on). */
+.vocab-global-mark { border-radius: 3px; cursor: pointer; transition: background .15s; }
+body.hl-on .vocab-global-mark { background: #deeeff; border-bottom: 2px solid #4a9eff; }
 body.hl-on .vocab-global-mark:hover { background: #b8d9ff; }
 .vocab-global-mark.hl-selected { background: #4a9eff !important; color: #fff; border-radius: 3px; }
 
@@ -295,6 +295,24 @@ body.hl-on .vocab-global-mark:hover { background: #b8d9ff; }
 .login-card .btn { width: 100%; }
 .login-error { background: #fef0ef; color: #c0392b; border: 1px solid #f1948a; border-radius: 8px;
                padding: 10px 14px; font-size: 14px; margin-bottom: 16px; }
+
+/* ── Nút + (add) / × (remove) cho vocab items (Vocab UX) ── */
+/* Nút + trong section "Đã dịch" → thêm vào "Từ trong bài" */
+.vgi-add-btn {
+  margin-left: auto; flex-shrink: 0;
+  border: 1.5px solid #4a9eff; background: none; color: #4a9eff;
+  border-radius: 6px; padding: 2px 8px; font-size: 14px; font-weight: 700;
+  cursor: pointer; line-height: 1.4;
+}
+.vgi-add-btn:hover { background: #4a9eff; color: #fff; }
+.vgi-add-btn:disabled { opacity: .4; cursor: default; }
+
+/* Nút × trong "Từ trong bài" → bỏ khỏi vocabData */
+.vocab-remove-btn {
+  flex-shrink: 0; border: none; background: none;
+  color: #ccc; font-size: 16px; cursor: pointer; padding: 0 4px; line-height: 1;
+}
+.vocab-remove-btn:hover { color: #e06030; }
 
 /* ── Teil tabs (Phase B) — filter danh sách theo Teil 1/2/3/4 ── */
 .teil-tabs  { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }

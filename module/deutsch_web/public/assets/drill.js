@@ -316,6 +316,7 @@
   function collectUnknownTokens() {
     var texts = [];
     (LESSON.aussagen || []).forEach(function (a) {
+      if (a.label && a.label.length > 10) { texts.push(a.label); }  // question text (không phải "Aussage 1")
       (a.options || []).forEach(function (o) { if (o.text) { texts.push(o.text); } });
     });
     (LESSON.transcript || []).forEach(function (t) { if (t.text) { texts.push(t.text); } });
@@ -440,9 +441,10 @@
         '<span class="vgi-word">' + escHtml(info.w) + '</span>' +
         (info.art ? '<span class="vgi-art">' + escHtml(info.art) + '</span>' : '') +
         (info.bedeutung ? '<span class="vgi-mean">' + escHtml(info.bedeutung) + '</span>' : '') +
+        '<button class="vgi-add-btn" data-word="' + escHtml(item.key) + '" title="Thêm vào Từ trong bài">+</button>' +
         '</div>';
     }).join('');
-    return '<div class="vocab-global-section">Đã học (bài khác) — ' + gw.length + '</div>' + rows;
+    return '<div class="vocab-global-section">Đã dịch — ' + gw.length + '</div>' + rows;
   }
 
   // Click từ trong section "Đã học" → scroll đến vị trí đầu tiên trong đề + toggle hl-selected.
@@ -459,6 +461,23 @@
   function wireGlobalSection(list) {
     list.querySelectorAll('.vocab-global-item').forEach(function (el) {
       el.addEventListener('click', function () { selectGlobalWord(el.dataset.word); });
+    });
+    // Nút "+" → thêm từ "Đã dịch" vào "Từ trong bài" (session-only, không persist)
+    list.querySelectorAll('.vgi-add-btn').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();  // không trigger scroll/select của item
+        var gk = btn.dataset.word;
+        var gd = globalKnownData[gk];
+        if (!gd) { return; }
+        // Thêm vào vocabData nếu chưa có
+        var alreadyIn = vocabData.some(function (v) { return v.w.toLowerCase() === gk; });
+        if (alreadyIn) { btn.textContent = '✓'; btn.disabled = true; return; }
+        vocabData.push({ w: gd.w, art: gd.art || '', m: gd.bedeutung || '—', lv: 'new', addedFromGlobal: true });
+        wordStatus[gk] = 'new';
+        if (vocabOpen) { renderVocab(); }
+        if (hlOn) { stripMarks(); marksInjected = false; injectMarks(); }
+        btn.textContent = '✓'; btn.disabled = true;
+      });
     });
   }
 
@@ -494,8 +513,10 @@
           '<span class="vocab-art">' + (v.art || '') + '</span>' +
           '<div class="vocab-meaning">' + (v.m || '') + '</div>' +
           variantLine +
-        '</div></div>';
-    }).join('') + globalHtml;   // append section "Đã học (bài khác)" nếu có
+        '</div>' +
+        '<button class="vocab-remove-btn" data-word="' + wKey + '" title="Bỏ khỏi Từ trong bài">×</button>' +
+        '</div>';
+    }).join('') + globalHtml;   // append section "Đã dịch" nếu có
     var title = LESSON.title ? ('Vokabeln — Bài ' + LESSON_ID + ' — ' + LESSON.title) : 'Vokabeln';
     document.getElementById('vocabPanelTitle').textContent = title;
 
@@ -506,7 +527,18 @@
     list.querySelectorAll('.vocab-text').forEach(function (el) {
       el.addEventListener('click', function () { selectWord(el.dataset.word); });
     });
-    wireGlobalSection(list);   // wire click cho section "Đã học"
+    // Nút "×" → bỏ từ khỏi "Từ trong bài" (session-only, không persist)
+    list.querySelectorAll('.vocab-remove-btn').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var wKey = btn.dataset.word;
+        vocabData = vocabData.filter(function (v) { return v.w.toLowerCase() !== wKey; });
+        delete wordStatus[wKey];
+        renderVocab();
+        if (hlOn) { stripMarks(); marksInjected = false; injectMarks(); }
+      });
+    });
+    wireGlobalSection(list);   // wire click cho section "Đã dịch"
   }
 
   function toggleVocab() { if (vocabOpen) closeVocab(); else openVocab(); }
@@ -562,7 +594,7 @@
       }
     });
     // Gộp text node liền kề lại để regex tiếp theo match đúng
-    document.querySelectorAll('.option span, .transcript-box p').forEach(function (el) {
+    document.querySelectorAll('.option span, .transcript-box p, .aussage-label').forEach(function (el) {
       el.normalize();
     });
   }
@@ -594,7 +626,7 @@
       });
     globalWords.sort(function (a, b) { return b.w.length - a.w.length; });
 
-    var targets = document.querySelectorAll('.option span, .transcript-box p');
+    var targets = document.querySelectorAll('.option span, .transcript-box p, .aussage-label');
     targets.forEach(function (el) {
       var html = el.innerHTML;  // đọc 1 lần từ DOM gốc
 
