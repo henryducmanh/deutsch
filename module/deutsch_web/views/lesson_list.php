@@ -223,11 +223,22 @@ function h($s) { return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
     });
   });
 
-  // ── Khởi tạo: sort + auto-activate Teil từ ?teil= ───────────────────────
-  var initTeil = parseInt(new URLSearchParams(location.search).get('teil'), 10) || 0;
+  // ── Khởi tạo: sort + auto-activate Teil + Thema từ URL params ───────────
+  var params    = new URLSearchParams(location.search);
+  var initTeil  = parseInt(params.get('teil'), 10) || 0;
+  var initThema = params.get('thema') || '';
+
   if (initTeil > 0) {
     var targetTab = document.querySelector('.teil-tab[data-teil="' + initTeil + '"]');
-    if (targetTab) { targetTab.click(); return; }
+    if (targetTab) {
+      targetTab.click();   // builds sidebar + sorts cards synchronously
+      if (initThema) {
+        // Tìm đúng thema button và click để filter
+        var themaBtn = themaList.querySelector('.thema-btn[data-thema="' + initThema + '"]');
+        if (themaBtn) themaBtn.click();
+      }
+      return;
+    }
   }
   sortCards(col.querySelectorAll('.lesson-card'));
 })();
