@@ -33,7 +33,10 @@ $noteHref = '/tutor/note?lesson_id=' . rawurlencode($lid)
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= h($title) ?> — Aufgabe <?= h($lid) ?></title>
-<?php $assetV = '20260530l'; ?>
+<?php $assetV = max(
+    (int)@filemtime(__DIR__ . '/../public/assets/drill.js'),
+    (int)@filemtime(__DIR__ . '/../public/assets/drill.css')
+) ?: '20260531'; ?>
 <link rel="stylesheet" href="/assets/drill.css?v=<?= $assetV ?>">
 </head>
 <body>

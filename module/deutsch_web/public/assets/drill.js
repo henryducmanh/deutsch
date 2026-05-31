@@ -327,7 +327,7 @@
         return loadFormsFromDB();
       }).then(function () {
         if (vocabOpen) { renderVocab(); }
-        if (hlOn) { stripMarks(); marksInjected = false; injectMarks(); }  // re-inject để hiện form-mark
+        if (vocabOpen || hlOn) { stripMarks(); marksInjected = false; injectMarks(); }
         refreshNeuIfOpen();
       });
     });
@@ -740,9 +740,41 @@
     return t;
   }
 
-  function openVocabPopup(wKey) {
+  function parseTitleTip(title) {
+    if (!title) { return ''; }
+    var eq = title.indexOf(' = ');
+    if (eq >= 0) {
+      return title.slice(eq + 3).replace(/\s*\(đã học\)\s*$/i, '').trim();
+    }
+    return title.replace(/\s*\(đã học\)\s*$/i, '').trim();
+  }
+
+  function openVocabPopupFromMark(wKey, mark) {
+    wKey = (wKey || '').toLowerCase();
     var info = lookupWordInfo(wKey);
-    if (!info) { return; }
+    if (!info) {
+      info = {
+        w: (mark && mark.textContent) ? mark.textContent.trim() : wKey,
+        art: '', meaning: '', badge: '', source: 'unknown'
+      };
+    }
+    if (mark) {
+      if (mark.dataset.meaning && !info.meaning) { info.meaning = mark.dataset.meaning; }
+      if (mark.dataset.art && !info.art) { info.art = mark.dataset.art; }
+      if (!info.meaning) {
+        var tip = parseTitleTip(mark.getAttribute('title') || '');
+        if (tip) { info.meaning = tip; }
+      }
+      if (mark.classList.contains('vocab-global-mark')) {
+        info.source = 'global'; info.badge = 'Đã dịch';
+      } else if (mark.classList.contains('vocab-mark')) {
+        info.source = 'lesson'; info.badge = 'Đang ôn';
+      } else if (mark.classList.contains('vocab-form-mark')) {
+        info.source = 'form'; info.badge = 'Biến thể';
+        if (mark.dataset.ftype) { info.form_type = mark.dataset.ftype; }
+        if (mark.dataset.lemma) { info.lemma = mark.dataset.lemma; info.lemma_key = mark.dataset.lemma.toLowerCase(); }
+      }
+    }
     if (info.source === 'global') {
       selectGlobalWord(wKey);
     } else if (info.source === 'form' && info.lemma_key) {
@@ -784,10 +816,22 @@
     document.body.classList.remove('vocab-modal-open');
   }
 
-  function markClick(e, wKey) {
-    e.stopPropagation();
-    e.preventDefault();
-    openVocabPopup(wKey);
+  // Event delegation (capture) — luôn hoạt động sau re-inject mark; chặn label/radio nuốt click.
+  var markClickWired = false;
+  function wireMarkClicks() {
+    if (markClickWired) { return; }
+    markClickWired = true;
+    document.addEventListener('click', function (e) {
+      var el = e.target;
+      if (!el || !el.closest) { return; }
+      var mark = el.closest('.vocab-mark, .vocab-global-mark, .vocab-form-mark');
+      if (!mark) { return; }
+      if (!mark.closest('#aussagen, #transcript, .transcript-box')) { return; }
+      e.preventDefault();
+      e.stopPropagation();
+      var wKey = mark.dataset.form || mark.dataset.word || mark.dataset.lemma || '';
+      openVocabPopupFromMark(wKey, mark);
+    }, true);
   }
 
   // Chỉ replace trong text nodes, KHÔNG replace trong HTML tags/attributes
@@ -806,15 +850,17 @@
         m.parentNode.replaceChild(document.createTextNode(m.textContent), m);
       }
     });
-    // Gộp text node liền kề lại để regex tiếp theo match đúng
     document.querySelectorAll('.option span, .transcript-box p, .aussage-label').forEach(function (el) {
       el.normalize();
     });
+    marksInjected = false;
   }
 
   function injectMarks() {
-    if (marksInjected) return;
+    if (marksInjected) { return; }
     marksInjected = true;
+    var wordMetaByKey = {};
+    (vocabData || []).forEach(function (v) { wordMetaByKey[v.w.toLowerCase()] = v; });
     // Pass 1: từ đã có (vocabData) → .vocab-mark (nền cam đậm)
     var words = (vocabData || []).map(function (v) { return v.w; });
     words.sort(function (a, b) { return b.length - a.length; }); // dài trước, tránh partial match
@@ -835,7 +881,7 @@
           + (info.art ? ' · ' + escHtml(info.art) : '')
           + (info.bedeutung ? ' = ' + escHtml(info.bedeutung) : '')
           + ' (đã học)';
-        return { key: gk, w: info.w, tip: tip };
+        return { key: gk, w: info.w, art: info.art || '', bedeutung: info.bedeutung || '', tip: tip };
       });
     globalWords.sort(function (a, b) { return b.w.length - a.w.length; });
 
@@ -845,9 +891,12 @@
 
       // Pass 1
       words.forEach(function (w) {
-        // FIX double-escape \\w + dải ký tự có dấu Đức/tiếng Việt
+        var wKey = w.toLowerCase();
+        var meta = wordMetaByKey[wKey] || {};
         var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(w) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
-        html = replaceTextOnly(html, re, '<span class="vocab-mark" data-word="' + w.toLowerCase() + '" title="' + escHtml(w) + '">$1</span>');
+        html = replaceTextOnly(html, re,
+          '<span class="vocab-mark" data-word="' + wKey + '" data-art="' + escHtml(meta.art || '') +
+          '" data-meaning="' + escHtml(meta.m || '') + '" title="' + escHtml(w) + '">$1</span>');
       });
 
       // Pass 2
@@ -859,6 +908,7 @@
         var tip = escHtml(fw) + ' [' + escHtml(info.form_type || '?') + '] → ' + escHtml(info.lemma || '');
         html = replaceTextOnly(html, re, '<span class="vocab-form-mark" data-form="' + fk +
           '" data-lemma="' + escHtml(info.lemma_key || '') + '" data-ftype="' + escHtml(info.form_type || '') +
+          '" data-art="' + escHtml(info.art || '') + '" data-meaning="' + escHtml(info.bedeutung || '') +
           '" title="' + tip + '">$1</span>');
       });
 
@@ -866,21 +916,11 @@
       globalWords.forEach(function (item) {
         var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(item.w) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
         html = replaceTextOnly(html, re,
-          '<span class="vocab-global-mark" data-word="' + item.key + '" title="' + item.tip + '">$1</span>');
+          '<span class="vocab-global-mark" data-word="' + item.key + '" data-art="' + escHtml(item.art || '') +
+          '" data-meaning="' + escHtml(item.bedeutung || '') + '" title="' + item.tip + '">$1</span>');
       });
 
-      el.innerHTML = html;  // ghi 1 lần duy nhất vào DOM
-    });
-
-    // Click mark trong đề/transcript → popup nghĩa (+ highlight)
-    document.querySelectorAll('.vocab-mark').forEach(function (m) {
-      m.addEventListener('click', function (e) { markClick(e, m.dataset.word); });
-    });
-    document.querySelectorAll('.vocab-form-mark').forEach(function (m) {
-      m.addEventListener('click', function (e) { markClick(e, m.dataset.form || m.dataset.lemma); });
-    });
-    document.querySelectorAll('.vocab-global-mark').forEach(function (m) {
-      m.addEventListener('click', function (e) { markClick(e, m.dataset.word); });
+      el.innerHTML = html;
     });
   }
 
@@ -1226,7 +1266,8 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     wireOptionHighlight();
-    wireTabs();          // Phase 3: tab Alle Wörter / Neu wort
-    loadVocabFromDB();   // Phase 2: enrich nghĩa từ DB (fallback JSON nếu fail)
+    wireTabs();
+    wireMarkClicks();    // popup nghĩa khi click mark (delegation, 1 lần)
+    loadVocabFromDB();
   });
 })();
