@@ -655,6 +655,10 @@
     }
   }
 
+  // Vùn chữ trong bài: option + transcript + nhãn câu (Teil 1–3: label = câu hỏi).
+  var VOCAB_TEXT_TARGETS = '.option span, .transcript-box p, .aussage-label';
+  var VOCAB_TEXT_BLOCKS = '.transcript-box p, .aussage-label';
+
   // ── Inject <span class="vocab-mark"> vào option text + transcript ──
   var marksInjected = false;
   function escapeReg(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
@@ -877,10 +881,43 @@
         m.parentNode.replaceChild(document.createTextNode(m.textContent), m);
       }
     });
-    document.querySelectorAll('.transcript-box p, .aussage-label').forEach(function (el) {
+    document.querySelectorAll(VOCAB_TEXT_TARGETS).forEach(function (el) {
       el.normalize();
     });
     marksInjected = false;
+  }
+
+  // includeGlobal=false trên .option span: tránh lồng span Teil 4 (6× đáp án dài × hàng chục từ global).
+  function applyVocabMarkPasses(el, wordMetaByKey, words, forms, globalWords, includeGlobal) {
+    var html = el.innerHTML;
+    words.forEach(function (w) {
+      var wKey = w.toLowerCase();
+      var meta = wordMetaByKey[wKey] || {};
+      var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(w) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
+      html = replaceTextOnly(html, re,
+        '<span class="vocab-mark" data-word="' + wKey + '" data-art="' + escHtml(meta.art || '') +
+        '" data-meaning="' + escHtml(meta.m || '') + '" title="' + escHtml(w) + '">$1</span>');
+    });
+    forms.forEach(function (fw) {
+      var fk = fw.toLowerCase();
+      var info = formMap[fk];
+      if (!info) { return; }
+      var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(fw) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
+      var tip = escHtml(fw) + ' [' + escHtml(info.form_type || '?') + '] → ' + escHtml(info.lemma || '');
+      html = replaceTextOnly(html, re, '<span class="vocab-form-mark" data-form="' + fk +
+        '" data-lemma="' + escHtml(info.lemma_key || '') + '" data-ftype="' + escHtml(info.form_type || '') +
+        '" data-art="' + escHtml(info.art || '') + '" data-meaning="' + escHtml(info.bedeutung || '') +
+        '" title="' + tip + '">$1</span>');
+    });
+    if (includeGlobal) {
+      globalWords.forEach(function (item) {
+        var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(item.w) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
+        html = replaceTextOnly(html, re,
+          '<span class="vocab-global-mark" data-word="' + item.key + '" data-art="' + escHtml(item.art || '') +
+          '" data-meaning="' + escHtml(item.bedeutung || '') + '" title="' + item.tip + '">$1</span>');
+      });
+    }
+    el.innerHTML = html;
   }
 
   function injectMarks() {
@@ -888,15 +925,11 @@
     marksInjected = true;
     var wordMetaByKey = {};
     (vocabData || []).forEach(function (v) { wordMetaByKey[v.w.toLowerCase()] = v; });
-    // Pass 1: từ đã có (vocabData) → .vocab-mark (nền cam đậm)
     var words = (vocabData || []).map(function (v) { return v.w; });
-    words.sort(function (a, b) { return b.length - a.length; }); // dài trước, tránh partial match
-    // Pass 2: biến thể đã biết (formMap) → .vocab-form-mark (nền nhạt + link lemma)
+    words.sort(function (a, b) { return b.length - a.length; });
     var forms = Object.keys(formMap).map(function (k) { return formMap[k].form; });
     forms.sort(function (a, b) { return b.length - a.length; });
 
-    // Pass 3: global known (DB từ bài khác) → .vocab-global-mark (xanh nhạt).
-    // Xây danh sách TRƯỚC forEach: lọc bỏ từ đã cover ở Pass 1/2 (vocabKeys) để dedup.
     var vocabKeys = {};
     (vocabData || []).forEach(function (v) { vocabKeys[v.w.toLowerCase()] = true; });
     Object.keys(formMap).forEach(function (k) { vocabKeys[k] = true; });
@@ -912,42 +945,11 @@
       });
     globalWords.sort(function (a, b) { return b.w.length - a.w.length; });
 
-    var targets = document.querySelectorAll('.transcript-box p, .aussage-label');
-    targets.forEach(function (el) {
-      var html = el.innerHTML;  // đọc 1 lần từ DOM gốc
-
-      // Pass 1
-      words.forEach(function (w) {
-        var wKey = w.toLowerCase();
-        var meta = wordMetaByKey[wKey] || {};
-        var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(w) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
-        html = replaceTextOnly(html, re,
-          '<span class="vocab-mark" data-word="' + wKey + '" data-art="' + escHtml(meta.art || '') +
-          '" data-meaning="' + escHtml(meta.m || '') + '" title="' + escHtml(w) + '">$1</span>');
-      });
-
-      // Pass 2
-      forms.forEach(function (fw) {
-        var fk = fw.toLowerCase();
-        var info = formMap[fk];
-        if (!info) { return; }
-        var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(fw) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
-        var tip = escHtml(fw) + ' [' + escHtml(info.form_type || '?') + '] → ' + escHtml(info.lemma || '');
-        html = replaceTextOnly(html, re, '<span class="vocab-form-mark" data-form="' + fk +
-          '" data-lemma="' + escHtml(info.lemma_key || '') + '" data-ftype="' + escHtml(info.form_type || '') +
-          '" data-art="' + escHtml(info.art || '') + '" data-meaning="' + escHtml(info.bedeutung || '') +
-          '" title="' + tip + '">$1</span>');
-      });
-
-      // Pass 3 — TRONG cùng forEach, cùng html string (tránh đọc/ghi innerHTML đã có span)
-      globalWords.forEach(function (item) {
-        var re = new RegExp('(?<![\\w\\u00c0-\\u024f])(' + escapeReg(item.w) + ')(?![\\w\\u00c0-\\u024f])', 'gi');
-        html = replaceTextOnly(html, re,
-          '<span class="vocab-global-mark" data-word="' + item.key + '" data-art="' + escHtml(item.art || '') +
-          '" data-meaning="' + escHtml(item.bedeutung || '') + '" title="' + item.tip + '">$1</span>');
-      });
-
-      el.innerHTML = html;
+    document.querySelectorAll(VOCAB_TEXT_BLOCKS).forEach(function (el) {
+      applyVocabMarkPasses(el, wordMetaByKey, words, forms, globalWords, true);
+    });
+    document.querySelectorAll('.option span').forEach(function (el) {
+      applyVocabMarkPasses(el, wordMetaByKey, words, forms, globalWords, false);
     });
   }
 
@@ -1051,6 +1053,7 @@
   function collectCandidates() {
     var texts = [];
     (LESSON.aussagen || []).forEach(function (a) {
+      if (a.label) { texts.push(a.label); }
       (a.options || []).forEach(function (o) { if (o.text) { texts.push(o.text); } });
     });
     (LESSON.transcript || []).forEach(function (t) { if (t.text) { texts.push(t.text); } });
@@ -1180,14 +1183,11 @@
   }
 
 
-  // Từ lạ: inject vào option + transcript + câu hỏi. Khác injectMarks() (Đang ôn) — không target option.
-  var newInlineMarkTargets = '.option span, .transcript-box p, .aussage-label';
-
   function injectNewInlineMarks() {
     if (neuInlineInjected || freshCandidates.length === 0) { return; }
     neuInlineInjected = true;
     var words = freshCandidates.slice().sort(function (a, b) { return b.length - a.length; });
-    var targets = document.querySelectorAll(newInlineMarkTargets);
+    var targets = document.querySelectorAll(VOCAB_TEXT_TARGETS);
     targets.forEach(function (el) {
       var html = el.innerHTML;
       words.forEach(function (w) {
@@ -1217,7 +1217,7 @@
         m.parentNode.replaceChild(document.createTextNode(m.textContent), m);
       }
     });
-    document.querySelectorAll(newInlineMarkTargets).forEach(function (el) {
+    document.querySelectorAll(VOCAB_TEXT_TARGETS).forEach(function (el) {
       el.normalize();
     });
     neuInlineInjected = false;
