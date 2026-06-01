@@ -1,7 +1,7 @@
 # DEUTSCH_WEB — Fix: Options không tương tác được khi vocab panel mở (v2)
 
 ## Trạng thái
-Fix v1 (dòng 1187, 1214) đã done. Còn 2 nguồn chặn chưa sửa.
+Fix v2 (`injectMarks` / `wireMarkClicks`) đã done. Fix v3 (2026-06-01): khôi phục tab **Từ lạ** trên option — xem cuối file.
 
 ## Root Cause đầy đủ (3 nguồn)
 
@@ -83,5 +83,26 @@ Thay đổi 3 là safety net: dù mark có lọt vào option span trong tương 
 6. Click từ highlight trong transcript → popup hiện ✓
 
 ## Lưu ý
-Dòng 1187 và 1214 đã fix ở v1 — KHÔNG cần đổi lại.
-Không sửa gì khác ngoài 3 thay đổi trên.
+`injectMarks()` / `stripMarks()` / `wireMarkClicks()` — **giữ** không target `.option span` (v2).
+
+---
+
+## Fix v3 — Tab "Từ lạ" mất gạch trên option (regression v1)
+
+### Nguyên nhân
+Hai pipeline inject **khác nhau**:
+
+| Hàm | Tab | Class | Option span? |
+|-----|-----|-------|----------------|
+| `injectMarks()` | Đang ôn + Highlight | `.vocab-mark` … | **Không** (v2 — đúng) |
+| `injectNewInlineMarks()` | Từ lạ | `.vocab-new-inline-mark` | v1 đã bỏ nhầm → mất highlight |
+
+v1 bỏ `.option span` để hết `stopPropagation` chặn radio — nhưng chỉ cần sửa **listener**, không cần bỏ inject.
+
+### Sửa
+1. `newInlineMarkTargets = '.option span, .transcript-box p, .aussage-label'` — dùng cho inject + strip Từ lạ.
+2. Click handler: `if (!m.closest('.option')) { e.stopPropagation(); }` — trong option vẫn queue từ + radio vẫn check.
+
+### Test thêm (tab Từ lạ)
+7. Option có từ trong list (vd `Ausweispapiere`) → gạch tím dashed ✓
+8. Click gạch trong option → queue + radio vẫn check ✓

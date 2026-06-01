@@ -1180,11 +1180,14 @@
   }
 
 
+  // Từ lạ: inject vào option + transcript + câu hỏi. Khác injectMarks() (Đang ôn) — không target option.
+  var newInlineMarkTargets = '.option span, .transcript-box p, .aussage-label';
+
   function injectNewInlineMarks() {
     if (neuInlineInjected || freshCandidates.length === 0) { return; }
     neuInlineInjected = true;
     var words = freshCandidates.slice().sort(function (a, b) { return b.length - a.length; });
-    var targets = document.querySelectorAll('.transcript-box p, .aussage-label');
+    var targets = document.querySelectorAll(newInlineMarkTargets);
     targets.forEach(function (el) {
       var html = el.innerHTML;
       words.forEach(function (w) {
@@ -1199,7 +1202,10 @@
     });
     document.querySelectorAll('.vocab-new-inline-mark:not(.queued)').forEach(function (m) {
       m.addEventListener('click', function (e) {
-        e.stopPropagation();
+        // Trong .option: không chặn bubble — label vẫn check radio (fix v1).
+        if (!m.closest('.option')) {
+          e.stopPropagation();
+        }
         addNewWordInline(m.dataset.word, m);
       });
     });
@@ -1211,7 +1217,7 @@
         m.parentNode.replaceChild(document.createTextNode(m.textContent), m);
       }
     });
-    document.querySelectorAll('.transcript-box p, .aussage-label').forEach(function (el) {
+    document.querySelectorAll(newInlineMarkTargets).forEach(function (el) {
       el.normalize();
     });
     neuInlineInjected = false;
