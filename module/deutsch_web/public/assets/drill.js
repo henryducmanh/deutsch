@@ -1184,7 +1184,7 @@
     if (neuInlineInjected || freshCandidates.length === 0) { return; }
     neuInlineInjected = true;
     var words = freshCandidates.slice().sort(function (a, b) { return b.length - a.length; });
-    var targets = document.querySelectorAll('.option span, .transcript-box p, .aussage-label');
+    var targets = document.querySelectorAll('.transcript-box p, .aussage-label');
     targets.forEach(function (el) {
       var html = el.innerHTML;
       words.forEach(function (w) {
@@ -1211,7 +1211,7 @@
         m.parentNode.replaceChild(document.createTextNode(m.textContent), m);
       }
     });
-    document.querySelectorAll('.option span, .transcript-box p, .aussage-label').forEach(function (el) {
+    document.querySelectorAll('.transcript-box p, .aussage-label').forEach(function (el) {
       el.normalize();
     });
     neuInlineInjected = false;

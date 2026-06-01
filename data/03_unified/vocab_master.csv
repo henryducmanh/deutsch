@@ -2003,3 +2003,27 @@ WEB-20260531-048,Werbebranche,Substantiv,"die Werbebranche, -n",ngành quảng c
 WEB-20260531-049,Auskünfte,Substantiv,,thông tin (số nhiều),,,web-queue,2026-05-31,1,1.2,web,B1;DTZ;web-queue,NOM.PL của Auskunft,VOC-20260522-041,NOM.PL
 WEB-20260531-050,Bewerbungen,Substantiv,,đơn xin việc (số nhiều),,,web-queue,2026-05-31,1,1.2,web,B1;DTZ;web-queue,NOM.PL của Bewerbung,VOC-20260522-039,NOM.PL
 WEB-20260531-051,gleichzeitig,Adjektiv,,đồng thời; cùng lúc,,,web-queue,2026-05-31,1,4.19,web,B1;DTZ;web-queue,,,,
+WEB-20260601-001,übernehmen,Verb,übernahm - hat übernommen,đảm nhận; tiếp quản,,,web-queue,2026-06-01,1,4.2,web,B1;DTZ;web-queue,trennbar: über|nehmen,,
+WEB-20260601-002,Haar,Substantiv,"das Haar, die Haare",sợi tóc; mái tóc,,,web-queue,2026-06-01,1,3.25,web,B1;DTZ;web-queue,,,
+WEB-20260601-003,Knieproblem,Substantiv,"das Knieproblem, die Knieprobleme",vấn đề đầu gối,,,web-queue,2026-06-01,1,3.25,web,B1;DTZ;web-queue,,,
+WEB-20260601-004,Orthopäde,Substantiv,"der Orthopäde, die Orthopäden",bác sĩ chỉnh hình,,,web-queue,2026-06-01,1,3.25,web,B1;DTZ;web-queue,N-Deklination,,
+WEB-20260601-005,Schmerz,Substantiv,"der Schmerz, die Schmerzen",cơn đau,,,web-queue,2026-06-01,1,3.25,web,B1;DTZ;web-queue,thường dùng số nhiều Schmerzen,,
+WEB-20260601-006,schwach,Adjektiv,,yếu; không mạnh,,,web-queue,2026-06-01,1,3.30,web,B1;DTZ;web-queue,,,
+WEB-20260601-007,übernimmt,Verb,,đảm nhận (3. Pers. Sg.),,,web-queue,2026-06-01,1,4.2,web,B1;DTZ;web-queue,3. Person Sing. Präsens của übernehmen,WEB-20260601-001,
+WEB-20260601-008,lüben,,,?,,,web-queue,2026-06-01,1,4.2,web,B1;DTZ;web-queue,Từ không rõ - có thể typo của 'loben' (khen ngợi),,
+WEB-20260601-009,dankbar,Adjektiv,,biết ơn,,,web-queue,2026-06-01,1,4.2,web,B1;DTZ;web-queue,,,
+WEB-20260601-010,würde,Verb,,sẽ (Konjunktiv II),,,web-queue,2026-06-01,1,3.9,web,B1;DTZ;web-queue,KONJ.II của werden; dùng để tạo Konjunktiv II cho ĐT khác,,
+WEB-20260601-011,aufgetreten,Verb,,đã xuất hiện; đã xảy ra,,,web-queue,2026-06-01,1,3.25,web,B1;DTZ;web-queue,Partizip II của auftreten,VOC-20260522-230,PART.II
+WEB-20260601-012,Angenehmeren,Adjektiv,,dễ chịu hơn (biến cách -en),,,web-queue,2026-06-01,1,3.25,web,B1;DTZ;web-queue,Komparativ của angenehm + biến cách -en,VOC-20260522-978,KOMP
+WEB-20260601-013,Haare,Substantiv,,mái tóc (số nhiều),,,web-queue,2026-06-01,1,3.25,web,B1;DTZ;web-queue,NOM.PL của Haar,WEB-20260601-002,NOM.PL
+WEB-20260601-014,Knieprobleme,Substantiv,,các vấn đề đầu gối,,,web-queue,2026-06-01,1,3.25,web,B1;DTZ;web-queue,NOM.PL của Knieproblem,WEB-20260601-003,NOM.PL
+WEB-20260601-015,Klinik,Substantiv,"die Klinik, die Kliniken",phòng khám chuyên khoa,,,web-queue,2026-06-01,1,3.25,web,B1;DTZ;web-queue,,,
+WEB-20260601-016,Orthopäden,Substantiv,,của/bác sĩ chỉnh hình (biến cách),,,web-queue,2026-06-01,1,3.25,web,B1;DTZ;web-queue,GEN.SG/DAT.SG/AKK.SG của Orthopäde (N-Deklination),WEB-20260601-004,GEN.SG
+WEB-20260601-017,schneiden,Verb,schnitt - hat geschnitten,cắt,,,web-queue,2026-06-01,1,3.25,web,B1;DTZ;web-queue,,,
+WEB-20260601-018,unangenehm,Adjektiv,,khó chịu; bất tiện,,,web-queue,2026-06-01,1,3.25,web,B1;DTZ;web-queue,phủ định của angenehm,,
+WEB-20260601-019,Schmerzen,Substantiv,,các cơn đau,,,web-queue,2026-06-01,1,3.25,web,B1;DTZ;web-queue,NOM.PL của Schmerz; thường dùng số nhiều,WEB-20260601-005,NOM.PL
+WEB-20260601-020,günstigere,Adjektiv,,rẻ hơn (biến cách -e),,,web-queue,2026-06-01,1,3.30,web,B1;DTZ;web-queue,Komparativ của günstig + biến cách -e,VOC-20260522-517,KOMP
+WEB-20260601-021,Mahlzeiten,Substantiv,,các bữa ăn,,,web-queue,2026-06-01,1,3.30,web,B1;DTZ;web-queue,NOM.PL của Mahlzeit,VOC-20260518-127,NOM.PL
+WEB-20260601-022,Schmerzmittel,Substantiv,"das Schmerzmittel, die Schmerzmittel",thuốc giảm đau,,,web-queue,2026-06-01,1,3.30,web,B1;DTZ;web-queue,,,
+WEB-20260601-023,schwächer,Adjektiv,,yếu hơn,,,web-queue,2026-06-01,1,3.30,web,B1;DTZ;web-queue,Komparativ của schwach,WEB-20260601-006,KOMP
+WEB-20260601-024,verträglich,Adjektiv,,dễ tiêu; dung nạp được,,,web-queue,2026-06-01,1,3.30,web,B1;DTZ;web-queue,dùng nhiều trong y tế và ẩm thực,,
