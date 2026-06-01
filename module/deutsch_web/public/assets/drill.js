@@ -853,7 +853,7 @@
       if (!el || !el.closest) { return; }
       var mark = el.closest('.vocab-mark, .vocab-global-mark, .vocab-form-mark');
       if (!mark) { return; }
-      if (!mark.closest('#aussagen, #transcript, .transcript-box')) { return; }
+      if (!mark.closest('.aussage-label, #transcript, .transcript-box')) { return; }
       e.preventDefault();
       e.stopPropagation();
       var wKey = mark.dataset.form || mark.dataset.word || mark.dataset.lemma || '';
@@ -877,7 +877,7 @@
         m.parentNode.replaceChild(document.createTextNode(m.textContent), m);
       }
     });
-    document.querySelectorAll('.option span, .transcript-box p, .aussage-label').forEach(function (el) {
+    document.querySelectorAll('.transcript-box p, .aussage-label').forEach(function (el) {
       el.normalize();
     });
     marksInjected = false;
@@ -912,7 +912,7 @@
       });
     globalWords.sort(function (a, b) { return b.w.length - a.w.length; });
 
-    var targets = document.querySelectorAll('.option span, .transcript-box p, .aussage-label');
+    var targets = document.querySelectorAll('.transcript-box p, .aussage-label');
     targets.forEach(function (el) {
       var html = el.innerHTML;  // đọc 1 lần từ DOM gốc
 
